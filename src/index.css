@@ -1,0 +1,220 @@
+:root {
+  /* COLORS */
+  --hui-color-bg: #fff;
+  --hui-color-text: #494B54;
+  --hui-color-border: #999;
+
+  /* SPACES */
+  --hui-spacer: 8px;
+
+  --hui-spacer-0: 0;
+  --hui-spacer-1: calc(var(--hui-spacer) * 0.5);
+  --hui-spacer-2: var(--hui-spacer);
+  --hui-spacer-3: calc(var(--hui-spacer) * 2);
+  --hui-spacer-4: calc(var(--hui-spacer) * 3);
+  --hui-spacer-5: calc(var(--hui-spacer) * 4);
+  --hui-spacer-6: calc(var(--hui-spacer) * 5);
+  --hui-spacer-7: calc(var(--hui-spacer) * 6);
+  --hui-spacer-8: calc(var(--hui-spacer) * 8);
+  --hui-spacer-9: calc(var(--hui-spacer) * 10);
+  --hui-spacer-10: calc(var(--hui-spacer) * 12);
+  --hui-spacer-11: calc(var(--hui-spacer) * 14);
+  --hui-spacer-12: calc(var(--hui-spacer) * 16);
+
+  --hui-em-spacer-1: 0.0625em;
+  --hui-em-spacer-2: 0.125em;
+  --hui-em-spacer-3: 0.25em;
+  --hui-em-spacer-4: 0.375em;
+  --hui-em-spacer-5: 0.5em;
+  --hui-em-spacer-6: 0.75em;
+
+  /* SIZES */
+  --hui-size: 1em;
+
+  --hui-size-0: 0;
+  --hui-size-1: var(--hui-size);
+  --hui-size-2: calc(var(--hui-size-1) +  4px);
+  --hui-size-3: calc(var(--hui-size-2) +  4px);
+  --hui-size-4: calc(var(--hui-size-3) +  4px);
+  --hui-size-5: calc(var(--hui-size-4) +  4px);
+  --hui-size-6: calc(var(--hui-size-5) +  8px);
+  --hui-size-7: calc(var(--hui-size-6) +  8px);
+  --hui-size-8: calc(var(--hui-size-7) + 16px);
+
+  /* CONTAINERS */
+  --hui-container-width: 980px;
+  --hui-grid-gutter:     10px;
+
+  --hui-width-xs: 0;
+  --hui-width-sm: 544px;
+  --hui-width-md: 768px;
+  --hui-width-lg: 1012px;
+  --hui-width-xl: 1280px;
+
+  --hui-container-sm: var(--hui-width-sm);
+  --hui-container-md: var(--hui-width-md);
+  --hui-container-lg: var(--hui-width-lg);
+  --hui-container-xl: var(--hui-width-xl);
+
+  /* BORDERS */
+  --hui-border-width: 1px;
+  --hui-border-style: solid;
+  --hui-border-color: var(--hui-color-border);
+
+  --hui-border-radius-1: 2px;
+  --hui-border-radius-2: 3px;
+  --hui-border-radius-3: 5px;
+  --hui-border-radius: var(--hui-border-radius-1);
+
+  /* SHADOWS */
+  --hui-box-shadow-0: 0 0 transparent;
+  --hui-box-shadow-1: 2px 0 #555;
+  --hui-box-shadow-2: 3px 1px #555;
+
+  /* TYPOGRAPHY */
+  --hui-h00-font-size: 48px;
+  --hui-h0-font-size: 40px;
+  --hui-h1-font-size: 32px;
+  --hui-h2-font-size: 24px;
+  --hui-h3-font-size: 20px;
+  --hui-h4-font-size: 16px;
+  --hui-h5-font-size: 14px;
+  --hui-h6-font-size: 12px;
+
+  --hui-font-weight-bold: 600;
+  --hui-font-weight-semibold: 500;
+  --hui-font-weight-normal: 400;
+  --hui-font-weight-light: 300;
+
+  --hui-h00-font-weight: var(--hui-font-weight-semibold);
+  --hui-h0-font-weight: var(--hui-font-weight-semibold);
+  --hui-h1-font-weight: var(--hui-font-weight-semibold);
+  --hui-h2-font-weight: var(--hui-font-weight-semibold);
+  --hui-h3-font-weight: var(--hui-font-weight-normal);
+  --hui-h4-font-weight: var(--hui-font-weight-normal);
+  --hui-h5-font-weight: var(--hui-font-weight-normal);
+  --hui-h6-font-weight: var(--hui-font-weight-normal);
+
+  --hui-lh-condensed-ultra: 1;
+  --hui-lh-condensed: 1.25;
+  --hui-lh-default: 1.5;
+
+  --hui-body-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+
+  --hui-font-size-small: 13px;
+  --hui-body-font-size: 16px;
+  --hui-body-line-height: var(--hui-lh-default);
+}
+
+body {
+  font-family: var(--hui-body-font);
+  font-size: var(--hui-body-font-size);
+  line-height: var(--hui-body-line-height);
+}
+
+[data-hui-root] {
+  --hui-layout-root-top: 0;
+  --hui-layout-root-right: 0;
+  --hui-layout-root-bottom: 0;
+  --hui-layout-root-left: 0;
+  --hui-layout-root-padding-top: 0;
+  --hui-layout-root-padding-right: 0;
+  --hui-layout-root-padding-bottom: 0;
+  --hui-layout-root-padding-left: 0;
+}
+
+[data-hui-main] {
+  --hui-layout-main-padding-top: 0;
+  --hui-layout-main-padding-right: 0;
+  --hui-layout-main-padding-bottom: 0;
+  --hui-layout-main-padding-left: 0;
+  --hui-layout-main-margin-top: 0;
+  --hui-layout-main-margin-right: 0;
+  --hui-layout-main-margin-bottom: 0;
+  --hui-layout-main-margin-left: 0;
+}
+
+[data-hui-header] {
+  --hui-layout-header-gap: var(--hui-size);
+  --hui-layout-header-height: calc(var(--hui-size) * 3);
+  --hui-layout-header-line-height: var(--hui-layout-header-height);
+  --hui-layout-header-min-height: var(--hui-layout-header-height);
+  --hui-layout-header-max-height: var(--hui-layout-header-height);
+  --hui-layout-header-margin-top: 0;
+  --hui-layout-header-margin-right: 0;
+  --hui-layout-header-margin-bottom: 0;
+  --hui-layout-header-margin-left: 0;
+  --hui-layout-header-padding-top: 0;
+  --hui-layout-header-padding-right: 0;
+  --hui-layout-header-padding-bottom: 0;
+  --hui-layout-header-padding-left: 0;
+}
+
+[data-hui-nav] {
+  --hui-layout-nav-margin-top: 0;
+  --hui-layout-nav-margin-right: 0;
+  --hui-layout-nav-margin-bottom: 0;
+  --hui-layout-nav-margin-left: 0;
+  --hui-layout-nav-padding-top: 0;
+  --hui-layout-nav-padding-right: 0;
+  --hui-layout-nav-padding-bottom: 0;
+  --hui-layout-nav-padding-left: 0;
+}
+
+[data-hui-title] {
+  --hui-layout-title-font-weight: var(--hui-font-weight-normal);
+}
+
+[data-hui-h1] {
+  --hui-typography-h1-font-weight: var(--hui-h1-font-weight);
+  --hui-typography-h1-font-size: var(--hui-h1-font-size);
+  --hui-typography-h1-margin-top: 0;
+  --hui-typography-h1-margin-right: 0;
+  --hui-typography-h1-margin-bottom: 0;
+  --hui-typography-h1-margin-left: 0;
+  --hui-typography-h1-padding-top: 0;
+  --hui-typography-h1-padding-right: 0;
+  --hui-typography-h1-padding-bottom: 0;
+  --hui-typography-h1-padding-left: 0;
+}
+
+[data-hui-strong] {
+  --hui-typography-strong-font-weight: var(--hui-font-weight-semibold);
+}
+
+[data-hui-button] {
+  --hui-controls-button-font-size: var(--hui-body-font-size);
+  --hui-controls-button-font-weight: var(--hui-font-weight-semibold);
+
+  --hui-controls-button-color: var(--hui-color-text);
+  --hui-controls-button-background-color: #E5E4E9;
+
+  --hui-controls-button-border-top-color: var(--hui-border-color);
+  --hui-controls-button-border-right-color: var(--hui-border-color);
+  --hui-controls-button-border-bottom-color: var(--hui-border-color);
+  --hui-controls-button-border-left-color: var(--hui-border-color);
+
+  --hui-controls-button-border-top-style: var(--hui-border-style);
+  --hui-controls-button-border-right-style: var(--hui-border-style);
+  --hui-controls-button-border-bottom-style: var(--hui-border-style);
+  --hui-controls-button-border-left-style: var(--hui-border-style);
+
+  --hui-controls-button-border-top-width: var(--hui-border-width);
+  --hui-controls-button-border-right-width: var(--hui-border-width);
+  --hui-controls-button-border-bottom-width: var(--hui-border-width);
+  --hui-controls-button-border-left-width: var(--hui-border-width);
+
+  --hui-controls-button-border-top-radius: var(--hui-border-radius);
+  --hui-controls-button-border-right-radius: var(--hui-border-radius);
+  --hui-controls-button-border-bottom-radius: var(--hui-border-radius);
+  --hui-controls-button-border-left-radius: var(--hui-border-radius);
+
+  --hui-controls-button-margin-top: 0;
+  --hui-controls-button-margin-right: 0;
+  --hui-controls-button-margin-bottom: 0;
+  --hui-controls-button-margin-left: 0;
+  --hui-controls-button-padding-top: var(--hui-em-spacer-5);
+  --hui-controls-button-padding-right: var(--hui-em-spacer-6);
+  --hui-controls-button-padding-bottom: var(--hui-em-spacer-5);
+  --hui-controls-button-padding-left: var(--hui-em-spacer-6);
+}
