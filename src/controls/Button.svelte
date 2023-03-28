@@ -40,6 +40,8 @@
     color: var(--button-c, var(--hui-controls-button-color));
     background-color: var(--button-bgc, var(--hui-controls-button-background-color));
 
+    overflow: hidden;
+
     box-shadow: none;
 
     border-color: var(--button-brc,

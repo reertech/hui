@@ -1,10 +1,7 @@
 <script>
   export let area
-  export let active = null
   export let hidden = null
   export let disabled = null
-
-  console.log(area)
 
   let className = null
   export { className as class }
@@ -21,7 +18,6 @@
 
 <header
   data-hui-header
-  active={active || null}
   hidden={hidden || null}
   disabled={disabled || null}
   class={className || null}
@@ -41,6 +37,7 @@
     gap: var(--header-g, var(--hui-layout-header-gap));
     grid-template-areas: "left";
     grid-auto-columns: var(--header-ac, minmax(min-content, 1fr));
+    grid-auto-flow: column;
     grid-auto-rows: 100%;
     align-items: center;
 
