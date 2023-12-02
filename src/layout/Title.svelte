@@ -6,7 +6,7 @@
 </strong>
 
 <style>
-  strong {
+  [data-hui-title] {
     display: block;
     overflow: hidden;
     font-weight: var(--title-fw, var(--hui-layout-title-font-weight));

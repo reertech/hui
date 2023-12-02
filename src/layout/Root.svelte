@@ -22,7 +22,7 @@
   $: withoutSlots = ["default", ""].some(v => v === Object.keys($$slots).toString())
 
   $: currentAreas = areas ? areas : withoutSlots ? defaultAreas : [
-    withSides("top"),
+    withSides("header"),
     withSides("default", "main", "aside", "bside"),
     withSides("footer")
   ].filter(v => v).map(v => `"${v}"`).join(" ")
@@ -39,7 +39,6 @@
   {#if withoutSlots}
     <slot />
   {:else}
-    {currentAreas}
     {#if $$slots.header}
       <div data-slot-header>
         <slot name="header" />

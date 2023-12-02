@@ -6,7 +6,7 @@
 </h1>
 
 <style>
-  h1 {
+  [data-hui-h1] {
     font-weight: var(--h1-fw, var(--hui-typography-h1-font-weight));
     font-size: var(--h1-fs, var(--hui-typography-h1-font-size));
 

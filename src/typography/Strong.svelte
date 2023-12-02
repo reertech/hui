@@ -6,7 +6,7 @@
 </strong>
 
 <style>
-  strong {
+  [data-hui-strong] {
     font-weight: var(--strong-fw, var(--hui-typography-strong-font-weight));
   }
 </style>

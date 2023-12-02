@@ -1,75 +1,157 @@
 :root {
   /* COLORS */
-  --hui-color-bg: #fff;
-  --hui-color-text: #494B54;
-  --hui-color-border: #999;
 
-  /* SPACES */
-  --hui-spacer: 8px;
+  --hui-vars-color-base-h: 0;
+  --hui-vars-color-base-s: 0%;
+  --hui-vars-color-base-l: 27%;
+  --hui-vars-color-base: hsl(var(--hui-vars-color-base-h), var(--hui-vars-color-base-s), var(--hui-vars-color-base-l));
 
-  --hui-spacer-0: 0;
-  --hui-spacer-1: calc(var(--hui-spacer) * 0.5);
-  --hui-spacer-2: var(--hui-spacer);
-  --hui-spacer-3: calc(var(--hui-spacer) * 2);
-  --hui-spacer-4: calc(var(--hui-spacer) * 3);
-  --hui-spacer-5: calc(var(--hui-spacer) * 4);
-  --hui-spacer-6: calc(var(--hui-spacer) * 5);
-  --hui-spacer-7: calc(var(--hui-spacer) * 6);
-  --hui-spacer-8: calc(var(--hui-spacer) * 8);
-  --hui-spacer-9: calc(var(--hui-spacer) * 10);
-  --hui-spacer-10: calc(var(--hui-spacer) * 12);
-  --hui-spacer-11: calc(var(--hui-spacer) * 14);
-  --hui-spacer-12: calc(var(--hui-spacer) * 16);
+  --hui-vars-color-base-minus1-h: var(--hui-vars-color-base-h);
+  --hui-vars-color-base-minus1-s: var(--hui-vars-color-base-s);
+  --hui-vars-color-base-minus1-l: calc(var(--hui-vars-color-base-l) - 5%);
+  --hui-vars-color-base-minus1: hsl(var(--hui-vars-color-base-minus1-h), var(--hui-vars-color-base-minus1-s), var(--hui-vars-color-base-minus1-l));
 
-  --hui-em-spacer-1: 0.0625em;
-  --hui-em-spacer-2: 0.125em;
-  --hui-em-spacer-3: 0.25em;
-  --hui-em-spacer-4: 0.375em;
-  --hui-em-spacer-5: 0.5em;
-  --hui-em-spacer-6: 0.75em;
+  --hui-vars-color-base-minus2-h: var(--hui-vars-color-base-h);
+  --hui-vars-color-base-minus2-s: var(--hui-vars-color-base-s);
+  --hui-vars-color-base-minus2-l: calc(var(--hui-vars-color-base-l) - 10%);
+  --hui-vars-color-base-minus2: hsl(var(--hui-vars-color-base-minus2-h), var(--hui-vars-color-base-minus2-s), var(--hui-vars-color-base-minus2-l));
+
+  --hui-vars-color-base-plus1-h: var(--hui-vars-color-base-h);
+  --hui-vars-color-base-plus1-s: var(--hui-vars-color-base-s);
+  --hui-vars-color-base-plus1-l: calc(var(--hui-vars-color-base-l) + 10%);
+  --hui-vars-color-base-plus1: hsl(var(--hui-vars-color-base-plus1-h), var(--hui-vars-color-base-plus1-s), var(--hui-vars-color-base-plus1-l));
+
+  --hui-vars-color-base-plus2-h: var(--hui-vars-color-base-h);
+  --hui-vars-color-base-plus2-s: var(--hui-vars-color-base-s);
+  --hui-vars-color-base-plus2-l: calc(var(--hui-vars-color-base-l) + 25%);
+  --hui-vars-color-base-plus2: hsl(var(--hui-vars-color-base-plus2-h), var(--hui-vars-color-base-plus2-s), var(--hui-vars-color-base-plus2-l));
+
+  --hui-vars-color-base-plus3-h: var(--hui-vars-color-base-h);
+  --hui-vars-color-base-plus3-s: var(--hui-vars-color-base-s);
+  --hui-vars-color-base-plus3-l: calc(var(--hui-vars-color-base-l) + 38%);
+  --hui-vars-color-base-plus3: hsl(var(--hui-vars-color-base-plus3-h), var(--hui-vars-color-base-plus3-s), var(--hui-vars-color-base-plus3-l));
+
+  --hui-vars-color-contrast-h: var(--hui-vars-color-base-h);
+  --hui-vars-color-contrast-s: var(--hui-vars-color-base-s);
+  --hui-vars-color-contrast-l: 90%;
+  --hui-vars-color-contrast: hsl(var(--hui-vars-color-contrast-h), var(--hui-vars-color-contrast-s), var(--hui-vars-color-contrast-l));
+
+  --hui-vars-color-contrast-minus1-h: var(--hui-vars-color-contrast-h);
+  --hui-vars-color-contrast-minus1-s: var(--hui-vars-color-contrast-s);
+  --hui-vars-color-contrast-minus1-l: calc(var(--hui-vars-color-contrast-l) - 5%);
+  --hui-vars-color-contrast-minus1: hsl(var(--hui-vars-color-contrast-minus1-h), var(--hui-vars-color-contrast-minus1-s), var(--hui-vars-color-contrast-minus1-l));
+
+  --hui-vars-color-contrast-minus2-h: var(--hui-vars-color-contrast-h);
+  --hui-vars-color-contrast-minus2-s: var(--hui-vars-color-contrast-s);
+  --hui-vars-color-contrast-minus2-l: calc(var(--hui-vars-color-contrast-l) - 15%);
+  --hui-vars-color-contrast-minus2: hsl(var(--hui-vars-color-contrast-minus2-h), var(--hui-vars-color-contrast-minus2-s), var(--hui-vars-color-contrast-minus2-l));
+
+  --hui-vars-color-contrast-plus1-h: var(--hui-vars-color-contrast-h);
+  --hui-vars-color-contrast-plus1-s: var(--hui-vars-color-contrast-s);
+  --hui-vars-color-contrast-plus1-l: calc(var(--hui-vars-color-contrast-l) + 5%);
+  --hui-vars-color-contrast-plus1: hsl(var(--hui-vars-color-contrast-plus1-h), var(--hui-vars-color-contrast-plus1-s), var(--hui-vars-color-contrast-plus1-l));
+
+  --hui-vars-color-contrast-plus2-h: var(--hui-vars-color-contrast-h);
+  --hui-vars-color-contrast-plus2-s: var(--hui-vars-color-contrast-s);
+  --hui-vars-color-contrast-plus2-l: calc(var(--hui-vars-color-contrast-l) + 10%);
+  --hui-vars-color-contrast-plus2: hsl(var(--hui-vars-color-contrast-plus2-h), var(--hui-vars-color-contrast-plus2-s), var(--hui-vars-color-contrast-plus2-l));
+
+  --hui-vars-color-bg: var(--hui-vars-color-contrast-plus2);
+  --hui-vars-color-text: var(--hui-vars-color-base);
+  --hui-vars-color-border-first: var(--hui-vars-color-contrast-minus2);
+  --hui-vars-color-border-second: var(--hui-vars-color-base-plus3);
+  --hui-vars-color-border-third: var(--hui-vars-color-contrast-plus2);
+  --hui-vars-color-border: var(--hui-vars-color-border-second);
+
+  /* GRADIENTS */
+  --hui-vars-gradient-0: radial-gradient(transparent, #00000007);
+  --hui-vars-gradient-1: radial-gradient(transparent, #00000019);
+  --hui-vars-gradient-2: radial-gradient(transparent, #00000022);
+
+  /* TRANSITIONS */
+  --hui-vars-transition-1: all 0.22s ease-out allow-discrete;
 
   /* SIZES */
-  --hui-size: 1em;
+  --hui-vars-size: clamp(1vmax, 1rem, 2vmax);
 
-  --hui-size-0: 0;
-  --hui-size-1: var(--hui-size);
-  --hui-size-2: calc(var(--hui-size-1) +  4px);
-  --hui-size-3: calc(var(--hui-size-2) +  4px);
-  --hui-size-4: calc(var(--hui-size-3) +  4px);
-  --hui-size-5: calc(var(--hui-size-4) +  4px);
-  --hui-size-6: calc(var(--hui-size-5) +  8px);
-  --hui-size-7: calc(var(--hui-size-6) +  8px);
-  --hui-size-8: calc(var(--hui-size-7) + 16px);
+  --hui-vars-size-0: 0;
+  --hui-vars-size-1: var(--hui-vars-size);
+  --hui-vars-size-2: calc(var(--hui-vars-size-1) +  4px);
+  --hui-vars-size-3: calc(var(--hui-vars-size-2) +  4px);
+  --hui-vars-size-4: calc(var(--hui-vars-size-3) +  4px);
+  --hui-vars-size-5: calc(var(--hui-vars-size-4) +  4px);
+  --hui-vars-size-6: calc(var(--hui-vars-size-5) +  8px);
+  --hui-vars-size-7: calc(var(--hui-vars-size-6) +  8px);
+  --hui-vars-size-8: calc(var(--hui-vars-size-7) + 16px);
+
+  /* SPACES */
+  --hui-vars-spacer: calc(var(--hui-vars-size) / 1.5);
+
+  --hui-vars-spacer-0: 0;
+  --hui-vars-spacer-1: calc(0.0625 * var(--hui-vars-spacer));
+  --hui-vars-spacer-2: calc(0.17 * var(--hui-vars-spacer));
+  --hui-vars-spacer-3: calc(0.25 * var(--hui-vars-spacer));
+  --hui-vars-spacer-4: calc(0.33 * var(--hui-vars-spacer));
+  --hui-vars-spacer-5: calc(0.66 * var(--hui-vars-spacer));
+  --hui-vars-spacer-6: calc(0.99 * var(--hui-vars-spacer));
+  --hui-vars-spacer-7: calc(1.33 * var(--hui-vars-spacer));
+  --hui-vars-spacer-8: calc(1.66 * var(--hui-vars-spacer));
+  --hui-vars-spacer-9: calc(1.99 * var(--hui-vars-spacer));
+  --hui-vars-spacer-10: calc(2.33 * var(--hui-vars-spacer));
+  --hui-vars-spacer-11: calc(2.66 * var(--hui-vars-spacer));
+  --hui-vars-spacer-12: calc(5.55 * var(--hui-vars-spacer));
 
   /* CONTAINERS */
-  --hui-container-width: 980px;
+  /*--hui-container-width: 980px;
   --hui-grid-gutter:     10px;
 
   --hui-width-xs: 0;
   --hui-width-sm: 544px;
   --hui-width-md: 768px;
   --hui-width-lg: 1012px;
-  --hui-width-xl: 1280px;
-
-  --hui-container-sm: var(--hui-width-sm);
-  --hui-container-md: var(--hui-width-md);
-  --hui-container-lg: var(--hui-width-lg);
-  --hui-container-xl: var(--hui-width-xl);
+  --hui-width-xl: 1280px;*/
 
   /* BORDERS */
-  --hui-border-width: 1px;
-  --hui-border-style: solid;
-  --hui-border-color: var(--hui-color-border);
+  --hui-vars-border-width: var(--hui-vars-spacer-2);
+  --hui-vars-border-style: solid;
+  --hui-vars-border-color: var(--hui-vars-color-border);
 
-  --hui-border-radius-1: 2px;
-  --hui-border-radius-2: 3px;
-  --hui-border-radius-3: 5px;
-  --hui-border-radius: var(--hui-border-radius-1);
+  --hui-vars-border-radius-0: 0;
+  --hui-vars-border-radius-1: var(--hui-vars-spacer-2);
+  --hui-vars-border-radius-2: var(--hui-vars-spacer-3);
+  --hui-vars-border-radius-3: var(--hui-vars-spacer-5);
+  --hui-vars-border-radius-4: var(--hui-vars-spacer-7);
+  --hui-vars-border-radius-5: var(--hui-vars-spacer-10);
+  --hui-vars-border-radius: var(--hui-vars-border-radius-3);
 
   /* SHADOWS */
-  --hui-box-shadow-0: 0 0 transparent;
-  --hui-box-shadow-1: 2px 0 #555;
-  --hui-box-shadow-2: 3px 1px #555;
+  --hui-vars-box-shadow-inverse-1-x: 0;
+  --hui-vars-box-shadow-inverse-1-y: 0;
+  --hui-vars-box-shadow-inverse-1-blur: var(--hui-vars-spacer-3);
+  --hui-vars-box-shadow-inverse-1-spread: var(--hui-vars-spacer-0);
+  --hui-vars-box-shadow-inverse-1-color: var(--hui-vars-color-base-plus3);
+  --hui-vars-box-shadow-inverse-1: inset var(--hui-vars-box-shadow-inverse-1-x) var(--hui-vars-box-shadow-inverse-1-y) var(--hui-vars-box-shadow-inverse-1-blur) var(--hui-vars-box-shadow-inverse-1-spread) var(--hui-vars-box-shadow-inverse-1-color);
+
+  --hui-vars-box-shadow-0-x: 0;
+  --hui-vars-box-shadow-0-y: 0;
+  --hui-vars-box-shadow-0-blur: 0;
+  --hui-vars-box-shadow-0-spread: 0;
+  --hui-vars-box-shadow-0-color: none;
+  --hui-vars-box-shadow-0: var(--hui-vars-box-shadow-0-x) var(--hui-vars-box-shadow-0-y) var(--hui-vars-box-shadow-0-blur) var(--hui-vars-box-shadow-0-spread) var(--hui-vars-box-shadow-0-color);
+
+  --hui-vars-box-shadow-1-x: 0;
+  --hui-vars-box-shadow-1-y: 0;
+  --hui-vars-box-shadow-1-blur: var(--hui-vars-spacer-2);
+  --hui-vars-box-shadow-1-spread: var(--hui-vars-spacer-0);
+  --hui-vars-box-shadow-1-color: var(--hui-vars-color-base-plus2);
+  --hui-vars-box-shadow-1: var(--hui-vars-box-shadow-1-x) var(--hui-vars-box-shadow-1-y) var(--hui-vars-box-shadow-1-blur) var(--hui-vars-box-shadow-1-spread) var(--hui-vars-box-shadow-1-color);
+
+  --hui-vars-box-shadow-2-x: 0;
+  --hui-vars-box-shadow-2-y: 0;
+  --hui-vars-box-shadow-2-blur: var(--hui-vars-spacer-3);
+  --hui-vars-box-shadow-2-spread: var(--hui-vars-spacer-1);
+  --hui-vars-box-shadow-2-color: var(--hui-vars-color-base-plus2);
+  --hui-vars-box-shadow-2: var(--hui-vars-box-shadow-2-x) var(--hui-vars-box-shadow-2-y) var(--hui-vars-box-shadow-2-blur) var(--hui-vars-box-shadow-2-spread) var(--hui-vars-box-shadow-2-color);
 
   /* TYPOGRAPHY */
   --hui-h00-font-size: 48px;
@@ -99,20 +181,16 @@
   --hui-lh-condensed: 1.25;
   --hui-lh-default: 1.5;
 
+  /* BODY */
   --hui-body-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 
   --hui-font-size-small: 13px;
   --hui-body-font-size: 16px;
   --hui-body-line-height: var(--hui-lh-default);
-}
 
-body {
-  font-family: var(--hui-body-font);
-  font-size: var(--hui-body-font-size);
-  line-height: var(--hui-body-line-height);
-}
+  --hui-body-color: var(--hui-vars-color-text);
 
-[data-hui-root] {
+  /* [data-hui=root] */
   --hui-layout-root-top: 0;
   --hui-layout-root-right: 0;
   --hui-layout-root-bottom: 0;
@@ -121,9 +199,8 @@ body {
   --hui-layout-root-padding-right: 0;
   --hui-layout-root-padding-bottom: 0;
   --hui-layout-root-padding-left: 0;
-}
 
-[data-hui-main] {
+  /* [data-hui=main] */
   --hui-layout-main-padding-top: 0;
   --hui-layout-main-padding-right: 0;
   --hui-layout-main-padding-bottom: 0;
@@ -132,11 +209,10 @@ body {
   --hui-layout-main-margin-right: 0;
   --hui-layout-main-margin-bottom: 0;
   --hui-layout-main-margin-left: 0;
-}
 
-[data-hui-header] {
-  --hui-layout-header-gap: var(--hui-size);
-  --hui-layout-header-height: calc(var(--hui-size) * 3);
+  /* [data-hui=header] */
+  --hui-layout-header-gap: var(--hui-vars-size);
+  --hui-layout-header-height: calc(var(--hui-vars-size) * 3);
   --hui-layout-header-line-height: var(--hui-layout-header-height);
   --hui-layout-header-min-height: var(--hui-layout-header-height);
   --hui-layout-header-max-height: var(--hui-layout-header-height);
@@ -148,9 +224,8 @@ body {
   --hui-layout-header-padding-right: 0;
   --hui-layout-header-padding-bottom: 0;
   --hui-layout-header-padding-left: 0;
-}
 
-[data-hui-nav] {
+  /* [data-hui=nav] */
   --hui-layout-nav-margin-top: 0;
   --hui-layout-nav-margin-right: 0;
   --hui-layout-nav-margin-bottom: 0;
@@ -159,13 +234,11 @@ body {
   --hui-layout-nav-padding-right: 0;
   --hui-layout-nav-padding-bottom: 0;
   --hui-layout-nav-padding-left: 0;
-}
 
-[data-hui-title] {
+  /* [data-hui=title] */
   --hui-layout-title-font-weight: var(--hui-font-weight-normal);
-}
 
-[data-hui-h1] {
+  /* [data-hui=h1] */
   --hui-typography-h1-font-weight: var(--hui-h1-font-weight);
   --hui-typography-h1-font-size: var(--hui-h1-font-size);
   --hui-typography-h1-margin-top: 0;
@@ -176,45 +249,149 @@ body {
   --hui-typography-h1-padding-right: 0;
   --hui-typography-h1-padding-bottom: 0;
   --hui-typography-h1-padding-left: 0;
-}
 
-[data-hui-strong] {
+  /* [data-hui=strong] */
   --hui-typography-strong-font-weight: var(--hui-font-weight-semibold);
+
+  /* CONTROLS */
+  --hui-control-font-size: var(--hui-body-font-size);
+  --hui-control-font-weight: var(--hui-font-weight-semibold);
+
+  --hui-control-color: var(--hui-vars-color-text);
+  --hui-control-background-color: var(--hui-vars-color-bg);
+  --hui-control-background-image: var(--hui-vars-gradient-1);
+
+  --hui-control-border-top-color: var(--hui-vars-border-color);
+  --hui-control-border-right-color: var(--hui-vars-border-color);
+  --hui-control-border-bottom-color: var(--hui-vars-border-color);
+  --hui-control-border-left-color: var(--hui-vars-border-color);
+
+  --hui-control-border-top-style: var(--hui-vars-border-style);
+  --hui-control-border-right-style: var(--hui-vars-border-style);
+  --hui-control-border-bottom-style: var(--hui-vars-border-style);
+  --hui-control-border-left-style: var(--hui-vars-border-style);
+
+  --hui-control-border-top-width: var(--hui-vars-border-width);
+  --hui-control-border-right-width: var(--hui-vars-border-width);
+  --hui-control-border-bottom-width: var(--hui-vars-border-width);
+  --hui-control-border-left-width: var(--hui-vars-border-width);
+
+  --hui-control-border-top-radius: var(--hui-vars-border-radius);
+  --hui-control-border-right-radius: var(--hui-vars-border-radius);
+  --hui-control-border-bottom-radius: var(--hui-vars-border-radius);
+  --hui-control-border-left-radius: var(--hui-vars-border-radius);
+
+  --hui-control-box-shadow: var(--hui-vars-box-shadow-1);
+
+  --hui-control-transition: var(--hui-vars-transition-1);
+
+  --hui-control-margin-top: 0;
+  --hui-control-margin-right: 0;
+  --hui-control-margin-bottom: 0;
+  --hui-control-margin-left: 0;
+
+  --hui-control-padding-top: var(--hui-vars-spacer-5);
+  --hui-control-padding-right: var(--hui-vars-spacer-6);
+  --hui-control-padding-bottom: var(--hui-vars-spacer-5);
+  --hui-control-padding-left: var(--hui-vars-spacer-6);
+
+  /* [data-hui=button] */
+  --hui-control-button-font-size: var(--hui-control-font-size);
+  --hui-control-button-font-weight: var(--hui-control-font-weight);
+
+  --hui-control-button-color: var(--hui-control-color);
+  --hui-control-button-background-color: var(--hui-control-background-color);
+  --hui-control-button-background-image: var(--hui-control-background-image);
+
+  --hui-control-button-border-top-color: var(--hui-control-border-top-color);
+  --hui-control-button-border-right-color: var(--hui-control-border-right-color);
+  --hui-control-button-border-bottom-color: var(--hui-control-border-bottom-color);
+  --hui-control-button-border-left-color: var(--hui-control-border-left-color);
+
+  --hui-control-button-border-top-style: var(--hui-control-border-top-style);
+  --hui-control-button-border-right-style: var(--hui-control-border-right-style);
+  --hui-control-button-border-bottom-style: var(--hui-control-border-bottom-style);
+  --hui-control-button-border-left-style: var(--hui-control-border-left-style);
+
+  --hui-control-button-border-top-width: var(--hui-control-border-top-width);
+  --hui-control-button-border-right-width: var(--hui-control-border-right-width);
+  --hui-control-button-border-bottom-width: var(--hui-control-border-bottom-width);
+  --hui-control-button-border-left-width: var(--hui-control-border-left-width);
+
+  --hui-control-button-border-top-radius: var(--hui-control-border-top-radius);
+  --hui-control-button-border-right-radius: var(--hui-control-border-right-radius);
+  --hui-control-button-border-bottom-radius: var(--hui-control-border-bottom-radius);
+  --hui-control-button-border-left-radius: var(--hui-control-border-left-radius);
+
+  --hui-control-button-box-shadow: var(--hui-control-box-shadow);
+
+  --hui-control-button-margin-top: var(--hui-control-margin-top);
+  --hui-control-button-margin-right: var(--hui-control-margin-right);
+  --hui-control-button-margin-bottom: var(--hui-control-margin-bottom);
+  --hui-control-button-margin-left: var(--hui-control-margin-left);
+
+  --hui-control-button-padding-top: var(--hui-control-padding-top);
+  --hui-control-button-padding-right: var(--hui-control-padding-right);
+  --hui-control-button-padding-bottom: var(--hui-control-padding-bottom);
+  --hui-control-button-padding-left: var(--hui-control-padding-left);
+
+  /* [data-hui=button]:hover */
+  --hui-control-button-hover-box-shadow: var(--hui-vars-box-shadow-0);
+  --hui-control-button-hover-background-image: var(--hui-vars-gradient-2);
+
+  /* [data-hui=button][active] */
+  --hui-control-button-active-box-shadow: var(--hui-vars-box-shadow-inverse-1);
+  --hui-control-button-active-background-image: var(--hui-vars-gradient-0);
+
+  /* [data-hui=button]:focus */
+  --hui-control-button-focus-border-color: var(--hui-vars-color-border-third);
+
+  /* [data-hui=input] */
+  --hui-control-input-grid-template-columns: left 25% input 2fr right 25%;
+
+  --hui-control-input-margin-top: var(--hui-control-margin-top);
+  --hui-control-input-margin-right: var(--hui-control-margin-right);
+  --hui-control-input-margin-bottom: var(--hui-control-margin-bottom);
+  --hui-control-input-margin-left: var(--hui-control-margin-left);
+
+  --hui-control-input-padding-top: var(--hui-control-padding-top);
+  --hui-control-input-padding-right: var(--hui-control-padding-right);
+  --hui-control-input-padding-bottom: var(--hui-control-padding-bottom);
+  --hui-control-input-padding-left: var(--hui-control-padding-left);
+
+  --hui-control-input-border-top-color: var(--hui-control-border-top-color);
+  --hui-control-input-border-right-color: var(--hui-control-border-right-color);
+  --hui-control-input-border-bottom-color: var(--hui-control-border-bottom-color);
+  --hui-control-input-border-left-color: var(--hui-control-border-left-color);
+
+  --hui-control-input-border-top-style: var(--hui-vars-border-top-style);
+  --hui-control-input-border-right-style: var(--hui-vars-border-right-style);
+  --hui-control-input-border-bottom-style: var(--hui-vars-border-bottom-style);
+  --hui-control-input-border-left-style: var(--hui-vars-border-left-style);
+
+  --hui-control-input-border-top-style: var(--hui-control-border-top-style);
+  --hui-control-input-border-right-style: var(--hui-control-border-right-style);
+  --hui-control-input-border-bottom-style: var(--hui-control-border-bottom-style);
+  --hui-control-input-border-left-style: var(--hui-control-border-left-style);
+
+  --hui-control-input-border-top-width: var(--hui-control-border-top-width);
+  --hui-control-input-border-right-width: var(--hui-control-border-right-width);
+  --hui-control-input-border-bottom-width: var(--hui-control-border-bottom-width);
+  --hui-control-input-border-left-width: var(--hui-control-border-left-width);
+
+  --hui-control-input-border-top-radius: var(--hui-control-border-top-radius);
+  --hui-control-input-border-right-radius: var(--hui-control-border-right-radius);
+  --hui-control-input-border-bottom-radius: var(--hui-control-border-bottom-radius);
+  --hui-control-input-border-left-radius: var(--hui-control-border-left-radius);
 }
 
-[data-hui-button] {
-  --hui-controls-button-font-size: var(--hui-body-font-size);
-  --hui-controls-button-font-weight: var(--hui-font-weight-semibold);
+[data-hui] {
+  color: var(--hui-body-color);
+  font-family: var(--hui-body-font);
+  font-size: var(--hui-body-font-size);
+  line-height: var(--hui-body-line-height);
+}
 
-  --hui-controls-button-color: var(--hui-color-text);
-  --hui-controls-button-background-color: #E5E4E9;
-
-  --hui-controls-button-border-top-color: var(--hui-border-color);
-  --hui-controls-button-border-right-color: var(--hui-border-color);
-  --hui-controls-button-border-bottom-color: var(--hui-border-color);
-  --hui-controls-button-border-left-color: var(--hui-border-color);
-
-  --hui-controls-button-border-top-style: var(--hui-border-style);
-  --hui-controls-button-border-right-style: var(--hui-border-style);
-  --hui-controls-button-border-bottom-style: var(--hui-border-style);
-  --hui-controls-button-border-left-style: var(--hui-border-style);
-
-  --hui-controls-button-border-top-width: var(--hui-border-width);
-  --hui-controls-button-border-right-width: var(--hui-border-width);
-  --hui-controls-button-border-bottom-width: var(--hui-border-width);
-  --hui-controls-button-border-left-width: var(--hui-border-width);
-
-  --hui-controls-button-border-top-radius: var(--hui-border-radius);
-  --hui-controls-button-border-right-radius: var(--hui-border-radius);
-  --hui-controls-button-border-bottom-radius: var(--hui-border-radius);
-  --hui-controls-button-border-left-radius: var(--hui-border-radius);
-
-  --hui-controls-button-margin-top: 0;
-  --hui-controls-button-margin-right: 0;
-  --hui-controls-button-margin-bottom: 0;
-  --hui-controls-button-margin-left: 0;
-  --hui-controls-button-padding-top: var(--hui-em-spacer-5);
-  --hui-controls-button-padding-right: var(--hui-em-spacer-6);
-  --hui-controls-button-padding-bottom: var(--hui-em-spacer-5);
-  --hui-controls-button-padding-left: var(--hui-em-spacer-6);
+[data-hui-slot] {
+  display: contents;
 }

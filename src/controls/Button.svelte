@@ -1,5 +1,5 @@
 <script>
-  export let text = "button"
+  export let text = "Click me!"
   export let hidden = null
   export let active = null
   export let disabled = null
@@ -7,10 +7,10 @@
 
 <button
   on:click
-  {hidden}
-  {active}
-  {disabled}
-  data-hui-button
+  hidden={hidden || null}
+  active={active || null}
+  disabled={disabled || null}
+  data-hui="button"
 >
   {#if $$slots.default}
     <slot />
@@ -20,64 +20,77 @@
 </button>
 
 <style>
-  [data-hui-button][active] {
-  }
+  [data-hui=button] {
+    font-size: var(--button-fs, var(--hui-control-button-font-size));
+    font-weight: var(--button-fw, var(--hui-control-button-font-weight));
 
-  [data-hui-header][hidden]:not(#hack) {
+    color: var(--button-c, var(--hui-control-button-color));
+    background-color: var(--button-bgc, var(--hui-control-button-background-color));
+    background-image: var(--button-bgi, var(--hui-control-button-background-image));
+
+    overflow: hidden;
+    cursor: pointer;
+
+    padding: var(--button-p,
+      var(--button-pt, var(--hui-control-button-padding-top))
+      var(--button-pr, var(--hui-control-button-padding-right))
+      var(--button-pb, var(--hui-control-button-padding-bottom))
+      var(--button-pl, var(--hui-control-button-padding-left)));
+
+    margin: var(--button-m,
+      var(--button-mt, var(--hui-control-button-margin-top))
+      var(--button-mr, var(--hui-control-button-margin-right))
+      var(--button-mb, var(--hui-control-button-margin-bottom))
+      var(--button-ml, var(--hui-control-button-margin-left)));
+
+    border-color: var(--button-brc,
+      var(--button-btc, var(--hui-control-button-border-top-color))
+      var(--button-brc, var(--hui-control-button-border-right-color))
+      var(--button-bbc, var(--hui-control-button-border-bottom-color))
+      var(--button-blc, var(--hui-control-button-border-left-color)));
+
+    border-style: var(--button-brs,
+      var(--button-bts, var(--hui-control-button-border-top-style))
+      var(--button-brs, var(--hui-control-button-border-right-style))
+      var(--button-bbs, var(--hui-control-button-border-bottom-style))
+      var(--button-bls, var(--hui-control-button-border-left-style)));
+
+    border-width: var(--button-brw,
+      var(--button-btw, var(--hui-control-button-border-top-width))
+      var(--button-brw, var(--hui-control-button-border-right-width))
+      var(--button-bbw, var(--hui-control-button-border-bottom-width))
+      var(--button-blw, var(--hui-control-button-border-left-width)));
+
+    border-radius: var(--button-brw,
+      var(--button-btw, var(--hui-control-button-border-top-radius))
+      var(--button-brw, var(--hui-control-button-border-right-radius))
+      var(--button-bbw, var(--hui-control-button-border-bottom-radius))
+      var(--button-blw, var(--hui-control-button-border-left-radius)));
+
+    box-shadow: var(--button-shd, var(--hui-control-button-box-shadow));
+  }
+  [data-hui=button]:hover {
+    box-shadow: var(--button-hover-shd, var(--hui-control-button-hover-box-shadow));
+    background-image: var(--button-hover-bgi, var(--hui-control-button-hover-background-image));
+  }
+  [data-hui=button]:active,
+  [data-hui=button].active,
+  [data-hui=button][active] {
+    box-shadow: var(--button-active-shd, var(--hui-control-button-active-box-shadow));
+    background-image: var(--button-active-bgi, var(--hui-control-button-active-background-image));
+  }
+  /*[data-hui=button]:focus {
+    border-color: var(--button-focus-bgc, var(--hui-control-button-focus-border-color));
+  }*/
+
+  [data-hui=header][hidden]:not(#hack) {
     display: none;
   }
 
-  :global([disabled]) [data-hui-button]:not(#hack),
-  [data-hui-button][disabled]:not(#hack) {
+  :global([disabled]) [data-hui=button]:not(#hack),
+  [data-hui=button][disabled]:not(#hack) {
     color: #fff;
     pointer-events: none;
   }
 
-  [data-hui-button] {
-    font-size: var(--button-fs, var(--hui-controls-button-font-size));
-    font-weight: var(--button-fw, var(--hui-controls-button-font-weight));
-
-    color: var(--button-c, var(--hui-controls-button-color));
-    background-color: var(--button-bgc, var(--hui-controls-button-background-color));
-
-    overflow: hidden;
-
-    box-shadow: none;
-
-    border-color: var(--button-brc,
-      var(--button-btc, var(--hui-controls-button-border-top-color))
-      var(--button-brc, var(--hui-controls-button-border-right-color))
-      var(--button-bbc, var(--hui-controls-button-border-bottom-color))
-      var(--button-blc, var(--hui-controls-button-border-left-color)));
-
-    border-style: var(--button-brs,
-      var(--button-bts, var(--hui-controls-button-border-top-style))
-      var(--button-brs, var(--hui-controls-button-border-right-style))
-      var(--button-bbs, var(--hui-controls-button-border-bottom-style))
-      var(--button-bls, var(--hui-controls-button-border-left-style)));
-
-    border-width: var(--button-brw,
-      var(--button-btw, var(--hui-controls-button-border-top-width))
-      var(--button-brw, var(--hui-controls-button-border-right-width))
-      var(--button-bbw, var(--hui-controls-button-border-bottom-width))
-      var(--button-blw, var(--hui-controls-button-border-left-width)));
-
-    border-radius: var(--button-brw,
-      var(--button-btw, var(--hui-controls-button-border-top-radius))
-      var(--button-brw, var(--hui-controls-button-border-right-radius))
-      var(--button-bbw, var(--hui-controls-button-border-bottom-radius))
-      var(--button-blw, var(--hui-controls-button-border-left-radius)));
-
-    padding: var(--button-p,
-      var(--button-pt, var(--hui-controls-button-padding-top))
-      var(--button-pr, var(--hui-controls-button-padding-right))
-      var(--button-pb, var(--hui-controls-button-padding-bottom))
-      var(--button-pl, var(--hui-controls-button-padding-left)));
-
-    margin: var(--button-m,
-      var(--button-mt, var(--hui-controls-button-margin-top))
-      var(--button-mr, var(--hui-controls-button-margin-right))
-      var(--button-mb, var(--hui-controls-button-margin-bottom))
-      var(--button-ml, var(--hui-controls-button-margin-left)));
-  }
 </style>
