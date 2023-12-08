@@ -17,7 +17,7 @@
 </script>
 
 <header
-  data-hui-header
+  data-hui=header
   hidden={hidden || null}
   disabled={disabled || null}
   class={className || null}
@@ -30,18 +30,20 @@
 </header>
 
 <style>
-  [data-hui-header] {
+  [data-hui=header] {
     grid-area: var(--header-a, header);
 
     display: grid;
     gap: var(--header-g, var(--hui-layout-header-gap));
     grid-template-areas: "left";
-    grid-auto-columns: var(--header-ac, minmax(min-content, 1fr));
+    grid-auto-columns: left 1fr center 3fr right 1fr;
     grid-auto-flow: column;
     grid-auto-rows: 100%;
     align-items: center;
 
-    border: 2px solid green;
+    overflow: hidden;
+
+    box-shadow: var(--header-shd, var(--hui-layout-header-box-shadow));
 
     height: var(--header-h, var(--hui-layout-header-height));
     line-height: var(--header-lh, var(--header-h, var(--hui-layout-header-line-height)));
@@ -59,5 +61,22 @@
       var(--header-mr, var(--hui-layout-header-margin-right))
       var(--header-mb, var(--hui-layout-header-margin-bottom))
       var(--header-ml, var(--hui-layout-header-margin-left)));
+
+    width: var(--header-h, var(--hui-layout-header-width));
+    min-width: var(--header-mih, var(--header-h, var(--hui-layout-header-min-width)));
+    max-width: var(--header-mah, var(--header-h, var(--hui-layout-header-max-width)));
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    border-radius: var(--header-brw,
+      var(--header-btw, var(--hui-layout-header-border-top-radius))
+      var(--header-brw, var(--hui-layout-header-border-right-radius))
+      var(--header-bbw, var(--hui-layout-header-border-bottom-radius))
+      var(--header-blw, var(--hui-layout-header-border-left-radius)));
+
+    color: var(--button-c, var(--hui-layout-header-color));
+    background-color: var(--button-bgc, var(--hui-layout-header-background-color));
+    background-image: var(--button-bgi, var(--hui-layout-header-background-image));
   }
 </style>

@@ -31,19 +31,19 @@
 <style>
   [data-hui=bar] {
     display: grid;
-    gap: 0;
-    grid-template-areas: "default";
-    grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: column;
     grid-auto-rows: 100%;
-    align-items: center;
+    grid-template-areas: var(--bar-ta, var(--hui-control-bar-template-areas));
+    grid-auto-columns: var(--bar-ac, var(--hui-control-bar-auto-columns));
+    align-items: var(--bar-ai, var(--hui-control-bar-align-items));
+    gap: var(--bar-g, var(--hui-control-bar-gap));
   }
   [data-hui=bar] :global([data-hui=button]:not(:last-child)) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
   }
   [data-hui=bar] :global([data-hui=button]:not(:first-child)) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
   }
 </style>
