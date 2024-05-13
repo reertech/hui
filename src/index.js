@@ -14,4 +14,6 @@ export { default as H1 } from "./typography/H1.svelte"
 
 export { default as Button } from "./controls/Button.svelte"
 export { default as Bar } from "./controls/Bar.svelte"
+export { default as Badge } from "./controls/Badge.svelte"
 export { default as Input } from "./controls/Input.svelte"
+export { default as Select } from "./controls/Select.svelte"

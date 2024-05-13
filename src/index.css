@@ -230,10 +230,10 @@
   --hui-layout-margin-bottom: 0;
   --hui-layout-margin-left: 0;
 
-  --hui-layout-padding-top: var(--hui-vars-spacer-7);
-  --hui-layout-padding-right: var(--hui-vars-spacer-8);
-  --hui-layout-padding-bottom: var(--hui-vars-spacer-7);
-  --hui-layout-padding-left: var(--hui-vars-spacer-8);
+  --hui-layout-padding-top: var(--hui-vars-spacer-0);
+  --hui-layout-padding-right: var(--hui-vars-spacer-0);
+  --hui-layout-padding-bottom: var(--hui-vars-spacer-0);
+  --hui-layout-padding-left: var(--hui-vars-spacer-0);
 
   /* [data-hui=root] */
   --hui-layout-root-top: 0;
@@ -258,7 +258,7 @@
   /* [data-hui=header] */
   --hui-layout-header-gap: var(--hui-layout-gap);
 
-  --hui-layout-header-height: calc(var(--hui-vars-size) * 3.3);
+  --hui-layout-header-height: calc(var(--hui-vars-size) * 5);
   --hui-layout-header-line-height: var(--hui-layout-header-height);
   --hui-layout-header-min-height: var(--hui-layout-header-height);
   --hui-layout-header-max-height: var(--hui-layout-header-height);

@@ -1,12 +1,26 @@
 <script>
+  export let hidden = null
+  export let disabled = null
+
+  let className = null
+  export { className as class }
+
+  let styleName = null
+  export { styleName as style }
 </script>
 
-<h1 data-hui-h1>
+<h1
+  data-hui=h1
+  hidden={hidden || null}
+  disabled={disabled || null}
+  class={className || null}
+  style={styleName || null}
+>
   <slot />
 </h1>
 
 <style>
-  [data-hui-h1] {
+  [data-hui=h1] {
     font-weight: var(--h1-fw, var(--hui-typography-h1-font-weight));
     font-size: var(--h1-fs, var(--hui-typography-h1-font-size));
 

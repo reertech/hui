@@ -10,7 +10,7 @@
   export { styleName as style }
 
   export let areas = [
-    $$slots.default && "left",
+    $$slots.default || $$slots.left && "left",
     $$slots.center && "center",
     $$slots.right && "right"
   ].filter(v => v).join(" ")
@@ -24,9 +24,17 @@
   style={styleName || null}
   style:grid-template-areas={areas === "left" ? null : `"${areas}"`}
 >
-  <slot />
-  <slot name="center" />
-  <slot name="right" />
+  {#if $$slots.left}
+    <slot name="left" />
+  {:else if $$slots.default}
+    <slot />
+  {/if}
+  {#if $$slots.center}
+    <slot name="center" />
+  {/if}
+  {#if $$slots.right}
+    <slot name="right" />
+  {/if}
 </header>
 
 <style>
@@ -36,7 +44,7 @@
     display: grid;
     gap: var(--header-g, var(--hui-layout-header-gap));
     grid-template-areas: "left";
-    grid-auto-columns: left 1fr center 3fr right 1fr;
+    grid-auto-columns: left minmax(max-content, 1fr) center minmax(max-content, 2fr) right minmax(max-content, 1fr);
     grid-auto-flow: column;
     grid-auto-rows: 100%;
     align-items: center;
