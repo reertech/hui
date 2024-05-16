@@ -16,7 +16,7 @@ defmodule Builder do
   end
 
   defp parse_line(line, acc) do
-    with [class, tl] <- String.split(line, ~r"\s*=\s*", trim: true),
+    with [selector, tl] <- String.split(line, ~r"\s*=\s*", trim: true),
          sections <- String.split(tl, ~r"\s*,\s*", trim: true) do
       sections =
         Enum.reduce(sections, [], fn section, acc ->
@@ -27,7 +27,7 @@ defmodule Builder do
           end
         end)
 
-      [{class, sections} | acc]
+      [{selector, sections} | acc]
     else
       _ -> acc
     end
@@ -35,14 +35,14 @@ defmodule Builder do
 
   defp build_style(sections, names) do
     lines =
-      Enum.flat_map(sections, fn {class, sections} ->
+      Enum.flat_map(sections, fn {selector, sections} ->
         Enum.flat_map(sections, fn {section, rules} ->
           Enum.map(rules, fn {key, value} ->
-            "  #{key}: var(#{names.var_name}-#{key}, #{value});"
+            "  #{key}: var(--hui-#{key}, #{value});"
           end)
           |> List.insert_at(0, "  /* #{String.upcase(section)} */")
         end)
-        |> List.insert_at(0, "#{names.prefix} #{class} {")
+        |> List.insert_at(0, build_prefix(selector, names))
         |> List.insert_at(-1, "}")
       end)
 
@@ -53,36 +53,70 @@ defmodule Builder do
   end
 
   defp build_theme(sections, names) do
-    current_theme = parse_theme(names)
+    current_theme = parse_theme(names) |> IO.inspect()
+    defaults = current_theme["default"]
 
-    lines =
-      Enum.flat_map(sections, fn {_, sections} ->
-        Enum.flat_map(sections, fn {section, rules} ->
-          Enum.map(rules, fn {key, _} ->
-            key = "#{names.var_name}-#{key}"
+    default_lines =
+      Enum.flat_map(sections, &elem(&1, 1))
+      |> Enum.uniq()
+      |> Enum.flat_map(fn {section, rules} ->
+        Enum.map(rules, fn {key, _} ->
+          key = "--hui-#{key}"
 
-            if val = current_theme[key] do
-              "  #{key}: #{val};"
-            else
-              "/*  #{key}: ; */"
-            end
-          end)
-          |> List.insert_at(0, "  /* #{String.upcase(section)} */")
+          if val = defaults[key] do
+            "  #{key}-default: #{val};"
+          else
+            "/*  #{key}-default: ; */"
+          end
         end)
+        |> List.insert_at(0, "  /* #{String.upcase(section)} */")
       end)
       |> List.insert_at(0, "#{names.prefix} {")
       |> List.insert_at(-1, "}")
 
+    section_lines =
+      Enum.flat_map(sections, fn {selector, sections} ->
+        current = current_theme[selector]
+
+        Enum.flat_map(sections, fn {section, rules} ->
+          Enum.map(rules, fn {key, _} ->
+            key = "--hui-#{key}"
+
+            cond do
+              val = current[key] -> "  #{key}: #{val};"
+              defaults[key] -> "  #{key}: var(#{key}-default);"
+              true -> "/*  #{key}: ; */"
+            end
+          end)
+          |> List.insert_at(0, "  /* #{String.upcase(section)} */")
+        end)
+        |> List.insert_at(0, build_prefix(selector, names))
+        |> List.insert_at(-1, "}")
+      end)
+
     names.path.("themes")
-    |> File.write!(lines |> Enum.join("\n"))
+    |> File.write!((default_lines ++ section_lines) |> Enum.join("\n"))
   end
 
   defp parse_theme(names) do
     with {:ok, css} <- names.path.("themes") |> File.read(),
-         lines <- css |> String.split(~r"\s*(\}|\{|\n|;)\s*", trim: true) do
-      Enum.reduce(lines, %{}, fn line, acc ->
-        with [key, val] <- String.split(line, ~r"\s*:\s*", trim: true) do
-          acc[key] |> put_in(val)
+         sections <- css |> String.split(~r"\s*}\s*", trim: true) do
+      Enum.reduce(sections, %{}, fn section, acc ->
+        with [selector] <- ~r"(?<=\]).+(?=\{)" |> Regex.run(section),
+             selector <- String.trim(selector),
+             selector <- if(selector == "", do: "default", else: selector) do
+          String.split(section, ~r"\s*(\}|;|\n)\s*", trim: true)
+          |> Enum.reduce(acc, fn line, acc ->
+            with [key, val] <-
+                   String.split(line, ~r"\s*:\s*", trim: true)
+                   |> Enum.map(&String.trim/1) do
+              key = key |> String.trim_trailing("-default")
+              path = [Access.key(selector, %{}), key]
+              acc |> put_in(path, val |> String.trim(";"))
+            else
+              _ -> acc
+            end
+          end)
         else
           _ -> acc
         end
@@ -108,20 +142,15 @@ defmodule Builder do
       |> Path.join()
     end
 
-    var_name =
-      [
-        section,
-        Macro.underscore(name)
-      ]
-      |> Enum.join("-")
-      |> String.replace("_", "-")
-
     %{
       name: name,
       path: file_path,
-      var_name: "--hui-#{var_name}",
       prefix: "[data-hui=#{name}]"
     }
+  end
+
+  defp build_prefix(selector, names) do
+    "#{names.prefix} #{selector} {"
   end
 
   defp build_section("layout-position" = name) do
@@ -335,7 +364,9 @@ defmodule Builder do
        {"grid-row-start", "auto"},
        {"grid-template-areas", "none"},
        {"grid-template-columns", "none"},
-       {"grid-template-rows", "none"}
+       {"grid-template-rows", "none"},
+       {"column-gap", "0px"},
+       {"row-gap", "0px"}
      ]}
   end
 
