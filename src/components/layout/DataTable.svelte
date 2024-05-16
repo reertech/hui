@@ -103,10 +103,10 @@
 </Container>
 
 <!-- theme.ini
-  > data > table > tbody > tr > td = common
-  > data > table > thead > tr > th = common
-  > data > table > * > tr = common, grid
+  > data > table = common, grid
   > data > table > tbody = common, grid
   > data > table > thead = common, grid
-  > data > table = common, grid
+  > data > table > * > tr = common, grid
+  > data > table > tbody > tr > td = common
+  > data > table > thead > tr > th = common
 -->

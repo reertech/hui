@@ -1,17 +1,55 @@
-[data-hui=DataTable] {
+[data-hui=DataTable] > data > table {
+  /* LAYOUT-DISPLAY */
+  --hui-display: grid;
   /* GRID */
-/*  --hui-grid-auto-columns-default: ; */
-/*  --hui-grid-auto-flow-default: ; */
-/*  --hui-grid-auto-rows-default: ; */
-/*  --hui-grid-column-end-default: ; */
-/*  --hui-grid-column-start-default: ; */
-/*  --hui-grid-row-end-default: ; */
-/*  --hui-grid-row-start-default: ; */
-/*  --hui-grid-template-areas-default: ; */
-/*  --hui-grid-template-columns-default: ; */
-/*  --hui-grid-template-rows-default: ; */
-/*  --hui-column-gap-default: ; */
-/*  --hui-row-gap-default: ; */
+  --hui-grid-template-columns: repeat(1000, max-content);
+  --hui-column-gap: var(--hui-vars-spacer-5);
+  --hui-row-gap: var(--hui-vars-spacer-5);
+}
+[data-hui=DataTable] > data > table > tbody {
+  /* LAYOUT-DISPLAY */
+  --hui-display: grid;
+  /* GRID */
+  --hui-grid-column-end: -1;
+  --hui-grid-column-start: 1;
+  --hui-grid-template-columns: subgrid;
+}
+[data-hui=DataTable] > data > table > thead {
+  /* LAYOUT-DISPLAY */
+  --hui-display: grid;
+  /* GRID */
+  --hui-grid-column-end: -1;
+  --hui-grid-column-start: 1;
+  --hui-grid-template-columns: subgrid;
+}
+[data-hui=DataTable] > data > table > * > tr {
+  /* LAYOUT-DISPLAY */
+  --hui-display: grid;
+  /* GRID */
+  --hui-grid-column-end: -1;
+  --hui-grid-column-start: 1;
+}
+[data-hui=DataTable] > data > table > tbody > tr > td {
+  /* LAYOUT-DISPLAY */
+  --hui-display: block;
+  /* LAYOUT-PADDING */
+  --hui-padding-top: var(--hui-vars-spacer-7);
+  --hui-padding-right: var(--hui-vars-spacer-7);
+  --hui-padding-bottom: var(--hui-vars-spacer-7);
+  --hui-padding-left: var(--hui-vars-spacer-7);
+  /* LAYOUT-OVERFLOW */
+  --hui-overflow-x: auto;
+}
+[data-hui=DataTable] > data > table > thead > tr > th {
+  /* LAYOUT-DISPLAY */
+  --hui-display: block;
+  /* LAYOUT-PADDING */
+  --hui-padding-top: var(--hui-vars-spacer-7);
+  --hui-padding-right: var(--hui-vars-spacer-7);
+  --hui-padding-bottom: var(--hui-vars-spacer-7);
+  --hui-padding-left: var(--hui-vars-spacer-7);
+}
+[data-hui=DataTable] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */
 /*  --hui-visibility-default: ; */
@@ -115,55 +153,17 @@
 /*  --hui-outline-offset-default: ; */
 /*  --hui-outline-style-default: ; */
 /*  --hui-outline-width-default: ; */
-}
-[data-hui=DataTable] > data > table {
   /* GRID */
-  --hui-grid-template-columns: repeat(1000, max-content);
-  --hui-column-gap: var(--hui-vars-spacer-5);
-  --hui-row-gap: var(--hui-vars-spacer-5);
-  /* LAYOUT-DISPLAY */
-  --hui-display: grid;
-}
-[data-hui=DataTable] > data > table > thead {
-  /* GRID */
-  --hui-grid-column-end: -1;
-  --hui-grid-column-start: 1;
-  --hui-grid-template-columns: subgrid;
-  /* LAYOUT-DISPLAY */
-  --hui-display: grid;
-}
-[data-hui=DataTable] > data > table > tbody {
-  /* GRID */
-  --hui-grid-column-end: -1;
-  --hui-grid-column-start: 1;
-  --hui-grid-template-columns: subgrid;
-  /* LAYOUT-DISPLAY */
-  --hui-display: grid;
-}
-[data-hui=DataTable] > data > table > * > tr {
-  /* GRID */
-  --hui-grid-column-end: -1;
-  --hui-grid-column-start: 1;
-  /* LAYOUT-DISPLAY */
-  --hui-display: grid;
-}
-[data-hui=DataTable] > data > table > thead > tr > th {
-  /* LAYOUT-DISPLAY */
-  --hui-display: block;
-  /* LAYOUT-PADDING */
-  --hui-padding-top: var(--hui-vars-spacer-7);
-  --hui-padding-right: var(--hui-vars-spacer-7);
-  --hui-padding-bottom: var(--hui-vars-spacer-7);
-  --hui-padding-left: var(--hui-vars-spacer-7);
-}
-[data-hui=DataTable] > data > table > tbody > tr > td {
-  /* LAYOUT-DISPLAY */
-  --hui-display: block;
-  /* LAYOUT-PADDING */
-  --hui-padding-top: var(--hui-vars-spacer-7);
-  --hui-padding-right: var(--hui-vars-spacer-7);
-  --hui-padding-bottom: var(--hui-vars-spacer-7);
-  --hui-padding-left: var(--hui-vars-spacer-7);
-  /* LAYOUT-OVERFLOW */
-  --hui-overflow-x: auto;
+/*  --hui-grid-auto-columns-default: ; */
+/*  --hui-grid-auto-flow-default: ; */
+/*  --hui-grid-auto-rows-default: ; */
+/*  --hui-grid-column-end-default: ; */
+/*  --hui-grid-column-start-default: ; */
+/*  --hui-grid-row-end-default: ; */
+/*  --hui-grid-row-start-default: ; */
+/*  --hui-grid-template-areas-default: ; */
+/*  --hui-grid-template-columns-default: ; */
+/*  --hui-grid-template-rows-default: ; */
+/*  --hui-column-gap-default: ; */
+/*  --hui-row-gap-default: ; */
 }

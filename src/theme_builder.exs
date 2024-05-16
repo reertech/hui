@@ -8,6 +8,7 @@ defmodule Builder do
       ini
       |> String.split(~r"\s*(\n|\r\n)+\s*", trim: true)
       |> Enum.reduce([], &parse_line/2)
+      |> Enum.reverse()
       |> build_style(names)
       |> build_theme(names)
     else
@@ -19,7 +20,9 @@ defmodule Builder do
     with [selector, tl] <- String.split(line, ~r"\s*=\s*", trim: true),
          sections <- String.split(tl, ~r"\s*,\s*", trim: true) do
       sections =
-        Enum.reduce(sections, [], fn section, acc ->
+        sections
+        |> Enum.reverse()
+        |> Enum.reduce([], fn section, acc ->
           case build_section(section) do
             {_, _} = section -> [section | acc]
             [_ | _] = sections -> sections ++ acc
@@ -99,8 +102,9 @@ defmodule Builder do
         |> List.insert_at(-1, "}")
       end)
 
-    names.path.("themes")
-    |> File.write!((default_lines ++ section_lines) |> Enum.join("\n"))
+    theme = (section_lines ++ default_lines) |> Enum.join("\n")
+
+    names.path.("themes") |> File.write!(theme)
   end
 
   defp parse_theme(names) do
