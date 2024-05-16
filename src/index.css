@@ -73,7 +73,7 @@
   --hui-vars-transition-1: all 0.42s ease-out allow-discrete;
 
   /* SIZES */
-  --hui-vars-size: clamp(12px, 1rem, 15px);
+  --hui-vars-size: clamp(12px, 1rem, 17px);
 
   --hui-vars-size-0: 0;
   --hui-vars-size-1: var(--hui-vars-size);
