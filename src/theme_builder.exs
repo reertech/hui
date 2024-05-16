@@ -85,10 +85,15 @@ defmodule Builder do
             cond do
               val = current[key] -> "  #{key}: #{val};"
               defaults[key] -> "  #{key}: var(#{key}-default);"
-              true -> "/*  #{key}: ; */"
+              true -> nil
+              # true -> "/*  #{key}: ; */"
             end
           end)
-          |> List.insert_at(0, "  /* #{String.upcase(section)} */")
+          |> Enum.filter(&is_binary/1)
+          |> case do
+            [] -> []
+            lines -> ["  /* #{String.upcase(section)} */" | lines]
+          end
         end)
         |> List.insert_at(0, build_prefix(selector, names))
         |> List.insert_at(-1, "}")
@@ -194,8 +199,8 @@ defmodule Builder do
   defp build_section("layout-overflow" = name) do
     {name,
      [
-       {"overflow-x", "hidden"},
-       {"overflow-y", "hidden"}
+       {"overflow-x", "visible"},
+       {"overflow-y", "visible"}
      ]}
   end
 
@@ -225,17 +230,17 @@ defmodule Builder do
        {"box-sizing", "border-box"},
        {"height", "auto"},
        {"max-height", "none"},
-       {"min-height", "0px"},
+       {"min-height", "auto"},
        {"width", "auto"},
        {"max-width", "none"},
-       {"min-width", "0px"},
-       {"block-size", "auto"},
-       {"resize", "none"},
-       {"inline-size", "auto"},
-       {"max-block-size", "none"},
-       {"max-inline-size", "none"},
-       {"min-block-size", "0px"},
-       {"min-inline-size", "0px"}
+       {"min-width", "auto"},
+       # {"block-size", "auto"},
+       # {"resize", "none"},
+       # {"inline-size", "auto"},
+       # {"max-block-size", "none"},
+       # {"max-inline-size", "none"},
+       # {"min-block-size", "0px"},
+       # {"min-inline-size", "0px"}
      ]}
   end
 
@@ -259,23 +264,23 @@ defmodule Builder do
      [
        {"direction", "ltr"},
        {"font-family", "initial"},
-       {"font-feature-settings", "normal"},
-       {"font-kerning", "auto"},
-       {"font-optical-sizing", "auto"},
+       # {"font-feature-settings", "normal"},
+       # {"font-kerning", "auto"},
+       # {"font-optical-sizing", "auto"},
        {"font-size", "16px"},
        {"font-stretch", "100%"},
        {"font-style", "normal"},
-       {"font-variant-alternates", "normal"},
-       {"font-variant-caps", "normal"},
-       {"font-variant-east-asian", "normal"},
-       {"font-variant-ligatures", "normal"},
-       {"font-variant-numeric", "normal"},
-       {"font-variant-position", "normal"},
-       {"font-variation-settings", "normal"},
+       # {"font-variant-alternates", "normal"},
+       # {"font-variant-caps", "normal"},
+       # {"font-variant-east-asian", "normal"},
+       # {"font-variant-ligatures", "normal"},
+       # {"font-variant-numeric", "normal"},
+       # {"font-variant-position", "normal"},
+       # {"font-variation-settings", "normal"},
        {"font-weight", "400"},
        {"letter-spacing", "normal"},
        {"line-height", "normal"},
-       {"tab-size", "8"},
+       # {"tab-size", "8"},
        {"text-align", "start"},
        {"text-align-last", "auto"},
        {"text-decoration-color", "#000"},
@@ -608,8 +613,7 @@ defmodule Builder do
     [
       build_section("layout"),
       [build_section("text")],
-      [build_section("apperance")],
-      [build_section("animation")]
+      [build_section("apperance")]
     ]
     |> Enum.concat()
   end
@@ -618,6 +622,7 @@ defmodule Builder do
     [
       build_section("common"),
       [build_section("grid")],
+      [build_section("animation")],
       [build_section("content")],
       [build_section("other")]
     ]

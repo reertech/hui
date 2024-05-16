@@ -33,17 +33,10 @@
   box-sizing: var(--hui-box-sizing, border-box);
   height: var(--hui-height, auto);
   max-height: var(--hui-max-height, none);
-  min-height: var(--hui-min-height, 0px);
+  min-height: var(--hui-min-height, auto);
   width: var(--hui-width, auto);
   max-width: var(--hui-max-width, none);
-  min-width: var(--hui-min-width, 0px);
-  block-size: var(--hui-block-size, auto);
-  resize: var(--hui-resize, none);
-  inline-size: var(--hui-inline-size, auto);
-  max-block-size: var(--hui-max-block-size, none);
-  max-inline-size: var(--hui-max-inline-size, none);
-  min-block-size: var(--hui-min-block-size, 0px);
-  min-inline-size: var(--hui-min-inline-size, 0px);
+  min-width: var(--hui-min-width, auto);
   /* LAYOUT-MARGIN */
   margin-top: var(--hui-margin-top, 0px);
   margin-right: var(--hui-margin-right, 0px);
@@ -55,8 +48,8 @@
   padding-bottom: var(--hui-padding-bottom, 0px);
   padding-left: var(--hui-padding-left, 0px);
   /* LAYOUT-OVERFLOW */
-  overflow-x: var(--hui-overflow-x, hidden);
-  overflow-y: var(--hui-overflow-y, hidden);
+  overflow-x: var(--hui-overflow-x, visible);
+  overflow-y: var(--hui-overflow-y, visible);
   /* LAYOUT-FLEX */
   flex-basis: var(--hui-flex-basis, auto);
   flex-direction: var(--hui-flex-direction, row);
@@ -66,23 +59,12 @@
   /* TEXT */
   direction: var(--hui-direction, ltr);
   font-family: var(--hui-font-family, initial);
-  font-feature-settings: var(--hui-font-feature-settings, normal);
-  font-kerning: var(--hui-font-kerning, auto);
-  font-optical-sizing: var(--hui-font-optical-sizing, auto);
   font-size: var(--hui-font-size, 16px);
   font-stretch: var(--hui-font-stretch, 100%);
   font-style: var(--hui-font-style, normal);
-  font-variant-alternates: var(--hui-font-variant-alternates, normal);
-  font-variant-caps: var(--hui-font-variant-caps, normal);
-  font-variant-east-asian: var(--hui-font-variant-east-asian, normal);
-  font-variant-ligatures: var(--hui-font-variant-ligatures, normal);
-  font-variant-numeric: var(--hui-font-variant-numeric, normal);
-  font-variant-position: var(--hui-font-variant-position, normal);
-  font-variation-settings: var(--hui-font-variation-settings, normal);
   font-weight: var(--hui-font-weight, 400);
   letter-spacing: var(--hui-letter-spacing, normal);
   line-height: var(--hui-line-height, normal);
-  tab-size: var(--hui-tab-size, 8);
   text-align: var(--hui-text-align, start);
   text-align-last: var(--hui-text-align-last, auto);
   text-decoration-color: var(--hui-text-decoration-color, #000);
@@ -133,19 +115,6 @@
   outline-offset: var(--hui-outline-offset, 0px);
   outline-style: var(--hui-outline-style, none);
   outline-width: var(--hui-outline-width, 0px);
-  /* ANIMATION */
-  animation-direction: var(--hui-animation-direction, normal);
-  animation-duration: var(--hui-animation-duration, 0s);
-  animation-fill-mode: var(--hui-animation-fill-mode, none);
-  animation-iteration-count: var(--hui-animation-iteration-count, 1);
-  animation-name: var(--hui-animation-name, none);
-  animation-play-state: var(--hui-animation-play-state, running);
-  animation-timing-function: var(--hui-animation-timing-function, ease);
-  transition-behavior: var(--hui-transition-behavior, normal);
-  transition-delay: var(--hui-transition-delay, 0s);
-  transition-duration: var(--hui-transition-duration, 0s);
-  transition-property: var(--hui-transition-property, all);
-  transition-timing-function: var(--hui-transition-timing-function, ease);
 }
 [data-hui=DataTable] > data > table > thead {
   /* GRID */
@@ -182,17 +151,10 @@
   box-sizing: var(--hui-box-sizing, border-box);
   height: var(--hui-height, auto);
   max-height: var(--hui-max-height, none);
-  min-height: var(--hui-min-height, 0px);
+  min-height: var(--hui-min-height, auto);
   width: var(--hui-width, auto);
   max-width: var(--hui-max-width, none);
-  min-width: var(--hui-min-width, 0px);
-  block-size: var(--hui-block-size, auto);
-  resize: var(--hui-resize, none);
-  inline-size: var(--hui-inline-size, auto);
-  max-block-size: var(--hui-max-block-size, none);
-  max-inline-size: var(--hui-max-inline-size, none);
-  min-block-size: var(--hui-min-block-size, 0px);
-  min-inline-size: var(--hui-min-inline-size, 0px);
+  min-width: var(--hui-min-width, auto);
   /* LAYOUT-MARGIN */
   margin-top: var(--hui-margin-top, 0px);
   margin-right: var(--hui-margin-right, 0px);
@@ -204,8 +166,8 @@
   padding-bottom: var(--hui-padding-bottom, 0px);
   padding-left: var(--hui-padding-left, 0px);
   /* LAYOUT-OVERFLOW */
-  overflow-x: var(--hui-overflow-x, hidden);
-  overflow-y: var(--hui-overflow-y, hidden);
+  overflow-x: var(--hui-overflow-x, visible);
+  overflow-y: var(--hui-overflow-y, visible);
   /* LAYOUT-FLEX */
   flex-basis: var(--hui-flex-basis, auto);
   flex-direction: var(--hui-flex-direction, row);
@@ -215,23 +177,12 @@
   /* TEXT */
   direction: var(--hui-direction, ltr);
   font-family: var(--hui-font-family, initial);
-  font-feature-settings: var(--hui-font-feature-settings, normal);
-  font-kerning: var(--hui-font-kerning, auto);
-  font-optical-sizing: var(--hui-font-optical-sizing, auto);
   font-size: var(--hui-font-size, 16px);
   font-stretch: var(--hui-font-stretch, 100%);
   font-style: var(--hui-font-style, normal);
-  font-variant-alternates: var(--hui-font-variant-alternates, normal);
-  font-variant-caps: var(--hui-font-variant-caps, normal);
-  font-variant-east-asian: var(--hui-font-variant-east-asian, normal);
-  font-variant-ligatures: var(--hui-font-variant-ligatures, normal);
-  font-variant-numeric: var(--hui-font-variant-numeric, normal);
-  font-variant-position: var(--hui-font-variant-position, normal);
-  font-variation-settings: var(--hui-font-variation-settings, normal);
   font-weight: var(--hui-font-weight, 400);
   letter-spacing: var(--hui-letter-spacing, normal);
   line-height: var(--hui-line-height, normal);
-  tab-size: var(--hui-tab-size, 8);
   text-align: var(--hui-text-align, start);
   text-align-last: var(--hui-text-align-last, auto);
   text-decoration-color: var(--hui-text-decoration-color, #000);
@@ -282,19 +233,6 @@
   outline-offset: var(--hui-outline-offset, 0px);
   outline-style: var(--hui-outline-style, none);
   outline-width: var(--hui-outline-width, 0px);
-  /* ANIMATION */
-  animation-direction: var(--hui-animation-direction, normal);
-  animation-duration: var(--hui-animation-duration, 0s);
-  animation-fill-mode: var(--hui-animation-fill-mode, none);
-  animation-iteration-count: var(--hui-animation-iteration-count, 1);
-  animation-name: var(--hui-animation-name, none);
-  animation-play-state: var(--hui-animation-play-state, running);
-  animation-timing-function: var(--hui-animation-timing-function, ease);
-  transition-behavior: var(--hui-transition-behavior, normal);
-  transition-delay: var(--hui-transition-delay, 0s);
-  transition-duration: var(--hui-transition-duration, 0s);
-  transition-property: var(--hui-transition-property, all);
-  transition-timing-function: var(--hui-transition-timing-function, ease);
 }
 [data-hui=DataTable] > data > table > tbody {
   /* GRID */
@@ -331,17 +269,10 @@
   box-sizing: var(--hui-box-sizing, border-box);
   height: var(--hui-height, auto);
   max-height: var(--hui-max-height, none);
-  min-height: var(--hui-min-height, 0px);
+  min-height: var(--hui-min-height, auto);
   width: var(--hui-width, auto);
   max-width: var(--hui-max-width, none);
-  min-width: var(--hui-min-width, 0px);
-  block-size: var(--hui-block-size, auto);
-  resize: var(--hui-resize, none);
-  inline-size: var(--hui-inline-size, auto);
-  max-block-size: var(--hui-max-block-size, none);
-  max-inline-size: var(--hui-max-inline-size, none);
-  min-block-size: var(--hui-min-block-size, 0px);
-  min-inline-size: var(--hui-min-inline-size, 0px);
+  min-width: var(--hui-min-width, auto);
   /* LAYOUT-MARGIN */
   margin-top: var(--hui-margin-top, 0px);
   margin-right: var(--hui-margin-right, 0px);
@@ -353,8 +284,8 @@
   padding-bottom: var(--hui-padding-bottom, 0px);
   padding-left: var(--hui-padding-left, 0px);
   /* LAYOUT-OVERFLOW */
-  overflow-x: var(--hui-overflow-x, hidden);
-  overflow-y: var(--hui-overflow-y, hidden);
+  overflow-x: var(--hui-overflow-x, visible);
+  overflow-y: var(--hui-overflow-y, visible);
   /* LAYOUT-FLEX */
   flex-basis: var(--hui-flex-basis, auto);
   flex-direction: var(--hui-flex-direction, row);
@@ -364,23 +295,12 @@
   /* TEXT */
   direction: var(--hui-direction, ltr);
   font-family: var(--hui-font-family, initial);
-  font-feature-settings: var(--hui-font-feature-settings, normal);
-  font-kerning: var(--hui-font-kerning, auto);
-  font-optical-sizing: var(--hui-font-optical-sizing, auto);
   font-size: var(--hui-font-size, 16px);
   font-stretch: var(--hui-font-stretch, 100%);
   font-style: var(--hui-font-style, normal);
-  font-variant-alternates: var(--hui-font-variant-alternates, normal);
-  font-variant-caps: var(--hui-font-variant-caps, normal);
-  font-variant-east-asian: var(--hui-font-variant-east-asian, normal);
-  font-variant-ligatures: var(--hui-font-variant-ligatures, normal);
-  font-variant-numeric: var(--hui-font-variant-numeric, normal);
-  font-variant-position: var(--hui-font-variant-position, normal);
-  font-variation-settings: var(--hui-font-variation-settings, normal);
   font-weight: var(--hui-font-weight, 400);
   letter-spacing: var(--hui-letter-spacing, normal);
   line-height: var(--hui-line-height, normal);
-  tab-size: var(--hui-tab-size, 8);
   text-align: var(--hui-text-align, start);
   text-align-last: var(--hui-text-align-last, auto);
   text-decoration-color: var(--hui-text-decoration-color, #000);
@@ -431,19 +351,6 @@
   outline-offset: var(--hui-outline-offset, 0px);
   outline-style: var(--hui-outline-style, none);
   outline-width: var(--hui-outline-width, 0px);
-  /* ANIMATION */
-  animation-direction: var(--hui-animation-direction, normal);
-  animation-duration: var(--hui-animation-duration, 0s);
-  animation-fill-mode: var(--hui-animation-fill-mode, none);
-  animation-iteration-count: var(--hui-animation-iteration-count, 1);
-  animation-name: var(--hui-animation-name, none);
-  animation-play-state: var(--hui-animation-play-state, running);
-  animation-timing-function: var(--hui-animation-timing-function, ease);
-  transition-behavior: var(--hui-transition-behavior, normal);
-  transition-delay: var(--hui-transition-delay, 0s);
-  transition-duration: var(--hui-transition-duration, 0s);
-  transition-property: var(--hui-transition-property, all);
-  transition-timing-function: var(--hui-transition-timing-function, ease);
 }
 [data-hui=DataTable] > data > table > * > tr {
   /* GRID */
@@ -480,17 +387,10 @@
   box-sizing: var(--hui-box-sizing, border-box);
   height: var(--hui-height, auto);
   max-height: var(--hui-max-height, none);
-  min-height: var(--hui-min-height, 0px);
+  min-height: var(--hui-min-height, auto);
   width: var(--hui-width, auto);
   max-width: var(--hui-max-width, none);
-  min-width: var(--hui-min-width, 0px);
-  block-size: var(--hui-block-size, auto);
-  resize: var(--hui-resize, none);
-  inline-size: var(--hui-inline-size, auto);
-  max-block-size: var(--hui-max-block-size, none);
-  max-inline-size: var(--hui-max-inline-size, none);
-  min-block-size: var(--hui-min-block-size, 0px);
-  min-inline-size: var(--hui-min-inline-size, 0px);
+  min-width: var(--hui-min-width, auto);
   /* LAYOUT-MARGIN */
   margin-top: var(--hui-margin-top, 0px);
   margin-right: var(--hui-margin-right, 0px);
@@ -502,8 +402,8 @@
   padding-bottom: var(--hui-padding-bottom, 0px);
   padding-left: var(--hui-padding-left, 0px);
   /* LAYOUT-OVERFLOW */
-  overflow-x: var(--hui-overflow-x, hidden);
-  overflow-y: var(--hui-overflow-y, hidden);
+  overflow-x: var(--hui-overflow-x, visible);
+  overflow-y: var(--hui-overflow-y, visible);
   /* LAYOUT-FLEX */
   flex-basis: var(--hui-flex-basis, auto);
   flex-direction: var(--hui-flex-direction, row);
@@ -513,23 +413,12 @@
   /* TEXT */
   direction: var(--hui-direction, ltr);
   font-family: var(--hui-font-family, initial);
-  font-feature-settings: var(--hui-font-feature-settings, normal);
-  font-kerning: var(--hui-font-kerning, auto);
-  font-optical-sizing: var(--hui-font-optical-sizing, auto);
   font-size: var(--hui-font-size, 16px);
   font-stretch: var(--hui-font-stretch, 100%);
   font-style: var(--hui-font-style, normal);
-  font-variant-alternates: var(--hui-font-variant-alternates, normal);
-  font-variant-caps: var(--hui-font-variant-caps, normal);
-  font-variant-east-asian: var(--hui-font-variant-east-asian, normal);
-  font-variant-ligatures: var(--hui-font-variant-ligatures, normal);
-  font-variant-numeric: var(--hui-font-variant-numeric, normal);
-  font-variant-position: var(--hui-font-variant-position, normal);
-  font-variation-settings: var(--hui-font-variation-settings, normal);
   font-weight: var(--hui-font-weight, 400);
   letter-spacing: var(--hui-letter-spacing, normal);
   line-height: var(--hui-line-height, normal);
-  tab-size: var(--hui-tab-size, 8);
   text-align: var(--hui-text-align, start);
   text-align-last: var(--hui-text-align-last, auto);
   text-decoration-color: var(--hui-text-decoration-color, #000);
@@ -580,19 +469,6 @@
   outline-offset: var(--hui-outline-offset, 0px);
   outline-style: var(--hui-outline-style, none);
   outline-width: var(--hui-outline-width, 0px);
-  /* ANIMATION */
-  animation-direction: var(--hui-animation-direction, normal);
-  animation-duration: var(--hui-animation-duration, 0s);
-  animation-fill-mode: var(--hui-animation-fill-mode, none);
-  animation-iteration-count: var(--hui-animation-iteration-count, 1);
-  animation-name: var(--hui-animation-name, none);
-  animation-play-state: var(--hui-animation-play-state, running);
-  animation-timing-function: var(--hui-animation-timing-function, ease);
-  transition-behavior: var(--hui-transition-behavior, normal);
-  transition-delay: var(--hui-transition-delay, 0s);
-  transition-duration: var(--hui-transition-duration, 0s);
-  transition-property: var(--hui-transition-property, all);
-  transition-timing-function: var(--hui-transition-timing-function, ease);
 }
 [data-hui=DataTable] > data > table > thead > tr > th {
   /* LAYOUT-DISPLAY */
@@ -616,17 +492,10 @@
   box-sizing: var(--hui-box-sizing, border-box);
   height: var(--hui-height, auto);
   max-height: var(--hui-max-height, none);
-  min-height: var(--hui-min-height, 0px);
+  min-height: var(--hui-min-height, auto);
   width: var(--hui-width, auto);
   max-width: var(--hui-max-width, none);
-  min-width: var(--hui-min-width, 0px);
-  block-size: var(--hui-block-size, auto);
-  resize: var(--hui-resize, none);
-  inline-size: var(--hui-inline-size, auto);
-  max-block-size: var(--hui-max-block-size, none);
-  max-inline-size: var(--hui-max-inline-size, none);
-  min-block-size: var(--hui-min-block-size, 0px);
-  min-inline-size: var(--hui-min-inline-size, 0px);
+  min-width: var(--hui-min-width, auto);
   /* LAYOUT-MARGIN */
   margin-top: var(--hui-margin-top, 0px);
   margin-right: var(--hui-margin-right, 0px);
@@ -638,8 +507,8 @@
   padding-bottom: var(--hui-padding-bottom, 0px);
   padding-left: var(--hui-padding-left, 0px);
   /* LAYOUT-OVERFLOW */
-  overflow-x: var(--hui-overflow-x, hidden);
-  overflow-y: var(--hui-overflow-y, hidden);
+  overflow-x: var(--hui-overflow-x, visible);
+  overflow-y: var(--hui-overflow-y, visible);
   /* LAYOUT-FLEX */
   flex-basis: var(--hui-flex-basis, auto);
   flex-direction: var(--hui-flex-direction, row);
@@ -649,23 +518,12 @@
   /* TEXT */
   direction: var(--hui-direction, ltr);
   font-family: var(--hui-font-family, initial);
-  font-feature-settings: var(--hui-font-feature-settings, normal);
-  font-kerning: var(--hui-font-kerning, auto);
-  font-optical-sizing: var(--hui-font-optical-sizing, auto);
   font-size: var(--hui-font-size, 16px);
   font-stretch: var(--hui-font-stretch, 100%);
   font-style: var(--hui-font-style, normal);
-  font-variant-alternates: var(--hui-font-variant-alternates, normal);
-  font-variant-caps: var(--hui-font-variant-caps, normal);
-  font-variant-east-asian: var(--hui-font-variant-east-asian, normal);
-  font-variant-ligatures: var(--hui-font-variant-ligatures, normal);
-  font-variant-numeric: var(--hui-font-variant-numeric, normal);
-  font-variant-position: var(--hui-font-variant-position, normal);
-  font-variation-settings: var(--hui-font-variation-settings, normal);
   font-weight: var(--hui-font-weight, 400);
   letter-spacing: var(--hui-letter-spacing, normal);
   line-height: var(--hui-line-height, normal);
-  tab-size: var(--hui-tab-size, 8);
   text-align: var(--hui-text-align, start);
   text-align-last: var(--hui-text-align-last, auto);
   text-decoration-color: var(--hui-text-decoration-color, #000);
@@ -716,19 +574,6 @@
   outline-offset: var(--hui-outline-offset, 0px);
   outline-style: var(--hui-outline-style, none);
   outline-width: var(--hui-outline-width, 0px);
-  /* ANIMATION */
-  animation-direction: var(--hui-animation-direction, normal);
-  animation-duration: var(--hui-animation-duration, 0s);
-  animation-fill-mode: var(--hui-animation-fill-mode, none);
-  animation-iteration-count: var(--hui-animation-iteration-count, 1);
-  animation-name: var(--hui-animation-name, none);
-  animation-play-state: var(--hui-animation-play-state, running);
-  animation-timing-function: var(--hui-animation-timing-function, ease);
-  transition-behavior: var(--hui-transition-behavior, normal);
-  transition-delay: var(--hui-transition-delay, 0s);
-  transition-duration: var(--hui-transition-duration, 0s);
-  transition-property: var(--hui-transition-property, all);
-  transition-timing-function: var(--hui-transition-timing-function, ease);
 }
 [data-hui=DataTable] > data > table > tbody > tr > td {
   /* LAYOUT-DISPLAY */
@@ -752,17 +597,10 @@
   box-sizing: var(--hui-box-sizing, border-box);
   height: var(--hui-height, auto);
   max-height: var(--hui-max-height, none);
-  min-height: var(--hui-min-height, 0px);
+  min-height: var(--hui-min-height, auto);
   width: var(--hui-width, auto);
   max-width: var(--hui-max-width, none);
-  min-width: var(--hui-min-width, 0px);
-  block-size: var(--hui-block-size, auto);
-  resize: var(--hui-resize, none);
-  inline-size: var(--hui-inline-size, auto);
-  max-block-size: var(--hui-max-block-size, none);
-  max-inline-size: var(--hui-max-inline-size, none);
-  min-block-size: var(--hui-min-block-size, 0px);
-  min-inline-size: var(--hui-min-inline-size, 0px);
+  min-width: var(--hui-min-width, auto);
   /* LAYOUT-MARGIN */
   margin-top: var(--hui-margin-top, 0px);
   margin-right: var(--hui-margin-right, 0px);
@@ -774,8 +612,8 @@
   padding-bottom: var(--hui-padding-bottom, 0px);
   padding-left: var(--hui-padding-left, 0px);
   /* LAYOUT-OVERFLOW */
-  overflow-x: var(--hui-overflow-x, hidden);
-  overflow-y: var(--hui-overflow-y, hidden);
+  overflow-x: var(--hui-overflow-x, visible);
+  overflow-y: var(--hui-overflow-y, visible);
   /* LAYOUT-FLEX */
   flex-basis: var(--hui-flex-basis, auto);
   flex-direction: var(--hui-flex-direction, row);
@@ -785,23 +623,12 @@
   /* TEXT */
   direction: var(--hui-direction, ltr);
   font-family: var(--hui-font-family, initial);
-  font-feature-settings: var(--hui-font-feature-settings, normal);
-  font-kerning: var(--hui-font-kerning, auto);
-  font-optical-sizing: var(--hui-font-optical-sizing, auto);
   font-size: var(--hui-font-size, 16px);
   font-stretch: var(--hui-font-stretch, 100%);
   font-style: var(--hui-font-style, normal);
-  font-variant-alternates: var(--hui-font-variant-alternates, normal);
-  font-variant-caps: var(--hui-font-variant-caps, normal);
-  font-variant-east-asian: var(--hui-font-variant-east-asian, normal);
-  font-variant-ligatures: var(--hui-font-variant-ligatures, normal);
-  font-variant-numeric: var(--hui-font-variant-numeric, normal);
-  font-variant-position: var(--hui-font-variant-position, normal);
-  font-variation-settings: var(--hui-font-variation-settings, normal);
   font-weight: var(--hui-font-weight, 400);
   letter-spacing: var(--hui-letter-spacing, normal);
   line-height: var(--hui-line-height, normal);
-  tab-size: var(--hui-tab-size, 8);
   text-align: var(--hui-text-align, start);
   text-align-last: var(--hui-text-align-last, auto);
   text-decoration-color: var(--hui-text-decoration-color, #000);
@@ -852,17 +679,4 @@
   outline-offset: var(--hui-outline-offset, 0px);
   outline-style: var(--hui-outline-style, none);
   outline-width: var(--hui-outline-width, 0px);
-  /* ANIMATION */
-  animation-direction: var(--hui-animation-direction, normal);
-  animation-duration: var(--hui-animation-duration, 0s);
-  animation-fill-mode: var(--hui-animation-fill-mode, none);
-  animation-iteration-count: var(--hui-animation-iteration-count, 1);
-  animation-name: var(--hui-animation-name, none);
-  animation-play-state: var(--hui-animation-play-state, running);
-  animation-timing-function: var(--hui-animation-timing-function, ease);
-  transition-behavior: var(--hui-transition-behavior, normal);
-  transition-delay: var(--hui-transition-delay, 0s);
-  transition-duration: var(--hui-transition-duration, 0s);
-  transition-property: var(--hui-transition-property, all);
-  transition-timing-function: var(--hui-transition-timing-function, ease);
 }
