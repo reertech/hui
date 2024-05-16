@@ -3,14 +3,14 @@
   import Container from "../Container.svelte"
   import Table from "./Table.svelte"
 
-  export let active
-  export let readonly
-  export let disabled
-  export let hidden
-  export let busy
-  export let theme
+  export let active = null
+  export let readonly = null
+  export let disabled = null
+  export let hidden = null
+  export let busy = null
+  export let theme = null
 
-  let classes
+  let classes = null
   export { classes as class }
 
   export let cols = []

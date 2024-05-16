@@ -12,7 +12,8 @@
   export let classes = null
 </script>
 
-<svelte:element this={tag}>
+<svelte:element
+  this={tag}
   data-hui-data
   data-hui={hui || null}
   data-hui-active={active || null}
