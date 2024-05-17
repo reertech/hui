@@ -1,4 +1,33 @@
 [data-hui=Title] > title {
+  /* LAYOUT-SIZING */
+  --hui-height: 100%;
+  --hui-width: 100%;
+  /* LAYOUT-PADDING */
+  --hui-padding-top: var(--hui-vars-spacer-5);
+  --hui-padding-right: var(--hui-vars-spacer-7);
+  --hui-padding-bottom: var(--hui-vars-spacer-5);
+  --hui-padding-left: var(--hui-vars-spacer-7);
+  /* LAYOUT-OVERFLOW */
+  --hui-overflow-x: hidden;
+  --hui-overflow-y: hidden;
+  /* TEXT */
+  --hui-line-height: 100%;
+  --hui-text-align: center;
+  --hui-text-wrap: nowrap;
+  /* APPERANCE */
+  --hui-background-color: var(--hui-default-background-color);
+  --hui-border-bottom-color: var(--hui-vars-border-color);
+  --hui-border-bottom-style: var(--hui-vars-border-style);
+  --hui-border-bottom-width: var(--hui-vars-border-width);
+  --hui-border-left-color: var(--hui-vars-border-color);
+  --hui-border-left-style: var(--hui-vars-border-style);
+  --hui-border-left-width: var(--hui-vars-border-width);
+  --hui-border-right-color: var(--hui-vars-border-color);
+  --hui-border-right-style: var(--hui-vars-border-style);
+  --hui-border-right-width: var(--hui-vars-border-width);
+  --hui-border-top-color: var(--hui-vars-border-color);
+  --hui-border-top-style: var(--hui-vars-border-style);
+  --hui-border-top-width: var(--hui-vars-border-width);
 }
 [data-hui=Title] {
   /* LAYOUT-DISPLAY */

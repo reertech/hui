@@ -56,10 +56,10 @@
   }
   div:first-child {
     left: 0 !important;
-    right: 33% !important;
+    right: auto !important;
   }
   div:last-child {
-    left: 77% !important;
-    right: 100% !important;
+    right: 0 !important;
+    left: auto !important;
   }
 </style>

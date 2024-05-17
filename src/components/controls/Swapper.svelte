@@ -68,10 +68,11 @@
 <style>
   button {
     position: relative !important;
-    width: 100px !important;
-    margin: 10px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     display: block !important;
-    height: 50px !important;
+    height: 100% !important;
     text-align: center !important;
   }
   button:active {
