@@ -20,3 +20,5 @@ export { default as Badge } from "./components/controls/Badge.svelte"
 export { default as Input } from "./components/controls/Input.svelte"
 export { default as Select } from "./components/controls/Select.svelte"
 export { default as Swapper } from "./components/controls/Swapper.svelte"
+
+export { default as persist } from "./stores/persist.js"

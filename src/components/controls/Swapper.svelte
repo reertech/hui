@@ -1,6 +1,7 @@
 <script>
   import "../../styles/controls/Swapper.css"
   import Container from "../Container.svelte"
+  import DropZone from "./Swapper/DropZone.svelte"
 
   export let active = null
   export let readonly = null
@@ -12,35 +13,20 @@
   let classes = null
   export { classes as class }
 
-  export let list = []
-  export let i
+  export let list
+  export let idx
 
-  let button, onFly, left, top;
+  let onFly;
 
   const start = (e) => {
-    // onFly = true
-    // moveAt(e)
+    onFly = true
+    e.dataTransfer.effectAllowed = "move"
+    e.dataTransfer.setData("huiSwapper", idx)
   }
 
-  const stop = () => {
-    // onFly = false
-  }
-
-  const move = (e) => {
-    if (!onFly) return
-    // console.log(e.clientX, e.pageX)
-    // moveAt(e)
-  }
-
-  const moveAt = (e) => {
-    left = e.clientX - button.offsetWidth / 2
-    top = e.clientY - button.offsetHeight / 2
-  }
+  const end = () => onFly = false
+  const leave = () => isOver = false
 </script>
-
-<svelte:document
-  on:mousemove={move}
-/>
 
 <Container
   hui="Swapper"
@@ -54,39 +40,47 @@
 >
   <button
     draggable="true"
-    style:position={onFly ? "fixed" : null}
-    style:zIndex={onFly ? "100" : null}
-    style:left={onFly ? `${left}px` : null}
-    style:top={onFly ? `${top}px` : null}
-    bind:this={button}
+    style:opacity={onFly ? "0.5" : null}
     on:dragstart={start}
-    on:dragend={stop}
-    on:dragend={console.log}
-    on:dragstart={console.log}
-    on:dragover={console.log}
-    on:dragenter={console.log}
-    on:dragleave={console.log}
+    on:dragend={end}
+    on:dragover|preventDefault={() => false}
   >
-    {#if onFly}
-      {`<${top}:${left}>`}
-    {:else}
-      {"<>"}
-    {/if}
+    <DropZone
+      {idx}
+      {list}
+      on:swap
+      dir="left"
+      hidden={onFly}
+      on:swap={(e) => list = e.detail}
+    />
+      <slot />
+    <DropZone
+      {idx}
+      {list}
+      on:swap
+      dir="right"
+      hidden={onFly}
+      on:swap={(e) => list = e.detail}
+    />
   </button>
 </Container>
 
 <style>
   button {
-    display: block;
-    width: 100px;
-    height: 50px;
-    background: #999;
-    margin: 10px;
-    text-align: center;
+    position: relative !important;
+    width: 100px !important;
+    margin: 10px !important;
+    display: block !important;
+    height: 50px !important;
+    text-align: center !important;
+  }
+  button:active {
   }
 </style>
 
 <!-- theme.ini
-  > button = common, grid
+  > button:active = common
+  > button = common
+  > div = common
 -->
 

@@ -1,4 +1,8 @@
+[data-hui=Swapper] > button:active {
+}
 [data-hui=Swapper] > button {
+}
+[data-hui=Swapper] > div {
 }
 [data-hui=Swapper] {
   /* LAYOUT-DISPLAY */
@@ -104,17 +108,4 @@
 /*  --hui-outline-offset-default: ; */
 /*  --hui-outline-style-default: ; */
 /*  --hui-outline-width-default: ; */
-  /* GRID */
-/*  --hui-grid-auto-columns-default: ; */
-/*  --hui-grid-auto-flow-default: ; */
-/*  --hui-grid-auto-rows-default: ; */
-/*  --hui-grid-column-end-default: ; */
-/*  --hui-grid-column-start-default: ; */
-/*  --hui-grid-row-end-default: ; */
-/*  --hui-grid-row-start-default: ; */
-/*  --hui-grid-template-areas-default: ; */
-/*  --hui-grid-template-columns-default: ; */
-/*  --hui-grid-template-rows-default: ; */
-/*  --hui-column-gap-default: ; */
-/*  --hui-row-gap-default: ; */
 }

@@ -1,7 +1,16 @@
 defmodule Builder do
   def run do
-    with [file_name] <- System.argv(),
-         file_path <- Path.expand(file_name),
+    with [_ | _] = files <- System.argv() do
+      Enum.each(files, fn file ->
+        IO.inspect(file) |> build_file()
+      end)
+    else
+      _ -> raise "Broken args"
+    end
+  end
+
+  def build_file(file_name) do
+    with file_path <- Path.expand(file_name),
          {:ok, file} <- File.read(file_path),
          [_, ini] <- String.split(file, ~r"\<\!\-\-\s*theme\.ini"),
          names <- build_names(file_path) do
@@ -116,7 +125,8 @@ defmodule Builder do
              selector <- if(selector == "", do: "default", else: selector) do
           String.split(section, ~r"\s*(\}|;|\n)\s*", trim: true)
           |> Enum.reduce(acc, fn line, acc ->
-            with [key, val] <-
+            with false <- line =~ "{",
+                 [key, val] <-
                    String.split(line, ~r"\s*:\s*", trim: true)
                    |> Enum.map(&String.trim/1) do
               key = key |> String.trim_trailing("-default")

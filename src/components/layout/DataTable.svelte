@@ -42,9 +42,9 @@
               <slot name="thFirst" />
             </th>
           {/if}
-          {#each cols as col}
+          {#each cols as col, colIdx}
             <th>
-              <slot name="th" {col} />
+              <slot name="th" {col} {colIdx} />
             </th>
           {/each}
           {#if $$slots.thLast}
@@ -62,39 +62,39 @@
       {#if $$slots.tbody}
         <slot name="tbody" />
       {:else if $$slots.tr || $$slots.td}
-        {#each rows as row}
+        {#each rows as row, rowIdx}
           {#if $$slots.trBefore}
-            <slot name="trBefore" {row} />
+            <slot name="trBefore" {rowIdx} {row} />
           {/if}
           <tr>
             {#if $$slots.tr}
-              <slot name="tr" {row} />
+              <slot name="tr" {rowIdx} {row} />
             {:else if $$slots.td}
               {#if $$slots.tdBefore}
-                <slot name="tdBefore" {row} />
+                <slot name="tdBefore" {rowIdx} {row} />
               {/if}
               {#if $$slots.tdFirst}
                 <td>
-                  <slot name="tdFirst" {row} />
+                  <slot name="tdFirst" {rowIdx} {row} />
                 </td>
               {/if}
-              {#each cols as col}
+              {#each cols as col, colIdx}
                 <td>
-                  <slot name="td" {row} {col} />
+                  <slot name="td" {rowIdx} {row} {col} {colIdx} />
                 </td>
               {/each}
               {#if $$slots.tdLast}
                 <td>
-                  <slot name="tdLast" {row} />
+                  <slot name="tdLast" {rowIdx} {row} />
                 </td>
               {/if}
               {#if $$slots.tdAfter}
-                <slot name="tdAfter" {row} />
+                <slot name="tdAfter" {rowIdx} {row} />
               {/if}
             {/if}
           </tr>
           {#if $$slots.trAfter}
-            <slot name="trAfter" {row} />
+            <slot name="trAfter" {rowIdx} {row} />
           {/if}
         {/each}
       {/if}
