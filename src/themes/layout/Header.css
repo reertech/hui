@@ -6,11 +6,7 @@
 }
 [data-hui=Header][data-hui-theme=tria] > header {
 }
-[data-hui=Header][data-hui-theme=kvara] > header {
-}
-[data-hui=Header][data-hui-theme=kvina] > header {
-}
-[data-hui=Header] {
+[data-hui=Header] > header {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */
 /*  --hui-visibility-default: ; */

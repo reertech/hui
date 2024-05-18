@@ -6,11 +6,7 @@
 }
 [data-hui=Strong][data-hui-theme=tria] > strong {
 }
-[data-hui=Strong][data-hui-theme=kvara] > strong {
-}
-[data-hui=Strong][data-hui-theme=kvina] > strong {
-}
-[data-hui=Strong] {
+[data-hui=Strong] > strong {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */
 /*  --hui-visibility-default: ; */

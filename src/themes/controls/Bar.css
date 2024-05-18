@@ -6,11 +6,7 @@
 }
 [data-hui=Bar][data-hui-theme=tria] > figure {
 }
-[data-hui=Bar][data-hui-theme=kvara] > figure {
-}
-[data-hui=Bar][data-hui-theme=kvina] > figure {
-}
-[data-hui=Bar] {
+[data-hui=Bar] > figure {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */
 /*  --hui-visibility-default: ; */

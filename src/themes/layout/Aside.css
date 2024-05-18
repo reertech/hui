@@ -6,11 +6,7 @@
 }
 [data-hui=Aside][data-hui-theme=tria] > aside {
 }
-[data-hui=Aside][data-hui-theme=kvara] > aside {
-}
-[data-hui=Aside][data-hui-theme=kvina] > aside {
-}
-[data-hui=Aside] {
+[data-hui=Aside] > aside {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */
 /*  --hui-visibility-default: ; */

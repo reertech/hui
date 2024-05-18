@@ -6,11 +6,7 @@
 }
 [data-hui=Footer][data-hui-theme=tria] > footer {
 }
-[data-hui=Footer][data-hui-theme=kvara] > footer {
-}
-[data-hui=Footer][data-hui-theme=kvina] > footer {
-}
-[data-hui=Footer] {
+[data-hui=Footer] > footer {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */
 /*  --hui-visibility-default: ; */

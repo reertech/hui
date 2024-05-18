@@ -35,11 +35,7 @@
 }
 [data-hui=Title][data-hui-theme=tria] > title {
 }
-[data-hui=Title][data-hui-theme=kvara] > title {
-}
-[data-hui=Title][data-hui-theme=kvina] > title {
-}
-[data-hui=Title] {
+[data-hui=Title] > title {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */
 /*  --hui-visibility-default: ; */

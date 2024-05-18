@@ -1,4 +1,5 @@
 <script>
+  import "../../themes/controls/Select.css"
   import "../../styles/controls/Select.css"
   import Container from "../Container.svelte"
 

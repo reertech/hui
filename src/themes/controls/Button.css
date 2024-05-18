@@ -14,11 +14,7 @@
 }
 [data-hui=Button][data-hui-theme=tria] > button {
 }
-[data-hui=Button][data-hui-theme=kvara] > button {
-}
-[data-hui=Button][data-hui-theme=kvina] > button {
-}
-[data-hui=Button] {
+[data-hui=Button] > button {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */
 /*  --hui-visibility-default: ; */
