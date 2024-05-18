@@ -1,5 +1,15 @@
 [data-hui=Bar] > figure {
 }
+[data-hui=Bar][data-hui-theme=unua] > figure {
+}
+[data-hui=Bar][data-hui-theme=dua] > figure {
+}
+[data-hui=Bar][data-hui-theme=tria] > figure {
+}
+[data-hui=Bar][data-hui-theme=kvara] > figure {
+}
+[data-hui=Bar][data-hui-theme=kvina] > figure {
+}
 [data-hui=Bar] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

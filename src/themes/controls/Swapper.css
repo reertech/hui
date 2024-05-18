@@ -4,6 +4,36 @@
 }
 [data-hui=Swapper] > div {
 }
+[data-hui=Swapper][data-hui-theme=unua] > button:active {
+}
+[data-hui=Swapper][data-hui-theme=unua] > button {
+}
+[data-hui=Swapper][data-hui-theme=unua] > div {
+}
+[data-hui=Swapper][data-hui-theme=dua] > button:active {
+}
+[data-hui=Swapper][data-hui-theme=dua] > button {
+}
+[data-hui=Swapper][data-hui-theme=dua] > div {
+}
+[data-hui=Swapper][data-hui-theme=tria] > button:active {
+}
+[data-hui=Swapper][data-hui-theme=tria] > button {
+}
+[data-hui=Swapper][data-hui-theme=tria] > div {
+}
+[data-hui=Swapper][data-hui-theme=kvara] > button:active {
+}
+[data-hui=Swapper][data-hui-theme=kvara] > button {
+}
+[data-hui=Swapper][data-hui-theme=kvara] > div {
+}
+[data-hui=Swapper][data-hui-theme=kvina] > button:active {
+}
+[data-hui=Swapper][data-hui-theme=kvina] > button {
+}
+[data-hui=Swapper][data-hui-theme=kvina] > div {
+}
 [data-hui=Swapper] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

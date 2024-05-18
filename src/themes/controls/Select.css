@@ -6,6 +6,46 @@
 }
 [data-hui=Select] > fieldset > div > input {
 }
+[data-hui=Select][data-hui-theme=unua] > fieldset {
+}
+[data-hui=Select][data-hui-theme=unua] > fieldset > datalist {
+}
+[data-hui=Select][data-hui-theme=unua] > fieldset > datalist > option {
+}
+[data-hui=Select][data-hui-theme=unua] > fieldset > div > input {
+}
+[data-hui=Select][data-hui-theme=dua] > fieldset {
+}
+[data-hui=Select][data-hui-theme=dua] > fieldset > datalist {
+}
+[data-hui=Select][data-hui-theme=dua] > fieldset > datalist > option {
+}
+[data-hui=Select][data-hui-theme=dua] > fieldset > div > input {
+}
+[data-hui=Select][data-hui-theme=tria] > fieldset {
+}
+[data-hui=Select][data-hui-theme=tria] > fieldset > datalist {
+}
+[data-hui=Select][data-hui-theme=tria] > fieldset > datalist > option {
+}
+[data-hui=Select][data-hui-theme=tria] > fieldset > div > input {
+}
+[data-hui=Select][data-hui-theme=kvara] > fieldset {
+}
+[data-hui=Select][data-hui-theme=kvara] > fieldset > datalist {
+}
+[data-hui=Select][data-hui-theme=kvara] > fieldset > datalist > option {
+}
+[data-hui=Select][data-hui-theme=kvara] > fieldset > div > input {
+}
+[data-hui=Select][data-hui-theme=kvina] > fieldset {
+}
+[data-hui=Select][data-hui-theme=kvina] > fieldset > datalist {
+}
+[data-hui=Select][data-hui-theme=kvina] > fieldset > datalist > option {
+}
+[data-hui=Select][data-hui-theme=kvina] > fieldset > div > input {
+}
 [data-hui=Select] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

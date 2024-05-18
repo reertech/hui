@@ -1,5 +1,15 @@
 [data-hui=Aside] > aside {
 }
+[data-hui=Aside][data-hui-theme=unua] > aside {
+}
+[data-hui=Aside][data-hui-theme=dua] > aside {
+}
+[data-hui=Aside][data-hui-theme=tria] > aside {
+}
+[data-hui=Aside][data-hui-theme=kvara] > aside {
+}
+[data-hui=Aside][data-hui-theme=kvina] > aside {
+}
 [data-hui=Aside] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

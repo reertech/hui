@@ -1,10 +1,22 @@
 [data-hui=Button] > button {
+  /* LAYOUT-PADDING */
   --hui-padding-top: var(--hui-vars-spacer-5);
   --hui-padding-right: var(--hui-vars-spacer-7);
   --hui-padding-bottom: var(--hui-vars-spacer-5);
   --hui-padding-left: var(--hui-vars-spacer-7);
+  /* LAYOUT-OVERFLOW */
   --hui-overflow-x: hidden;
   --hui-overflow-y: hidden;
+}
+[data-hui=Button][data-hui-theme=unua] > button {
+}
+[data-hui=Button][data-hui-theme=dua] > button {
+}
+[data-hui=Button][data-hui-theme=tria] > button {
+}
+[data-hui=Button][data-hui-theme=kvara] > button {
+}
+[data-hui=Button][data-hui-theme=kvina] > button {
 }
 [data-hui=Button] {
   /* LAYOUT-DISPLAY */

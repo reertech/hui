@@ -1,5 +1,5 @@
 defmodule Builder do
-  @themes ["unua", "dua", "tria", "kvara", "kvina"]
+  @themes [nil, "unua", "dua", "tria", "kvara", "kvina"]
 
   def run do
     with [_ | _] = files <- System.argv() do
@@ -70,7 +70,7 @@ defmodule Builder do
 
   defp build_theme(sections, names) do
     current_theme = parse_theme(names) |> IO.inspect()
-    defaults = current_theme["default"]
+    defaults = current_theme["default"]["default"]
 
     default_lines =
       Enum.flat_map(sections, &elem(&1, 1))
@@ -93,7 +93,7 @@ defmodule Builder do
     section_lines =
       Enum.flat_map(@themes, fn theme ->
         Enum.flat_map(sections, fn {selector, sections} ->
-          current = current_theme[selector][theme]
+          current = current_theme[selector][theme || "default"]
 
           Enum.flat_map(sections, fn {section, rules} ->
             Enum.map(rules, fn {key, _} ->
@@ -124,9 +124,11 @@ defmodule Builder do
 
   defp parse_theme(names) do
     parse_theme_name = fn selector, section ->
-      with true <- selector != "default" || {:ok, "default"},
+      with false <- selector == "default",
            [theme] <- ~r"(?<=\[data\-hui\-theme\=).+(?=\])" |> Regex.run(section) do
-        {:ok, theme}
+        theme
+      else
+        _ -> "default"
       end
     end
 
@@ -136,14 +138,14 @@ defmodule Builder do
         with [selector] <- ~r"(?<=\]).+(?=\{)" |> Regex.run(section),
              selector <- String.trim(selector),
              selector <- if(selector == "", do: "default", else: selector),
-             {:ok, theme} <- parse_theme_name(selector, section) do
+             theme <- parse_theme_name.(selector, section) do
           String.split(section, ~r"\s*(\}|;|\n)\s*", trim: true)
           |> Enum.reduce(acc, fn line, acc ->
             with false <- line =~ "{",
                  [key, val] <-
                    String.split(line, ~r"\s*:\s*", trim: true)
                    |> Enum.map(&String.trim/1) do
-              key = key |> String.trim_trailing("-default")
+              # key = key |> String.trim_trailing("-default")
               path = [Access.key(selector, %{}), Access.key(theme, %{}), key]
               acc |> put_in(path, val |> String.trim(";"))
             else
@@ -182,8 +184,12 @@ defmodule Builder do
     }
   end
 
-  defp build_prefix(selector, names) do
-    "#{names.prefix} #{selector} {"
+  defp build_prefix(theme, selector, names) do
+    if theme do
+      "#{names.prefix}[data-hui-theme=#{theme}] #{selector} {"
+    else
+      "#{names.prefix} #{selector} {"
+    end
   end
 
   defp build_section("layout-position" = name) do

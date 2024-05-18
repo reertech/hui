@@ -48,6 +48,66 @@
   --hui-padding-bottom: var(--hui-vars-spacer-0);
   --hui-padding-left: var(--hui-vars-spacer-0);
 }
+[data-hui=DataTable][data-hui-theme=unua] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=kvara] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=kvara] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=kvara] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=kvara] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=kvara] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=kvara] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=kvina] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=kvina] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=kvina] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=kvina] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=kvina] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=kvina] > data > table > thead > tr > th {
+}
 [data-hui=DataTable] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

@@ -1,5 +1,15 @@
 [data-hui=Strong] > strong {
 }
+[data-hui=Strong][data-hui-theme=unua] > strong {
+}
+[data-hui=Strong][data-hui-theme=dua] > strong {
+}
+[data-hui=Strong][data-hui-theme=tria] > strong {
+}
+[data-hui=Strong][data-hui-theme=kvara] > strong {
+}
+[data-hui=Strong][data-hui-theme=kvina] > strong {
+}
 [data-hui=Strong] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

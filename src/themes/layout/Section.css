@@ -1,5 +1,15 @@
 [data-hui=Section] > section {
 }
+[data-hui=Section][data-hui-theme=unua] > section {
+}
+[data-hui=Section][data-hui-theme=dua] > section {
+}
+[data-hui=Section][data-hui-theme=tria] > section {
+}
+[data-hui=Section][data-hui-theme=kvara] > section {
+}
+[data-hui=Section][data-hui-theme=kvina] > section {
+}
 [data-hui=Section] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

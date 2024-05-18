@@ -29,6 +29,16 @@
   --hui-border-top-style: var(--hui-vars-border-style);
   --hui-border-top-width: var(--hui-vars-border-width);
 }
+[data-hui=Title][data-hui-theme=unua] > title {
+}
+[data-hui=Title][data-hui-theme=dua] > title {
+}
+[data-hui=Title][data-hui-theme=tria] > title {
+}
+[data-hui=Title][data-hui-theme=kvara] > title {
+}
+[data-hui=Title][data-hui-theme=kvina] > title {
+}
 [data-hui=Title] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

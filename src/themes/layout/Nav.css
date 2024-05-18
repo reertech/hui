@@ -1,5 +1,15 @@
 [data-hui=Nav] > nav {
 }
+[data-hui=Nav][data-hui-theme=unua] > nav {
+}
+[data-hui=Nav][data-hui-theme=dua] > nav {
+}
+[data-hui=Nav][data-hui-theme=tria] > nav {
+}
+[data-hui=Nav][data-hui-theme=kvara] > nav {
+}
+[data-hui=Nav][data-hui-theme=kvina] > nav {
+}
 [data-hui=Nav] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

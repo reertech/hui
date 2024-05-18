@@ -1,5 +1,15 @@
 [data-hui=Input] > input {
 }
+[data-hui=Input][data-hui-theme=unua] > input {
+}
+[data-hui=Input][data-hui-theme=dua] > input {
+}
+[data-hui=Input][data-hui-theme=tria] > input {
+}
+[data-hui=Input][data-hui-theme=kvara] > input {
+}
+[data-hui=Input][data-hui-theme=kvina] > input {
+}
 [data-hui=Input] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

@@ -1,5 +1,15 @@
 [data-hui=Badge] > strong {
 }
+[data-hui=Badge][data-hui-theme=unua] > strong {
+}
+[data-hui=Badge][data-hui-theme=dua] > strong {
+}
+[data-hui=Badge][data-hui-theme=tria] > strong {
+}
+[data-hui=Badge][data-hui-theme=kvara] > strong {
+}
+[data-hui=Badge][data-hui-theme=kvina] > strong {
+}
 [data-hui=Badge] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

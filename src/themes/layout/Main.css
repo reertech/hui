@@ -1,5 +1,15 @@
 [data-hui=Main] > main {
 }
+[data-hui=Main][data-hui-theme=unua] > main {
+}
+[data-hui=Main][data-hui-theme=dua] > main {
+}
+[data-hui=Main][data-hui-theme=tria] > main {
+}
+[data-hui=Main][data-hui-theme=kvara] > main {
+}
+[data-hui=Main][data-hui-theme=kvina] > main {
+}
 [data-hui=Main] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */

@@ -1,5 +1,15 @@
 [data-hui=Article] > article {
 }
+[data-hui=Article][data-hui-theme=unua] > article {
+}
+[data-hui=Article][data-hui-theme=dua] > article {
+}
+[data-hui=Article][data-hui-theme=tria] > article {
+}
+[data-hui=Article][data-hui-theme=kvara] > article {
+}
+[data-hui=Article][data-hui-theme=kvina] > article {
+}
 [data-hui=Article] {
   /* LAYOUT-DISPLAY */
 /*  --hui-display-default: ; */
