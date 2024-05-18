@@ -116,9 +116,13 @@ defmodule Builder do
           Enum.flat_map(sections, fn {section, rules} ->
             Enum.map(rules, fn {key, _} ->
               # true -> "/*  #{key}: ; */"
+              val = current[key]
+              default = defaults["#{key}-default"]
+
               cond do
-                val = current[key] -> "  #{prefix}-#{key}: #{val};"
-                defaults["#{key}-default"] -> "  #{prefix}-#{key}: var(#{prefix}-#{key}-default);"
+                !val && default -> "  #{prefix}-#{key}: var(#{prefix}-#{key}-default);"
+                val =~ "var(#{prefix}-#{key}-default)" && !default -> nil
+                val -> "  #{prefix}-#{key}: #{val};"
                 true -> nil
               end
             end)
@@ -155,7 +159,7 @@ defmodule Builder do
              selector <- String.split(selector, "]") |> List.last(),
              selector <- String.trim(selector),
              selector <- if(selector == "", do: "default", else: selector),
-             prefix <- build_prefix(selector, names),
+             prefix <- build_prefix(selector, names) <> "-",
              theme <- parse_theme_name.(selector, section) do
           String.split(section, ~r"\s*(\}|;|\n)\s*", trim: true)
           |> Enum.reduce(acc, fn line, acc ->
@@ -164,7 +168,7 @@ defmodule Builder do
                    String.split(line, ~r"\s*:\s*", trim: true)
                    |> Enum.map(&String.trim/1) do
               # key = key |> String.trim_trailing("-default")
-              key = key |> String.trim_leading(prefix)
+              key = key |> String.trim_leading(prefix) |> String.trim_leading("--hui-")
               path = [Access.key(theme, %{}), Access.key(selector, %{}), key]
               acc |> put_in(path, val |> String.trim(";"))
             else
