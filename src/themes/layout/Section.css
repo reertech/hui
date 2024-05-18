@@ -1,6 +1,4 @@
 [data-hui=Section] > section {
-  /* LAYOUT-DISPLAY */
-  --hui-lqzmev-display: var(--hui-lqzmev-display-default);
 }
 [data-hui=Section][data-hui-theme=unua] > section {
   /* LAYOUT-DISPLAY */

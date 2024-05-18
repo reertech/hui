@@ -5,7 +5,8 @@ defmodule Builder do
   def run do
     with [_ | _] = files <- System.argv() do
       Enum.each(files, fn file ->
-        IO.inspect(file) |> build_file()
+        IO.puts("\n=== #{file} ===")
+        build_file(file)
       end)
     else
       _ -> raise "Broken args"
@@ -84,6 +85,7 @@ defmodule Builder do
   defp build_theme(sections, names) do
     current_theme = parse_theme(names) |> IO.inspect()
     defaults = current_theme["default"]
+    IO.puts("===")
 
     default_lines =
       Enum.flat_map(sections, fn {selector, sections} ->
@@ -120,9 +122,9 @@ defmodule Builder do
               default = defaults["#{key}-default"]
 
               cond do
-                !val && default -> "  #{prefix}-#{key}: var(#{prefix}-#{key}-default);"
-                val =~ "var(#{prefix}-#{key}-default)" && !default -> nil
+                val && (val =~ "var(#{prefix}-#{key}-default)") && !default -> nil
                 val -> "  #{prefix}-#{key}: #{val};"
+                default -> "  #{prefix}-#{key}: var(#{prefix}-#{key}-default);"
                 true -> nil
               end
             end)

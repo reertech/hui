@@ -5,8 +5,6 @@
 [data-hui=Select] > fieldset > datalist > option {
 }
 [data-hui=Select] > fieldset > div > input {
-  /* APPERANCE */
-  --hui-cfnytn-background-color: var(--hui-cfnytn-background-color-default);
 }
 [data-hui=Select][data-hui-theme=unua] > fieldset {
 }
@@ -15,8 +13,6 @@
 [data-hui=Select][data-hui-theme=unua] > fieldset > datalist > option {
 }
 [data-hui=Select][data-hui-theme=unua] > fieldset > div > input {
-  /* APPERANCE */
-  --hui-cfnytn-background-color: var(--hui-cfnytn-background-color-default);
 }
 [data-hui=Select][data-hui-theme=dua] > fieldset {
 }
@@ -25,8 +21,6 @@
 [data-hui=Select][data-hui-theme=dua] > fieldset > datalist > option {
 }
 [data-hui=Select][data-hui-theme=dua] > fieldset > div > input {
-  /* APPERANCE */
-  --hui-cfnytn-background-color: var(--hui-cfnytn-background-color-default);
 }
 [data-hui=Select][data-hui-theme=tria] > fieldset {
 }
@@ -35,8 +29,6 @@
 [data-hui=Select][data-hui-theme=tria] > fieldset > datalist > option {
 }
 [data-hui=Select][data-hui-theme=tria] > fieldset > div > input {
-  /* APPERANCE */
-  --hui-cfnytn-background-color: var(--hui-cfnytn-background-color-default);
 }
 [data-hui=Select] > fieldset {
   /* LAYOUT-DISPLAY */
@@ -427,7 +419,7 @@
 /*  --hui-cfnytn-color-default: ; */
 /*  --hui-cfnytn-background-attachment-default: ; */
 /*  --hui-cfnytn-background-clip-default: ; */
-  --hui-cfnytn-background-color-default: black;
+/*  --hui-cfnytn-background-color-default: ; */
 /*  --hui-cfnytn-background-image-default: ; */
 /*  --hui-cfnytn-background-origin-default: ; */
 /*  --hui-cfnytn-background-position-x-default: ; */
