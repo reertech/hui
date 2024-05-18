@@ -38,31 +38,35 @@
   {theme}
   {classes}
 >
-  <button
-    draggable="true"
-    style:opacity={onFly ? "0.5" : null}
-    on:dragstart={start}
-    on:dragend={end}
-    on:dragover|preventDefault={() => false}
-  >
-    <DropZone
-      {idx}
-      {list}
-      on:swap
-      dir="left"
-      hidden={onFly}
-      on:swap={(e) => list = e.detail}
-    />
+  {#if disabled}
       <slot />
-    <DropZone
-      {idx}
-      {list}
-      on:swap
-      dir="right"
-      hidden={onFly}
-      on:swap={(e) => list = e.detail}
-    />
-  </button>
+  {:else}
+    <button
+      draggable="true"
+      style:opacity={onFly ? "0.5" : null}
+      on:dragstart={start}
+      on:dragend={end}
+      on:dragover|preventDefault={() => false}
+    >
+      <DropZone
+        {idx}
+        {list}
+        on:swap
+        dir="left"
+        hidden={onFly}
+        on:swap={(e) => list = e.detail}
+      />
+        <slot />
+      <DropZone
+        {idx}
+        {list}
+        on:swap
+        dir="right"
+        hidden={onFly}
+        on:swap={(e) => list = e.detail}
+      />
+    </button>
+  {/if}
 </Container>
 
 <style>

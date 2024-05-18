@@ -1,4 +1,6 @@
 defmodule Builder do
+  @themes ["unua", "dua", "tria", "kvara", "kvina"]
+
   def run do
     with [_ | _] = files <- System.argv() do
       Enum.each(files, fn file ->
@@ -48,14 +50,16 @@ defmodule Builder do
   defp build_style(sections, names) do
     lines =
       Enum.flat_map(sections, fn {selector, sections} ->
-        Enum.flat_map(sections, fn {section, rules} ->
-          Enum.map(rules, fn {key, value} ->
-            "  #{key}: var(--hui-#{key}, #{value});"
+        Enum.flat_map(@themes, fn theme ->
+          Enum.flat_map(sections, fn {section, rules} ->
+            Enum.map(rules, fn {key, value} ->
+              "  #{key}: var(--hui-#{key}, #{value});"
+            end)
+            |> List.insert_at(0, "  /* #{String.upcase(section)} */")
           end)
-          |> List.insert_at(0, "  /* #{String.upcase(section)} */")
+          |> List.insert_at(0, build_prefix(theme, selector, names))
+          |> List.insert_at(-1, "}")
         end)
-        |> List.insert_at(0, build_prefix(selector, names))
-        |> List.insert_at(-1, "}")
       end)
 
     names.path.("styles")
@@ -87,28 +91,30 @@ defmodule Builder do
       |> List.insert_at(-1, "}")
 
     section_lines =
-      Enum.flat_map(sections, fn {selector, sections} ->
-        current = current_theme[selector]
+      Enum.flat_map(@themes, fn theme ->
+        Enum.flat_map(sections, fn {selector, sections} ->
+          current = current_theme[selector][theme]
 
-        Enum.flat_map(sections, fn {section, rules} ->
-          Enum.map(rules, fn {key, _} ->
-            key = "--hui-#{key}"
+          Enum.flat_map(sections, fn {section, rules} ->
+            Enum.map(rules, fn {key, _} ->
+              key = "--hui-#{key}"
 
-            cond do
-              val = current[key] -> "  #{key}: #{val};"
-              defaults[key] -> "  #{key}: var(#{key}-default);"
-              true -> nil
               # true -> "/*  #{key}: ; */"
+              cond do
+                val = current[key] -> "  #{key}: #{val};"
+                defaults[key] -> "  #{key}: var(#{key}-default);"
+                true -> nil
+              end
+            end)
+            |> Enum.filter(&is_binary/1)
+            |> case do
+              [] -> []
+              lines -> ["  /* #{String.upcase(section)} */" | lines]
             end
           end)
-          |> Enum.filter(&is_binary/1)
-          |> case do
-            [] -> []
-            lines -> ["  /* #{String.upcase(section)} */" | lines]
-          end
+          |> List.insert_at(0, build_prefix(theme, selector, names))
+          |> List.insert_at(-1, "}")
         end)
-        |> List.insert_at(0, build_prefix(selector, names))
-        |> List.insert_at(-1, "}")
       end)
 
     theme = (section_lines ++ default_lines) |> Enum.join("\n")
@@ -117,12 +123,20 @@ defmodule Builder do
   end
 
   defp parse_theme(names) do
+    parse_theme_name = fn selector, section ->
+      with true <- selector != "default" || {:ok, "default"},
+           [theme] <- ~r"(?<=\[data\-hui\-theme\=).+(?=\])" |> Regex.run(section) do
+        {:ok, theme}
+      end
+    end
+
     with {:ok, css} <- names.path.("themes") |> File.read(),
          sections <- css |> String.split(~r"\s*}\s*", trim: true) do
       Enum.reduce(sections, %{}, fn section, acc ->
         with [selector] <- ~r"(?<=\]).+(?=\{)" |> Regex.run(section),
              selector <- String.trim(selector),
-             selector <- if(selector == "", do: "default", else: selector) do
+             selector <- if(selector == "", do: "default", else: selector),
+             {:ok, theme} <- parse_theme_name(selector, section) do
           String.split(section, ~r"\s*(\}|;|\n)\s*", trim: true)
           |> Enum.reduce(acc, fn line, acc ->
             with false <- line =~ "{",
@@ -130,7 +144,7 @@ defmodule Builder do
                    String.split(line, ~r"\s*:\s*", trim: true)
                    |> Enum.map(&String.trim/1) do
               key = key |> String.trim_trailing("-default")
-              path = [Access.key(selector, %{}), key]
+              path = [Access.key(selector, %{}), Access.key(theme, %{}), key]
               acc |> put_in(path, val |> String.trim(";"))
             else
               _ -> acc
@@ -247,7 +261,7 @@ defmodule Builder do
        {"min-height", "auto"},
        {"width", "auto"},
        {"max-width", "none"},
-       {"min-width", "auto"},
+       {"min-width", "auto"}
        # {"block-size", "auto"},
        # {"resize", "none"},
        # {"inline-size", "auto"},

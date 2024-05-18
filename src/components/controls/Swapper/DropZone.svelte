@@ -50,7 +50,7 @@
     bottom: 0 !important;
     text-align: center !important;
     line-height: 100% !important;
-    width: 33% !important;
+    width: 25% !important;
     height: 100% !important;
     background: #0000004f !important;
   }

@@ -31,36 +31,36 @@
   --hui-vars-color-base-plus3-l: calc(var(--hui-vars-color-base-l) + 38%);
   --hui-vars-color-base-plus3: hsl(var(--hui-vars-color-base-plus3-h), var(--hui-vars-color-base-plus3-s), var(--hui-vars-color-base-plus3-l));
 
-  --hui-vars-color-contrast-h: var(--hui-vars-color-base-h);
-  --hui-vars-color-contrast-s: var(--hui-vars-color-base-s);
-  --hui-vars-color-contrast-l: 90%;
-  --hui-vars-color-contrast: hsl(var(--hui-vars-color-contrast-h), var(--hui-vars-color-contrast-s), var(--hui-vars-color-contrast-l));
+  --hui-vars-color-unua-h: var(--hui-vars-color-base-h);
+  --hui-vars-color-unua-s: var(--hui-vars-color-base-s);
+  --hui-vars-color-unua-l: 90%;
+  --hui-vars-color-unua: hsl(var(--hui-vars-color-unua-h), var(--hui-vars-color-unua-s), var(--hui-vars-color-unua-l));
 
-  --hui-vars-color-contrast-minus1-h: var(--hui-vars-color-contrast-h);
-  --hui-vars-color-contrast-minus1-s: var(--hui-vars-color-contrast-s);
-  --hui-vars-color-contrast-minus1-l: calc(var(--hui-vars-color-contrast-l) - 5%);
-  --hui-vars-color-contrast-minus1: hsl(var(--hui-vars-color-contrast-minus1-h), var(--hui-vars-color-contrast-minus1-s), var(--hui-vars-color-contrast-minus1-l));
+  --hui-vars-color-unua-minus1-h: var(--hui-vars-color-unua-h);
+  --hui-vars-color-unua-minus1-s: var(--hui-vars-color-unua-s);
+  --hui-vars-color-unua-minus1-l: calc(var(--hui-vars-color-unua-l) - 5%);
+  --hui-vars-color-unua-minus1: hsl(var(--hui-vars-color-unua-minus1-h), var(--hui-vars-color-unua-minus1-s), var(--hui-vars-color-unua-minus1-l));
 
-  --hui-vars-color-contrast-minus2-h: var(--hui-vars-color-contrast-h);
-  --hui-vars-color-contrast-minus2-s: var(--hui-vars-color-contrast-s);
-  --hui-vars-color-contrast-minus2-l: calc(var(--hui-vars-color-contrast-l) - 15%);
-  --hui-vars-color-contrast-minus2: hsl(var(--hui-vars-color-contrast-minus2-h), var(--hui-vars-color-contrast-minus2-s), var(--hui-vars-color-contrast-minus2-l));
+  --hui-vars-color-unua-minus2-h: var(--hui-vars-color-unua-h);
+  --hui-vars-color-unua-minus2-s: var(--hui-vars-color-unua-s);
+  --hui-vars-color-unua-minus2-l: calc(var(--hui-vars-color-unua-l) - 15%);
+  --hui-vars-color-unua-minus2: hsl(var(--hui-vars-color-unua-minus2-h), var(--hui-vars-color-unua-minus2-s), var(--hui-vars-color-unua-minus2-l));
 
-  --hui-vars-color-contrast-plus1-h: var(--hui-vars-color-contrast-h);
-  --hui-vars-color-contrast-plus1-s: var(--hui-vars-color-contrast-s);
-  --hui-vars-color-contrast-plus1-l: calc(var(--hui-vars-color-contrast-l) + 5%);
-  --hui-vars-color-contrast-plus1: hsl(var(--hui-vars-color-contrast-plus1-h), var(--hui-vars-color-contrast-plus1-s), var(--hui-vars-color-contrast-plus1-l));
+  --hui-vars-color-unua-plus1-h: var(--hui-vars-color-unua-h);
+  --hui-vars-color-unua-plus1-s: var(--hui-vars-color-unua-s);
+  --hui-vars-color-unua-plus1-l: calc(var(--hui-vars-color-unua-l) + 5%);
+  --hui-vars-color-unua-plus1: hsl(var(--hui-vars-color-unua-plus1-h), var(--hui-vars-color-unua-plus1-s), var(--hui-vars-color-unua-plus1-l));
 
-  --hui-vars-color-contrast-plus2-h: var(--hui-vars-color-contrast-h);
-  --hui-vars-color-contrast-plus2-s: var(--hui-vars-color-contrast-s);
-  --hui-vars-color-contrast-plus2-l: calc(var(--hui-vars-color-contrast-l) + 10%);
-  --hui-vars-color-contrast-plus2: hsl(var(--hui-vars-color-contrast-plus2-h), var(--hui-vars-color-contrast-plus2-s), var(--hui-vars-color-contrast-plus2-l));
+  --hui-vars-color-unua-plus2-h: var(--hui-vars-color-unua-h);
+  --hui-vars-color-unua-plus2-s: var(--hui-vars-color-unua-s);
+  --hui-vars-color-unua-plus2-l: calc(var(--hui-vars-color-unua-l) + 10%);
+  --hui-vars-color-unua-plus2: hsl(var(--hui-vars-color-unua-plus2-h), var(--hui-vars-color-unua-plus2-s), var(--hui-vars-color-unua-plus2-l));
 
-  --hui-vars-color-bg: var(--hui-vars-color-contrast-plus2);
+  --hui-vars-color-bg: var(--hui-vars-color-unua-plus2);
   --hui-vars-color-text: var(--hui-vars-color-base);
-  --hui-vars-color-border-first: var(--hui-vars-color-contrast-minus2);
+  --hui-vars-color-border-first: var(--hui-vars-color-unua-minus2);
   --hui-vars-color-border-second: var(--hui-vars-color-base-plus3);
-  --hui-vars-color-border-third: var(--hui-vars-color-contrast-plus2);
+  --hui-vars-color-border-third: var(--hui-vars-color-unua-plus2);
   --hui-vars-color-border: var(--hui-vars-color-border-second);
 
   /* GRADIENTS */
@@ -172,6 +172,7 @@
   --hui-default-color: var(--hui-vars-color-text);
   --hui-default-background-color: var(--hui-vars-color-bg);
   --hui-default-background-image: var(--hui-vars-gradient-3);
+}
 /*
   --hui-body-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 

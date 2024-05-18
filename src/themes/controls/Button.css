@@ -1,4 +1,10 @@
 [data-hui=Button] > button {
+  --hui-padding-top: var(--hui-vars-spacer-5);
+  --hui-padding-right: var(--hui-vars-spacer-7);
+  --hui-padding-bottom: var(--hui-vars-spacer-5);
+  --hui-padding-left: var(--hui-vars-spacer-7);
+  --hui-overflow-x: hidden;
+  --hui-overflow-y: hidden;
 }
 [data-hui=Button] {
   /* LAYOUT-DISPLAY */

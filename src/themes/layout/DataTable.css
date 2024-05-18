@@ -1,4 +1,4 @@
-[data-hui=DataTable] > [data-hui=Table] > table {
+[data-hui=DataTable] > data > table {
   /* LAYOUT-DISPLAY */
   --hui-display: grid;
   /* GRID */
@@ -6,7 +6,7 @@
   --hui-column-gap: var(--hui-vars-spacer-5);
   --hui-row-gap: var(--hui-vars-spacer-7);
 }
-[data-hui=DataTable] > [data-hui=Table] > table > tbody {
+[data-hui=DataTable] > data > table > tbody {
   /* LAYOUT-DISPLAY */
   --hui-display: grid;
   /* GRID */
@@ -14,7 +14,7 @@
   --hui-grid-column-start: 1;
   --hui-grid-template-columns: subgrid;
 }
-[data-hui=DataTable] > [data-hui=Table] > table > thead {
+[data-hui=DataTable] > data > table > thead {
   /* LAYOUT-DISPLAY */
   --hui-display: grid;
   /* GRID */
@@ -22,14 +22,15 @@
   --hui-grid-column-start: 1;
   --hui-grid-template-columns: subgrid;
 }
-[data-hui=DataTable] > [data-hui=Table] > table > * > tr {
+[data-hui=DataTable] > data > table > * > tr {
   /* LAYOUT-DISPLAY */
   --hui-display: grid;
   /* GRID */
   --hui-grid-column-end: -1;
   --hui-grid-column-start: 1;
+  --hui-grid-template-columns: subgrid;
 }
-[data-hui=DataTable] > [data-hui=Table] > table > tbody > tr > td {
+[data-hui=DataTable] > data > table > tbody > tr > td {
   /* LAYOUT-DISPLAY */
   --hui-display: block;
   /* LAYOUT-PADDING */
@@ -37,10 +38,8 @@
   --hui-padding-right: var(--hui-vars-spacer-0);
   --hui-padding-bottom: var(--hui-vars-spacer-0);
   --hui-padding-left: var(--hui-vars-spacer-0);
-  /* LAYOUT-OVERFLOW */
-  --hui-overflow-x: auto;
 }
-[data-hui=DataTable] > [data-hui=Table] > table > thead > tr > th {
+[data-hui=DataTable] > data > table > thead > tr > th {
   /* LAYOUT-DISPLAY */
   --hui-display: block;
   /* LAYOUT-PADDING */
