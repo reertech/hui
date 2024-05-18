@@ -1,4 +1,5 @@
 <script>
+  import "../../themes/layout/Section.css"
   import "../../styles/layout/Section.css"
   import Container from "../Container.svelte"
 

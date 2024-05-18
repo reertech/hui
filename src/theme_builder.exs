@@ -51,13 +51,15 @@ defmodule Builder do
   defp build_style(sections, names) do
     lines =
       Enum.flat_map(sections, fn {selector, sections} ->
+        prefix = build_prefix(selector, names)
+
         Enum.flat_map(sections, fn {section, rules} ->
           Enum.map(rules, fn {key, value} ->
-            "  #{key}: var(--hui-#{key}, #{value});"
+            "  #{key}: var(#{prefix}-#{key}, #{value});"
           end)
           |> List.insert_at(0, "  /* #{String.upcase(section)} */")
         end)
-        |> List.insert_at(0, build_prefix(nil, selector, names))
+        |> List.insert_at(0, build_selector(nil, selector, names))
         |> List.insert_at(-1, "}")
       end)
 
@@ -67,6 +69,18 @@ defmodule Builder do
     sections
   end
 
+  defp build_prefix(selector, names) do
+    str = "#{names.name}_#{selector}"
+
+    hash =
+      :crypto.hash(:sha, str)
+      |> Base.encode32(case: :lower)
+      |> String.replace(~r"\d", "")
+      |> String.slice(0, 6)
+
+    "--hui-#{hash}"
+  end
+
   defp build_theme(sections, names) do
     current_theme = parse_theme(names) |> IO.inspect()
     defaults = current_theme["default"]
@@ -74,20 +88,21 @@ defmodule Builder do
     default_lines =
       Enum.flat_map(sections, fn {selector, sections} ->
         defaults = defaults[selector]
-   
+        prefix = build_prefix(selector, names)
+
         Enum.flat_map(sections, fn {section, rules} ->
           Enum.map(rules, fn {key, _} ->
-            key = "--hui-#{key}-default"
+            key = "#{key}-default"
 
             if val = defaults[key] do
-              "  #{key}: #{val};"
+              "  #{prefix}-#{key}: #{val};"
             else
-              "/*  #{key}: ; */"
+              "/*  #{prefix}-#{key}: ; */"
             end
           end)
           |> List.insert_at(0, "  /* #{String.upcase(section)} */")
         end)
-        |> List.insert_at(0, build_prefix(nil, selector, names))
+        |> List.insert_at(0, build_selector(nil, selector, names))
         |> List.insert_at(-1, "}")
       end)
 
@@ -95,16 +110,15 @@ defmodule Builder do
       Enum.flat_map(@themes, fn theme ->
         Enum.flat_map(sections, fn {selector, sections} ->
           current = current_theme[theme || "default"][selector]
+          prefix = build_prefix(selector, names)
           defaults = defaults[selector]
 
           Enum.flat_map(sections, fn {section, rules} ->
             Enum.map(rules, fn {key, _} ->
-              key = "--hui-#{key}"
-
               # true -> "/*  #{key}: ; */"
               cond do
-                val = current[key] -> "  #{key}: #{val};"
-                defaults["#{key}-default"] -> "  #{key}: var(#{key}-default);"
+                val = current[key] -> "  #{prefix}-#{key}: #{val};"
+                defaults["#{key}-default"] -> "  #{prefix}-#{key}: var(#{prefix}-#{key}-default);"
                 true -> nil
               end
             end)
@@ -114,7 +128,7 @@ defmodule Builder do
               lines -> ["  /* #{String.upcase(section)} */" | lines]
             end
           end)
-          |> List.insert_at(0, build_prefix(theme, selector, names))
+          |> List.insert_at(0, build_selector(theme, selector, names))
           |> List.insert_at(-1, "}")
         end)
       end)
@@ -141,6 +155,7 @@ defmodule Builder do
              selector <- String.split(selector, "]") |> List.last(),
              selector <- String.trim(selector),
              selector <- if(selector == "", do: "default", else: selector),
+             prefix <- build_prefix(selector, names),
              theme <- parse_theme_name.(selector, section) do
           String.split(section, ~r"\s*(\}|;|\n)\s*", trim: true)
           |> Enum.reduce(acc, fn line, acc ->
@@ -149,6 +164,7 @@ defmodule Builder do
                    String.split(line, ~r"\s*:\s*", trim: true)
                    |> Enum.map(&String.trim/1) do
               # key = key |> String.trim_trailing("-default")
+              key = key |> String.trim_leading(prefix)
               path = [Access.key(theme, %{}), Access.key(selector, %{}), key]
               acc |> put_in(path, val |> String.trim(";"))
             else
@@ -182,16 +198,15 @@ defmodule Builder do
 
     %{
       name: name,
-      path: file_path,
-      prefix: "[data-hui=#{name}]"
+      path: file_path
     }
   end
 
-  defp build_prefix(theme, selector, names) do
+  defp build_selector(theme, selector, names) do
     if theme do
-      "#{names.prefix}[data-hui-theme=#{theme}] #{selector} {"
+      "[data-hui=#{names.name}][data-hui-theme=#{theme}] #{selector} {"
     else
-      "#{names.prefix} #{selector} {"
+      "[data-hui=#{names.name}] #{selector} {"
     end
   end
 

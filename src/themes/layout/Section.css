@@ -1,14 +1,26 @@
 [data-hui=Section] > section {
+  /* LAYOUT-DISPLAY */
+  @property --hui-display {
+    syntax: "<text>",
+    inherits: false
+  }
+  --hui-display: var(--hui-display-default);
 }
 [data-hui=Section][data-hui-theme=unua] > section {
+  /* LAYOUT-DISPLAY */
+  --hui-display: var(--hui-display-default);
 }
 [data-hui=Section][data-hui-theme=dua] > section {
+  /* LAYOUT-DISPLAY */
+  --hui-display: var(--hui-display-default);
 }
 [data-hui=Section][data-hui-theme=tria] > section {
+  /* LAYOUT-DISPLAY */
+  --hui-display: var(--hui-display-default);
 }
 [data-hui=Section] > section {
   /* LAYOUT-DISPLAY */
-/*  --hui-display-default: ; */
+  --hui-display-default: block;
 /*  --hui-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-position-default: ; */
