@@ -3,6 +3,8 @@ defmodule Builder do
   @themes [nil, "unua", "dua", "tria"]
   @states [nil, "active", "disabled", "readonly", "valid", "invalid"]
 
+  @prefix_length 6
+
   def run do
     with [_ | _] = files <- System.argv() do
       Enum.each(files, fn file ->
@@ -21,7 +23,7 @@ defmodule Builder do
          names <- build_names(file_path) do
       ini
       |> String.split(~r"\s*(\n|\r\n)+\s*", trim: true)
-      |> Enum.reduce([], &parse_line/2)
+      |> Enum.reduce([], &parse_line(&1, &2, names))
       |> Enum.reverse()
       |> build_style(names)
       |> build_theme(names)
@@ -30,21 +32,26 @@ defmodule Builder do
     end
   end
 
-  defp parse_line(line, acc) do
+  defp parse_line(line, acc, names) do
     with [selector, tl] <- String.split(line, ~r"\s*=\s*", trim: true),
          sections <- String.split(tl, ~r"\s*,\s*", trim: true) do
-      sections =
-        sections
-        |> Enum.reverse()
-        |> Enum.reduce([], fn section, acc ->
-          case build_section(section) do
-            {_, _} = section -> [section | acc]
-            [_ | _] = sections -> sections ++ acc
-            nil -> acc
-          end
-        end)
+      String.split(selector, ~r"\s*\|\s*", trim: true)
+      |> Enum.reduce(acc, fn selector_part, acc ->
+        prefix = build_prefix(selector, names)
 
-      [{selector, sections} | acc]
+        sections =
+          sections
+          |> Enum.reverse()
+          |> Enum.reduce([], fn section, acc ->
+            case build_section(section) do
+              {_, _} = section -> [section | acc]
+              [_ | _] = sections -> sections ++ acc
+              nil -> acc
+            end
+          end)
+
+        [{selector_part, prefix, sections} | acc]
+      end)
     else
       _ -> acc
     end
@@ -52,9 +59,7 @@ defmodule Builder do
 
   defp build_style(sections, names) do
     lines =
-      Enum.flat_map(sections, fn {selector, sections} ->
-        prefix = build_prefix(selector, names)
-
+      Enum.flat_map(sections, fn {selector, prefix, sections} ->
         Enum.flat_map(sections, fn {section, rules} ->
           Enum.map(rules, fn {key, value} ->
             "  #{key}: var(#{prefix}-#{key}, #{value});"
@@ -78,7 +83,7 @@ defmodule Builder do
       :crypto.hash(:sha, str)
       |> Base.encode32(case: :lower)
       |> String.replace(~r"\d", "")
-      |> String.slice(0, 6)
+      |> String.slice(0, @prefix_length)
 
     "--hui-#{hash}"
   end
@@ -93,9 +98,8 @@ defmodule Builder do
     end
 
     default_lines =
-      Enum.flat_map(sections, fn {selector, sections} ->
+      Enum.flat_map(sections, fn {selector, prefix, sections} ->
         defaults = defaults[selector]
-        prefix = build_prefix(selector, names)
 
         Enum.flat_map(sections, fn {section, rules} ->
           Enum.map(rules, fn {key, _} ->
@@ -116,9 +120,8 @@ defmodule Builder do
     section_lines =
       Enum.flat_map(@themes, fn theme ->
         Enum.flat_map(@states, fn state ->
-          Enum.flat_map(sections, fn {selector, sections} ->
+          Enum.flat_map(sections, fn {selector, prefix, sections} ->
             current = current_theme[theme || "default"][state || "default"][selector]
-            prefix = build_prefix(selector, names)
             defaults = defaults[selector]
 
             Enum.flat_map(sections, fn {section, rules} ->
@@ -128,7 +131,7 @@ defmodule Builder do
                 default = defaults["#{key}-default"]
 
                 cond do
-                  val && (val =~ "var(#{prefix}-#{key}-default)") && !default -> nil
+                  val && val =~ "var(#{prefix}-#{key}-default)" && !default -> nil
                   val -> "  #{prefix}-#{key}: #{val};"
                   default -> "  #{prefix}-#{key}: var(#{prefix}-#{key}-default);"
                   true -> nil
@@ -178,7 +181,7 @@ defmodule Builder do
              selector <- String.split(selector, "]") |> List.last(),
              selector <- String.trim(selector),
              selector <- if(selector == "", do: "default", else: selector),
-             prefix <- build_prefix(selector, names) <> "-",
+             # prefix <- build_prefix(selector, names) <> "-",
              theme <- parse_theme_name.(selector, section),
              state <- parse_state_name.(selector, section) do
           String.split(section, ~r"\s*(\}|;|\n)\s*", trim: true)
@@ -189,14 +192,14 @@ defmodule Builder do
                    |> Enum.map(&String.trim/1) do
               # key = key |> String.trim_trailing("-default")
               key =
-                key
-                |> String.trim_leading(prefix)
-                |> String.trim_leading("--hui-")
+                ~r"\-\-hui\-.{0,#{@prefix_length}}\-"
+                |> Regex.replace(key, "")
 
               path = [
                 Access.key(theme, %{}),
                 Access.key(state, %{}),
-                Access.key(selector, %{}), key
+                Access.key(selector, %{}),
+                key
               ]
 
               acc |> put_in(path, val |> String.trim(";"))

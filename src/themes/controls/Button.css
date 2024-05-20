@@ -27,12 +27,14 @@
   --hui-lwajtf-border-top-width: var(--hui-default-border-width);
 }
 [data-hui=Button] > button:hover {
-  --hui-lwajtf-padding-top: var(--hui-default-spacer-5);
-  --hui-lwajtf-padding-right: var(--hui-default-spacer-7);
-  --hui-lwajtf-padding-bottom: var(--hui-default-spacer-5);
-  --hui-lwajtf-padding-left: var(--hui-default-spacer-7);
-  --hui-lwajtf-overflow-x: hidden;
-  --hui-lwajtf-overflow-y: hidden;
+  /* LAYOUT-PADDING */
+  --hui-gnynag-padding-top: var(--hui-default-spacer-5);
+  --hui-gnynag-padding-right: var(--hui-default-spacer-7);
+  --hui-gnynag-padding-bottom: var(--hui-default-spacer-5);
+  --hui-gnynag-padding-left: var(--hui-default-spacer-7);
+  /* LAYOUT-OVERFLOW */
+  --hui-gnynag-overflow-x: hidden;
+  --hui-gnynag-overflow-y: hidden;
 }
 [data-hui=Button] > button:focus {
 }
