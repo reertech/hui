@@ -6,6 +6,46 @@
 }
 [data-hui=Header][data-hui-theme=tria] > header {
 }
+[data-hui=Header][data-hui-active] > header {
+}
+[data-hui=Header][data-hui-theme=unua][data-hui-active] > header {
+}
+[data-hui=Header][data-hui-theme=dua][data-hui-active] > header {
+}
+[data-hui=Header][data-hui-theme=tria][data-hui-active] > header {
+}
+[data-hui=Header][data-hui-disabled] > header {
+}
+[data-hui=Header][data-hui-theme=unua][data-hui-disabled] > header {
+}
+[data-hui=Header][data-hui-theme=dua][data-hui-disabled] > header {
+}
+[data-hui=Header][data-hui-theme=tria][data-hui-disabled] > header {
+}
+[data-hui=Header][data-hui-readonly] > header {
+}
+[data-hui=Header][data-hui-theme=unua][data-hui-readonly] > header {
+}
+[data-hui=Header][data-hui-theme=dua][data-hui-readonly] > header {
+}
+[data-hui=Header][data-hui-theme=tria][data-hui-readonly] > header {
+}
+[data-hui=Header][data-hui-valid] > header {
+}
+[data-hui=Header][data-hui-theme=unua][data-hui-valid] > header {
+}
+[data-hui=Header][data-hui-theme=dua][data-hui-valid] > header {
+}
+[data-hui=Header][data-hui-theme=tria][data-hui-valid] > header {
+}
+[data-hui=Header][data-hui-invalid] > header {
+}
+[data-hui=Header][data-hui-theme=unua][data-hui-invalid] > header {
+}
+[data-hui=Header][data-hui-theme=dua][data-hui-invalid] > header {
+}
+[data-hui=Header][data-hui-theme=tria][data-hui-invalid] > header {
+}
 [data-hui=Header] > header {
   /* LAYOUT-DISPLAY */
 /*  --hui-ivbczm-display-default: ; */

@@ -61,7 +61,7 @@ defmodule Builder do
           end)
           |> List.insert_at(0, "  /* #{String.upcase(section)} */")
         end)
-        |> List.insert_at(0, build_selector(nil, selector, names))
+        |> List.insert_at(0, build_selector(nil, nil, selector, names))
         |> List.insert_at(-1, "}")
       end)
 
@@ -109,7 +109,7 @@ defmodule Builder do
           end)
           |> List.insert_at(0, "  /* #{String.upcase(section)} */")
         end)
-        |> List.insert_at(0, build_selector(nil, selector, names))
+        |> List.insert_at(0, build_selector(nil, nil, selector, names))
         |> List.insert_at(-1, "}")
       end)
 
@@ -235,12 +235,16 @@ defmodule Builder do
     }
   end
 
-  defp build_selector(theme, selector, names) do
-    if theme do
-      "[data-hui=#{names.name}][data-hui-theme=#{theme}] #{selector} {"
-    else
-      "[data-hui=#{names.name}] #{selector} {"
-    end
+  defp build_selector(theme, state, selector, names) do
+    body =
+      cond do
+        theme && state -> "[data-hui-theme=#{theme}][data-hui-#{state}]"
+        theme -> "[data-hui-theme=#{theme}]"
+        state -> "[data-hui-#{state}]"
+        true -> ""
+      end
+
+    "[data-hui=#{names.name}]#{body} #{selector} {"
   end
 
   defp build_section("layout-position" = name) do

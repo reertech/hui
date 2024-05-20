@@ -6,6 +6,46 @@
 }
 [data-hui=Nav][data-hui-theme=tria] > nav {
 }
+[data-hui=Nav][data-hui-active] > nav {
+}
+[data-hui=Nav][data-hui-theme=unua][data-hui-active] > nav {
+}
+[data-hui=Nav][data-hui-theme=dua][data-hui-active] > nav {
+}
+[data-hui=Nav][data-hui-theme=tria][data-hui-active] > nav {
+}
+[data-hui=Nav][data-hui-disabled] > nav {
+}
+[data-hui=Nav][data-hui-theme=unua][data-hui-disabled] > nav {
+}
+[data-hui=Nav][data-hui-theme=dua][data-hui-disabled] > nav {
+}
+[data-hui=Nav][data-hui-theme=tria][data-hui-disabled] > nav {
+}
+[data-hui=Nav][data-hui-readonly] > nav {
+}
+[data-hui=Nav][data-hui-theme=unua][data-hui-readonly] > nav {
+}
+[data-hui=Nav][data-hui-theme=dua][data-hui-readonly] > nav {
+}
+[data-hui=Nav][data-hui-theme=tria][data-hui-readonly] > nav {
+}
+[data-hui=Nav][data-hui-valid] > nav {
+}
+[data-hui=Nav][data-hui-theme=unua][data-hui-valid] > nav {
+}
+[data-hui=Nav][data-hui-theme=dua][data-hui-valid] > nav {
+}
+[data-hui=Nav][data-hui-theme=tria][data-hui-valid] > nav {
+}
+[data-hui=Nav][data-hui-invalid] > nav {
+}
+[data-hui=Nav][data-hui-theme=unua][data-hui-invalid] > nav {
+}
+[data-hui=Nav][data-hui-theme=dua][data-hui-invalid] > nav {
+}
+[data-hui=Nav][data-hui-theme=tria][data-hui-invalid] > nav {
+}
 [data-hui=Nav] > nav {
   /* LAYOUT-DISPLAY */
 /*  --hui-rzdnvl-display-default: ; */

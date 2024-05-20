@@ -6,6 +6,46 @@
 }
 [data-hui=Main][data-hui-theme=tria] > main {
 }
+[data-hui=Main][data-hui-active] > main {
+}
+[data-hui=Main][data-hui-theme=unua][data-hui-active] > main {
+}
+[data-hui=Main][data-hui-theme=dua][data-hui-active] > main {
+}
+[data-hui=Main][data-hui-theme=tria][data-hui-active] > main {
+}
+[data-hui=Main][data-hui-disabled] > main {
+}
+[data-hui=Main][data-hui-theme=unua][data-hui-disabled] > main {
+}
+[data-hui=Main][data-hui-theme=dua][data-hui-disabled] > main {
+}
+[data-hui=Main][data-hui-theme=tria][data-hui-disabled] > main {
+}
+[data-hui=Main][data-hui-readonly] > main {
+}
+[data-hui=Main][data-hui-theme=unua][data-hui-readonly] > main {
+}
+[data-hui=Main][data-hui-theme=dua][data-hui-readonly] > main {
+}
+[data-hui=Main][data-hui-theme=tria][data-hui-readonly] > main {
+}
+[data-hui=Main][data-hui-valid] > main {
+}
+[data-hui=Main][data-hui-theme=unua][data-hui-valid] > main {
+}
+[data-hui=Main][data-hui-theme=dua][data-hui-valid] > main {
+}
+[data-hui=Main][data-hui-theme=tria][data-hui-valid] > main {
+}
+[data-hui=Main][data-hui-invalid] > main {
+}
+[data-hui=Main][data-hui-theme=unua][data-hui-invalid] > main {
+}
+[data-hui=Main][data-hui-theme=dua][data-hui-invalid] > main {
+}
+[data-hui=Main][data-hui-theme=tria][data-hui-invalid] > main {
+}
 [data-hui=Main] > main {
   /* LAYOUT-DISPLAY */
 /*  --hui-ecmfij-display-default: ; */

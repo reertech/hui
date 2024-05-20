@@ -6,6 +6,46 @@
 }
 [data-hui=Bar][data-hui-theme=tria] > figure {
 }
+[data-hui=Bar][data-hui-active] > figure {
+}
+[data-hui=Bar][data-hui-theme=unua][data-hui-active] > figure {
+}
+[data-hui=Bar][data-hui-theme=dua][data-hui-active] > figure {
+}
+[data-hui=Bar][data-hui-theme=tria][data-hui-active] > figure {
+}
+[data-hui=Bar][data-hui-disabled] > figure {
+}
+[data-hui=Bar][data-hui-theme=unua][data-hui-disabled] > figure {
+}
+[data-hui=Bar][data-hui-theme=dua][data-hui-disabled] > figure {
+}
+[data-hui=Bar][data-hui-theme=tria][data-hui-disabled] > figure {
+}
+[data-hui=Bar][data-hui-readonly] > figure {
+}
+[data-hui=Bar][data-hui-theme=unua][data-hui-readonly] > figure {
+}
+[data-hui=Bar][data-hui-theme=dua][data-hui-readonly] > figure {
+}
+[data-hui=Bar][data-hui-theme=tria][data-hui-readonly] > figure {
+}
+[data-hui=Bar][data-hui-valid] > figure {
+}
+[data-hui=Bar][data-hui-theme=unua][data-hui-valid] > figure {
+}
+[data-hui=Bar][data-hui-theme=dua][data-hui-valid] > figure {
+}
+[data-hui=Bar][data-hui-theme=tria][data-hui-valid] > figure {
+}
+[data-hui=Bar][data-hui-invalid] > figure {
+}
+[data-hui=Bar][data-hui-theme=unua][data-hui-invalid] > figure {
+}
+[data-hui=Bar][data-hui-theme=dua][data-hui-invalid] > figure {
+}
+[data-hui=Bar][data-hui-theme=tria][data-hui-invalid] > figure {
+}
 [data-hui=Bar] > figure {
   /* LAYOUT-DISPLAY */
 /*  --hui-zoadiu-display-default: ; */
