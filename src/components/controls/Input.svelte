@@ -112,5 +112,5 @@
 -->
 
 <!-- theme.ini
-  > input = common
+  > input = common;
 -->

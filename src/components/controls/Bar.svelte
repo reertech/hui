@@ -33,6 +33,6 @@
 </Container>
 
 <!-- theme.ini
-  > figure = common
+  > figure = common;
 -->
 

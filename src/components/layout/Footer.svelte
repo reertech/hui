@@ -31,6 +31,6 @@
 </Container>
 
 <!-- theme.ini
-  > footer = common
+  > footer = common;
 -->
 

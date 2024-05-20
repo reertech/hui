@@ -21,9 +21,12 @@ defmodule Builder do
          {:ok, file} <- File.read(file_path),
          [_, ini] <- String.split(file, ~r"\<\!\-\-\s*theme\.ini"),
          names <- build_names(file_path) do
+      IO.puts("<<<")
+
       ini
-      |> String.split(~r"\s*(\n|\r\n)+\s*", trim: true)
+      |> String.split(~r"\s*;+\s*", trim: true)
       |> Enum.reduce([], &parse_line(&1, &2, names))
+      |> IO.inspect()
       |> Enum.reverse()
       |> build_style(names)
       |> build_theme(names)

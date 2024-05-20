@@ -159,8 +159,8 @@
 </Container>
 
 <!-- theme.ini
-  > fieldset = common
-  > fieldset > datalist = common
-  > fieldset > datalist > option = common
-  > fieldset > div > input = common
+  > fieldset = common;
+  > fieldset > datalist = common;
+  > fieldset > datalist > option = common;
+  > fieldset > div > input = common;
 -->

@@ -32,6 +32,6 @@
 </Container>
 
 <!-- theme.ini
-  > title = common
+  > title = common;
 -->
 

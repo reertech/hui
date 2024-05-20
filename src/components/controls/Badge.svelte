@@ -31,5 +31,5 @@
 </Container>
 
 <!-- theme.ini
-  > strong = common
+  > strong = common;
 -->

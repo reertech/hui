@@ -31,5 +31,5 @@
 </Container>
 
 <!-- theme.ini
-  > nav = common
+  > nav = common;
 -->

@@ -86,8 +86,8 @@
 </style>
 
 <!-- theme.ini
-  > button:active = common
-  > button = common
-  > div = common
+  > button:active = common;
+  > button = common;
+  > div = common;
 -->
 

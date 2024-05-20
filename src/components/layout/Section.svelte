@@ -32,6 +32,6 @@
 </Container>
 
 <!-- theme.ini
-  > section = common
+  > section = common;
 -->
 

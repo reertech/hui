@@ -91,5 +91,5 @@
 -->
 
 <!-- theme.ini
-  > header = common
+  > header = common;
 -->

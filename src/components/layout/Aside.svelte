@@ -31,6 +31,6 @@
 </Container>
 
 <!-- theme.ini
-  > aside = common
+  > aside = common;
 -->
 

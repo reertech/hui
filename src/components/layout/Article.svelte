@@ -31,5 +31,5 @@
 </Container>
 
 <!-- theme.ini
-  > article = common
+  > article = common;
 -->
