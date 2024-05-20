@@ -121,8 +121,5 @@
 -->
 
 <!-- theme.ini
-  > button = common
-  > button:hover = common
-  > button:focus = common
-  > button:active = common
+  > button | > button:hover = common
 -->

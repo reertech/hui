@@ -50,7 +50,7 @@ defmodule Builder do
             end
           end)
 
-        [{selector_part, prefix, sections} | acc]
+        [{selector_part, selector, prefix, sections} | acc]
       end)
     else
       _ -> acc
@@ -59,7 +59,7 @@ defmodule Builder do
 
   defp build_style(sections, names) do
     lines =
-      Enum.flat_map(sections, fn {selector, prefix, sections} ->
+      Enum.flat_map(sections, fn {_, selector, prefix, sections} ->
         Enum.flat_map(sections, fn {section, rules} ->
           Enum.map(rules, fn {key, value} ->
             "  #{key}: var(#{prefix}-#{key}, #{value});"
@@ -98,7 +98,7 @@ defmodule Builder do
     end
 
     default_lines =
-      Enum.flat_map(sections, fn {selector, prefix, sections} ->
+      Enum.flat_map(sections, fn {selector, _, prefix, sections} ->
         defaults = defaults[selector]
 
         Enum.flat_map(sections, fn {section, rules} ->
@@ -120,7 +120,7 @@ defmodule Builder do
     section_lines =
       Enum.flat_map(@themes, fn theme ->
         Enum.flat_map(@states, fn state ->
-          Enum.flat_map(sections, fn {selector, prefix, sections} ->
+          Enum.flat_map(sections, fn {selector, _, prefix, sections} ->
             current = current_theme[theme || "default"][state || "default"][selector]
             defaults = defaults[selector]
 
@@ -239,15 +239,30 @@ defmodule Builder do
   end
 
   defp build_selector(theme, state, selector, names) do
-    body =
-      cond do
-        theme && state -> "[data-hui-theme=#{theme}][data-hui-#{state}]"
-        theme -> "[data-hui-theme=#{theme}]"
-        state -> "[data-hui-#{state}]"
-        true -> ""
-      end
+    wrap = &("[data-hui=#{names.name}]#{&1} #{selector} {")
 
-    "[data-hui=#{names.name}]#{body} #{selector} {"
+    cond do
+      selector =~ "|" ->
+        String.split(selector, ~r"\s*\|\s*", trim: true)
+        |> Enum.map(fn part ->
+          build_selector(theme, state, part, names)
+          |> String.trim_trailing(" {")
+        end)
+        |> Enum.join(",\n")
+        |> Kernel.<>(" {")
+
+      theme && state ->
+        wrap.("[data-hui-theme=#{theme}][data-hui-#{state}]")
+
+      theme ->
+        wrap.("[data-hui-theme=#{theme}]")
+
+      state ->
+        wrap.("[data-hui-#{state}]")
+
+      true ->
+        wrap.("")
+    end
   end
 
   defp build_section("layout-position" = name) do
