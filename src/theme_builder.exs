@@ -21,12 +21,9 @@ defmodule Builder do
          {:ok, file} <- File.read(file_path),
          [_, ini] <- String.split(file, ~r"\<\!\-\-\s*theme\.ini"),
          names <- build_names(file_path) do
-      IO.puts("<<<")
-
       ini
-      |> String.split(~r"\s*;+\s*", trim: true)
+      |> String.split(~r"\s*;\s*", trim: true)
       |> Enum.reduce([], &parse_line(&1, &2, names))
-      |> IO.inspect()
       |> Enum.reverse()
       |> build_style(names)
       |> build_theme(names)
@@ -38,6 +35,12 @@ defmodule Builder do
   defp parse_line(line, acc, names) do
     with [selector, tl] <- String.split(line, ~r"\s*=\s*", trim: true),
          sections <- String.split(tl, ~r"\s*,\s*", trim: true) do
+      selector =
+        selector
+        |> String.replace(~r"\s+", " ")
+        |> String.replace(~r"\s*,\s*", ",\n")
+        |> String.trim()
+
       String.split(selector, ~r"\s*\|\s*", trim: true)
       |> Enum.reduce(acc, fn selector_part, acc ->
         prefix = build_prefix(selector, names)
@@ -180,6 +183,8 @@ defmodule Builder do
     end
 
     with {:ok, css} <- names.path.("themes") |> File.read(),
+         css <- ~r"(?<=\/\*).+(?=\*\/)" |> Regex.replace(css, ""),
+         css <- String.replace(css, ~r"\s*\/\*\*\/\s*", "\n"),
          sections <- css |> String.split(~r"\s*}\s*", trim: true) do
       Enum.reduce(sections, %{}, fn section, acc ->
         with [selector] <- ~r"(?<=\]).+(?=\{)" |> Regex.run(section),
@@ -189,7 +194,7 @@ defmodule Builder do
              # prefix <- build_prefix(selector, names) <> "-",
              theme <- parse_theme_name.(selector, section),
              state <- parse_state_name.(selector, section) do
-          String.split(section, ~r"\s*(\}|;|\n)\s*", trim: true)
+          String.split(section, ~r"\s*(\}|;|\{)\s*", trim: true)
           |> Enum.reduce(acc, fn line, acc ->
             with false <- line =~ "{",
                  [key, val] <-
