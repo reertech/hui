@@ -204,12 +204,11 @@ defmodule Builder do
          css <- String.replace(css, ~r"\s*\/\*\*\/\s*", "\n"),
          sections <- css |> String.split(~r"\s*}\s*", trim: true) do
       Enum.reduce(sections, %{}, fn section, acc ->
-        with [selector] <- parse_selector.(section |> IO.inspect()) |> IO.inspect(),
+        with [selector] <- parse_selector.(section),
              # prefix <- build_prefix(selector, names) <> "-",
              theme <- parse_theme_name.(selector, section),
              state <- parse_state_name.(selector, section) do
           String.split(section, ~r"\s*(\{|;)\s*", trim: true)
-          # |> IO.inspect()
           |> Enum.reduce(acc, fn line, acc ->
             with false <- line =~ "data-hui",
                  [key, val] <-
