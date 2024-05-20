@@ -16,7 +16,7 @@ defmodule Builder do
     end
   end
 
-  def build_file(file_name) do
+  defp build_file(file_name) do
     with file_path <- Path.expand(file_name),
          {:ok, file} <- File.read(file_path),
          [_, ini] <- String.split(file, ~r"\<\!\-\-\s*theme\.ini"),
@@ -59,7 +59,9 @@ defmodule Builder do
 
   defp build_style(sections, names) do
     lines =
-      Enum.flat_map(sections, fn {_, selector, prefix, sections} ->
+      sections
+      |> Enum.uniq_by(&elem(&1, 1))
+      |> Enum.flat_map(fn {_, selector, prefix, sections} ->
         Enum.flat_map(sections, fn {section, rules} ->
           Enum.map(rules, fn {key, value} ->
             "  #{key}: var(#{prefix}-#{key}, #{value});"
