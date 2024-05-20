@@ -1,3 +1,4 @@
+import "./theme.css"
 import "./index.css"
 
 export { default as Root } from "./components/layout/Root.svelte"

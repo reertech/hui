@@ -1,0 +1,435 @@
+:root {
+  /* COLORS */
+
+  --hui-default-color-h: 0;
+  --hui-default-color-s: 0%;
+  --hui-default-color-l: 29%;
+  --hui-default-color: hsl(var(--hui-default-color-h), var(--hui-default-color-s), var(--hui-default-color-l));
+
+  --hui-default-color-minus1-h: var(--hui-default-color-h);
+  --hui-default-color-minus1-s: var(--hui-default-color-s);
+  --hui-default-color-minus1-l: calc(var(--hui-default-color-l) - 5%);
+  --hui-default-color-minus1: hsl(var(--hui-default-color-minus1-h), var(--hui-default-color-minus1-s), var(--hui-default-color-minus1-l));
+
+  --hui-default-color-minus2-h: var(--hui-default-color-h);
+  --hui-default-color-minus2-s: var(--hui-default-color-s);
+  --hui-default-color-minus2-l: calc(var(--hui-default-color-l) - 10%);
+  --hui-default-color-minus2: hsl(var(--hui-default-color-minus2-h), var(--hui-default-color-minus2-s), var(--hui-default-color-minus2-l));
+
+  --hui-default-color-plus1-h: var(--hui-default-color-h);
+  --hui-default-color-plus1-s: var(--hui-default-color-s);
+  --hui-default-color-plus1-l: calc(var(--hui-default-color-l) + 10%);
+  --hui-default-color-plus1: hsl(var(--hui-default-color-plus1-h), var(--hui-default-color-plus1-s), var(--hui-default-color-plus1-l));
+
+  --hui-default-color-plus2-h: var(--hui-default-color-h);
+  --hui-default-color-plus2-s: var(--hui-default-color-s);
+  --hui-default-color-plus2-l: calc(var(--hui-default-color-l) + 25%);
+  --hui-default-color-plus2: hsl(var(--hui-default-color-plus2-h), var(--hui-default-color-plus2-s), var(--hui-default-color-plus2-l));
+
+  --hui-default-color-plus3-h: var(--hui-default-color-h);
+  --hui-default-color-plus3-s: var(--hui-default-color-s);
+  --hui-default-color-plus3-l: calc(var(--hui-default-color-l) + 38%);
+  --hui-default-color-plus3: hsl(var(--hui-default-color-plus3-h), var(--hui-default-color-plus3-s), var(--hui-default-color-plus3-l));
+
+  --hui-unua-color-h: var(--hui-default-color-h);
+  --hui-unua-color-s: var(--hui-default-color-s);
+  --hui-unua-color-l: 90%;
+  --hui-unua-color: hsl(var(--hui-unua-color-h), var(--hui-unua-color-s), var(--hui-unua-color-l));
+
+  --hui-unua-color-minus1-h: var(--hui-unua-color-h);
+  --hui-unua-color-minus1-s: var(--hui-unua-color-s);
+  --hui-unua-color-minus1-l: calc(var(--hui-unua-color-l) - 5%);
+  --hui-unua-color-minus1: hsl(var(--hui-unua-color-minus1-h), var(--hui-unua-color-minus1-s), var(--hui-unua-color-minus1-l));
+
+  --hui-unua-color-minus2-h: var(--hui-unua-color-h);
+  --hui-unua-color-minus2-s: var(--hui-unua-color-s);
+  --hui-unua-color-minus2-l: calc(var(--hui-unua-color-l) - 15%);
+  --hui-unua-color-minus2: hsl(var(--hui-unua-color-minus2-h), var(--hui-unua-color-minus2-s), var(--hui-unua-color-minus2-l));
+
+  --hui-unua-color-plus1-h: var(--hui-unua-color-h);
+  --hui-unua-color-plus1-s: var(--hui-unua-color-s);
+  --hui-unua-color-plus1-l: calc(var(--hui-unua-color-l) + 5%);
+  --hui-unua-color-plus1: hsl(var(--hui-unua-color-plus1-h), var(--hui-unua-color-plus1-s), var(--hui-unua-color-plus1-l));
+
+  --hui-unua-color-plus2-h: var(--hui-unua-color-h);
+  --hui-unua-color-plus2-s: var(--hui-unua-color-s);
+  --hui-unua-color-plus2-l: calc(var(--hui-unua-color-l) + 10%);
+  --hui-unua-color-plus2: hsl(var(--hui-unua-color-plus2-h), var(--hui-unua-color-plus2-s), var(--hui-unua-color-plus2-l));
+
+  --hui-default-color-bg: var(--hui-unua-color-plus2);
+  --hui-default-color-text: var(--hui-default-color);
+  --hui-default-color-border-first: var(--hui-unua-color-minus2);
+  --hui-default-color-border-second: var(--hui-default-color-plus3);
+  --hui-default-color-border-third: var(--hui-unua-color-plus2);
+  --hui-default-color-border: var(--hui-default-color-border-second);
+
+  /* GRADIENTS */
+  --hui-default-gradient-0: radial-gradient(transparent, #00000004);
+  --hui-default-gradient-1: radial-gradient(transparent, #00000017);
+  --hui-default-gradient-2: radial-gradient(transparent, #00000020);
+  --hui-default-gradient-3: radial-gradient(#00000006, #00000010);
+
+  /* TRANSITIONS */
+  --hui-default-transition-1: all 0.42s ease-out allow-discrete;
+
+  /* SIZES */
+  --hui-default-size: clamp(12px, 1rem, 17px);
+
+  --hui-default-size-0: 0;
+  --hui-default-size-1: var(--hui-default-size);
+  --hui-default-size-2: calc(var(--hui-default-size-1) +  4px);
+  --hui-default-size-3: calc(var(--hui-default-size-2) +  4px);
+  --hui-default-size-4: calc(var(--hui-default-size-3) +  4px);
+  --hui-default-size-5: calc(var(--hui-default-size-4) +  4px);
+  --hui-default-size-6: calc(var(--hui-default-size-5) +  8px);
+  --hui-default-size-7: calc(var(--hui-default-size-6) +  8px);
+  --hui-default-size-8: calc(var(--hui-default-size-7) + 16px);
+
+  /* SPACES */
+  --hui-default-spacer: calc(var(--hui-default-size) / 1.5);
+
+  --hui-default-spacer-0: 0;
+  --hui-default-spacer-1: calc(0.0625 * var(--hui-default-spacer));
+  --hui-default-spacer-2: calc(0.18 * var(--hui-default-spacer));
+  --hui-default-spacer-3: calc(0.25 * var(--hui-default-spacer));
+  --hui-default-spacer-4: calc(0.33 * var(--hui-default-spacer));
+  --hui-default-spacer-5: calc(0.66 * var(--hui-default-spacer));
+  --hui-default-spacer-6: calc(0.99 * var(--hui-default-spacer));
+  --hui-default-spacer-7: calc(1.33 * var(--hui-default-spacer));
+  --hui-default-spacer-8: calc(1.66 * var(--hui-default-spacer));
+  --hui-default-spacer-9: calc(1.99 * var(--hui-default-spacer));
+  --hui-default-spacer-10: calc(2.33 * var(--hui-default-spacer));
+  --hui-default-spacer-11: calc(2.66 * var(--hui-default-spacer));
+  --hui-default-spacer-12: calc(5.55 * var(--hui-default-spacer));
+
+  --hui-default-border-width: var(--hui-default-spacer-2);
+  --hui-default-border-style: solid;
+  --hui-default-border-color: var(--hui-default-color-border);
+
+  --hui-default-border-radius-0: 0;
+  --hui-default-border-radius-1: var(--hui-default-spacer-2);
+  --hui-default-border-radius-2: var(--hui-default-spacer-4);
+  --hui-default-border-radius-3: var(--hui-default-spacer-5);
+  --hui-default-border-radius-4: var(--hui-default-spacer-7);
+  --hui-default-border-radius-5: var(--hui-default-spacer-11);
+  --hui-default-border-radius: var(--hui-default-border-radius-3);
+
+  --hui-default-box-shadow-inverse-1-x: 0;
+  --hui-default-box-shadow-inverse-1-y: 0;
+  --hui-default-box-shadow-inverse-1-blur: var(--hui-default-spacer-4);
+  --hui-default-box-shadow-inverse-1-spread: var(--hui-default-spacer-0);
+  --hui-default-box-shadow-inverse-1-color: var(--hui-default-color-plus3);
+  --hui-default-box-shadow-inverse-1: inset var(--hui-default-box-shadow-inverse-1-x) var(--hui-default-box-shadow-inverse-1-y) var(--hui-default-box-shadow-inverse-1-blur) var(--hui-default-box-shadow-inverse-1-spread) var(--hui-default-box-shadow-inverse-1-color);
+
+  --hui-default-box-shadow-0-x: 0;
+  --hui-default-box-shadow-0-y: 0;
+  --hui-default-box-shadow-0-blur: 0;
+  --hui-default-box-shadow-0-spread: 0;
+  --hui-default-box-shadow-0-color: none;
+  --hui-default-box-shadow-0: var(--hui-default-box-shadow-0-x) var(--hui-default-box-shadow-0-y) var(--hui-default-box-shadow-0-blur) var(--hui-default-box-shadow-0-spread) var(--hui-default-box-shadow-0-color);
+
+  --hui-default-box-shadow-1-x: 0;
+  --hui-default-box-shadow-1-y: 0;
+  --hui-default-box-shadow-1-blur: var(--hui-default-spacer-3);
+  --hui-default-box-shadow-1-spread: var(--hui-default-spacer-0);
+  --hui-default-box-shadow-1-color: var(--hui-default-color-plus2);
+  --hui-default-box-shadow-1: var(--hui-default-box-shadow-1-x) var(--hui-default-box-shadow-1-y) var(--hui-default-box-shadow-1-blur) var(--hui-default-box-shadow-1-spread) var(--hui-default-box-shadow-1-color);
+
+  --hui-default-box-shadow-2-x: 0;
+  --hui-default-box-shadow-2-y: 0;
+  --hui-default-box-shadow-2-blur: var(--hui-default-spacer-4);
+  --hui-default-box-shadow-2-spread: var(--hui-default-spacer-1);
+  --hui-default-box-shadow-2-color: var(--hui-default-color-plus2);
+  --hui-default-box-shadow-2: var(--hui-default-box-shadow-2-x) var(--hui-default-box-shadow-2-y) var(--hui-default-box-shadow-2-blur) var(--hui-default-box-shadow-2-spread) var(--hui-default-box-shadow-2-color);
+
+  --hui-default-weight-bold: 600;
+  --hui-default-weight-semibold: 500;
+  --hui-default-weight-normal: 400;
+  --hui-default-weight-light: 300;
+
+  --hui-default-line-height-minus2: 1;
+  --hui-default-line-height-minus1: 1.25;
+  --hui-default-line-height: 1.5;
+
+  --hui-default-color: var(--hui-default-color-text);
+  --hui-default-background-color: var(--hui-default-color-bg);
+  --hui-default-background-image: var(--hui-default-gradient-3);
+
+  --hui-default-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+/*
+
+  --hui-font-size-small: 13px;
+  --hui-body-font-size: 16px;
+  --hui-body-line-height: var(--hui-lh-default);
+
+  --hui-body-color: var(--hui-default-color-text);
+
+  --hui-layout-font-size: var(--hui-body-font-size);
+  --hui-layout-font-weight: var(--hui-font-weight-normal);
+
+  --hui-layout-color: var(--hui-default-color-text);
+  --hui-layout-background-color: var(--hui-default-color-bg);
+  --hui-layout-background-image: var(--hui-default-gradient-3);
+
+  --hui-layout-border-top-color: var(--hui-default-border-color);
+  --hui-layout-border-right-color: var(--hui-default-border-color);
+  --hui-layout-border-bottom-color: var(--hui-default-border-color);
+  --hui-layout-border-left-color: var(--hui-default-border-color);
+
+  --hui-layout-border-top-style: var(--hui-default-border-style);
+  --hui-layout-border-right-style: var(--hui-default-border-style);
+  --hui-layout-border-bottom-style: var(--hui-default-border-style);
+  --hui-layout-border-left-style: var(--hui-default-border-style);
+
+  --hui-layout-border-top-width: var(--hui-default-border-width);
+  --hui-layout-border-right-width: var(--hui-default-border-width);
+  --hui-layout-border-bottom-width: var(--hui-default-border-width);
+  --hui-layout-border-left-width: var(--hui-default-border-width);
+
+  --hui-layout-border-top-radius: var(--hui-default-border-radius-2);
+  --hui-layout-border-right-radius: var(--hui-default-border-radius-2);
+  --hui-layout-border-bottom-radius: var(--hui-default-border-radius-2);
+  --hui-layout-border-left-radius: var(--hui-default-border-radius-2);
+
+  --hui-layout-box-shadow: var(--hui-default-box-shadow-2);
+
+  --hui-layout-transition: var(--hui-default-transition-1);
+
+  --hui-layout-gap: var(--hui-default-spacer-4);
+
+  --hui-layout-margin-top: 0;
+  --hui-layout-margin-right: 0;
+  --hui-layout-margin-bottom: 0;
+  --hui-layout-margin-left: 0;
+
+  --hui-layout-padding-top: var(--hui-default-spacer-0);
+  --hui-layout-padding-right: var(--hui-default-spacer-0);
+  --hui-layout-padding-bottom: var(--hui-default-spacer-0);
+  --hui-layout-padding-left: var(--hui-default-spacer-0);
+
+  --hui-layout-root-top: 0;
+  --hui-layout-root-right: 0;
+  --hui-layout-root-bottom: 0;
+  --hui-layout-root-left: 0;
+  --hui-layout-root-padding-top: 0;
+  --hui-layout-root-padding-right: 0;
+  --hui-layout-root-padding-bottom: 0;
+  --hui-layout-root-padding-left: 0;
+
+  --hui-layout-main-padding-top: 0;
+  --hui-layout-main-padding-right: 0;
+  --hui-layout-main-padding-bottom: 0;
+  --hui-layout-main-padding-left: 0;
+  --hui-layout-main-margin-top: 0;
+  --hui-layout-main-margin-right: 0;
+  --hui-layout-main-margin-bottom: 0;
+  --hui-layout-main-margin-left: 0;
+
+  --hui-layout-header-gap: var(--hui-layout-gap);
+
+  --hui-layout-header-height: calc(var(--hui-default-size) * 5);
+  --hui-layout-header-line-height: var(--hui-layout-header-height);
+  --hui-layout-header-min-height: var(--hui-layout-header-height);
+  --hui-layout-header-max-height: var(--hui-layout-header-height);
+
+  --hui-layout-header-width: clamp(800px, 95vw, 1900px);
+  --hui-layout-header-min-width: var(--hui-layout-header-width);
+  --hui-layout-header-max-width: var(--hui-layout-header-width);
+
+  --hui-layout-header-font-size: var(--hui-layout-font-size);
+  --hui-layout-header-font-weight: var(--hui-layout-font-weight);
+
+  --hui-layout-header-color: var(--hui-layout-color);
+  --hui-layout-header-background-color: var(--hui-layout-background-color);
+  --hui-layout-header-background-image: var(--hui-layout-background-image);
+
+  --hui-layout-header-border-top-color: var(--hui-layout-border-top-color);
+  --hui-layout-header-border-right-color: var(--hui-layout-border-right-color);
+  --hui-layout-header-border-bottom-color: var(--hui-layout-border-bottom-color);
+  --hui-layout-header-border-left-color: var(--hui-layout-border-left-color);
+
+  --hui-layout-header-border-top-style: var(--hui-layout-border-top-style);
+  --hui-layout-header-border-right-style: var(--hui-layout-border-right-style);
+  --hui-layout-header-border-bottom-style: var(--hui-layout-border-bottom-style);
+  --hui-layout-header-border-left-style: var(--hui-layout-border-left-style);
+
+  --hui-layout-header-border-top-width: var(--hui-layout-border-top-width);
+  --hui-layout-header-border-right-width: var(--hui-layout-border-right-width);
+  --hui-layout-header-border-bottom-width: var(--hui-layout-border-bottom-width);
+  --hui-layout-header-border-left-width: var(--hui-layout-border-left-width);
+
+  --hui-layout-header-border-top-radius: var(--hui-layout-border-top-radius);
+  --hui-layout-header-border-right-radius: var(--hui-layout-border-right-radius);
+  --hui-layout-header-border-bottom-radius: var(--hui-layout-border-bottom-radius);
+  --hui-layout-header-border-left-radius: var(--hui-layout-border-left-radius);
+
+  --hui-layout-header-box-shadow: var(--hui-layout-box-shadow);
+
+  --hui-layout-header-margin-top: var(--hui-layout-margin-top);
+  --hui-layout-header-margin-right: var(--hui-layout-margin-right);
+  --hui-layout-header-margin-bottom: var(--hui-layout-margin-bottom);
+  --hui-layout-header-margin-left: var(--hui-layout-margin-left);
+
+  --hui-layout-header-padding-top: var(--hui-layout-padding-top);
+  --hui-layout-header-padding-right: var(--hui-layout-padding-right);
+  --hui-layout-header-padding-bottom: var(--hui-layout-padding-bottom);
+  --hui-layout-header-padding-left: var(--hui-layout-padding-left);
+
+  --hui-layout-nav-margin-top: 0;
+  --hui-layout-nav-margin-right: 0;
+  --hui-layout-nav-margin-bottom: 0;
+  --hui-layout-nav-margin-left: 0;
+  --hui-layout-nav-padding-top: 0;
+  --hui-layout-nav-padding-right: 0;
+  --hui-layout-nav-padding-bottom: 0;
+  --hui-layout-nav-padding-left: 0;
+
+  --hui-layout-title-font-weight: var(--hui-font-weight-normal);
+
+  --hui-typography-h1-font-weight: var(--hui-h1-font-weight);
+  --hui-typography-h1-font-size: var(--hui-h1-font-size);
+  --hui-typography-h1-margin-top: 0;
+  --hui-typography-h1-margin-right: 0;
+  --hui-typography-h1-margin-bottom: 0;
+  --hui-typography-h1-margin-left: 0;
+  --hui-typography-h1-padding-top: 0;
+  --hui-typography-h1-padding-right: 0;
+  --hui-typography-h1-padding-bottom: 0;
+  --hui-typography-h1-padding-left: 0;
+
+  --hui-typography-strong-font-weight: var(--hui-font-weight-semibold);
+
+  --hui-control-font-size: var(--hui-body-font-size);
+  --hui-control-font-weight: var(--hui-font-weight-semibold);
+
+  --hui-control-color: var(--hui-default-color-text);
+  --hui-control-background-color: var(--hui-default-color-bg);
+  --hui-control-background-image: var(--hui-default-gradient-1);
+
+  --hui-control-border-top-color: var(--hui-default-border-color);
+  --hui-control-border-right-color: var(--hui-default-border-color);
+  --hui-control-border-bottom-color: var(--hui-default-border-color);
+  --hui-control-border-left-color: var(--hui-default-border-color);
+
+  --hui-control-border-top-style: var(--hui-default-border-style);
+  --hui-control-border-right-style: var(--hui-default-border-style);
+  --hui-control-border-bottom-style: var(--hui-default-border-style);
+  --hui-control-border-left-style: var(--hui-default-border-style);
+
+  --hui-control-border-top-width: var(--hui-default-border-width);
+  --hui-control-border-right-width: var(--hui-default-border-width);
+  --hui-control-border-bottom-width: var(--hui-default-border-width);
+  --hui-control-border-left-width: var(--hui-default-border-width);
+
+  --hui-control-border-top-radius: var(--hui-default-border-radius);
+  --hui-control-border-right-radius: var(--hui-default-border-radius);
+  --hui-control-border-bottom-radius: var(--hui-default-border-radius);
+  --hui-control-border-left-radius: var(--hui-default-border-radius);
+
+  --hui-control-box-shadow: var(--hui-default-box-shadow-1);
+
+  --hui-control-transition: var(--hui-default-transition-1);
+
+  --hui-control-gap: var(--hui-default-spacer-5);
+
+  --hui-control-margin-top: 0;
+  --hui-control-margin-right: 0;
+  --hui-control-margin-bottom: 0;
+  --hui-control-margin-left: 0;
+
+  --hui-control-padding-top: var(--hui-default-spacer-5);
+  --hui-control-padding-right: var(--hui-default-spacer-6);
+  --hui-control-padding-bottom: var(--hui-default-spacer-5);
+  --hui-control-padding-left: var(--hui-default-spacer-6);
+
+  --hui-control-button-font-size: var(--hui-control-font-size);
+  --hui-control-button-font-weight: var(--hui-control-font-weight);
+
+  --hui-control-button-color: var(--hui-control-color);
+  --hui-control-button-background-color: var(--hui-control-background-color);
+  --hui-control-button-background-image: var(--hui-control-background-image);
+
+  --hui-control-button-border-top-color: var(--hui-control-border-top-color);
+  --hui-control-button-border-right-color: var(--hui-control-border-right-color);
+  --hui-control-button-border-bottom-color: var(--hui-control-border-bottom-color);
+  --hui-control-button-border-left-color: var(--hui-control-border-left-color);
+
+  --hui-control-button-border-top-style: var(--hui-control-border-top-style);
+  --hui-control-button-border-right-style: var(--hui-control-border-right-style);
+  --hui-control-button-border-bottom-style: var(--hui-control-border-bottom-style);
+  --hui-control-button-border-left-style: var(--hui-control-border-left-style);
+
+  --hui-control-button-border-top-width: var(--hui-control-border-top-width);
+  --hui-control-button-border-right-width: var(--hui-control-border-right-width);
+  --hui-control-button-border-bottom-width: var(--hui-control-border-bottom-width);
+  --hui-control-button-border-left-width: var(--hui-control-border-left-width);
+
+  --hui-control-button-border-top-radius: var(--hui-control-border-top-radius);
+  --hui-control-button-border-right-radius: var(--hui-control-border-right-radius);
+  --hui-control-button-border-bottom-radius: var(--hui-control-border-bottom-radius);
+  --hui-control-button-border-left-radius: var(--hui-control-border-left-radius);
+
+  --hui-control-button-box-shadow: var(--hui-control-box-shadow);
+
+  --hui-control-button-margin-top: var(--hui-control-margin-top);
+  --hui-control-button-margin-right: var(--hui-control-margin-right);
+  --hui-control-button-margin-bottom: var(--hui-control-margin-bottom);
+  --hui-control-button-margin-left: var(--hui-control-margin-left);
+
+  --hui-control-button-padding-top: var(--hui-control-padding-top);
+  --hui-control-button-padding-right: var(--hui-control-padding-right);
+  --hui-control-button-padding-bottom: var(--hui-control-padding-bottom);
+  --hui-control-button-padding-left: var(--hui-control-padding-left);
+
+  --hui-control-button-hover-box-shadow: var(--hui-default-box-shadow-0);
+  --hui-control-button-hover-background-image: var(--hui-default-gradient-2);
+
+  --hui-control-button-active-box-shadow: var(--hui-default-box-shadow-inverse-1);
+  --hui-control-button-active-background-image: var(--hui-default-gradient-0);
+
+  --hui-control-button-focus-border-color: var(--hui-default-color-border-third);
+
+  --hui-control-input-grid-template-columns: left 25% input 2fr right 25%;
+
+  --hui-control-input-margin-top: var(--hui-control-margin-top);
+  --hui-control-input-margin-right: var(--hui-control-margin-right);
+  --hui-control-input-margin-bottom: var(--hui-control-margin-bottom);
+  --hui-control-input-margin-left: var(--hui-control-margin-left);
+
+  --hui-control-input-padding-top: var(--hui-control-padding-top);
+  --hui-control-input-padding-right: var(--hui-control-padding-right);
+  --hui-control-input-padding-bottom: var(--hui-control-padding-bottom);
+  --hui-control-input-padding-left: var(--hui-control-padding-left);
+
+  --hui-control-input-border-top-color: var(--hui-control-border-top-color);
+  --hui-control-input-border-right-color: var(--hui-control-border-right-color);
+  --hui-control-input-border-bottom-color: var(--hui-control-border-bottom-color);
+  --hui-control-input-border-left-color: var(--hui-control-border-left-color);
+
+  --hui-control-input-border-top-style: var(--hui-default-border-top-style);
+  --hui-control-input-border-right-style: var(--hui-default-border-right-style);
+  --hui-control-input-border-bottom-style: var(--hui-default-border-bottom-style);
+  --hui-control-input-border-left-style: var(--hui-default-border-left-style);
+
+  --hui-control-input-border-top-style: var(--hui-control-border-top-style);
+  --hui-control-input-border-right-style: var(--hui-control-border-right-style);
+  --hui-control-input-border-bottom-style: var(--hui-control-border-bottom-style);
+  --hui-control-input-border-left-style: var(--hui-control-border-left-style);
+
+  --hui-control-input-border-top-width: var(--hui-control-border-top-width);
+  --hui-control-input-border-right-width: var(--hui-control-border-right-width);
+  --hui-control-input-border-bottom-width: var(--hui-control-border-bottom-width);
+  --hui-control-input-border-left-width: var(--hui-control-border-left-width);
+
+  --hui-control-input-border-top-radius: var(--hui-control-border-top-radius);
+  --hui-control-input-border-right-radius: var(--hui-control-border-right-radius);
+  --hui-control-input-border-bottom-radius: var(--hui-control-border-bottom-radius);
+  --hui-control-input-border-left-radius: var(--hui-control-border-left-radius);
+
+  --hui-control-bar-gap: var(--hui-control-gap);
+  --hui-control-bar-template-areas: "default";
+  --hui-control-bar-auto-columns: minmax(var(--hui-default-spacer-5), 1fr);
+  --hui-control-bar-align-items: center;
+}
+*/

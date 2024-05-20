@@ -1,16 +1,10 @@
 [data-hui=Section] > section {
 }
 [data-hui=Section][data-hui-theme=unua] > section {
-  /* LAYOUT-DISPLAY */
-  --hui-lqzmev-display: var(--hui-display-default);
 }
 [data-hui=Section][data-hui-theme=dua] > section {
-  /* LAYOUT-DISPLAY */
-  --hui-lqzmev-display: var(--hui-display-default);
 }
 [data-hui=Section][data-hui-theme=tria] > section {
-  /* LAYOUT-DISPLAY */
-  --hui-lqzmev-display: var(--hui-display-default);
 }
 [data-hui=Section] > section {
   /* LAYOUT-DISPLAY */

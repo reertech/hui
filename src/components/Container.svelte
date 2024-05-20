@@ -16,11 +16,12 @@
   this={tag}
   data-hui-data
   data-hui={hui || null}
+  data-hui-theme={theme || null}
   data-hui-active={active || null}
   data-hui-disabled={disabled || null}
   data-hui-readonly={readonly || null}
-  data-hui-busy={busy || null}
-  data-hui-theme={theme || null}
+  data-hui-valid={valid || null}
+  data-hui-invalid={invalid || null}
   class={classes || null}
   hidden={hidden || null}
 >
