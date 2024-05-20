@@ -3,10 +3,10 @@
   --hui-pfttea-height: 100%;
   --hui-pfttea-width: 100%;
   /* LAYOUT-PADDING */
-  --hui-pfttea-padding-top: var(--hui-vars-spacer-5);
-  --hui-pfttea-padding-right: var(--hui-vars-spacer-7);
-  --hui-pfttea-padding-bottom: var(--hui-vars-spacer-5);
-  --hui-pfttea-padding-left: var(--hui-vars-spacer-7);
+  --hui-pfttea-padding-top: var(--hui-default-spacer-5);
+  --hui-pfttea-padding-right: var(--hui-default-spacer-7);
+  --hui-pfttea-padding-bottom: var(--hui-default-spacer-5);
+  --hui-pfttea-padding-left: var(--hui-default-spacer-7);
   /* LAYOUT-OVERFLOW */
   --hui-pfttea-overflow-x: hidden;
   --hui-pfttea-overflow-y: hidden;
@@ -16,18 +16,18 @@
   --hui-pfttea-text-wrap: nowrap;
   /* APPERANCE */
   --hui-pfttea-background-color: var(--hui-default-background-color);
-  --hui-pfttea-border-bottom-color: var(--hui-vars-border-color);
-  --hui-pfttea-border-bottom-style: var(--hui-vars-border-style);
-  --hui-pfttea-border-bottom-width: var(--hui-vars-border-width);
-  --hui-pfttea-border-left-color: var(--hui-vars-border-color);
-  --hui-pfttea-border-left-style: var(--hui-vars-border-style);
-  --hui-pfttea-border-left-width: var(--hui-vars-border-width);
-  --hui-pfttea-border-right-color: var(--hui-vars-border-color);
-  --hui-pfttea-border-right-style: var(--hui-vars-border-style);
-  --hui-pfttea-border-right-width: var(--hui-vars-border-width);
-  --hui-pfttea-border-top-color: var(--hui-vars-border-color);
-  --hui-pfttea-border-top-style: var(--hui-vars-border-style);
-  --hui-pfttea-border-top-width: var(--hui-vars-border-width);
+  --hui-pfttea-border-bottom-color: var(--hui-default-border-color);
+  --hui-pfttea-border-bottom-style: var(--hui-default-border-style);
+  --hui-pfttea-border-bottom-width: var(--hui-default-border-width);
+  --hui-pfttea-border-left-color: var(--hui-default-border-color);
+  --hui-pfttea-border-left-style: var(--hui-default-border-style);
+  --hui-pfttea-border-left-width: var(--hui-default-border-width);
+  --hui-pfttea-border-right-color: var(--hui-default-border-color);
+  --hui-pfttea-border-right-style: var(--hui-default-border-style);
+  --hui-pfttea-border-right-width: var(--hui-default-border-width);
+  --hui-pfttea-border-top-color: var(--hui-default-border-color);
+  --hui-pfttea-border-top-style: var(--hui-default-border-style);
+  --hui-pfttea-border-top-width: var(--hui-default-border-width);
 }
 [data-hui=Title][data-hui-theme=unua] > title {
 }

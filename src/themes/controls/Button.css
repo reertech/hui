@@ -7,6 +7,23 @@
   /* LAYOUT-OVERFLOW */
   --hui-lwajtf-overflow-x: hidden;
   --hui-lwajtf-overflow-y: hidden;
+  /* TEXT */
+  --hui-lwajtf-font-size: var(--hui-default-font-size);
+  --hui-lwajtf-font-weight: var(--hui-default-font-weight);
+  /* APPERANCE */
+  --hui-lwajtf-color: var(--hui-default-color);
+  --hui-lwajtf-border-bottom-color: var(--hui-default-border-color);
+  --hui-lwajtf-border-bottom-style: var(--hui-default-border-style);
+  --hui-lwajtf-border-bottom-width: var(--hui-default-border-width);
+  --hui-lwajtf-border-left-color: var(--hui-default-border-color);
+  --hui-lwajtf-border-left-style: var(--hui-default-border-style);
+  --hui-lwajtf-border-left-width: var(--hui-default-border-width);
+  --hui-lwajtf-border-right-color: var(--hui-default-border-color);
+  --hui-lwajtf-border-right-style: var(--hui-default-border-style);
+  --hui-lwajtf-border-right-width: var(--hui-default-border-width);
+  --hui-lwajtf-border-top-color: var(--hui-default-border-color);
+  --hui-lwajtf-border-top-style: var(--hui-default-border-style);
+  --hui-lwajtf-border-top-width: var(--hui-default-border-width);
 }
 [data-hui=Button][data-hui-theme=unua] > button {
 }

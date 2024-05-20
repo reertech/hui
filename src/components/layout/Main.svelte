@@ -6,7 +6,8 @@
   export let readonly = null
   export let disabled = null
   export let hidden = null
-  export let busy = null
+  export let valid = null
+  export let invalid = null
   export let theme = null
 
   let classes = null
@@ -19,7 +20,8 @@
   {readonly}
   {disabled}
   {hidden}
-  {busy}
+  {valid}
+  {invalid}
   {theme}
   {classes}
 >

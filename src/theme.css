@@ -1,6 +1,5 @@
 :root {
   /* COLORS */
-
   --hui-default-color-h: 0;
   --hui-default-color-s: 0%;
   --hui-default-color-l: 29%;
@@ -58,10 +57,9 @@
 
   --hui-default-color-bg: var(--hui-unua-color-plus2);
   --hui-default-color-text: var(--hui-default-color);
-  --hui-default-color-border-first: var(--hui-unua-color-minus2);
-  --hui-default-color-border-second: var(--hui-default-color-plus3);
-  --hui-default-color-border-third: var(--hui-unua-color-plus2);
-  --hui-default-color-border: var(--hui-default-color-border-second);
+  --hui-unua-color-border: var(--hui-unua-color-minus2);
+  --hui-dua-color-border-second: var(--hui-default-color-plus3);
+  --hui-tria-color-border-third: var(--hui-unua-color-plus2);
 
   /* GRADIENTS */
   --hui-default-gradient-0: radial-gradient(transparent, #00000004);
@@ -102,6 +100,7 @@
   --hui-default-spacer-11: calc(2.66 * var(--hui-default-spacer));
   --hui-default-spacer-12: calc(5.55 * var(--hui-default-spacer));
 
+  /* BORDERS */
   --hui-default-border-width: var(--hui-default-spacer-2);
   --hui-default-border-style: solid;
   --hui-default-border-color: var(--hui-default-color-border);
@@ -114,47 +113,52 @@
   --hui-default-border-radius-5: var(--hui-default-spacer-11);
   --hui-default-border-radius: var(--hui-default-border-radius-3);
 
-  --hui-default-box-shadow-inverse-1-x: 0;
-  --hui-default-box-shadow-inverse-1-y: 0;
-  --hui-default-box-shadow-inverse-1-blur: var(--hui-default-spacer-4);
-  --hui-default-box-shadow-inverse-1-spread: var(--hui-default-spacer-0);
-  --hui-default-box-shadow-inverse-1-color: var(--hui-default-color-plus3);
-  --hui-default-box-shadow-inverse-1: inset var(--hui-default-box-shadow-inverse-1-x) var(--hui-default-box-shadow-inverse-1-y) var(--hui-default-box-shadow-inverse-1-blur) var(--hui-default-box-shadow-inverse-1-spread) var(--hui-default-box-shadow-inverse-1-color);
+  /* BOX-SHADOWS */
+  --hui-tria-box-shadow-x: 0;
+  --hui-tria-box-shadow-y: 0;
+  --hui-tria-box-shadow-blur: var(--hui-default-spacer-4);
+  --hui-tria-box-shadow-spread: var(--hui-default-spacer-0);
+  --hui-tria-box-shadow-color: var(--hui-default-color-plus3);
+  --hui-tria-box-shadow: inset var(--hui-tria-box-shadow-x) var(--hui-tria-box-shadow-y) var(--hui-tria-box-shadow-blur) var(--hui-tria-box-shadow-spread) var(--hui-tria-box-shadow-color);
 
-  --hui-default-box-shadow-0-x: 0;
-  --hui-default-box-shadow-0-y: 0;
-  --hui-default-box-shadow-0-blur: 0;
-  --hui-default-box-shadow-0-spread: 0;
-  --hui-default-box-shadow-0-color: none;
-  --hui-default-box-shadow-0: var(--hui-default-box-shadow-0-x) var(--hui-default-box-shadow-0-y) var(--hui-default-box-shadow-0-blur) var(--hui-default-box-shadow-0-spread) var(--hui-default-box-shadow-0-color);
+  --hui-dua-box-shadow-x: 0;
+  --hui-dua-box-shadow-y: 0;
+  --hui-dua-box-shadow-blur: 0;
+  --hui-dua-box-shadow-spread: 0;
+  --hui-dua-box-shadow-color: none;
+  --hui-dua-box-shadow: var(--hui-dua-box-shadow-x) var(--hui-dua-box-shadow-y) var(--hui-dua-box-shadow-blur) var(--hui-dua-box-shadow-spread) var(--hui-dua-box-shadow-color);
 
-  --hui-default-box-shadow-1-x: 0;
-  --hui-default-box-shadow-1-y: 0;
-  --hui-default-box-shadow-1-blur: var(--hui-default-spacer-3);
-  --hui-default-box-shadow-1-spread: var(--hui-default-spacer-0);
-  --hui-default-box-shadow-1-color: var(--hui-default-color-plus2);
-  --hui-default-box-shadow-1: var(--hui-default-box-shadow-1-x) var(--hui-default-box-shadow-1-y) var(--hui-default-box-shadow-1-blur) var(--hui-default-box-shadow-1-spread) var(--hui-default-box-shadow-1-color);
+  --hui-default-box-shadow-x: 0;
+  --hui-default-box-shadow-y: 0;
+  --hui-default-box-shadow-blur: var(--hui-default-spacer-3);
+  --hui-default-box-shadow-spread: var(--hui-default-spacer-0);
+  --hui-default-box-shadow-color: var(--hui-default-color-plus2);
+  --hui-default-box-shadow: var(--hui-default-box-shadow-x) var(--hui-default-box-shadow-y) var(--hui-default-box-shadow-blur) var(--hui-default-box-shadow-spread) var(--hui-default-box-shadow-color);
 
-  --hui-default-box-shadow-2-x: 0;
-  --hui-default-box-shadow-2-y: 0;
-  --hui-default-box-shadow-2-blur: var(--hui-default-spacer-4);
-  --hui-default-box-shadow-2-spread: var(--hui-default-spacer-1);
-  --hui-default-box-shadow-2-color: var(--hui-default-color-plus2);
-  --hui-default-box-shadow-2: var(--hui-default-box-shadow-2-x) var(--hui-default-box-shadow-2-y) var(--hui-default-box-shadow-2-blur) var(--hui-default-box-shadow-2-spread) var(--hui-default-box-shadow-2-color);
+  --hui-unua-box-shadow-x: 0;
+  --hui-unua-box-shadow-y: 0;
+  --hui-unua-box-shadow-blur: var(--hui-default-spacer-4);
+  --hui-unua-box-shadow-spread: var(--hui-default-spacer-1);
+  --hui-unua-box-shadow-color: var(--hui-default-color-plus2);
+  --hui-unua-box-shadow: var(--hui-unua-box-shadow-x) var(--hui-unua-box-shadow-y) var(--hui-unua-box-shadow-blur) var(--hui-unua-box-shadow-spread) var(--hui-unua-box-shadow-color);
 
+  /* TEXT */
   --hui-default-weight-bold: 600;
   --hui-default-weight-semibold: 500;
   --hui-default-weight-normal: 400;
   --hui-default-weight-light: 300;
+  --hui-default-weight: var(--hui-default-weight-normal);
 
   --hui-default-line-height-minus2: 1;
   --hui-default-line-height-minus1: 1.25;
   --hui-default-line-height: 1.5;
+  --hui-default-line-height-plus1: 1.8;
+  --hui-default-line-height-plus2: 2;
 
   --hui-default-color: var(--hui-default-color-text);
   --hui-default-background-color: var(--hui-default-color-bg);
-  --hui-default-background-image: var(--hui-default-gradient-3);
 
+  --hui-default-font-size: var(--hui-default-color-text);
   --hui-default-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 }
 /*
@@ -192,7 +196,7 @@
   --hui-layout-border-bottom-radius: var(--hui-default-border-radius-2);
   --hui-layout-border-left-radius: var(--hui-default-border-radius-2);
 
-  --hui-layout-box-shadow: var(--hui-default-box-shadow-2);
+  --hui-layout-box-shadow: var(--hui-unua-box-shadow);
 
   --hui-layout-transition: var(--hui-default-transition-1);
 
@@ -327,7 +331,7 @@
   --hui-control-border-bottom-radius: var(--hui-default-border-radius);
   --hui-control-border-left-radius: var(--hui-default-border-radius);
 
-  --hui-control-box-shadow: var(--hui-default-box-shadow-1);
+  --hui-control-box-shadow: var(--hui-default-box-shadow);
 
   --hui-control-transition: var(--hui-default-transition-1);
 
@@ -385,7 +389,7 @@
   --hui-control-button-hover-box-shadow: var(--hui-default-box-shadow-0);
   --hui-control-button-hover-background-image: var(--hui-default-gradient-2);
 
-  --hui-control-button-active-box-shadow: var(--hui-default-box-shadow-inverse-1);
+  --hui-control-button-active-box-shadow: var(--hui-tria-box-shadow);
   --hui-control-button-active-background-image: var(--hui-default-gradient-0);
 
   --hui-control-button-focus-border-color: var(--hui-default-color-border-third);
