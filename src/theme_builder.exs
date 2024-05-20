@@ -35,11 +35,7 @@ defmodule Builder do
   defp parse_line(line, acc, names) do
     with [selector, tl] <- String.split(line, ~r"\s*=\s*", trim: true),
          sections <- String.split(tl, ~r"\s*,\s*", trim: true) do
-      selector =
-        selector
-        |> String.replace(~r"\s+", " ")
-        |> String.replace(~r"\s*,\s*", ",\n")
-        |> String.trim()
+      selector = clear_selector(selector)
 
       String.split(selector, ~r"\s*\|\s*", trim: true)
       |> Enum.reduce(acc, fn selector_part, acc ->
@@ -165,7 +161,7 @@ defmodule Builder do
   defp parse_theme(names) do
     parse_theme_name = fn selector, section ->
       with false <- selector == "default",
-           [theme] <- ~r"(?<=\[data\-hui\-theme\=).+(?=\])" |> Regex.run(section) do
+           [theme] <- ~r"(?<=\[data\-hui\-theme\=)[a-z]+(?=\])" |> Regex.run(section) do
         theme
       else
         _ -> "default"
@@ -174,11 +170,32 @@ defmodule Builder do
 
     parse_state_name = fn selector, section ->
       with false <- selector == "default",
-           [state] <- ~r"(?<=\[data\-hui\-).+(?=\])" |> Regex.run(section),
+           [state] <- ~r"(?<=\[data\-hui\-)[a-z]+(?=\])" |> Regex.run(section),
            true <- state in @states do
         state
       else
         _ -> "default"
+      end
+    end
+
+    parse_selector = fn section ->
+      case ~r"^\[data\-hui\=(.|\n)+(?=\{)" |> Regex.run(section) do
+        [selector | _] ->
+          selector
+          |> String.split(~r"\s*,\s*", trim: true)
+          |> Enum.map(fn part ->
+            part |> String.replace(~r"\s*(((\[data\-hui\=).+(\]))|\{)\s*", "")
+          end)
+          |> Enum.join(",")
+          |> clear_selector()
+          |> case do
+            "" -> "default"
+            selector -> selector
+          end
+          |> List.wrap()
+
+        _ ->
+          :error
       end
     end
 
@@ -187,16 +204,14 @@ defmodule Builder do
          css <- String.replace(css, ~r"\s*\/\*\*\/\s*", "\n"),
          sections <- css |> String.split(~r"\s*}\s*", trim: true) do
       Enum.reduce(sections, %{}, fn section, acc ->
-        with [selector] <- ~r"(?<=\]).+(?=\{)" |> Regex.run(section),
-             selector <- String.split(selector, "]") |> List.last(),
-             selector <- String.trim(selector),
-             selector <- if(selector == "", do: "default", else: selector),
+        with [selector] <- parse_selector.(section |> IO.inspect()) |> IO.inspect(),
              # prefix <- build_prefix(selector, names) <> "-",
              theme <- parse_theme_name.(selector, section),
              state <- parse_state_name.(selector, section) do
-          String.split(section, ~r"\s*(\}|;|\{)\s*", trim: true)
+          String.split(section, ~r"\s*(\{|;)\s*", trim: true)
+          # |> IO.inspect()
           |> Enum.reduce(acc, fn line, acc ->
-            with false <- line =~ "{",
+            with false <- line =~ "data-hui",
                  [key, val] <-
                    String.split(line, ~r"\s*:\s*", trim: true)
                    |> Enum.map(&String.trim/1) do
@@ -224,6 +239,13 @@ defmodule Builder do
     else
       _ -> %{}
     end
+  end
+
+  defp clear_selector(selector) do
+    selector
+    |> String.replace(~r"\s+", " ")
+    |> String.replace(~r"\s*,\s*", ",\n")
+    |> String.trim()
   end
 
   defp build_names(file_path) do
