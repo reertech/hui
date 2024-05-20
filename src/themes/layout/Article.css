@@ -1,48 +1,48 @@
 [data-hui=Article] > article {
 }
-[data-hui=Article][data-hui-theme=unua] > article {
-}
-[data-hui=Article][data-hui-theme=dua] > article {
-}
-[data-hui=Article][data-hui-theme=tria] > article {
-}
 [data-hui=Article][data-hui-active] > article {
-}
-[data-hui=Article][data-hui-theme=unua][data-hui-active] > article {
-}
-[data-hui=Article][data-hui-theme=dua][data-hui-active] > article {
-}
-[data-hui=Article][data-hui-theme=tria][data-hui-active] > article {
 }
 [data-hui=Article][data-hui-disabled] > article {
 }
-[data-hui=Article][data-hui-theme=unua][data-hui-disabled] > article {
-}
-[data-hui=Article][data-hui-theme=dua][data-hui-disabled] > article {
-}
-[data-hui=Article][data-hui-theme=tria][data-hui-disabled] > article {
-}
 [data-hui=Article][data-hui-readonly] > article {
-}
-[data-hui=Article][data-hui-theme=unua][data-hui-readonly] > article {
-}
-[data-hui=Article][data-hui-theme=dua][data-hui-readonly] > article {
-}
-[data-hui=Article][data-hui-theme=tria][data-hui-readonly] > article {
 }
 [data-hui=Article][data-hui-valid] > article {
 }
-[data-hui=Article][data-hui-theme=unua][data-hui-valid] > article {
-}
-[data-hui=Article][data-hui-theme=dua][data-hui-valid] > article {
-}
-[data-hui=Article][data-hui-theme=tria][data-hui-valid] > article {
-}
 [data-hui=Article][data-hui-invalid] > article {
+}
+[data-hui=Article][data-hui-theme=unua] > article {
+}
+[data-hui=Article][data-hui-theme=unua][data-hui-active] > article {
+}
+[data-hui=Article][data-hui-theme=unua][data-hui-disabled] > article {
+}
+[data-hui=Article][data-hui-theme=unua][data-hui-readonly] > article {
+}
+[data-hui=Article][data-hui-theme=unua][data-hui-valid] > article {
 }
 [data-hui=Article][data-hui-theme=unua][data-hui-invalid] > article {
 }
+[data-hui=Article][data-hui-theme=dua] > article {
+}
+[data-hui=Article][data-hui-theme=dua][data-hui-active] > article {
+}
+[data-hui=Article][data-hui-theme=dua][data-hui-disabled] > article {
+}
+[data-hui=Article][data-hui-theme=dua][data-hui-readonly] > article {
+}
+[data-hui=Article][data-hui-theme=dua][data-hui-valid] > article {
+}
 [data-hui=Article][data-hui-theme=dua][data-hui-invalid] > article {
+}
+[data-hui=Article][data-hui-theme=tria] > article {
+}
+[data-hui=Article][data-hui-theme=tria][data-hui-active] > article {
+}
+[data-hui=Article][data-hui-theme=tria][data-hui-disabled] > article {
+}
+[data-hui=Article][data-hui-theme=tria][data-hui-readonly] > article {
+}
+[data-hui=Article][data-hui-theme=tria][data-hui-valid] > article {
 }
 [data-hui=Article][data-hui-theme=tria][data-hui-invalid] > article {
 }

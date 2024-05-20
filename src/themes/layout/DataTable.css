@@ -48,42 +48,6 @@
   --hui-qftbbx-padding-bottom: var(--hui-default-spacer-0);
   --hui-qftbbx-padding-left: var(--hui-default-spacer-0);
 }
-[data-hui=DataTable][data-hui-theme=unua] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=unua] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=unua] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=unua] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=unua] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=unua] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=dua] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=dua] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=dua] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=dua] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=dua] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=dua] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=tria] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=tria] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=tria] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=tria] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=tria] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=tria] > data > table > thead > tr > th {
-}
 [data-hui=DataTable][data-hui-active] > data > table {
 }
 [data-hui=DataTable][data-hui-active] > data > table > tbody {
@@ -95,42 +59,6 @@
 [data-hui=DataTable][data-hui-active] > data > table > tbody > tr > td {
 }
 [data-hui=DataTable][data-hui-active] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table > thead > tr > th {
 }
 [data-hui=DataTable][data-hui-disabled] > data > table {
 }
@@ -144,42 +72,6 @@
 }
 [data-hui=DataTable][data-hui-disabled] > data > table > thead > tr > th {
 }
-[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table > thead > tr > th {
-}
 [data-hui=DataTable][data-hui-readonly] > data > table {
 }
 [data-hui=DataTable][data-hui-readonly] > data > table > tbody {
@@ -191,42 +83,6 @@
 [data-hui=DataTable][data-hui-readonly] > data > table > tbody > tr > td {
 }
 [data-hui=DataTable][data-hui-readonly] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table > thead > tr > th {
 }
 [data-hui=DataTable][data-hui-valid] > data > table {
 }
@@ -240,42 +96,6 @@
 }
 [data-hui=DataTable][data-hui-valid] > data > table > thead > tr > th {
 }
-[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table > thead > tr > th {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table > tbody {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table > thead {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table > * > tr {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table > tbody > tr > td {
-}
-[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table > thead > tr > th {
-}
 [data-hui=DataTable][data-hui-invalid] > data > table {
 }
 [data-hui=DataTable][data-hui-invalid] > data > table > tbody {
@@ -287,6 +107,66 @@
 [data-hui=DataTable][data-hui-invalid] > data > table > tbody > tr > td {
 }
 [data-hui=DataTable][data-hui-invalid] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=unua] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-active] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-disabled] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-readonly] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=unua][data-hui-valid] > data > table > thead > tr > th {
 }
 [data-hui=DataTable][data-hui-theme=unua][data-hui-invalid] > data > table {
 }
@@ -300,6 +180,66 @@
 }
 [data-hui=DataTable][data-hui-theme=unua][data-hui-invalid] > data > table > thead > tr > th {
 }
+[data-hui=DataTable][data-hui-theme=dua] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=dua] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-active] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-disabled] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-readonly] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=dua][data-hui-valid] > data > table > thead > tr > th {
+}
 [data-hui=DataTable][data-hui-theme=dua][data-hui-invalid] > data > table {
 }
 [data-hui=DataTable][data-hui-theme=dua][data-hui-invalid] > data > table > tbody {
@@ -311,6 +251,66 @@
 [data-hui=DataTable][data-hui-theme=dua][data-hui-invalid] > data > table > tbody > tr > td {
 }
 [data-hui=DataTable][data-hui-theme=dua][data-hui-invalid] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=tria] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-active] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-disabled] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-readonly] > data > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table > tbody {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table > thead {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table > * > tr {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-theme=tria][data-hui-valid] > data > table > thead > tr > th {
 }
 [data-hui=DataTable][data-hui-theme=tria][data-hui-invalid] > data > table {
 }

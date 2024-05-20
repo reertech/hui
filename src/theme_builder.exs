@@ -114,8 +114,8 @@ defmodule Builder do
       end)
 
     section_lines =
-      Enum.flat_map(@states, fn state ->
-        Enum.flat_map(@themes, fn theme ->
+      Enum.flat_map(@themes, fn theme ->
+        Enum.flat_map(@states, fn state ->
           Enum.flat_map(sections, fn {selector, sections} ->
             current = current_theme[theme || "default"][state || "default"][selector]
             prefix = build_prefix(selector, names)

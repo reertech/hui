@@ -1,4 +1,5 @@
 <script>
+  import "../../themes/controls/Button.css"
   import "../../styles/controls/Button.css"
   import Container from "../Container.svelte"
 
@@ -121,4 +122,7 @@
 
 <!-- theme.ini
   > button = common
+  > button:hover = common
+  > button:focus = common
+  > button:active = common
 -->

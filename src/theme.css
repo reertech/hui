@@ -58,8 +58,8 @@
   --hui-default-color-bg: var(--hui-unua-color-plus2);
   --hui-default-color-text: var(--hui-default-color);
   --hui-unua-color-border: var(--hui-unua-color-minus2);
-  --hui-dua-color-border-second: var(--hui-default-color-plus3);
-  --hui-tria-color-border-third: var(--hui-unua-color-plus2);
+  --hui-dua-color-border: var(--hui-default-color-plus3);
+  --hui-tria-color-border: var(--hui-unua-color-plus2);
 
   /* GRADIENTS */
   --hui-default-gradient-0: radial-gradient(transparent, #00000004);
@@ -103,7 +103,7 @@
   /* BORDERS */
   --hui-default-border-width: var(--hui-default-spacer-2);
   --hui-default-border-style: solid;
-  --hui-default-border-color: var(--hui-default-color-border);
+  --hui-default-border-color: var(--hui-default-color);
 
   --hui-default-border-radius-0: 0;
   --hui-default-border-radius-1: var(--hui-default-spacer-2);

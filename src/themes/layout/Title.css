@@ -29,49 +29,49 @@
   --hui-pfttea-border-top-style: var(--hui-default-border-style);
   --hui-pfttea-border-top-width: var(--hui-default-border-width);
 }
-[data-hui=Title][data-hui-theme=unua] > title {
-}
-[data-hui=Title][data-hui-theme=dua] > title {
-}
-[data-hui=Title][data-hui-theme=tria] > title {
-}
 [data-hui=Title][data-hui-active] > title {
-}
-[data-hui=Title][data-hui-theme=unua][data-hui-active] > title {
-}
-[data-hui=Title][data-hui-theme=dua][data-hui-active] > title {
-}
-[data-hui=Title][data-hui-theme=tria][data-hui-active] > title {
 }
 [data-hui=Title][data-hui-disabled] > title {
 }
-[data-hui=Title][data-hui-theme=unua][data-hui-disabled] > title {
-}
-[data-hui=Title][data-hui-theme=dua][data-hui-disabled] > title {
-}
-[data-hui=Title][data-hui-theme=tria][data-hui-disabled] > title {
-}
 [data-hui=Title][data-hui-readonly] > title {
-}
-[data-hui=Title][data-hui-theme=unua][data-hui-readonly] > title {
-}
-[data-hui=Title][data-hui-theme=dua][data-hui-readonly] > title {
-}
-[data-hui=Title][data-hui-theme=tria][data-hui-readonly] > title {
 }
 [data-hui=Title][data-hui-valid] > title {
 }
-[data-hui=Title][data-hui-theme=unua][data-hui-valid] > title {
-}
-[data-hui=Title][data-hui-theme=dua][data-hui-valid] > title {
-}
-[data-hui=Title][data-hui-theme=tria][data-hui-valid] > title {
-}
 [data-hui=Title][data-hui-invalid] > title {
+}
+[data-hui=Title][data-hui-theme=unua] > title {
+}
+[data-hui=Title][data-hui-theme=unua][data-hui-active] > title {
+}
+[data-hui=Title][data-hui-theme=unua][data-hui-disabled] > title {
+}
+[data-hui=Title][data-hui-theme=unua][data-hui-readonly] > title {
+}
+[data-hui=Title][data-hui-theme=unua][data-hui-valid] > title {
 }
 [data-hui=Title][data-hui-theme=unua][data-hui-invalid] > title {
 }
+[data-hui=Title][data-hui-theme=dua] > title {
+}
+[data-hui=Title][data-hui-theme=dua][data-hui-active] > title {
+}
+[data-hui=Title][data-hui-theme=dua][data-hui-disabled] > title {
+}
+[data-hui=Title][data-hui-theme=dua][data-hui-readonly] > title {
+}
+[data-hui=Title][data-hui-theme=dua][data-hui-valid] > title {
+}
 [data-hui=Title][data-hui-theme=dua][data-hui-invalid] > title {
+}
+[data-hui=Title][data-hui-theme=tria] > title {
+}
+[data-hui=Title][data-hui-theme=tria][data-hui-active] > title {
+}
+[data-hui=Title][data-hui-theme=tria][data-hui-disabled] > title {
+}
+[data-hui=Title][data-hui-theme=tria][data-hui-readonly] > title {
+}
+[data-hui=Title][data-hui-theme=tria][data-hui-valid] > title {
 }
 [data-hui=Title][data-hui-theme=tria][data-hui-invalid] > title {
 }

@@ -1,48 +1,48 @@
 [data-hui=Input] > input {
 }
-[data-hui=Input][data-hui-theme=unua] > input {
-}
-[data-hui=Input][data-hui-theme=dua] > input {
-}
-[data-hui=Input][data-hui-theme=tria] > input {
-}
 [data-hui=Input][data-hui-active] > input {
-}
-[data-hui=Input][data-hui-theme=unua][data-hui-active] > input {
-}
-[data-hui=Input][data-hui-theme=dua][data-hui-active] > input {
-}
-[data-hui=Input][data-hui-theme=tria][data-hui-active] > input {
 }
 [data-hui=Input][data-hui-disabled] > input {
 }
-[data-hui=Input][data-hui-theme=unua][data-hui-disabled] > input {
-}
-[data-hui=Input][data-hui-theme=dua][data-hui-disabled] > input {
-}
-[data-hui=Input][data-hui-theme=tria][data-hui-disabled] > input {
-}
 [data-hui=Input][data-hui-readonly] > input {
-}
-[data-hui=Input][data-hui-theme=unua][data-hui-readonly] > input {
-}
-[data-hui=Input][data-hui-theme=dua][data-hui-readonly] > input {
-}
-[data-hui=Input][data-hui-theme=tria][data-hui-readonly] > input {
 }
 [data-hui=Input][data-hui-valid] > input {
 }
-[data-hui=Input][data-hui-theme=unua][data-hui-valid] > input {
-}
-[data-hui=Input][data-hui-theme=dua][data-hui-valid] > input {
-}
-[data-hui=Input][data-hui-theme=tria][data-hui-valid] > input {
-}
 [data-hui=Input][data-hui-invalid] > input {
+}
+[data-hui=Input][data-hui-theme=unua] > input {
+}
+[data-hui=Input][data-hui-theme=unua][data-hui-active] > input {
+}
+[data-hui=Input][data-hui-theme=unua][data-hui-disabled] > input {
+}
+[data-hui=Input][data-hui-theme=unua][data-hui-readonly] > input {
+}
+[data-hui=Input][data-hui-theme=unua][data-hui-valid] > input {
 }
 [data-hui=Input][data-hui-theme=unua][data-hui-invalid] > input {
 }
+[data-hui=Input][data-hui-theme=dua] > input {
+}
+[data-hui=Input][data-hui-theme=dua][data-hui-active] > input {
+}
+[data-hui=Input][data-hui-theme=dua][data-hui-disabled] > input {
+}
+[data-hui=Input][data-hui-theme=dua][data-hui-readonly] > input {
+}
+[data-hui=Input][data-hui-theme=dua][data-hui-valid] > input {
+}
 [data-hui=Input][data-hui-theme=dua][data-hui-invalid] > input {
+}
+[data-hui=Input][data-hui-theme=tria] > input {
+}
+[data-hui=Input][data-hui-theme=tria][data-hui-active] > input {
+}
+[data-hui=Input][data-hui-theme=tria][data-hui-disabled] > input {
+}
+[data-hui=Input][data-hui-theme=tria][data-hui-readonly] > input {
+}
+[data-hui=Input][data-hui-theme=tria][data-hui-valid] > input {
 }
 [data-hui=Input][data-hui-theme=tria][data-hui-invalid] > input {
 }
