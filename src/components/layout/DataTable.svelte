@@ -106,9 +106,9 @@
 
 <!-- theme.ini
   > data > table = common, grid;
-  > data > table > tbody = common, grid;
-  > data > table > thead = common, grid;
+  > data > table > tbody,
+  > data > table > thead,
   > data > table > * > tr = common, grid;
-  > data > table > tbody > tr > td = common;
-  > data > table > thead > tr > th = common;
+  > data > table > tbody > tr > td,
+  > data > table > thead > tr > th = common, grid;
 -->

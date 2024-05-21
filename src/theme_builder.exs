@@ -184,7 +184,8 @@ defmodule Builder do
           selector
           |> String.split(~r"\s*,\s*", trim: true)
           |> Enum.map(fn part ->
-            part |> String.replace(~r"\s*(((\[data\-hui\=).+(\]))|\{)\s*", "")
+            ~r"\s*(((\[data\-hui\=).+(\]))|\{)\s*"
+            |> Regex.replace(part, "")
           end)
           |> Enum.join(",")
           |> clear_selector()
@@ -200,8 +201,7 @@ defmodule Builder do
     end
 
     with {:ok, css} <- names.path.("themes") |> File.read(),
-         css <- ~r"(?<=\/\*).+(?=\*\/)" |> Regex.replace(css, ""),
-         css <- String.replace(css, ~r"\s*\/\*\*\/\s*", "\n"),
+         css <- ~r"(\/\*).+(\*\/)" |> Regex.replace(css, "\n"),
          sections <- css |> String.split(~r"\s*}\s*", trim: true) do
       Enum.reduce(sections, %{}, fn section, acc ->
         with [selector] <- parse_selector.(section),
@@ -273,8 +273,9 @@ defmodule Builder do
     wrap = &("[data-hui=#{names.name}]#{&1} #{selector} {")
 
     cond do
-      selector =~ "|" ->
-        String.split(selector, ~r"\s*\|\s*", trim: true)
+      selector |> String.contains?(["|", ","]) ->
+        String.split(selector, ~r"\s*(\||,)\s*", trim: true)
+        |> Enum.uniq()
         |> Enum.map(fn part ->
           build_selector(theme, state, part, names)
           |> String.trim_trailing(" {")
