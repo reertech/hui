@@ -11,11 +11,8 @@
   z-index: var(--hui-elcszo-z-index, auto);
   float: var(--hui-elcszo-float, none);
   clear: var(--hui-elcszo-clear, none);
-  align-content: var(--hui-elcszo-align-content, normal);
-  align-items: var(--hui-elcszo-align-items, normal);
   align-self: var(--hui-elcszo-align-self, auto);
   order: var(--hui-elcszo-order, 0);
-  justify-content: var(--hui-elcszo-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-elcszo-box-sizing, border-box);
   height: var(--hui-elcszo-height, auto);
@@ -45,7 +42,7 @@
   flex-wrap: var(--hui-elcszo-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-elcszo-direction, ltr);
-  font-family: var(--hui-elcszo-font-family, initial);
+  font-family: var(--hui-elcszo-font-family, system-ui);
   font-size: var(--hui-elcszo-font-size, 16px);
   font-stretch: var(--hui-elcszo-font-stretch, 100%);
   font-style: var(--hui-elcszo-font-style, normal);
@@ -82,6 +79,8 @@
   border-bottom-color: var(--hui-elcszo-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-elcszo-border-bottom-style, none);
   border-bottom-width: var(--hui-elcszo-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-elcszo-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-elcszo-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-elcszo-border-image-outset, 0);
   border-image-repeat: var(--hui-elcszo-border-image-repeat, stretch);
   border-image-slice: var(--hui-elcszo-border-image-slice, 100%);
@@ -96,6 +95,8 @@
   border-top-color: var(--hui-elcszo-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-elcszo-border-top-style, none);
   border-top-width: var(--hui-elcszo-border-top-width, 0px);
+  border-top-left-radius: var(--hui-elcszo-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-elcszo-border-top-right-radius, 0px);
   box-shadow: var(--hui-elcszo-box-shadow, none);
   cursor: var(--hui-elcszo-cursor, auto);
   outline-color: var(--hui-elcszo-outline-color, rgb(0, 0, 0));
@@ -116,11 +117,8 @@
   z-index: var(--hui-ubjqdy-z-index, auto);
   float: var(--hui-ubjqdy-float, none);
   clear: var(--hui-ubjqdy-clear, none);
-  align-content: var(--hui-ubjqdy-align-content, normal);
-  align-items: var(--hui-ubjqdy-align-items, normal);
   align-self: var(--hui-ubjqdy-align-self, auto);
   order: var(--hui-ubjqdy-order, 0);
-  justify-content: var(--hui-ubjqdy-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-ubjqdy-box-sizing, border-box);
   height: var(--hui-ubjqdy-height, auto);
@@ -150,7 +148,7 @@
   flex-wrap: var(--hui-ubjqdy-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-ubjqdy-direction, ltr);
-  font-family: var(--hui-ubjqdy-font-family, initial);
+  font-family: var(--hui-ubjqdy-font-family, system-ui);
   font-size: var(--hui-ubjqdy-font-size, 16px);
   font-stretch: var(--hui-ubjqdy-font-stretch, 100%);
   font-style: var(--hui-ubjqdy-font-style, normal);
@@ -187,6 +185,8 @@
   border-bottom-color: var(--hui-ubjqdy-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-ubjqdy-border-bottom-style, none);
   border-bottom-width: var(--hui-ubjqdy-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-ubjqdy-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-ubjqdy-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-ubjqdy-border-image-outset, 0);
   border-image-repeat: var(--hui-ubjqdy-border-image-repeat, stretch);
   border-image-slice: var(--hui-ubjqdy-border-image-slice, 100%);
@@ -201,6 +201,8 @@
   border-top-color: var(--hui-ubjqdy-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-ubjqdy-border-top-style, none);
   border-top-width: var(--hui-ubjqdy-border-top-width, 0px);
+  border-top-left-radius: var(--hui-ubjqdy-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-ubjqdy-border-top-right-radius, 0px);
   box-shadow: var(--hui-ubjqdy-box-shadow, none);
   cursor: var(--hui-ubjqdy-cursor, auto);
   outline-color: var(--hui-ubjqdy-outline-color, rgb(0, 0, 0));
@@ -221,11 +223,8 @@
   z-index: var(--hui-ttkzpp-z-index, auto);
   float: var(--hui-ttkzpp-float, none);
   clear: var(--hui-ttkzpp-clear, none);
-  align-content: var(--hui-ttkzpp-align-content, normal);
-  align-items: var(--hui-ttkzpp-align-items, normal);
   align-self: var(--hui-ttkzpp-align-self, auto);
   order: var(--hui-ttkzpp-order, 0);
-  justify-content: var(--hui-ttkzpp-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-ttkzpp-box-sizing, border-box);
   height: var(--hui-ttkzpp-height, auto);
@@ -255,7 +254,7 @@
   flex-wrap: var(--hui-ttkzpp-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-ttkzpp-direction, ltr);
-  font-family: var(--hui-ttkzpp-font-family, initial);
+  font-family: var(--hui-ttkzpp-font-family, system-ui);
   font-size: var(--hui-ttkzpp-font-size, 16px);
   font-stretch: var(--hui-ttkzpp-font-stretch, 100%);
   font-style: var(--hui-ttkzpp-font-style, normal);
@@ -292,6 +291,8 @@
   border-bottom-color: var(--hui-ttkzpp-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-ttkzpp-border-bottom-style, none);
   border-bottom-width: var(--hui-ttkzpp-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-ttkzpp-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-ttkzpp-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-ttkzpp-border-image-outset, 0);
   border-image-repeat: var(--hui-ttkzpp-border-image-repeat, stretch);
   border-image-slice: var(--hui-ttkzpp-border-image-slice, 100%);
@@ -306,6 +307,8 @@
   border-top-color: var(--hui-ttkzpp-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-ttkzpp-border-top-style, none);
   border-top-width: var(--hui-ttkzpp-border-top-width, 0px);
+  border-top-left-radius: var(--hui-ttkzpp-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-ttkzpp-border-top-right-radius, 0px);
   box-shadow: var(--hui-ttkzpp-box-shadow, none);
   cursor: var(--hui-ttkzpp-cursor, auto);
   outline-color: var(--hui-ttkzpp-outline-color, rgb(0, 0, 0));
@@ -326,11 +329,8 @@
   z-index: var(--hui-cfnytn-z-index, auto);
   float: var(--hui-cfnytn-float, none);
   clear: var(--hui-cfnytn-clear, none);
-  align-content: var(--hui-cfnytn-align-content, normal);
-  align-items: var(--hui-cfnytn-align-items, normal);
   align-self: var(--hui-cfnytn-align-self, auto);
   order: var(--hui-cfnytn-order, 0);
-  justify-content: var(--hui-cfnytn-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-cfnytn-box-sizing, border-box);
   height: var(--hui-cfnytn-height, auto);
@@ -360,7 +360,7 @@
   flex-wrap: var(--hui-cfnytn-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-cfnytn-direction, ltr);
-  font-family: var(--hui-cfnytn-font-family, initial);
+  font-family: var(--hui-cfnytn-font-family, system-ui);
   font-size: var(--hui-cfnytn-font-size, 16px);
   font-stretch: var(--hui-cfnytn-font-stretch, 100%);
   font-style: var(--hui-cfnytn-font-style, normal);
@@ -397,6 +397,8 @@
   border-bottom-color: var(--hui-cfnytn-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-cfnytn-border-bottom-style, none);
   border-bottom-width: var(--hui-cfnytn-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-cfnytn-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-cfnytn-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-cfnytn-border-image-outset, 0);
   border-image-repeat: var(--hui-cfnytn-border-image-repeat, stretch);
   border-image-slice: var(--hui-cfnytn-border-image-slice, 100%);
@@ -411,6 +413,8 @@
   border-top-color: var(--hui-cfnytn-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-cfnytn-border-top-style, none);
   border-top-width: var(--hui-cfnytn-border-top-width, 0px);
+  border-top-left-radius: var(--hui-cfnytn-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-cfnytn-border-top-right-radius, 0px);
   box-shadow: var(--hui-cfnytn-box-shadow, none);
   cursor: var(--hui-cfnytn-cursor, auto);
   outline-color: var(--hui-cfnytn-outline-color, rgb(0, 0, 0));

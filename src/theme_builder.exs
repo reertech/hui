@@ -308,11 +308,8 @@ defmodule Builder do
        {"z-index", "auto"},
        {"float", "none"},
        {"clear", "none"},
-       {"align-content", "normal"},
-       {"align-items", "normal"},
        {"align-self", "auto"},
-       {"order", "0"},
-       {"justify-content", "normal"}
+       {"order", "0"}
      ]}
   end
 
@@ -402,7 +399,7 @@ defmodule Builder do
     {name,
      [
        {"direction", "ltr"},
-       {"font-family", "initial"},
+       {"font-family", "system-ui"},
        # {"font-feature-settings", "normal"},
        # {"font-kerning", "auto"},
        # {"font-optical-sizing", "auto"},
@@ -455,6 +452,8 @@ defmodule Builder do
        {"border-bottom-color", "rgb(0, 0, 0)"},
        {"border-bottom-style", "none"},
        {"border-bottom-width", "0px"},
+       {"border-bottom-left-radius", "0px"},
+       {"border-bottom-right-radius", "0px"},
        {"border-image-outset", "0"},
        {"border-image-repeat", "stretch"},
        {"border-image-slice", "100%"},
@@ -469,6 +468,8 @@ defmodule Builder do
        {"border-top-color", "rgb(0, 0, 0)"},
        {"border-top-style", "none"},
        {"border-top-width", "0px"},
+       {"border-top-left-radius", "0px"},
+       {"border-top-right-radius", "0px"},
        {"box-shadow", "none"},
        {"cursor", "auto"},
        {"outline-color", "rgb(0, 0, 0)"},
@@ -509,6 +510,10 @@ defmodule Builder do
        {"grid-template-areas", "none"},
        {"grid-template-columns", "none"},
        {"grid-template-rows", "none"},
+       {"align-content", "normal"},
+       {"justify-content", "normal"},
+       {"align-items", "normal"},
+       {"justify-items", "legacy"},
        {"column-gap", "0px"},
        {"row-gap", "0px"}
      ]}
@@ -560,20 +565,12 @@ defmodule Builder do
        {"border-block-start-color", "rgb(0, 0, 0)"},
        {"border-block-start-style", "none"},
        {"border-block-start-width", "0px"},
-       {"border-bottom-left-radius", "0px"},
-       {"border-bottom-right-radius", "0px"},
-       {"border-end-end-radius", "0px"},
-       {"border-end-start-radius", "0px"},
        {"border-inline-end-color", "rgb(0, 0, 0)"},
        {"border-inline-end-style", "none"},
        {"border-inline-end-width", "0px"},
        {"border-inline-start-color", "rgb(0, 0, 0)"},
        {"border-inline-start-style", "none"},
        {"border-inline-start-width", "0px"},
-       {"border-start-end-radius", "0px"},
-       {"border-start-start-radius", "0px"},
-       {"border-top-left-radius", "0px"},
-       {"border-top-right-radius", "0px"},
        {"break-after", "auto"},
        {"break-before", "auto"},
        {"break-inside", "auto"},

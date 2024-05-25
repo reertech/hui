@@ -11,11 +11,8 @@
   z-index: var(--hui-dbubsb-z-index, auto);
   float: var(--hui-dbubsb-float, none);
   clear: var(--hui-dbubsb-clear, none);
-  align-content: var(--hui-dbubsb-align-content, normal);
-  align-items: var(--hui-dbubsb-align-items, normal);
   align-self: var(--hui-dbubsb-align-self, auto);
   order: var(--hui-dbubsb-order, 0);
-  justify-content: var(--hui-dbubsb-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-dbubsb-box-sizing, border-box);
   height: var(--hui-dbubsb-height, auto);
@@ -45,7 +42,7 @@
   flex-wrap: var(--hui-dbubsb-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-dbubsb-direction, ltr);
-  font-family: var(--hui-dbubsb-font-family, initial);
+  font-family: var(--hui-dbubsb-font-family, system-ui);
   font-size: var(--hui-dbubsb-font-size, 16px);
   font-stretch: var(--hui-dbubsb-font-stretch, 100%);
   font-style: var(--hui-dbubsb-font-style, normal);
@@ -82,6 +79,8 @@
   border-bottom-color: var(--hui-dbubsb-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-dbubsb-border-bottom-style, none);
   border-bottom-width: var(--hui-dbubsb-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-dbubsb-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-dbubsb-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-dbubsb-border-image-outset, 0);
   border-image-repeat: var(--hui-dbubsb-border-image-repeat, stretch);
   border-image-slice: var(--hui-dbubsb-border-image-slice, 100%);
@@ -96,6 +95,8 @@
   border-top-color: var(--hui-dbubsb-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-dbubsb-border-top-style, none);
   border-top-width: var(--hui-dbubsb-border-top-width, 0px);
+  border-top-left-radius: var(--hui-dbubsb-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-dbubsb-border-top-right-radius, 0px);
   box-shadow: var(--hui-dbubsb-box-shadow, none);
   cursor: var(--hui-dbubsb-cursor, auto);
   outline-color: var(--hui-dbubsb-outline-color, rgb(0, 0, 0));
@@ -113,6 +114,10 @@
   grid-template-areas: var(--hui-dbubsb-grid-template-areas, none);
   grid-template-columns: var(--hui-dbubsb-grid-template-columns, none);
   grid-template-rows: var(--hui-dbubsb-grid-template-rows, none);
+  align-content: var(--hui-dbubsb-align-content, normal);
+  justify-content: var(--hui-dbubsb-justify-content, normal);
+  align-items: var(--hui-dbubsb-align-items, normal);
+  justify-items: var(--hui-dbubsb-justify-items, legacy);
   column-gap: var(--hui-dbubsb-column-gap, 0px);
   row-gap: var(--hui-dbubsb-row-gap, 0px);
 }
@@ -131,11 +136,8 @@
   z-index: var(--hui-tqgvpx-z-index, auto);
   float: var(--hui-tqgvpx-float, none);
   clear: var(--hui-tqgvpx-clear, none);
-  align-content: var(--hui-tqgvpx-align-content, normal);
-  align-items: var(--hui-tqgvpx-align-items, normal);
   align-self: var(--hui-tqgvpx-align-self, auto);
   order: var(--hui-tqgvpx-order, 0);
-  justify-content: var(--hui-tqgvpx-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-tqgvpx-box-sizing, border-box);
   height: var(--hui-tqgvpx-height, auto);
@@ -165,7 +167,7 @@
   flex-wrap: var(--hui-tqgvpx-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-tqgvpx-direction, ltr);
-  font-family: var(--hui-tqgvpx-font-family, initial);
+  font-family: var(--hui-tqgvpx-font-family, system-ui);
   font-size: var(--hui-tqgvpx-font-size, 16px);
   font-stretch: var(--hui-tqgvpx-font-stretch, 100%);
   font-style: var(--hui-tqgvpx-font-style, normal);
@@ -202,6 +204,8 @@
   border-bottom-color: var(--hui-tqgvpx-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-tqgvpx-border-bottom-style, none);
   border-bottom-width: var(--hui-tqgvpx-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-tqgvpx-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-tqgvpx-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-tqgvpx-border-image-outset, 0);
   border-image-repeat: var(--hui-tqgvpx-border-image-repeat, stretch);
   border-image-slice: var(--hui-tqgvpx-border-image-slice, 100%);
@@ -216,25 +220,14 @@
   border-top-color: var(--hui-tqgvpx-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-tqgvpx-border-top-style, none);
   border-top-width: var(--hui-tqgvpx-border-top-width, 0px);
+  border-top-left-radius: var(--hui-tqgvpx-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-tqgvpx-border-top-right-radius, 0px);
   box-shadow: var(--hui-tqgvpx-box-shadow, none);
   cursor: var(--hui-tqgvpx-cursor, auto);
   outline-color: var(--hui-tqgvpx-outline-color, rgb(0, 0, 0));
   outline-offset: var(--hui-tqgvpx-outline-offset, 0px);
   outline-style: var(--hui-tqgvpx-outline-style, none);
   outline-width: var(--hui-tqgvpx-outline-width, 0px);
-  /* GRID */
-  grid-auto-columns: var(--hui-tqgvpx-grid-auto-columns, auto);
-  grid-auto-flow: var(--hui-tqgvpx-grid-auto-flow, row);
-  grid-auto-rows: var(--hui-tqgvpx-grid-auto-rows, auto);
-  grid-column-end: var(--hui-tqgvpx-grid-column-end, auto);
-  grid-column-start: var(--hui-tqgvpx-grid-column-start, auto);
-  grid-row-end: var(--hui-tqgvpx-grid-row-end, auto);
-  grid-row-start: var(--hui-tqgvpx-grid-row-start, auto);
-  grid-template-areas: var(--hui-tqgvpx-grid-template-areas, none);
-  grid-template-columns: var(--hui-tqgvpx-grid-template-columns, none);
-  grid-template-rows: var(--hui-tqgvpx-grid-template-rows, none);
-  column-gap: var(--hui-tqgvpx-column-gap, 0px);
-  row-gap: var(--hui-tqgvpx-row-gap, 0px);
 }
 [data-hui=DataTable] > data > table > tbody > tr > td,
 [data-hui=DataTable] > data > table > thead > tr > th {
@@ -250,11 +243,8 @@
   z-index: var(--hui-lncmiu-z-index, auto);
   float: var(--hui-lncmiu-float, none);
   clear: var(--hui-lncmiu-clear, none);
-  align-content: var(--hui-lncmiu-align-content, normal);
-  align-items: var(--hui-lncmiu-align-items, normal);
   align-self: var(--hui-lncmiu-align-self, auto);
   order: var(--hui-lncmiu-order, 0);
-  justify-content: var(--hui-lncmiu-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-lncmiu-box-sizing, border-box);
   height: var(--hui-lncmiu-height, auto);
@@ -284,7 +274,7 @@
   flex-wrap: var(--hui-lncmiu-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-lncmiu-direction, ltr);
-  font-family: var(--hui-lncmiu-font-family, initial);
+  font-family: var(--hui-lncmiu-font-family, system-ui);
   font-size: var(--hui-lncmiu-font-size, 16px);
   font-stretch: var(--hui-lncmiu-font-stretch, 100%);
   font-style: var(--hui-lncmiu-font-style, normal);
@@ -321,6 +311,8 @@
   border-bottom-color: var(--hui-lncmiu-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-lncmiu-border-bottom-style, none);
   border-bottom-width: var(--hui-lncmiu-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-lncmiu-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-lncmiu-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-lncmiu-border-image-outset, 0);
   border-image-repeat: var(--hui-lncmiu-border-image-repeat, stretch);
   border-image-slice: var(--hui-lncmiu-border-image-slice, 100%);
@@ -335,6 +327,8 @@
   border-top-color: var(--hui-lncmiu-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-lncmiu-border-top-style, none);
   border-top-width: var(--hui-lncmiu-border-top-width, 0px);
+  border-top-left-radius: var(--hui-lncmiu-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-lncmiu-border-top-right-radius, 0px);
   box-shadow: var(--hui-lncmiu-box-shadow, none);
   cursor: var(--hui-lncmiu-cursor, auto);
   outline-color: var(--hui-lncmiu-outline-color, rgb(0, 0, 0));
@@ -352,6 +346,10 @@
   grid-template-areas: var(--hui-lncmiu-grid-template-areas, none);
   grid-template-columns: var(--hui-lncmiu-grid-template-columns, none);
   grid-template-rows: var(--hui-lncmiu-grid-template-rows, none);
+  align-content: var(--hui-lncmiu-align-content, normal);
+  justify-content: var(--hui-lncmiu-justify-content, normal);
+  align-items: var(--hui-lncmiu-align-items, normal);
+  justify-items: var(--hui-lncmiu-justify-items, legacy);
   column-gap: var(--hui-lncmiu-column-gap, 0px);
   row-gap: var(--hui-lncmiu-row-gap, 0px);
 }

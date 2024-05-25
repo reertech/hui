@@ -1,32 +1,42 @@
 [data-hui=DataTable] > data > table {
   /* LAYOUT-DISPLAY */
   --hui-dbubsb-display: grid;
+  --hui-dbubsb-row-gap: 3px;
+  --hui-dbubsb-column-gap: 3px;
   /* GRID */
   --hui-dbubsb-grid-template-columns: repeat(1000, max-content);
-  --hui-dbubsb-column-gap: var(--hui-default-spacer-5);
-  --hui-dbubsb-row-gap: var(--hui-default-spacer-7);
 }
 [data-hui=DataTable] > data > table > tbody,
 [data-hui=DataTable] > data > table > thead,
 [data-hui=DataTable] > data > table > * > tr {
-  /* LAYOUT-DISPLAY */
-  --hui-tqgvpx-display: grid;
-  /* GRID */
-  --hui-tqgvpx-grid-column-end: -1;
-  --hui-tqgvpx-grid-column-start: 1;
-  --hui-tqgvpx-grid-template-columns: subgrid;
-  --hui-tqgvpx-column-gap: var(--hui-default-spacer-5);
-  --hui-tqgvpx-row-gap: var(--hui-default-spacer-7);
 }
 [data-hui=DataTable] > data > table > tbody > tr > td,
 [data-hui=DataTable] > data > table > thead > tr > th {
   /* LAYOUT-DISPLAY */
   --hui-lncmiu-display: block;
+  /* LAYOUT-SIZING */
   /* LAYOUT-PADDING */
   --hui-lncmiu-padding-top: var(--hui-default-spacer-0);
   --hui-lncmiu-padding-right: var(--hui-default-spacer-0);
   --hui-lncmiu-padding-bottom: var(--hui-default-spacer-0);
   --hui-lncmiu-padding-left: var(--hui-default-spacer-0);
+  /* APPERANCE */
+  --hui-lncmiu-border-bottom-color: var(--hui-default-border-color);
+  --hui-lncmiu-border-bottom-style: var(--hui-default-border-style);
+  --hui-lncmiu-border-bottom-width: var(--hui-default-border-width);
+  --hui-lncmiu-border-bottom-left-radius: var(--hui-default-border-radius-0);
+  --hui-lncmiu-border-bottom-right-radius: var(--hui-default-border-radius-0);
+  --hui-lncmiu-border-left-color: var(--hui-default-border-color);
+  --hui-lncmiu-border-left-style: var(--hui-default-border-style);
+  --hui-lncmiu-border-left-width: var(--hui-default-border-width);
+  --hui-lncmiu-border-right-color: var(--hui-default-border-color);
+  --hui-lncmiu-border-right-style: var(--hui-default-border-style);
+  --hui-lncmiu-border-right-width: var(--hui-default-border-width);
+  --hui-lncmiu-border-top-color: var(--hui-default-border-color);
+  --hui-lncmiu-border-top-style: var(--hui-default-border-style);
+  --hui-lncmiu-border-top-width: var(--hui-default-border-width);
+  --hui-lncmiu-border-top-left-radius: var(--hui-default-border-radius-0);
+  --hui-lncmiu-border-top-right-radius: var(--hui-default-border-radius-0);
 }
 [data-hui=DataTable][data-hui-active] > data > table {
 }
@@ -248,11 +258,8 @@
 /*  --hui-dbubsb-z-index-default: ; */
 /*  --hui-dbubsb-float-default: ; */
 /*  --hui-dbubsb-clear-default: ; */
-/*  --hui-dbubsb-align-content-default: ; */
-/*  --hui-dbubsb-align-items-default: ; */
 /*  --hui-dbubsb-align-self-default: ; */
 /*  --hui-dbubsb-order-default: ; */
-/*  --hui-dbubsb-justify-content-default: ; */
   /* LAYOUT-SIZING */
 /*  --hui-dbubsb-box-sizing-default: ; */
 /*  --hui-dbubsb-height-default: ; */
@@ -319,6 +326,8 @@
 /*  --hui-dbubsb-border-bottom-color-default: ; */
 /*  --hui-dbubsb-border-bottom-style-default: ; */
 /*  --hui-dbubsb-border-bottom-width-default: ; */
+/*  --hui-dbubsb-border-bottom-left-radius-default: ; */
+/*  --hui-dbubsb-border-bottom-right-radius-default: ; */
 /*  --hui-dbubsb-border-image-outset-default: ; */
 /*  --hui-dbubsb-border-image-repeat-default: ; */
 /*  --hui-dbubsb-border-image-slice-default: ; */
@@ -333,6 +342,8 @@
 /*  --hui-dbubsb-border-top-color-default: ; */
 /*  --hui-dbubsb-border-top-style-default: ; */
 /*  --hui-dbubsb-border-top-width-default: ; */
+/*  --hui-dbubsb-border-top-left-radius-default: ; */
+/*  --hui-dbubsb-border-top-right-radius-default: ; */
 /*  --hui-dbubsb-box-shadow-default: ; */
 /*  --hui-dbubsb-cursor-default: ; */
 /*  --hui-dbubsb-outline-color-default: ; */
@@ -350,6 +361,10 @@
 /*  --hui-dbubsb-grid-template-areas-default: ; */
 /*  --hui-dbubsb-grid-template-columns-default: ; */
 /*  --hui-dbubsb-grid-template-rows-default: ; */
+/*  --hui-dbubsb-align-content-default: ; */
+/*  --hui-dbubsb-justify-content-default: ; */
+/*  --hui-dbubsb-align-items-default: ; */
+/*  --hui-dbubsb-justify-items-default: ; */
 /*  --hui-dbubsb-column-gap-default: ; */
 /*  --hui-dbubsb-row-gap-default: ; */
 }
@@ -368,11 +383,8 @@
 /*  --hui-tqgvpx-z-index-default: ; */
 /*  --hui-tqgvpx-float-default: ; */
 /*  --hui-tqgvpx-clear-default: ; */
-/*  --hui-tqgvpx-align-content-default: ; */
-/*  --hui-tqgvpx-align-items-default: ; */
 /*  --hui-tqgvpx-align-self-default: ; */
 /*  --hui-tqgvpx-order-default: ; */
-/*  --hui-tqgvpx-justify-content-default: ; */
   /* LAYOUT-SIZING */
 /*  --hui-tqgvpx-box-sizing-default: ; */
 /*  --hui-tqgvpx-height-default: ; */
@@ -439,6 +451,8 @@
 /*  --hui-tqgvpx-border-bottom-color-default: ; */
 /*  --hui-tqgvpx-border-bottom-style-default: ; */
 /*  --hui-tqgvpx-border-bottom-width-default: ; */
+/*  --hui-tqgvpx-border-bottom-left-radius-default: ; */
+/*  --hui-tqgvpx-border-bottom-right-radius-default: ; */
 /*  --hui-tqgvpx-border-image-outset-default: ; */
 /*  --hui-tqgvpx-border-image-repeat-default: ; */
 /*  --hui-tqgvpx-border-image-slice-default: ; */
@@ -453,25 +467,14 @@
 /*  --hui-tqgvpx-border-top-color-default: ; */
 /*  --hui-tqgvpx-border-top-style-default: ; */
 /*  --hui-tqgvpx-border-top-width-default: ; */
+/*  --hui-tqgvpx-border-top-left-radius-default: ; */
+/*  --hui-tqgvpx-border-top-right-radius-default: ; */
 /*  --hui-tqgvpx-box-shadow-default: ; */
 /*  --hui-tqgvpx-cursor-default: ; */
 /*  --hui-tqgvpx-outline-color-default: ; */
 /*  --hui-tqgvpx-outline-offset-default: ; */
 /*  --hui-tqgvpx-outline-style-default: ; */
 /*  --hui-tqgvpx-outline-width-default: ; */
-  /* GRID */
-/*  --hui-tqgvpx-grid-auto-columns-default: ; */
-/*  --hui-tqgvpx-grid-auto-flow-default: ; */
-/*  --hui-tqgvpx-grid-auto-rows-default: ; */
-/*  --hui-tqgvpx-grid-column-end-default: ; */
-/*  --hui-tqgvpx-grid-column-start-default: ; */
-/*  --hui-tqgvpx-grid-row-end-default: ; */
-/*  --hui-tqgvpx-grid-row-start-default: ; */
-/*  --hui-tqgvpx-grid-template-areas-default: ; */
-/*  --hui-tqgvpx-grid-template-columns-default: ; */
-/*  --hui-tqgvpx-grid-template-rows-default: ; */
-/*  --hui-tqgvpx-column-gap-default: ; */
-/*  --hui-tqgvpx-row-gap-default: ; */
 }
 [data-hui=DataTable] > data > table > tbody > tr > td,
 [data-hui=DataTable] > data > table > thead > tr > th {
@@ -487,11 +490,8 @@
 /*  --hui-lncmiu-z-index-default: ; */
 /*  --hui-lncmiu-float-default: ; */
 /*  --hui-lncmiu-clear-default: ; */
-/*  --hui-lncmiu-align-content-default: ; */
-/*  --hui-lncmiu-align-items-default: ; */
 /*  --hui-lncmiu-align-self-default: ; */
 /*  --hui-lncmiu-order-default: ; */
-/*  --hui-lncmiu-justify-content-default: ; */
   /* LAYOUT-SIZING */
 /*  --hui-lncmiu-box-sizing-default: ; */
 /*  --hui-lncmiu-height-default: ; */
@@ -558,6 +558,8 @@
 /*  --hui-lncmiu-border-bottom-color-default: ; */
 /*  --hui-lncmiu-border-bottom-style-default: ; */
 /*  --hui-lncmiu-border-bottom-width-default: ; */
+/*  --hui-lncmiu-border-bottom-left-radius-default: ; */
+/*  --hui-lncmiu-border-bottom-right-radius-default: ; */
 /*  --hui-lncmiu-border-image-outset-default: ; */
 /*  --hui-lncmiu-border-image-repeat-default: ; */
 /*  --hui-lncmiu-border-image-slice-default: ; */
@@ -572,6 +574,8 @@
 /*  --hui-lncmiu-border-top-color-default: ; */
 /*  --hui-lncmiu-border-top-style-default: ; */
 /*  --hui-lncmiu-border-top-width-default: ; */
+/*  --hui-lncmiu-border-top-left-radius-default: ; */
+/*  --hui-lncmiu-border-top-right-radius-default: ; */
 /*  --hui-lncmiu-box-shadow-default: ; */
 /*  --hui-lncmiu-cursor-default: ; */
 /*  --hui-lncmiu-outline-color-default: ; */
@@ -589,6 +593,10 @@
 /*  --hui-lncmiu-grid-template-areas-default: ; */
 /*  --hui-lncmiu-grid-template-columns-default: ; */
 /*  --hui-lncmiu-grid-template-rows-default: ; */
+/*  --hui-lncmiu-align-content-default: ; */
+/*  --hui-lncmiu-justify-content-default: ; */
+/*  --hui-lncmiu-align-items-default: ; */
+/*  --hui-lncmiu-justify-items-default: ; */
 /*  --hui-lncmiu-column-gap-default: ; */
 /*  --hui-lncmiu-row-gap-default: ; */
 }

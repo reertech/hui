@@ -2,6 +2,7 @@
   import "../../themes/layout/DataTable.css"
   import "../../styles/layout/DataTable.css"
   import Container from "../Container.svelte"
+  import Grid from "../Grid.svelte"
   import Table from "./Table.svelte"
 
   export let active = null
@@ -31,11 +32,21 @@
   {classes}
 >
   <Table>
-    <thead>
+    <Grid
+      tag="thead"
+      templateColumns="subgrid"
+      columnStart="1"
+      columnEnd="-1"
+    >
       {#if $$slots.thead}
         <slot name="thead" />
       {:else if $$slots.th}
-        <tr>
+        <Grid
+          tag="tr"
+          templateColumns="subgrid"
+          columnStart="1"
+          columnEnd="-1"
+        >
           {#if $$slots.thBefore}
             <slot name="thBefore" />
           {/if}
@@ -57,10 +68,15 @@
           {#if $$slots.thAfter}
             <slot name="thAfter" />
           {/if}
-        </tr>
+        </Grid>
       {/if}
-    </thead>
-    <tbody>
+    </Grid>
+    <Grid
+      tag="tbody"
+      templateColumns="subgrid"
+      columnStart="1"
+      columnEnd="-1"
+    >
       {#if $$slots.tbody}
         <slot name="tbody" />
       {:else if $$slots.tr || $$slots.td}
@@ -68,7 +84,12 @@
           {#if $$slots.trBefore}
             <slot name="trBefore" {rowIdx} {row} />
           {/if}
-          <tr>
+          <Grid
+            tag="tr"
+            templateColumns="subgrid"
+            columnStart="1"
+            columnEnd="-1"
+          >
             {#if $$slots.tr}
               <slot name="tr" {rowIdx} {row} />
             {:else if $$slots.td}
@@ -94,13 +115,13 @@
                 <slot name="tdAfter" {rowIdx} {row} />
               {/if}
             {/if}
-          </tr>
+          </Grid>
           {#if $$slots.trAfter}
             <slot name="trAfter" {rowIdx} {row} />
           {/if}
         {/each}
       {/if}
-    </tbody>
+    </Grid>
   </Table>
 </Container>
 
@@ -108,7 +129,7 @@
   > data > table = common, grid;
   > data > table > tbody,
   > data > table > thead,
-  > data > table > * > tr = common, grid;
+  > data > table > * > tr = common;
   > data > table > tbody > tr > td,
   > data > table > thead > tr > th = common, grid;
 -->

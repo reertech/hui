@@ -11,11 +11,8 @@
   z-index: var(--hui-upezdl-z-index, auto);
   float: var(--hui-upezdl-float, none);
   clear: var(--hui-upezdl-clear, none);
-  align-content: var(--hui-upezdl-align-content, normal);
-  align-items: var(--hui-upezdl-align-items, normal);
   align-self: var(--hui-upezdl-align-self, auto);
   order: var(--hui-upezdl-order, 0);
-  justify-content: var(--hui-upezdl-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-upezdl-box-sizing, border-box);
   height: var(--hui-upezdl-height, auto);
@@ -45,7 +42,7 @@
   flex-wrap: var(--hui-upezdl-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-upezdl-direction, ltr);
-  font-family: var(--hui-upezdl-font-family, initial);
+  font-family: var(--hui-upezdl-font-family, system-ui);
   font-size: var(--hui-upezdl-font-size, 16px);
   font-stretch: var(--hui-upezdl-font-stretch, 100%);
   font-style: var(--hui-upezdl-font-style, normal);
@@ -82,6 +79,8 @@
   border-bottom-color: var(--hui-upezdl-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-upezdl-border-bottom-style, none);
   border-bottom-width: var(--hui-upezdl-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-upezdl-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-upezdl-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-upezdl-border-image-outset, 0);
   border-image-repeat: var(--hui-upezdl-border-image-repeat, stretch);
   border-image-slice: var(--hui-upezdl-border-image-slice, 100%);
@@ -96,6 +95,8 @@
   border-top-color: var(--hui-upezdl-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-upezdl-border-top-style, none);
   border-top-width: var(--hui-upezdl-border-top-width, 0px);
+  border-top-left-radius: var(--hui-upezdl-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-upezdl-border-top-right-radius, 0px);
   box-shadow: var(--hui-upezdl-box-shadow, none);
   cursor: var(--hui-upezdl-cursor, auto);
   outline-color: var(--hui-upezdl-outline-color, rgb(0, 0, 0));
@@ -116,11 +117,8 @@
   z-index: var(--hui-tysnrg-z-index, auto);
   float: var(--hui-tysnrg-float, none);
   clear: var(--hui-tysnrg-clear, none);
-  align-content: var(--hui-tysnrg-align-content, normal);
-  align-items: var(--hui-tysnrg-align-items, normal);
   align-self: var(--hui-tysnrg-align-self, auto);
   order: var(--hui-tysnrg-order, 0);
-  justify-content: var(--hui-tysnrg-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-tysnrg-box-sizing, border-box);
   height: var(--hui-tysnrg-height, auto);
@@ -150,7 +148,7 @@
   flex-wrap: var(--hui-tysnrg-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-tysnrg-direction, ltr);
-  font-family: var(--hui-tysnrg-font-family, initial);
+  font-family: var(--hui-tysnrg-font-family, system-ui);
   font-size: var(--hui-tysnrg-font-size, 16px);
   font-stretch: var(--hui-tysnrg-font-stretch, 100%);
   font-style: var(--hui-tysnrg-font-style, normal);
@@ -187,6 +185,8 @@
   border-bottom-color: var(--hui-tysnrg-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-tysnrg-border-bottom-style, none);
   border-bottom-width: var(--hui-tysnrg-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-tysnrg-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-tysnrg-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-tysnrg-border-image-outset, 0);
   border-image-repeat: var(--hui-tysnrg-border-image-repeat, stretch);
   border-image-slice: var(--hui-tysnrg-border-image-slice, 100%);
@@ -201,6 +201,8 @@
   border-top-color: var(--hui-tysnrg-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-tysnrg-border-top-style, none);
   border-top-width: var(--hui-tysnrg-border-top-width, 0px);
+  border-top-left-radius: var(--hui-tysnrg-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-tysnrg-border-top-right-radius, 0px);
   box-shadow: var(--hui-tysnrg-box-shadow, none);
   cursor: var(--hui-tysnrg-cursor, auto);
   outline-color: var(--hui-tysnrg-outline-color, rgb(0, 0, 0));
@@ -221,11 +223,8 @@
   z-index: var(--hui-fmernp-z-index, auto);
   float: var(--hui-fmernp-float, none);
   clear: var(--hui-fmernp-clear, none);
-  align-content: var(--hui-fmernp-align-content, normal);
-  align-items: var(--hui-fmernp-align-items, normal);
   align-self: var(--hui-fmernp-align-self, auto);
   order: var(--hui-fmernp-order, 0);
-  justify-content: var(--hui-fmernp-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-fmernp-box-sizing, border-box);
   height: var(--hui-fmernp-height, auto);
@@ -255,7 +254,7 @@
   flex-wrap: var(--hui-fmernp-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-fmernp-direction, ltr);
-  font-family: var(--hui-fmernp-font-family, initial);
+  font-family: var(--hui-fmernp-font-family, system-ui);
   font-size: var(--hui-fmernp-font-size, 16px);
   font-stretch: var(--hui-fmernp-font-stretch, 100%);
   font-style: var(--hui-fmernp-font-style, normal);
@@ -292,6 +291,8 @@
   border-bottom-color: var(--hui-fmernp-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-fmernp-border-bottom-style, none);
   border-bottom-width: var(--hui-fmernp-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-fmernp-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-fmernp-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-fmernp-border-image-outset, 0);
   border-image-repeat: var(--hui-fmernp-border-image-repeat, stretch);
   border-image-slice: var(--hui-fmernp-border-image-slice, 100%);
@@ -306,6 +307,8 @@
   border-top-color: var(--hui-fmernp-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-fmernp-border-top-style, none);
   border-top-width: var(--hui-fmernp-border-top-width, 0px);
+  border-top-left-radius: var(--hui-fmernp-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-fmernp-border-top-right-radius, 0px);
   box-shadow: var(--hui-fmernp-box-shadow, none);
   cursor: var(--hui-fmernp-cursor, auto);
   outline-color: var(--hui-fmernp-outline-color, rgb(0, 0, 0));

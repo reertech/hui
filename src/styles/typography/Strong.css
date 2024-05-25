@@ -11,11 +11,8 @@
   z-index: var(--hui-ybvauc-z-index, auto);
   float: var(--hui-ybvauc-float, none);
   clear: var(--hui-ybvauc-clear, none);
-  align-content: var(--hui-ybvauc-align-content, normal);
-  align-items: var(--hui-ybvauc-align-items, normal);
   align-self: var(--hui-ybvauc-align-self, auto);
   order: var(--hui-ybvauc-order, 0);
-  justify-content: var(--hui-ybvauc-justify-content, normal);
   /* LAYOUT-SIZING */
   box-sizing: var(--hui-ybvauc-box-sizing, border-box);
   height: var(--hui-ybvauc-height, auto);
@@ -45,7 +42,7 @@
   flex-wrap: var(--hui-ybvauc-flex-wrap, nowrap);
   /* TEXT */
   direction: var(--hui-ybvauc-direction, ltr);
-  font-family: var(--hui-ybvauc-font-family, initial);
+  font-family: var(--hui-ybvauc-font-family, system-ui);
   font-size: var(--hui-ybvauc-font-size, 16px);
   font-stretch: var(--hui-ybvauc-font-stretch, 100%);
   font-style: var(--hui-ybvauc-font-style, normal);
@@ -82,6 +79,8 @@
   border-bottom-color: var(--hui-ybvauc-border-bottom-color, rgb(0, 0, 0));
   border-bottom-style: var(--hui-ybvauc-border-bottom-style, none);
   border-bottom-width: var(--hui-ybvauc-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-ybvauc-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-ybvauc-border-bottom-right-radius, 0px);
   border-image-outset: var(--hui-ybvauc-border-image-outset, 0);
   border-image-repeat: var(--hui-ybvauc-border-image-repeat, stretch);
   border-image-slice: var(--hui-ybvauc-border-image-slice, 100%);
@@ -96,6 +95,8 @@
   border-top-color: var(--hui-ybvauc-border-top-color, rgb(0, 0, 0));
   border-top-style: var(--hui-ybvauc-border-top-style, none);
   border-top-width: var(--hui-ybvauc-border-top-width, 0px);
+  border-top-left-radius: var(--hui-ybvauc-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-ybvauc-border-top-right-radius, 0px);
   box-shadow: var(--hui-ybvauc-box-shadow, none);
   cursor: var(--hui-ybvauc-cursor, auto);
   outline-color: var(--hui-ybvauc-outline-color, rgb(0, 0, 0));

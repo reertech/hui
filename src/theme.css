@@ -2,7 +2,7 @@
   /* COLORS */
   --hui-default-color-h: 0;
   --hui-default-color-s: 0%;
-  --hui-default-color-l: 29%;
+  --hui-default-color-l: 25%;
   --hui-default-color: hsl(var(--hui-default-color-h), var(--hui-default-color-s), var(--hui-default-color-l));
 
   --hui-default-color-minus1-h: var(--hui-default-color-h);
@@ -42,8 +42,13 @@
 
   --hui-unua-color-minus2-h: var(--hui-unua-color-h);
   --hui-unua-color-minus2-s: var(--hui-unua-color-s);
-  --hui-unua-color-minus2-l: calc(var(--hui-unua-color-l) - 15%);
+  --hui-unua-color-minus2-l: calc(var(--hui-unua-color-l) - 18%);
   --hui-unua-color-minus2: hsl(var(--hui-unua-color-minus2-h), var(--hui-unua-color-minus2-s), var(--hui-unua-color-minus2-l));
+
+  --hui-unua-color-minus3-h: var(--hui-unua-color-h);
+  --hui-unua-color-minus3-s: var(--hui-unua-color-s);
+  --hui-unua-color-minus3-l: calc(var(--hui-unua-color-l) - 26%);
+  --hui-unua-color-minus3: hsl(var(--hui-unua-color-minus3-h), var(--hui-unua-color-minus3-s), var(--hui-unua-color-minus3-l));
 
   --hui-unua-color-plus1-h: var(--hui-unua-color-h);
   --hui-unua-color-plus1-s: var(--hui-unua-color-s);
@@ -56,7 +61,10 @@
   --hui-unua-color-plus2: hsl(var(--hui-unua-color-plus2-h), var(--hui-unua-color-plus2-s), var(--hui-unua-color-plus2-l));
 
   --hui-default-color-bg: var(--hui-unua-color-plus2);
+
   --hui-default-color-text: var(--hui-default-color);
+  --hui-unua-color-text: var(--hui-default-color-plus2);
+
   --hui-unua-color-border: var(--hui-unua-color-minus2);
   --hui-dua-color-border: var(--hui-default-color-plus3);
   --hui-tria-color-border: var(--hui-unua-color-plus2);
@@ -103,44 +111,47 @@
   /* BORDERS */
   --hui-default-border-width: var(--hui-default-spacer-2);
   --hui-default-border-style: solid;
-  --hui-default-border-color: var(--hui-default-color);
+  --hui-default-border-color: var(--hui-unua-color-minus3);
+
+  --hui-unua-border-width: var(--hui-default-spacer-3);
+  --hui-unua-border-style: solid;
+  --hui-unua-border-color: var(--hui-default-color-plus3);
 
   --hui-default-border-radius-0: 0;
-  --hui-default-border-radius-1: var(--hui-default-spacer-2);
+  --hui-default-border-radius-1: var(--hui-default-spacer-3);
   --hui-default-border-radius-2: var(--hui-default-spacer-4);
   --hui-default-border-radius-3: var(--hui-default-spacer-5);
   --hui-default-border-radius-4: var(--hui-default-spacer-7);
   --hui-default-border-radius-5: var(--hui-default-spacer-11);
-  --hui-default-border-radius: var(--hui-default-border-radius-3);
 
   /* BOX-SHADOWS */
+  --hui-default-box-shadow-x: 0;
+  --hui-default-box-shadow-y: 0;
+  --hui-default-box-shadow-blur: 0;
+  --hui-default-box-shadow-spread: 0;
+  --hui-default-box-shadow-color: none;
+  --hui-default-box-shadow: var(--hui-default-box-shadow-x) var(--hui-default-box-shadow-y) var(--hui-default-box-shadow-blur) var(--hui-default-box-shadow-spread) var(--hui-default-box-shadow-color);
+
+  --hui-unua-box-shadow-x: 0;
+  --hui-unua-box-shadow-y: 0;
+  --hui-unua-box-shadow-blur: var(--hui-default-spacer-3);
+  --hui-unua-box-shadow-spread: var(--hui-default-spacer-0);
+  --hui-unua-box-shadow-color: var(--hui-default-color-plus2);
+  --hui-unua-box-shadow: var(--hui-unua-box-shadow-x) var(--hui-unua-box-shadow-y) var(--hui-unua-box-shadow-blur) var(--hui-unua-box-shadow-spread) var(--hui-unua-box-shadow-color);
+
+  --hui-dua-box-shadow-x: 0;
+  --hui-dua-box-shadow-y: 0;
+  --hui-dua-box-shadow-blur: var(--hui-default-spacer-4);
+  --hui-dua-box-shadow-spread: var(--hui-default-spacer-1);
+  --hui-dua-box-shadow-color: var(--hui-default-color-plus2);
+  --hui-dua-box-shadow: var(--hui-dua-box-shadow-x) var(--hui-dua-box-shadow-y) var(--hui-dua-box-shadow-blur) var(--hui-dua-box-shadow-spread) var(--hui-dua-box-shadow-color);
+
   --hui-tria-box-shadow-x: 0;
   --hui-tria-box-shadow-y: 0;
   --hui-tria-box-shadow-blur: var(--hui-default-spacer-4);
   --hui-tria-box-shadow-spread: var(--hui-default-spacer-0);
   --hui-tria-box-shadow-color: var(--hui-default-color-plus3);
   --hui-tria-box-shadow: inset var(--hui-tria-box-shadow-x) var(--hui-tria-box-shadow-y) var(--hui-tria-box-shadow-blur) var(--hui-tria-box-shadow-spread) var(--hui-tria-box-shadow-color);
-
-  --hui-dua-box-shadow-x: 0;
-  --hui-dua-box-shadow-y: 0;
-  --hui-dua-box-shadow-blur: 0;
-  --hui-dua-box-shadow-spread: 0;
-  --hui-dua-box-shadow-color: none;
-  --hui-dua-box-shadow: var(--hui-dua-box-shadow-x) var(--hui-dua-box-shadow-y) var(--hui-dua-box-shadow-blur) var(--hui-dua-box-shadow-spread) var(--hui-dua-box-shadow-color);
-
-  --hui-default-box-shadow-x: 0;
-  --hui-default-box-shadow-y: 0;
-  --hui-default-box-shadow-blur: var(--hui-default-spacer-3);
-  --hui-default-box-shadow-spread: var(--hui-default-spacer-0);
-  --hui-default-box-shadow-color: var(--hui-default-color-plus2);
-  --hui-default-box-shadow: var(--hui-default-box-shadow-x) var(--hui-default-box-shadow-y) var(--hui-default-box-shadow-blur) var(--hui-default-box-shadow-spread) var(--hui-default-box-shadow-color);
-
-  --hui-unua-box-shadow-x: 0;
-  --hui-unua-box-shadow-y: 0;
-  --hui-unua-box-shadow-blur: var(--hui-default-spacer-4);
-  --hui-unua-box-shadow-spread: var(--hui-default-spacer-1);
-  --hui-unua-box-shadow-color: var(--hui-default-color-plus2);
-  --hui-unua-box-shadow: var(--hui-unua-box-shadow-x) var(--hui-unua-box-shadow-y) var(--hui-unua-box-shadow-blur) var(--hui-unua-box-shadow-spread) var(--hui-unua-box-shadow-color);
 
   /* TEXT */
   --hui-default-weight-bold: 600;
@@ -155,13 +166,13 @@
   --hui-default-line-height-plus1: 1.8;
   --hui-default-line-height-plus2: 2;
 
-  --hui-default-color: var(--hui-default-color-text);
   --hui-default-background-color: var(--hui-default-color-bg);
 
   --hui-default-font-size: var(--hui-default-color-text);
-  --hui-default-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 }
 /*
+
+  --hui-default-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 
   --hui-font-size-small: 13px;
   --hui-body-font-size: 16px;

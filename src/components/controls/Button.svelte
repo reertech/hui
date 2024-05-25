@@ -33,6 +33,8 @@
     active={active || null}
     readonly={readonly || null}
     disabled={disabled || null}
+    valid={valid || null}
+    invalid={invalid || null}
   >
     {#if $$slots.default}
       <slot />
@@ -121,5 +123,8 @@
 -->
 
 <!-- theme.ini
-  > button | > button:hover = common;
+  > button
+  | > button:hover
+  | > button:active
+  | > button:focus = common;
 -->
