@@ -1,7 +1,4 @@
 [data-hui=Strong] > strong {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-ybvauc-display, block);
-  visibility: var(--hui-ybvauc-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-ybvauc-position, static);
   top: var(--hui-ybvauc-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-ybvauc-word-break, normal);
   word-spacing: var(--hui-ybvauc-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-ybvauc-visibility, visible);
   color: var(--hui-ybvauc-color, rgb(0, 0, 0));
   background-attachment: var(--hui-ybvauc-background-attachment, scroll);
   background-clip: var(--hui-ybvauc-background-clip, border-box);

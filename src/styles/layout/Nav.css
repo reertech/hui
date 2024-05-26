@@ -1,7 +1,4 @@
 [data-hui=Nav] > nav {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-rzdnvl-display, block);
-  visibility: var(--hui-rzdnvl-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-rzdnvl-position, static);
   top: var(--hui-rzdnvl-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-rzdnvl-word-break, normal);
   word-spacing: var(--hui-rzdnvl-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-rzdnvl-visibility, visible);
   color: var(--hui-rzdnvl-color, rgb(0, 0, 0));
   background-attachment: var(--hui-rzdnvl-background-attachment, scroll);
   background-clip: var(--hui-rzdnvl-background-clip, border-box);

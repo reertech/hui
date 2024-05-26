@@ -1,7 +1,4 @@
 [data-hui=Input] > input {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-duueth-display, block);
-  visibility: var(--hui-duueth-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-duueth-position, static);
   top: var(--hui-duueth-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-duueth-word-break, normal);
   word-spacing: var(--hui-duueth-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-duueth-visibility, visible);
   color: var(--hui-duueth-color, rgb(0, 0, 0));
   background-attachment: var(--hui-duueth-background-attachment, scroll);
   background-clip: var(--hui-duueth-background-clip, border-box);

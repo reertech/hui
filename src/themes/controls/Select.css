@@ -191,9 +191,6 @@
 [data-hui=Select][data-hui-theme=tria][data-hui-invalid] > fieldset > div > input {
 }
 [data-hui=Select] > fieldset {
-  /* LAYOUT-DISPLAY */
-/*  --hui-elcszo-display-default: ; */
-/*  --hui-elcszo-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-elcszo-position-default: ; */
 /*  --hui-elcszo-top-default: ; */
@@ -258,6 +255,7 @@
 /*  --hui-elcszo-word-break-default: ; */
 /*  --hui-elcszo-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-elcszo-visibility-default: ; */
 /*  --hui-elcszo-color-default: ; */
 /*  --hui-elcszo-background-attachment-default: ; */
 /*  --hui-elcszo-background-clip-default: ; */
@@ -297,9 +295,6 @@
 /*  --hui-elcszo-outline-width-default: ; */
 }
 [data-hui=Select] > fieldset > datalist {
-  /* LAYOUT-DISPLAY */
-/*  --hui-ubjqdy-display-default: ; */
-/*  --hui-ubjqdy-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-ubjqdy-position-default: ; */
 /*  --hui-ubjqdy-top-default: ; */
@@ -364,6 +359,7 @@
 /*  --hui-ubjqdy-word-break-default: ; */
 /*  --hui-ubjqdy-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-ubjqdy-visibility-default: ; */
 /*  --hui-ubjqdy-color-default: ; */
 /*  --hui-ubjqdy-background-attachment-default: ; */
 /*  --hui-ubjqdy-background-clip-default: ; */
@@ -403,9 +399,6 @@
 /*  --hui-ubjqdy-outline-width-default: ; */
 }
 [data-hui=Select] > fieldset > datalist > option {
-  /* LAYOUT-DISPLAY */
-/*  --hui-ttkzpp-display-default: ; */
-/*  --hui-ttkzpp-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-ttkzpp-position-default: ; */
 /*  --hui-ttkzpp-top-default: ; */
@@ -470,6 +463,7 @@
 /*  --hui-ttkzpp-word-break-default: ; */
 /*  --hui-ttkzpp-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-ttkzpp-visibility-default: ; */
 /*  --hui-ttkzpp-color-default: ; */
 /*  --hui-ttkzpp-background-attachment-default: ; */
 /*  --hui-ttkzpp-background-clip-default: ; */
@@ -509,9 +503,6 @@
 /*  --hui-ttkzpp-outline-width-default: ; */
 }
 [data-hui=Select] > fieldset > div > input {
-  /* LAYOUT-DISPLAY */
-/*  --hui-cfnytn-display-default: ; */
-/*  --hui-cfnytn-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-cfnytn-position-default: ; */
 /*  --hui-cfnytn-top-default: ; */
@@ -576,6 +567,7 @@
 /*  --hui-cfnytn-word-break-default: ; */
 /*  --hui-cfnytn-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-cfnytn-visibility-default: ; */
 /*  --hui-cfnytn-color-default: ; */
 /*  --hui-cfnytn-background-attachment-default: ; */
 /*  --hui-cfnytn-background-clip-default: ; */

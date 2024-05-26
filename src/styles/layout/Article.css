@@ -1,7 +1,4 @@
 [data-hui=Article] > article {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-qrnkej-display, block);
-  visibility: var(--hui-qrnkej-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-qrnkej-position, static);
   top: var(--hui-qrnkej-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-qrnkej-word-break, normal);
   word-spacing: var(--hui-qrnkej-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-qrnkej-visibility, visible);
   color: var(--hui-qrnkej-color, rgb(0, 0, 0));
   background-attachment: var(--hui-qrnkej-background-attachment, scroll);
   background-clip: var(--hui-qrnkej-background-clip, border-box);

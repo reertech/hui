@@ -1,7 +1,4 @@
 [data-hui=Select] > fieldset {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-elcszo-display, block);
-  visibility: var(--hui-elcszo-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-elcszo-position, static);
   top: var(--hui-elcszo-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-elcszo-word-break, normal);
   word-spacing: var(--hui-elcszo-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-elcszo-visibility, visible);
   color: var(--hui-elcszo-color, rgb(0, 0, 0));
   background-attachment: var(--hui-elcszo-background-attachment, scroll);
   background-clip: var(--hui-elcszo-background-clip, border-box);
@@ -105,9 +103,6 @@
   outline-width: var(--hui-elcszo-outline-width, 0px);
 }
 [data-hui=Select] > fieldset > datalist {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-ubjqdy-display, block);
-  visibility: var(--hui-ubjqdy-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-ubjqdy-position, static);
   top: var(--hui-ubjqdy-top, auto);
@@ -172,6 +167,7 @@
   word-break: var(--hui-ubjqdy-word-break, normal);
   word-spacing: var(--hui-ubjqdy-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-ubjqdy-visibility, visible);
   color: var(--hui-ubjqdy-color, rgb(0, 0, 0));
   background-attachment: var(--hui-ubjqdy-background-attachment, scroll);
   background-clip: var(--hui-ubjqdy-background-clip, border-box);
@@ -211,9 +207,6 @@
   outline-width: var(--hui-ubjqdy-outline-width, 0px);
 }
 [data-hui=Select] > fieldset > datalist > option {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-ttkzpp-display, block);
-  visibility: var(--hui-ttkzpp-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-ttkzpp-position, static);
   top: var(--hui-ttkzpp-top, auto);
@@ -278,6 +271,7 @@
   word-break: var(--hui-ttkzpp-word-break, normal);
   word-spacing: var(--hui-ttkzpp-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-ttkzpp-visibility, visible);
   color: var(--hui-ttkzpp-color, rgb(0, 0, 0));
   background-attachment: var(--hui-ttkzpp-background-attachment, scroll);
   background-clip: var(--hui-ttkzpp-background-clip, border-box);
@@ -317,9 +311,6 @@
   outline-width: var(--hui-ttkzpp-outline-width, 0px);
 }
 [data-hui=Select] > fieldset > div > input {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-cfnytn-display, block);
-  visibility: var(--hui-cfnytn-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-cfnytn-position, static);
   top: var(--hui-cfnytn-top, auto);
@@ -384,6 +375,7 @@
   word-break: var(--hui-cfnytn-word-break, normal);
   word-spacing: var(--hui-cfnytn-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-cfnytn-visibility, visible);
   color: var(--hui-cfnytn-color, rgb(0, 0, 0));
   background-attachment: var(--hui-cfnytn-background-attachment, scroll);
   background-clip: var(--hui-cfnytn-background-clip, border-box);

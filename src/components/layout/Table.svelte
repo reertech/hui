@@ -18,6 +18,7 @@
 
 <Container
   hui="Table"
+  tag="table"
   {active}
   {readonly}
   {disabled}
@@ -29,9 +30,7 @@
   {grid}
   {flex}
 >
-  <table>
-    <slot />
-  </table>
+  <slot />
 </Container>
 
 

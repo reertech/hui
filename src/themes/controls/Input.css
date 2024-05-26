@@ -47,9 +47,6 @@
 [data-hui=Input][data-hui-theme=tria][data-hui-invalid] > input {
 }
 [data-hui=Input] > input {
-  /* LAYOUT-DISPLAY */
-/*  --hui-duueth-display-default: ; */
-/*  --hui-duueth-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-duueth-position-default: ; */
 /*  --hui-duueth-top-default: ; */
@@ -114,6 +111,7 @@
 /*  --hui-duueth-word-break-default: ; */
 /*  --hui-duueth-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-duueth-visibility-default: ; */
 /*  --hui-duueth-color-default: ; */
 /*  --hui-duueth-background-attachment-default: ; */
 /*  --hui-duueth-background-clip-default: ; */

@@ -143,9 +143,6 @@
 [data-hui=Swapper][data-hui-theme=tria][data-hui-invalid] > div {
 }
 [data-hui=Swapper] > button:active {
-  /* LAYOUT-DISPLAY */
-/*  --hui-upezdl-display-default: ; */
-/*  --hui-upezdl-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-upezdl-position-default: ; */
 /*  --hui-upezdl-top-default: ; */
@@ -210,6 +207,7 @@
 /*  --hui-upezdl-word-break-default: ; */
 /*  --hui-upezdl-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-upezdl-visibility-default: ; */
 /*  --hui-upezdl-color-default: ; */
 /*  --hui-upezdl-background-attachment-default: ; */
 /*  --hui-upezdl-background-clip-default: ; */
@@ -249,9 +247,6 @@
 /*  --hui-upezdl-outline-width-default: ; */
 }
 [data-hui=Swapper] > button {
-  /* LAYOUT-DISPLAY */
-/*  --hui-tysnrg-display-default: ; */
-/*  --hui-tysnrg-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-tysnrg-position-default: ; */
 /*  --hui-tysnrg-top-default: ; */
@@ -316,6 +311,7 @@
 /*  --hui-tysnrg-word-break-default: ; */
 /*  --hui-tysnrg-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-tysnrg-visibility-default: ; */
 /*  --hui-tysnrg-color-default: ; */
 /*  --hui-tysnrg-background-attachment-default: ; */
 /*  --hui-tysnrg-background-clip-default: ; */
@@ -355,9 +351,6 @@
 /*  --hui-tysnrg-outline-width-default: ; */
 }
 [data-hui=Swapper] > div {
-  /* LAYOUT-DISPLAY */
-/*  --hui-fmernp-display-default: ; */
-/*  --hui-fmernp-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-fmernp-position-default: ; */
 /*  --hui-fmernp-top-default: ; */
@@ -422,6 +415,7 @@
 /*  --hui-fmernp-word-break-default: ; */
 /*  --hui-fmernp-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-fmernp-visibility-default: ; */
 /*  --hui-fmernp-color-default: ; */
 /*  --hui-fmernp-background-attachment-default: ; */
 /*  --hui-fmernp-background-clip-default: ; */

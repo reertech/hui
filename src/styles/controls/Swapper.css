@@ -1,7 +1,4 @@
 [data-hui=Swapper] > button:active {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-upezdl-display, block);
-  visibility: var(--hui-upezdl-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-upezdl-position, static);
   top: var(--hui-upezdl-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-upezdl-word-break, normal);
   word-spacing: var(--hui-upezdl-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-upezdl-visibility, visible);
   color: var(--hui-upezdl-color, rgb(0, 0, 0));
   background-attachment: var(--hui-upezdl-background-attachment, scroll);
   background-clip: var(--hui-upezdl-background-clip, border-box);
@@ -105,9 +103,6 @@
   outline-width: var(--hui-upezdl-outline-width, 0px);
 }
 [data-hui=Swapper] > button {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-tysnrg-display, block);
-  visibility: var(--hui-tysnrg-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-tysnrg-position, static);
   top: var(--hui-tysnrg-top, auto);
@@ -172,6 +167,7 @@
   word-break: var(--hui-tysnrg-word-break, normal);
   word-spacing: var(--hui-tysnrg-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-tysnrg-visibility, visible);
   color: var(--hui-tysnrg-color, rgb(0, 0, 0));
   background-attachment: var(--hui-tysnrg-background-attachment, scroll);
   background-clip: var(--hui-tysnrg-background-clip, border-box);
@@ -211,9 +207,6 @@
   outline-width: var(--hui-tysnrg-outline-width, 0px);
 }
 [data-hui=Swapper] > div {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-fmernp-display, block);
-  visibility: var(--hui-fmernp-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-fmernp-position, static);
   top: var(--hui-fmernp-top, auto);
@@ -278,6 +271,7 @@
   word-break: var(--hui-fmernp-word-break, normal);
   word-spacing: var(--hui-fmernp-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-fmernp-visibility, visible);
   color: var(--hui-fmernp-color, rgb(0, 0, 0));
   background-attachment: var(--hui-fmernp-background-attachment, scroll);
   background-clip: var(--hui-fmernp-background-clip, border-box);

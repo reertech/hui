@@ -20,26 +20,26 @@ defmodule Builder do
     with file_path <- Path.expand(file_name),
          {:ok, file} <- File.read(file_path),
          [_, ini] <- String.split(file, ~r"\<\!\-\-\s*theme\.ini"),
-         names <- build_names(file_path) do
+         params <- build_params(file_path, ini) do
       ini
       |> String.split(~r"\s*;\s*", trim: true)
-      |> Enum.reduce([], &parse_line(&1, &2, names))
+      |> Enum.reduce([], &parse_line(&1, &2, params))
       |> Enum.reverse()
-      |> build_style(names)
-      |> build_theme(names)
+      |> build_style(params)
+      |> build_theme(params)
     else
       _ -> raise "Broken file"
     end
   end
 
-  defp parse_line(line, acc, names) do
+  defp parse_line(line, acc, params) do
     with [selector, tl] <- String.split(line, ~r"\s*=\s*", trim: true),
          sections <- String.split(tl, ~r"\s*,\s*", trim: true) do
       selector = clear_selector(selector)
 
       String.split(selector, ~r"\s*\|\s*", trim: true)
       |> Enum.reduce(acc, fn selector_part, acc ->
-        prefix = build_prefix(selector, names)
+        prefix = build_prefix(selector, params)
 
         sections =
           sections
@@ -59,7 +59,7 @@ defmodule Builder do
     end
   end
 
-  defp build_style(sections, names) do
+  defp build_style(sections, params) do
     lines =
       sections
       |> Enum.uniq_by(&elem(&1, 1))
@@ -70,18 +70,18 @@ defmodule Builder do
           end)
           |> List.insert_at(0, "  /* #{String.upcase(section)} */")
         end)
-        |> List.insert_at(0, build_selector(nil, nil, selector, names))
+        |> List.insert_at(0, build_selector(nil, nil, selector, params))
         |> List.insert_at(-1, "}")
       end)
 
-    names.path.("styles")
+    params.path.("styles")
     |> File.write!(lines |> Enum.join("\n"))
 
     sections
   end
 
-  defp build_prefix(selector, names) do
-    str = "#{names.name}_#{selector}"
+  defp build_prefix(selector, params) do
+    str = "#{params.name}_#{selector}"
 
     hash =
       :crypto.hash(:sha, str)
@@ -92,8 +92,8 @@ defmodule Builder do
     "--hui-#{hash}"
   end
 
-  defp build_theme(sections, names) do
-    current_theme = parse_theme(names)
+  defp build_theme(sections, params) do
+    current_theme = parse_theme(params)
     defaults = current_theme["default"]["default"]
 
     if current_theme != %{} do
@@ -117,7 +117,7 @@ defmodule Builder do
           end)
           |> List.insert_at(0, "  /* #{String.upcase(section)} */")
         end)
-        |> List.insert_at(0, build_selector(nil, nil, selector, names))
+        |> List.insert_at(0, build_selector(nil, nil, selector, params))
         |> List.insert_at(-1, "}")
       end)
 
@@ -147,7 +147,7 @@ defmodule Builder do
                 lines -> ["  /* #{String.upcase(section)} */" | lines]
               end
             end)
-            |> List.insert_at(0, build_selector(theme, state, selector, names))
+            |> List.insert_at(0, build_selector(theme, state, selector, params))
             |> List.insert_at(-1, "}")
           end)
         end)
@@ -155,10 +155,10 @@ defmodule Builder do
 
     theme = (section_lines ++ default_lines) |> Enum.join("\n")
 
-    names.path.("themes") |> File.write!(theme)
+    params.path.("themes") |> File.write!(theme)
   end
 
-  defp parse_theme(names) do
+  defp parse_theme(params) do
     parse_theme_name = fn selector, section ->
       with false <- selector == "default",
            [theme] <- ~r"(?<=\[data\-hui\-theme\=)[a-z]+(?=\])" |> Regex.run(section) do
@@ -179,8 +179,8 @@ defmodule Builder do
     end
 
     parse_selector = fn section ->
-      case ~r"^\[data\-hui\=(.|\n)+(?=\{)" |> Regex.run(section) do
-        [selector | _] ->
+      case ~r"^\[data\-hui\=[.\n]+(?=\{)" |> Regex.run(section) do
+        [selector] ->
           selector
           |> String.split(~r"\s*,\s*", trim: true)
           |> Enum.map(fn part ->
@@ -200,12 +200,12 @@ defmodule Builder do
       end
     end
 
-    with {:ok, css} <- names.path.("themes") |> File.read(),
+    with {:ok, css} <- params.path.("themes") |> File.read(),
          css <- ~r"(\/\*).+(\*\/)" |> Regex.replace(css, "\n"),
          sections <- css |> String.split(~r"\s*}\s*", trim: true) do
       Enum.reduce(sections, %{}, fn section, acc ->
         with [selector] <- parse_selector.(section),
-             # prefix <- build_prefix(selector, names) <> "-",
+             # prefix <- build_prefix(selector, params) <> "-",
              theme <- parse_theme_name.(selector, section),
              state <- parse_state_name.(selector, section) do
           String.split(section, ~r"\s*(\{|;)\s*", trim: true)
@@ -247,7 +247,7 @@ defmodule Builder do
     |> String.trim()
   end
 
-  defp build_names(file_path) do
+  defp build_params(file_path, ini) do
     name = Path.basename(file_path, ".svelte")
 
     {section, base_path} =
@@ -263,21 +263,25 @@ defmodule Builder do
       |> Path.join()
     end
 
+    themes =
+      case ~r"(?<=themes\:)(.|\n)+(?=\;)" |> Regex.run(ini) do
+        [themes | _] -> 
+
     %{
       name: name,
       path: file_path
     }
   end
 
-  defp build_selector(theme, state, selector, names) do
-    wrap = &("[data-hui=#{names.name}]#{&1} #{selector} {")
+  defp build_selector(theme, state, selector, params) do
+    wrap = &("[data-hui=#{params.name}]#{&1} #{selector} {")
 
     cond do
       selector |> String.contains?(["|", ","]) ->
         String.split(selector, ~r"\s*(\||,)\s*", trim: true)
         |> Enum.uniq()
         |> Enum.map(fn part ->
-          build_selector(theme, state, part, names)
+          build_selector(theme, state, part, params)
           |> String.trim_trailing(" {")
         end)
         |> Enum.join(",\n")

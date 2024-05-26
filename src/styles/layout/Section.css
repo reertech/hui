@@ -1,7 +1,4 @@
 [data-hui=Section] > section {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-lqzmev-display, block);
-  visibility: var(--hui-lqzmev-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-lqzmev-position, static);
   top: var(--hui-lqzmev-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-lqzmev-word-break, normal);
   word-spacing: var(--hui-lqzmev-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-lqzmev-visibility, visible);
   color: var(--hui-lqzmev-color, rgb(0, 0, 0));
   background-attachment: var(--hui-lqzmev-background-attachment, scroll);
   background-clip: var(--hui-lqzmev-background-clip, border-box);

@@ -3,6 +3,7 @@
   import "../../styles/layout/DataTable.css"
   import Container from "../Container.svelte"
   import Grid from "../Grid.svelte"
+  import Flex from "../Flex.svelte"
   import Table from "./Table.svelte"
 
   export let active = null
@@ -32,10 +33,12 @@
   {invalid}
   {theme}
   {classes}
-  {grid}
   {flex}
+  {grid}
 >
-  <Table>
+  <Table
+    grid={{templateColumns: "repeat(1000, max-content)"}}
+  >
     <Grid
       tag="thead"
       templateColumns="subgrid"
@@ -55,19 +58,19 @@
             <slot name="thBefore" />
           {/if}
           {#if $$slots.thFirst}
-            <th>
+            <Flex tag="th">
               <slot name="thFirst" />
-            </th>
+            </Flex>
           {/if}
           {#each cols as col, colIdx}
-            <th>
+            <Flex tag="th">
               <slot name="th" {col} {colIdx} />
-            </th>
+            </Flex>
           {/each}
           {#if $$slots.thLast}
-            <th>
+            <Flex tag="th">
               <slot name="thLast" />
-            </th>
+            </Flex>
           {/if}
           {#if $$slots.thAfter}
             <slot name="thAfter" />
@@ -101,19 +104,19 @@
                 <slot name="tdBefore" {rowIdx} {row} />
               {/if}
               {#if $$slots.tdFirst}
-                <td>
+                <Flex tag="td">
                   <slot name="tdFirst" {rowIdx} {row} />
-                </td>
+                </Flex>
               {/if}
               {#each cols as col, colIdx}
-                <td>
+                <Flex tag="td">
                   <slot name="td" {rowIdx} {row} {col} {colIdx} />
-                </td>
+                </Flex>
               {/each}
               {#if $$slots.tdLast}
-                <td>
+                <Flex tag="td">
                   <slot name="tdLast" {rowIdx} {row} />
-                </td>
+                </Flex>
               {/if}
               {#if $$slots.tdAfter}
                 <slot name="tdAfter" {rowIdx} {row} />
@@ -130,10 +133,10 @@
 </Container>
 
 <!-- theme.ini
-  > data > table = common, grid;
-  > data > table > tbody,
-  > data > table > thead,
-  > data > table > * > tr = common;
-  > data > table > tbody > tr > td,
-  > data > table > thead > tr > th = common, grid;
+  > table = common, grid;
+  > table > tbody,
+  > table > thead,
+  > table > * > tr = common, grid;
+  > table > tbody > tr > td,
+  > table > thead > tr > th = common;
 -->

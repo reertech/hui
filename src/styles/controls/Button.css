@@ -2,9 +2,6 @@
 [data-hui=Button] > button:hover,
 [data-hui=Button] > button:active,
 [data-hui=Button] > button:focus {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-zsnfqz-display, block);
-  visibility: var(--hui-zsnfqz-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-zsnfqz-position, static);
   top: var(--hui-zsnfqz-top, auto);
@@ -69,6 +66,7 @@
   word-break: var(--hui-zsnfqz-word-break, normal);
   word-spacing: var(--hui-zsnfqz-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-zsnfqz-visibility, visible);
   color: var(--hui-zsnfqz-color, rgb(0, 0, 0));
   background-attachment: var(--hui-zsnfqz-background-attachment, scroll);
   background-clip: var(--hui-zsnfqz-background-clip, border-box);

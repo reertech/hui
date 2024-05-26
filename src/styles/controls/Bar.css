@@ -1,7 +1,4 @@
 [data-hui=Bar] > figure {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-zoadiu-display, block);
-  visibility: var(--hui-zoadiu-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-zoadiu-position, static);
   top: var(--hui-zoadiu-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-zoadiu-word-break, normal);
   word-spacing: var(--hui-zoadiu-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-zoadiu-visibility, visible);
   color: var(--hui-zoadiu-color, rgb(0, 0, 0));
   background-attachment: var(--hui-zoadiu-background-attachment, scroll);
   background-clip: var(--hui-zoadiu-background-clip, border-box);

@@ -47,9 +47,6 @@
 [data-hui=Bar][data-hui-theme=tria][data-hui-invalid] > figure {
 }
 [data-hui=Bar] > figure {
-  /* LAYOUT-DISPLAY */
-/*  --hui-zoadiu-display-default: ; */
-/*  --hui-zoadiu-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-zoadiu-position-default: ; */
 /*  --hui-zoadiu-top-default: ; */
@@ -114,6 +111,7 @@
 /*  --hui-zoadiu-word-break-default: ; */
 /*  --hui-zoadiu-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-zoadiu-visibility-default: ; */
 /*  --hui-zoadiu-color-default: ; */
 /*  --hui-zoadiu-background-attachment-default: ; */
 /*  --hui-zoadiu-background-clip-default: ; */

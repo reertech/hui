@@ -1,7 +1,4 @@
 [data-hui=Badge] > strong {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-xqbzbd-display, block);
-  visibility: var(--hui-xqbzbd-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-xqbzbd-position, static);
   top: var(--hui-xqbzbd-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-xqbzbd-word-break, normal);
   word-spacing: var(--hui-xqbzbd-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-xqbzbd-visibility, visible);
   color: var(--hui-xqbzbd-color, rgb(0, 0, 0));
   background-attachment: var(--hui-xqbzbd-background-attachment, scroll);
   background-clip: var(--hui-xqbzbd-background-clip, border-box);

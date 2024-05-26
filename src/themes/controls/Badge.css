@@ -47,9 +47,6 @@
 [data-hui=Badge][data-hui-theme=tria][data-hui-invalid] > strong {
 }
 [data-hui=Badge] > strong {
-  /* LAYOUT-DISPLAY */
-/*  --hui-xqbzbd-display-default: ; */
-/*  --hui-xqbzbd-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-xqbzbd-position-default: ; */
 /*  --hui-xqbzbd-top-default: ; */
@@ -114,6 +111,7 @@
 /*  --hui-xqbzbd-word-break-default: ; */
 /*  --hui-xqbzbd-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-xqbzbd-visibility-default: ; */
 /*  --hui-xqbzbd-color-default: ; */
 /*  --hui-xqbzbd-background-attachment-default: ; */
 /*  --hui-xqbzbd-background-clip-default: ; */

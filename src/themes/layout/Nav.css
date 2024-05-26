@@ -47,9 +47,6 @@
 [data-hui=Nav][data-hui-theme=tria][data-hui-invalid] > nav {
 }
 [data-hui=Nav] > nav {
-  /* LAYOUT-DISPLAY */
-/*  --hui-rzdnvl-display-default: ; */
-/*  --hui-rzdnvl-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-rzdnvl-position-default: ; */
 /*  --hui-rzdnvl-top-default: ; */
@@ -114,6 +111,7 @@
 /*  --hui-rzdnvl-word-break-default: ; */
 /*  --hui-rzdnvl-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-rzdnvl-visibility-default: ; */
 /*  --hui-rzdnvl-color-default: ; */
 /*  --hui-rzdnvl-background-attachment-default: ; */
 /*  --hui-rzdnvl-background-clip-default: ; */

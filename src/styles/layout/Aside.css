@@ -1,7 +1,4 @@
 [data-hui=Aside] > aside {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-ghfodh-display, block);
-  visibility: var(--hui-ghfodh-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-ghfodh-position, static);
   top: var(--hui-ghfodh-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-ghfodh-word-break, normal);
   word-spacing: var(--hui-ghfodh-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-ghfodh-visibility, visible);
   color: var(--hui-ghfodh-color, rgb(0, 0, 0));
   background-attachment: var(--hui-ghfodh-background-attachment, scroll);
   background-clip: var(--hui-ghfodh-background-clip, border-box);

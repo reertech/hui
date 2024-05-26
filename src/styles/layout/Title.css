@@ -1,7 +1,4 @@
 [data-hui=Title] > title {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-pfttea-display, block);
-  visibility: var(--hui-pfttea-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-pfttea-position, static);
   top: var(--hui-pfttea-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-pfttea-word-break, normal);
   word-spacing: var(--hui-pfttea-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-pfttea-visibility, visible);
   color: var(--hui-pfttea-color, rgb(0, 0, 0));
   background-attachment: var(--hui-pfttea-background-attachment, scroll);
   background-clip: var(--hui-pfttea-background-clip, border-box);

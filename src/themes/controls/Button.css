@@ -277,9 +277,6 @@
 [data-hui=Button][data-hui-theme=tria][data-hui-invalid] > button:focus {
 }
 [data-hui=Button] > button {
-  /* LAYOUT-DISPLAY */
-/*  --hui-zsnfqz-display-default: ; */
-/*  --hui-zsnfqz-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-zsnfqz-position-default: ; */
 /*  --hui-zsnfqz-top-default: ; */
@@ -344,6 +341,7 @@
 /*  --hui-zsnfqz-word-break-default: ; */
 /*  --hui-zsnfqz-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-zsnfqz-visibility-default: ; */
 /*  --hui-zsnfqz-color-default: ; */
 /*  --hui-zsnfqz-background-attachment-default: ; */
 /*  --hui-zsnfqz-background-clip-default: ; */
@@ -383,9 +381,6 @@
 /*  --hui-zsnfqz-outline-width-default: ; */
 }
 [data-hui=Button] > button:hover {
-  /* LAYOUT-DISPLAY */
-/*  --hui-zsnfqz-display-default: ; */
-/*  --hui-zsnfqz-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-zsnfqz-position-default: ; */
 /*  --hui-zsnfqz-top-default: ; */
@@ -450,6 +445,7 @@
 /*  --hui-zsnfqz-word-break-default: ; */
 /*  --hui-zsnfqz-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-zsnfqz-visibility-default: ; */
 /*  --hui-zsnfqz-color-default: ; */
 /*  --hui-zsnfqz-background-attachment-default: ; */
 /*  --hui-zsnfqz-background-clip-default: ; */
@@ -489,9 +485,6 @@
 /*  --hui-zsnfqz-outline-width-default: ; */
 }
 [data-hui=Button] > button:active {
-  /* LAYOUT-DISPLAY */
-/*  --hui-zsnfqz-display-default: ; */
-/*  --hui-zsnfqz-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-zsnfqz-position-default: ; */
 /*  --hui-zsnfqz-top-default: ; */
@@ -556,6 +549,7 @@
 /*  --hui-zsnfqz-word-break-default: ; */
 /*  --hui-zsnfqz-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-zsnfqz-visibility-default: ; */
 /*  --hui-zsnfqz-color-default: ; */
 /*  --hui-zsnfqz-background-attachment-default: ; */
 /*  --hui-zsnfqz-background-clip-default: ; */
@@ -595,9 +589,6 @@
 /*  --hui-zsnfqz-outline-width-default: ; */
 }
 [data-hui=Button] > button:focus {
-  /* LAYOUT-DISPLAY */
-/*  --hui-zsnfqz-display-default: ; */
-/*  --hui-zsnfqz-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-zsnfqz-position-default: ; */
 /*  --hui-zsnfqz-top-default: ; */
@@ -662,6 +653,7 @@
 /*  --hui-zsnfqz-word-break-default: ; */
 /*  --hui-zsnfqz-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-zsnfqz-visibility-default: ; */
 /*  --hui-zsnfqz-color-default: ; */
 /*  --hui-zsnfqz-background-attachment-default: ; */
 /*  --hui-zsnfqz-background-clip-default: ; */

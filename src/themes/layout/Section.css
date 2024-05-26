@@ -47,9 +47,6 @@
 [data-hui=Section][data-hui-theme=tria][data-hui-invalid] > section {
 }
 [data-hui=Section] > section {
-  /* LAYOUT-DISPLAY */
-/*  --hui-lqzmev-display-default: ; */
-/*  --hui-lqzmev-visibility-default: ; */
   /* LAYOUT-POSITION */
 /*  --hui-lqzmev-position-default: ; */
 /*  --hui-lqzmev-top-default: ; */
@@ -114,6 +111,7 @@
 /*  --hui-lqzmev-word-break-default: ; */
 /*  --hui-lqzmev-word-spacing-default: ; */
   /* APPERANCE */
+/*  --hui-lqzmev-visibility-default: ; */
 /*  --hui-lqzmev-color-default: ; */
 /*  --hui-lqzmev-background-attachment-default: ; */
 /*  --hui-lqzmev-background-clip-default: ; */

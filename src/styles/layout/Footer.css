@@ -1,7 +1,4 @@
 [data-hui=Footer] > footer {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-krvbvh-display, block);
-  visibility: var(--hui-krvbvh-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-krvbvh-position, static);
   top: var(--hui-krvbvh-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-krvbvh-word-break, normal);
   word-spacing: var(--hui-krvbvh-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-krvbvh-visibility, visible);
   color: var(--hui-krvbvh-color, rgb(0, 0, 0));
   background-attachment: var(--hui-krvbvh-background-attachment, scroll);
   background-clip: var(--hui-krvbvh-background-clip, border-box);

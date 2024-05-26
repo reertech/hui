@@ -2,7 +2,7 @@
   import "../styles/Container.css"
 
   export let hui = null
-  export let tag = "data"
+  export let tag = null
   export let active = null
   export let readonly = null
   export let disabled = null
@@ -14,6 +14,7 @@
   export let grid = null
   export let flex = null
 
+  $: target = tag === null ? "child" : "self"
   $: isGrid = !flex && grid && typeof grid === "object"
   $: isFlex = !grid && flex && typeof flex === "object"
   $: g = !isGrid ? {} : { display: "grid", ...grid }
@@ -21,7 +22,7 @@
 </script>
 
 <svelte:element
-  this={tag}
+  this={tag || "data"}
   data-hui={hui || null}
 
   data-hui-theme={theme || null}
@@ -35,6 +36,7 @@
   hidden={hidden || null}
 
   data-hui-grid={g.display || null}
+  data-hui-grid-target={isGrid && target || null}
   data-hui-grid-justify-items={g.justifyItems || null}
   data-hui-grid-align-items={g.alignItems || null}
   data-hui-grid-justify-content={g.justifyContent || null}
@@ -53,6 +55,7 @@
   style:grid-auto-columns={g.autoColumns || null}
 
   data-hui-flex={f.display || null}
+  data-hui-flex-target={isFlex && target || null}
   data-hui-flex-direction={f.direction || null}
   data-hui-flex-wrap={f.wrap || null}
   data-hui-flex-justify-content={f.justifyContent || null}

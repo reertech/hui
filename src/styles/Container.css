@@ -2,8 +2,8 @@ data[data-hui] {
   display: contents;
 }
 
-data[data-hui-flex] > *,
-[data-hui-flex]:not(data) {
+[data-hui-flex][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex][data-hui-flex-target=self]:not(#huiHack) {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -11,113 +11,113 @@ data[data-hui-flex] > *,
   align-items: stretch;
   align-content: stretch;
 }
-data[data-hui-flex=inline-flex] > *,
-[data-hui-flex=inline-flex]:not(data) {
+[data-hui-flex=inline-flex][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex=inline-flex][data-hui-flex-target=self]:not(#huiHack) {
   display: inline-flex;
 }
-data[data-hui-flex-direction=row] > *,
-[data-hui-flex-direction=row]:not(data) {
+[data-hui-flex-direction=row][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-direction=row][data-hui-flex-target=self]:not(#huiHack) {
   flex-direction: row;
 }
-data[data-hui-flex-direction=row-reverse] > *,
-[data-hui-flex-direction=row-reverse]:not(data) {
+[data-hui-flex-direction=row-reverse][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-direction=row-reverse][data-hui-flex-target=self]:not(#huiHack) {
   flex-direction: row-reverse;
 }
-data[data-hui-flex-direction=column] > *,
-[data-hui-flex-direction=column]:not(data) {
+[data-hui-flex-direction=column][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-direction=column][data-hui-flex-target=self]:not(#huiHack) {
   flex-direction: column;
 }
-data[data-hui-flex-direction=column-reverse] > *,
-[data-hui-flex-direction=column-reverse]:not(data) {
+[data-hui-flex-direction=column-reverse][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-direction=column-reverse][data-hui-flex-target=self]:not(#huiHack) {
   flex-direction: column-reverse;
 }
-data[data-hui-flex-wrap=nowrap] > *,
-[data-hui-flex-wrap=nowrap]:not(data) {
+[data-hui-flex-wrap=nowrap][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-wrap=nowrap][data-hui-flex-target=self]:not(#huiHack) {
   flex-wrap: nowrap;
 }
-data[data-hui-flex-wrap=wrap] > *,
-[data-hui-flex-wrap=wrap]:not(data) {
+[data-hui-flex-wrap=wrap][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-wrap=wrap][data-hui-flex-target=self]:not(#huiHack) {
   flex-wrap: wrap;
 }
-data[data-hui-flex-wrap=wrap-reverse] > *,
-[data-hui-flex-wrap=wrap-reverse]:not(data) {
+[data-hui-flex-wrap=wrap-reverse][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-wrap=wrap-reverse][data-hui-flex-target=self]:not(#huiHack) {
   flex-wrap: wrap-reverse;
 }
-data[data-hui-flex-justify-content=flex-start] > *,
-[data-hui-flex-justify-content=flex-start]:not(data) {
+[data-hui-flex-justify-content=flex-start][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-justify-content=flex-start][data-hui-flex-target=self]:not(#huiHack) {
   justify-content: flex-start;
 }
-data[data-hui-flex-justify-content=flex-end] > *,
-[data-hui-flex-justify-content=flex-end]:not(data) {
+[data-hui-flex-justify-content=flex-end][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-justify-content=flex-end][data-hui-flex-target=self]:not(#huiHack) {
   justify-content: flex-end;
 }
-data[data-hui-flex-justify-content=center] > *,
-[data-hui-flex-justify-content=center]:not(data) {
+[data-hui-flex-justify-content=center][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-justify-content=center][data-hui-flex-target=self]:not(#huiHack) {
   justify-content: center;
 }
-data[data-hui-flex-justify-content=space-between] > *,
-[data-hui-flex-justify-content=space-between]:not(data) {
+[data-hui-flex-justify-content=space-between][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-justify-content=space-between][data-hui-flex-target=self]:not(#huiHack) {
   justify-content: space-between;
 }
-data[data-hui-flex-justify-content=space-around] > *,
-[data-hui-flex-justify-content=space-around]:not(data) {
+[data-hui-flex-justify-content=space-around][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-justify-content=space-around][data-hui-flex-target=self]:not(#huiHack) {
   justify-content: space-around;
 }
-data[data-hui-flex-justify-content=space-evenly] > *,
-[data-hui-flex-justify-content=space-evenly]:not(data) {
+[data-hui-flex-justify-content=space-evenly][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-justify-content=space-evenly][data-hui-flex-target=self]:not(#huiHack) {
   justify-content: space-evenly;
 }
-data[data-hui-flex-align-items=flex-start] > *,
-[data-hui-flex-align-items=flex-start]:not(data) {
+[data-hui-flex-align-items=flex-start][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-items=flex-start][data-hui-flex-target=self]:not(#huiHack) {
   align-items: flex-start;
 }
-data[data-hui-flex-align-items=flex-end] > *,
-[data-hui-flex-align-items=flex-end]:not(data) {
+[data-hui-flex-align-items=flex-end][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-items=flex-end][data-hui-flex-target=self]:not(#huiHack) {
   align-items: flex-end;
 }
-data[data-hui-flex-align-items=center] > *,
-[data-hui-flex-align-items=center]:not(data) {
+[data-hui-flex-align-items=center][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-items=center][data-hui-flex-target=self]:not(#huiHack) {
   align-items: center;
 }
-data[data-hui-flex-align-items=baseline] > *,
-[data-hui-flex-align-items=baseline]:not(data) {
+[data-hui-flex-align-items=baseline][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-items=baseline][data-hui-flex-target=self]:not(#huiHack) {
   align-items: baseline;
 }
-data[data-hui-flex-align-items=stretch] > *,
-[data-hui-flex-align-items=stretch]:not(data) {
+[data-hui-flex-align-items=stretch][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-items=stretch][data-hui-flex-target=self]:not(#huiHack) {
   align-items: stretch;
 }
-data[data-hui-flex-align-context=flex-start] > *,
-[data-hui-flex-align-context=flex-start]:not(data) {
+[data-hui-flex-align-context=flex-start][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-context=flex-start][data-hui-flex-target=self]:not(#huiHack) {
   align-content: flex-start;
 }
-data[data-hui-flex-align-context=flex-end] > *,
-[data-hui-flex-align-context=flex-end]:not(data) {
+[data-hui-flex-align-context=flex-end][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-context=flex-end][data-hui-flex-target=self]:not(#huiHack) {
   align-content: flex-end;
 }
-data[data-hui-flex-align-context=center] > *,
-[data-hui-flex-align-context=center]:not(data) {
+[data-hui-flex-align-context=center][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-context=center][data-hui-flex-target=self]:not(#huiHack) {
   align-content: center;
 }
-data[data-hui-flex-align-context=space-between] > *,
-[data-hui-flex-align-context=space-between]:not(data) {
+[data-hui-flex-align-context=space-between][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-context=space-between][data-hui-flex-target=self]:not(#huiHack) {
   align-content: space-between;
 }
-data[data-hui-flex-align-context=space-around] > *,
-[data-hui-flex-align-context=space-around]:not(data) {
+[data-hui-flex-align-context=space-around][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-context=space-around][data-hui-flex-target=self]:not(#huiHack) {
   align-content: space-around;
 }
-data[data-hui-flex-align-context=space-evenly] > *,
-[data-hui-flex-align-context=space-evenly]:not(data) {
+[data-hui-flex-align-context=space-evenly][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-context=space-evenly][data-hui-flex-target=self]:not(#huiHack) {
   align-content: space-evenly;
 }
-data[data-hui-flex-align-context=stretch] > *,
-[data-hui-flex-align-context=stretch]:not(data) {
+[data-hui-flex-align-context=stretch][data-hui-flex-target=child] > *:not(#huiHack),
+[data-hui-flex-align-context=stretch][data-hui-flex-target=self]:not(#huiHack) {
   align-content: stretch;
 }
 
-data[data-hui-grid] > *,
-[data-hui-grid]:not(data) {
+[data-hui-grid][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid][data-hui-grid-target=self]:not(#huiHack) {
   display: grid;
   justify-items: stretch;
   align-items: stretch;
@@ -125,115 +125,141 @@ data[data-hui-grid] > *,
   align-content: stretch;
   grid-auto-flow: row;
 }
-data[data-hui-grid=inline-grid] > *,
-[data-hui-grid=inline-grid]:not(data) {
+[data-hui-grid=inline-grid][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid=inline-grid][data-hui-grid-target=self]:not(#huiHack) {
   display: inline-grid;
 }
-data[data-hui-grid=subgrid] > *,
-[data-hui-grid=subgrid]:not(data) {
+[data-hui-grid=subgrid][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid=subgrid][data-hui-grid-target=self]:not(#huiHack) {
   display: subgrid;
 }
-data[data-hui-grid-justify-items=start] > *,
-[data-hui-grid-justify-items=start]:not(data) {
+[data-hui-grid-justify-items=start][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-items=start][data-hui-grid-target=self]:not(#huiHack) {
   justify-items: start;
 }
-data[data-hui-grid-justify-items=end] > *,
-[data-hui-grid-justify-items=end]:not(data) {
+[data-hui-grid-justify-items=end][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-items=end][data-hui-grid-target=self]:not(#huiHack) {
   justify-items: end;
 }
-data[data-hui-grid-justify-items=center] > *,
-[data-hui-grid-justify-items=center]:not(data) {
+[data-hui-grid-justify-items=center][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-items=center][data-hui-grid-target=self]:not(#huiHack) {
   justify-items: center;
 }
-data[data-hui-grid-justify-items=stretch] > *,
-[data-hui-grid-justify-items=stretch]:not(data) {
+[data-hui-grid-justify-items=stretch][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-items=stretch][data-hui-grid-target=self]:not(#huiHack) {
   justify-items: stretch;
 }
-data[data-hui-grid-align-items=start] > *,
-[data-hui-grid-align-items=start]:not(data) {
+[data-hui-grid-align-items=start][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-items=start][data-hui-grid-target=self]:not(#huiHack) {
   align-items: start;
 }
-data[data-hui-grid-align-items=end] > *,
-[data-hui-grid-align-items=end]:not(data) {
+[data-hui-grid-align-items=end][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-items=end][data-hui-grid-target=self]:not(#huiHack) {
   align-items: end;
 }
-data[data-hui-grid-align-items=center] > *,
-[data-hui-grid-align-items=center]:not(data) {
+[data-hui-grid-align-items=center][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-items=center][data-hui-grid-target=self]:not(#huiHack) {
   align-items: center;
 }
-data[data-hui-grid-align-items=stretch] > *,
-[data-hui-grid-align-items=stretch]:not(data) {
+[data-hui-grid-align-items=stretch][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-items=stretch][data-hui-grid-target=self]:not(#huiHack) {
   align-items: stretch;
 }
-data[data-hui-grid-justify-content=start] > *,
-[data-hui-grid-justify-content=start]:not(data) {
+[data-hui-grid-justify-content=start][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-content=start][data-hui-grid-target=self]:not(#huiHack) {
   justify-content: start;
 }
-data[data-hui-grid-justify-content=end] > *,
-[data-hui-grid-justify-content=end]:not(data) {
+[data-hui-grid-justify-content=end][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-content=end][data-hui-grid-target=self]:not(#huiHack) {
   justify-content: end;
 }
-data[data-hui-grid-justify-content=center] > *,
-[data-hui-grid-justify-content=center]:not(data) {
+[data-hui-grid-justify-content=center][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-content=center][data-hui-grid-target=self]:not(#huiHack) {
   justify-content: center;
 }
-data[data-hui-grid-justify-content=stretch] > *,
-[data-hui-grid-justify-content=stretch]:not(data) {
+[data-hui-grid-justify-content=stretch][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-content=stretch][data-hui-grid-target=self]:not(#huiHack) {
   justify-content: stretch;
 }
-data[data-hui-grid-justify-content=space-around] > *,
-[data-hui-grid-justify-content=space-around]:not(data) {
+[data-hui-grid-justify-content=space-around][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-content=space-around][data-hui-grid-target=self]:not(#huiHack) {
   justify-content: space-around;
 }
-data[data-hui-grid-justify-content=space-between] > *,
-[data-hui-grid-justify-content=space-between]:not(data) {
+[data-hui-grid-justify-content=space-between][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-content=space-between][data-hui-grid-target=self]:not(#huiHack) {
   justify-content: space-between;
 }
-data[data-hui-grid-justify-content=space-evenly] > *,
-[data-hui-grid-justify-content=space-evenly]:not(data) {
+[data-hui-grid-justify-content=space-evenly][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-justify-content=space-evenly][data-hui-grid-target=self]:not(#huiHack) {
   justify-content: space-evenly;
 }
-data[data-hui-grid-align-content=start] > *,
-[data-hui-grid-align-content=start]:not(data) {
+[data-hui-grid-align-content=start][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-content=start][data-hui-grid-target=self]:not(#huiHack) {
   align-content: start;
 }
-data[data-hui-grid-align-content=end] > *,
-[data-hui-grid-align-content=end]:not(data) {
+[data-hui-grid-align-content=end][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-content=end][data-hui-grid-target=self]:not(#huiHack) {
   align-content: end;
 }
-data[data-hui-grid-align-content=center] > *,
-[data-hui-grid-align-content=center]:not(data) {
+[data-hui-grid-align-content=center][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-content=center][data-hui-grid-target=self]:not(#huiHack) {
   align-content: center;
 }
-data[data-hui-grid-align-content=stretch] > *,
-[data-hui-grid-align-content=stretch]:not(data) {
+[data-hui-grid-align-content=stretch][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-content=stretch][data-hui-grid-target=self]:not(#huiHack) {
   align-content: stretch;
 }
-data[data-hui-grid-align-content=space-around] > *,
-[data-hui-grid-align-content=space-around]:not(data) {
+[data-hui-grid-align-content=space-around][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-content=space-around][data-hui-grid-target=self]:not(#huiHack) {
   align-content: space-around;
 }
-data[data-hui-grid-align-content=space-between] > *,
-[data-hui-grid-align-content=space-between]:not(data) {
+[data-hui-grid-align-content=space-between][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-content=space-between][data-hui-grid-target=self]:not(#huiHack) {
   align-content: space-between;
 }
-data[data-hui-grid-align-content=space-evenly] > *,
-[data-hui-grid-align-content=space-evenly]:not(data) {
+[data-hui-grid-align-content=space-evenly][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-align-content=space-evenly][data-hui-grid-target=self]:not(#huiHack) {
   align-content: space-evenly;
 }
-data[data-hui-grid-auto-flow='row dense'] > *,
-[data-hui-grid-auto-flow='row dense']:not(data) {
+[data-hui-grid-auto-flow='row dense'][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-auto-flow='row dense'][data-hui-grid-target=self]:not(#huiHack) {
   grid-auto-flow: row dense;
 }
-data[data-hui-grid-auto-flow='column dense'] > *,
-[data-hui-grid-auto-flow='column dense']:not(data) {
+[data-hui-grid-auto-flow='column dense'][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-auto-flow='column dense'][data-hui-grid-target=self]:not(#huiHack) {
   grid-auto-flow: column dense;
 }
-data[data-hui-grid-auto-flow=row] > *,
-[data-hui-grid-auto-flow=row]:not(data) {
+[data-hui-grid-auto-flow=row][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-auto-flow=row][data-hui-grid-target=self]:not(#huiHack) {
   grid-auto-flow: row;
 }
-data[data-hui-grid-auto-flow=column] > *,
-[data-hui-grid-auto-flow=column]:not(data) {
+[data-hui-grid-auto-flow=column][data-hui-grid-target=child] > *:not(#huiHack),
+[data-hui-grid-auto-flow=column][data-hui-grid-target=self]:not(#huiHack) {
   grid-auto-flow: column;
+}
+[data-hui-grid][data-hui-grid-target=child]:not(#huiHack) {
+  grid-template-rows: initial;
+  grid-template-columns: initial;
+  grid-column-start: initial;
+  grid-column-end: initial;
+  grid-row-start: initial;
+  grid-row-end: initial;
+  grid-template-areas: initial;
+  row-gap: initial;
+  column-gap: initial;
+  grid-auto-rows: initial;
+  grid-auto-columns: initial;
+}
+[data-hui-grid][data-hui-grid-target=child] > *:not(#huiHack) {
+  grid-template-rows: inherit;
+  grid-template-columns: inherit;
+  grid-column-start: inherit;
+  grid-column-end: inherit;
+  grid-row-start: inherit;
+  grid-row-end: inherit;
+  grid-template-areas: inherit;
+  row-gap: inherit;
+  column-gap: inherit;
+  grid-auto-rows: inherit;
+  grid-auto-columns: inherit;
 }

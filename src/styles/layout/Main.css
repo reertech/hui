@@ -1,7 +1,4 @@
 [data-hui=Main] > main {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-ecmfij-display, block);
-  visibility: var(--hui-ecmfij-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-ecmfij-position, static);
   top: var(--hui-ecmfij-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-ecmfij-word-break, normal);
   word-spacing: var(--hui-ecmfij-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-ecmfij-visibility, visible);
   color: var(--hui-ecmfij-color, rgb(0, 0, 0));
   background-attachment: var(--hui-ecmfij-background-attachment, scroll);
   background-clip: var(--hui-ecmfij-background-clip, border-box);

@@ -1,7 +1,4 @@
 [data-hui=Header] > header {
-  /* LAYOUT-DISPLAY */
-  display: var(--hui-ivbczm-display, block);
-  visibility: var(--hui-ivbczm-visibility, visible);
   /* LAYOUT-POSITION */
   position: var(--hui-ivbczm-position, static);
   top: var(--hui-ivbczm-top, auto);
@@ -66,6 +63,7 @@
   word-break: var(--hui-ivbczm-word-break, normal);
   word-spacing: var(--hui-ivbczm-word-spacing, 0px);
   /* APPERANCE */
+  visibility: var(--hui-ivbczm-visibility, visible);
   color: var(--hui-ivbczm-color, rgb(0, 0, 0));
   background-attachment: var(--hui-ivbczm-background-attachment, scroll);
   background-clip: var(--hui-ivbczm-background-clip, border-box);
