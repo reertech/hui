@@ -10,42 +10,6 @@
 }
 [data-hui=Footer][data-hui-invalid] > footer {
 }
-[data-hui=Footer][data-hui-theme=unua] > footer {
-}
-[data-hui=Footer][data-hui-theme=unua][data-hui-active] > footer {
-}
-[data-hui=Footer][data-hui-theme=unua][data-hui-disabled] > footer {
-}
-[data-hui=Footer][data-hui-theme=unua][data-hui-readonly] > footer {
-}
-[data-hui=Footer][data-hui-theme=unua][data-hui-valid] > footer {
-}
-[data-hui=Footer][data-hui-theme=unua][data-hui-invalid] > footer {
-}
-[data-hui=Footer][data-hui-theme=dua] > footer {
-}
-[data-hui=Footer][data-hui-theme=dua][data-hui-active] > footer {
-}
-[data-hui=Footer][data-hui-theme=dua][data-hui-disabled] > footer {
-}
-[data-hui=Footer][data-hui-theme=dua][data-hui-readonly] > footer {
-}
-[data-hui=Footer][data-hui-theme=dua][data-hui-valid] > footer {
-}
-[data-hui=Footer][data-hui-theme=dua][data-hui-invalid] > footer {
-}
-[data-hui=Footer][data-hui-theme=tria] > footer {
-}
-[data-hui=Footer][data-hui-theme=tria][data-hui-active] > footer {
-}
-[data-hui=Footer][data-hui-theme=tria][data-hui-disabled] > footer {
-}
-[data-hui=Footer][data-hui-theme=tria][data-hui-readonly] > footer {
-}
-[data-hui=Footer][data-hui-theme=tria][data-hui-valid] > footer {
-}
-[data-hui=Footer][data-hui-theme=tria][data-hui-invalid] > footer {
-}
 [data-hui=Footer] > footer {
   /* LAYOUT-POSITION */
 /*  --hui-krvbvh-position-default: ; */

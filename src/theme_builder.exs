@@ -1,6 +1,5 @@
 defmodule Builder do
   # @themes [nil, "unua", "dua", "tria", "kvara", "kvina"]
-  @themes [nil, "unua", "dua", "tria"]
   @states [nil, "active", "disabled", "readonly", "valid", "invalid"]
 
   @prefix_length 6
@@ -122,7 +121,7 @@ defmodule Builder do
       end)
 
     section_lines =
-      Enum.flat_map(@themes, fn theme ->
+      Enum.flat_map(params.themes, fn theme ->
         Enum.flat_map(@states, fn state ->
           Enum.flat_map(sections, fn {selector, _, prefix, sections} ->
             current = current_theme[theme || "default"][state || "default"][selector]
@@ -179,8 +178,8 @@ defmodule Builder do
     end
 
     parse_selector = fn section ->
-      case ~r"^\[data\-hui\=[.\n]+(?=\{)" |> Regex.run(section) do
-        [selector] ->
+      case ~r"^\[data\-hui\=(.|\n)+(?=\{)" |> Regex.run(section) do
+        [selector | _] ->
           selector
           |> String.split(~r"\s*,\s*", trim: true)
           |> Enum.map(fn part ->
@@ -240,13 +239,6 @@ defmodule Builder do
     end
   end
 
-  defp clear_selector(selector) do
-    selector
-    |> String.replace(~r"\s+", " ")
-    |> String.replace(~r"\s*,\s*", ",\n")
-    |> String.trim()
-  end
-
   defp build_params(file_path, ini) do
     name = Path.basename(file_path, ".svelte")
 
@@ -264,13 +256,25 @@ defmodule Builder do
     end
 
     themes =
-      case ~r"(?<=themes\:)(.|\n)+(?=\;)" |> Regex.run(ini) do
-        [themes | _] -> 
+      with [themes] <- ~r"(?<=themes\:)[\w\s,]+(?=\;)" |> Regex.run(ini) do
+        themes = String.split(themes, ~r"(\s*,\s*|\s+)", trim: true)
+        [nil | themes]
+      else
+        _ -> [nil]
+      end
 
     %{
       name: name,
+      themes: themes,
       path: file_path
     }
+  end
+
+  defp clear_selector(selector) do
+    selector
+    |> String.replace(~r"\s+", " ")
+    |> String.replace(~r"\s*,\s*", ",\n")
+    |> String.trim()
   end
 
   defp build_selector(theme, state, selector, params) do
