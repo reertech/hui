@@ -313,11 +313,10 @@ defmodule Builder do
      ]}
   end
 
-  defp build_section("layout-display" = name) do
+  defp build_section("display" = name) do
     {name,
      [
        {"display", "block"},
-       {"visibility", "visible"}
      ]}
   end
 
@@ -382,7 +381,6 @@ defmodule Builder do
 
   defp build_section("layout") do
     [
-      "display",
       "position",
       "sizing",
       "margin",
@@ -439,6 +437,7 @@ defmodule Builder do
   defp build_section("apperance" = name) do
     {name,
      [
+       {"visibility", "visible"},
        {"color", "rgb(0, 0, 0)"},
        {"background-attachment", "scroll"},
        {"background-clip", "border-box"},
@@ -756,6 +755,7 @@ defmodule Builder do
 
   defp build_section("all") do
     [
+      build_section("display"),
       build_section("common"),
       [build_section("grid")],
       [build_section("animation")],

@@ -1,8 +1,9 @@
-[data-hui]:not(#hack) {
+data[data-hui] {
   display: contents;
 }
 
-[data-hui-flex]:not(#hack) {
+data[data-hui-flex] > *,
+[data-hui-flex]:not(data) {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -10,86 +11,113 @@
   align-items: stretch;
   align-content: stretch;
 }
-[data-hui-flex=inline-flex]:not(#hack) {
+data[data-hui-flex=inline-flex] > *,
+[data-hui-flex=inline-flex]:not(data) {
   display: inline-flex;
 }
-[data-hui-flex-direction=row]:not(#hack) {
+data[data-hui-flex-direction=row] > *,
+[data-hui-flex-direction=row]:not(data) {
   flex-direction: row;
 }
-[data-hui-flex-direction=row-reverse]:not(#hack) {
+data[data-hui-flex-direction=row-reverse] > *,
+[data-hui-flex-direction=row-reverse]:not(data) {
   flex-direction: row-reverse;
 }
-[data-hui-flex-direction=column]:not(#hack) {
+data[data-hui-flex-direction=column] > *,
+[data-hui-flex-direction=column]:not(data) {
   flex-direction: column;
 }
-[data-hui-flex-direction=column-reverse]:not(#hack) {
+data[data-hui-flex-direction=column-reverse] > *,
+[data-hui-flex-direction=column-reverse]:not(data) {
   flex-direction: column-reverse;
 }
-[data-hui-flex-wrap=nowrap]:not(#hack) {
+data[data-hui-flex-wrap=nowrap] > *,
+[data-hui-flex-wrap=nowrap]:not(data) {
   flex-wrap: nowrap;
 }
-[data-hui-flex-wrap=wrap]:not(#hack) {
+data[data-hui-flex-wrap=wrap] > *,
+[data-hui-flex-wrap=wrap]:not(data) {
   flex-wrap: wrap;
 }
-[data-hui-flex-wrap=wrap-reverse]:not(#hack) {
+data[data-hui-flex-wrap=wrap-reverse] > *,
+[data-hui-flex-wrap=wrap-reverse]:not(data) {
   flex-wrap: wrap-reverse;
 }
-[data-hui-flex-justify-content=flex-start]:not(#hack) {
+data[data-hui-flex-justify-content=flex-start] > *,
+[data-hui-flex-justify-content=flex-start]:not(data) {
   justify-content: flex-start;
 }
-[data-hui-flex-justify-content=flex-end]:not(#hack) {
+data[data-hui-flex-justify-content=flex-end] > *,
+[data-hui-flex-justify-content=flex-end]:not(data) {
   justify-content: flex-end;
 }
-[data-hui-flex-justify-content=center]:not(#hack) {
+data[data-hui-flex-justify-content=center] > *,
+[data-hui-flex-justify-content=center]:not(data) {
   justify-content: center;
 }
-[data-hui-flex-justify-content=space-between]:not(#hack) {
+data[data-hui-flex-justify-content=space-between] > *,
+[data-hui-flex-justify-content=space-between]:not(data) {
   justify-content: space-between;
 }
-[data-hui-flex-justify-content=space-around]:not(#hack) {
+data[data-hui-flex-justify-content=space-around] > *,
+[data-hui-flex-justify-content=space-around]:not(data) {
   justify-content: space-around;
 }
-[data-hui-flex-justify-content=space-evenly]:not(#hack) {
+data[data-hui-flex-justify-content=space-evenly] > *,
+[data-hui-flex-justify-content=space-evenly]:not(data) {
   justify-content: space-evenly;
 }
-[data-hui-flex-align-items=flex-start]:not(#hack) {
+data[data-hui-flex-align-items=flex-start] > *,
+[data-hui-flex-align-items=flex-start]:not(data) {
   align-items: flex-start;
 }
-[data-hui-flex-align-items=flex-end]:not(#hack) {
+data[data-hui-flex-align-items=flex-end] > *,
+[data-hui-flex-align-items=flex-end]:not(data) {
   align-items: flex-end;
 }
-[data-hui-flex-align-items=center]:not(#hack) {
+data[data-hui-flex-align-items=center] > *,
+[data-hui-flex-align-items=center]:not(data) {
   align-items: center;
 }
-[data-hui-flex-align-items=baseline]:not(#hack) {
+data[data-hui-flex-align-items=baseline] > *,
+[data-hui-flex-align-items=baseline]:not(data) {
   align-items: baseline;
 }
-[data-hui-flex-align-items=stretch]:not(#hack) {
+data[data-hui-flex-align-items=stretch] > *,
+[data-hui-flex-align-items=stretch]:not(data) {
   align-items: stretch;
 }
-[data-hui-flex-align-context=flex-start]:not(#hack) {
+data[data-hui-flex-align-context=flex-start] > *,
+[data-hui-flex-align-context=flex-start]:not(data) {
   align-content: flex-start;
 }
-[data-hui-flex-align-context=flex-end]:not(#hack) {
+data[data-hui-flex-align-context=flex-end] > *,
+[data-hui-flex-align-context=flex-end]:not(data) {
   align-content: flex-end;
 }
-[data-hui-flex-align-context=center]:not(#hack) {
+data[data-hui-flex-align-context=center] > *,
+[data-hui-flex-align-context=center]:not(data) {
   align-content: center;
 }
-[data-hui-flex-align-context=space-between]:not(#hack) {
+data[data-hui-flex-align-context=space-between] > *,
+[data-hui-flex-align-context=space-between]:not(data) {
   align-content: space-between;
 }
-[data-hui-flex-align-context=space-around]:not(#hack) {
+data[data-hui-flex-align-context=space-around] > *,
+[data-hui-flex-align-context=space-around]:not(data) {
   align-content: space-around;
 }
-[data-hui-flex-align-context=space-evenly]:not(#hack) {
+data[data-hui-flex-align-context=space-evenly] > *,
+[data-hui-flex-align-context=space-evenly]:not(data) {
   align-content: space-evenly;
 }
-[data-hui-flex-align-context=stretch]:not(#hack) {
+data[data-hui-flex-align-context=stretch] > *,
+[data-hui-flex-align-context=stretch]:not(data) {
   align-content: stretch;
 }
 
-[data-hui-grid]:not(#hack) {
+data[data-hui-grid] > *,
+[data-hui-grid]:not(data) {
   display: grid;
   justify-items: stretch;
   align-items: stretch;
@@ -97,87 +125,115 @@
   align-content: stretch;
   grid-auto-flow: row;
 }
-[data-hui-grid=inline-grid]:not(#hack) {
+data[data-hui-grid=inline-grid] > *,
+[data-hui-grid=inline-grid]:not(data) {
   display: inline-grid;
 }
-[data-hui-grid=subgrid]:not(#hack) {
+data[data-hui-grid=subgrid] > *,
+[data-hui-grid=subgrid]:not(data) {
   display: subgrid;
 }
-[data-hui-grid-justify-items=start]:not(#hack) {
+data[data-hui-grid-justify-items=start] > *,
+[data-hui-grid-justify-items=start]:not(data) {
   justify-items: start;
 }
-[data-hui-grid-justify-items=end]:not(#hack) {
+data[data-hui-grid-justify-items=end] > *,
+[data-hui-grid-justify-items=end]:not(data) {
   justify-items: end;
 }
-[data-hui-grid-justify-items=center]:not(#hack) {
+data[data-hui-grid-justify-items=center] > *,
+[data-hui-grid-justify-items=center]:not(data) {
   justify-items: center;
 }
-[data-hui-grid-justify-items=stretch]:not(#hack) {
+data[data-hui-grid-justify-items=stretch] > *,
+[data-hui-grid-justify-items=stretch]:not(data) {
   justify-items: stretch;
 }
-[data-hui-grid-align-items=start]:not(#hack) {
+data[data-hui-grid-align-items=start] > *,
+[data-hui-grid-align-items=start]:not(data) {
   align-items: start;
 }
-[data-hui-grid-align-items=end]:not(#hack) {
+data[data-hui-grid-align-items=end] > *,
+[data-hui-grid-align-items=end]:not(data) {
   align-items: end;
 }
-[data-hui-grid-align-items=center]:not(#hack) {
+data[data-hui-grid-align-items=center] > *,
+[data-hui-grid-align-items=center]:not(data) {
   align-items: center;
 }
-[data-hui-grid-align-items=stretch]:not(#hack) {
+data[data-hui-grid-align-items=stretch] > *,
+[data-hui-grid-align-items=stretch]:not(data) {
   align-items: stretch;
 }
-[data-hui-grid-justify-content=start]:not(#hack) {
+data[data-hui-grid-justify-content=start] > *,
+[data-hui-grid-justify-content=start]:not(data) {
   justify-content: start;
 }
-[data-hui-grid-justify-content=end]:not(#hack) {
+data[data-hui-grid-justify-content=end] > *,
+[data-hui-grid-justify-content=end]:not(data) {
   justify-content: end;
 }
-[data-hui-grid-justify-content=center]:not(#hack) {
+data[data-hui-grid-justify-content=center] > *,
+[data-hui-grid-justify-content=center]:not(data) {
   justify-content: center;
 }
-[data-hui-grid-justify-content=stretch]:not(#hack) {
+data[data-hui-grid-justify-content=stretch] > *,
+[data-hui-grid-justify-content=stretch]:not(data) {
   justify-content: stretch;
 }
-[data-hui-grid-justify-content=space-around]:not(#hack) {
+data[data-hui-grid-justify-content=space-around] > *,
+[data-hui-grid-justify-content=space-around]:not(data) {
   justify-content: space-around;
 }
-[data-hui-grid-justify-content=space-between]:not(#hack) {
+data[data-hui-grid-justify-content=space-between] > *,
+[data-hui-grid-justify-content=space-between]:not(data) {
   justify-content: space-between;
 }
-[data-hui-grid-justify-content=space-evenly]:not(#hack) {
+data[data-hui-grid-justify-content=space-evenly] > *,
+[data-hui-grid-justify-content=space-evenly]:not(data) {
   justify-content: space-evenly;
 }
-[data-hui-grid-align-content=start]:not(#hack) {
+data[data-hui-grid-align-content=start] > *,
+[data-hui-grid-align-content=start]:not(data) {
   align-content: start;
 }
-[data-hui-grid-align-content=end]:not(#hack) {
+data[data-hui-grid-align-content=end] > *,
+[data-hui-grid-align-content=end]:not(data) {
   align-content: end;
 }
-[data-hui-grid-align-content=center]:not(#hack) {
+data[data-hui-grid-align-content=center] > *,
+[data-hui-grid-align-content=center]:not(data) {
   align-content: center;
 }
-[data-hui-grid-align-content=stretch]:not(#hack) {
+data[data-hui-grid-align-content=stretch] > *,
+[data-hui-grid-align-content=stretch]:not(data) {
   align-content: stretch;
 }
-[data-hui-grid-align-content=space-around]:not(#hack) {
+data[data-hui-grid-align-content=space-around] > *,
+[data-hui-grid-align-content=space-around]:not(data) {
   align-content: space-around;
 }
-[data-hui-grid-align-content=space-between]:not(#hack) {
+data[data-hui-grid-align-content=space-between] > *,
+[data-hui-grid-align-content=space-between]:not(data) {
   align-content: space-between;
 }
-[data-hui-grid-align-content=space-evenly]:not(#hack) {
+data[data-hui-grid-align-content=space-evenly] > *,
+[data-hui-grid-align-content=space-evenly]:not(data) {
   align-content: space-evenly;
 }
-[data-hui-grid-auto-flow='row dense']:not(#hack) {
+data[data-hui-grid-auto-flow='row dense'] > *,
+[data-hui-grid-auto-flow='row dense']:not(data) {
   grid-auto-flow: row dense;
 }
-[data-hui-grid-auto-flow='column dense']:not(#hack) {
+data[data-hui-grid-auto-flow='column dense'] > *,
+[data-hui-grid-auto-flow='column dense']:not(data) {
   grid-auto-flow: column dense;
 }
-[data-hui-grid-auto-flow=row]:not(#hack) {
+data[data-hui-grid-auto-flow=row] > *,
+[data-hui-grid-auto-flow=row]:not(data) {
   grid-auto-flow: row;
 }
-[data-hui-grid-auto-flow=column]:not(#hack) {
+data[data-hui-grid-auto-flow=column] > *,
+[data-hui-grid-auto-flow=column]:not(data) {
   grid-auto-flow: column;
 }
