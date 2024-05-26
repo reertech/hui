@@ -9,6 +9,8 @@
   export let valid = null
   export let invalid = null
   export let theme = null
+  export let grid = null
+  export let flex = null
 
   let classes = null
   export { classes as class }
@@ -29,6 +31,8 @@
   {invalid}
   {theme}
   {classes}
+  {grid}
+  {flex}
 >
   {#if $$slots.left}
     <slot name="left" />
