@@ -1,4 +1,6 @@
 [data-hui=DataTable] > table {
+  /* APPERANCE */
+  --hui-pvlqdr-background-color: var(--hui-default-background-color);
 }
 [data-hui=DataTable] > table > tbody,
 [data-hui=DataTable] > table > thead,
@@ -11,23 +13,12 @@
   --hui-gdjwdf-padding-right: var(--hui-default-spacer-6);
   --hui-gdjwdf-padding-bottom: var(--hui-default-spacer-6);
   --hui-gdjwdf-padding-left: var(--hui-default-spacer-6);
-  /* APPERANCE */
-  --hui-gdjwdf-border-bottom-color: var(--hui-default-border-color);
-  --hui-gdjwdf-border-bottom-style: var(--hui-default-border-style);
-  --hui-gdjwdf-border-bottom-width: var(--hui-unua-border-width);
-  --hui-gdjwdf-border-bottom-left-radius: var(--hui-default-border-radius-0);
-  --hui-gdjwdf-border-bottom-right-radius: var(--hui-default-border-radius-0);
-  --hui-gdjwdf-border-left-color: var(--hui-default-border-color);
-  --hui-gdjwdf-border-left-style: none;
-  --hui-gdjwdf-border-left-width: var(--hui-default-border-width);
-  --hui-gdjwdf-border-right-color: var(--hui-default-border-color);
-  --hui-gdjwdf-border-right-style: none;
-  --hui-gdjwdf-border-right-width: var(--hui-default-border-width);
-  --hui-gdjwdf-border-top-color: var(--hui-default-border-color);
-  --hui-gdjwdf-border-top-style: none;
-  --hui-gdjwdf-border-top-width: var(--hui-default-border-width);
-  --hui-gdjwdf-border-top-left-radius: var(--hui-default-border-radius-0);
-  --hui-gdjwdf-border-top-right-radius: var(--hui-default-border-radius-0);
+}
+[data-hui=DataTable] > table > tbody > tr + tr,
+[data-hui=DataTable] > table > thead + tbody {
+  --hui-ksqvwn-border-top-width: var(--hui-unua-border-width);
+  --hui-ksqvwn-border-top-style: var(--hui-default-border-style);
+  --hui-ksqvwn-border-top-color: var(--hui-default-border-color);
 }
 [data-hui=DataTable][data-hui-active] > table {
 }
@@ -38,6 +29,9 @@
 [data-hui=DataTable][data-hui-active] > table > tbody > tr > td,
 [data-hui=DataTable][data-hui-active] > table > thead > tr > th {
 }
+[data-hui=DataTable][data-hui-active] > table > tbody > tr + tr,
+[data-hui=DataTable][data-hui-active] > table > thead + tbody {
+}
 [data-hui=DataTable][data-hui-disabled] > table {
 }
 [data-hui=DataTable][data-hui-disabled] > table > tbody,
@@ -46,6 +40,9 @@
 }
 [data-hui=DataTable][data-hui-disabled] > table > tbody > tr > td,
 [data-hui=DataTable][data-hui-disabled] > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-disabled] > table > tbody > tr + tr,
+[data-hui=DataTable][data-hui-disabled] > table > thead + tbody {
 }
 [data-hui=DataTable][data-hui-readonly] > table {
 }
@@ -56,6 +53,9 @@
 [data-hui=DataTable][data-hui-readonly] > table > tbody > tr > td,
 [data-hui=DataTable][data-hui-readonly] > table > thead > tr > th {
 }
+[data-hui=DataTable][data-hui-readonly] > table > tbody > tr + tr,
+[data-hui=DataTable][data-hui-readonly] > table > thead + tbody {
+}
 [data-hui=DataTable][data-hui-valid] > table {
 }
 [data-hui=DataTable][data-hui-valid] > table > tbody,
@@ -65,6 +65,9 @@
 [data-hui=DataTable][data-hui-valid] > table > tbody > tr > td,
 [data-hui=DataTable][data-hui-valid] > table > thead > tr > th {
 }
+[data-hui=DataTable][data-hui-valid] > table > tbody > tr + tr,
+[data-hui=DataTable][data-hui-valid] > table > thead + tbody {
+}
 [data-hui=DataTable][data-hui-invalid] > table {
 }
 [data-hui=DataTable][data-hui-invalid] > table > tbody,
@@ -73,6 +76,9 @@
 }
 [data-hui=DataTable][data-hui-invalid] > table > tbody > tr > td,
 [data-hui=DataTable][data-hui-invalid] > table > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-invalid] > table > tbody > tr + tr,
+[data-hui=DataTable][data-hui-invalid] > table > thead + tbody {
 }
 [data-hui=DataTable] > table {
   /* LAYOUT-POSITION */
@@ -422,4 +428,10 @@
 /*  --hui-gdjwdf-outline-offset-default: ; */
 /*  --hui-gdjwdf-outline-style-default: ; */
 /*  --hui-gdjwdf-outline-width-default: ; */
+}
+[data-hui=DataTable] > table > tbody > tr + tr,
+[data-hui=DataTable] > table > thead + tbody {
+/*  --hui-ksqvwn-border-top-width-default: ; */
+/*  --hui-ksqvwn-border-top-style-default: ; */
+/*  --hui-ksqvwn-border-top-color-default: ; */
 }

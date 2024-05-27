@@ -13,10 +13,13 @@
   export let classes = null
   export let grid = null
   export let flex = null
+  export let scrollY = null
+  export let scrollX = null
 
   $: target = tag === null ? "child" : "self"
   $: isGrid = !flex && grid && typeof grid === "object"
   $: isFlex = !grid && flex && typeof flex === "object"
+  $: isScroll = scrollX || scrollY
   $: g = !isGrid ? {} : { display: "grid", ...grid }
   $: f = !isFlex ? {} : { display: "flex", ...flex }
 </script>
@@ -34,6 +37,10 @@
 
   class={classes || null}
   hidden={hidden || null}
+
+  data-hui-scroll-x={scrollX || null}
+  data-hui-scroll-y={scrollY || null}
+  data-hui-scroll-target={isScroll && target || null}
 
   data-hui-grid={g.display || null}
   data-hui-grid-target={isGrid && target || null}

@@ -347,3 +347,9 @@
   outline-style: var(--hui-gdjwdf-outline-style, none);
   outline-width: var(--hui-gdjwdf-outline-width, 0px);
 }
+[data-hui=DataTable] > table > tbody > tr + tr,
+[data-hui=DataTable] > table > thead + tbody {
+  border-top-width: var(--hui-ksqvwn-border-top-width, initial);
+  border-top-style: var(--hui-ksqvwn-border-top-style, initial);
+  border-top-color: var(--hui-ksqvwn-border-top-color, initial);
+}

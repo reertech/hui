@@ -263,3 +263,35 @@ data[data-hui] {
   grid-auto-rows: inherit;
   grid-auto-columns: inherit;
 }
+[data-hui-scroll-x][data-hui-scroll-target=child] > *:not(#huiHack),
+[data-hui-scroll-x][data-hui-scroll-target=self]:not(#huiHack) {
+  overflow-x: auto;
+}
+[data-hui-scroll-y][data-hui-scroll-target=child] > *:not(#huiHack),
+[data-hui-scroll-y][data-hui-scroll-target=self]:not(#huiHack) {
+  overflow-y: auto;
+}
+[data-hui-scroll-x=hidden][data-hui-scroll-target=child] > *:not(#huiHack),
+[data-hui-scroll-x=hidden][data-hui-scroll-target=self]:not(#huiHack) {
+  overflow-x: hidden;
+}
+[data-hui-scroll-y=hidden][data-hui-scroll-target=child] > *:not(#huiHack),
+[data-hui-scroll-y=hidden][data-hui-scroll-target=self]:not(#huiHack) {
+  overflow-y: hidden;
+}
+[data-hui-scroll-x=scroll][data-hui-scroll-target=child] > *:not(#huiHack),
+[data-hui-scroll-x=scroll][data-hui-scroll-target=self]:not(#huiHack) {
+  overflow-x: scroll;
+}
+[data-hui-scroll-y=scroll][data-hui-scroll-target=child] > *:not(#huiHack),
+[data-hui-scroll-y=scroll][data-hui-scroll-target=self]:not(#huiHack) {
+  overflow-y: scroll;
+}
+[data-hui-scroll-x=visible][data-hui-scroll-target=child] > *:not(#huiHack),
+[data-hui-scroll-x=visible][data-hui-scroll-target=self]:not(#huiHack) {
+  overflow-x: visible;
+}
+[data-hui-scroll-y=visible][data-hui-scroll-target=child] > *:not(#huiHack),
+[data-hui-scroll-y=visible][data-hui-scroll-target=self]:not(#huiHack) {
+  overflow-y: visible;
+}

@@ -67,7 +67,7 @@ defmodule Builder do
           Enum.map(rules, fn {key, value} ->
             "  #{key}: var(#{prefix}-#{key}, #{value});"
           end)
-          |> List.insert_at(0, "  /* #{String.upcase(section)} */")
+          |> add_section_name(section)
         end)
         |> List.insert_at(0, build_selector(nil, nil, selector, params))
         |> List.insert_at(-1, "}")
@@ -119,7 +119,7 @@ defmodule Builder do
               "/*  #{prefix}-#{key}: ; */"
             end
           end)
-          |> List.insert_at(0, "  /* #{String.upcase(section)} */")
+          |> add_section_name(section)
         end)
         |> List.insert_at(0, build_selector(nil, nil, selector, params))
         |> List.insert_at(-1, "}")
@@ -148,7 +148,7 @@ defmodule Builder do
               |> Enum.filter(&is_binary/1)
               |> case do
                 [] -> []
-                lines -> ["  /* #{String.upcase(section)} */" | lines]
+                lines -> add_section_name(lines, section)
               end
             end)
             |> List.insert_at(0, build_selector(theme, state, selector, params))
@@ -160,6 +160,12 @@ defmodule Builder do
     theme = (section_lines ++ default_lines) |> Enum.join("\n")
 
     params.path.("themes") |> File.write!(theme)
+  end
+
+  defp add_section_name(lines, nil), do: lines
+
+  defp add_section_name(lines, section) do
+    ["  /* #{String.upcase(section)} */" | lines]
   end
 
   defp parse_theme(params) do
@@ -781,7 +787,9 @@ defmodule Builder do
     |> Enum.concat()
   end
 
-  defp build_section(_), do: nil
+  defp build_section(rule) do
+    {nil, [{rule, "initial"}]}
+  end
 end
 
 Builder.run()
