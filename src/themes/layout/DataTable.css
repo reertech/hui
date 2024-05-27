@@ -14,17 +14,17 @@
   /* APPERANCE */
   --hui-gdjwdf-border-bottom-color: var(--hui-default-border-color);
   --hui-gdjwdf-border-bottom-style: var(--hui-default-border-style);
-  --hui-gdjwdf-border-bottom-width: var(--hui-default-border-width);
+  --hui-gdjwdf-border-bottom-width: var(--hui-unua-border-width);
   --hui-gdjwdf-border-bottom-left-radius: var(--hui-default-border-radius-0);
   --hui-gdjwdf-border-bottom-right-radius: var(--hui-default-border-radius-0);
   --hui-gdjwdf-border-left-color: var(--hui-default-border-color);
-  --hui-gdjwdf-border-left-style: var(--hui-default-border-style);
+  --hui-gdjwdf-border-left-style: none;
   --hui-gdjwdf-border-left-width: var(--hui-default-border-width);
   --hui-gdjwdf-border-right-color: var(--hui-default-border-color);
-  --hui-gdjwdf-border-right-style: var(--hui-default-border-style);
+  --hui-gdjwdf-border-right-style: none;
   --hui-gdjwdf-border-right-width: var(--hui-default-border-width);
   --hui-gdjwdf-border-top-color: var(--hui-default-border-color);
-  --hui-gdjwdf-border-top-style: var(--hui-default-border-style);
+  --hui-gdjwdf-border-top-style: none;
   --hui-gdjwdf-border-top-width: var(--hui-default-border-width);
   --hui-gdjwdf-border-top-left-radius: var(--hui-default-border-radius-0);
   --hui-gdjwdf-border-top-right-radius: var(--hui-default-border-radius-0);

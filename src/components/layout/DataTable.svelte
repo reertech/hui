@@ -139,4 +139,8 @@
   > table > * > tr = common, grid;
   > table > tbody > tr > td,
   > table > thead > tr > th = common;
+  > table > tbody > tr + tr =
+    border-bottom-width,
+    border-bottom-style,
+    border-bottom-color;
 -->

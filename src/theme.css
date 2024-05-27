@@ -42,7 +42,7 @@
 
   --hui-unua-color-minus2-h: var(--hui-unua-color-h);
   --hui-unua-color-minus2-s: var(--hui-unua-color-s);
-  --hui-unua-color-minus2-l: calc(var(--hui-unua-color-l) - 18%);
+  --hui-unua-color-minus2-l: calc(var(--hui-unua-color-l) - 15%);
   --hui-unua-color-minus2: hsl(var(--hui-unua-color-minus2-h), var(--hui-unua-color-minus2-s), var(--hui-unua-color-minus2-l));
 
   --hui-unua-color-minus3-h: var(--hui-unua-color-h);
@@ -115,7 +115,7 @@
 
   --hui-unua-border-width: var(--hui-default-spacer-3);
   --hui-unua-border-style: solid;
-  --hui-unua-border-color: var(--hui-default-color-plus3);
+  --hui-unua-border-color: var(--hui-unua-color-minus2);
 
   --hui-default-border-radius-0: 0;
   --hui-default-border-radius-1: var(--hui-default-spacer-3);
@@ -143,7 +143,7 @@
   --hui-dua-box-shadow-y: 0;
   --hui-dua-box-shadow-blur: var(--hui-default-spacer-4);
   --hui-dua-box-shadow-spread: var(--hui-default-spacer-1);
-  --hui-dua-box-shadow-color: var(--hui-default-color-plus2);
+  --hui-dua-box-shadow-color: var(--hui-unua-color-minus1);
   --hui-dua-box-shadow: var(--hui-dua-box-shadow-x) var(--hui-dua-box-shadow-y) var(--hui-dua-box-shadow-blur) var(--hui-dua-box-shadow-spread) var(--hui-dua-box-shadow-color);
 
   --hui-tria-box-shadow-x: 0;

@@ -18,6 +18,7 @@ export { default as Nav } from "./components/layout/Nav.svelte"
 export { default as Title } from "./components/layout/Title.svelte"
 export { default as Table } from "./components/layout/Table.svelte"
 export { default as DataTable } from "./components/layout/DataTable.svelte"
+export { default as Panel } from "./components/layout/Panel.svelte"
 
 export { default as Strong } from "./components/typography/Strong.svelte"
 export { default as H1 } from "./components/typography/H1.svelte"
