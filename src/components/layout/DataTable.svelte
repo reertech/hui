@@ -13,6 +13,8 @@
   export let valid = null
   export let invalid = null
   export let theme = null
+  export let scrollX = null
+  export let scrollY = null
   export let grid = null
   export let flex = null
 
@@ -33,6 +35,8 @@
   {invalid}
   {theme}
   {classes}
+  {scrollX}
+  {scrollY}
   {flex}
   {grid}
 >

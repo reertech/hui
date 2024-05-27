@@ -4,3 +4,17 @@
   font-size: var(--hui-default-font-size);
   line-height: var(--hui-default-line-height);
 }*/
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  transition: 0.3s linear 0s;
+  background: #bbb;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
