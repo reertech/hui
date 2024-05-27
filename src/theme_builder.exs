@@ -100,9 +100,14 @@ defmodule Builder do
       IO.puts("===")
     end
 
+    get_default = fn
+      defaults, "&" -> defaults["default"]
+      defaults, selector -> defaults[selector]
+    end
+
     default_lines =
       Enum.flat_map(sections, fn {selector, _, prefix, sections} ->
-        defaults = defaults[selector]
+        defaults = get_default.(defaults, selector)
 
         Enum.flat_map(sections, fn {section, rules} ->
           Enum.map(rules, fn {key, _} ->
@@ -125,7 +130,7 @@ defmodule Builder do
         Enum.flat_map(@states, fn state ->
           Enum.flat_map(sections, fn {selector, _, prefix, sections} ->
             current = current_theme[theme || "default"][state || "default"][selector]
-            defaults = defaults[selector]
+            defaults = get_default.(defaults, selector)
 
             Enum.flat_map(sections, fn {section, rules} ->
               Enum.map(rules, fn {key, _} ->
@@ -189,7 +194,7 @@ defmodule Builder do
           |> Enum.join(",")
           |> clear_selector()
           |> case do
-            "" -> "default"
+            "" -> if section =~ "-default:", do: "default", else: "&"
             selector -> selector
           end
           |> List.wrap()
@@ -278,7 +283,10 @@ defmodule Builder do
   end
 
   defp build_selector(theme, state, selector, params) do
-    wrap = &("[data-hui=#{params.name}]#{&1} #{selector} {")
+    wrap = fn prefix ->
+      "[data-hui=#{params.name}]#{prefix} #{selector} {"
+      |> String.replace(~r"\]\s+\&", "]")
+    end
 
     cond do
       selector |> String.contains?(["|", ","]) ->

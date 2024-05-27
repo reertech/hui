@@ -1,14 +1,8 @@
 [data-hui=DataTable] > table {
-  /* GRID */
-  --hui-pvlqdr-column-gap: 3px;
-  --hui-pvlqdr-row-gap: 3px;
 }
 [data-hui=DataTable] > table > tbody,
 [data-hui=DataTable] > table > thead,
 [data-hui=DataTable] > table > * > tr {
-  /* GRID */
-  --hui-jymppr-column-gap: 3px;
-  --hui-jymppr-row-gap: 3px;
 }
 [data-hui=DataTable] > table > tbody > tr > td,
 [data-hui=DataTable] > table > thead > tr > th {
