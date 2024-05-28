@@ -303,3 +303,9 @@ data[data-hui] {
 [data-hui-scroll-y=visible][data-hui-scroll-target=self]:not(#huiHack) {
   overflow-y: visible;
 }
+
+[data-hui-scroll-y],
+[data-hui-scroll-x] {
+  scrollbar-width: thin;
+  scrollbar-color: gray transparent;
+}
