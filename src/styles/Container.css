@@ -5,7 +5,7 @@ data[data-hui] {
 [data-hui-flex][data-hui-flex-target=child] > *:not(#huiHack),
 [data-hui-flex][data-hui-flex-target=self]:not(#huiHack) {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;

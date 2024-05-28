@@ -20,6 +20,7 @@
 </script>
 
 <Container
+  tag="strong"
   hui="Title"
   {active}
   {readonly}
@@ -34,12 +35,10 @@
   {grid}
   {flex}
 >
-  <title>
-    <slot />
-  </title>
+  <slot />
 </Container>
 
 <!-- theme.ini
-  > title = common;
+  & = common, display;
 -->
 
