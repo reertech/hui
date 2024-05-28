@@ -26,6 +26,7 @@
 </script>
 
 <Container
+  tag="table"
   hui="DataTable"
   {active}
   {readonly}
@@ -38,11 +39,11 @@
   {scrollX}
   {scrollY}
   {flex}
-  {grid}
+  grid={{
+    templateColumns: "repeat(1000, max-content)",
+    ...grid
+  }}
 >
-  <Table
-    grid={{templateColumns: "repeat(1000, max-content)"}}
-  >
     <Grid
       tag="thead"
       templateColumns="subgrid"
@@ -133,17 +134,20 @@
         {/each}
       {/if}
     </Grid>
-  </Table>
 </Container>
 
 <!-- theme.ini
-  > table = common, grid;
-  > table > tbody,
-  > table > thead,
-  > table > * > tr = common, grid;
-  > table > tbody > tr > td,
-  > table > thead > tr > th = common;
-  > table > tbody > tr + tr, > table > thead + tbody =
+  & = common, grid;
+   > tbody,
+   > thead,
+   > * > tr = common, grid;
+   > tbody > tr > td,
+   > thead > tr > th = common;
+   > tbody > tr > td + td =
+    border-left-width,
+    border-left-style,
+    border-left-color;
+   > tbody > tr + tr,  > thead + tbody =
     border-top-width,
     border-top-style,
     border-top-color;

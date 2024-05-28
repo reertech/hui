@@ -237,32 +237,40 @@ data[data-hui] {
 [data-hui-grid-auto-flow=column][data-hui-grid-target=self]:not(#huiHack) {
   grid-auto-flow: column;
 }
-[data-hui-grid][data-hui-grid-target=child]:not(#huiHack) {
-  grid-template-rows: initial;
-  grid-template-columns: initial;
-  grid-column-start: initial;
-  grid-column-end: initial;
-  grid-row-start: initial;
-  grid-row-end: initial;
-  grid-template-areas: initial;
-  row-gap: initial;
-  column-gap: initial;
-  grid-auto-rows: initial;
-  grid-auto-columns: initial;
-}
-[data-hui-grid][data-hui-grid-target=child] > *:not(#huiHack) {
-  grid-template-rows: inherit;
+[data-hui-grid][data-hui-grid-target=child][style*=grid-template-columns] > *:not(#huiHack) {
   grid-template-columns: inherit;
-  grid-column-start: inherit;
-  grid-column-end: inherit;
-  grid-row-start: inherit;
-  grid-row-end: inherit;
-  grid-template-areas: inherit;
+}
+[data-hui-grid][data-hui-grid-target=child][style*=grid-template-rows] > *:not(#huiHack) {
+  grid-template-rows: inherit;
+}
+[data-hui-grid][data-hui-grid-target=child][style*=row-gap] > *:not(#huiHack) {
   row-gap: inherit;
+}
+[data-hui-grid][data-hui-grid-target=child][style*=column-gap] > *:not(#huiHack) {
   column-gap: inherit;
+}
+[data-hui-grid][data-hui-grid-target=child][style*=grid-column-start] > *:not(#huiHack) {
+  grid-column-start: inherit;
+}
+[data-hui-grid][data-hui-grid-target=child][style*=grid-column-end] > *:not(#huiHack) {
+  grid-column-end: inherit;
+}
+[data-hui-grid][data-hui-grid-target=child][style*=grid-row-start] > *:not(#huiHack) {
+  grid-row-start: inherit;
+}
+[data-hui-grid][data-hui-grid-target=child][style*=grid-row-end] > *:not(#huiHack) {
+  grid-row-end: inherit;
+}
+[data-hui-grid][data-hui-grid-target=child][style*=grid-auto-rows] > *:not(#huiHack) {
   grid-auto-rows: inherit;
+}
+[data-hui-grid][data-hui-grid-target=child][style*=grid-auto-columns] > *:not(#huiHack) {
   grid-auto-columns: inherit;
 }
+[data-hui-grid][data-hui-grid-target=child][style*=grid-template-areas] > *:not(#huiHack) {
+  grid-template-areas: inherit;
+}
+
 [data-hui-scroll-x][data-hui-scroll-target=child] > *:not(#huiHack),
 [data-hui-scroll-x][data-hui-scroll-target=self]:not(#huiHack) {
   overflow-x: auto;
