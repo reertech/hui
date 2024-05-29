@@ -10,18 +10,22 @@
   export let valid = null
   export let invalid = null
   export let theme = null
+  export let position = null
   export let classes = null
   export let grid = null
   export let flex = null
   export let scrollY = null
   export let scrollX = null
 
-  $: target = tag === null ? "child" : "self"
   $: isGrid = !flex && grid && typeof grid === "object"
   $: isFlex = !grid && flex && typeof flex === "object"
   $: isScroll = scrollX || scrollY
+
   $: g = !isGrid ? {} : { display: "grid", ...grid }
   $: f = !isFlex ? {} : { display: "flex", ...flex }
+
+  $: target = tag === null ? "child" : "self"
+  $: targetSelector = isGrid || isFlex || isScroll ? target : null
 </script>
 
 <svelte:element
@@ -38,12 +42,12 @@
   class={classes || null}
   hidden={hidden || null}
 
+  data-hui-grid-target={targetSelector}
+
   data-hui-scroll-x={scrollX || null}
   data-hui-scroll-y={scrollY || null}
-  data-hui-scroll-target={isScroll && target || null}
 
   data-hui-grid={g.display || null}
-  data-hui-grid-target={isGrid && target || null}
   data-hui-grid-justify-items={g.justifyItems || null}
   data-hui-grid-align-items={g.alignItems || null}
   data-hui-grid-justify-content={g.justifyContent || null}
@@ -62,7 +66,6 @@
   style:grid-auto-columns={g.autoColumns || null}
 
   data-hui-flex={f.display || null}
-  data-hui-flex-target={isFlex && target || null}
   data-hui-flex-direction={f.direction || null}
   data-hui-flex-wrap={f.wrap || null}
   data-hui-flex-justify-content={f.justifyContent || null}

@@ -1,6 +1,6 @@
 import "./system-font.css"
 import "./theme.css"
-import "./index.css"
+import "./global.css"
 
 export { default as Root } from "./components/layout/Root.svelte"
 
