@@ -55,7 +55,7 @@
 </Container>
 
 <!-- theme.ini
-  themes: flat;
+  themes: flat, small, round;
   > button
   | > button:hover
   | > button:active

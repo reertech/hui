@@ -99,7 +99,7 @@
   --hui-default-spacer-2: calc(0.18 * var(--hui-default-spacer));
   --hui-default-spacer-3: calc(0.25 * var(--hui-default-spacer));
   --hui-default-spacer-4: calc(0.33 * var(--hui-default-spacer));
-  --hui-default-spacer-5: calc(0.66 * var(--hui-default-spacer));
+  --hui-default-spacer-5: calc(0.77 * var(--hui-default-spacer));
   --hui-default-spacer-6: calc(0.99 * var(--hui-default-spacer));
   --hui-default-spacer-7: calc(1.33 * var(--hui-default-spacer));
   --hui-default-spacer-8: calc(1.66 * var(--hui-default-spacer));
@@ -122,7 +122,7 @@
   --hui-default-border-radius-2: var(--hui-default-spacer-4);
   --hui-default-border-radius-3: var(--hui-default-spacer-5);
   --hui-default-border-radius-4: var(--hui-default-spacer-7);
-  --hui-default-border-radius-5: var(--hui-default-spacer-11);
+  --hui-default-border-radius-5: 50%;
 
   /* BOX-SHADOWS */
   --hui-default-box-shadow-x: 0;

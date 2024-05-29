@@ -1,8 +1,8 @@
 [data-hui=Button] > button {
   /* LAYOUT-PADDING */
-  --hui-zsnfqz-padding-top: var(--hui-default-spacer-5);
+  --hui-zsnfqz-padding-top: var(--hui-default-spacer-6);
   --hui-zsnfqz-padding-right: var(--hui-default-spacer-7);
-  --hui-zsnfqz-padding-bottom: var(--hui-default-spacer-5);
+  --hui-zsnfqz-padding-bottom: var(--hui-default-spacer-6);
   --hui-zsnfqz-padding-left: var(--hui-default-spacer-7);
   /* LAYOUT-OVERFLOW */
   --hui-zsnfqz-overflow-x: hidden;
@@ -49,7 +49,7 @@
 [data-hui=Button] > button:focus {
   /* APPERANCE */
   --hui-zsnfqz-outline-color: var(--hui-default-border-color);
-  --hui-zsnfqz-outline-offset: calc(0px - var(--hui-default-spacer-5) / 1.25);
+  --hui-zsnfqz-outline-offset: calc(0px - var(--hui-default-spacer-6));
   --hui-zsnfqz-outline-style: solid;
   --hui-zsnfqz-outline-width: var(--hui-default-border-width);
 }
@@ -133,16 +133,39 @@
 [data-hui=Button][data-hui-invalid] > button:focus {
 }
 [data-hui=Button][data-hui-theme~=flat] > button {
+  /* APPERANCE */
+  --hui-zsnfqz-box-shadow: none;
+  --hui-zsnfqz-border-bottom-color: var(--hui-default-border-color);
+  --hui-zsnfqz-border-bottom-style: var(--hui-default-border-style);
+  --hui-zsnfqz-border-bottom-width: var(--hui-unua-border-width);
+  --hui-zsnfqz-border-left-color: var(--hui-default-border-color);
+  --hui-zsnfqz-border-left-style: var(--hui-default-border-style);
+  --hui-zsnfqz-border-left-width: var(--hui-unua-border-width);
+  --hui-zsnfqz-border-right-color: var(--hui-default-border-color);
+  --hui-zsnfqz-border-right-style: var(--hui-default-border-style);
+  --hui-zsnfqz-border-right-width: var(--hui-unua-border-width);
+  --hui-zsnfqz-border-top-color: var(--hui-default-border-color);
+  --hui-zsnfqz-border-top-style: var(--hui-default-border-style);
+  --hui-zsnfqz-border-top-width: var(--hui-unua-border-width);
+  --hui-zsnfqz-background-image: var(--hui-default-gradient-0);
 }
 [data-hui=Button][data-hui-theme~=flat] > button:hover {
+  --hui-zsnfqz-background-image: var(--hui-default-gradient-1);
 }
 [data-hui=Button][data-hui-theme~=flat] > button:active {
+  /* APPERANCE */
+  --hui-zsnfqz-background-image: var(--hui-default-gradient-2);
+  --hui-zsnfqz-box-shadow: var(--hui-tria-box-shadow);
 }
 [data-hui=Button][data-hui-theme~=flat] > button:focus {
 }
 [data-hui=Button][data-hui-theme~=flat][data-hui-active] > button {
+  /* APPERANCE */
+  --hui-zsnfqz-box-shadow: var(--hui-tria-box-shadow);
+  --hui-zsnfqz-background-image: var(--hui-default-gradient-0);
 }
 [data-hui=Button][data-hui-theme~=flat][data-hui-active] > button:hover {
+  --hui-zsnfqz-background-image: var(--hui-default-gradient-1);
 }
 [data-hui=Button][data-hui-theme~=flat][data-hui-active] > button:active {
 }
@@ -179,6 +202,115 @@
 [data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button:active {
 }
 [data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=small] > button {
+  /* LAYOUT-PADDING */
+  --hui-zsnfqz-padding-top: var(--hui-default-spacer-4);
+  --hui-zsnfqz-padding-right: var(--hui-default-spacer-5);
+  --hui-zsnfqz-padding-bottom: var(--hui-default-spacer-4);
+  --hui-zsnfqz-padding-left: var(--hui-default-spacer-5);
+  /* TEXT */
+  --hui-zsnfqz-font-size: var(--hui-default-font-size-0);
+  --hui-zsnfqz-line-height: var(--hui-default-line-height);
+}
+[data-hui=Button][data-hui-theme~=small] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=small] > button:active {
+}
+[data-hui=Button][data-hui-theme~=small] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-active] > button {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-active] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-active] > button:active {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-active] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-disabled] > button {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-disabled] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-disabled] > button:active {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-disabled] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-readonly] > button {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-readonly] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-readonly] > button:active {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-readonly] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-valid] > button {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-valid] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-valid] > button:active {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-valid] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-invalid] > button {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-invalid] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-invalid] > button:active {
+}
+[data-hui=Button][data-hui-theme~=small][data-hui-invalid] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=round] > button {
+  /* APPERANCE */
+  --hui-zsnfqz-border-bottom-left-radius: var(--hui-default-border-radius-3);
+  --hui-zsnfqz-border-bottom-right-radius: var(--hui-default-border-radius-3);
+  --hui-zsnfqz-border-top-left-radius: var(--hui-default-border-radius-3);
+  --hui-zsnfqz-border-top-right-radius: var(--hui-default-border-radius-3);
+}
+[data-hui=Button][data-hui-theme~=round] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=round] > button:active {
+}
+[data-hui=Button][data-hui-theme~=round] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-active] > button {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-active] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-active] > button:active {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-active] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-disabled] > button {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-disabled] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-disabled] > button:active {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-disabled] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-readonly] > button {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-readonly] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-readonly] > button:active {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-readonly] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-valid] > button {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-valid] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-valid] > button:active {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-valid] > button:focus {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-invalid] > button {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-invalid] > button:hover {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-invalid] > button:active {
+}
+[data-hui=Button][data-hui-theme~=round][data-hui-invalid] > button:focus {
 }
 [data-hui=Button] > button {
   /* LAYOUT-POSITION */
