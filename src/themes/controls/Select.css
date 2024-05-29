@@ -7,9 +7,9 @@
   --hui-dityoy-max-width: 350px;
   --hui-dityoy-min-width: 232px;
   /* LAYOUT-PADDING */
-  --hui-dityoy-padding-top: var(--hui-default-spacer-5);
+  --hui-dityoy-padding-top: var(--hui-default-spacer-4);
   --hui-dityoy-padding-right: var(--hui-default-spacer-6);
-  --hui-dityoy-padding-bottom: var(--hui-default-spacer-5);
+  --hui-dityoy-padding-bottom: var(--hui-default-spacer-4);
   --hui-dityoy-padding-left: var(--hui-default-spacer-6);
   /* LAYOUT-OVERFLOW */
   --hui-dityoy-overflow-x: visible;

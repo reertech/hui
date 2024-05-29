@@ -18,6 +18,9 @@
   export let grid = null
   export let flex = null
 
+  export let thTop = true
+  export let thBottom = true
+
   let classes = null
   export { classes as class }
 
@@ -54,6 +57,36 @@
       {#if $$slots.thead}
         <slot name="thead" />
       {:else if $$slots.th}
+        {#if thTop && $$slots.thTop}
+          <Grid
+            tag="tr"
+            templateColumns="subgrid"
+            columnStart="1"
+            columnEnd="-1"
+          >
+            {#if $$slots.thTopBefore}
+              <slot name="thTopBefore" />
+            {/if}
+            {#if $$slots.thTopFirst}
+              <Flex tag="th">
+                <slot name="thTopFirst" />
+              </Flex>
+            {/if}
+            {#each cols as col, colIdx}
+              <Flex tag="th">
+                <slot name="thTop" {col} {colIdx} />
+              </Flex>
+            {/each}
+            {#if $$slots.thTop}
+              <Flex tag="th">
+                <slot name="thTopLast" />
+              </Flex>
+            {/if}
+            {#if $$slots.thTopAfter}
+              <slot name="thTopAfter" />
+            {/if}
+          </Grid>
+        {/if}
         <Grid
           tag="tr"
           templateColumns="subgrid"
@@ -82,33 +115,33 @@
             <slot name="thAfter" />
           {/if}
         </Grid>
-        {#if $$slots.thSecond}
+        {#if thBottom && $$slots.thBottom}
           <Grid
             tag="tr"
             templateColumns="subgrid"
             columnStart="1"
             columnEnd="-1"
           >
-            {#if $$slots.thSecondBefore}
-              <slot name="thSecondBefore" />
+            {#if $$slots.thBottomBefore}
+              <slot name="thBottomBefore" />
             {/if}
-            {#if $$slots.thSecondFirst}
-              <Flex tag="thSecond">
-                <slot name="thSecondFirst" />
+            {#if $$slots.thBottomFirst}
+              <Flex tag="th">
+                <slot name="thBottomFirst" />
               </Flex>
             {/if}
             {#each cols as col, colIdx}
-              <Flex tag="thSecond">
-                <slot name="thSecond" {col} {colIdx} />
+              <Flex tag="th">
+                <slot name="thBottom" {col} {colIdx} />
               </Flex>
             {/each}
-            {#if $$slots.thSecondLast}
-              <Flex tag="thSecond">
-                <slot name="thSecondLast" />
+            {#if $$slots.thBottomBottom}
+              <Flex tag="th">
+                <slot name="thBottomBottom" />
               </Flex>
             {/if}
-            {#if $$slots.thSecondAfter}
-              <slot name="thSecondAfter" />
+            {#if $$slots.thBottomAfter}
+              <slot name="thBottomAfter" />
             {/if}
           </Grid>
         {/if}
