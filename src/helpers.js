@@ -10,14 +10,14 @@ export const checkEmpty = (value) => {
   }
 }
 
-export const buildFuzzyRegex = (string, params = "gi") => {
+export const buildFuzzyRegex = (string, params = "i") => {
   if (typeof string !== "string" || checkEmpty(string)) return null
 
   const pattern = string.replace(/[\W_]+/g, " ").trim()
 
   if (checkEmpty(pattern)) return null
 
-  return new RegExp(pattern.replace(" ", ".+\\b"), params)
+  return new RegExp(pattern.replace(" ", "\\s+\\b"), params)
 }
 
 export const calcParentOffset = (el, parent) => {

@@ -82,6 +82,36 @@
             <slot name="thAfter" />
           {/if}
         </Grid>
+        {#if $$slots.thSecond}
+          <Grid
+            tag="tr"
+            templateColumns="subgrid"
+            columnStart="1"
+            columnEnd="-1"
+          >
+            {#if $$slots.thSecondBefore}
+              <slot name="thSecondBefore" />
+            {/if}
+            {#if $$slots.thSecondFirst}
+              <Flex tag="thSecond">
+                <slot name="thSecondFirst" />
+              </Flex>
+            {/if}
+            {#each cols as col, colIdx}
+              <Flex tag="thSecond">
+                <slot name="thSecond" {col} {colIdx} />
+              </Flex>
+            {/each}
+            {#if $$slots.thSecondLast}
+              <Flex tag="thSecond">
+                <slot name="thSecondLast" />
+              </Flex>
+            {/if}
+            {#if $$slots.thSecondAfter}
+              <slot name="thSecondAfter" />
+            {/if}
+          </Grid>
+        {/if}
       {/if}
     </Grid>
     <Grid

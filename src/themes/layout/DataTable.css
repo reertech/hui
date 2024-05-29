@@ -8,9 +8,9 @@
 }
 [data-hui=DataTable] > tbody > tr > td {
   /* LAYOUT-PADDING */
-  --hui-avzraa-padding-top: var(--hui-default-spacer-4);
+  --hui-avzraa-padding-top: var(--hui-default-spacer-5);
   --hui-avzraa-padding-right: var(--hui-default-spacer-5);
-  --hui-avzraa-padding-bottom: var(--hui-default-spacer-4);
+  --hui-avzraa-padding-bottom: var(--hui-default-spacer-5);
   --hui-avzraa-padding-left: var(--hui-default-spacer-5);
   /* TEXT */
   --hui-avzraa-font-size: var(--hui-default-size-0);

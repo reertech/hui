@@ -2,6 +2,10 @@ data[data-hui] {
   display: contents;
 }
 
+[data-hui][hidden]:not(#huiHack) {
+  display: none;
+}
+
 [data-hui-flex][data-hui-target=child] > *:not(#huiHack),
 [data-hui-flex][data-hui-target=self]:not(#huiHack) {
   display: flex;
