@@ -8,6 +8,7 @@ export { default as Container } from "./components/Container.svelte"
 export { default as Grid } from "./components/Grid.svelte"
 export { default as Flex } from "./components/Flex.svelte"
 export { default as Center } from "./components/Center.svelte"
+export { default as Scroll } from "./components/Scroll.svelte"
 
 export { default as Main } from "./components/layout/Main.svelte"
 export { default as Header } from "./components/layout/Header.svelte"
@@ -21,6 +22,7 @@ export { default as DataTable } from "./components/layout/DataTable.svelte"
 export { default as Panel } from "./components/layout/Panel.svelte"
 
 export { default as Strong } from "./components/typography/Strong.svelte"
+export { default as Small } from "./components/typography/Small.svelte"
 export { default as H1 } from "./components/typography/H1.svelte"
 
 export { default as Button } from "./components/controls/Button.svelte"

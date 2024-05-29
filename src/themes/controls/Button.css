@@ -132,53 +132,53 @@
 }
 [data-hui=Button][data-hui-invalid] > button:focus {
 }
-[data-hui=Button][data-hui-theme=flat] > button {
+[data-hui=Button][data-hui-theme~=flat] > button {
 }
-[data-hui=Button][data-hui-theme=flat] > button:hover {
+[data-hui=Button][data-hui-theme~=flat] > button:hover {
 }
-[data-hui=Button][data-hui-theme=flat] > button:active {
+[data-hui=Button][data-hui-theme~=flat] > button:active {
 }
-[data-hui=Button][data-hui-theme=flat] > button:focus {
+[data-hui=Button][data-hui-theme~=flat] > button:focus {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-active] > button {
+[data-hui=Button][data-hui-theme~=flat][data-hui-active] > button {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-active] > button:hover {
+[data-hui=Button][data-hui-theme~=flat][data-hui-active] > button:hover {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-active] > button:active {
+[data-hui=Button][data-hui-theme~=flat][data-hui-active] > button:active {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-active] > button:focus {
+[data-hui=Button][data-hui-theme~=flat][data-hui-active] > button:focus {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-disabled] > button {
+[data-hui=Button][data-hui-theme~=flat][data-hui-disabled] > button {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-disabled] > button:hover {
+[data-hui=Button][data-hui-theme~=flat][data-hui-disabled] > button:hover {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-disabled] > button:active {
+[data-hui=Button][data-hui-theme~=flat][data-hui-disabled] > button:active {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-disabled] > button:focus {
+[data-hui=Button][data-hui-theme~=flat][data-hui-disabled] > button:focus {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-readonly] > button {
+[data-hui=Button][data-hui-theme~=flat][data-hui-readonly] > button {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-readonly] > button:hover {
+[data-hui=Button][data-hui-theme~=flat][data-hui-readonly] > button:hover {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-readonly] > button:active {
+[data-hui=Button][data-hui-theme~=flat][data-hui-readonly] > button:active {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-readonly] > button:focus {
+[data-hui=Button][data-hui-theme~=flat][data-hui-readonly] > button:focus {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-valid] > button {
+[data-hui=Button][data-hui-theme~=flat][data-hui-valid] > button {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-valid] > button:hover {
+[data-hui=Button][data-hui-theme~=flat][data-hui-valid] > button:hover {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-valid] > button:active {
+[data-hui=Button][data-hui-theme~=flat][data-hui-valid] > button:active {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-valid] > button:focus {
+[data-hui=Button][data-hui-theme~=flat][data-hui-valid] > button:focus {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-invalid] > button {
+[data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-invalid] > button:hover {
+[data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button:hover {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-invalid] > button:active {
+[data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button:active {
 }
-[data-hui=Button][data-hui-theme=flat][data-hui-invalid] > button:focus {
+[data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button:focus {
 }
 [data-hui=Button] > button {
   /* LAYOUT-POSITION */

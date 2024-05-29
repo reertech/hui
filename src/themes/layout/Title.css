@@ -8,6 +8,7 @@
   --hui-lqttac-overflow-x: hidden;
   --hui-lqttac-overflow-y: hidden;
   /* TEXT */
+  --hui-lqttac-font-size: var(--hui-default-size-1);
   --hui-lqttac-line-height: 100%;
   --hui-lqttac-text-align: center;
   --hui-lqttac-text-wrap: wrap;
@@ -26,6 +27,32 @@
 [data-hui=Title][data-hui-valid] {
 }
 [data-hui=Title][data-hui-invalid] {
+}
+[data-hui=Title][data-hui-theme~=small] {
+  /* TEXT */
+  --hui-lqttac-font-size: var(--hui-default-size-0);
+}
+[data-hui=Title][data-hui-theme~=small][data-hui-active] {
+}
+[data-hui=Title][data-hui-theme~=small][data-hui-disabled] {
+}
+[data-hui=Title][data-hui-theme~=small][data-hui-readonly] {
+}
+[data-hui=Title][data-hui-theme~=small][data-hui-valid] {
+}
+[data-hui=Title][data-hui-theme~=small][data-hui-invalid] {
+}
+[data-hui=Title][data-hui-theme~=large] {
+}
+[data-hui=Title][data-hui-theme~=large][data-hui-active] {
+}
+[data-hui=Title][data-hui-theme~=large][data-hui-disabled] {
+}
+[data-hui=Title][data-hui-theme~=large][data-hui-readonly] {
+}
+[data-hui=Title][data-hui-theme~=large][data-hui-valid] {
+}
+[data-hui=Title][data-hui-theme~=large][data-hui-invalid] {
 }
 [data-hui=Title] {
   /* LAYOUT-POSITION */

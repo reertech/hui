@@ -81,7 +81,7 @@
   /* SIZES */
   --hui-default-size: clamp(12px, 1rem, 17px);
 
-  --hui-default-size-0: 0;
+  --hui-default-size-0: calc(var(--hui-default-size) * 0.92);
   --hui-default-size-1: var(--hui-default-size);
   --hui-default-size-2: calc(var(--hui-default-size-1) +  4px);
   --hui-default-size-3: calc(var(--hui-default-size-2) +  4px);

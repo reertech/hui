@@ -33,41 +33,41 @@
 }
 [data-hui=Panel][data-hui-invalid] {
 }
-[data-hui=Panel][data-hui-theme=low] {
+[data-hui=Panel][data-hui-theme~=low] {
 }
-[data-hui=Panel][data-hui-theme=low][data-hui-active] {
+[data-hui=Panel][data-hui-theme~=low][data-hui-active] {
 }
-[data-hui=Panel][data-hui-theme=low][data-hui-disabled] {
+[data-hui=Panel][data-hui-theme~=low][data-hui-disabled] {
 }
-[data-hui=Panel][data-hui-theme=low][data-hui-readonly] {
+[data-hui=Panel][data-hui-theme~=low][data-hui-readonly] {
 }
-[data-hui=Panel][data-hui-theme=low][data-hui-valid] {
+[data-hui=Panel][data-hui-theme~=low][data-hui-valid] {
 }
-[data-hui=Panel][data-hui-theme=low][data-hui-invalid] {
+[data-hui=Panel][data-hui-theme~=low][data-hui-invalid] {
 }
-[data-hui=Panel][data-hui-theme=medium] {
+[data-hui=Panel][data-hui-theme~=medium] {
 }
-[data-hui=Panel][data-hui-theme=medium][data-hui-active] {
+[data-hui=Panel][data-hui-theme~=medium][data-hui-active] {
 }
-[data-hui=Panel][data-hui-theme=medium][data-hui-disabled] {
+[data-hui=Panel][data-hui-theme~=medium][data-hui-disabled] {
 }
-[data-hui=Panel][data-hui-theme=medium][data-hui-readonly] {
+[data-hui=Panel][data-hui-theme~=medium][data-hui-readonly] {
 }
-[data-hui=Panel][data-hui-theme=medium][data-hui-valid] {
+[data-hui=Panel][data-hui-theme~=medium][data-hui-valid] {
 }
-[data-hui=Panel][data-hui-theme=medium][data-hui-invalid] {
+[data-hui=Panel][data-hui-theme~=medium][data-hui-invalid] {
 }
-[data-hui=Panel][data-hui-theme=high] {
+[data-hui=Panel][data-hui-theme~=high] {
 }
-[data-hui=Panel][data-hui-theme=high][data-hui-active] {
+[data-hui=Panel][data-hui-theme~=high][data-hui-active] {
 }
-[data-hui=Panel][data-hui-theme=high][data-hui-disabled] {
+[data-hui=Panel][data-hui-theme~=high][data-hui-disabled] {
 }
-[data-hui=Panel][data-hui-theme=high][data-hui-readonly] {
+[data-hui=Panel][data-hui-theme~=high][data-hui-readonly] {
 }
-[data-hui=Panel][data-hui-theme=high][data-hui-valid] {
+[data-hui=Panel][data-hui-theme~=high][data-hui-valid] {
 }
-[data-hui=Panel][data-hui-theme=high][data-hui-invalid] {
+[data-hui=Panel][data-hui-theme~=high][data-hui-invalid] {
 }
 [data-hui=Panel] {
   /* LAYOUT-POSITION */

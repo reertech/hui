@@ -171,7 +171,7 @@ defmodule Builder do
   defp parse_theme(params) do
     parse_theme_name = fn selector, section ->
       with false <- selector == "default",
-           [theme] <- ~r"(?<=\[data\-hui\-theme\=)[a-z]+(?=\])" |> Regex.run(section) do
+           [theme] <- ~r"(?<=\[data\-hui\-theme\~\=)[a-z]+(?=\])" |> Regex.run(section) do
         theme
       else
         _ -> "default"
@@ -306,10 +306,10 @@ defmodule Builder do
         |> Kernel.<>(" {")
 
       theme && state ->
-        wrap.("[data-hui-theme=#{theme}][data-hui-#{state}]")
+        wrap.("[data-hui-theme~=#{theme}][data-hui-#{state}]")
 
       theme ->
-        wrap.("[data-hui-theme=#{theme}]")
+        wrap.("[data-hui-theme~=#{theme}]")
 
       state ->
         wrap.("[data-hui-#{state}]")

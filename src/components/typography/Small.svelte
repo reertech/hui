@@ -1,9 +1,9 @@
 <script>
-  import "../../themes/layout/Title.css"
-  import "../../styles/layout/Title.css"
+  import "../../themes/typography/Small.css"
+  import "../../styles/typography/Small.css"
   import Container from "../Container.svelte"
 
-  export let tag = "strong"
+  export let tag = "small"
   export let active = null
   export let readonly = null
   export let disabled = null
@@ -21,7 +21,7 @@
 </script>
 
 <Container
-  hui="Title"
+  hui="Small"
   {tag}
   {active}
   {readonly}
@@ -40,7 +40,6 @@
 </Container>
 
 <!-- theme.ini
-  themes: small, large;
-  & = common, display;
+  & = common;
 -->
 
