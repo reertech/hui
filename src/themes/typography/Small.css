@@ -51,6 +51,10 @@
 /*  --hui-wpcfwr-flex-grow-default: ; */
 /*  --hui-wpcfwr-flex-shrink-default: ; */
 /*  --hui-wpcfwr-flex-wrap-default: ; */
+/*  --hui-wpcfwr-gap-default: ; */
+/*  --hui-wpcfwr-align-content-default: ; */
+/*  --hui-wpcfwr-justify-content-default: ; */
+/*  --hui-wpcfwr-align-items-default: ; */
   /* TEXT */
 /*  --hui-wpcfwr-direction-default: ; */
 /*  --hui-wpcfwr-font-family-default: ; */
@@ -115,4 +119,7 @@
 /*  --hui-wpcfwr-outline-offset-default: ; */
 /*  --hui-wpcfwr-outline-style-default: ; */
 /*  --hui-wpcfwr-outline-width-default: ; */
+/*  --hui-wpcfwr-scrollbar-color-default: ; */
+/*  --hui-wpcfwr-scrollbar-gutter-default: ; */
+/*  --hui-wpcfwr-scrollbar-width-default: ; */
 }

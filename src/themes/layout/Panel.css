@@ -1,7 +1,7 @@
 [data-hui=Panel] {
   /* LAYOUT-OVERFLOW */
-  --hui-ltqpkc-overflow-x: hidden;
-  --hui-ltqpkc-overflow-y: hidden;
+  --hui-ltqpkc-overflow-x: visible;
+  --hui-ltqpkc-overflow-y: visible;
   /* APPERANCE */
   --hui-ltqpkc-color: var(--hui-default-color-text);
   --hui-ltqpkc-background-color: var(--hui-default-background-color);
@@ -108,6 +108,10 @@
 /*  --hui-ltqpkc-flex-grow-default: ; */
 /*  --hui-ltqpkc-flex-shrink-default: ; */
 /*  --hui-ltqpkc-flex-wrap-default: ; */
+/*  --hui-ltqpkc-gap-default: ; */
+/*  --hui-ltqpkc-align-content-default: ; */
+/*  --hui-ltqpkc-justify-content-default: ; */
+/*  --hui-ltqpkc-align-items-default: ; */
   /* TEXT */
 /*  --hui-ltqpkc-direction-default: ; */
 /*  --hui-ltqpkc-font-family-default: ; */
@@ -172,6 +176,9 @@
 /*  --hui-ltqpkc-outline-offset-default: ; */
 /*  --hui-ltqpkc-outline-style-default: ; */
 /*  --hui-ltqpkc-outline-width-default: ; */
+/*  --hui-ltqpkc-scrollbar-color-default: ; */
+/*  --hui-ltqpkc-scrollbar-gutter-default: ; */
+/*  --hui-ltqpkc-scrollbar-width-default: ; */
   /* DISPLAY */
 /*  --hui-ltqpkc-display-default: ; */
 }

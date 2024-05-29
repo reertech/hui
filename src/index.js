@@ -9,6 +9,7 @@ export { default as Grid } from "./components/Grid.svelte"
 export { default as Flex } from "./components/Flex.svelte"
 export { default as Center } from "./components/Center.svelte"
 export { default as Scroll } from "./components/Scroll.svelte"
+export { default as Overlay } from "./components/Overlay.svelte"
 
 export { default as Main } from "./components/layout/Main.svelte"
 export { default as Header } from "./components/layout/Header.svelte"

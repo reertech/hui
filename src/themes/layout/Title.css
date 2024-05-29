@@ -9,7 +9,7 @@
   --hui-lqttac-overflow-y: hidden;
   /* TEXT */
   --hui-lqttac-font-size: var(--hui-default-size-1);
-  --hui-lqttac-line-height: 100%;
+  --hui-lqttac-line-height: var(--hui-default-line-height);
   --hui-lqttac-text-align: center;
   --hui-lqttac-text-wrap: wrap;
   /* APPERANCE */
@@ -93,6 +93,10 @@
 /*  --hui-lqttac-flex-grow-default: ; */
 /*  --hui-lqttac-flex-shrink-default: ; */
 /*  --hui-lqttac-flex-wrap-default: ; */
+/*  --hui-lqttac-gap-default: ; */
+/*  --hui-lqttac-align-content-default: ; */
+/*  --hui-lqttac-justify-content-default: ; */
+/*  --hui-lqttac-align-items-default: ; */
   /* TEXT */
 /*  --hui-lqttac-direction-default: ; */
 /*  --hui-lqttac-font-family-default: ; */
@@ -157,6 +161,9 @@
 /*  --hui-lqttac-outline-offset-default: ; */
 /*  --hui-lqttac-outline-style-default: ; */
 /*  --hui-lqttac-outline-width-default: ; */
+/*  --hui-lqttac-scrollbar-color-default: ; */
+/*  --hui-lqttac-scrollbar-gutter-default: ; */
+/*  --hui-lqttac-scrollbar-width-default: ; */
   /* DISPLAY */
 /*  --hui-lqttac-display-default: ; */
 }

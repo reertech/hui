@@ -49,6 +49,10 @@
 /*  --hui-duueth-flex-grow-default: ; */
 /*  --hui-duueth-flex-shrink-default: ; */
 /*  --hui-duueth-flex-wrap-default: ; */
+/*  --hui-duueth-gap-default: ; */
+/*  --hui-duueth-align-content-default: ; */
+/*  --hui-duueth-justify-content-default: ; */
+/*  --hui-duueth-align-items-default: ; */
   /* TEXT */
 /*  --hui-duueth-direction-default: ; */
 /*  --hui-duueth-font-family-default: ; */
@@ -113,4 +117,7 @@
 /*  --hui-duueth-outline-offset-default: ; */
 /*  --hui-duueth-outline-style-default: ; */
 /*  --hui-duueth-outline-width-default: ; */
+/*  --hui-duueth-scrollbar-color-default: ; */
+/*  --hui-duueth-scrollbar-gutter-default: ; */
+/*  --hui-duueth-scrollbar-width-default: ; */
 }

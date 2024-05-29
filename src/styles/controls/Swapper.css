@@ -37,6 +37,10 @@
   flex-grow: var(--hui-upezdl-flex-grow, 0);
   flex-shrink: var(--hui-upezdl-flex-shrink, 1);
   flex-wrap: var(--hui-upezdl-flex-wrap, nowrap);
+  gap: var(--hui-upezdl-gap, 0px);
+  align-content: var(--hui-upezdl-align-content, stretch);
+  justify-content: var(--hui-upezdl-justify-content, flex-start);
+  align-items: var(--hui-upezdl-align-items, stretch);
   /* TEXT */
   direction: var(--hui-upezdl-direction, ltr);
   font-family: var(--hui-upezdl-font-family, system-ui);
@@ -101,6 +105,9 @@
   outline-offset: var(--hui-upezdl-outline-offset, 0px);
   outline-style: var(--hui-upezdl-outline-style, none);
   outline-width: var(--hui-upezdl-outline-width, 0px);
+  scrollbar-color: var(--hui-upezdl-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-upezdl-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-upezdl-scrollbar-width, thin);
 }
 [data-hui=Swapper] > button {
   /* LAYOUT-POSITION */
@@ -141,6 +148,10 @@
   flex-grow: var(--hui-tysnrg-flex-grow, 0);
   flex-shrink: var(--hui-tysnrg-flex-shrink, 1);
   flex-wrap: var(--hui-tysnrg-flex-wrap, nowrap);
+  gap: var(--hui-tysnrg-gap, 0px);
+  align-content: var(--hui-tysnrg-align-content, stretch);
+  justify-content: var(--hui-tysnrg-justify-content, flex-start);
+  align-items: var(--hui-tysnrg-align-items, stretch);
   /* TEXT */
   direction: var(--hui-tysnrg-direction, ltr);
   font-family: var(--hui-tysnrg-font-family, system-ui);
@@ -205,6 +216,9 @@
   outline-offset: var(--hui-tysnrg-outline-offset, 0px);
   outline-style: var(--hui-tysnrg-outline-style, none);
   outline-width: var(--hui-tysnrg-outline-width, 0px);
+  scrollbar-color: var(--hui-tysnrg-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-tysnrg-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-tysnrg-scrollbar-width, thin);
 }
 [data-hui=Swapper] > div {
   /* LAYOUT-POSITION */
@@ -245,6 +259,10 @@
   flex-grow: var(--hui-fmernp-flex-grow, 0);
   flex-shrink: var(--hui-fmernp-flex-shrink, 1);
   flex-wrap: var(--hui-fmernp-flex-wrap, nowrap);
+  gap: var(--hui-fmernp-gap, 0px);
+  align-content: var(--hui-fmernp-align-content, stretch);
+  justify-content: var(--hui-fmernp-justify-content, flex-start);
+  align-items: var(--hui-fmernp-align-items, stretch);
   /* TEXT */
   direction: var(--hui-fmernp-direction, ltr);
   font-family: var(--hui-fmernp-font-family, system-ui);
@@ -309,4 +327,7 @@
   outline-offset: var(--hui-fmernp-outline-offset, 0px);
   outline-style: var(--hui-fmernp-outline-style, none);
   outline-width: var(--hui-fmernp-outline-width, 0px);
+  scrollbar-color: var(--hui-fmernp-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-fmernp-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-fmernp-scrollbar-width, thin);
 }

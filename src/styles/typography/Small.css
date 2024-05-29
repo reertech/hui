@@ -37,6 +37,10 @@
   flex-grow: var(--hui-wpcfwr-flex-grow, 0);
   flex-shrink: var(--hui-wpcfwr-flex-shrink, 1);
   flex-wrap: var(--hui-wpcfwr-flex-wrap, nowrap);
+  gap: var(--hui-wpcfwr-gap, 0px);
+  align-content: var(--hui-wpcfwr-align-content, stretch);
+  justify-content: var(--hui-wpcfwr-justify-content, flex-start);
+  align-items: var(--hui-wpcfwr-align-items, stretch);
   /* TEXT */
   direction: var(--hui-wpcfwr-direction, ltr);
   font-family: var(--hui-wpcfwr-font-family, system-ui);
@@ -101,4 +105,7 @@
   outline-offset: var(--hui-wpcfwr-outline-offset, 0px);
   outline-style: var(--hui-wpcfwr-outline-style, none);
   outline-width: var(--hui-wpcfwr-outline-width, 0px);
+  scrollbar-color: var(--hui-wpcfwr-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-wpcfwr-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-wpcfwr-scrollbar-width, thin);
 }

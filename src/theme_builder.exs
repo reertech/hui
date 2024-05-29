@@ -349,7 +349,11 @@ defmodule Builder do
        {"flex-direction", "row"},
        {"flex-grow", "0"},
        {"flex-shrink", "1"},
-       {"flex-wrap", "nowrap"}
+       {"flex-wrap", "nowrap"},
+       {"gap", "0px"},
+       {"align-content", "stretch"},
+       {"justify-content", "flex-start"},
+       {"align-items", "stretch"}
      ]}
   end
 
@@ -496,7 +500,10 @@ defmodule Builder do
        {"outline-color", "rgb(0, 0, 0)"},
        {"outline-offset", "0px"},
        {"outline-style", "none"},
-       {"outline-width", "0px"}
+       {"outline-width", "0px"},
+       {"scrollbar-color", "#bbb #eee"},
+       {"scrollbar-gutter", "auto"},
+       {"scrollbar-width", "thin"}
      ]}
   end
 
@@ -719,9 +726,6 @@ defmodule Builder do
        {"scroll-snap-type", "none"},
        {"scroll-timeline-axis", "block"},
        {"scroll-timeline-name", "none"},
-       {"scrollbar-color", "auto"},
-       {"scrollbar-gutter", "auto"},
-       {"scrollbar-width", "auto"},
        {"shape-image-threshold", "0"},
        {"shape-margin", "0px"},
        {"shape-outside", "none"},

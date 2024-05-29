@@ -49,6 +49,10 @@
 /*  --hui-qrnkej-flex-grow-default: ; */
 /*  --hui-qrnkej-flex-shrink-default: ; */
 /*  --hui-qrnkej-flex-wrap-default: ; */
+/*  --hui-qrnkej-gap-default: ; */
+/*  --hui-qrnkej-align-content-default: ; */
+/*  --hui-qrnkej-justify-content-default: ; */
+/*  --hui-qrnkej-align-items-default: ; */
   /* TEXT */
 /*  --hui-qrnkej-direction-default: ; */
 /*  --hui-qrnkej-font-family-default: ; */
@@ -113,4 +117,7 @@
 /*  --hui-qrnkej-outline-offset-default: ; */
 /*  --hui-qrnkej-outline-style-default: ; */
 /*  --hui-qrnkej-outline-width-default: ; */
+/*  --hui-qrnkej-scrollbar-color-default: ; */
+/*  --hui-qrnkej-scrollbar-gutter-default: ; */
+/*  --hui-qrnkej-scrollbar-width-default: ; */
 }

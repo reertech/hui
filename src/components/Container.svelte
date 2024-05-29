@@ -17,15 +17,28 @@
   export let scrollY = null
   export let scrollX = null
 
-  $: isGrid = !flex && grid && typeof grid === "object"
-  $: isFlex = !grid && flex && typeof flex === "object"
+  const isValid = (value, allowed) => {
+    switch (true) {
+      case value == null: return false
+      case typeof value === "object": return true
+      case !["string", "boolean"].includes(typeof value): return false
+      case allowed.includes(value): return true
+      default: return false
+    }
+  }
+
+  $: isGrid = !flex && isValid(grid, [true, "true"])
+  $: isFlex = !grid && isValid(flex, [true, "true"])
+  $: isPosition = isValid(position, ["static", "fixed", "relative", "sticky", "absolute"])
   $: isScroll = scrollX || scrollY
 
-  $: g = !isGrid ? {} : { display: "grid", ...grid }
-  $: f = !isFlex ? {} : { display: "flex", ...flex }
+  $: g = !isGrid ? {} : { display: "grid", ...(typeof grid !== "object" ? {} : grid) }
+  $: f = !isFlex ? {} : { display: "flex", ...(typeof flex !== "object" ? {} : flex) }
+
+  $: p = !isPosition ? {} : typeof position == "string" ? { position } : position
 
   $: target = tag === null ? "child" : "self"
-  $: targetSelector = isGrid || isFlex || isScroll ? target : null
+  $: isTargeted = isGrid || isFlex || isScroll || isPosition
 </script>
 
 <svelte:element
@@ -42,7 +55,7 @@
   class={classes || null}
   hidden={hidden || null}
 
-  data-hui-grid-target={targetSelector}
+  data-hui-target={isTargeted ? target : null}
 
   data-hui-scroll-x={scrollX || null}
   data-hui-scroll-y={scrollY || null}
@@ -71,9 +84,18 @@
   data-hui-flex-justify-content={f.justifyContent || null}
   data-hui-flex-align-items={f.alignItems || null}
   data-hui-flex-align-content={f.alignContent || null}
+
+  data-hui-position={p.position || null}
+  style:top={p.top || null}
+  style:right={p.right || null}
+  style:bottom={p.bottom || null}
+  style:left={p.left || null}
+  style:inset={p.inset || null}
+
+  on:click
 >
-  {#if false && isGrid}
-    <pre>{JSON.stringify(g, null, 2)}</pre>
+  {#if false}
+    <pre>{JSON.stringify(flex, null, 2)}</pre>
   {/if}
   <slot />
 </svelte:element>

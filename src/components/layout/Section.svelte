@@ -22,6 +22,7 @@
 
 <Container
   hui="Section"
+  tag="section"
   {active}
   {readonly}
   {disabled}
@@ -30,14 +31,13 @@
   {invalid}
   {theme}
   {classes}
+  {position}
   {scrollX}
   {scrollY}
   {grid}
   {flex}
 >
-  <section>
-    <slot />
-  </section>
+  <slot />
 </Container>
 
 <!-- theme.ini

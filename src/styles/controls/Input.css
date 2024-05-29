@@ -37,6 +37,10 @@
   flex-grow: var(--hui-duueth-flex-grow, 0);
   flex-shrink: var(--hui-duueth-flex-shrink, 1);
   flex-wrap: var(--hui-duueth-flex-wrap, nowrap);
+  gap: var(--hui-duueth-gap, 0px);
+  align-content: var(--hui-duueth-align-content, stretch);
+  justify-content: var(--hui-duueth-justify-content, flex-start);
+  align-items: var(--hui-duueth-align-items, stretch);
   /* TEXT */
   direction: var(--hui-duueth-direction, ltr);
   font-family: var(--hui-duueth-font-family, system-ui);
@@ -101,4 +105,7 @@
   outline-offset: var(--hui-duueth-outline-offset, 0px);
   outline-style: var(--hui-duueth-outline-style, none);
   outline-width: var(--hui-duueth-outline-width, 0px);
+  scrollbar-color: var(--hui-duueth-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-duueth-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-duueth-scrollbar-width, thin);
 }

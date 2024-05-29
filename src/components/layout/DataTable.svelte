@@ -4,7 +4,6 @@
   import Container from "../Container.svelte"
   import Grid from "../Grid.svelte"
   import Flex from "../Flex.svelte"
-  import Table from "./Table.svelte"
 
   export let active = null
   export let readonly = null
@@ -37,6 +36,7 @@
   {invalid}
   {theme}
   {classes}
+  {position}
   {scrollX}
   {scrollY}
   {flex}
@@ -142,7 +142,7 @@
    > tbody,
    > thead,
    > * > tr = common, grid;
-   > tbody > tr > td,
+   > tbody > tr > td = common;
    > thead > tr > th = common;
    > tbody > tr > td + td =
     border-left-width,

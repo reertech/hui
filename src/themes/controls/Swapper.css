@@ -73,6 +73,10 @@
 /*  --hui-upezdl-flex-grow-default: ; */
 /*  --hui-upezdl-flex-shrink-default: ; */
 /*  --hui-upezdl-flex-wrap-default: ; */
+/*  --hui-upezdl-gap-default: ; */
+/*  --hui-upezdl-align-content-default: ; */
+/*  --hui-upezdl-justify-content-default: ; */
+/*  --hui-upezdl-align-items-default: ; */
   /* TEXT */
 /*  --hui-upezdl-direction-default: ; */
 /*  --hui-upezdl-font-family-default: ; */
@@ -137,6 +141,9 @@
 /*  --hui-upezdl-outline-offset-default: ; */
 /*  --hui-upezdl-outline-style-default: ; */
 /*  --hui-upezdl-outline-width-default: ; */
+/*  --hui-upezdl-scrollbar-color-default: ; */
+/*  --hui-upezdl-scrollbar-gutter-default: ; */
+/*  --hui-upezdl-scrollbar-width-default: ; */
 }
 [data-hui=Swapper] > button {
   /* LAYOUT-POSITION */
@@ -177,6 +184,10 @@
 /*  --hui-tysnrg-flex-grow-default: ; */
 /*  --hui-tysnrg-flex-shrink-default: ; */
 /*  --hui-tysnrg-flex-wrap-default: ; */
+/*  --hui-tysnrg-gap-default: ; */
+/*  --hui-tysnrg-align-content-default: ; */
+/*  --hui-tysnrg-justify-content-default: ; */
+/*  --hui-tysnrg-align-items-default: ; */
   /* TEXT */
 /*  --hui-tysnrg-direction-default: ; */
 /*  --hui-tysnrg-font-family-default: ; */
@@ -241,6 +252,9 @@
 /*  --hui-tysnrg-outline-offset-default: ; */
 /*  --hui-tysnrg-outline-style-default: ; */
 /*  --hui-tysnrg-outline-width-default: ; */
+/*  --hui-tysnrg-scrollbar-color-default: ; */
+/*  --hui-tysnrg-scrollbar-gutter-default: ; */
+/*  --hui-tysnrg-scrollbar-width-default: ; */
 }
 [data-hui=Swapper] > div {
   /* LAYOUT-POSITION */
@@ -281,6 +295,10 @@
 /*  --hui-fmernp-flex-grow-default: ; */
 /*  --hui-fmernp-flex-shrink-default: ; */
 /*  --hui-fmernp-flex-wrap-default: ; */
+/*  --hui-fmernp-gap-default: ; */
+/*  --hui-fmernp-align-content-default: ; */
+/*  --hui-fmernp-justify-content-default: ; */
+/*  --hui-fmernp-align-items-default: ; */
   /* TEXT */
 /*  --hui-fmernp-direction-default: ; */
 /*  --hui-fmernp-font-family-default: ; */
@@ -345,4 +363,7 @@
 /*  --hui-fmernp-outline-offset-default: ; */
 /*  --hui-fmernp-outline-style-default: ; */
 /*  --hui-fmernp-outline-width-default: ; */
+/*  --hui-fmernp-scrollbar-color-default: ; */
+/*  --hui-fmernp-scrollbar-gutter-default: ; */
+/*  --hui-fmernp-scrollbar-width-default: ; */
 }

@@ -1,7 +1,9 @@
 <script>
   import "../../styles/controls/Badge.css"
+  import "../../themes/controls/Badge.css"
   import Container from "../Container.svelte"
 
+  export let tag = "strong"
   export let active = null
   export let readonly = null
   export let disabled = null
@@ -21,6 +23,7 @@
 
 <Container
   hui="Badge"
+  {tag}
   {active}
   {readonly}
   {disabled}
@@ -29,16 +32,17 @@
   {invalid}
   {theme}
   {classes}
+  {position}
   {scrollX}
   {scrollY}
   {grid}
   {flex}
+  on:click
 >
-  <strong>
-    <slot />
-  </strong>
+  <slot />
 </Container>
 
 <!-- theme.ini
-  > strong = common;
+  themes: small;
+  & = common, display;
 -->

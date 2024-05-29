@@ -7,7 +7,7 @@ data[data-hui] {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   align-content: center;
 }
@@ -309,4 +309,52 @@ data[data-hui] {
   scrollbar-width: thin;
   scrollbar-color: #bbb #eee;
   scrollbar-gutter: auto;
+}
+
+[data-hui-position=absolute][data-hui-target=child] > *:not(#huiHack),
+[data-hui-position=absolute][data-hui-target=self]:not(#huiHack) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+[data-hui-position=relative][data-hui-target=child] > *:not(#huiHack),
+[data-hui-position=relative][data-hui-target=self]:not(#huiHack) {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+[data-hui-position=fixed][data-hui-target=child] > *:not(#huiHack),
+[data-hui-position=fixed][data-hui-target=self]:not(#huiHack) {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+[data-hui-position=sticky][data-hui-target=child] > *:not(#huiHack),
+[data-hui-position=sticky][data-hui-target=self]:not(#huiHack) {
+  position: sticky;
+}
+[data-hui-position=static][data-hui-target=child] > *:not(#huiHack),
+[data-hui-position=static][data-hui-target=self]:not(#huiHack) {
+  position: static;
+}
+[data-hui-position][data-hui-target=child][style*=top] > *:not(#huiHack) {
+  top: inherit;
+}
+[data-hui-position][data-hui-target=child][style*=right] > *:not(#huiHack) {
+  right: inherit;
+}
+[data-hui-position][data-hui-target=child][style*=bottom] > *:not(#huiHack) {
+  bottom: inherit;
+}
+[data-hui-position][data-hui-target=child][style*=left] > *:not(#huiHack) {
+  left: inherit;
+}
+[data-hui-position][data-hui-target=child][style*=inset] > *:not(#huiHack) {
+  inset: inherit;
 }

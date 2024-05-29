@@ -2,7 +2,7 @@
   /* COLORS */
   --hui-default-color-h: 0;
   --hui-default-color-s: 0%;
-  --hui-default-color-l: 25%;
+  --hui-default-color-l: 23%;
   --hui-default-color: hsl(var(--hui-default-color-h), var(--hui-default-color-s), var(--hui-default-color-l));
 
   --hui-default-color-minus1-h: var(--hui-default-color-h);
@@ -79,7 +79,7 @@
   --hui-default-transition-1: all 0.42s ease-out allow-discrete;
 
   /* SIZES */
-  --hui-default-size: clamp(12px, 1rem, 17px);
+  --hui-default-size: clamp(12px, 1rem, 15px);
 
   --hui-default-size-0: calc(var(--hui-default-size) * 0.94);
   --hui-default-size-1: var(--hui-default-size);
@@ -168,7 +168,7 @@
 
   --hui-default-background-color: var(--hui-default-color-bg);
 
-  --hui-default-font-size: var(--hui-default-color-text);
+  --hui-default-font-size: var(--hui-default-size);
 }
 /*
 

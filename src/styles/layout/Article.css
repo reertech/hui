@@ -37,6 +37,10 @@
   flex-grow: var(--hui-qrnkej-flex-grow, 0);
   flex-shrink: var(--hui-qrnkej-flex-shrink, 1);
   flex-wrap: var(--hui-qrnkej-flex-wrap, nowrap);
+  gap: var(--hui-qrnkej-gap, 0px);
+  align-content: var(--hui-qrnkej-align-content, stretch);
+  justify-content: var(--hui-qrnkej-justify-content, flex-start);
+  align-items: var(--hui-qrnkej-align-items, stretch);
   /* TEXT */
   direction: var(--hui-qrnkej-direction, ltr);
   font-family: var(--hui-qrnkej-font-family, system-ui);
@@ -101,4 +105,7 @@
   outline-offset: var(--hui-qrnkej-outline-offset, 0px);
   outline-style: var(--hui-qrnkej-outline-style, none);
   outline-width: var(--hui-qrnkej-outline-width, 0px);
+  scrollbar-color: var(--hui-qrnkej-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-qrnkej-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-qrnkej-scrollbar-width, thin);
 }

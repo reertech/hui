@@ -20,3 +20,29 @@ export const buildFuzzyRegex = (string, params = "gi") => {
   return new RegExp(pattern.replace(" ", ".+\\b"), params)
 }
 
+export const calcParentOffset = (el, parent) => {
+  if (!parent || !el) return null
+
+  const parentRect = parent.getBoundingClientRect()
+  const elRect = el.getBoundingClientRect()
+
+  return {
+    top: elRect.top - parentRect.top,
+    right: parentRect.right - elRect.right,
+    bottom: parentRect.bottom - elRect.bottom,
+    left: elRect.left - parentRect.left
+  }
+}
+
+export const fetchCutParent = (el) => {
+  if (!el) return null
+
+  const overflowX = getComputedStyle(el).overflowX
+
+  if (overflowX !== "visible") return el
+
+  return fetchCutParent(el.parentElement)
+}
+
+export const calcCutParentOffset = (el) =>
+  calcParentOffset(el, fetchCutParent(el))

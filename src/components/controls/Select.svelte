@@ -2,6 +2,8 @@
   import "../../themes/controls/Select.css"
   import "../../styles/controls/Select.css"
   import Container from "../Container.svelte"
+  import Badge from "../controls/Badge.svelte"
+  import { calcCutParentOffset } from "../../helpers.js"
 
   import { checkEmpty, buildFuzzyRegex } from "../../helpers.js"
   import { tick, createEventDispatcher } from "svelte"
@@ -28,11 +30,14 @@
   export let options = {}
   export let label = null
   export let maxValues = 1
-  export let placeholder = "Select"
+  export let placeholder = +maxValues === 1 ? "" : "Add"
 
   let search = null
   let opened = false
   let closeTimer = null
+  let searchInput;
+
+  $: root = searchInput && searchInput.parentElement
 
   $: selectedArray = Array.isArray(selected) ? selected
     : selected == null ? [] : [selected]
@@ -59,7 +64,10 @@
 
   const open = () => {
     clearTimeout(closeTimer)
-    opened = true
+
+    opened = calcOpenDir()
+
+    console.log(opened)
   }
 
   const close = () => {
@@ -91,14 +99,32 @@
     selectedSet.delete(value)
 
     await commit()
-    if (!isMulti) open()
+
+    if (!isMulti) searchInput.focus()
   }
 
-  /* $: { select(search) } */
+  const calcOpenDir = () => {
+    const offset = calcCutParentOffset(root)
+    const result = { dir: "bottom", height: null }
+
+    if (!offset) return result
+
+    if (offset.bottom >= offset.top) {
+      result.height = offset.bottom - 5
+    } else {
+      result.height = offset.top - 5
+      result.dir = "top"
+    }
+
+    return result
+  }
+
+  /* $: { select(search) } ??? */
 </script>
 
 <Container
   hui="Select"
+  tag="fieldset"
   {active}
   {readonly}
   {disabled}
@@ -107,69 +133,74 @@
   {invalid}
   {theme}
   {classes}
+  {position}
   {scrollX}
   {scrollY}
   {grid}
   {flex}
 >
-  <fieldset
-    {name}
-    {disabled}
+  {#if label || $$slots.label}
+    <legend>
+      <label>
+        {opened}
+        {#if label}{label}{/if}
+        <slot name="label" />
+        <input
+          {name}
+          hidden
+          value={isMulti ? JSON.stringify(selected) : selected}
+        />
+      </label>
+    </legend>
+  {/if}
+
+  {#each selectedArray as value}
+    <Badge
+      tag="button"
+      theme="small"
+      on:click={() => remove(value)}
+    >
+      {@html optionsMap.get(value)}
+    </Badge>
+  {/each}
+  <input
+    bind:this={searchInput}
+    bind:value={search}
+    on:focus={open}
+    on:blur={close}
+    {placeholder}
+    hidden={isFull}
+    active={active || null}
+    disabled={disabled || null}
+    readonly={readonly || null}
   >
-    {#if label || $$slots.label}
-      <legend>
-        <label>
-          {opened}
-          {#if label}{label}{/if}
-          <slot name="label" />
-        </label>
-      </legend>
-    {/if}
 
-    <input
-      {name}
-      hidden
-      value={isMulti ? JSON.stringify(selected) : selected}
-    />
-
-    <div>
-      {#each selectedArray as value}
-        <data
-          {value}
-          on:click={() => remove(value)}
-        >
-          {optionsMap.get(value)}
-        </data>
-      {/each}
-      <input
-        bind:value={search}
-        hidden={isFull}
-        on:focus={open}
-        on:blur={close}
-        {placeholder}
-        active={active || null}
-        disabled={disabled || null}
-        readonly={readonly || null}
-      >
-    </div>
-
+  {#if opened && filteredOptions.length}
     <datalist
-      hidden={!opened || !filteredOptions.length}
+      class:toTop={opened && opened.dir === "top"}
+      style:height={opened && opened.height}
     >
       {#each filteredOptions as [value, label]}
         <option
-          {label}
           {value}
           on:click={() => select(label)}
-        />
+        >
+          {@html label}
+        </option>
       {/each}
     </datalist>
-  </fieldset>
+  {/if}
 </Container>
 
 <!-- theme.ini
-  > fieldset = common;
-  > fieldset > datalist = common;
-  > fieldset > datalist > option = common;
-  > fieldset > div > input = common;
+  themes: flat;
+  & = common, display, flex, gap;
+  > button = flex-grow, cursor;
+  > datalist = common, display;
+  > datalist.toTop = top, bottom;
+  > datalist > option = common, display;
+  > datalist > option:hover = background-image;
+  > input = common;
+  > datalist > option + option =
+    border-top-color, border-top-style, border-top-width;
 -->

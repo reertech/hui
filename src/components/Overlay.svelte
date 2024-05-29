@@ -10,13 +10,15 @@
   export let right = 0
   export let bottom = 0
   export let left = 0
+  export let inset = 0
 
   $: position = {
-    position: fullscreen ? "absolute" : "fixed",
+    position: fullscreen ? "fixed" : "absolute",
     top,
     right,
     bottom,
-    left
+    left,
+    inset
   }
 </script>
 
