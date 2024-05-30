@@ -3,9 +3,9 @@
   --hui-dityoy-position: relative;
   /* LAYOUT-SIZING */
   --hui-dityoy-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-border-width)) * 2);
-  --hui-dityoy-width: fit-content;
-  --hui-dityoy-max-width: 100%;
-  --hui-dityoy-min-width: 232px;
+  --hui-dityoy-width: 100%;
+  --hui-dityoy-max-width: 350px;
+  --hui-dityoy-min-width: 200px;
   /* LAYOUT-PADDING */
   --hui-dityoy-padding-top: var(--hui-default-spacer-5);
   --hui-dityoy-padding-right: var(--hui-default-spacer-6);

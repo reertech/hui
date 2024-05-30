@@ -36,7 +36,7 @@
 
   const buildWidth = (value) => {
     switch (typeof value) {
-      case "number": return `${value}px`
+      case "number": return `minmax(${value}px, max-content)`
       case "string": return value
       default: return "max-content"
     }

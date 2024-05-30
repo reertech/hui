@@ -1,4 +1,5 @@
 <script>
+  import "../../themes/typography/Strong.css"
   import "../../styles/typography/Strong.css"
   import Container from "../Container.svelte"
 
@@ -23,6 +24,7 @@
 
 <Container
   hui="Strong"
+  tag="strong"
   {active}
   {readonly}
   {disabled}
@@ -39,11 +41,9 @@
   {grid}
   {flex}
 >
-  <strong>
-    <slot />
-  </strong>
+  <slot />
 </Container>
 
 <!-- theme.ini
-  > strong = common;
+  & = common;
 -->

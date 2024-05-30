@@ -23,7 +23,7 @@
   export let list
   export let idx
 
-  let onFly;
+  let onFly, isOver, element;
 
   const start = (e) => {
     onFly = true
@@ -32,7 +32,22 @@
   }
 
   const end = () => onFly = false
-  const leave = () => isOver = false
+
+  const enter = () => isOver = true
+
+  const leave = (e) => {
+    if (e.relatedTarget?.parentNode === element) return
+    if (e.fromElement?.parentNode === element) return
+    if (e.relatedTarget?.parentNode?.parentNode === element) return
+    if (e.fromElement?.parentNode?.parentNode === element) return
+
+    isOver = false
+  }
+
+  const swap = (e) => {
+    list = e.detail
+    isOver = false
+  }
 </script>
 
 <Container
@@ -53,22 +68,26 @@
   {flex}
 >
   {#if disabled}
-      <slot />
+    <slot />
   {:else}
     <button
       draggable="true"
+      bind:this={element}
       style:opacity={onFly ? "0.5" : null}
       on:dragstart={start}
       on:dragend={end}
+      on:dragleave={leave}
+      on:dragenter={enter}
       on:dragover|preventDefault={() => false}
+      on:drop|preventDefault|stopPropagation={leave}
     >
       <DropZone
         {idx}
         {list}
         on:swap
         dir="left"
-        hidden={onFly}
-        on:swap={(e) => list = e.detail}
+        hidden={onFly || !isOver}
+        on:swap={swap}
       />
         <slot />
       <DropZone
@@ -76,8 +95,8 @@
         {list}
         on:swap
         dir="right"
-        hidden={onFly}
-        on:swap={(e) => list = e.detail}
+        hidden={onFly || !isOver}
+        on:swap={swap}
       />
     </button>
   {/if}

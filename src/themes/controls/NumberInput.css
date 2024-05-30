@@ -1,9 +1,9 @@
 [data-hui=NumberInput] {
   /* LAYOUT-SIZING */
   --hui-affhez-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-border-width)) * 2);
-  --hui-affhez-width: fit-content;
-  --hui-affhez-max-width: 100%;
-  --hui-affhez-min-width: 132px;
+  --hui-affhez-width: 100%;
+  --hui-affhez-max-width: 550px;
+  --hui-affhez-min-width: 200px;
   /* LAYOUT-PADDING */
   --hui-affhez-padding-top: var(--hui-default-spacer-5);
   --hui-affhez-padding-right: var(--hui-default-spacer-6);

@@ -31,17 +31,18 @@
   const enter = () => isOver = true
 </script>
 
-{#if !hidden}
-  <div
-    style:opacity={isOver ? null : 0}
-    on:drop|preventDefault|stopPropagation={drop}
-    on:dragleave={leave}
-    on:dragenter={enter}
-    on:dragover|preventDefault={() => false}
-  >
-    &nbsp;
-  </div>
-{/if}
+<div
+  {hidden}
+  style:opacity={isOver ? null : 0.3}
+  on:drop|preventDefault|stopPropagation={drop}
+  on:dragleave
+  on:dragenter
+  on:dragleave={leave}
+  on:dragenter={enter}
+  on:dragover|preventDefault={() => false}
+>
+  &nbsp;
+</div>
 
 <style>
   div {
@@ -52,7 +53,6 @@
     line-height: 100% !important;
     width: 25% !important;
     height: 100% !important;
-    max-height: 10px !important;
     background: #0000004f !important;
   }
   div:first-child {

@@ -2,6 +2,7 @@
   import "../../themes/controls/TextInput.css"
   import "../../styles/controls/TextInput.css"
   import Container from "../Container.svelte"
+  import Badge from "../controls/Badge.svelte"
 
   import { tick, createEventDispatcher } from "svelte"
   const dispatch = createEventDispatcher()
@@ -28,6 +29,8 @@
   export let placeholder = null
   export let value = null
   export let maxLength = null
+  export let prefix = null
+  export let suffix = null
 </script>
 
 <Container
@@ -49,6 +52,11 @@
   {grid}
   {flex}
 >
+  {#if prefix}
+    <Strong>
+      {prefix}
+    </Strong>
+  {/if}
   <input
     {name}
     on:click
@@ -59,6 +67,11 @@
     {maxLength}
     type="text"
   />
+  {#if suffix}
+    <Strong>
+      {suffix}
+    </Strong>
+  {/if}
 </Container>
 
 <!-- theme.ini

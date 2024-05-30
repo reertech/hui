@@ -24,9 +24,9 @@
 [data-hui=DataTable] > thead > tr > th {
   /* LAYOUT-PADDING */
   --hui-yfagqg-padding-top: var(--hui-default-spacer-5);
-  --hui-yfagqg-padding-right: var(--hui-default-spacer-6);
+  --hui-yfagqg-padding-right: var(--hui-default-spacer-7);
   --hui-yfagqg-padding-bottom: var(--hui-default-spacer-5);
-  --hui-yfagqg-padding-left: var(--hui-default-spacer-6);
+  --hui-yfagqg-padding-left: var(--hui-default-spacer-7);
 }
 [data-hui=DataTable] > tbody > tr > td + td {
   --hui-ozatyc-border-left-width: var(--hui-unua-border-width);
