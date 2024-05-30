@@ -61,7 +61,7 @@
   hidden={hidden || null}
 
   data-hui-target={isTargeted ? target : null}
-  data-hui-idx={idx || null}
+  data-hui-idx={idx ?? null}
 
   data-hui-scroll-x={scrollX || null}
   data-hui-scroll-y={scrollY || null}
@@ -92,14 +92,14 @@
   data-hui-flex-align-content={f.alignContent || null}
 
   data-hui-position={p.position || null}
-  style:top={p.top || null}
-  style:right={p.right || null}
-  style:bottom={p.bottom || null}
-  style:left={p.left || null}
-  style:inset={p.inset || null}
+  style:top={p.top ?? null}
+  style:right={p.right ?? null}
+  style:bottom={p.bottom ?? null}
+  style:left={p.left ?? null}
+  style:inset={p.inset ?? null}
 
-  style:width={s.width || null}
-  style:max-width={s.maxWidth || null}
+  style:width={s.width ?? null}
+  style:max-width={s.maxWidth ?? null}
 
   on:click
   on:mouseup

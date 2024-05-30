@@ -32,7 +32,7 @@
   export let options = {}
   export let label = null
   export let maxValues = 1
-  export let placeholder = +maxValues === 1 ? "" : "Add"
+  export let placeholder = +maxValues === 1 ? "Select" : "Add"
 
   let search = null
   let opened = false
@@ -79,7 +79,7 @@
 
     selected = isMulti
       ? [...selectedSet].slice(-maxValuesInt)
-      : [...selectedSet].at(-1) || null
+      : [...selectedSet].at(-1) ?? null
 
     dispatch("select", selected)
   }
@@ -197,12 +197,13 @@
 <!-- theme.ini
   themes: flat;
   & = common, display, flex, gap;
+  > input = common;
+  > input::placeholder = font-size;
   > button = flex-grow, cursor;
   > datalist = common, display;
   > datalist.toTop = top, bottom;
   > datalist > option = common, display;
   > datalist > option:hover = background-image;
-  > input = common;
   > datalist > option + option =
     border-top-color, border-top-style, border-top-width;
 -->

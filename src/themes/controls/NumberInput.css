@@ -2,7 +2,7 @@
   /* LAYOUT-SIZING */
   --hui-affhez-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-border-width)) * 2);
   --hui-affhez-width: fit-content;
-  --hui-affhez-max-width: 350px;
+  --hui-affhez-max-width: 100%;
   --hui-affhez-min-width: 132px;
   /* LAYOUT-PADDING */
   --hui-affhez-padding-top: var(--hui-default-spacer-5);
@@ -50,25 +50,38 @@
   --hui-hqtsye-color: var(--hui-default-color-text);
   --hui-hqtsye-cursor: pointer;
 }
+[data-hui=NumberInput] > input::placeholder {
+  --hui-ltpgzd-font-size: var(--hui-default-size-0);
+}
 [data-hui=NumberInput][data-hui-active] {
 }
 [data-hui=NumberInput][data-hui-active] > input {
+}
+[data-hui=NumberInput][data-hui-active] > input::placeholder {
 }
 [data-hui=NumberInput][data-hui-disabled] {
 }
 [data-hui=NumberInput][data-hui-disabled] > input {
 }
+[data-hui=NumberInput][data-hui-disabled] > input::placeholder {
+}
 [data-hui=NumberInput][data-hui-readonly] {
 }
 [data-hui=NumberInput][data-hui-readonly] > input {
+}
+[data-hui=NumberInput][data-hui-readonly] > input::placeholder {
 }
 [data-hui=NumberInput][data-hui-valid] {
 }
 [data-hui=NumberInput][data-hui-valid] > input {
 }
+[data-hui=NumberInput][data-hui-valid] > input::placeholder {
+}
 [data-hui=NumberInput][data-hui-invalid] {
 }
 [data-hui=NumberInput][data-hui-invalid] > input {
+}
+[data-hui=NumberInput][data-hui-invalid] > input::placeholder {
 }
 [data-hui=NumberInput] {
   /* LAYOUT-POSITION */
@@ -295,4 +308,7 @@
 /*  --hui-hqtsye-scrollbar-color-default: ; */
 /*  --hui-hqtsye-scrollbar-gutter-default: ; */
 /*  --hui-hqtsye-scrollbar-width-default: ; */
+}
+[data-hui=NumberInput] > input::placeholder {
+/*  --hui-ltpgzd-font-size-default: ; */
 }

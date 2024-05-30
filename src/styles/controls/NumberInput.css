@@ -224,3 +224,6 @@
   scrollbar-gutter: var(--hui-hqtsye-scrollbar-gutter, auto);
   scrollbar-width: var(--hui-hqtsye-scrollbar-width, thin);
 }
+[data-hui=NumberInput] > input::placeholder {
+  font-size: var(--hui-ltpgzd-font-size, initial);
+}

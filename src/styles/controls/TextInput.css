@@ -224,3 +224,6 @@
   scrollbar-gutter: var(--hui-msgihx-scrollbar-gutter, auto);
   scrollbar-width: var(--hui-msgihx-scrollbar-width, thin);
 }
+[data-hui=TextInput] > input::placeholder {
+  font-size: var(--hui-widtjz-font-size, initial);
+}

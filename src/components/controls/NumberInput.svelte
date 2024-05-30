@@ -68,4 +68,5 @@
 <!-- theme.ini
   & = common, display, flex, gap;
   > input = common;
+  > input::placeholder = font-size;
 -->

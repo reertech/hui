@@ -52,6 +52,7 @@
     line-height: 100% !important;
     width: 25% !important;
     height: 100% !important;
+    max-height: 10px !important;
     background: #0000004f !important;
   }
   div:first-child {

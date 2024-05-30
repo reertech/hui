@@ -2,7 +2,7 @@
   /* LAYOUT-SIZING */
   --hui-edmssq-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-border-width)) * 2);
   --hui-edmssq-width: fit-content;
-  --hui-edmssq-max-width: 350px;
+  --hui-edmssq-max-width: 100%;
   --hui-edmssq-min-width: 132px;
   /* LAYOUT-PADDING */
   --hui-edmssq-padding-top: var(--hui-default-spacer-5);
@@ -50,25 +50,38 @@
   --hui-msgihx-color: var(--hui-default-color-text);
   --hui-msgihx-cursor: pointer;
 }
+[data-hui=TextInput] > input::placeholder {
+  --hui-widtjz-font-size: var(--hui-default-size-0);
+}
 [data-hui=TextInput][data-hui-active] {
 }
 [data-hui=TextInput][data-hui-active] > input {
+}
+[data-hui=TextInput][data-hui-active] > input::placeholder {
 }
 [data-hui=TextInput][data-hui-disabled] {
 }
 [data-hui=TextInput][data-hui-disabled] > input {
 }
+[data-hui=TextInput][data-hui-disabled] > input::placeholder {
+}
 [data-hui=TextInput][data-hui-readonly] {
 }
 [data-hui=TextInput][data-hui-readonly] > input {
+}
+[data-hui=TextInput][data-hui-readonly] > input::placeholder {
 }
 [data-hui=TextInput][data-hui-valid] {
 }
 [data-hui=TextInput][data-hui-valid] > input {
 }
+[data-hui=TextInput][data-hui-valid] > input::placeholder {
+}
 [data-hui=TextInput][data-hui-invalid] {
 }
 [data-hui=TextInput][data-hui-invalid] > input {
+}
+[data-hui=TextInput][data-hui-invalid] > input::placeholder {
 }
 [data-hui=TextInput] {
   /* LAYOUT-POSITION */
@@ -295,4 +308,7 @@
 /*  --hui-msgihx-scrollbar-color-default: ; */
 /*  --hui-msgihx-scrollbar-gutter-default: ; */
 /*  --hui-msgihx-scrollbar-width-default: ; */
+}
+[data-hui=TextInput] > input::placeholder {
+/*  --hui-widtjz-font-size-default: ; */
 }

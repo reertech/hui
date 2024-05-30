@@ -1,4 +1,7 @@
 [data-hui=Button] > button {
+  /* LAYOUT-SIZING */
+  --hui-zsnfqz-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-border-width)) * 2);
+  --hui-zsnfqz-min-width: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-border-width)) * 2);
   /* LAYOUT-PADDING */
   --hui-zsnfqz-padding-top: var(--hui-default-spacer-6);
   --hui-zsnfqz-padding-right: var(--hui-default-spacer-7);
@@ -212,8 +215,10 @@
   --hui-zsnfqz-padding-bottom: var(--hui-default-spacer-4);
   --hui-zsnfqz-padding-left: var(--hui-default-spacer-5);
   /* TEXT */
-  --hui-zsnfqz-font-size: var(--hui-default-font-size-0);
+  --hui-zsnfqz-font-size: var(--hui-default-size-0);
   --hui-zsnfqz-line-height: var(--hui-default-line-height);
+  --hui-zsnfqz-min-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height) + (var(--hui-default-spacer-4) + var(--hui-default-border-width)) * 2);
+  --hui-zsnfqz-min-width: calc(var(--hui-default-size-0) * var(--hui-default-line-height) + (var(--hui-default-spacer-4) + var(--hui-default-border-width)) * 2);
 }
 [data-hui=Button][data-hui-theme~=small] > button:hover {
 }

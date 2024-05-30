@@ -27,6 +27,7 @@
   export let name = null
   export let placeholder = null
   export let value = null
+  export let maxLength = null
 </script>
 
 <Container
@@ -55,6 +56,7 @@
     on:change
     bind:value
     {placeholder}
+    {maxLength}
     type="text"
   />
 </Container>
@@ -62,4 +64,5 @@
 <!-- theme.ini
   & = common, display, flex, gap;
   > input = common;
+  > input::placeholder = font-size;
 -->

@@ -58,18 +58,10 @@
 
   const calcColsRealWidth = async () => {
     await tick()
-    await tick()
 
-    setTimeout(() => {
-      const thCols = document.querySelectorAll("tr > th[data-hui-idx]")
+    const thCols = document.querySelectorAll("tr > th[data-hui-idx]")
 
-
-      colsRealWidth = [...thCols].map(th => {
-        return th.offsetWidth
-      })
-
-      console.log(colsRealWidth[0])
-    }, 1000)
+    colsRealWidth = [...thCols].map(th => th.offsetWidth)
   }
 
   $: isCustomWidth = Array.isArray(colsWidth) &&
@@ -83,18 +75,14 @@
     }).join(" ")
 
   $: templateColumns = [
-    $$slots.tdFirst && "auto",
+    $$slots.tdFirst && "max-content",
     colsTemplate,
-    $$slots.tdLast && "auto"
+    $$slots.tdLast && "max-content"
   ].filter(s => s).join(" ")
-
 
   $: calcColsRealWidth(cols, colsWidth)
   onMount(calcColsRealWidth)
 </script>
-
-{JSON.stringify(templateColumns)}
-{JSON.stringify(colsRealWidth[0])}
 
 <Container
   tag="table"
@@ -113,7 +101,10 @@
   {scrollX}
   {scrollY}
   {flex}
-  grid={{ templateColumns, ...grid }}
+  grid={{
+    templateColumns,
+    ...grid
+  }}
 >
     <Grid
       tag="thead"
@@ -175,7 +166,6 @@
           {/if}
           {#each cols as col, colIdx}
             <Flex tag="th" idx={colIdx}>
-              {colIdx}
               <slot
                 name="th"
                 {col}
