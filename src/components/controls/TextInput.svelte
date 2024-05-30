@@ -2,7 +2,7 @@
   import "../../themes/controls/TextInput.css"
   import "../../styles/controls/TextInput.css"
   import Container from "../Container.svelte"
-  import Badge from "../controls/Badge.svelte"
+  import Strong from "../typography/Strong.svelte"
 
   import { tick, createEventDispatcher } from "svelte"
   const dispatch = createEventDispatcher()

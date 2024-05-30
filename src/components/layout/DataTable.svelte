@@ -280,6 +280,7 @@
    > * > tr = common, grid;
    > tbody > tr > td = common;
    > thead > tr > th = common;
+   > tbody > tr:nth-child(odd) > td = background-color;
    > tbody > tr > td + td =
     border-left-width,
     border-left-style,

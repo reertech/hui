@@ -478,6 +478,9 @@
   scrollbar-gutter: var(--hui-yfagqg-scrollbar-gutter, auto);
   scrollbar-width: var(--hui-yfagqg-scrollbar-width, thin);
 }
+[data-hui=DataTable] > tbody > tr:nth-child(odd) > td {
+  background-color: var(--hui-pcwkvb-background-color, initial);
+}
 [data-hui=DataTable] > tbody > tr > td + td {
   border-left-width: var(--hui-ozatyc-border-left-width, initial);
   border-left-style: var(--hui-ozatyc-border-left-style, initial);
