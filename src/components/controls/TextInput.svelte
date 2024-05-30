@@ -1,6 +1,10 @@
 <script>
-  import "../../styles/layout/Main.css"
+  import "../../themes/controls/TextInput.css"
+  import "../../styles/controls/TextInput.css"
   import Container from "../Container.svelte"
+
+  import { tick, createEventDispatcher } from "svelte"
+  const dispatch = createEventDispatcher()
 
   export let active = null
   export let readonly = null
@@ -19,10 +23,15 @@
 
   let classes = null
   export { classes as class }
+
+  export let name = null
+  export let placeholder = null
+  export let value = null
 </script>
 
 <Container
-  hui="Main"
+  hui="TextInput"
+  tag="fieldset"
   {active}
   {readonly}
   {disabled}
@@ -39,11 +48,18 @@
   {grid}
   {flex}
 >
-  <main>
-    <slot />
-  </main>
+  <input
+    {name}
+    on:click
+    on:input
+    on:change
+    bind:value
+    {placeholder}
+    type="text"
+  />
 </Container>
 
 <!-- theme.ini
-  > main = common;
+  & = common, display, flex, gap;
+  > input = common;
 -->

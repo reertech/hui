@@ -2,6 +2,7 @@
   import Container from "./Container.svelte"
 
   export let tag = "div"
+  export let idx = null
   export let display = "flex"
   export let direction = null
   export let wrap = null
@@ -22,6 +23,7 @@
 <Container
   hui="Flex"
   {tag}
+  {idx}
   flex={params}
 >
   <slot />

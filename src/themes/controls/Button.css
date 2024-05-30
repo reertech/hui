@@ -134,7 +134,7 @@
 }
 [data-hui=Button][data-hui-theme~=flat] > button {
   /* APPERANCE */
-  --hui-zsnfqz-box-shadow: none;
+  --hui-zsnfqz-background-image: var(--hui-default-gradient-2);
   --hui-zsnfqz-border-bottom-color: var(--hui-default-border-color);
   --hui-zsnfqz-border-bottom-style: var(--hui-default-border-style);
   --hui-zsnfqz-border-bottom-width: var(--hui-unua-border-width);
@@ -147,24 +147,26 @@
   --hui-zsnfqz-border-top-color: var(--hui-default-border-color);
   --hui-zsnfqz-border-top-style: var(--hui-default-border-style);
   --hui-zsnfqz-border-top-width: var(--hui-unua-border-width);
-  --hui-zsnfqz-background-image: var(--hui-default-gradient-0);
+  --hui-zsnfqz-box-shadow: none;
 }
 [data-hui=Button][data-hui-theme~=flat] > button:hover {
+  /* APPERANCE */
   --hui-zsnfqz-background-image: var(--hui-default-gradient-1);
 }
 [data-hui=Button][data-hui-theme~=flat] > button:active {
   /* APPERANCE */
   --hui-zsnfqz-background-image: var(--hui-default-gradient-2);
-  --hui-zsnfqz-box-shadow: var(--hui-tria-box-shadow);
+  --hui-zsnfqz-box-shadow: inset var(--hui-unua-box-shadow);
 }
 [data-hui=Button][data-hui-theme~=flat] > button:focus {
 }
 [data-hui=Button][data-hui-theme~=flat][data-hui-active] > button {
   /* APPERANCE */
-  --hui-zsnfqz-box-shadow: var(--hui-tria-box-shadow);
-  --hui-zsnfqz-background-image: var(--hui-default-gradient-0);
+  --hui-zsnfqz-background-image: var(--hui-default-gradient-1);
+  --hui-zsnfqz-box-shadow: inset var(--hui-unua-box-shadow);
 }
 [data-hui=Button][data-hui-theme~=flat][data-hui-active] > button:hover {
+  /* APPERANCE */
   --hui-zsnfqz-background-image: var(--hui-default-gradient-1);
 }
 [data-hui=Button][data-hui-theme~=flat][data-hui-active] > button:active {

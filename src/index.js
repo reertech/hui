@@ -30,6 +30,8 @@ export { default as Button } from "./components/controls/Button.svelte"
 export { default as Bar } from "./components/controls/Bar.svelte"
 export { default as Badge } from "./components/controls/Badge.svelte"
 export { default as Input } from "./components/controls/Input.svelte"
+export { default as TextInput } from "./components/controls/TextInput.svelte"
+export { default as NumberInput } from "./components/controls/NumberInput.svelte"
 export { default as Select } from "./components/controls/Select.svelte"
 export { default as Swapper } from "./components/controls/Swapper.svelte"
 

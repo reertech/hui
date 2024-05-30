@@ -10,6 +10,7 @@
   export let valid = null
   export let invalid = null
   export let theme = null
+  export let size = null
   export let position = null
   export let scrollX = null
   export let scrollY = null
@@ -44,6 +45,7 @@
   {invalid}
   {theme}
   {classes}
+  {size}
   {position}
   {scrollX}
   {scrollY}

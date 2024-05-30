@@ -5,6 +5,8 @@
   import Grid from "../Grid.svelte"
   import Flex from "../Flex.svelte"
 
+  import { onMount, tick } from "svelte"
+
   export let active = null
   export let readonly = null
   export let disabled = null
@@ -12,21 +14,87 @@
   export let valid = null
   export let invalid = null
   export let theme = null
+  export let idx = null
+  export let size = null
   export let position = null
   export let scrollX = null
   export let scrollY = null
   export let grid = null
   export let flex = null
 
-  export let thTop = true
-  export let thBottom = true
-
   let classes = null
   export { classes as class }
 
   export let cols = []
   export let rows = []
+
+  export let thTop = true
+  export let thBottom = true
+  export let colsWidth = null
+
+  let colsRealWidth = []
+
+  const buildWidth = (value) => {
+    switch (typeof value) {
+      case "number": return `${value}px`
+      case "string": return value
+      default: return "max-content"
+    }
+  }
+
+  const widthDedup = (acc, value, idx, array) => {
+    if (!idx || array[idx - 1] !== value) return [...acc, value]
+
+    let prev = acc.pop()
+
+    if (typeof prev === "object") {
+      prev.count += 1
+    } else {
+      prev = { count: 2, value }
+    }
+
+    return [...acc, prev]
+  }
+
+  const calcColsRealWidth = async () => {
+    await tick()
+    await tick()
+
+    setTimeout(() => {
+      const thCols = document.querySelectorAll("tr > th[data-hui-idx]")
+
+
+      colsRealWidth = [...thCols].map(th => {
+        return th.offsetWidth
+      })
+
+      console.log(colsRealWidth[0])
+    }, 1000)
+  }
+
+  $: isCustomWidth = Array.isArray(colsWidth) &&
+    colsWidth.length === cols.length
+
+  $: colsTemplate = !isCustomWidth
+    ? `repeat(${cols.length}, max-content)`
+    : colsWidth.map(buildWidth).reduce(widthDedup, []).map(w => {
+      if (typeof w !== "object") return w
+      return `repeat(${w.count}, ${w.value})`
+    }).join(" ")
+
+  $: templateColumns = [
+    $$slots.tdFirst && "auto",
+    colsTemplate,
+    $$slots.tdLast && "auto"
+  ].filter(s => s).join(" ")
+
+
+  $: calcColsRealWidth(cols, colsWidth)
+  onMount(calcColsRealWidth)
 </script>
+
+{JSON.stringify(templateColumns)}
+{JSON.stringify(colsRealWidth[0])}
 
 <Container
   tag="table"
@@ -39,14 +107,13 @@
   {invalid}
   {theme}
   {classes}
+  {idx}
+  {size}
   {position}
   {scrollX}
   {scrollY}
   {flex}
-  grid={{
-    templateColumns: "repeat(1000, max-content)",
-    ...grid
-  }}
+  grid={{ templateColumns, ...grid }}
 >
     <Grid
       tag="thead"
@@ -74,7 +141,12 @@
             {/if}
             {#each cols as col, colIdx}
               <Flex tag="th">
-                <slot name="thTop" {col} {colIdx} />
+                <slot
+                  name="thTop"
+                  {col}
+                  {colIdx}
+                  colWidth={colsRealWidth[colIdx]}
+                />
               </Flex>
             {/each}
             {#if $$slots.thTop}
@@ -102,8 +174,14 @@
             </Flex>
           {/if}
           {#each cols as col, colIdx}
-            <Flex tag="th">
-              <slot name="th" {col} {colIdx} />
+            <Flex tag="th" idx={colIdx}>
+              {colIdx}
+              <slot
+                name="th"
+                {col}
+                {colIdx}
+                colWidth={colsRealWidth[colIdx]}
+              />
             </Flex>
           {/each}
           {#if $$slots.thLast}
@@ -132,7 +210,12 @@
             {/if}
             {#each cols as col, colIdx}
               <Flex tag="th">
-                <slot name="thBottom" {col} {colIdx} />
+                <slot
+                  name="thBottom"
+                  {col}
+                  {colIdx}
+                  colWidth={colsRealWidth[colIdx]}
+                />
               </Flex>
             {/each}
             {#if $$slots.thBottomBottom}

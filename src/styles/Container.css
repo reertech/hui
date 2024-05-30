@@ -6,6 +6,7 @@ data[data-hui] {
   display: none;
 }
 
+/* FLEX */
 [data-hui-flex][data-hui-target=child] > *:not(#huiHack),
 [data-hui-flex][data-hui-target=self]:not(#huiHack) {
   display: flex;
@@ -120,6 +121,7 @@ data[data-hui] {
   align-content: stretch;
 }
 
+/* GRID */
 [data-hui-grid][data-hui-target=child] > *:not(#huiHack),
 [data-hui-grid][data-hui-target=self]:not(#huiHack) {
   display: grid;
@@ -241,40 +243,41 @@ data[data-hui] {
 [data-hui-grid-auto-flow=column][data-hui-target=self]:not(#huiHack) {
   grid-auto-flow: column;
 }
-[data-hui-grid][data-hui-target=child][style*=grid-template-columns] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='grid-template-columns:'] > *:not(#huiHack) {
   grid-template-columns: inherit;
 }
-[data-hui-grid][data-hui-target=child][style*=grid-template-rows] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='grid-template-rows:'] > *:not(#huiHack) {
   grid-template-rows: inherit;
 }
-[data-hui-grid][data-hui-target=child][style*=row-gap] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='row-gap:'] > *:not(#huiHack) {
   row-gap: inherit;
 }
-[data-hui-grid][data-hui-target=child][style*=column-gap] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='column-gap:'] > *:not(#huiHack) {
   column-gap: inherit;
 }
-[data-hui-grid][data-hui-target=child][style*=grid-column-start] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='grid-column-start:'] > *:not(#huiHack) {
   grid-column-start: inherit;
 }
-[data-hui-grid][data-hui-target=child][style*=grid-column-end] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='grid-column-end:'] > *:not(#huiHack) {
   grid-column-end: inherit;
 }
-[data-hui-grid][data-hui-target=child][style*=grid-row-start] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='grid-row-start:'] > *:not(#huiHack) {
   grid-row-start: inherit;
 }
-[data-hui-grid][data-hui-target=child][style*=grid-row-end] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='grid-row-end:'] > *:not(#huiHack) {
   grid-row-end: inherit;
 }
-[data-hui-grid][data-hui-target=child][style*=grid-auto-rows] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='grid-auto-rows:'] > *:not(#huiHack) {
   grid-auto-rows: inherit;
 }
-[data-hui-grid][data-hui-target=child][style*=grid-auto-columns] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='grid-auto-columns:'] > *:not(#huiHack) {
   grid-auto-columns: inherit;
 }
-[data-hui-grid][data-hui-target=child][style*=grid-template-areas] > *:not(#huiHack) {
+[data-hui-grid][data-hui-target=child][style~='grid-template-areas:'] > *:not(#huiHack) {
   grid-template-areas: inherit;
 }
 
+/* SCROLL */
 [data-hui-scroll-x][data-hui-target=child] > *:not(#huiHack),
 [data-hui-scroll-x][data-hui-target=self]:not(#huiHack) {
   overflow-x: auto;
@@ -315,6 +318,7 @@ data[data-hui] {
   scrollbar-gutter: auto;
 }
 
+/* POSITION */
 [data-hui-position=absolute][data-hui-target=child] > *:not(#huiHack),
 [data-hui-position=absolute][data-hui-target=self]:not(#huiHack) {
   position: absolute;
@@ -347,18 +351,26 @@ data[data-hui] {
 [data-hui-position=static][data-hui-target=self]:not(#huiHack) {
   position: static;
 }
-[data-hui-position][data-hui-target=child][style*=top] > *:not(#huiHack) {
+[data-hui-position][data-hui-target=child][style~='top:'] > *:not(#huiHack) {
   top: inherit;
 }
-[data-hui-position][data-hui-target=child][style*=right] > *:not(#huiHack) {
+[data-hui-position][data-hui-target=child][style~='right:'] > *:not(#huiHack) {
   right: inherit;
 }
-[data-hui-position][data-hui-target=child][style*=bottom] > *:not(#huiHack) {
+[data-hui-position][data-hui-target=child][style~='bottom:'] > *:not(#huiHack) {
   bottom: inherit;
 }
-[data-hui-position][data-hui-target=child][style*=left] > *:not(#huiHack) {
+[data-hui-position][data-hui-target=child][style~='left:'] > *:not(#huiHack) {
   left: inherit;
 }
-[data-hui-position][data-hui-target=child][style*=inset] > *:not(#huiHack) {
+[data-hui-position][data-hui-target=child][style~='inset:'] > *:not(#huiHack) {
   inset: inherit;
+}
+
+/* SIZE */
+[data-hui][data-hui-target=child][style~='width:'] > *:not(#huiHack) {
+  width: inherit;
+}
+[data-hui][data-hui-target=child][style~='max-width:'] > *:not(#huiHack) {
+  max-width: inherit;
 }

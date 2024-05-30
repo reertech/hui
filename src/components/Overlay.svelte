@@ -3,6 +3,7 @@
   import Container from "./Container.svelte"
 
   export let tag = "div"
+  export let idx = null
   export let flex = null
   export let grid = null
   export let fullscreen = false
@@ -24,6 +25,7 @@
 
 <Container
   hui="Overlay"
+  {idx}
   {tag}
   {flex}
   {grid}

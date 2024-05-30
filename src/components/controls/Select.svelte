@@ -16,6 +16,8 @@
   export let valid = null
   export let invalid = null
   export let theme = null
+  export let idx = null
+  export let size = null
   export let position = null
   export let scrollX = null
   export let scrollY = null
@@ -66,8 +68,6 @@
     clearTimeout(closeTimer)
 
     opened = calcOpenDir()
-
-    console.log(opened)
   }
 
   const close = () => {
@@ -133,6 +133,8 @@
   {invalid}
   {theme}
   {classes}
+  {idx}
+  {size}
   {position}
   {scrollX}
   {scrollY}
@@ -173,7 +175,7 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
-  >
+  />
 
   {#if opened && filteredOptions.length}
     <datalist

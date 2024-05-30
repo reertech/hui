@@ -2,6 +2,7 @@
   import Container from "./Container.svelte"
 
   export let tag = "div"
+  export let idx = null
   export let display = "grid"
   export let templateAreas = null
   export let templateRows = null
@@ -44,6 +45,7 @@
 <Container
   hui="Grid"
   {tag}
+  {idx}
   grid={params}
 >
   <slot />

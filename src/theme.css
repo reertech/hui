@@ -61,6 +61,7 @@
   --hui-unua-color-plus2: hsl(var(--hui-unua-color-plus2-h), var(--hui-unua-color-plus2-s), var(--hui-unua-color-plus2-l));
 
   --hui-default-color-bg: var(--hui-unua-color-plus2);
+  --hui-unua-color-bg: var(--hui-default-color-minus2);
 
   --hui-default-color-text: var(--hui-default-color);
   --hui-unua-color-text: var(--hui-default-color-plus2);
@@ -167,6 +168,7 @@
   --hui-default-line-height-plus2: 2;
 
   --hui-default-background-color: var(--hui-default-color-bg);
+  --hui-unua-background-color: var(--hui-unua-color-bg);
 
   --hui-default-font-size: var(--hui-default-size);
 }

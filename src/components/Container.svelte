@@ -10,6 +10,8 @@
   export let valid = null
   export let invalid = null
   export let theme = null
+  export let idx = null
+  export let size = null
   export let position = null
   export let classes = null
   export let grid = null
@@ -21,14 +23,16 @@
     switch (true) {
       case value == null: return false
       case typeof value === "object": return true
+      case allowed == null: return false
       case !["string", "boolean"].includes(typeof value): return false
       case allowed.includes(value): return true
       default: return false
     }
   }
 
-  $: isGrid = !flex && isValid(grid, [true, "true"])
-  $: isFlex = !grid && isValid(flex, [true, "true"])
+  $: isSize = isValid(size)
+  $: isGrid = !flex && isValid(grid, [true, "true", "default"])
+  $: isFlex = !grid && isValid(flex, [true, "true", "default"])
   $: isPosition = isValid(position, ["static", "fixed", "relative", "sticky", "absolute"])
   $: isScroll = scrollX || scrollY
 
@@ -36,9 +40,10 @@
   $: f = !isFlex ? {} : { display: "flex", ...(typeof flex !== "object" ? {} : flex) }
 
   $: p = !isPosition ? {} : typeof position == "string" ? { position } : position
+  $: s = !isSize ? {} : size
 
   $: target = tag === null ? "child" : "self"
-  $: isTargeted = isGrid || isFlex || isScroll || isPosition
+  $: isTargeted = isGrid || isFlex || isScroll || isPosition || isSize
 </script>
 
 <svelte:element
@@ -56,6 +61,7 @@
   hidden={hidden || null}
 
   data-hui-target={isTargeted ? target : null}
+  data-hui-idx={idx || null}
 
   data-hui-scroll-x={scrollX || null}
   data-hui-scroll-y={scrollY || null}
@@ -92,7 +98,12 @@
   style:left={p.left || null}
   style:inset={p.inset || null}
 
+  style:width={s.width || null}
+  style:max-width={s.maxWidth || null}
+
   on:click
+  on:mouseup
+  on:mousedown
 >
   {#if false}
     <pre>{JSON.stringify(flex, null, 2)}</pre>

@@ -1,6 +1,10 @@
 <script>
-  import "../../styles/layout/Main.css"
+  import "../../themes/controls/NumberInput.css"
+  import "../../styles/controls/NumberInput.css"
   import Container from "../Container.svelte"
+
+  import { tick, createEventDispatcher } from "svelte"
+  const dispatch = createEventDispatcher()
 
   export let active = null
   export let readonly = null
@@ -19,10 +23,18 @@
 
   let classes = null
   export { classes as class }
+
+  export let name = null
+  export let placeholder = null
+  export let value = null
+  export let step = null
+  export let min = null
+  export let max = null
 </script>
 
 <Container
-  hui="Main"
+  hui="NumberInput"
+  tag="fieldset"
   {active}
   {readonly}
   {disabled}
@@ -39,11 +51,21 @@
   {grid}
   {flex}
 >
-  <main>
-    <slot />
-  </main>
+  <input
+    {name}
+    {min}
+    {max}
+    {step}
+    on:click
+    on:input
+    on:change
+    bind:value
+    {placeholder}
+    type="number"
+  />
 </Container>
 
 <!-- theme.ini
-  > main = common;
+  & = common, display, flex, gap;
+  > input = common;
 -->
