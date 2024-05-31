@@ -394,14 +394,14 @@ defmodule Builder do
        {"min-height", "auto"},
        {"width", "auto"},
        {"max-width", "none"},
-       {"min-width", "auto"}
-       # {"block-size", "auto"},
+       {"min-width", "auto"},
+       # {"block-size", "unset"},
+       # {"inline-size", "unset"},
+       # {"max-block-size", "unset"},
+       # {"max-inline-size", "unset"},
+       # {"min-block-size", "unset"},
+       # {"min-inline-size", "unset"}
        # {"resize", "none"},
-       # {"inline-size", "auto"},
-       # {"max-block-size", "none"},
-       # {"max-inline-size", "none"},
-       # {"min-block-size", "0px"},
-       # {"min-inline-size", "0px"}
      ]}
   end
 
