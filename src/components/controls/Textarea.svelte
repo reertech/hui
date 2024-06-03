@@ -3,7 +3,7 @@
   import "../../styles/controls/Textarea.css"
   import Container from "../Container.svelte"
 
-  import { formatNumber } from "../../helpers.js"
+  import { formatNumber, checkEmpty } from "../../helpers.js"
 
   export let active = null
   export let readonly = null
@@ -29,6 +29,13 @@
   export let maxLength = null
   export let rows = 1
   export let cols = 50
+
+  $: rowsNum = formatNumber(rows, 1)
+
+  $: themes = [
+    rowsNum === 1 ? "oneLine" : null,
+    checkEmpty(theme) ? null : theme
+  ].filter(v => v != null).join(" ")
 </script>
 
 <Container
@@ -40,7 +47,7 @@
   {hidden}
   {valid}
   {invalid}
-  {theme}
+  theme={themes}
   {classes}
   {idx}
   {size}
@@ -60,7 +67,7 @@
     on:blur
     {placeholder}
     maxLength={formatNumber(maxLength)}
-    rows={formatNumber(rows, 1)}
+    rows={rowsNum}
     cols={formatNumber(cols, 50)}
     valid={valid || null}
     invalid={invalid || null}
@@ -71,9 +78,8 @@
 </Container>
 
 <!-- theme.ini
-  themes: flat;
+  themes: flat, oneLine;
   & = common, display, flex;
   > textarea = common;
-  > textarea[rows=1] = scrollbar-width;
   > textarea::placeholder = font-size, text-align;
 -->

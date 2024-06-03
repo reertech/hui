@@ -129,6 +129,44 @@
 }
 [data-hui=Textarea][data-hui-theme~=flat][data-hui-invalid] > textarea::placeholder {
 }
+[data-hui=Textarea][data-hui-theme~=oneLine] {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine] > textarea {
+  /* APPERANCE */
+  --hui-ccjrnw-scrollbar-width: none;
+}
+[data-hui=Textarea][data-hui-theme~=oneLine] > textarea::placeholder {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-active] {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-active] > textarea {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-active] > textarea::placeholder {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-disabled] {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-disabled] > textarea {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-disabled] > textarea::placeholder {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-readonly] {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-readonly] > textarea {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-readonly] > textarea::placeholder {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-valid] {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-valid] > textarea {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-valid] > textarea::placeholder {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-invalid] {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-invalid] > textarea {
+}
+[data-hui=Textarea][data-hui-theme~=oneLine][data-hui-invalid] > textarea::placeholder {
+}
 [data-hui=Textarea] {
   /* LAYOUT-POSITION */
 /*  --hui-yqncrg-position-default: ; */

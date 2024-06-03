@@ -32,13 +32,23 @@ defmodule Builder do
   end
 
   defp parse_line(line, acc, params) do
-    with [selector, tl] <- String.split(line, ~r"\s*=\s*", trim: true),
+    IO.puts("\nline:")
+    IO.inspect(line)
+    with [selector, tl] <- String.split(line, ~r"\s+=\s+", trim: true),
          sections <- String.split(tl, ~r"\s*,\s*", trim: true) do
       selector = clear_selector(selector)
 
+      IO.puts("\nselector:")
+      IO.inspect(selector)
+
       String.split(selector, ~r"\s*\|\s*", trim: true)
       |> Enum.reduce(acc, fn selector_part, acc ->
+        IO.puts("\nselector_part:")
+        IO.inspect(selector_part)
+
         prefix = build_prefix(selector, params)
+        IO.puts("\nprefix line:")
+        IO.inspect(prefix)
 
         sections =
           sections
@@ -189,24 +199,26 @@ defmodule Builder do
     end
 
     parse_selector = fn section ->
-      case ~r"^\[data\-hui\=(.|\n)+(?=\{)" |> Regex.run(section) do
-        [selector | _] ->
-          selector
-          |> String.split(~r"\s*,\s*", trim: true)
-          |> Enum.map(fn part ->
-            ~r"\s*(((\[data\-hui\=).+(\]))|\{)\s*"
-            |> Regex.replace(part, "")
-          end)
-          |> Enum.join(",")
-          |> clear_selector()
-          |> case do
-            "" -> if section =~ "-default:", do: "default", else: "&"
-            selector -> selector
-          end
-          |> List.wrap()
-
-        _ ->
-          :error
+      with [selector | _] <- ~r"^\[data\-hui\=(.|\n)+(?=\{)" |> Regex.run(section),
+           theme <- parse_theme_name.(nil, section),
+           state <- parse_state_name.(nil, section) do
+        selector
+        |> String.split(~r"\s*,\s*", trim: true)
+        |> Enum.map(fn part ->
+          ~r"\s*(((\[data\-hui\=)\w+(\]))|\{)\s*"
+          |> Regex.replace(part, "")
+          |> String.trim_leading("[data-hui-theme~=#{theme}]")
+          |> String.trim_leading("[data-hui-#{state}]")
+        end)
+        |> Enum.join(",")
+        |> clear_selector()
+        |> case do
+          "" -> if section =~ "-default:", do: "default", else: "&"
+          selector -> selector
+        end
+        |> List.wrap()
+      else
+        _ -> :error
       end
     end
 
