@@ -1,8 +1,7 @@
 <script>
-  import "../../themes/controls/NumberInput.css"
-  import "../../styles/controls/NumberInput.css"
+  import "../../themes/controls/Textarea.css"
+  import "../../styles/controls/Textarea.css"
   import Container from "../Container.svelte"
-  import Strong from "../typography/Strong.svelte"
 
   export let active = null
   export let readonly = null
@@ -25,15 +24,11 @@
   export let name = null
   export let placeholder = null
   export let value = null
-  export let step = null
-  export let min = null
-  export let max = null
-  export let prefix = null
-  export let suffix = null
+  export let maxLength = null
 </script>
 
 <Container
-  hui="NumberInput"
+  hui="Textarea"
   tag="fieldset"
   {active}
   {readonly}
@@ -51,40 +46,28 @@
   {grid}
   {flex}
 >
-  {#if prefix}
-    <Strong>
-      {prefix}
-    </Strong>
-  {/if}
-  <input
+  <textarea
     {name}
-    {min}
-    {max}
-    {step}
     on:click
     on:input
     on:change
+    bind:value
     on:focus
     on:blur
-    bind:value
     {placeholder}
-    type="number"
+    {maxLength}
+    type="text"
     valid={valid || null}
     invalid={invalid || null}
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
   />
-  {#if suffix}
-    <Strong>
-      {suffix}
-    </Strong>
-  {/if}
 </Container>
 
 <!-- theme.ini
   themes: flat;
   & = common, display, flex, gap;
-  > input = common;
-  > input::placeholder = font-size;
+  > textarea = common;
+  > textarea::placeholder = font-size;
 -->

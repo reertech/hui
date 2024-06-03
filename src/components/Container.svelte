@@ -1,5 +1,6 @@
 <script>
   import "../styles/Container.css"
+  import { formatPx } from "../helpers.js"
 
   export let hui = null
   export let tag = null
@@ -92,25 +93,22 @@
   data-hui-flex-align-content={f.alignContent || null}
 
   data-hui-position={p.position || null}
-  style:top={p.top ?? null}
-  style:right={p.right ?? null}
-  style:bottom={p.bottom ?? null}
-  style:left={p.left ?? null}
-  style:inset={p.inset ?? null}
+  style:top={formatPx(p.top)}
+  style:right={formatPx(p.right)}
+  style:bottom={formatPx(p.bottom)}
+  style:left={formatPx(p.left)}
+  style:inset={formatPx(p.inset)}
 
-  style:width={s.width ?? null}
-  style:min-width={s.minWidth ?? null}
-  style:max-width={s.maxWidth ?? null}
-  style:height={s.height ?? null}
-  style:min-height={s.minHeight ?? null}
-  style:max-height={s.maxHeight ?? null}
+  style:width={formatPx(s.width)}
+  style:min-width={formatPx(s.minWidth)}
+  style:max-width={formatPx(s.maxWidth)}
+  style:height={formatPx(s.height)}
+  style:min-height={formatPx(s.minHeight)}
+  style:max-height={formatPx(s.maxHeight)}
 
   on:click
   on:mouseup
   on:mousedown
 >
-  {#if false}
-    <pre>{JSON.stringify(flex, null, 2)}</pre>
-  {/if}
   <slot />
 </svelte:element>

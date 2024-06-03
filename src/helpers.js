@@ -57,3 +57,11 @@ export const sortObjectsBy = (objects, fun) => {
     return aa.localeCompare(bb)
   })
 }
+
+export const formatPx = (value) => {
+  switch (true) {
+    case typeof value === "string" && !checkEmpty(value): return value
+    case typeof value === "number": return `${Math.round(value)}px`
+    default: return null
+  }
+}

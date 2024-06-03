@@ -5,9 +5,7 @@
   import Strong from "../typography/Strong.svelte"
   import Dropdown from "./Dropdown.svelte"
 
-  import { checkEmpty, calcCutParentOffset } from "../../helpers.js"
-  import { tick, createEventDispatcher } from "svelte"
-  const dispatch = createEventDispatcher()
+  import { checkEmpty } from "../../helpers.js"
 
   export let active = null
   export let readonly = null

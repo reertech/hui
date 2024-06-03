@@ -1,9 +1,9 @@
 [data-hui=Badge] {
   /* LAYOUT-PADDING */
   --hui-jjitob-padding-top: var(--hui-default-spacer-4);
-  --hui-jjitob-padding-right: var(--hui-default-spacer-5);
+  --hui-jjitob-padding-right: var(--hui-default-spacer-6);
   --hui-jjitob-padding-bottom: var(--hui-default-spacer-4);
-  --hui-jjitob-padding-left: var(--hui-default-spacer-5);
+  --hui-jjitob-padding-left: var(--hui-default-spacer-6);
   /* TEXT */
   --hui-jjitob-font-size: var(--hui-default-font-size);
   --hui-jjitob-font-weight: var(--hui-default-font-weight);

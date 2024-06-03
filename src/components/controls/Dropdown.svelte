@@ -73,10 +73,10 @@
     if (!offset) return console.log(offset, rootEl)
 
     if (offset.bottom >= offset.top) {
-      height = offset.bottom - 5
+      height = offset.bottom - 10
       dir = "bottom"
     } else {
-      height = offset.top - 5
+      height = offset.top - 10
       dir = "top"
     }
   }

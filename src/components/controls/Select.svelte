@@ -5,7 +5,7 @@
   import Badge from "./Badge.svelte"
   import Dropdown from "./Dropdown.svelte"
 
-  import { checkEmpty, calcCutParentOffset } from "../../helpers.js"
+  import { checkEmpty } from "../../helpers.js"
   import { tick, createEventDispatcher } from "svelte"
   const dispatch = createEventDispatcher()
 
