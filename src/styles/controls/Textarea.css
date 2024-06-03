@@ -226,4 +226,5 @@
 }
 [data-hui=Textarea] > textarea::placeholder {
   font-size: var(--hui-otvrfb-font-size, initial);
+  text-align: var(--hui-otvrfb-text-align, initial);
 }

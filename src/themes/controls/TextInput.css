@@ -63,6 +63,7 @@
 }
 [data-hui=TextInput] > input::placeholder {
   --hui-widtjz-font-size: var(--hui-default-size-0);
+  --hui-widtjz-text-align: center;
 }
 [data-hui=TextInput][data-hui-active] {
 }
@@ -358,4 +359,5 @@
 }
 [data-hui=TextInput] > input::placeholder {
 /*  --hui-widtjz-font-size-default: ; */
+/*  --hui-widtjz-text-align-default: ; */
 }

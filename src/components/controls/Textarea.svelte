@@ -3,6 +3,8 @@
   import "../../styles/controls/Textarea.css"
   import Container from "../Container.svelte"
 
+  import { formatNumber } from "../../helpers.js"
+
   export let active = null
   export let readonly = null
   export let disabled = null
@@ -25,6 +27,8 @@
   export let placeholder = null
   export let value = null
   export let maxLength = null
+  export let rows = 1
+  export let cols = 50
 </script>
 
 <Container
@@ -55,8 +59,9 @@
     on:focus
     on:blur
     {placeholder}
-    {maxLength}
-    type="text"
+    maxLength={formatNumber(maxLength)}
+    rows={formatNumber(rows, 1)}
+    cols={formatNumber(cols, 50)}
     valid={valid || null}
     invalid={invalid || null}
     active={active || null}
@@ -69,5 +74,6 @@
   themes: flat;
   & = common, display, flex, gap;
   > textarea = common;
-  > textarea::placeholder = font-size;
+  > textarea[rows=1] = common;
+  > textarea::placeholder = font-size, text-align;
 -->

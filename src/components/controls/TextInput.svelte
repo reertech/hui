@@ -113,5 +113,5 @@
   themes: flat;
   & = common, display, flex, gap;
   > input = common;
-  > input::placeholder = font-size;
+  > input::placeholder = font-size, text-align;
 -->

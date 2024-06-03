@@ -12,6 +12,8 @@
   export let bottom = 0
   export let left = 0
   export let inset = 0
+  export let height = null
+  export let width = null
 
   $: position = {
     position: fullscreen ? "fixed" : "absolute",
@@ -21,6 +23,8 @@
     left,
     inset
   }
+
+  $: size = { height, width }
 </script>
 
 <Container
@@ -30,6 +34,7 @@
   {flex}
   {grid}
   {position}
+  {size}
 >
   <slot />
 </Container>

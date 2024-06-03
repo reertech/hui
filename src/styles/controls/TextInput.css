@@ -226,4 +226,5 @@
 }
 [data-hui=TextInput] > input::placeholder {
   font-size: var(--hui-widtjz-font-size, initial);
+  text-align: var(--hui-widtjz-text-align, initial);
 }

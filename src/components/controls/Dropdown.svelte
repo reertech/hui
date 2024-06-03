@@ -36,7 +36,7 @@
   $: rootEl = root || document.body
   $: calcOpenDir(active)
 
-  $: sizeParams = { height: height ?? null, ...size }
+  $: sizeParams = { maxHeight: height ?? null, ...size }
   $: dirTheme = dir === "top" ? "toTop" : "toBottom"
   $: themes = new Set(theme?.split(/\s+/)).add(dirTheme)
   $: themeString = [...themes].join(" ") || null
