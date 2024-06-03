@@ -2,7 +2,6 @@
   import "../../themes/controls/NumberInput.css"
   import "../../styles/controls/NumberInput.css"
   import Container from "../Container.svelte"
-  import Strong from "../typography/Strong.svelte"
 
   import { tick, createEventDispatcher } from "svelte"
   const dispatch = createEventDispatcher()
@@ -31,8 +30,6 @@
   export let step = null
   export let min = null
   export let max = null
-  export let prefix = null
-  export let suffix = null
 </script>
 
 <Container
@@ -54,11 +51,6 @@
   {grid}
   {flex}
 >
-  {#if prefix}
-    <Strong>
-      {prefix}
-    </Strong>
-  {/if}
   <input
     {name}
     {min}
@@ -70,16 +62,15 @@
     bind:value
     {placeholder}
     type="number"
+    valid={valid || null}
+    invalid={invalid || null}
+    active={active || null}
+    disabled={disabled || null}
+    readonly={readonly || null}
   />
-  {#if suffix}
-    <Strong>
-      {suffix}
-    </Strong>
-  {/if}
 </Container>
 
 <!-- theme.ini
   & = common, display, flex, gap;
   > input = common;
-  > input::placeholder = font-size;
 -->

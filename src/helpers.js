@@ -33,9 +33,9 @@ export const calcParentOffset = (el, parent) => {
 export const fetchCutParent = (el) => {
   if (!el) return null
 
-  const overflowX = getComputedStyle(el).overflowX
+  const overflowY = getComputedStyle(el).overflowY
 
-  if (overflowX !== "visible") return el
+  if (overflowY !== "visible") return el
 
   return fetchCutParent(el.parentElement)
 }

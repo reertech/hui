@@ -137,7 +137,7 @@
       theme="small"
       on:click={() => remove(value)}
     >
-      {@html optionsMap.get(value)}
+      {optionsMap.get(value)}
     </Badge>
   {/each}
   <input
@@ -147,6 +147,8 @@
     on:blur={close}
     {placeholder}
     hidden={isFull}
+    valid={valid || null}
+    invalid={invalid || null}
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}

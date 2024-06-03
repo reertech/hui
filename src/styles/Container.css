@@ -287,12 +287,16 @@ data[data-hui] {
 }
 
 /* SCROLL */
-[data-hui-scroll-x][data-hui-target=child] > *:not(#huiHack),
-[data-hui-scroll-x][data-hui-target=self]:not(#huiHack) {
+[data-hui-scroll-x=true][data-hui-target=child] > *:not(#huiHack),
+[data-hui-scroll-x=true][data-hui-target=self]:not(#huiHack),
+[data-hui-scroll-x=auto][data-hui-target=child] > *:not(#huiHack),
+[data-hui-scroll-x=auto][data-hui-target=self]:not(#huiHack) {
   overflow-x: auto;
 }
-[data-hui-scroll-y][data-hui-target=child] > *:not(#huiHack),
-[data-hui-scroll-y][data-hui-target=self]:not(#huiHack) {
+[data-hui-scroll-y=true][data-hui-target=child] > *:not(#huiHack),
+[data-hui-scroll-y=true][data-hui-target=self]:not(#huiHack),
+[data-hui-scroll-y=auto][data-hui-target=child] > *:not(#huiHack),
+[data-hui-scroll-y=auto][data-hui-target=self]:not(#huiHack) {
   overflow-y: auto;
 }
 [data-hui-scroll-x=hidden][data-hui-target=child] > *:not(#huiHack),

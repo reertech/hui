@@ -30,10 +30,14 @@
   export let filter = null
   export let root = null
 
-  let params = null
+  let dir = null
+  let height = null
 
-  $: sizeParams = { height: params?.height ?? null, ...size }
-  $: dirTheme = params?.dir === "top" ? "toTop" : "toBottom"
+  $: rootEl = root || document.body
+  $: calcOpenDir(active)
+
+  $: sizeParams = { height: height ?? null, ...size }
+  $: dirTheme = dir === "top" ? "toTop" : "toBottom"
   $: themes = new Set(theme?.split(/\s+/)).add(dirTheme)
   $: themeString = [...themes].join(" ") || null
   
@@ -55,8 +59,6 @@
     return !selectedSet.has(v) && (!filterRe || filterRe.test(l))
   })
 
-  $: rootEl = root || document.body
-
   const select = async (label) => {
     const value = valuesByLabel.get(label)
     if (!value) return
@@ -68,21 +70,16 @@
 
   const calcOpenDir = () => {
     const offset = calcCutParentOffset(rootEl)
-    const result = { dir: null, height: null }
-
-    if (!offset) return params = result
+    if (!offset) return console.log(offset, rootEl)
 
     if (offset.bottom >= offset.top) {
-      result.height = offset.bottom - 5
+      height = offset.bottom - 5
+      dir = "bottom"
     } else {
-      result.height = offset.top - 5
-      result.dir = "top"
+      height = offset.top - 5
+      dir = "top"
     }
-
-    return params = result
   }
-
-  $: { calcOpenDir(active) }
 </script>
 
 {#if active && filteredOptions.length}
@@ -110,7 +107,7 @@
         {value}
         on:click={() => select(label)}
       >
-        {@html label}
+        {label}
       </option>
     {/each}
   </Container>

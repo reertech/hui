@@ -171,7 +171,7 @@ defmodule Builder do
   defp parse_theme(params) do
     parse_theme_name = fn selector, section ->
       with false <- selector == "default",
-           [theme] <- ~r"(?<=\[data\-hui\-theme\~\=)[a-z]+(?=\])" |> Regex.run(section) do
+           [theme] <- ~r"(?<=\[data\-hui\-theme\~\=)\w+(?=\])" |> Regex.run(section) do
         theme
       else
         _ -> "default"
@@ -180,7 +180,7 @@ defmodule Builder do
 
     parse_state_name = fn selector, section ->
       with false <- selector == "default",
-           [state] <- ~r"(?<=\[data\-hui\-)[a-z]+(?=\])" |> Regex.run(section),
+           [state] <- ~r"(?<=\[data\-hui\-)\w+(?=\])" |> Regex.run(section),
            true <- state in @states do
         state
       else

@@ -86,6 +86,11 @@
     {placeholder}
     {maxLength}
     type="text"
+    valid={valid || null}
+    invalid={invalid || null}
+    active={active || null}
+    disabled={disabled || null}
+    readonly={readonly || null}
   />
   {#if suffix}
     <Strong>
