@@ -1,6 +1,6 @@
 [data-hui=NumberInput] {
   /* LAYOUT-SIZING */
-  --hui-affhez-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-border-width)) * 2);
+  --hui-affhez-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-unua-border-width)) * 2);
   --hui-affhez-width: 100%;
   --hui-affhez-max-width: 50vw;
   --hui-affhez-min-width: 100px;
@@ -12,6 +12,13 @@
   /* LAYOUT-OVERFLOW */
   --hui-affhez-overflow-x: visible;
   --hui-affhez-overflow-y: visible;
+  /* LAYOUT-FLEX */
+  --hui-affhez-flex-direction: row;
+  --hui-affhez-flex-wrap: nowrap;
+  --hui-affhez-gap: var(--hui-default-spacer-5);
+  --hui-affhez-align-content: center;
+  --hui-affhez-justify-content: stretch;
+  --hui-affhez-align-items: center;
   /* APPERANCE */
   --hui-affhez-background-color: var(--hui-default-background-color);
   --hui-affhez-background-image: none;
@@ -34,6 +41,7 @@
   --hui-affhez-box-shadow: var(--hui-tria-box-shadow);
   /* DISPLAY */
   --hui-affhez-display: flex;
+  --hui-affhez-gap: var(--hui-default-spacer-5);
 }
 [data-hui=NumberInput] > input {
   /* LAYOUT-PADDING */

@@ -2,7 +2,7 @@
   /* LAYOUT-POSITION */
   --hui-dityoy-position: relative;
   /* LAYOUT-SIZING */
-  --hui-dityoy-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-border-width)) * 2);
+  --hui-dityoy-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-unua-border-width)) * 2);
   --hui-dityoy-width: 100%;
   --hui-dityoy-max-width: 50vw;
   --hui-dityoy-min-width: 200px;
