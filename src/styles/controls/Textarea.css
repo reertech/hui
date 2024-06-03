@@ -111,7 +111,6 @@
   /* DISPLAY */
   display: var(--hui-yqncrg-display, block);
   flex: var(--hui-yqncrg-flex, initial);
-  gap: var(--hui-yqncrg-gap, initial);
 }
 [data-hui=Textarea] > textarea {
   /* LAYOUT-POSITION */

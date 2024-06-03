@@ -3,7 +3,12 @@
   import "../../styles/controls/Dropdown.css"
   import Container from "../Container.svelte"
 
-  import { calcCutParentOffset, buildFuzzyRegex } from "../../helpers.js"
+  import {
+    calcCutParentOffset,
+    buildFuzzyRegex,
+    formatNumber
+  } from "../../helpers.js"
+
   import { tick, createEventDispatcher, onMount } from "svelte"
   const dispatch = createEventDispatcher()
 
@@ -27,6 +32,7 @@
 
   export let selected = []
   export let options = {}
+  export let maxMaxHeight = 250
   export let filter = null
   export let root = null
 
@@ -36,7 +42,12 @@
   $: rootEl = root || document.body
   $: calcOpenDir(active)
 
-  $: sizeParams = { maxHeight: height ?? null, ...size }
+  $: maxHeight = Math.min(
+    formatNumber(maxMaxHeight, 250),
+    formatNumber(height, 250)
+  )
+
+  $: sizeParams = { maxHeight, ...size }
   $: dirTheme = dir === "top" ? "toTop" : "toBottom"
   $: themes = new Set(theme?.split(/\s+/)).add(dirTheme)
   $: themeString = [...themes].join(" ") || null
@@ -70,7 +81,7 @@
 
   const calcOpenDir = () => {
     const offset = calcCutParentOffset(rootEl)
-    if (!offset) return console.log(offset, rootEl)
+    if (!offset) return dir = null; height = null
 
     if (offset.bottom >= offset.top) {
       height = offset.bottom - 10

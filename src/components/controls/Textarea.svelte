@@ -72,8 +72,8 @@
 
 <!-- theme.ini
   themes: flat;
-  & = common, display, flex, gap;
+  & = common, display, flex;
   > textarea = common;
-  > textarea[rows=1] = common;
+  > textarea[rows=1] = scrollbar-width;
   > textarea::placeholder = font-size, text-align;
 -->

@@ -43,7 +43,6 @@
   --hui-dityoy-box-shadow: var(--hui-tria-box-shadow);
   /* DISPLAY */
   --hui-dityoy-display: flex;
-  --hui-dityoy-gap: var(--hui-default-spacer-5);
 }
 [data-hui=Select] > input {
   /* LAYOUT-PADDING */
@@ -270,7 +269,6 @@
   /* DISPLAY */
 /*  --hui-dityoy-display-default: ; */
 /*  --hui-dityoy-flex-default: ; */
-/*  --hui-dityoy-gap-default: ; */
 }
 [data-hui=Select] > input {
   /* LAYOUT-POSITION */

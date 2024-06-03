@@ -169,7 +169,7 @@
 
 <!-- theme.ini
   themes: flat;
-  & = common, display, flex, gap;
+  & = common, display, flex;
   > input = common;
   > input::placeholder = font-size;
   > button = flex-grow, cursor;

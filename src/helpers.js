@@ -58,16 +58,16 @@ export const sortObjectsBy = (objects, fun) => {
   })
 }
 
-export const formatPx = (value, default = null) => {
+export const formatPx = (value, def = null) => {
   switch (true) {
     case typeof value === "string" && !checkEmpty(value): return value
     case typeof value === "number": return `${Math.round(value)}px`
-    default: return null
+    default: return def
   }
 }
 
-export const formatNumber = (value, default = null) => {
+export const formatNumber = (value, def = null) => {
   const number = +value 
 
-  return isNaN(number) ? default : number
+  return isNaN(number) ? def : number
 }

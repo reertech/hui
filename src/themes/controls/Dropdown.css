@@ -5,7 +5,7 @@
   --hui-ovbbqb-left: calc(var(--hui-default-border-width) / -2);
   --hui-ovbbqb-z-index: 300;
   /* LAYOUT-SIZING */
-  --hui-ovbbqb-max-height: calc(var(--hui-default-size-0) * 10);
+  --hui-ovbbqb-height: minmax(max-content, calc(var(--hui-default-size-0) * 10));
   /* LAYOUT-OVERFLOW */
   --hui-ovbbqb-overflow-x: hidden;
   --hui-ovbbqb-overflow-y: auto;
@@ -44,6 +44,7 @@
   --hui-kpisih-line-height: var(--hui-default-line-height);
   /* APPERANCE */
   --hui-kpisih-color: var(--hui-default-color-text);
+  --hui-kpisih-cursor: pointer;
   /* DISPLAY */
   --hui-kpisih-display: block;
 }

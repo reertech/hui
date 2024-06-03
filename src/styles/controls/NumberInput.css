@@ -111,7 +111,6 @@
   /* DISPLAY */
   display: var(--hui-affhez-display, block);
   flex: var(--hui-affhez-flex, initial);
-  gap: var(--hui-affhez-gap, initial);
 }
 [data-hui=NumberInput] > input {
   /* LAYOUT-POSITION */

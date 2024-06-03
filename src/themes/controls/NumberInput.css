@@ -41,7 +41,6 @@
   --hui-affhez-box-shadow: var(--hui-tria-box-shadow);
   /* DISPLAY */
   --hui-affhez-display: flex;
-  --hui-affhez-gap: var(--hui-default-spacer-5);
 }
 [data-hui=NumberInput] > input {
   /* LAYOUT-PADDING */
@@ -241,7 +240,6 @@
   /* DISPLAY */
 /*  --hui-affhez-display-default: ; */
 /*  --hui-affhez-flex-default: ; */
-/*  --hui-affhez-gap-default: ; */
 }
 [data-hui=NumberInput] > input {
   /* LAYOUT-POSITION */

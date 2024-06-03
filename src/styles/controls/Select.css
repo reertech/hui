@@ -111,7 +111,6 @@
   /* DISPLAY */
   display: var(--hui-dityoy-display, block);
   flex: var(--hui-dityoy-flex, initial);
-  gap: var(--hui-dityoy-gap, initial);
 }
 [data-hui=Select] > input {
   /* LAYOUT-POSITION */
