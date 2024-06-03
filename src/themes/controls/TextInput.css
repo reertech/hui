@@ -1,8 +1,10 @@
 [data-hui=TextInput] {
+  /* LAYOUT-POSITION */
+  --hui-edmssq-position: relative;
   /* LAYOUT-SIZING */
   --hui-edmssq-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-border-width)) * 2);
   --hui-edmssq-width: 100%;
-  --hui-edmssq-max-width: 350px;
+  --hui-edmssq-max-width: 50vw;
   --hui-edmssq-min-width: 200px;
   /* LAYOUT-PADDING */
   --hui-edmssq-padding-top: var(--hui-default-spacer-5);
@@ -12,6 +14,13 @@
   /* LAYOUT-OVERFLOW */
   --hui-edmssq-overflow-x: visible;
   --hui-edmssq-overflow-y: visible;
+  /* LAYOUT-FLEX */
+  --hui-edmssq-flex-direction: row;
+  --hui-edmssq-flex-wrap: wrap;
+  --hui-edmssq-gap: var(--hui-default-spacer-5);
+  --hui-edmssq-align-content: center;
+  --hui-edmssq-justify-content: stretch;
+  --hui-edmssq-align-items: center;
   /* APPERANCE */
   --hui-edmssq-background-color: var(--hui-default-background-color);
   --hui-edmssq-background-image: none;
@@ -32,6 +41,9 @@
   --hui-edmssq-border-top-left-radius: var(--hui-default-border-radius-1);
   --hui-edmssq-border-top-right-radius: var(--hui-default-border-radius-1);
   --hui-edmssq-box-shadow: var(--hui-tria-box-shadow);
+  /* DISPLAY */
+  --hui-edmssq-display: flex;
+  --hui-edmssq-gap: var(--hui-default-spacer-5);
 }
 [data-hui=TextInput] > input {
   /* LAYOUT-PADDING */
@@ -48,7 +60,6 @@
   --hui-msgihx-text-align: center;
   /* APPERANCE */
   --hui-msgihx-color: var(--hui-default-color-text);
-  --hui-msgihx-cursor: pointer;
 }
 [data-hui=TextInput] > input::placeholder {
   --hui-widtjz-font-size: var(--hui-default-size-0);
@@ -82,6 +93,42 @@
 [data-hui=TextInput][data-hui-invalid] > input {
 }
 [data-hui=TextInput][data-hui-invalid] > input::placeholder {
+}
+[data-hui=TextInput][data-hui-theme~=flat] {
+}
+[data-hui=TextInput][data-hui-theme~=flat] > input {
+}
+[data-hui=TextInput][data-hui-theme~=flat] > input::placeholder {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-active] {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-active] > input {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-active] > input::placeholder {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-disabled] {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-disabled] > input {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-disabled] > input::placeholder {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-readonly] {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-readonly] > input {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-readonly] > input::placeholder {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-valid] {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-valid] > input {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-valid] > input::placeholder {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-invalid] {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-invalid] > input {
+}
+[data-hui=TextInput][data-hui-theme~=flat][data-hui-invalid] > input::placeholder {
 }
 [data-hui=TextInput] {
   /* LAYOUT-POSITION */

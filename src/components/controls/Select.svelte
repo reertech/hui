@@ -2,10 +2,10 @@
   import "../../themes/controls/Select.css"
   import "../../styles/controls/Select.css"
   import Container from "../Container.svelte"
-  import Badge from "../controls/Badge.svelte"
-  import { calcCutParentOffset } from "../../helpers.js"
+  import Badge from "./Badge.svelte"
+  import Dropdown from "./Dropdown.svelte"
 
-  import { checkEmpty, buildFuzzyRegex } from "../../helpers.js"
+  import { checkEmpty, calcCutParentOffset } from "../../helpers.js"
   import { tick, createEventDispatcher } from "svelte"
   const dispatch = createEventDispatcher()
 
@@ -34,30 +34,21 @@
   export let maxValues = 1
   export let placeholder = +maxValues === 1 ? "Select" : "Add"
 
-  let search = null
-  let opened = false
+  let filter = null
+  let filterInput = null
   let closeTimer = null
-  let searchInput;
-
-  $: root = searchInput && searchInput.parentElement
+  let dropdownOpened = false
 
   $: selectedArray = Array.isArray(selected) ? selected
     : selected == null ? [] : [selected]
 
   $: selectedSet = new Set(selectedArray)
 
-  $: labelRe = buildFuzzyRegex(search)
-
   $: optionEntries = Array.isArray(options)
     ? options.map(o => [o, o])
     : Object.entries(options)
 
   $: optionsMap = new Map(optionEntries)
-  $: valuesByLabel = new Map(optionEntries.map(([v, l]) => [l, v]))
-
-  $: filteredOptions = optionEntries.filter(([v, l]) => {
-    return !selectedSet.has(v) && (!labelRe || labelRe.test(l))
-  })
 
   $: maxValuesInt = +maxValues || 1
   $: isMulti = maxValuesInt > 1
@@ -67,11 +58,11 @@
   const open = () => {
     clearTimeout(closeTimer)
 
-    opened = calcOpenDir()
+    dropdownOpened = true
   }
 
   const close = () => {
-    closeTimer = setTimeout(() => opened = false, 200)
+    closeTimer = setTimeout(() => dropdownOpened = false, 200)
   }
 
   const commit = async () => {
@@ -84,15 +75,15 @@
     dispatch("select", selected)
   }
 
-  const select = async (label) => {
-    const value = valuesByLabel.get(label)
+  const select = async (e) => {
+    const value = e.detail
     if (!value) return
 
-    opened = false
+    dropdownOpened = false
     selectedSet.add(value)
 
     await commit()
-    search = null
+    filter = null
   }
 
   const remove = async (value) => {
@@ -100,26 +91,10 @@
 
     await commit()
 
-    if (!isMulti) searchInput.focus()
+    if (!isMulti) filterInput.focus()
   }
 
-  const calcOpenDir = () => {
-    const offset = calcCutParentOffset(root)
-    const result = { dir: "bottom", height: null }
-
-    if (!offset) return result
-
-    if (offset.bottom >= offset.top) {
-      result.height = offset.bottom - 5
-    } else {
-      result.height = offset.top - 5
-      result.dir = "top"
-    }
-
-    return result
-  }
-
-  /* $: { select(search) } ??? */
+  /* $: { select(filter) } ??? */
 </script>
 
 <Container
@@ -144,7 +119,7 @@
   {#if label || $$slots.label}
     <legend>
       <label>
-        {opened}
+        {dropdownOpened}
         {#if label}{label}{/if}
         <slot name="label" />
         <input
@@ -166,8 +141,8 @@
     </Badge>
   {/each}
   <input
-    bind:this={searchInput}
-    bind:value={search}
+    bind:this={filterInput}
+    bind:value={filter}
     on:focus={open}
     on:blur={close}
     {placeholder}
@@ -177,20 +152,16 @@
     readonly={readonly || null}
   />
 
-  {#if opened && filteredOptions.length}
-    <datalist
-      class:toTop={opened && opened.dir === "top"}
-      style:height={opened && opened.height}
-    >
-      {#each filteredOptions as [value, label]}
-        <option
-          {value}
-          on:click={() => select(label)}
-        >
-          {@html label}
-        </option>
-      {/each}
-    </datalist>
+  {#if !checkEmpty(options) && dropdownOpened}
+    <!-- <pre>{JSON.stringify(options)}</pre> -->
+    <Dropdown
+      {options}
+      {selected}
+      on:select={select}
+      filter={filter}
+      root={filterInput?.parentElement}
+      active={dropdownOpened}
+    />
   {/if}
 </Container>
 
@@ -200,10 +171,4 @@
   > input = common;
   > input::placeholder = font-size;
   > button = flex-grow, cursor;
-  > datalist = common, display;
-  > datalist.toTop = top, bottom;
-  > datalist > option = common, display;
-  > datalist > option:hover = background-image;
-  > datalist > option + option =
-    border-top-color, border-top-style, border-top-width;
 -->

@@ -255,11 +255,20 @@ data[data-hui] {
 [data-hui-grid][data-hui-target=child][style~='column-gap:'] > *:not(#huiHack) {
   column-gap: inherit;
 }
+[data-hui-grid][data-hui-target=child][style~='gap:'] > *:not(#huiHack) {
+  gap: inherit;
+}
+[data-hui-grid][data-hui-target=child][style~='grid-column:'] > *:not(#huiHack) {
+  grid-column: inherit;
+}
 [data-hui-grid][data-hui-target=child][style~='grid-column-start:'] > *:not(#huiHack) {
   grid-column-start: inherit;
 }
 [data-hui-grid][data-hui-target=child][style~='grid-column-end:'] > *:not(#huiHack) {
   grid-column-end: inherit;
+}
+[data-hui-grid][data-hui-target=child][style~='grid-row:'] > *:not(#huiHack) {
+  grid-row: inherit;
 }
 [data-hui-grid][data-hui-target=child][style~='grid-row-start:'] > *:not(#huiHack) {
   grid-row-start: inherit;
@@ -373,4 +382,16 @@ data[data-hui] {
 }
 [data-hui][data-hui-target=child][style~='max-width:'] > *:not(#huiHack) {
   max-width: inherit;
+}
+[data-hui][data-hui-target=child][style~='min-width:'] > *:not(#huiHack) {
+  min-width: inherit;
+}
+[data-hui][data-hui-target=child][style~='height:'] > *:not(#huiHack) {
+  height: inherit;
+}
+[data-hui][data-hui-target=child][style~='max-height:'] > *:not(#huiHack) {
+  max-height: inherit;
+}
+[data-hui][data-hui-target=child][style~='min-height:'] > *:not(#huiHack) {
+  min-height: inherit;
 }

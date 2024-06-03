@@ -47,6 +47,6 @@
 </Container>
 
 <!-- theme.ini
-  themes: small;
+  themes: small, button;
   & = common, display;
 -->

@@ -99,7 +99,11 @@
   style:inset={p.inset ?? null}
 
   style:width={s.width ?? null}
+  style:min-width={s.minWidth ?? null}
   style:max-width={s.maxWidth ?? null}
+  style:height={s.height ?? null}
+  style:min-height={s.minHeight ?? null}
+  style:max-height={s.maxHeight ?? null}
 
   on:click
   on:mouseup

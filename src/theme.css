@@ -74,7 +74,7 @@
   --hui-default-gradient-0: radial-gradient(transparent, #00000004);
   --hui-default-gradient-1: radial-gradient(transparent, #00000017);
   --hui-default-gradient-2: radial-gradient(transparent, #00000020);
-  --hui-default-gradient-3: radial-gradient(#00000006, #00000010);
+  --hui-default-gradient-3: radial-gradient(#00000006, #00000008);
 
   /* TRANSITIONS */
   --hui-default-transition-1: all 0.42s ease-out allow-discrete;

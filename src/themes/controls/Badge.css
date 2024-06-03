@@ -12,23 +12,23 @@
   /* APPERANCE */
   --hui-jjitob-color: var(--hui-default-color-text);
   --hui-jjitob-background-color: var(--hui-default-background-color);
-  --hui-jjitob-border-bottom-color: var(--hui-default-border-color);
+  --hui-jjitob-background-image: var(--hui-default-gradient-3);
+  --hui-jjitob-border-bottom-color: var(--hui-unua-border-color);
   --hui-jjitob-border-bottom-style: var(--hui-default-border-style);
   --hui-jjitob-border-bottom-width: var(--hui-default-border-width);
   --hui-jjitob-border-bottom-left-radius: var(--hui-default-border-radius-2);
   --hui-jjitob-border-bottom-right-radius: var(--hui-default-border-radius-2);
-  --hui-jjitob-border-left-color: var(--hui-default-border-color);
+  --hui-jjitob-border-left-color: var(--hui-unua-border-color);
   --hui-jjitob-border-left-style: var(--hui-default-border-style);
   --hui-jjitob-border-left-width: var(--hui-default-border-width);
-  --hui-jjitob-border-right-color: var(--hui-default-border-color);
+  --hui-jjitob-border-right-color: var(--hui-unua-border-color);
   --hui-jjitob-border-right-style: var(--hui-default-border-style);
   --hui-jjitob-border-right-width: var(--hui-default-border-width);
-  --hui-jjitob-border-top-color: var(--hui-default-border-color);
+  --hui-jjitob-border-top-color: var(--hui-unua-border-color);
   --hui-jjitob-border-top-style: var(--hui-default-border-style);
   --hui-jjitob-border-top-width: var(--hui-default-border-width);
   --hui-jjitob-border-top-left-radius: var(--hui-default-border-radius-2);
   --hui-jjitob-border-top-right-radius: var(--hui-default-border-radius-2);
-  --hui-jjitob-box-shadow: var(--hui-unua-box-shadow);
   /* DISPLAY */
   --hui-jjitob-display: block;
 }
@@ -55,6 +55,20 @@
 [data-hui=Badge][data-hui-theme~=small][data-hui-valid] {
 }
 [data-hui=Badge][data-hui-theme~=small][data-hui-invalid] {
+}
+[data-hui=Badge][data-hui-theme~=button] {
+  /* APPERANCE */
+  --hui-jjitob-box-shadow: var(--hui-unua-box-shadow);
+}
+[data-hui=Badge][data-hui-theme~=button][data-hui-active] {
+}
+[data-hui=Badge][data-hui-theme~=button][data-hui-disabled] {
+}
+[data-hui=Badge][data-hui-theme~=button][data-hui-readonly] {
+}
+[data-hui=Badge][data-hui-theme~=button][data-hui-valid] {
+}
+[data-hui=Badge][data-hui-theme~=button][data-hui-invalid] {
 }
 [data-hui=Badge] {
   /* LAYOUT-POSITION */

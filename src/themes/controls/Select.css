@@ -4,7 +4,7 @@
   /* LAYOUT-SIZING */
   --hui-dityoy-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-border-width)) * 2);
   --hui-dityoy-width: 100%;
-  --hui-dityoy-max-width: 350px;
+  --hui-dityoy-max-width: 50vw;
   --hui-dityoy-min-width: 200px;
   /* LAYOUT-PADDING */
   --hui-dityoy-padding-top: var(--hui-default-spacer-5);
@@ -19,6 +19,7 @@
   --hui-dityoy-flex-wrap: wrap;
   --hui-dityoy-gap: var(--hui-default-spacer-5);
   --hui-dityoy-align-content: center;
+  --hui-dityoy-justify-content: stretch;
   --hui-dityoy-align-items: center;
   /* APPERANCE */
   --hui-dityoy-background-color: var(--hui-default-background-color);
@@ -68,69 +69,6 @@
   --hui-yjkcgu-flex-grow: 1;
   --hui-yjkcgu-cursor: pointer;
 }
-[data-hui=Select] > datalist {
-  /* LAYOUT-POSITION */
-  --hui-ntpkim-position: absolute;
-  --hui-ntpkim-top: calc(100% + var(--hui-default-border-width) * 3);
-  --hui-ntpkim-right: calc(var(--hui-default-border-width) / -2);
-  --hui-ntpkim-bottom: auto;
-  --hui-ntpkim-left: calc(var(--hui-default-border-width) / -2);
-  --hui-ntpkim-z-index: 300;
-  /* LAYOUT-SIZING */
-  --hui-ntpkim-max-height: calc(var(--hui-default-size-0) * 10);
-  /* LAYOUT-OVERFLOW */
-  --hui-ntpkim-overflow-x: hidden;
-  --hui-ntpkim-overflow-y: auto;
-  /* APPERANCE */
-  --hui-ntpkim-background-color: var(--hui-default-background-color);
-  --hui-ntpkim-background-image: none;
-  --hui-ntpkim-border-bottom-color: var(--hui-default-border-color);
-  --hui-ntpkim-border-bottom-style: var(--hui-default-border-style);
-  --hui-ntpkim-border-bottom-width: var(--hui-default-border-width);
-  --hui-ntpkim-border-bottom-left-radius: var(--hui-default-border-radius-1);
-  --hui-ntpkim-border-bottom-right-radius: var(--hui-default-border-radius-1);
-  --hui-ntpkim-border-left-color: var(--hui-default-border-color);
-  --hui-ntpkim-border-left-style: var(--hui-default-border-style);
-  --hui-ntpkim-border-left-width: var(--hui-default-border-width);
-  --hui-ntpkim-border-right-color: var(--hui-default-border-color);
-  --hui-ntpkim-border-right-style: var(--hui-default-border-style);
-  --hui-ntpkim-border-right-width: var(--hui-default-border-width);
-  --hui-ntpkim-border-top-color: var(--hui-default-border-color);
-  --hui-ntpkim-border-top-style: var(--hui-default-border-style);
-  --hui-ntpkim-border-top-width: var(--hui-default-border-width);
-  --hui-ntpkim-border-top-left-radius: var(--hui-default-border-radius-1);
-  --hui-ntpkim-border-top-right-radius: var(--hui-default-border-radius-1);
-  --hui-ntpkim-box-shadow: var(--hui-unua-box-shadow);
-  /* DISPLAY */
-  --hui-ntpkim-display: block;
-}
-[data-hui=Select] > datalist.toTop {
-  --hui-zipoac-top: auto;
-  --hui-zipoac-bottom: calc(100% + var(--hui-default-border-width) * 3);
-}
-[data-hui=Select] > datalist > option {
-  /* LAYOUT-PADDING */
-  --hui-kboary-padding-top: var(--hui-default-spacer-5);
-  --hui-kboary-padding-right: var(--hui-default-spacer-7);
-  --hui-kboary-padding-bottom: var(--hui-default-spacer-5);
-  --hui-kboary-padding-left: var(--hui-default-spacer-7);
-  /* TEXT */
-  --hui-kboary-font-size: var(--hui-default-size-0);
-  --hui-kboary-font-weight: var(--hui-default-font-weight);
-  --hui-kboary-line-height: var(--hui-default-line-height);
-  /* APPERANCE */
-  --hui-kboary-color: var(--hui-default-color-text);
-  /* DISPLAY */
-  --hui-kboary-display: block;
-}
-[data-hui=Select] > datalist > option:hover {
-  --hui-pjktzt-background-image: var(--hui-default-gradient-1);
-}
-[data-hui=Select] > datalist > option + option {
-  --hui-tbhreu-border-top-color: var(--hui-default-border-color);
-  --hui-tbhreu-border-top-style: var(--hui-default-border-style);
-  --hui-tbhreu-border-top-width: var(--hui-default-border-width);
-}
 [data-hui=Select][data-hui-active] {
 }
 [data-hui=Select][data-hui-active] > input {
@@ -138,16 +76,6 @@
 [data-hui=Select][data-hui-active] > input::placeholder {
 }
 [data-hui=Select][data-hui-active] > button {
-}
-[data-hui=Select][data-hui-active] > datalist {
-}
-[data-hui=Select][data-hui-active] > datalist.toTop {
-}
-[data-hui=Select][data-hui-active] > datalist > option {
-}
-[data-hui=Select][data-hui-active] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-active] > datalist > option + option {
 }
 [data-hui=Select][data-hui-disabled] {
 }
@@ -157,16 +85,6 @@
 }
 [data-hui=Select][data-hui-disabled] > button {
 }
-[data-hui=Select][data-hui-disabled] > datalist {
-}
-[data-hui=Select][data-hui-disabled] > datalist.toTop {
-}
-[data-hui=Select][data-hui-disabled] > datalist > option {
-}
-[data-hui=Select][data-hui-disabled] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-disabled] > datalist > option + option {
-}
 [data-hui=Select][data-hui-readonly] {
 }
 [data-hui=Select][data-hui-readonly] > input {
@@ -174,16 +92,6 @@
 [data-hui=Select][data-hui-readonly] > input::placeholder {
 }
 [data-hui=Select][data-hui-readonly] > button {
-}
-[data-hui=Select][data-hui-readonly] > datalist {
-}
-[data-hui=Select][data-hui-readonly] > datalist.toTop {
-}
-[data-hui=Select][data-hui-readonly] > datalist > option {
-}
-[data-hui=Select][data-hui-readonly] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-readonly] > datalist > option + option {
 }
 [data-hui=Select][data-hui-valid] {
 }
@@ -193,16 +101,6 @@
 }
 [data-hui=Select][data-hui-valid] > button {
 }
-[data-hui=Select][data-hui-valid] > datalist {
-}
-[data-hui=Select][data-hui-valid] > datalist.toTop {
-}
-[data-hui=Select][data-hui-valid] > datalist > option {
-}
-[data-hui=Select][data-hui-valid] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-valid] > datalist > option + option {
-}
 [data-hui=Select][data-hui-invalid] {
 }
 [data-hui=Select][data-hui-invalid] > input {
@@ -210,16 +108,6 @@
 [data-hui=Select][data-hui-invalid] > input::placeholder {
 }
 [data-hui=Select][data-hui-invalid] > button {
-}
-[data-hui=Select][data-hui-invalid] > datalist {
-}
-[data-hui=Select][data-hui-invalid] > datalist.toTop {
-}
-[data-hui=Select][data-hui-invalid] > datalist > option {
-}
-[data-hui=Select][data-hui-invalid] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-invalid] > datalist > option + option {
 }
 [data-hui=Select][data-hui-theme~=flat] {
 }
@@ -229,16 +117,6 @@
 }
 [data-hui=Select][data-hui-theme~=flat] > button {
 }
-[data-hui=Select][data-hui-theme~=flat] > datalist {
-}
-[data-hui=Select][data-hui-theme~=flat] > datalist.toTop {
-}
-[data-hui=Select][data-hui-theme~=flat] > datalist > option {
-}
-[data-hui=Select][data-hui-theme~=flat] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-theme~=flat] > datalist > option + option {
-}
 [data-hui=Select][data-hui-theme~=flat][data-hui-active] {
 }
 [data-hui=Select][data-hui-theme~=flat][data-hui-active] > input {
@@ -246,16 +124,6 @@
 [data-hui=Select][data-hui-theme~=flat][data-hui-active] > input::placeholder {
 }
 [data-hui=Select][data-hui-theme~=flat][data-hui-active] > button {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-active] > datalist {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-active] > datalist.toTop {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-active] > datalist > option {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-active] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-active] > datalist > option + option {
 }
 [data-hui=Select][data-hui-theme~=flat][data-hui-disabled] {
 }
@@ -265,16 +133,6 @@
 }
 [data-hui=Select][data-hui-theme~=flat][data-hui-disabled] > button {
 }
-[data-hui=Select][data-hui-theme~=flat][data-hui-disabled] > datalist {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-disabled] > datalist.toTop {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-disabled] > datalist > option {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-disabled] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-disabled] > datalist > option + option {
-}
 [data-hui=Select][data-hui-theme~=flat][data-hui-readonly] {
 }
 [data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > input {
@@ -282,16 +140,6 @@
 [data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > input::placeholder {
 }
 [data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > button {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > datalist {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > datalist.toTop {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > datalist > option {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > datalist > option + option {
 }
 [data-hui=Select][data-hui-theme~=flat][data-hui-valid] {
 }
@@ -301,16 +149,6 @@
 }
 [data-hui=Select][data-hui-theme~=flat][data-hui-valid] > button {
 }
-[data-hui=Select][data-hui-theme~=flat][data-hui-valid] > datalist {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-valid] > datalist.toTop {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-valid] > datalist > option {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-valid] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-valid] > datalist > option + option {
-}
 [data-hui=Select][data-hui-theme~=flat][data-hui-invalid] {
 }
 [data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > input {
@@ -318,16 +156,6 @@
 [data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > input::placeholder {
 }
 [data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > button {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > datalist {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > datalist.toTop {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > datalist > option {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > datalist > option:hover {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > datalist > option + option {
 }
 [data-hui=Select] {
   /* LAYOUT-POSITION */
@@ -561,242 +389,4 @@
 [data-hui=Select] > button {
 /*  --hui-yjkcgu-flex-grow-default: ; */
 /*  --hui-yjkcgu-cursor-default: ; */
-}
-[data-hui=Select] > datalist {
-  /* LAYOUT-POSITION */
-/*  --hui-ntpkim-position-default: ; */
-/*  --hui-ntpkim-top-default: ; */
-/*  --hui-ntpkim-right-default: ; */
-/*  --hui-ntpkim-bottom-default: ; */
-/*  --hui-ntpkim-left-default: ; */
-/*  --hui-ntpkim-z-index-default: ; */
-/*  --hui-ntpkim-float-default: ; */
-/*  --hui-ntpkim-clear-default: ; */
-/*  --hui-ntpkim-align-self-default: ; */
-/*  --hui-ntpkim-order-default: ; */
-  /* LAYOUT-SIZING */
-/*  --hui-ntpkim-box-sizing-default: ; */
-/*  --hui-ntpkim-height-default: ; */
-/*  --hui-ntpkim-max-height-default: ; */
-/*  --hui-ntpkim-min-height-default: ; */
-/*  --hui-ntpkim-width-default: ; */
-/*  --hui-ntpkim-max-width-default: ; */
-/*  --hui-ntpkim-min-width-default: ; */
-  /* LAYOUT-MARGIN */
-/*  --hui-ntpkim-margin-top-default: ; */
-/*  --hui-ntpkim-margin-right-default: ; */
-/*  --hui-ntpkim-margin-bottom-default: ; */
-/*  --hui-ntpkim-margin-left-default: ; */
-  /* LAYOUT-PADDING */
-/*  --hui-ntpkim-padding-top-default: ; */
-/*  --hui-ntpkim-padding-right-default: ; */
-/*  --hui-ntpkim-padding-bottom-default: ; */
-/*  --hui-ntpkim-padding-left-default: ; */
-  /* LAYOUT-OVERFLOW */
-/*  --hui-ntpkim-overflow-x-default: ; */
-/*  --hui-ntpkim-overflow-y-default: ; */
-  /* LAYOUT-FLEX */
-/*  --hui-ntpkim-flex-basis-default: ; */
-/*  --hui-ntpkim-flex-direction-default: ; */
-/*  --hui-ntpkim-flex-grow-default: ; */
-/*  --hui-ntpkim-flex-shrink-default: ; */
-/*  --hui-ntpkim-flex-wrap-default: ; */
-/*  --hui-ntpkim-gap-default: ; */
-/*  --hui-ntpkim-align-content-default: ; */
-/*  --hui-ntpkim-justify-content-default: ; */
-/*  --hui-ntpkim-align-items-default: ; */
-  /* TEXT */
-/*  --hui-ntpkim-direction-default: ; */
-/*  --hui-ntpkim-font-family-default: ; */
-/*  --hui-ntpkim-font-size-default: ; */
-/*  --hui-ntpkim-font-stretch-default: ; */
-/*  --hui-ntpkim-font-style-default: ; */
-/*  --hui-ntpkim-font-weight-default: ; */
-/*  --hui-ntpkim-letter-spacing-default: ; */
-/*  --hui-ntpkim-line-height-default: ; */
-/*  --hui-ntpkim-text-align-default: ; */
-/*  --hui-ntpkim-text-align-last-default: ; */
-/*  --hui-ntpkim-text-decoration-color-default: ; */
-/*  --hui-ntpkim-text-decoration-line-default: ; */
-/*  --hui-ntpkim-text-decoration-style-default: ; */
-/*  --hui-ntpkim-text-decoration-thickness-default: ; */
-/*  --hui-ntpkim-text-indent-default: ; */
-/*  --hui-ntpkim-text-overflow-default: ; */
-/*  --hui-ntpkim-text-shadow-default: ; */
-/*  --hui-ntpkim-text-size-adjust-default: ; */
-/*  --hui-ntpkim-text-transform-default: ; */
-/*  --hui-ntpkim-text-wrap-default: ; */
-/*  --hui-ntpkim-vertical-align-default: ; */
-/*  --hui-ntpkim-white-space-collapse-default: ; */
-/*  --hui-ntpkim-word-break-default: ; */
-/*  --hui-ntpkim-word-spacing-default: ; */
-  /* APPERANCE */
-/*  --hui-ntpkim-visibility-default: ; */
-/*  --hui-ntpkim-color-default: ; */
-/*  --hui-ntpkim-background-attachment-default: ; */
-/*  --hui-ntpkim-background-clip-default: ; */
-/*  --hui-ntpkim-background-color-default: ; */
-/*  --hui-ntpkim-background-image-default: ; */
-/*  --hui-ntpkim-background-origin-default: ; */
-/*  --hui-ntpkim-background-position-x-default: ; */
-/*  --hui-ntpkim-background-position-y-default: ; */
-/*  --hui-ntpkim-background-repeat-default: ; */
-/*  --hui-ntpkim-background-size-default: ; */
-/*  --hui-ntpkim-border-bottom-color-default: ; */
-/*  --hui-ntpkim-border-bottom-style-default: ; */
-/*  --hui-ntpkim-border-bottom-width-default: ; */
-/*  --hui-ntpkim-border-bottom-left-radius-default: ; */
-/*  --hui-ntpkim-border-bottom-right-radius-default: ; */
-/*  --hui-ntpkim-border-image-outset-default: ; */
-/*  --hui-ntpkim-border-image-repeat-default: ; */
-/*  --hui-ntpkim-border-image-slice-default: ; */
-/*  --hui-ntpkim-border-image-source-default: ; */
-/*  --hui-ntpkim-border-image-width-default: ; */
-/*  --hui-ntpkim-border-left-color-default: ; */
-/*  --hui-ntpkim-border-left-style-default: ; */
-/*  --hui-ntpkim-border-left-width-default: ; */
-/*  --hui-ntpkim-border-right-color-default: ; */
-/*  --hui-ntpkim-border-right-style-default: ; */
-/*  --hui-ntpkim-border-right-width-default: ; */
-/*  --hui-ntpkim-border-top-color-default: ; */
-/*  --hui-ntpkim-border-top-style-default: ; */
-/*  --hui-ntpkim-border-top-width-default: ; */
-/*  --hui-ntpkim-border-top-left-radius-default: ; */
-/*  --hui-ntpkim-border-top-right-radius-default: ; */
-/*  --hui-ntpkim-box-shadow-default: ; */
-/*  --hui-ntpkim-cursor-default: ; */
-/*  --hui-ntpkim-outline-color-default: ; */
-/*  --hui-ntpkim-outline-offset-default: ; */
-/*  --hui-ntpkim-outline-style-default: ; */
-/*  --hui-ntpkim-outline-width-default: ; */
-/*  --hui-ntpkim-scrollbar-color-default: ; */
-/*  --hui-ntpkim-scrollbar-gutter-default: ; */
-/*  --hui-ntpkim-scrollbar-width-default: ; */
-  /* DISPLAY */
-/*  --hui-ntpkim-display-default: ; */
-}
-[data-hui=Select] > datalist.toTop {
-/*  --hui-zipoac-top-default: ; */
-/*  --hui-zipoac-bottom-default: ; */
-}
-[data-hui=Select] > datalist > option {
-  /* LAYOUT-POSITION */
-/*  --hui-kboary-position-default: ; */
-/*  --hui-kboary-top-default: ; */
-/*  --hui-kboary-right-default: ; */
-/*  --hui-kboary-bottom-default: ; */
-/*  --hui-kboary-left-default: ; */
-/*  --hui-kboary-z-index-default: ; */
-/*  --hui-kboary-float-default: ; */
-/*  --hui-kboary-clear-default: ; */
-/*  --hui-kboary-align-self-default: ; */
-/*  --hui-kboary-order-default: ; */
-  /* LAYOUT-SIZING */
-/*  --hui-kboary-box-sizing-default: ; */
-/*  --hui-kboary-height-default: ; */
-/*  --hui-kboary-max-height-default: ; */
-/*  --hui-kboary-min-height-default: ; */
-/*  --hui-kboary-width-default: ; */
-/*  --hui-kboary-max-width-default: ; */
-/*  --hui-kboary-min-width-default: ; */
-  /* LAYOUT-MARGIN */
-/*  --hui-kboary-margin-top-default: ; */
-/*  --hui-kboary-margin-right-default: ; */
-/*  --hui-kboary-margin-bottom-default: ; */
-/*  --hui-kboary-margin-left-default: ; */
-  /* LAYOUT-PADDING */
-/*  --hui-kboary-padding-top-default: ; */
-/*  --hui-kboary-padding-right-default: ; */
-/*  --hui-kboary-padding-bottom-default: ; */
-/*  --hui-kboary-padding-left-default: ; */
-  /* LAYOUT-OVERFLOW */
-/*  --hui-kboary-overflow-x-default: ; */
-/*  --hui-kboary-overflow-y-default: ; */
-  /* LAYOUT-FLEX */
-/*  --hui-kboary-flex-basis-default: ; */
-/*  --hui-kboary-flex-direction-default: ; */
-/*  --hui-kboary-flex-grow-default: ; */
-/*  --hui-kboary-flex-shrink-default: ; */
-/*  --hui-kboary-flex-wrap-default: ; */
-/*  --hui-kboary-gap-default: ; */
-/*  --hui-kboary-align-content-default: ; */
-/*  --hui-kboary-justify-content-default: ; */
-/*  --hui-kboary-align-items-default: ; */
-  /* TEXT */
-/*  --hui-kboary-direction-default: ; */
-/*  --hui-kboary-font-family-default: ; */
-/*  --hui-kboary-font-size-default: ; */
-/*  --hui-kboary-font-stretch-default: ; */
-/*  --hui-kboary-font-style-default: ; */
-/*  --hui-kboary-font-weight-default: ; */
-/*  --hui-kboary-letter-spacing-default: ; */
-/*  --hui-kboary-line-height-default: ; */
-/*  --hui-kboary-text-align-default: ; */
-/*  --hui-kboary-text-align-last-default: ; */
-/*  --hui-kboary-text-decoration-color-default: ; */
-/*  --hui-kboary-text-decoration-line-default: ; */
-/*  --hui-kboary-text-decoration-style-default: ; */
-/*  --hui-kboary-text-decoration-thickness-default: ; */
-/*  --hui-kboary-text-indent-default: ; */
-/*  --hui-kboary-text-overflow-default: ; */
-/*  --hui-kboary-text-shadow-default: ; */
-/*  --hui-kboary-text-size-adjust-default: ; */
-/*  --hui-kboary-text-transform-default: ; */
-/*  --hui-kboary-text-wrap-default: ; */
-/*  --hui-kboary-vertical-align-default: ; */
-/*  --hui-kboary-white-space-collapse-default: ; */
-/*  --hui-kboary-word-break-default: ; */
-/*  --hui-kboary-word-spacing-default: ; */
-  /* APPERANCE */
-/*  --hui-kboary-visibility-default: ; */
-/*  --hui-kboary-color-default: ; */
-/*  --hui-kboary-background-attachment-default: ; */
-/*  --hui-kboary-background-clip-default: ; */
-/*  --hui-kboary-background-color-default: ; */
-/*  --hui-kboary-background-image-default: ; */
-/*  --hui-kboary-background-origin-default: ; */
-/*  --hui-kboary-background-position-x-default: ; */
-/*  --hui-kboary-background-position-y-default: ; */
-/*  --hui-kboary-background-repeat-default: ; */
-/*  --hui-kboary-background-size-default: ; */
-/*  --hui-kboary-border-bottom-color-default: ; */
-/*  --hui-kboary-border-bottom-style-default: ; */
-/*  --hui-kboary-border-bottom-width-default: ; */
-/*  --hui-kboary-border-bottom-left-radius-default: ; */
-/*  --hui-kboary-border-bottom-right-radius-default: ; */
-/*  --hui-kboary-border-image-outset-default: ; */
-/*  --hui-kboary-border-image-repeat-default: ; */
-/*  --hui-kboary-border-image-slice-default: ; */
-/*  --hui-kboary-border-image-source-default: ; */
-/*  --hui-kboary-border-image-width-default: ; */
-/*  --hui-kboary-border-left-color-default: ; */
-/*  --hui-kboary-border-left-style-default: ; */
-/*  --hui-kboary-border-left-width-default: ; */
-/*  --hui-kboary-border-right-color-default: ; */
-/*  --hui-kboary-border-right-style-default: ; */
-/*  --hui-kboary-border-right-width-default: ; */
-/*  --hui-kboary-border-top-color-default: ; */
-/*  --hui-kboary-border-top-style-default: ; */
-/*  --hui-kboary-border-top-width-default: ; */
-/*  --hui-kboary-border-top-left-radius-default: ; */
-/*  --hui-kboary-border-top-right-radius-default: ; */
-/*  --hui-kboary-box-shadow-default: ; */
-/*  --hui-kboary-cursor-default: ; */
-/*  --hui-kboary-outline-color-default: ; */
-/*  --hui-kboary-outline-offset-default: ; */
-/*  --hui-kboary-outline-style-default: ; */
-/*  --hui-kboary-outline-width-default: ; */
-/*  --hui-kboary-scrollbar-color-default: ; */
-/*  --hui-kboary-scrollbar-gutter-default: ; */
-/*  --hui-kboary-scrollbar-width-default: ; */
-  /* DISPLAY */
-/*  --hui-kboary-display-default: ; */
-}
-[data-hui=Select] > datalist > option:hover {
-/*  --hui-pjktzt-background-image-default: ; */
-}
-[data-hui=Select] > datalist > option + option {
-/*  --hui-tbhreu-border-top-color-default: ; */
-/*  --hui-tbhreu-border-top-style-default: ; */
-/*  --hui-tbhreu-border-top-width-default: ; */
 }

@@ -3,7 +3,9 @@
   import "../../styles/controls/TextInput.css"
   import Container from "../Container.svelte"
   import Strong from "../typography/Strong.svelte"
+  import Dropdown from "./Dropdown.svelte"
 
+  import { checkEmpty, calcCutParentOffset } from "../../helpers.js"
   import { tick, createEventDispatcher } from "svelte"
   const dispatch = createEventDispatcher()
 
@@ -31,6 +33,21 @@
   export let maxLength = null
   export let prefix = null
   export let suffix = null
+  export let options = null
+
+  let dropdownOpened = false
+  let closeTimer = null
+  let input = null
+
+  const open = () => {
+    clearTimeout(closeTimer)
+
+    dropdownOpened = true
+  }
+
+  const close = () => {
+    closeTimer = setTimeout(() => dropdownOpened = false, 200)
+  }
 </script>
 
 <Container
@@ -63,6 +80,9 @@
     on:input
     on:change
     bind:value
+    bind:this={input}
+    on:focus={open}
+    on:blur={close}
     {placeholder}
     {maxLength}
     type="text"
@@ -72,9 +92,22 @@
       {suffix}
     </Strong>
   {/if}
+  {#if !checkEmpty(options) && dropdownOpened}
+    <!-- <pre>{JSON.stringify(options)}</pre> -->
+    <Dropdown
+      {options}
+      selected={value}
+      on:select={console.log}
+      on:select={(e) => value = e.detail}
+      filter={value}
+      root={input?.parentElement}
+      active={dropdownOpened}
+    />
+  {/if}
 </Container>
 
 <!-- theme.ini
+  themes: flat;
   & = common, display, flex, gap;
   > input = common;
   > input::placeholder = font-size;

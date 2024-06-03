@@ -5,7 +5,7 @@ export const checkEmpty = (value) => {
     case Array.isArray(value): return !value.length 
     case typeof value === "number": return false
     case typeof value === "boolean": return false
-    case typeof value === "object": return !Object.keys(this).length
+    case typeof value === "object": return !Object.keys(value).length
     default: return false
   }
 }
@@ -13,11 +13,7 @@ export const checkEmpty = (value) => {
 export const buildFuzzyRegex = (string, params = "i") => {
   if (typeof string !== "string" || checkEmpty(string)) return null
 
-  const pattern = string.replace(/[\W_]+/g, " ").trim()
-
-  if (checkEmpty(pattern)) return null
-
-  return new RegExp(pattern.replace(" ", "\\s+\\b"), params)
+  return new RegExp("\\b" + string.replace(/\s+/, "\\b"), params)
 }
 
 export const calcParentOffset = (el, parent) => {
@@ -46,3 +42,18 @@ export const fetchCutParent = (el) => {
 
 export const calcCutParentOffset = (el) =>
   calcParentOffset(el, fetchCutParent(el))
+
+export const sortObjectsBy = (objects, fun) => {
+  if (!Array.isArray(objects)) return objects
+  if (typeof fun !== "function") return objects 
+
+  const check = (v, type) => v == null || typeof v !== type
+
+  return [...objects].sort((a, b) => {
+    if ([a, b].some(v => check(v, "object"))) return 0
+    const [aa, bb] = [a, b].map(fun)
+    if ([aa, bb].some(v => check(v, "string"))) return 0
+
+    return aa.localeCompare(bb)
+  })
+}
