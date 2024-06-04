@@ -7,10 +7,10 @@
   --hui-yqncrg-max-width: 50vw;
   --hui-yqncrg-min-width: 200px;
   /* LAYOUT-PADDING */
-  --hui-yqncrg-padding-top: var(--hui-default-spacer-5);
+  --hui-yqncrg-padding-top: var(--hui-default-spacer-1);
   --hui-yqncrg-padding-right: var(--hui-default-spacer-1);
-  --hui-yqncrg-padding-bottom: var(--hui-default-spacer-5);
-  --hui-yqncrg-padding-left: var(--hui-default-spacer-6);
+  --hui-yqncrg-padding-bottom: var(--hui-default-spacer-1);
+  --hui-yqncrg-padding-left: var(--hui-default-spacer-1);
   /* LAYOUT-OVERFLOW */
   --hui-yqncrg-overflow-x: hidden;
   --hui-yqncrg-overflow-y: hidden;
@@ -48,10 +48,10 @@
 [data-hui=Textarea] > textarea,
 [data-hui=Textarea]::after {
   /* LAYOUT-PADDING */
-  --hui-zagnla-padding-top: calc(var(--hui-default-spacer-3) + var(--hui-default-border-width) / 2);
+  --hui-zagnla-padding-top: calc(var(--hui-default-spacer-6) + var(--hui-default-border-width) / 2);
   --hui-zagnla-padding-right: var(--hui-default-spacer-6);
-  --hui-zagnla-padding-bottom: calc(var(--hui-default-spacer-3) + var(--hui-default-border-width) / 2);
-  --hui-zagnla-padding-left: var(--hui-default-spacer-1);
+  --hui-zagnla-padding-bottom: calc(var(--hui-default-spacer-6) + var(--hui-default-border-width) / 2);
+  --hui-zagnla-padding-left: var(--hui-default-spacer-6);
   /* TEXT */
   --hui-zagnla-font-size: var(--hui-default-font-size);
   --hui-zagnla-font-weight: var(--hui-default-font-weight);
