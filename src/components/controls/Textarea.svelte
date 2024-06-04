@@ -95,7 +95,7 @@
   & = common, display, grid;
   > textarea, &::after = common, grid-area;
   > textarea = resize, overflow, max-height;
-  &::after = content, white-space, visibility, display, max-height;
+  &::after = content, visibility, display, max-height;
   > textarea::placeholder = font-size, text-align;
   > button = cursor, layout-position, font-size;
 -->

@@ -252,7 +252,6 @@
   counter-increment: var(--hui-uesrne-counter-increment, none);
   counter-reset: var(--hui-uesrne-counter-reset, none);
   quotes: var(--hui-uesrne-quotes, auto);
-  white-space: var(--hui-uesrne-white-space, initial);
   visibility: var(--hui-uesrne-visibility, initial);
   /* DISPLAY */
   display: var(--hui-uesrne-display, block);

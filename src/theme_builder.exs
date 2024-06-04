@@ -92,6 +92,8 @@ defmodule Builder do
   end
 
   defp build_theme(sections, params) do
+    # IO.inspect(sections)
+
     current_theme = parse_theme(params)
     defaults = current_theme["default"]["default"]
 
