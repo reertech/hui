@@ -19,6 +19,7 @@
   export let flex = null
   export let scrollY = null
   export let scrollX = null
+  export let value = null
 
   const isValid = (value, allowed) => {
     switch (true) {
@@ -63,6 +64,7 @@
 
   data-hui-target={isTargeted ? target : null}
   data-hui-idx={idx ?? null}
+  data-hui-value={value ?? null}
 
   data-hui-scroll-x={scrollX || null}
   data-hui-scroll-y={scrollY || null}
@@ -97,7 +99,6 @@
   style:right={formatPx(p.right)}
   style:bottom={formatPx(p.bottom)}
   style:left={formatPx(p.left)}
-  style:inset={formatPx(p.inset)}
 
   style:width={formatPx(s.width)}
   style:min-width={formatPx(s.minWidth)}

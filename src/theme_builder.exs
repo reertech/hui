@@ -32,23 +32,13 @@ defmodule Builder do
   end
 
   defp parse_line(line, acc, params) do
-    IO.puts("\nline:")
-    IO.inspect(line)
     with [selector, tl] <- String.split(line, ~r"\s+=\s+", trim: true),
          sections <- String.split(tl, ~r"\s*,\s*", trim: true) do
       selector = clear_selector(selector)
 
-      IO.puts("\nselector:")
-      IO.inspect(selector)
-
       String.split(selector, ~r"\s*\|\s*", trim: true)
       |> Enum.reduce(acc, fn selector_part, acc ->
-        IO.puts("\nselector_part:")
-        IO.inspect(selector_part)
-
         prefix = build_prefix(selector, params)
-        IO.puts("\nprefix line:")
-        IO.inspect(prefix)
 
         sections =
           sections
@@ -201,19 +191,29 @@ defmodule Builder do
     parse_selector = fn section ->
       with [selector | _] <- ~r"^\[data\-hui\=(.|\n)+(?=\{)" |> Regex.run(section),
            theme <- parse_theme_name.(nil, section),
-           state <- parse_state_name.(nil, section) do
+           state <- parse_state_name.(nil, section),
+           default_section? <- section =~ "-default:" do
+        # IO.puts("===")
+        # IO.inspect(selector)
+        # IO.puts("^^^")
+
         selector
-        |> String.split(~r"\s*,\s*", trim: true)
+        |> String.split(",", trim: true)
         |> Enum.map(fn part ->
-          ~r"\s*(((\[data\-hui\=)\w+(\]))|\{)\s*"
-          |> Regex.replace(part, "")
+          ~r"\s*(((\[data\-hui\=)\w+(\]))|(\{\s*))"
+          |> Regex.replace(String.trim(part), "")
           |> String.trim_leading("[data-hui-theme~=#{theme}]")
           |> String.trim_leading("[data-hui-#{state}]")
+          |> case do
+            " " <> _ = selector_part -> selector_part
+            selector_part -> if default_section?, do: selector_part, else: "&" <> selector_part
+          end
         end)
         |> Enum.join(",")
         |> clear_selector()
+        # |> IO.inspect()
         |> case do
-          "" -> if section =~ "-default:", do: "default", else: "&"
+          "" -> if default_section?, do: "default", else: "&"
           selector -> selector
         end
         |> List.wrap()
@@ -232,7 +232,8 @@ defmodule Builder do
              state <- parse_state_name.(selector, section) do
           String.split(section, ~r"\s*(\{|;)\s*", trim: true)
           |> Enum.reduce(acc, fn line, acc ->
-            with false <- line =~ "data-hui",
+            # IO.inspect(line)
+            with false <- line =~ "[data-hui",
                  [key, val] <-
                    String.split(line, ~r"\s*:\s*", trim: true)
                    |> Enum.map(&String.trim/1) do

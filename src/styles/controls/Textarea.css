@@ -110,120 +110,170 @@
   scrollbar-width: var(--hui-yqncrg-scrollbar-width, thin);
   /* DISPLAY */
   display: var(--hui-yqncrg-display, block);
-  flex: var(--hui-yqncrg-flex, initial);
+  /* GRID */
+  grid-auto-columns: var(--hui-yqncrg-grid-auto-columns, auto);
+  grid-auto-flow: var(--hui-yqncrg-grid-auto-flow, row);
+  grid-auto-rows: var(--hui-yqncrg-grid-auto-rows, auto);
+  grid-column-end: var(--hui-yqncrg-grid-column-end, auto);
+  grid-column-start: var(--hui-yqncrg-grid-column-start, auto);
+  grid-row-end: var(--hui-yqncrg-grid-row-end, auto);
+  grid-row-start: var(--hui-yqncrg-grid-row-start, auto);
+  grid-template-areas: var(--hui-yqncrg-grid-template-areas, none);
+  grid-template-columns: var(--hui-yqncrg-grid-template-columns, none);
+  grid-template-rows: var(--hui-yqncrg-grid-template-rows, none);
+  align-content: var(--hui-yqncrg-align-content, normal);
+  justify-content: var(--hui-yqncrg-justify-content, normal);
+  align-items: var(--hui-yqncrg-align-items, normal);
+  justify-items: var(--hui-yqncrg-justify-items, legacy);
+  column-gap: var(--hui-yqncrg-column-gap, 0px);
+  row-gap: var(--hui-yqncrg-row-gap, 0px);
+}
+[data-hui=Textarea] > textarea,
+[data-hui=Textarea]::after {
+  /* LAYOUT-POSITION */
+  position: var(--hui-zagnla-position, static);
+  top: var(--hui-zagnla-top, auto);
+  right: var(--hui-zagnla-right, auto);
+  bottom: var(--hui-zagnla-bottom, auto);
+  left: var(--hui-zagnla-left, auto);
+  z-index: var(--hui-zagnla-z-index, auto);
+  float: var(--hui-zagnla-float, none);
+  clear: var(--hui-zagnla-clear, none);
+  align-self: var(--hui-zagnla-align-self, auto);
+  order: var(--hui-zagnla-order, 0);
+  /* LAYOUT-SIZING */
+  box-sizing: var(--hui-zagnla-box-sizing, border-box);
+  height: var(--hui-zagnla-height, auto);
+  max-height: var(--hui-zagnla-max-height, none);
+  min-height: var(--hui-zagnla-min-height, auto);
+  width: var(--hui-zagnla-width, auto);
+  max-width: var(--hui-zagnla-max-width, none);
+  min-width: var(--hui-zagnla-min-width, auto);
+  /* LAYOUT-MARGIN */
+  margin-top: var(--hui-zagnla-margin-top, 0px);
+  margin-right: var(--hui-zagnla-margin-right, 0px);
+  margin-bottom: var(--hui-zagnla-margin-bottom, 0px);
+  margin-left: var(--hui-zagnla-margin-left, 0px);
+  /* LAYOUT-PADDING */
+  padding-top: var(--hui-zagnla-padding-top, 0px);
+  padding-right: var(--hui-zagnla-padding-right, 0px);
+  padding-bottom: var(--hui-zagnla-padding-bottom, 0px);
+  padding-left: var(--hui-zagnla-padding-left, 0px);
+  /* LAYOUT-OVERFLOW */
+  overflow-x: var(--hui-zagnla-overflow-x, visible);
+  overflow-y: var(--hui-zagnla-overflow-y, visible);
+  /* LAYOUT-FLEX */
+  flex-basis: var(--hui-zagnla-flex-basis, auto);
+  flex-direction: var(--hui-zagnla-flex-direction, row);
+  flex-grow: var(--hui-zagnla-flex-grow, 0);
+  flex-shrink: var(--hui-zagnla-flex-shrink, 1);
+  flex-wrap: var(--hui-zagnla-flex-wrap, nowrap);
+  gap: var(--hui-zagnla-gap, 0px);
+  align-content: var(--hui-zagnla-align-content, stretch);
+  justify-content: var(--hui-zagnla-justify-content, flex-start);
+  align-items: var(--hui-zagnla-align-items, stretch);
+  /* TEXT */
+  direction: var(--hui-zagnla-direction, ltr);
+  font-family: var(--hui-zagnla-font-family, system-ui);
+  font-size: var(--hui-zagnla-font-size, 16px);
+  font-stretch: var(--hui-zagnla-font-stretch, 100%);
+  font-style: var(--hui-zagnla-font-style, normal);
+  font-weight: var(--hui-zagnla-font-weight, 400);
+  letter-spacing: var(--hui-zagnla-letter-spacing, normal);
+  line-height: var(--hui-zagnla-line-height, normal);
+  text-align: var(--hui-zagnla-text-align, start);
+  text-align-last: var(--hui-zagnla-text-align-last, auto);
+  text-decoration-color: var(--hui-zagnla-text-decoration-color, #000);
+  text-decoration-line: var(--hui-zagnla-text-decoration-line, none);
+  text-decoration-style: var(--hui-zagnla-text-decoration-style, solid);
+  text-decoration-thickness: var(--hui-zagnla-text-decoration-thickness, auto);
+  text-indent: var(--hui-zagnla-text-indent, 0px);
+  text-overflow: var(--hui-zagnla-text-overflow, clip);
+  text-shadow: var(--hui-zagnla-text-shadow, none);
+  text-size-adjust: var(--hui-zagnla-text-size-adjust, auto);
+  text-transform: var(--hui-zagnla-text-transform, none);
+  text-wrap: var(--hui-zagnla-text-wrap, wrap);
+  vertical-align: var(--hui-zagnla-vertical-align, baseline);
+  white-space-collapse: var(--hui-zagnla-white-space-collapse, collapse);
+  word-break: var(--hui-zagnla-word-break, normal);
+  word-spacing: var(--hui-zagnla-word-spacing, 0px);
+  /* APPERANCE */
+  visibility: var(--hui-zagnla-visibility, visible);
+  color: var(--hui-zagnla-color, rgb(0, 0, 0));
+  background-attachment: var(--hui-zagnla-background-attachment, scroll);
+  background-clip: var(--hui-zagnla-background-clip, border-box);
+  background-color: var(--hui-zagnla-background-color, rgba(0, 0, 0, 0));
+  background-image: var(--hui-zagnla-background-image, none);
+  background-origin: var(--hui-zagnla-background-origin, padding-box);
+  background-position-x: var(--hui-zagnla-background-position-x, 0%);
+  background-position-y: var(--hui-zagnla-background-position-y, 0%);
+  background-repeat: var(--hui-zagnla-background-repeat, repeat);
+  background-size: var(--hui-zagnla-background-size, auto);
+  border-bottom-color: var(--hui-zagnla-border-bottom-color, rgb(0, 0, 0));
+  border-bottom-style: var(--hui-zagnla-border-bottom-style, none);
+  border-bottom-width: var(--hui-zagnla-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-zagnla-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-zagnla-border-bottom-right-radius, 0px);
+  border-image-outset: var(--hui-zagnla-border-image-outset, 0);
+  border-image-repeat: var(--hui-zagnla-border-image-repeat, stretch);
+  border-image-slice: var(--hui-zagnla-border-image-slice, 100%);
+  border-image-source: var(--hui-zagnla-border-image-source, none);
+  border-image-width: var(--hui-zagnla-border-image-width, 1);
+  border-left-color: var(--hui-zagnla-border-left-color, rgb(0, 0, 0));
+  border-left-style: var(--hui-zagnla-border-left-style, none);
+  border-left-width: var(--hui-zagnla-border-left-width, 0px);
+  border-right-color: var(--hui-zagnla-border-right-color, rgb(0, 0, 0));
+  border-right-style: var(--hui-zagnla-border-right-style, none);
+  border-right-width: var(--hui-zagnla-border-right-width, 0px);
+  border-top-color: var(--hui-zagnla-border-top-color, rgb(0, 0, 0));
+  border-top-style: var(--hui-zagnla-border-top-style, none);
+  border-top-width: var(--hui-zagnla-border-top-width, 0px);
+  border-top-left-radius: var(--hui-zagnla-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-zagnla-border-top-right-radius, 0px);
+  box-shadow: var(--hui-zagnla-box-shadow, none);
+  cursor: var(--hui-zagnla-cursor, auto);
+  outline-color: var(--hui-zagnla-outline-color, rgb(0, 0, 0));
+  outline-offset: var(--hui-zagnla-outline-offset, 0px);
+  outline-style: var(--hui-zagnla-outline-style, none);
+  outline-width: var(--hui-zagnla-outline-width, 0px);
+  scrollbar-color: var(--hui-zagnla-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-zagnla-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-zagnla-scrollbar-width, thin);
+  grid-area: var(--hui-zagnla-grid-area, initial);
 }
 [data-hui=Textarea] > textarea {
-  /* LAYOUT-POSITION */
-  position: var(--hui-ccjrnw-position, static);
-  top: var(--hui-ccjrnw-top, auto);
-  right: var(--hui-ccjrnw-right, auto);
-  bottom: var(--hui-ccjrnw-bottom, auto);
-  left: var(--hui-ccjrnw-left, auto);
-  z-index: var(--hui-ccjrnw-z-index, auto);
-  float: var(--hui-ccjrnw-float, none);
-  clear: var(--hui-ccjrnw-clear, none);
-  align-self: var(--hui-ccjrnw-align-self, auto);
-  order: var(--hui-ccjrnw-order, 0);
-  /* LAYOUT-SIZING */
-  box-sizing: var(--hui-ccjrnw-box-sizing, border-box);
-  height: var(--hui-ccjrnw-height, auto);
-  max-height: var(--hui-ccjrnw-max-height, none);
-  min-height: var(--hui-ccjrnw-min-height, auto);
-  width: var(--hui-ccjrnw-width, auto);
-  max-width: var(--hui-ccjrnw-max-width, none);
-  min-width: var(--hui-ccjrnw-min-width, auto);
-  /* LAYOUT-MARGIN */
-  margin-top: var(--hui-ccjrnw-margin-top, 0px);
-  margin-right: var(--hui-ccjrnw-margin-right, 0px);
-  margin-bottom: var(--hui-ccjrnw-margin-bottom, 0px);
-  margin-left: var(--hui-ccjrnw-margin-left, 0px);
-  /* LAYOUT-PADDING */
-  padding-top: var(--hui-ccjrnw-padding-top, 0px);
-  padding-right: var(--hui-ccjrnw-padding-right, 0px);
-  padding-bottom: var(--hui-ccjrnw-padding-bottom, 0px);
-  padding-left: var(--hui-ccjrnw-padding-left, 0px);
-  /* LAYOUT-OVERFLOW */
-  overflow-x: var(--hui-ccjrnw-overflow-x, visible);
-  overflow-y: var(--hui-ccjrnw-overflow-y, visible);
-  /* LAYOUT-FLEX */
-  flex-basis: var(--hui-ccjrnw-flex-basis, auto);
-  flex-direction: var(--hui-ccjrnw-flex-direction, row);
-  flex-grow: var(--hui-ccjrnw-flex-grow, 0);
-  flex-shrink: var(--hui-ccjrnw-flex-shrink, 1);
-  flex-wrap: var(--hui-ccjrnw-flex-wrap, nowrap);
-  gap: var(--hui-ccjrnw-gap, 0px);
-  align-content: var(--hui-ccjrnw-align-content, stretch);
-  justify-content: var(--hui-ccjrnw-justify-content, flex-start);
-  align-items: var(--hui-ccjrnw-align-items, stretch);
-  /* TEXT */
-  direction: var(--hui-ccjrnw-direction, ltr);
-  font-family: var(--hui-ccjrnw-font-family, system-ui);
-  font-size: var(--hui-ccjrnw-font-size, 16px);
-  font-stretch: var(--hui-ccjrnw-font-stretch, 100%);
-  font-style: var(--hui-ccjrnw-font-style, normal);
-  font-weight: var(--hui-ccjrnw-font-weight, 400);
-  letter-spacing: var(--hui-ccjrnw-letter-spacing, normal);
-  line-height: var(--hui-ccjrnw-line-height, normal);
-  text-align: var(--hui-ccjrnw-text-align, start);
-  text-align-last: var(--hui-ccjrnw-text-align-last, auto);
-  text-decoration-color: var(--hui-ccjrnw-text-decoration-color, #000);
-  text-decoration-line: var(--hui-ccjrnw-text-decoration-line, none);
-  text-decoration-style: var(--hui-ccjrnw-text-decoration-style, solid);
-  text-decoration-thickness: var(--hui-ccjrnw-text-decoration-thickness, auto);
-  text-indent: var(--hui-ccjrnw-text-indent, 0px);
-  text-overflow: var(--hui-ccjrnw-text-overflow, clip);
-  text-shadow: var(--hui-ccjrnw-text-shadow, none);
-  text-size-adjust: var(--hui-ccjrnw-text-size-adjust, auto);
-  text-transform: var(--hui-ccjrnw-text-transform, none);
-  text-wrap: var(--hui-ccjrnw-text-wrap, wrap);
-  vertical-align: var(--hui-ccjrnw-vertical-align, baseline);
-  white-space-collapse: var(--hui-ccjrnw-white-space-collapse, collapse);
-  word-break: var(--hui-ccjrnw-word-break, normal);
-  word-spacing: var(--hui-ccjrnw-word-spacing, 0px);
-  /* APPERANCE */
-  visibility: var(--hui-ccjrnw-visibility, visible);
-  color: var(--hui-ccjrnw-color, rgb(0, 0, 0));
-  background-attachment: var(--hui-ccjrnw-background-attachment, scroll);
-  background-clip: var(--hui-ccjrnw-background-clip, border-box);
-  background-color: var(--hui-ccjrnw-background-color, rgba(0, 0, 0, 0));
-  background-image: var(--hui-ccjrnw-background-image, none);
-  background-origin: var(--hui-ccjrnw-background-origin, padding-box);
-  background-position-x: var(--hui-ccjrnw-background-position-x, 0%);
-  background-position-y: var(--hui-ccjrnw-background-position-y, 0%);
-  background-repeat: var(--hui-ccjrnw-background-repeat, repeat);
-  background-size: var(--hui-ccjrnw-background-size, auto);
-  border-bottom-color: var(--hui-ccjrnw-border-bottom-color, rgb(0, 0, 0));
-  border-bottom-style: var(--hui-ccjrnw-border-bottom-style, none);
-  border-bottom-width: var(--hui-ccjrnw-border-bottom-width, 0px);
-  border-bottom-left-radius: var(--hui-ccjrnw-border-bottom-left-radius, 0px);
-  border-bottom-right-radius: var(--hui-ccjrnw-border-bottom-right-radius, 0px);
-  border-image-outset: var(--hui-ccjrnw-border-image-outset, 0);
-  border-image-repeat: var(--hui-ccjrnw-border-image-repeat, stretch);
-  border-image-slice: var(--hui-ccjrnw-border-image-slice, 100%);
-  border-image-source: var(--hui-ccjrnw-border-image-source, none);
-  border-image-width: var(--hui-ccjrnw-border-image-width, 1);
-  border-left-color: var(--hui-ccjrnw-border-left-color, rgb(0, 0, 0));
-  border-left-style: var(--hui-ccjrnw-border-left-style, none);
-  border-left-width: var(--hui-ccjrnw-border-left-width, 0px);
-  border-right-color: var(--hui-ccjrnw-border-right-color, rgb(0, 0, 0));
-  border-right-style: var(--hui-ccjrnw-border-right-style, none);
-  border-right-width: var(--hui-ccjrnw-border-right-width, 0px);
-  border-top-color: var(--hui-ccjrnw-border-top-color, rgb(0, 0, 0));
-  border-top-style: var(--hui-ccjrnw-border-top-style, none);
-  border-top-width: var(--hui-ccjrnw-border-top-width, 0px);
-  border-top-left-radius: var(--hui-ccjrnw-border-top-left-radius, 0px);
-  border-top-right-radius: var(--hui-ccjrnw-border-top-right-radius, 0px);
-  box-shadow: var(--hui-ccjrnw-box-shadow, none);
-  cursor: var(--hui-ccjrnw-cursor, auto);
-  outline-color: var(--hui-ccjrnw-outline-color, rgb(0, 0, 0));
-  outline-offset: var(--hui-ccjrnw-outline-offset, 0px);
-  outline-style: var(--hui-ccjrnw-outline-style, none);
-  outline-width: var(--hui-ccjrnw-outline-width, 0px);
-  scrollbar-color: var(--hui-ccjrnw-scrollbar-color, #bbb #eee);
-  scrollbar-gutter: var(--hui-ccjrnw-scrollbar-gutter, auto);
-  scrollbar-width: var(--hui-ccjrnw-scrollbar-width, thin);
+  resize: var(--hui-ccjrnw-resize, initial);
+  overflow: var(--hui-ccjrnw-overflow, initial);
+  max-height: var(--hui-ccjrnw-max-height, initial);
+}
+[data-hui=Textarea]::after {
+  /* CONTENT */
+  content: var(--hui-uesrne-content, normal);
+  counter-increment: var(--hui-uesrne-counter-increment, none);
+  counter-reset: var(--hui-uesrne-counter-reset, none);
+  quotes: var(--hui-uesrne-quotes, auto);
+  white-space: var(--hui-uesrne-white-space, initial);
+  visibility: var(--hui-uesrne-visibility, initial);
+  /* DISPLAY */
+  display: var(--hui-uesrne-display, block);
+  max-height: var(--hui-uesrne-max-height, initial);
 }
 [data-hui=Textarea] > textarea::placeholder {
   font-size: var(--hui-otvrfb-font-size, initial);
   text-align: var(--hui-otvrfb-text-align, initial);
+}
+[data-hui=Textarea] > button {
+  cursor: var(--hui-jjoush-cursor, initial);
+  /* LAYOUT-POSITION */
+  position: var(--hui-jjoush-position, static);
+  top: var(--hui-jjoush-top, auto);
+  right: var(--hui-jjoush-right, auto);
+  bottom: var(--hui-jjoush-bottom, auto);
+  left: var(--hui-jjoush-left, auto);
+  z-index: var(--hui-jjoush-z-index, auto);
+  float: var(--hui-jjoush-float, none);
+  clear: var(--hui-jjoush-clear, none);
+  align-self: var(--hui-jjoush-align-self, auto);
+  order: var(--hui-jjoush-order, 0);
+  font-size: var(--hui-jjoush-font-size, initial);
 }

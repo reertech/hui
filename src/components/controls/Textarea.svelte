@@ -2,6 +2,8 @@
   import "../../themes/controls/Textarea.css"
   import "../../styles/controls/Textarea.css"
   import Container from "../Container.svelte"
+  import Overlay from "../Overlay.svelte"
+  import Strong from "../typography/Strong.svelte"
 
   import { formatNumber, checkEmpty } from "../../helpers.js"
 
@@ -29,11 +31,15 @@
   export let maxLength = null
   export let rows = 1
   export let cols = 50
+  export let expandedRows = 2
+  export let expandedCols = 100
+  export let expanded = false
 
-  $: rowsNum = formatNumber(rows, 1)
+  $: rowsNum = formatNumber(expanded ? expandedRows : rows, 1)
+  $: colsNum = formatNumber(expanded ? expandedCols : cols, 50)
 
   $: themes = [
-    rowsNum === 1 ? "oneLine" : null,
+    expanded ? "expanded" : rowsNum === 1 ? "oneLine" : null,
     checkEmpty(theme) ? null : theme
   ].filter(v => v != null).join(" ")
 </script>
@@ -56,6 +62,7 @@
   {scrollY}
   {grid}
   {flex}
+  {value}
 >
   <textarea
     {name}
@@ -75,11 +82,20 @@
     disabled={disabled || null}
     readonly={readonly || null}
   />
+  <Strong
+    tag="button"
+    on:click={() => expanded = !expanded}
+  >
+    {expanded ? "><" : "<>"}
+  </Strong>
 </Container>
 
 <!-- theme.ini
   themes: flat, oneLine;
-  & = common, display, flex;
-  > textarea = common;
+  & = common, display, grid;
+  > textarea, &::after = common, grid-area;
+  > textarea = resize, overflow, max-height;
+  &::after = content, white-space, visibility, display, max-height;
   > textarea::placeholder = font-size, text-align;
+  > button = cursor, layout-position, font-size;
 -->

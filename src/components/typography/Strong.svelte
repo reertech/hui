@@ -3,6 +3,7 @@
   import "../../styles/typography/Strong.css"
   import Container from "../Container.svelte"
 
+  export let tag = "strong"
   export let active = null
   export let readonly = null
   export let disabled = null
@@ -24,7 +25,7 @@
 
 <Container
   hui="Strong"
-  tag="strong"
+  {tag}
   {active}
   {readonly}
   {disabled}
@@ -40,6 +41,7 @@
   {scrollY}
   {grid}
   {flex}
+  on:click
 >
   <slot />
 </Container>
