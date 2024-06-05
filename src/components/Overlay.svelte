@@ -16,6 +16,7 @@
   export let inset = 0
   export let height = null
   export let width = null
+  export let z = null
 
   let currentOverflow;
 
@@ -56,6 +57,7 @@
   {grid}
   {position}
   {size}
+  {z}
 >
   <slot />
 </Container>

@@ -17,6 +17,7 @@
   export let idx = null
   export let size = null
   export let position = null
+  export let z = null
   export let scrollX = null
   export let scrollY = null
   export let grid = null
@@ -95,6 +96,7 @@
   {invalid}
   {theme}
   {classes}
+  {z}
   {idx}
   {size}
   {position}
