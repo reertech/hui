@@ -174,10 +174,11 @@
 
   /* INDEXES */
   --hui-default-index-0: 0;
-  --hui-default-index-1: 10;
-  --hui-default-index-2: 100;
-  --hui-default-index-3: 1000;
-  --hui-default-index-4: 10000;
+  --hui-default-index-1: 1;
+  --hui-default-index-2: 10;
+  --hui-default-index-3: 100;
+  --hui-default-index-4: 1000;
+  --hui-default-index-5: 10000;
 }
 /*
 

@@ -20,6 +20,7 @@
   export let scrollY = null
   export let scrollX = null
   export let value = null
+  export let z = null
 
   const isValid = (value, allowed) => {
     switch (true) {
@@ -66,6 +67,7 @@
   data-hui-idx={idx ?? null}
   data-hui-value={value ?? null}
 
+  data-hui-z-index={formatNumber(z)}
   data-hui-scroll-x={scrollX || null}
   data-hui-scroll-y={scrollY || null}
 

@@ -399,3 +399,30 @@ data[data-hui] {
 [data-hui][data-hui-target=child][style~='min-height:'] > *:not(#huiHack) {
   min-height: inherit;
 }
+
+/* Z-INDEX */
+[data-hui-z-index=0][data-hui-target=child] > *:not(#huiHack),
+[data-hui-z-index=0][data-hui-target=self]:not(#huiHack) {
+  z-index: 0;
+}
+[data-hui-z-index=1][data-hui-target=child] > *:not(#huiHack),
+[data-hui-z-index=1][data-hui-target=self]:not(#huiHack) {
+  z-index: 1;
+}
+[data-hui-z-index=2][data-hui-target=child] > *:not(#huiHack),
+[data-hui-z-index=2][data-hui-target=self]:not(#huiHack) {
+  z-index: 10;
+}
+[data-hui-z-index=3][data-hui-target=child] > *:not(#huiHack),
+[data-hui-z-index=3][data-hui-target=self]:not(#huiHack) {
+  z-index: 100;
+}
+[data-hui-z-index=4][data-hui-target=child] > *:not(#huiHack),
+[data-hui-z-index=4][data-hui-target=self]:not(#huiHack) {
+  z-index: 1000;
+}
+[data-hui-z-index=5][data-hui-target=child] > *:not(#huiHack),
+[data-hui-z-index=5][data-hui-target=self]:not(#huiHack) {
+  z-index: 10000;
+}
+
