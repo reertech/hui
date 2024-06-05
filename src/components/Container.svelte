@@ -1,6 +1,6 @@
 <script>
   import "../styles/Container.css"
-  import { formatPx } from "../helpers.js"
+  import { formatPx, formatNumber } from "../helpers.js"
 
   export let hui = null
   export let tag = null
@@ -20,7 +20,6 @@
   export let scrollY = null
   export let scrollX = null
   export let value = null
-  export let z = null
 
   const isValid = (value, allowed) => {
     switch (true) {
@@ -67,7 +66,7 @@
   data-hui-idx={idx ?? null}
   data-hui-value={value ?? null}
 
-  data-hui-z-index={formatNumber(z)}
+  data-hui-z={formatNumber(p.z)}
   data-hui-scroll-x={scrollX || null}
   data-hui-scroll-y={scrollY || null}
 

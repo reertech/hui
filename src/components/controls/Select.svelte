@@ -19,7 +19,6 @@
   export let idx = null
   export let size = null
   export let position = null
-  export let z = null
   export let scrollX = null
   export let scrollY = null
   export let grid = null
@@ -74,6 +73,7 @@
       ? [...selectedSet].slice(-maxValuesInt)
       : [...selectedSet].at(-1) ?? nullValue
 
+    console.log("select", selected)
     dispatch("select", selected)
   }
 
@@ -110,7 +110,6 @@
   {invalid}
   {theme}
   {classes}
-  {z}
   {idx}
   {size}
   {position}

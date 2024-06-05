@@ -38,7 +38,8 @@
     right,
     bottom,
     left,
-    inset
+    inset,
+    z
   }
 
   $: size = { height, width }
@@ -57,7 +58,6 @@
   {grid}
   {position}
   {size}
-  {z}
 >
   <slot />
 </Container>

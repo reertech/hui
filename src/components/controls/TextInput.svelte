@@ -19,7 +19,6 @@
   export let idx = null
   export let size = null
   export let position = null
-  export let z = null
   export let scrollX = null
   export let scrollY = null
   export let grid = null
@@ -55,6 +54,7 @@
     value = e.target.value
     if (checkEmpty(value)) value = nullValue
 
+    console.log(e.type, value)
     dispatch(e.type, value)
   }
 </script>
@@ -70,7 +70,6 @@
   {invalid}
   {theme}
   {classes}
-  {z}
   {idx}
   {size}
   {position}

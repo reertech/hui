@@ -10,6 +10,8 @@ export const checkEmpty = (value) => {
   }
 }
 
+export const checkNotEmpty = (value) => !checkEmpty(value)
+
 export const buildFuzzyRegex = (string, params = "i") => {
   if (typeof string !== "string" || checkEmpty(string)) return null
 
@@ -58,6 +60,12 @@ export const sortObjectsBy = (objects, fun) => {
   })
 }
 
+export const isString = (value) => typeof value === "string"
+export const isNumber = (value) => typeof value === "number"
+export const isBoolean = (value) => typeof value === "boolean"
+export const isObject = (value) => value != null && typeof value === "object"
+export const isArray = (value) => Array.isArray(value)
+
 export const formatPx = (value, def = null) => {
   switch (true) {
     case typeof value === "string" && !checkEmpty(value): return value
@@ -72,10 +80,17 @@ export const formatNumber = (value, def = null) => {
   return isNaN(number) ? def : number
 }
 
-export const isString = (value) => typeof value === "string"
-export const isNumber = (value) => typeof value === "number"
-export const isObject = (value) => value != null && typeof value === "object"
-export const isArray = (value) => Array.isArray(value)
+export const formatBoolean = (value, def = null) => {
+  return isBoolean(value) ? def : value.toString()
+}
+
+export const formatValue = (value, type, def = null) => {
+  switch (true) {
+    case type === "number": return formatNumber(value, def)
+    case isBoolean(value): return formatBoolean(value, def)
+    default: return value
+  }
+}
 
 export const mergeWords = (...strings) => {
   const words = 
