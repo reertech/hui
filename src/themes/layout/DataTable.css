@@ -6,6 +6,9 @@
 [data-hui=DataTable] > thead,
 [data-hui=DataTable] > * > tr {
 }
+[data-hui=DataTable] > tbody {
+  --hui-fgrqpr-overflow-y: auto;
+}
 [data-hui=DataTable] > tbody > tr > td {
   /* LAYOUT-PADDING */
   --hui-avzraa-padding-top: var(--hui-default-spacer-5);
@@ -48,6 +51,8 @@
 [data-hui=DataTable][data-hui-active] > thead,
 [data-hui=DataTable][data-hui-active] > * > tr {
 }
+[data-hui=DataTable][data-hui-active] > tbody {
+}
 [data-hui=DataTable][data-hui-active] > tbody > tr > td {
 }
 [data-hui=DataTable][data-hui-active] > thead > tr > th {
@@ -64,6 +69,8 @@
 [data-hui=DataTable][data-hui-disabled] > tbody,
 [data-hui=DataTable][data-hui-disabled] > thead,
 [data-hui=DataTable][data-hui-disabled] > * > tr {
+}
+[data-hui=DataTable][data-hui-disabled] > tbody {
 }
 [data-hui=DataTable][data-hui-disabled] > tbody > tr > td {
 }
@@ -82,6 +89,8 @@
 [data-hui=DataTable][data-hui-readonly] > thead,
 [data-hui=DataTable][data-hui-readonly] > * > tr {
 }
+[data-hui=DataTable][data-hui-readonly] > tbody {
+}
 [data-hui=DataTable][data-hui-readonly] > tbody > tr > td {
 }
 [data-hui=DataTable][data-hui-readonly] > thead > tr > th {
@@ -99,6 +108,8 @@
 [data-hui=DataTable][data-hui-valid] > thead,
 [data-hui=DataTable][data-hui-valid] > * > tr {
 }
+[data-hui=DataTable][data-hui-valid] > tbody {
+}
 [data-hui=DataTable][data-hui-valid] > tbody > tr > td {
 }
 [data-hui=DataTable][data-hui-valid] > thead > tr > th {
@@ -115,6 +126,8 @@
 [data-hui=DataTable][data-hui-invalid] > tbody,
 [data-hui=DataTable][data-hui-invalid] > thead,
 [data-hui=DataTable][data-hui-invalid] > * > tr {
+}
+[data-hui=DataTable][data-hui-invalid] > tbody {
 }
 [data-hui=DataTable][data-hui-invalid] > tbody > tr > td {
 }
@@ -384,6 +397,9 @@
 /*  --hui-wsglhu-justify-items-default: ; */
 /*  --hui-wsglhu-column-gap-default: ; */
 /*  --hui-wsglhu-row-gap-default: ; */
+}
+[data-hui=DataTable] > tbody {
+/*  --hui-fgrqpr-overflow-y-default: ; */
 }
 [data-hui=DataTable] > tbody > tr > td {
   /* LAYOUT-POSITION */

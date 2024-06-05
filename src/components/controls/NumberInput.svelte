@@ -4,6 +4,9 @@
   import Container from "../Container.svelte"
   import Strong from "../typography/Strong.svelte"
 
+  import { createEventDispatcher } from "svelte"
+  const dispatch = createEventDispatcher()
+
   export let active = null
   export let readonly = null
   export let disabled = null
@@ -30,6 +33,15 @@
   export let max = null
   export let prefix = null
   export let suffix = null
+  export let nullValue = null
+
+  const change = (e) => {
+    console.log(e)
+    value = e.target.valueAsNumber
+    if (isNaN(value)) value = nullValue
+
+    dispatch(e.type, value)
+  }
 </script>
 
 <Container
@@ -62,11 +74,11 @@
     {max}
     {step}
     on:click
-    on:input
-    on:change
     on:focus
     on:blur
-    bind:value
+    on:input={change}
+    on:change={change}
+    {value}
     {placeholder}
     type="number"
     valid={valid || null}

@@ -278,6 +278,7 @@
    > tbody,
    > thead,
    > * > tr = common, grid;
+   > tbody = overflow-y;
    > tbody > tr > td = common;
    > thead > tr > th = common;
    > tbody > tr:nth-child(odd) > td = background-color;

@@ -33,6 +33,7 @@
   export let label = null
   export let maxValues = 1
   export let placeholder = +maxValues === 1 ? "Select" : "Add"
+  export let nullValue = null
 
   let filter = null
   let filterInput = null
@@ -70,14 +71,14 @@
 
     selected = isMulti
       ? [...selectedSet].slice(-maxValuesInt)
-      : [...selectedSet].at(-1) ?? null
+      : [...selectedSet].at(-1) ?? nullValue
 
     dispatch("select", selected)
   }
 
   const select = async (e) => {
     const value = e.detail
-    if (!value) return
+    if (value == null) return
 
     dropdownOpened = false
     selectedSet.add(value)

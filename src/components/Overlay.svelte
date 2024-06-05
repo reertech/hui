@@ -2,6 +2,8 @@
   // import "../styles/Overlay.css"
   import Container from "./Container.svelte"
 
+  import { onMount } from "svelte"
+
   export let tag = "div"
   export let idx = null
   export let flex = null
@@ -15,6 +17,20 @@
   export let height = null
   export let width = null
 
+  let currentOverflow;
+
+  const fixBodyStyles = (isDestroy) => {
+    if (fullscreen && !isDestroy) {
+      currentOverflow = document.body.style.overflow
+      document.body.style.overflow = "hidden"
+    }
+
+    if (currentOverflow != null && !fullscreen || isDestroy) {
+      document.body.style.overflow = currentOverflow
+      currentOverflow = null
+    }
+  }
+
   $: position = {
     position: fullscreen ? "fixed" : "absolute",
     top,
@@ -25,6 +41,11 @@
   }
 
   $: size = { height, width }
+
+  onMount(() => {
+    fixBodyStyles()
+    return () => fixBodyStyles("destroy")
+  })
 </script>
 
 <Container

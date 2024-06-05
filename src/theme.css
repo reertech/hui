@@ -71,10 +71,10 @@
   --hui-tria-color-border: var(--hui-unua-color-plus2);
 
   /* GRADIENTS */
-  --hui-default-gradient-0: radial-gradient(transparent, #00000004);
-  --hui-default-gradient-1: radial-gradient(transparent, #00000017);
-  --hui-default-gradient-2: radial-gradient(transparent, #00000020);
-  --hui-default-gradient-3: radial-gradient(#00000006, #00000008);
+  --hui-default-gradient-0: radial-gradient(transparent, #fbfbfb);
+  --hui-default-gradient-1: radial-gradient(transparent, #e8e8e8);
+  --hui-default-gradient-2: radial-gradient(transparent, #dfdfdf);
+  --hui-default-gradient-3: radial-gradient(#f9f9f9, #f7f7f7);
 
   /* TRANSITIONS */
   --hui-default-transition-1: all 0.42s ease-out allow-discrete;
@@ -171,6 +171,13 @@
   --hui-unua-background-color: var(--hui-unua-color-bg);
 
   --hui-default-font-size: var(--hui-default-size);
+
+  /* INDEXES */
+  --hui-default-index-0: 0;
+  --hui-default-index-1: 10;
+  --hui-default-index-2: 100;
+  --hui-default-index-3: 1000;
+  --hui-default-index-4: 10000;
 }
 /*
 

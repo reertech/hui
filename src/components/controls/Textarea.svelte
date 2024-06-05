@@ -6,6 +6,8 @@
   import Strong from "../typography/Strong.svelte"
 
   import { formatNumber, checkEmpty } from "../../helpers.js"
+  import { createEventDispatcher } from "svelte"
+  const dispatch = createEventDispatcher()
 
   export let active = null
   export let readonly = null
@@ -34,6 +36,7 @@
   export let expandedRows = 2
   export let expandedCols = 100
   export let expanded = false
+  export let nullValue = null
 
   $: rowsNum = formatNumber(expanded ? expandedRows : rows, 1)
   $: colsNum = formatNumber(expanded ? expandedCols : cols, 50)
@@ -42,6 +45,13 @@
     expanded ? "expanded" : rowsNum === 1 ? "oneLine" : null,
     checkEmpty(theme) ? null : theme
   ].filter(v => v != null).join(" ")
+
+  const change = (e) => {
+    value = e.target.value
+    if (checkEmpty(value)) value = nullValue
+
+    dispatch(e.type, value)
+  }
 </script>
 
 <Container
@@ -67,11 +77,11 @@
   <textarea
     {name}
     on:click
-    on:input
-    on:change
-    bind:value
     on:focus
     on:blur
+    on:input={change}
+    on:change={change}
+    {value}
     {placeholder}
     maxLength={formatNumber(maxLength)}
     rows={rowsNum}

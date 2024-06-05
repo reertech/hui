@@ -71,3 +71,64 @@ export const formatNumber = (value, def = null) => {
 
   return isNaN(number) ? def : number
 }
+
+export const isString = (value) => typeof value === "string"
+export const isNumber = (value) => typeof value === "number"
+export const isObject = (value) => value != null && typeof value === "object"
+export const isArray = (value) => Array.isArray(value)
+
+export const mergeWords = (...strings) => {
+  const words = 
+    strings.reduce((acc, s) => {
+      if (!isString(s) || checkEmpty(s)) return acc
+
+      return s.split(/\s+/).concat(acc)
+    }, []) 
+
+  return Array.from(new Set(words)).sort().join(" ")
+}
+
+export const putIn = (object, key, value) => {
+  if (!isObject(object) || key == null) return object
+
+  const keys = isArray(key) ? key : [key]
+  const lastKey = keys.pop()
+
+  const leaf = keys.reduce((child, key) => {
+    if (!isObject(child[key])) child[key] = {}
+
+    return child[key]
+  }, object)
+
+  leaf[lastKey] = value
+
+  return object
+}
+
+export const getIn = (object, key, def) => {
+  if (!isObject(object) || key == null) return def
+
+  const keys = isArray(key) ? key : [key]
+
+  const value = keys.reduce((child, key) => 
+    isObject(child) ? child[key] : null, object) 
+
+  return value ?? def
+}
+
+export const delIn = (object, key) => {
+  if (!isObject(object) || key == null) return object
+
+  const keys = isArray(key) ? key : [key]
+  const lastKey = keys.pop()
+
+  const leaf = keys.reduce((child, key) => {
+    if (!isObject(child[key])) child[key] = {}
+
+    return child[key]
+  }, object)
+
+  delete leaf[lastKey]
+
+  return object
+}

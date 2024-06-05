@@ -6,6 +6,8 @@
   import Dropdown from "./Dropdown.svelte"
 
   import { checkEmpty } from "../../helpers.js"
+  import { createEventDispatcher } from "svelte"
+  const dispatch = createEventDispatcher()
 
   export let active = null
   export let readonly = null
@@ -32,6 +34,7 @@
   export let prefix = null
   export let suffix = null
   export let options = null
+  export let nullValue = null
 
   let dropdownOpened = false
   let closeTimer = null
@@ -45,6 +48,13 @@
 
   const close = () => {
     closeTimer = setTimeout(() => dropdownOpened = false, 200)
+  }
+
+  const change = (e) => {
+    value = e.target.value
+    if (checkEmpty(value)) value = nullValue
+
+    dispatch(e.type, value)
   }
 </script>
 
@@ -75,9 +85,9 @@
   <input
     {name}
     on:click
-    on:input
-    on:change
-    bind:value
+    on:input={change}
+    on:change={change}
+    {value}
     bind:this={input}
     on:focus={open}
     on:blur={close}
@@ -100,8 +110,7 @@
     <Dropdown
       {options}
       selected={value}
-      on:select={console.log}
-      on:select={(e) => value = e.detail}
+      on:select={change}
       filter={value}
       root={input?.parentElement}
       active={dropdownOpened}
