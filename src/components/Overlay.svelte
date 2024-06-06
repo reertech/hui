@@ -9,11 +9,11 @@
   export let flex = null
   export let grid = null
   export let fullscreen = false
-  export let top = 0
-  export let right = 0
-  export let bottom = 0
-  export let left = 0
-  export let inset = 0
+  export let top = fullscreen ? 0 : "auto"
+  export let right = fullscreen ? 0 : "auto"
+  export let bottom = fullscreen ? 0 : "auto"
+  export let left = fullscreen ? 0 : "auto"
+  export let inset = null
   export let height = null
   export let width = null
   export let z = null

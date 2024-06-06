@@ -120,6 +120,15 @@ data[data-hui] {
 [data-hui-flex-align-context=stretch][data-hui-target=self]:not(#huiHack) {
   align-content: stretch;
 }
+[data-hui-flex][data-hui-target=child][style~='row-gap:'] > *:not(#huiHack) {
+  row-gap: inherit;
+}
+[data-hui-flex][data-hui-target=child][style~='column-gap:'] > *:not(#huiHack) {
+  column-gap: inherit;
+}
+[data-hui-flex][data-hui-target=child][style~='gap:'] > *:not(#huiHack) {
+  gap: inherit;
+}
 
 /* GRID */
 [data-hui-grid][data-hui-target=child] > *:not(#huiHack),
@@ -378,6 +387,23 @@ data[data-hui] {
 }
 [data-hui-position][data-hui-target=child][style~='inset:'] > *:not(#huiHack) {
   inset: inherit;
+}
+
+/* MARGIN */
+[data-hui][data-hui-target=child][style~='margin-top:'] > *:not(#huiHack) {
+  margin-top: inherit;
+}
+[data-hui][data-hui-target=child][style~='margin-right:'] > *:not(#huiHack) {
+  margin-right: inherit;
+}
+[data-hui][data-hui-target=child][style~='margin-bottom:'] > *:not(#huiHack) {
+  margin-bottom: inherit;
+}
+[data-hui][data-hui-target=child][style~='margin-left:'] > *:not(#huiHack) {
+  margin-left: inherit;
+}
+[data-hui][data-hui-target=child][style~='margin:'] > *:not(#huiHack) {
+  margin: inherit;
 }
 
 /* SIZE */

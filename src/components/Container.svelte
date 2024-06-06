@@ -1,6 +1,6 @@
 <script>
   import "../styles/Container.css"
-  import { formatPx, formatNumber } from "../helpers.js"
+  import { formatPx, formatNumber, isString } from "../helpers.js"
 
   export let hui = null
   export let tag = null
@@ -14,6 +14,7 @@
   export let idx = null
   export let size = null
   export let position = null
+  export let margin = null
   export let classes = null
   export let grid = null
   export let flex = null
@@ -27,12 +28,14 @@
       case typeof value === "object": return true
       case allowed == null: return false
       case !["string", "boolean"].includes(typeof value): return false
+      case allowed === "string" && isString(value): return true
       case allowed.includes(value): return true
       default: return false
     }
   }
 
   $: isSize = isValid(size)
+  $: isMargin = isValid(margin, "string")
   $: isGrid = !flex && isValid(grid, [true, "true", "default"])
   $: isFlex = !grid && isValid(flex, [true, "true", "default"])
   $: isPosition = isValid(position, ["static", "fixed", "relative", "sticky", "absolute"])
@@ -41,11 +44,12 @@
   $: g = !isGrid ? {} : { display: "grid", ...(typeof grid !== "object" ? {} : grid) }
   $: f = !isFlex ? {} : { display: "flex", ...(typeof flex !== "object" ? {} : flex) }
 
-  $: p = !isPosition ? {} : typeof position == "string" ? { position } : position
+  $: p = !isPosition ? {} : isString(position) ? { position } : position
+  $: m = !isMargin ? {} : isString(position) ? { margin } : margin
   $: s = !isSize ? {} : size
 
   $: target = tag === null ? "child" : "self"
-  $: isTargeted = isGrid || isFlex || isScroll || isPosition || isSize
+  $: isTargeted = isGrid || isFlex || isScroll || isPosition || isSize || isMargin
 </script>
 
 <svelte:element
@@ -83,8 +87,6 @@
   style:grid-row-start={g.rowStart || null}
   style:grid-row-end={g.rowEnd || null}
   style:grid-template-areas={g.templateAreas || null}
-  style:row-gap={g.rowGap || null}
-  style:column-gap={g.columnGap || null}
   style:grid-auto-rows={g.autoRows || null}
   style:grid-auto-columns={g.autoColumns || null}
 
@@ -95,7 +97,12 @@
   data-hui-flex-align-items={f.alignItems || null}
   data-hui-flex-align-content={f.alignContent || null}
 
+  style:gap={f.gap || g.gap || null}
+  style:row-gap={f.rowGap || g.rowGap || null}
+  style:column-gap={f.columnGap || g.columnGap || null}
+
   data-hui-position={p.position || null}
+  style:inset={formatPx(p.inset)}
   style:top={formatPx(p.top)}
   style:right={formatPx(p.right)}
   style:bottom={formatPx(p.bottom)}
@@ -107,6 +114,12 @@
   style:height={formatPx(s.height)}
   style:min-height={formatPx(s.minHeight)}
   style:max-height={formatPx(s.maxHeight)}
+
+  style:margin={formatPx(m.margin)}
+  style:margin-top={formatPx(m.top)}
+  style:margin-right={formatPx(m.right)}
+  style:margin-bottom={formatPx(m.bottom)}
+  style:margin-left={formatPx(m.left)}
 
   on:click
   on:mouseup

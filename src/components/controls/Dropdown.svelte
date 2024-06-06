@@ -22,6 +22,7 @@
   export let idx = null
   export let size = null
   export let position = null
+  export let margin = null
   export let scrollX = null
   export let scrollY = null
   export let grid = null
@@ -104,6 +105,7 @@
     {valid}
     {invalid}
     {classes}
+  {margin}
     {idx}
     {position}
     {scrollX}
