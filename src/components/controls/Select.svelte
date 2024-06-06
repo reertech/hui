@@ -68,14 +68,11 @@
     closeTimer = setTimeout(() => dropdownOpened = false, 200)
   }
 
-  const commit = async () => {
-    await tick()
-
+  const commit = () => {
     selected = isMulti
       ? [...selectedSet].slice(-maxValuesInt)
       : [...selectedSet].at(-1) ?? nullValue
 
-    console.log("select", selected)
     dispatch("select", selected)
   }
 
@@ -86,14 +83,14 @@
     dropdownOpened = false
     selectedSet.add(value)
 
-    await commit()
+    commit()
     filter = null
   }
 
   const remove = async (value) => {
     selectedSet.delete(value)
 
-    await commit()
+    commit()
 
     if (!isMulti) filterInput.focus()
   }

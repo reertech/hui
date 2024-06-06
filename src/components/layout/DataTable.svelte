@@ -60,6 +60,7 @@
 
   const calcColsRealWidth = async () => {
     await tick()
+    console.log("calcColsRealWidth")
 
     const thCols = document.querySelectorAll("tr > th[data-hui-idx]")
 

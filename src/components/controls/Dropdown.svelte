@@ -72,11 +72,9 @@
     return !selectedSet.has(v) && (!filterRe || filterRe.test(l))
   })
 
-  const select = async (label) => {
+  const select = (label) => {
     const value = valuesByLabel.get(label)
     if (!value) return
-
-    await tick()
 
     dispatch("select", value)
   }
