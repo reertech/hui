@@ -8,6 +8,7 @@
 }
 [data-hui=DataTable] > tbody {
   --hui-fgrqpr-overflow-y: auto;
+  --hui-fgrqpr-scrollbar-gutter: stable;
 }
 [data-hui=DataTable] > tbody > tr > td {
   /* LAYOUT-PADDING */
@@ -400,6 +401,7 @@
 }
 [data-hui=DataTable] > tbody {
 /*  --hui-fgrqpr-overflow-y-default: ; */
+/*  --hui-fgrqpr-scrollbar-gutter-default: ; */
 }
 [data-hui=DataTable] > tbody > tr > td {
   /* LAYOUT-POSITION */

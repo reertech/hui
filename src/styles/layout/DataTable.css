@@ -258,6 +258,7 @@
 }
 [data-hui=DataTable] > tbody {
   overflow-y: var(--hui-fgrqpr-overflow-y, initial);
+  scrollbar-gutter: var(--hui-fgrqpr-scrollbar-gutter, initial);
 }
 [data-hui=DataTable] > tbody > tr > td {
   /* LAYOUT-POSITION */
