@@ -15,6 +15,7 @@
   export let size = null
   export let position = null
   export let margin = null
+  export let bg = null
   export let classes = null
   export let grid = null
   export let flex = null
@@ -35,6 +36,7 @@
   }
 
   $: isSize = isValid(size)
+  $: isBg = isValid(bg, "string")
   $: isMargin = isValid(margin, "string")
   $: isGrid = !flex && isValid(grid, [true, "true", "default"])
   $: isFlex = !grid && isValid(flex, [true, "true", "default"])
@@ -45,11 +47,12 @@
   $: f = !isFlex ? {} : { display: "flex", ...(typeof flex !== "object" ? {} : flex) }
 
   $: p = !isPosition ? {} : isString(position) ? { position } : position
-  $: m = !isMargin ? {} : isString(position) ? { margin } : margin
+  $: m = !isMargin ? {} : isString(margin) ? { margin } : margin
+  $: b = !isBg ? {} : isString(bg) ? { color: bg } : bg
   $: s = !isSize ? {} : size
 
   $: target = tag === null ? "child" : "self"
-  $: isTargeted = isGrid || isFlex || isScroll || isPosition || isSize || isMargin
+  $: isTargeted = isGrid || isFlex || isScroll || isPosition || isSize || isMargin || isBg
 </script>
 
 <svelte:element
@@ -73,6 +76,10 @@
   data-hui-z={formatNumber(p.z)}
   data-hui-scroll-x={scrollX || null}
   data-hui-scroll-y={scrollY || null}
+
+  style:background-color={b.color || null}
+  style:background-image={b.image || null}
+  style:background-position={b.position || null}
 
   data-hui-grid={g.display || null}
   data-hui-grid-justify-items={g.justifyItems || null}

@@ -390,6 +390,9 @@ data[data-hui] {
 }
 
 /* MARGIN */
+[data-hui][data-hui-target=child][style~='margin:'] > *:not(#huiHack) {
+  margin: inherit;
+}
 [data-hui][data-hui-target=child][style~='margin-top:'] > *:not(#huiHack) {
   margin-top: inherit;
 }
@@ -402,8 +405,16 @@ data[data-hui] {
 [data-hui][data-hui-target=child][style~='margin-left:'] > *:not(#huiHack) {
   margin-left: inherit;
 }
-[data-hui][data-hui-target=child][style~='margin:'] > *:not(#huiHack) {
-  margin: inherit;
+
+/* BACKGROUND */
+[data-hui][data-hui-target=child][style~='background-color:'] > *:not(#huiHack) {
+  background-color: inherit;
+}
+[data-hui][data-hui-target=child][style~='background-image:'] > *:not(#huiHack) {
+  background-image: inherit;
+}
+[data-hui][data-hui-target=child][style~='background-position:'] > *:not(#huiHack) {
+  background-position: inherit;
 }
 
 /* SIZE */

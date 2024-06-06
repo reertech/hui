@@ -20,6 +20,7 @@
   export let size = null
   export let position = null
   export let margin = null
+  export let bg = null
   export let scrollX = null
   export let scrollY = null
   export let grid = null
@@ -71,6 +72,7 @@
   {invalid}
   {theme}
   {classes}
+  {bg}
   {margin}
   {idx}
   {size}
