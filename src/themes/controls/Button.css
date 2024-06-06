@@ -15,6 +15,7 @@
   --hui-zsnfqz-font-weight: var(--hui-default-font-weight);
   --hui-zsnfqz-line-height: var(--hui-default-line-height);
   --hui-zsnfqz-text-align: center;
+  --hui-zsnfqz-text-overflow: ellipsis;
   --hui-zsnfqz-text-wrap: nowrap;
   /* APPERANCE */
   --hui-zsnfqz-color: var(--hui-default-color-text);

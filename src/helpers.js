@@ -77,7 +77,7 @@ export const formatPx = (value, def = null) => {
 export const formatNumber = (value, def = null) => {
   const number = +value 
 
-  return isNaN(number) ? def : number
+  return value == null || isNaN(number) ? def : number
 }
 
 export const formatBoolean = (value, def = null) => {
