@@ -1,11 +1,18 @@
+export const isString = (value) => typeof value === "string"
+export const isFunction = (value) => typeof value === "function"
+export const isNumber = (value) => typeof value === "number"
+export const isBoolean = (value) => typeof value === "boolean"
+export const isObject = (value) => value != null && typeof value === "object"
+export const isArray = (value) => Array.isArray(value)
+
 export const checkEmpty = (value) => {
   switch (true) {
     case value == null: return true
-    case typeof value === "string": return !value.trim()
-    case Array.isArray(value): return !value.length 
-    case typeof value === "number": return false
-    case typeof value === "boolean": return false
-    case typeof value === "object": return !Object.keys(value).length
+    case isString(value): return !value.trim()
+    case isArray(value): return !value.length 
+    case isNumber(value): return false
+    case isBoolean(value): return false
+    case isObject(value): return !Object.keys(value).length
     default: return false
   }
 }
@@ -13,9 +20,21 @@ export const checkEmpty = (value) => {
 export const checkNotEmpty = (value) => !checkEmpty(value)
 
 export const buildFuzzyRegex = (string, params = "i") => {
-  if (typeof string !== "string" || checkEmpty(string)) return null
+  if (!isString(string) || checkEmpty(string)) return null
 
   return new RegExp("\\b" + string.replace(/\s+/, "\\b"), params)
+}
+
+export const arrayToMap = (array, value) => {
+  if (!isArray(array)) return array
+
+  const result = {}
+
+  array.forEach((key, i) => {
+    result[key] = isFunction(value) ? value(key, i) : value
+  })
+
+  return result
 }
 
 export const calcParentOffset = (el, parent) => {
@@ -42,12 +61,20 @@ export const fetchCutParent = (el) => {
   return fetchCutParent(el.parentElement)
 }
 
+export const fetchParentByTag = (el, tag) => {
+  if (!el) return null
+
+  if (el.tagName === tag) return el
+
+  return fetchParentByTag(el.parentElement, tag)
+}
+
 export const calcCutParentOffset = (el) =>
   calcParentOffset(el, fetchCutParent(el))
 
 export const sortObjectsBy = (objects, fun) => {
-  if (!Array.isArray(objects)) return objects
-  if (typeof fun !== "function") return objects 
+  if (!isArray(objects)) return objects
+  if (!isFunction(fun)) return objects 
 
   const check = (v, type) => v == null || typeof v !== type
 
@@ -60,16 +87,10 @@ export const sortObjectsBy = (objects, fun) => {
   })
 }
 
-export const isString = (value) => typeof value === "string"
-export const isNumber = (value) => typeof value === "number"
-export const isBoolean = (value) => typeof value === "boolean"
-export const isObject = (value) => value != null && typeof value === "object"
-export const isArray = (value) => Array.isArray(value)
-
 export const formatPx = (value, def = null) => {
   switch (true) {
-    case typeof value === "string" && !checkEmpty(value): return value
-    case typeof value === "number": return `${Math.round(value)}px`
+    case isString(value) && !checkEmpty(value): return value
+    case isNumber(value): return `${Math.round(value)}px`
     default: return def
   }
 }

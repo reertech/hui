@@ -5,6 +5,12 @@
 [data-hui=DataTable] > tbody,
 [data-hui=DataTable] > thead,
 [data-hui=DataTable] > * > tr {
+  /* GRID */
+  --hui-wsglhu-grid-column-end: -1;
+  --hui-wsglhu-grid-column-start: 1;
+  --hui-wsglhu-grid-template-columns: subgrid;
+  /* DISPLAY */
+  --hui-wsglhu-display: grid;
 }
 [data-hui=DataTable] > tbody {
   --hui-fgrqpr-overflow-y: auto;
@@ -16,6 +22,10 @@
   --hui-avzraa-padding-right: var(--hui-default-spacer-5);
   --hui-avzraa-padding-bottom: var(--hui-default-spacer-5);
   --hui-avzraa-padding-left: var(--hui-default-spacer-5);
+  /* LAYOUT-FLEX */
+  --hui-avzraa-align-content: center;
+  --hui-avzraa-justify-content: center;
+  --hui-avzraa-align-items: center;
   /* TEXT */
   --hui-avzraa-font-size: var(--hui-default-size-0);
   --hui-avzraa-font-weight: var(--hui-default-font-weight);
@@ -24,6 +34,8 @@
   --hui-avzraa-color: var(--hui-default-color-text);
   --hui-avzraa-background-color: var(--hui-default-background-color);
   --hui-avzraa-background-image: none;
+  /* DISPLAY */
+  --hui-avzraa-display: flex;
 }
 [data-hui=DataTable] > thead > tr > th {
   /* LAYOUT-PADDING */
@@ -398,6 +410,8 @@
 /*  --hui-wsglhu-justify-items-default: ; */
 /*  --hui-wsglhu-column-gap-default: ; */
 /*  --hui-wsglhu-row-gap-default: ; */
+  /* DISPLAY */
+/*  --hui-wsglhu-display-default: ; */
 }
 [data-hui=DataTable] > tbody {
 /*  --hui-fgrqpr-overflow-y-default: ; */
@@ -513,6 +527,9 @@
 /*  --hui-avzraa-scrollbar-color-default: ; */
 /*  --hui-avzraa-scrollbar-gutter-default: ; */
 /*  --hui-avzraa-scrollbar-width-default: ; */
+/*  --hui-avzraa-flex-default: ; */
+  /* DISPLAY */
+/*  --hui-avzraa-display-default: ; */
 }
 [data-hui=DataTable] > thead > tr > th {
   /* LAYOUT-POSITION */
@@ -624,6 +641,9 @@
 /*  --hui-yfagqg-scrollbar-color-default: ; */
 /*  --hui-yfagqg-scrollbar-gutter-default: ; */
 /*  --hui-yfagqg-scrollbar-width-default: ; */
+/*  --hui-yfagqg-flex-default: ; */
+  /* DISPLAY */
+/*  --hui-yfagqg-display-default: ; */
 }
 [data-hui=DataTable] > tbody > tr:nth-child(odd) > td {
 /*  --hui-pcwkvb-background-color-default: ; */

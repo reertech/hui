@@ -255,6 +255,8 @@
   justify-items: var(--hui-wsglhu-justify-items, legacy);
   column-gap: var(--hui-wsglhu-column-gap, 0px);
   row-gap: var(--hui-wsglhu-row-gap, 0px);
+  /* DISPLAY */
+  display: var(--hui-wsglhu-display, block);
 }
 [data-hui=DataTable] > tbody {
   overflow-y: var(--hui-fgrqpr-overflow-y, initial);
@@ -370,6 +372,9 @@
   scrollbar-color: var(--hui-avzraa-scrollbar-color, #bbb #eee);
   scrollbar-gutter: var(--hui-avzraa-scrollbar-gutter, auto);
   scrollbar-width: var(--hui-avzraa-scrollbar-width, thin);
+  flex: var(--hui-avzraa-flex, initial);
+  /* DISPLAY */
+  display: var(--hui-avzraa-display, block);
 }
 [data-hui=DataTable] > thead > tr > th {
   /* LAYOUT-POSITION */
@@ -481,6 +486,9 @@
   scrollbar-color: var(--hui-yfagqg-scrollbar-color, #bbb #eee);
   scrollbar-gutter: var(--hui-yfagqg-scrollbar-gutter, auto);
   scrollbar-width: var(--hui-yfagqg-scrollbar-width, thin);
+  flex: var(--hui-yfagqg-flex, initial);
+  /* DISPLAY */
+  display: var(--hui-yfagqg-display, block);
 }
 [data-hui=DataTable] > tbody > tr:nth-child(odd) > td {
   background-color: var(--hui-pcwkvb-background-color, initial);

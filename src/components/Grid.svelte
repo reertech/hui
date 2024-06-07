@@ -20,8 +20,14 @@
   export let autoColumns = null
   export let autoRows = null
   export let autoFlow = null
+  export let bg = null
+  export let size = null
+  export let margin = null
+  export let scrollX = null
+  export let scrollY = null
+  export let position = null
 
-  $: params = {
+  $: grid = {
     display,
     templateAreas,
     templateRows,
@@ -46,7 +52,13 @@
   hui="Grid"
   {tag}
   {idx}
-  grid={params}
+  {grid}
+  {bg}
+  {margin}
+  {size}
+  {position}
+  {scrollX}
+  {scrollY}
 >
   <slot />
 </Container>

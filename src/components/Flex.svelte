@@ -12,8 +12,14 @@
   export let gap = null
   export let rowGap = null
   export let columnGap = null
+  export let bg = null
+  export let size = null
+  export let margin = null
+  export let scrollX = null
+  export let scrollY = null
+  export let position = null
 
-  $: params = {
+  $: flex = {
     display,
     direction,
     wrap,
@@ -30,7 +36,13 @@
   hui="Flex"
   {tag}
   {idx}
-  flex={params}
+  {flex}
+  {bg}
+  {margin}
+  {size}
+  {position}
+  {scrollX}
+  {scrollY}
 >
   <slot />
 </Container>

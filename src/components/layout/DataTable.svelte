@@ -2,8 +2,7 @@
   import "../../themes/layout/DataTable.css"
   import "../../styles/layout/DataTable.css"
   import Container from "../Container.svelte"
-  import Grid from "../Grid.svelte"
-  import Flex from "../Flex.svelte"
+  import { isObject, checkEmpty } from "../../helpers.js"
 
   import { onMount, tick } from "svelte"
 
@@ -30,11 +29,11 @@
   export let cols = []
   export let rows = []
 
-  export let thTop = true
-  export let thBottom = true
-  export let colsWidth = null
+  export let calcRealColWidth = false
 
-  let colsRealWidth = []
+  export let colsWidth = null
+  export let colsActive = {}
+  export let colsFilter = {}
 
   const buildWidth = (value) => {
     switch (typeof value) {
@@ -44,47 +43,24 @@
     }
   }
 
-  const widthDedup = (acc, value, idx, array) => {
-    if (!idx || array[idx - 1] !== value) return [...acc, value]
+  const check = (entries, entry) =>
+    !isObject(entries) ? null : entries[entry]
 
-    let prev = acc.pop()
-
-    if (typeof prev === "object") {
-      prev.count += 1
-    } else {
-      prev = { count: 2, value }
-    }
-
-    return [...acc, prev]
+  const colWidthBuilder = (acc, c) => {
+    if (!check(colsActive, c) || check(colsFilter, c)) return acc
+    acc.push(buildWidth(check(colsWidth, c)))
+    return acc
   }
 
-  const calcColsRealWidth = async () => {
-    await tick()
-    console.log("calcColsRealWidth")
-
-    const thCols = document.querySelectorAll("tr > th[data-hui-idx]")
-
-    colsRealWidth = [...thCols].map(th => th.offsetWidth)
-  }
-
-  $: isCustomWidth = Array.isArray(colsWidth) &&
-    colsWidth.length === cols.length
-
-  $: colsTemplate = !isCustomWidth
+  $: colsTemplate = !isObject(colsWidth)
     ? `repeat(${cols.length}, max-content)`
-    : colsWidth.map(buildWidth).reduce(widthDedup, []).map(w => {
-      if (typeof w !== "object") return w
-      return `repeat(${w.count}, ${w.value})`
-    }).join(" ")
+    : cols.reduce(colWidthBuilder, []).join(" ")
 
   $: templateColumns = [
     $$slots.tdFirst && "max-content",
     colsTemplate,
     $$slots.tdLast && "max-content"
   ].filter(s => s).join(" ")
-
-  $: calcColsRealWidth(cols, colsWidth)
-  onMount(calcColsRealWidth)
 </script>
 
 <Container
@@ -111,181 +87,82 @@
     ...grid
   }}
 >
-    <Grid
-      tag="thead"
-      templateColumns="subgrid"
-      columnStart="1"
-      columnEnd="-1"
-    >
-      {#if $$slots.thead}
-        <slot name="thead" />
-      {:else if $$slots.th}
-        {#if thTop && $$slots.thTop}
-          <Grid
-            tag="tr"
-            templateColumns="subgrid"
-            columnStart="1"
-            columnEnd="-1"
-          >
-            {#if $$slots.thTopBefore}
-              <slot name="thTopBefore" />
-            {/if}
-            {#if $$slots.thTopFirst}
-              <Flex tag="th">
-                <slot name="thTopFirst" />
-              </Flex>
-            {/if}
-            {#each cols as col, colIdx}
-              <Flex tag="th">
-                <slot
-                  name="thTop"
-                  {col}
-                  {colIdx}
-                  colWidth={colsRealWidth[colIdx]}
-                />
-              </Flex>
-            {/each}
-            {#if $$slots.thTop}
-              <Flex tag="th">
-                <slot name="thTopLast" />
-              </Flex>
-            {/if}
-            {#if $$slots.thTopAfter}
-              <slot name="thTopAfter" />
-            {/if}
-          </Grid>
+    <thead>
+      <tr>
+        {#if $$slots.thBefore}
+          <slot name="thBefore" />
         {/if}
-        <Grid
-          tag="tr"
-          templateColumns="subgrid"
-          columnStart="1"
-          columnEnd="-1"
-        >
-          {#if $$slots.thBefore}
-            <slot name="thBefore" />
-          {/if}
-          {#if $$slots.thFirst}
-            <Flex tag="th">
-              <slot name="thFirst" />
-            </Flex>
-          {/if}
-          {#each cols as col, colIdx}
-            <Flex tag="th" idx={colIdx}>
-              <slot
-                name="th"
-                {col}
-                {colIdx}
-                colWidth={colsRealWidth[colIdx]}
-              />
-            </Flex>
-          {/each}
-          {#if $$slots.thLast}
-            <Flex tag="th">
-              <slot name="thLast" />
-            </Flex>
-          {/if}
-          {#if $$slots.thAfter}
-            <slot name="thAfter" />
-          {/if}
-        </Grid>
-        {#if thBottom && $$slots.thBottom}
-          <Grid
-            tag="tr"
-            templateColumns="subgrid"
-            columnStart="1"
-            columnEnd="-1"
-          >
-            {#if $$slots.thBottomBefore}
-              <slot name="thBottomBefore" />
-            {/if}
-            {#if $$slots.thBottomFirst}
-              <Flex tag="th">
-                <slot name="thBottomFirst" />
-              </Flex>
-            {/if}
-            {#each cols as col, colIdx}
-              <Flex tag="th">
-                <slot
-                  name="thBottom"
-                  {col}
-                  {colIdx}
-                  colWidth={colsRealWidth[colIdx]}
-                />
-              </Flex>
-            {/each}
-            {#if $$slots.thBottomBottom}
-              <Flex tag="th">
-                <slot name="thBottomBottom" />
-              </Flex>
-            {/if}
-            {#if $$slots.thBottomAfter}
-              <slot name="thBottomAfter" />
-            {/if}
-          </Grid>
+        {#if $$slots.thFirst || $$slots.tdFirst}
+          <th>
+            <slot name="thFirst" />
+          </th>
         {/if}
-      {/if}
-    </Grid>
-    <Grid
-      tag="tbody"
-      templateColumns="subgrid"
-      columnStart="1"
-      columnEnd="-1"
-    >
-      {#if $$slots.tbody}
-        <slot name="tbody" />
-      {:else if $$slots.tr || $$slots.td}
-        {#each rows as row, rowIdx}
-          {#if $$slots.trBefore}
-            <slot name="trBefore" {rowIdx} {row} />
-          {/if}
-          <Grid
-            tag="tr"
-            templateColumns="subgrid"
-            columnStart="1"
-            columnEnd="-1"
-          >
-            {#if $$slots.tr}
-              <slot name="tr" {rowIdx} {row} />
-            {:else if $$slots.td}
-              {#if $$slots.tdBefore}
-                <slot name="tdBefore" {rowIdx} {row} />
-              {/if}
-              {#if $$slots.tdFirst}
-                <Flex tag="td">
-                  <slot name="tdFirst" {rowIdx} {row} />
-                </Flex>
-              {/if}
-              {#each cols as col, colIdx}
-                <Flex tag="td">
-                  <slot name="td" {rowIdx} {row} {col} {colIdx} />
-                </Flex>
-              {/each}
-              {#if $$slots.tdLast}
-                <Flex tag="td">
-                  <slot name="tdLast" {rowIdx} {row} />
-                </Flex>
-              {/if}
-              {#if $$slots.tdAfter}
-                <slot name="tdAfter" {rowIdx} {row} />
-              {/if}
-            {/if}
-          </Grid>
-          {#if $$slots.trAfter}
-            <slot name="trAfter" {rowIdx} {row} />
+        {#each cols as col, colIdx}
+          {#if check(colsActive, col) && !check(colsFilter, col)}
+            <th data-hui-idx={colIdx}>
+              <slot name="th" {col} {colIdx} />
+            </th>
           {/if}
         {/each}
-      {/if}
-    </Grid>
+        {#if $$slots.thLast || $$slots.tdLast}
+          <th>
+            <slot name="thLast" />
+          </th>
+        {/if}
+        {#if $$slots.thAfter}
+          <slot name="thAfter" />
+        {/if}
+      </tr>
+    </thead>
+    <tbody>
+      {#each rows as row, rowIdx}
+        {#if $$slots.trBefore}
+          <slot name="trBefore" {rowIdx} {row} />
+        {/if}
+        <tr>
+          {#if $$slots.tr}
+            <slot name="tr" {rowIdx} {row} />
+          {:else if $$slots.td}
+            {#if $$slots.tdBefore}
+              <slot name="tdBefore" {rowIdx} {row} />
+            {/if}
+            {#if $$slots.tdFirst || $$slots.thFirst}
+              <td>
+                <slot name="tdFirst" {rowIdx} {row} />
+              </td>
+            {/if}
+            {#each cols as col, colIdx}
+              {#if check(colsActive, col) && !check(colsFilter, col)}
+                <td data-hui-idx={colIdx}>
+                  <slot name="td" {rowIdx} {row} {col} {colIdx} />
+                </td>
+              {/if}
+            {/each}
+            {#if $$slots.tdLast || $$slots.thLast}
+              <td>
+                <slot name="tdLast" {rowIdx} {row} />
+              </td>
+            {/if}
+            {#if $$slots.tdAfter}
+              <slot name="tdAfter" {rowIdx} {row} />
+            {/if}
+          {/if}
+        </tr>
+        {#if $$slots.trAfter}
+          <slot name="trAfter" {rowIdx} {row} />
+        {/if}
+      {/each}
+    </tbody>
 </Container>
 
 <!-- theme.ini
   & = common, grid;
    > tbody,
    > thead,
-   > * > tr = common, grid;
+   > * > tr = common, grid, display;
    > tbody = overflow-y, scrollbar-gutter;
-   > tbody > tr > td = common;
-   > thead > tr > th = common;
+   > tbody > tr > td = common, flex, display;
+   > thead > tr > th = common, flex, display;
    > tbody > tr:nth-child(odd) > td = background-color;
    > tbody > tr > td + td =
     border-left-width,
