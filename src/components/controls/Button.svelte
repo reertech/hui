@@ -14,6 +14,7 @@
   export let size = null
   export let position = null
   export let margin = null
+  export let padding = null
   export let bg = null
   export let scrollX = null
   export let scrollY = null
@@ -38,6 +39,7 @@
   {classes}
   {bg}
   {margin}
+  {padding}
   {idx}
   {size}
   {position}

@@ -17,6 +17,7 @@
   export let size = null
   export let position = null
   export let margin = null
+  export let padding = null
   export let bg = null
   export let scrollX = null
   export let scrollY = null
@@ -29,11 +30,10 @@
   export let cols = []
   export let rows = []
 
-  export let calcRealColWidth = false
-
   export let colsWidth = null
   export let colsActive = {}
   export let colsFilter = {}
+  export let showInactiveCols = false
 
   const buildWidth = (value) => {
     switch (typeof value) {
@@ -49,6 +49,7 @@
   const colWidthBuilder = (acc, c) => {
     if (!check(colsActive, c) || check(colsFilter, c)) return acc
     acc.push(buildWidth(check(colsWidth, c)))
+
     return acc
   }
 
@@ -76,6 +77,7 @@
   {classes}
   {bg}
   {margin}
+  {padding}
   {idx}
   {size}
   {position}
@@ -87,72 +89,78 @@
     ...grid
   }}
 >
-    <thead>
-      <tr>
-        {#if $$slots.thBefore}
-          <slot name="thBefore" />
-        {/if}
-        {#if $$slots.thFirst || $$slots.tdFirst}
-          <th>
-            <slot name="thFirst" />
+  <thead>
+    <tr>
+      {#if $$slots.thBefore}
+        <slot name="thBefore" />
+      {/if}
+      {#if $$slots.thFirst || $$slots.tdFirst}
+        <th>
+          <slot name="thFirst" />
+        </th>
+      {/if}
+      {#each cols as col, colIdx}
+        {#if showInactiveCols || check(colsActive, col)}
+          <th
+            data-hui-idx={colIdx}
+            hidden={check(colsFilter, col)}
+          >
+            <slot name="th" {col} {colIdx} />
           </th>
-        {/if}
-        {#each cols as col, colIdx}
-          {#if check(colsActive, col) && !check(colsFilter, col)}
-            <th data-hui-idx={colIdx}>
-              <slot name="th" {col} {colIdx} />
-            </th>
-          {/if}
-        {/each}
-        {#if $$slots.thLast || $$slots.tdLast}
-          <th>
-            <slot name="thLast" />
-          </th>
-        {/if}
-        {#if $$slots.thAfter}
-          <slot name="thAfter" />
-        {/if}
-      </tr>
-    </thead>
-    <tbody>
-      {#each rows as row, rowIdx}
-        {#if $$slots.trBefore}
-          <slot name="trBefore" {rowIdx} {row} />
-        {/if}
-        <tr>
-          {#if $$slots.tr}
-            <slot name="tr" {rowIdx} {row} />
-          {:else if $$slots.td}
-            {#if $$slots.tdBefore}
-              <slot name="tdBefore" {rowIdx} {row} />
-            {/if}
-            {#if $$slots.tdFirst || $$slots.thFirst}
-              <td>
-                <slot name="tdFirst" {rowIdx} {row} />
-              </td>
-            {/if}
-            {#each cols as col, colIdx}
-              {#if check(colsActive, col) && !check(colsFilter, col)}
-                <td data-hui-idx={colIdx}>
-                  <slot name="td" {rowIdx} {row} {col} {colIdx} />
-                </td>
-              {/if}
-            {/each}
-            {#if $$slots.tdLast || $$slots.thLast}
-              <td>
-                <slot name="tdLast" {rowIdx} {row} />
-              </td>
-            {/if}
-            {#if $$slots.tdAfter}
-              <slot name="tdAfter" {rowIdx} {row} />
-            {/if}
-          {/if}
-        </tr>
-        {#if $$slots.trAfter}
-          <slot name="trAfter" {rowIdx} {row} />
         {/if}
       {/each}
-    </tbody>
+      {#if $$slots.thLast || $$slots.tdLast}
+        <th>
+          <slot name="thLast" />
+        </th>
+      {/if}
+      {#if $$slots.thAfter}
+        <slot name="thAfter" />
+      {/if}
+    </tr>
+  </thead>
+  <tbody>
+    {#each rows as row, rowIdx}
+      {#if $$slots.trBefore}
+        <slot name="trBefore" {rowIdx} {row} />
+      {/if}
+      <tr>
+        {#if $$slots.tr}
+          <slot name="tr" {rowIdx} {row} />
+        {:else if $$slots.td}
+          {#if $$slots.tdBefore}
+            <slot name="tdBefore" {rowIdx} {row} />
+          {/if}
+          {#if $$slots.tdFirst || $$slots.thFirst}
+            <td>
+              <slot name="tdFirst" {rowIdx} {row} />
+            </td>
+          {/if}
+          {#each cols as col, colIdx}
+            {#if showInactiveCols || check(colsActive, col)}
+              <td
+                data-hui-idx={colIdx}
+                hidden={check(colsFilter, col)}
+              >
+                <slot name="td" {rowIdx} {row} {col} {colIdx} />
+              </td>
+            {/if}
+          {/each}
+          {#if $$slots.tdLast || $$slots.thLast}
+            <td>
+              <slot name="tdLast" {rowIdx} {row} />
+            </td>
+          {/if}
+          {#if $$slots.tdAfter}
+            <slot name="tdAfter" {rowIdx} {row} />
+          {/if}
+        {/if}
+      </tr>
+      {#if $$slots.trAfter}
+        <slot name="trAfter" {rowIdx} {row} />
+      {/if}
+    {/each}
+  </tbody>
 </Container>
 
 <!-- theme.ini
@@ -163,6 +171,8 @@
    > tbody = overflow-y, scrollbar-gutter;
    > tbody > tr > td = common, flex, display;
    > thead > tr > th = common, flex, display;
+   > tbody > tr > td[hidden],
+   > thead > tr > th[hidden] = display;
    > tbody > tr:nth-child(odd) > td = background-color;
    > tbody > tr > td + td =
     border-left-width,

@@ -490,6 +490,11 @@
   /* DISPLAY */
   display: var(--hui-yfagqg-display, block);
 }
+[data-hui=DataTable] > tbody > tr > td[hidden],
+[data-hui=DataTable] > thead > tr > th[hidden] {
+  /* DISPLAY */
+  display: var(--hui-dssmvy-display, block);
+}
 [data-hui=DataTable] > tbody > tr:nth-child(odd) > td {
   background-color: var(--hui-pcwkvb-background-color, initial);
 }

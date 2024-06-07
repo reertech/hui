@@ -20,6 +20,7 @@
   export let size = null
   export let position = null
   export let margin = null
+  export let padding = null
   export let bg = null
   export let scrollX = null
   export let scrollY = null
@@ -68,10 +69,12 @@
     closeTimer = setTimeout(() => dropdownOpened = false, 200)
   }
 
-  const commit = () => {
+  const commit = async () => {
     selected = isMulti
       ? [...selectedSet].slice(-maxValuesInt)
       : [...selectedSet].at(-1) ?? nullValue
+
+    await tick()
 
     dispatch("select", selected)
   }
@@ -83,14 +86,14 @@
     dropdownOpened = false
     selectedSet.add(value)
 
-    commit()
+    await commit()
     filter = null
   }
 
   const remove = async (value) => {
     selectedSet.delete(value)
 
-    commit()
+    await commit()
 
     if (!isMulti) filterInput.focus()
   }
@@ -111,6 +114,7 @@
   {classes}
   {bg}
   {margin}
+  {padding}
   {idx}
   {size}
   {position}

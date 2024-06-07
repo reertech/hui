@@ -2,8 +2,8 @@ export const isString = (value) => typeof value === "string"
 export const isFunction = (value) => typeof value === "function"
 export const isNumber = (value) => typeof value === "number"
 export const isBoolean = (value) => typeof value === "boolean"
-export const isObject = (value) => value != null && typeof value === "object"
 export const isArray = (value) => Array.isArray(value)
+export const isObject = (value) => value != null && !isArray(value) && typeof value === "object"
 
 export const checkEmpty = (value) => {
   switch (true) {
@@ -72,14 +72,13 @@ export const fetchParentByTag = (el, tag) => {
 export const calcCutParentOffset = (el) =>
   calcParentOffset(el, fetchCutParent(el))
 
-export const sortObjectsBy = (objects, fun) => {
-  if (!isArray(objects)) return objects
-  if (!isFunction(fun)) return objects 
+export const sortBy = (entries, fun) => {
+  if (!isArray(entries)) return entries
+  if (!isFunction(fun)) return entries 
 
   const check = (v, type) => v == null || typeof v !== type
 
-  return [...objects].sort((a, b) => {
-    if ([a, b].some(v => check(v, "object"))) return 0
+  return [...entries].sort((a, b) => {
     const [aa, bb] = [a, b].map(fun)
     if ([aa, bb].some(v => check(v, "string"))) return 0
 

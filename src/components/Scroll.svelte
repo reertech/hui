@@ -8,6 +8,7 @@
   export let bg = null
   export let size = null
   export let margin = null
+  export let padding = null
   export let position = null
 </script>
 
@@ -19,6 +20,7 @@
   scrollY={y}
   {bg}
   {margin}
+  {padding}
   {size}
   {position}
 >

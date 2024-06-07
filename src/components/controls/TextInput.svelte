@@ -20,6 +20,7 @@
   export let size = null
   export let position = null
   export let margin = null
+  export let padding = null
   export let bg = null
   export let scrollX = null
   export let scrollY = null
@@ -56,7 +57,6 @@
     value = e.target.value
     if (checkEmpty(value)) value = nullValue
 
-    console.log(e.type, value)
     dispatch(e.type, value)
   }
 </script>
@@ -74,6 +74,7 @@
   {classes}
   {bg}
   {margin}
+  {padding}
   {idx}
   {size}
   {position}

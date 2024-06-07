@@ -15,6 +15,7 @@
   export let bg = null
   export let size = null
   export let margin = null
+  export let padding = null
   export let scrollX = null
   export let scrollY = null
   export let position = null
@@ -39,6 +40,7 @@
   {flex}
   {bg}
   {margin}
+  {padding}
   {size}
   {position}
   {scrollX}
