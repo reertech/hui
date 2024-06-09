@@ -49,7 +49,6 @@
   const colWidthBuilder = (acc, c) => {
     if (!check(colsActive, c) || check(colsFilter, c)) return acc
     acc.push(buildWidth(check(colsWidth, c)))
-
     return acc
   }
 
@@ -100,11 +99,8 @@
         </th>
       {/if}
       {#each cols as col, colIdx}
-        {#if showInactiveCols || check(colsActive, col)}
-          <th
-            data-hui-idx={colIdx}
-            hidden={check(colsFilter, col)}
-          >
+        {#if (showInactiveCols || check(colsActive, col)) && !check(colsFilter, col)}
+          <th data-hui-idx={colIdx}>
             <slot name="th" {col} {colIdx} />
           </th>
         {/if}
@@ -137,11 +133,8 @@
             </td>
           {/if}
           {#each cols as col, colIdx}
-            {#if showInactiveCols || check(colsActive, col)}
-              <td
-                data-hui-idx={colIdx}
-                hidden={check(colsFilter, col)}
-              >
+            {#if (showInactiveCols || check(colsActive, col)) && !check(colsFilter, col)}
+              <td data-hui-idx={colIdx}>
                 <slot name="td" {rowIdx} {row} {col} {colIdx} />
               </td>
             {/if}
@@ -171,8 +164,6 @@
    > tbody = overflow-y, scrollbar-gutter;
    > tbody > tr > td = common, flex, display;
    > thead > tr > th = common, flex, display;
-   > tbody > tr > td[hidden],
-   > thead > tr > th[hidden] = display;
    > tbody > tr:nth-child(odd) > td = background-color;
    > tbody > tr > td + td =
     border-left-width,

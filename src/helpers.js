@@ -19,6 +19,8 @@ export const checkEmpty = (value) => {
 
 export const checkNotEmpty = (value) => !checkEmpty(value)
 
+export const isEqual = (a, b) => a === b || [a, b].every(checkEmpty)
+
 export const buildFuzzyRegex = (string, params = "i") => {
   if (!isString(string) || checkEmpty(string)) return null
 
