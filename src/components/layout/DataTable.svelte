@@ -34,6 +34,7 @@
   export let colsActive = {}
   export let colsFilter = {}
   export let showInactiveCols = false
+  export let showFilteredCols = false
 
   const buildWidth = (value) => {
     switch (typeof value) {
@@ -133,7 +134,9 @@
             </td>
           {/if}
           {#each cols as col, colIdx}
-            {#if (showInactiveCols || check(colsActive, col)) && !check(colsFilter, col)}
+            {@const inactive = !showInactiveCols && !check(colsActive, col)}
+            {@const filtered = !showFilteredCols && check(colsFilter, col)}
+            {#if !inactive && !filtered}
               <td data-hui-idx={colIdx}>
                 <slot name="td" {rowIdx} {row} {col} {colIdx} />
               </td>
@@ -161,7 +164,7 @@
    > tbody,
    > thead,
    > * > tr = common, grid, display;
-   > tbody = overflow-y, scrollbar-gutter;
+   > tbody = min-height, overflow-y, scrollbar-gutter;
    > tbody > tr > td = common, flex, display;
    > thead > tr > th = common, flex, display;
    > tbody > tr:nth-child(odd) > td = background-color;

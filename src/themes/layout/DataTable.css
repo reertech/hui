@@ -13,6 +13,7 @@
   --hui-wsglhu-display: grid;
 }
 [data-hui=DataTable] > tbody {
+  --hui-fgrqpr-min-height: calc(var(--hui-default-size) * 10);
   --hui-fgrqpr-overflow-y: auto;
   --hui-fgrqpr-scrollbar-gutter: stable;
 }
@@ -48,7 +49,7 @@
   --hui-yfagqg-justify-content: center;
   --hui-yfagqg-align-items: center;
   /* TEXT */
-  --hui-yfagqg-font-size: var(--hui-default-size-0);
+  --hui-yfagqg-font-size: var(--hui-default-size);
   --hui-yfagqg-font-weight: var(--hui-default-font-weight);
   --hui-yfagqg-line-height: var(--hui-default-line-height);
   /* DISPLAY */
@@ -424,6 +425,7 @@
 /*  --hui-wsglhu-display-default: ; */
 }
 [data-hui=DataTable] > tbody {
+/*  --hui-fgrqpr-min-height-default: ; */
 /*  --hui-fgrqpr-overflow-y-default: ; */
 /*  --hui-fgrqpr-scrollbar-gutter-default: ; */
 }

@@ -46,6 +46,8 @@
   --hui-edmssq-gap: var(--hui-default-spacer-5);
 }
 [data-hui=TextInput] > input {
+  /* LAYOUT-SIZING */
+  --hui-msgihx-max-width: 100%;
   /* LAYOUT-PADDING */
   --hui-msgihx-padding-top: calc(var(--hui-default-spacer-3) + var(--hui-default-border-width) / 2);
   --hui-msgihx-padding-right: var(--hui-default-spacer-1);

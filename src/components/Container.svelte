@@ -55,7 +55,8 @@
   $: s = !isSize ? {} : size
 
   $: target = tag === null ? "child" : "self"
-  $: isTargeted = isGrid || isFlex || isScroll || isPosition || isSize || isMargin || isBg
+  $: isTargeted = isGrid || isFlex || isScroll || isPosition || isSize ||
+    isMargin || isPadding || isBg
 </script>
 
 {#if tag === "data"}
@@ -77,7 +78,6 @@
     data-hui-idx={idx ?? null}
     data-hui-value={value ?? null}
 
-    data-hui-z={formatNumber(l.z)}
     data-hui-scroll-x={scrollX || null}
     data-hui-scroll-y={scrollY || null}
 
@@ -113,6 +113,7 @@
     style:column-gap={f.columnGap || g.columnGap || null}
 
     data-hui-position={l.position || null}
+    data-hui-z={formatNumber(l.z)}
     style:inset={formatPx(l.inset)}
     style:top={formatPx(l.top)}
     style:right={formatPx(l.right)}
@@ -131,6 +132,12 @@
     style:margin-right={formatPx(m.right)}
     style:margin-bottom={formatPx(m.bottom)}
     style:margin-left={formatPx(m.left)}
+
+    style:padding={formatPx(p.padding)}
+    style:padding-top={formatPx(p.top)}
+    style:padding-right={formatPx(p.right)}
+    style:padding-bottom={formatPx(p.bottom)}
+    style:padding-left={formatPx(p.left)}
 
     on:click
     on:mouseup
@@ -212,6 +219,12 @@
     style:margin-right={formatPx(m.right)}
     style:margin-bottom={formatPx(m.bottom)}
     style:margin-left={formatPx(m.left)}
+
+    style:padding={formatPx(p.padding)}
+    style:padding-top={formatPx(p.top)}
+    style:padding-right={formatPx(p.right)}
+    style:padding-bottom={formatPx(p.bottom)}
+    style:padding-left={formatPx(p.left)}
 
     on:click
     on:mouseup

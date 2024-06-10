@@ -259,6 +259,7 @@
   display: var(--hui-wsglhu-display, block);
 }
 [data-hui=DataTable] > tbody {
+  min-height: var(--hui-fgrqpr-min-height, initial);
   overflow-y: var(--hui-fgrqpr-overflow-y, initial);
   scrollbar-gutter: var(--hui-fgrqpr-scrollbar-gutter, initial);
 }

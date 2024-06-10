@@ -49,9 +49,8 @@
     dropdownOpened = true
   }
 
-  const close = () => {
-    closeTimer = setTimeout(() => dropdownOpened = false, 200)
-  }
+  const close = () => closeTimer =
+    setTimeout(() => dropdownOpened = false, 200)
 
   const change = (e) => {
     value = e.target.value
@@ -59,6 +58,11 @@
 
     dispatch(e.type, value)
   }
+
+  const select = (e) => change({
+    target: { value: e.detail },
+    type: "change"
+  })
 </script>
 
 <Container
@@ -116,7 +120,7 @@
     <Dropdown
       {options}
       selected={value}
-      on:select={change}
+      on:select={select}
       filter={value}
       root={input?.parentElement}
       active={dropdownOpened}

@@ -10,11 +10,9 @@
   /* TEXT */
   --hui-lqttac-font-size: var(--hui-default-size-1);
   --hui-lqttac-line-height: var(--hui-default-line-height);
-  --hui-lqttac-text-align: center;
   --hui-lqttac-text-wrap: wrap;
   /* APPERANCE */
   --hui-lqttac-color: var(--hui-default-color-text);
-  --hui-lqttac-background-color: var(--hui-default-background-color);
   /* DISPLAY */
   --hui-lqttac-display: block;
 }

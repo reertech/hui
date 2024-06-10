@@ -406,6 +406,23 @@ data[data-hui] {
   margin-left: inherit;
 }
 
+/* PADDING */
+[data-hui][data-hui-target=child][style~='padding:'] > *:not(#huiHack) {
+  padding: inherit;
+}
+[data-hui][data-hui-target=child][style~='padding-top:'] > *:not(#huiHack) {
+  padding-top: inherit;
+}
+[data-hui][data-hui-target=child][style~='padding-right:'] > *:not(#huiHack) {
+  padding-right: inherit;
+}
+[data-hui][data-hui-target=child][style~='padding-bottom:'] > *:not(#huiHack) {
+  padding-bottom: inherit;
+}
+[data-hui][data-hui-target=child][style~='padding-left:'] > *:not(#huiHack) {
+  padding-left: inherit;
+}
+
 /* BACKGROUND */
 [data-hui][data-hui-target=child][style~='background-color:'] > *:not(#huiHack) {
   background-color: inherit;
