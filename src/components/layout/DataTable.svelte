@@ -24,6 +24,9 @@
   export let grid = null
   export let flex = null
 
+  export let node = null
+  export let tbodyNode = null
+
   let classes = null
   export { classes as class }
 
@@ -88,6 +91,7 @@
     templateColumns,
     ...grid
   }}
+  bind:node
 >
   <thead>
     <tr>
@@ -116,7 +120,7 @@
       {/if}
     </tr>
   </thead>
-  <tbody>
+  <tbody bind:this={tbodyNode}>
     {#each rows as row, rowIdx}
       {#if $$slots.trBefore}
         <slot name="trBefore" {rowIdx} {row} />
@@ -167,6 +171,7 @@
    > tbody = min-height, overflow-y, scrollbar-gutter;
    > tbody > tr > td = common, flex, display;
    > thead > tr > th = common, flex, display;
+   > tbody > tr:nth-child(odd),
    > tbody > tr:nth-child(odd) > td = background-color;
    > tbody > tr > td + td =
     border-left-width,

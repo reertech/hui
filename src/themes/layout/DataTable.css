@@ -5,6 +5,8 @@
 [data-hui=DataTable] > tbody,
 [data-hui=DataTable] > thead,
 [data-hui=DataTable] > * > tr {
+  /* LAYOUT-SIZING */
+  --hui-wsglhu-min-width: 100%;
   /* GRID */
   --hui-wsglhu-grid-column-end: -1;
   --hui-wsglhu-grid-column-start: 1;
@@ -55,8 +57,9 @@
   /* DISPLAY */
   --hui-yfagqg-display: flex;
 }
+[data-hui=DataTable] > tbody > tr:nth-child(odd),
 [data-hui=DataTable] > tbody > tr:nth-child(odd) > td {
-  --hui-pcwkvb-background-color: var(--hui-unua-color-plus1);
+  --hui-gqdxgs-background-color: var(--hui-unua-color-plus1);
 }
 [data-hui=DataTable] > tbody > tr > td + td {
   --hui-ozatyc-border-left-width: var(--hui-unua-border-width);
@@ -81,6 +84,7 @@
 }
 [data-hui=DataTable][data-hui-active] > thead > tr > th {
 }
+[data-hui=DataTable][data-hui-active] > tbody > tr:nth-child(odd),
 [data-hui=DataTable][data-hui-active] > tbody > tr:nth-child(odd) > td {
 }
 [data-hui=DataTable][data-hui-active] > tbody > tr > td + td {
@@ -100,6 +104,7 @@
 }
 [data-hui=DataTable][data-hui-disabled] > thead > tr > th {
 }
+[data-hui=DataTable][data-hui-disabled] > tbody > tr:nth-child(odd),
 [data-hui=DataTable][data-hui-disabled] > tbody > tr:nth-child(odd) > td {
 }
 [data-hui=DataTable][data-hui-disabled] > tbody > tr > td + td {
@@ -119,6 +124,7 @@
 }
 [data-hui=DataTable][data-hui-readonly] > thead > tr > th {
 }
+[data-hui=DataTable][data-hui-readonly] > tbody > tr:nth-child(odd),
 [data-hui=DataTable][data-hui-readonly] > tbody > tr:nth-child(odd) > td {
 }
 [data-hui=DataTable][data-hui-readonly] > tbody > tr > td + td {
@@ -138,6 +144,7 @@
 }
 [data-hui=DataTable][data-hui-valid] > thead > tr > th {
 }
+[data-hui=DataTable][data-hui-valid] > tbody > tr:nth-child(odd),
 [data-hui=DataTable][data-hui-valid] > tbody > tr:nth-child(odd) > td {
 }
 [data-hui=DataTable][data-hui-valid] > tbody > tr > td + td {
@@ -157,6 +164,7 @@
 }
 [data-hui=DataTable][data-hui-invalid] > thead > tr > th {
 }
+[data-hui=DataTable][data-hui-invalid] > tbody > tr:nth-child(odd),
 [data-hui=DataTable][data-hui-invalid] > tbody > tr:nth-child(odd) > td {
 }
 [data-hui=DataTable][data-hui-invalid] > tbody > tr > td + td {
@@ -657,8 +665,9 @@
   /* DISPLAY */
 /*  --hui-yfagqg-display-default: ; */
 }
+[data-hui=DataTable] > tbody > tr:nth-child(odd),
 [data-hui=DataTable] > tbody > tr:nth-child(odd) > td {
-/*  --hui-pcwkvb-background-color-default: ; */
+/*  --hui-gqdxgs-background-color-default: ; */
 }
 [data-hui=DataTable] > tbody > tr > td + td {
 /*  --hui-ozatyc-border-left-width-default: ; */

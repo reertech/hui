@@ -37,4 +37,5 @@ export { default as Select } from "./components/controls/Select.svelte"
 export { default as Swapper } from "./components/controls/Swapper.svelte"
 
 export { default as persist } from "./stores/persist.js"
+export { default as hui } from "./containers/action.js"
 export * from "./helpers.js"

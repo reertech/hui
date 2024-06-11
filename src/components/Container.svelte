@@ -24,6 +24,8 @@
   export let scrollX = null
   export let value = null
 
+  export let node = null
+
   const isValid = (value, allowed) => {
     switch (true) {
       case value == null: return false
@@ -63,6 +65,7 @@
   <data
     data-hui={hui || null}
     data-hui-tag={tag || "data"}
+    bind:this={node}
 
     data-hui-theme={theme || null}
     data-hui-active={(active || null) && ""}
@@ -150,6 +153,7 @@
   <svelte:element
     this={tag || "data"}
     data-hui={hui || null}
+    bind:this={node}
 
     data-hui-theme={theme || null}
     data-hui-active={(active || null) && ""}
