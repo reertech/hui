@@ -6,9 +6,22 @@ const addAll = (values, update) => update(s => {
   return s
 })
 
+const replace = (values, update) => update(s => {
+  if (!Array.isArray(values)) return s
+  s.clear()
+  values.forEach(s.add.bind(s))
+  return s
+})
+
 const deleteAll = (values, update) => update(s => {
   if (!Array.isArray(values)) return s
   values.forEach(s.delete.bind(s))
+  return s
+})
+
+const toggle = (value, update) => update(s => {
+  if (s.has(value)) s.delete(value)
+  else s.add(value)
   return s
 })
 
@@ -27,6 +40,8 @@ export default (value) => {
     toArray: () => get(s).values().toArray(),
     addAll: (values) => addAll(values, update),
     deleteAll: (values) => deleteAll(values, update),
+    replace: (values) => replace(values, update),
+    toggle: (value) => toggle(value, update),
     subscribe
   }
 }

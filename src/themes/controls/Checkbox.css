@@ -3,7 +3,6 @@
   --hui-opvjag-cursor: pointer;
 }
 [data-hui=Checkbox] > input {
-  /* DISPLAY */
 }
 [data-hui=Checkbox][data-hui-active] {
 }

@@ -65,9 +65,10 @@
 </Container>
 
 <!-- theme.ini
-  themes: flat, small, round;
+  themes: flat, small, round, icon;
   > button
   | > button:hover
   | > button:active
   | > button:focus = common;
+  > button > svg = common, stroke, stroke-width;
 -->
