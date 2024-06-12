@@ -24,7 +24,6 @@ export default (value) => {
     keys: () => get(s).keys(),
     values: () => get(s).values(),
     entries: () => get(s).entries(),
-    // forEach: (cb) => get(s).forEach(cb) ???,
     toArray: () => get(s).values().toArray(),
     addAll: (values) => addAll(values, update),
     deleteAll: (values) => deleteAll(values, update),

@@ -25,10 +25,13 @@
   export { classes as class }
 
   export let value
+  export let group
+  export let checked = false
 </script>
 
 <Container
   hui="Checkbox"
+  tag="label"
   {active}
   {readonly}
   {disabled}
@@ -52,18 +55,19 @@
     on:click
     type="checkbox"
     {value}
+    bind:group
+    bind:checked
     active={active || null}
     readonly={readonly || null}
     disabled={disabled || null}
     valid={valid || null}
     invalid={invalid || null}
   />
+  <slot />
 </Container>
 
 <!-- theme.ini
   themes: flat, small, round;
-  > input
-  | > input:hover
-  | > input:active
-  | > input:focus = common;
+  & = common;
+  > input = display;
 -->

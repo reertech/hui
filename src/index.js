@@ -37,6 +37,9 @@ export { default as NumberInput } from "./components/controls/NumberInput.svelte
 export { default as Select } from "./components/controls/Select.svelte"
 export { default as Swapper } from "./components/controls/Swapper.svelte"
 
+export { default as IconSquare } from "./icons/Square.svelte"
+export { default as IconCheckSquare } from "./icons/CheckSquare.svelte"
+
 export { default as persist } from "./stores/persist.js"
 export { default as setStore } from "./stores/set.js"
 export { default as hui } from "./containers/action.js"
