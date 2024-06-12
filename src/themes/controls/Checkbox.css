@@ -1,0 +1,636 @@
+[data-hui=Checkbox] > input {
+}
+[data-hui=Checkbox] > input:hover {
+}
+[data-hui=Checkbox] > input:active {
+}
+[data-hui=Checkbox] > input:focus {
+}
+[data-hui=Checkbox][data-hui-active] > input {
+}
+[data-hui=Checkbox][data-hui-active] > input:hover {
+}
+[data-hui=Checkbox][data-hui-active] > input:active {
+}
+[data-hui=Checkbox][data-hui-active] > input:focus {
+}
+[data-hui=Checkbox][data-hui-disabled] > input {
+}
+[data-hui=Checkbox][data-hui-disabled] > input:hover {
+}
+[data-hui=Checkbox][data-hui-disabled] > input:active {
+}
+[data-hui=Checkbox][data-hui-disabled] > input:focus {
+}
+[data-hui=Checkbox][data-hui-readonly] > input {
+}
+[data-hui=Checkbox][data-hui-readonly] > input:hover {
+}
+[data-hui=Checkbox][data-hui-readonly] > input:active {
+}
+[data-hui=Checkbox][data-hui-readonly] > input:focus {
+}
+[data-hui=Checkbox][data-hui-valid] > input {
+}
+[data-hui=Checkbox][data-hui-valid] > input:hover {
+}
+[data-hui=Checkbox][data-hui-valid] > input:active {
+}
+[data-hui=Checkbox][data-hui-valid] > input:focus {
+}
+[data-hui=Checkbox][data-hui-invalid] > input {
+}
+[data-hui=Checkbox][data-hui-invalid] > input:hover {
+}
+[data-hui=Checkbox][data-hui-invalid] > input:active {
+}
+[data-hui=Checkbox][data-hui-invalid] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=flat] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=flat] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=flat] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=flat] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-active] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-active] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-active] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-active] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-disabled] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-disabled] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-disabled] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-disabled] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-readonly] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-readonly] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-readonly] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-readonly] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-valid] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-valid] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-valid] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-valid] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-invalid] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-invalid] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-invalid] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=flat][data-hui-invalid] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=small] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=small] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=small] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=small] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-active] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-active] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-active] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-active] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-disabled] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-disabled] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-disabled] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-disabled] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-readonly] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-readonly] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-readonly] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-readonly] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-valid] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-valid] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-valid] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-valid] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-invalid] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-invalid] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-invalid] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=small][data-hui-invalid] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=round] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=round] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=round] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=round] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-active] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-active] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-active] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-active] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-disabled] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-disabled] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-disabled] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-disabled] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-readonly] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-readonly] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-readonly] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-readonly] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-valid] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-valid] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-valid] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-valid] > input:focus {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-invalid] > input {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-invalid] > input:hover {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-invalid] > input:active {
+}
+[data-hui=Checkbox][data-hui-theme~=round][data-hui-invalid] > input:focus {
+}
+[data-hui=Checkbox] > input {
+  /* LAYOUT-POSITION */
+/*  --hui-pzdgsy-position-default: ; */
+/*  --hui-pzdgsy-top-default: ; */
+/*  --hui-pzdgsy-right-default: ; */
+/*  --hui-pzdgsy-bottom-default: ; */
+/*  --hui-pzdgsy-left-default: ; */
+/*  --hui-pzdgsy-z-index-default: ; */
+/*  --hui-pzdgsy-float-default: ; */
+/*  --hui-pzdgsy-clear-default: ; */
+/*  --hui-pzdgsy-align-self-default: ; */
+/*  --hui-pzdgsy-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-pzdgsy-box-sizing-default: ; */
+/*  --hui-pzdgsy-height-default: ; */
+/*  --hui-pzdgsy-max-height-default: ; */
+/*  --hui-pzdgsy-min-height-default: ; */
+/*  --hui-pzdgsy-width-default: ; */
+/*  --hui-pzdgsy-max-width-default: ; */
+/*  --hui-pzdgsy-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-pzdgsy-margin-top-default: ; */
+/*  --hui-pzdgsy-margin-right-default: ; */
+/*  --hui-pzdgsy-margin-bottom-default: ; */
+/*  --hui-pzdgsy-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-pzdgsy-padding-top-default: ; */
+/*  --hui-pzdgsy-padding-right-default: ; */
+/*  --hui-pzdgsy-padding-bottom-default: ; */
+/*  --hui-pzdgsy-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-pzdgsy-overflow-x-default: ; */
+/*  --hui-pzdgsy-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-pzdgsy-flex-basis-default: ; */
+/*  --hui-pzdgsy-flex-direction-default: ; */
+/*  --hui-pzdgsy-flex-grow-default: ; */
+/*  --hui-pzdgsy-flex-shrink-default: ; */
+/*  --hui-pzdgsy-flex-wrap-default: ; */
+/*  --hui-pzdgsy-gap-default: ; */
+/*  --hui-pzdgsy-align-content-default: ; */
+/*  --hui-pzdgsy-justify-content-default: ; */
+/*  --hui-pzdgsy-align-items-default: ; */
+  /* TEXT */
+/*  --hui-pzdgsy-direction-default: ; */
+/*  --hui-pzdgsy-font-family-default: ; */
+/*  --hui-pzdgsy-font-size-default: ; */
+/*  --hui-pzdgsy-font-stretch-default: ; */
+/*  --hui-pzdgsy-font-style-default: ; */
+/*  --hui-pzdgsy-font-weight-default: ; */
+/*  --hui-pzdgsy-letter-spacing-default: ; */
+/*  --hui-pzdgsy-line-height-default: ; */
+/*  --hui-pzdgsy-text-align-default: ; */
+/*  --hui-pzdgsy-text-align-last-default: ; */
+/*  --hui-pzdgsy-text-decoration-color-default: ; */
+/*  --hui-pzdgsy-text-decoration-line-default: ; */
+/*  --hui-pzdgsy-text-decoration-style-default: ; */
+/*  --hui-pzdgsy-text-decoration-thickness-default: ; */
+/*  --hui-pzdgsy-text-indent-default: ; */
+/*  --hui-pzdgsy-text-overflow-default: ; */
+/*  --hui-pzdgsy-text-shadow-default: ; */
+/*  --hui-pzdgsy-text-size-adjust-default: ; */
+/*  --hui-pzdgsy-text-transform-default: ; */
+/*  --hui-pzdgsy-text-wrap-default: ; */
+/*  --hui-pzdgsy-vertical-align-default: ; */
+/*  --hui-pzdgsy-white-space-collapse-default: ; */
+/*  --hui-pzdgsy-word-break-default: ; */
+/*  --hui-pzdgsy-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-pzdgsy-visibility-default: ; */
+/*  --hui-pzdgsy-color-default: ; */
+/*  --hui-pzdgsy-background-attachment-default: ; */
+/*  --hui-pzdgsy-background-clip-default: ; */
+/*  --hui-pzdgsy-background-color-default: ; */
+/*  --hui-pzdgsy-background-image-default: ; */
+/*  --hui-pzdgsy-background-origin-default: ; */
+/*  --hui-pzdgsy-background-position-x-default: ; */
+/*  --hui-pzdgsy-background-position-y-default: ; */
+/*  --hui-pzdgsy-background-repeat-default: ; */
+/*  --hui-pzdgsy-background-size-default: ; */
+/*  --hui-pzdgsy-border-bottom-color-default: ; */
+/*  --hui-pzdgsy-border-bottom-style-default: ; */
+/*  --hui-pzdgsy-border-bottom-width-default: ; */
+/*  --hui-pzdgsy-border-bottom-left-radius-default: ; */
+/*  --hui-pzdgsy-border-bottom-right-radius-default: ; */
+/*  --hui-pzdgsy-border-image-outset-default: ; */
+/*  --hui-pzdgsy-border-image-repeat-default: ; */
+/*  --hui-pzdgsy-border-image-slice-default: ; */
+/*  --hui-pzdgsy-border-image-source-default: ; */
+/*  --hui-pzdgsy-border-image-width-default: ; */
+/*  --hui-pzdgsy-border-left-color-default: ; */
+/*  --hui-pzdgsy-border-left-style-default: ; */
+/*  --hui-pzdgsy-border-left-width-default: ; */
+/*  --hui-pzdgsy-border-right-color-default: ; */
+/*  --hui-pzdgsy-border-right-style-default: ; */
+/*  --hui-pzdgsy-border-right-width-default: ; */
+/*  --hui-pzdgsy-border-top-color-default: ; */
+/*  --hui-pzdgsy-border-top-style-default: ; */
+/*  --hui-pzdgsy-border-top-width-default: ; */
+/*  --hui-pzdgsy-border-top-left-radius-default: ; */
+/*  --hui-pzdgsy-border-top-right-radius-default: ; */
+/*  --hui-pzdgsy-box-shadow-default: ; */
+/*  --hui-pzdgsy-cursor-default: ; */
+/*  --hui-pzdgsy-outline-color-default: ; */
+/*  --hui-pzdgsy-outline-offset-default: ; */
+/*  --hui-pzdgsy-outline-style-default: ; */
+/*  --hui-pzdgsy-outline-width-default: ; */
+/*  --hui-pzdgsy-scrollbar-color-default: ; */
+/*  --hui-pzdgsy-scrollbar-gutter-default: ; */
+/*  --hui-pzdgsy-scrollbar-width-default: ; */
+}
+[data-hui=Checkbox] > input:hover {
+  /* LAYOUT-POSITION */
+/*  --hui-pzdgsy-position-default: ; */
+/*  --hui-pzdgsy-top-default: ; */
+/*  --hui-pzdgsy-right-default: ; */
+/*  --hui-pzdgsy-bottom-default: ; */
+/*  --hui-pzdgsy-left-default: ; */
+/*  --hui-pzdgsy-z-index-default: ; */
+/*  --hui-pzdgsy-float-default: ; */
+/*  --hui-pzdgsy-clear-default: ; */
+/*  --hui-pzdgsy-align-self-default: ; */
+/*  --hui-pzdgsy-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-pzdgsy-box-sizing-default: ; */
+/*  --hui-pzdgsy-height-default: ; */
+/*  --hui-pzdgsy-max-height-default: ; */
+/*  --hui-pzdgsy-min-height-default: ; */
+/*  --hui-pzdgsy-width-default: ; */
+/*  --hui-pzdgsy-max-width-default: ; */
+/*  --hui-pzdgsy-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-pzdgsy-margin-top-default: ; */
+/*  --hui-pzdgsy-margin-right-default: ; */
+/*  --hui-pzdgsy-margin-bottom-default: ; */
+/*  --hui-pzdgsy-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-pzdgsy-padding-top-default: ; */
+/*  --hui-pzdgsy-padding-right-default: ; */
+/*  --hui-pzdgsy-padding-bottom-default: ; */
+/*  --hui-pzdgsy-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-pzdgsy-overflow-x-default: ; */
+/*  --hui-pzdgsy-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-pzdgsy-flex-basis-default: ; */
+/*  --hui-pzdgsy-flex-direction-default: ; */
+/*  --hui-pzdgsy-flex-grow-default: ; */
+/*  --hui-pzdgsy-flex-shrink-default: ; */
+/*  --hui-pzdgsy-flex-wrap-default: ; */
+/*  --hui-pzdgsy-gap-default: ; */
+/*  --hui-pzdgsy-align-content-default: ; */
+/*  --hui-pzdgsy-justify-content-default: ; */
+/*  --hui-pzdgsy-align-items-default: ; */
+  /* TEXT */
+/*  --hui-pzdgsy-direction-default: ; */
+/*  --hui-pzdgsy-font-family-default: ; */
+/*  --hui-pzdgsy-font-size-default: ; */
+/*  --hui-pzdgsy-font-stretch-default: ; */
+/*  --hui-pzdgsy-font-style-default: ; */
+/*  --hui-pzdgsy-font-weight-default: ; */
+/*  --hui-pzdgsy-letter-spacing-default: ; */
+/*  --hui-pzdgsy-line-height-default: ; */
+/*  --hui-pzdgsy-text-align-default: ; */
+/*  --hui-pzdgsy-text-align-last-default: ; */
+/*  --hui-pzdgsy-text-decoration-color-default: ; */
+/*  --hui-pzdgsy-text-decoration-line-default: ; */
+/*  --hui-pzdgsy-text-decoration-style-default: ; */
+/*  --hui-pzdgsy-text-decoration-thickness-default: ; */
+/*  --hui-pzdgsy-text-indent-default: ; */
+/*  --hui-pzdgsy-text-overflow-default: ; */
+/*  --hui-pzdgsy-text-shadow-default: ; */
+/*  --hui-pzdgsy-text-size-adjust-default: ; */
+/*  --hui-pzdgsy-text-transform-default: ; */
+/*  --hui-pzdgsy-text-wrap-default: ; */
+/*  --hui-pzdgsy-vertical-align-default: ; */
+/*  --hui-pzdgsy-white-space-collapse-default: ; */
+/*  --hui-pzdgsy-word-break-default: ; */
+/*  --hui-pzdgsy-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-pzdgsy-visibility-default: ; */
+/*  --hui-pzdgsy-color-default: ; */
+/*  --hui-pzdgsy-background-attachment-default: ; */
+/*  --hui-pzdgsy-background-clip-default: ; */
+/*  --hui-pzdgsy-background-color-default: ; */
+/*  --hui-pzdgsy-background-image-default: ; */
+/*  --hui-pzdgsy-background-origin-default: ; */
+/*  --hui-pzdgsy-background-position-x-default: ; */
+/*  --hui-pzdgsy-background-position-y-default: ; */
+/*  --hui-pzdgsy-background-repeat-default: ; */
+/*  --hui-pzdgsy-background-size-default: ; */
+/*  --hui-pzdgsy-border-bottom-color-default: ; */
+/*  --hui-pzdgsy-border-bottom-style-default: ; */
+/*  --hui-pzdgsy-border-bottom-width-default: ; */
+/*  --hui-pzdgsy-border-bottom-left-radius-default: ; */
+/*  --hui-pzdgsy-border-bottom-right-radius-default: ; */
+/*  --hui-pzdgsy-border-image-outset-default: ; */
+/*  --hui-pzdgsy-border-image-repeat-default: ; */
+/*  --hui-pzdgsy-border-image-slice-default: ; */
+/*  --hui-pzdgsy-border-image-source-default: ; */
+/*  --hui-pzdgsy-border-image-width-default: ; */
+/*  --hui-pzdgsy-border-left-color-default: ; */
+/*  --hui-pzdgsy-border-left-style-default: ; */
+/*  --hui-pzdgsy-border-left-width-default: ; */
+/*  --hui-pzdgsy-border-right-color-default: ; */
+/*  --hui-pzdgsy-border-right-style-default: ; */
+/*  --hui-pzdgsy-border-right-width-default: ; */
+/*  --hui-pzdgsy-border-top-color-default: ; */
+/*  --hui-pzdgsy-border-top-style-default: ; */
+/*  --hui-pzdgsy-border-top-width-default: ; */
+/*  --hui-pzdgsy-border-top-left-radius-default: ; */
+/*  --hui-pzdgsy-border-top-right-radius-default: ; */
+/*  --hui-pzdgsy-box-shadow-default: ; */
+/*  --hui-pzdgsy-cursor-default: ; */
+/*  --hui-pzdgsy-outline-color-default: ; */
+/*  --hui-pzdgsy-outline-offset-default: ; */
+/*  --hui-pzdgsy-outline-style-default: ; */
+/*  --hui-pzdgsy-outline-width-default: ; */
+/*  --hui-pzdgsy-scrollbar-color-default: ; */
+/*  --hui-pzdgsy-scrollbar-gutter-default: ; */
+/*  --hui-pzdgsy-scrollbar-width-default: ; */
+}
+[data-hui=Checkbox] > input:active {
+  /* LAYOUT-POSITION */
+/*  --hui-pzdgsy-position-default: ; */
+/*  --hui-pzdgsy-top-default: ; */
+/*  --hui-pzdgsy-right-default: ; */
+/*  --hui-pzdgsy-bottom-default: ; */
+/*  --hui-pzdgsy-left-default: ; */
+/*  --hui-pzdgsy-z-index-default: ; */
+/*  --hui-pzdgsy-float-default: ; */
+/*  --hui-pzdgsy-clear-default: ; */
+/*  --hui-pzdgsy-align-self-default: ; */
+/*  --hui-pzdgsy-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-pzdgsy-box-sizing-default: ; */
+/*  --hui-pzdgsy-height-default: ; */
+/*  --hui-pzdgsy-max-height-default: ; */
+/*  --hui-pzdgsy-min-height-default: ; */
+/*  --hui-pzdgsy-width-default: ; */
+/*  --hui-pzdgsy-max-width-default: ; */
+/*  --hui-pzdgsy-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-pzdgsy-margin-top-default: ; */
+/*  --hui-pzdgsy-margin-right-default: ; */
+/*  --hui-pzdgsy-margin-bottom-default: ; */
+/*  --hui-pzdgsy-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-pzdgsy-padding-top-default: ; */
+/*  --hui-pzdgsy-padding-right-default: ; */
+/*  --hui-pzdgsy-padding-bottom-default: ; */
+/*  --hui-pzdgsy-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-pzdgsy-overflow-x-default: ; */
+/*  --hui-pzdgsy-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-pzdgsy-flex-basis-default: ; */
+/*  --hui-pzdgsy-flex-direction-default: ; */
+/*  --hui-pzdgsy-flex-grow-default: ; */
+/*  --hui-pzdgsy-flex-shrink-default: ; */
+/*  --hui-pzdgsy-flex-wrap-default: ; */
+/*  --hui-pzdgsy-gap-default: ; */
+/*  --hui-pzdgsy-align-content-default: ; */
+/*  --hui-pzdgsy-justify-content-default: ; */
+/*  --hui-pzdgsy-align-items-default: ; */
+  /* TEXT */
+/*  --hui-pzdgsy-direction-default: ; */
+/*  --hui-pzdgsy-font-family-default: ; */
+/*  --hui-pzdgsy-font-size-default: ; */
+/*  --hui-pzdgsy-font-stretch-default: ; */
+/*  --hui-pzdgsy-font-style-default: ; */
+/*  --hui-pzdgsy-font-weight-default: ; */
+/*  --hui-pzdgsy-letter-spacing-default: ; */
+/*  --hui-pzdgsy-line-height-default: ; */
+/*  --hui-pzdgsy-text-align-default: ; */
+/*  --hui-pzdgsy-text-align-last-default: ; */
+/*  --hui-pzdgsy-text-decoration-color-default: ; */
+/*  --hui-pzdgsy-text-decoration-line-default: ; */
+/*  --hui-pzdgsy-text-decoration-style-default: ; */
+/*  --hui-pzdgsy-text-decoration-thickness-default: ; */
+/*  --hui-pzdgsy-text-indent-default: ; */
+/*  --hui-pzdgsy-text-overflow-default: ; */
+/*  --hui-pzdgsy-text-shadow-default: ; */
+/*  --hui-pzdgsy-text-size-adjust-default: ; */
+/*  --hui-pzdgsy-text-transform-default: ; */
+/*  --hui-pzdgsy-text-wrap-default: ; */
+/*  --hui-pzdgsy-vertical-align-default: ; */
+/*  --hui-pzdgsy-white-space-collapse-default: ; */
+/*  --hui-pzdgsy-word-break-default: ; */
+/*  --hui-pzdgsy-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-pzdgsy-visibility-default: ; */
+/*  --hui-pzdgsy-color-default: ; */
+/*  --hui-pzdgsy-background-attachment-default: ; */
+/*  --hui-pzdgsy-background-clip-default: ; */
+/*  --hui-pzdgsy-background-color-default: ; */
+/*  --hui-pzdgsy-background-image-default: ; */
+/*  --hui-pzdgsy-background-origin-default: ; */
+/*  --hui-pzdgsy-background-position-x-default: ; */
+/*  --hui-pzdgsy-background-position-y-default: ; */
+/*  --hui-pzdgsy-background-repeat-default: ; */
+/*  --hui-pzdgsy-background-size-default: ; */
+/*  --hui-pzdgsy-border-bottom-color-default: ; */
+/*  --hui-pzdgsy-border-bottom-style-default: ; */
+/*  --hui-pzdgsy-border-bottom-width-default: ; */
+/*  --hui-pzdgsy-border-bottom-left-radius-default: ; */
+/*  --hui-pzdgsy-border-bottom-right-radius-default: ; */
+/*  --hui-pzdgsy-border-image-outset-default: ; */
+/*  --hui-pzdgsy-border-image-repeat-default: ; */
+/*  --hui-pzdgsy-border-image-slice-default: ; */
+/*  --hui-pzdgsy-border-image-source-default: ; */
+/*  --hui-pzdgsy-border-image-width-default: ; */
+/*  --hui-pzdgsy-border-left-color-default: ; */
+/*  --hui-pzdgsy-border-left-style-default: ; */
+/*  --hui-pzdgsy-border-left-width-default: ; */
+/*  --hui-pzdgsy-border-right-color-default: ; */
+/*  --hui-pzdgsy-border-right-style-default: ; */
+/*  --hui-pzdgsy-border-right-width-default: ; */
+/*  --hui-pzdgsy-border-top-color-default: ; */
+/*  --hui-pzdgsy-border-top-style-default: ; */
+/*  --hui-pzdgsy-border-top-width-default: ; */
+/*  --hui-pzdgsy-border-top-left-radius-default: ; */
+/*  --hui-pzdgsy-border-top-right-radius-default: ; */
+/*  --hui-pzdgsy-box-shadow-default: ; */
+/*  --hui-pzdgsy-cursor-default: ; */
+/*  --hui-pzdgsy-outline-color-default: ; */
+/*  --hui-pzdgsy-outline-offset-default: ; */
+/*  --hui-pzdgsy-outline-style-default: ; */
+/*  --hui-pzdgsy-outline-width-default: ; */
+/*  --hui-pzdgsy-scrollbar-color-default: ; */
+/*  --hui-pzdgsy-scrollbar-gutter-default: ; */
+/*  --hui-pzdgsy-scrollbar-width-default: ; */
+}
+[data-hui=Checkbox] > input:focus {
+  /* LAYOUT-POSITION */
+/*  --hui-pzdgsy-position-default: ; */
+/*  --hui-pzdgsy-top-default: ; */
+/*  --hui-pzdgsy-right-default: ; */
+/*  --hui-pzdgsy-bottom-default: ; */
+/*  --hui-pzdgsy-left-default: ; */
+/*  --hui-pzdgsy-z-index-default: ; */
+/*  --hui-pzdgsy-float-default: ; */
+/*  --hui-pzdgsy-clear-default: ; */
+/*  --hui-pzdgsy-align-self-default: ; */
+/*  --hui-pzdgsy-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-pzdgsy-box-sizing-default: ; */
+/*  --hui-pzdgsy-height-default: ; */
+/*  --hui-pzdgsy-max-height-default: ; */
+/*  --hui-pzdgsy-min-height-default: ; */
+/*  --hui-pzdgsy-width-default: ; */
+/*  --hui-pzdgsy-max-width-default: ; */
+/*  --hui-pzdgsy-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-pzdgsy-margin-top-default: ; */
+/*  --hui-pzdgsy-margin-right-default: ; */
+/*  --hui-pzdgsy-margin-bottom-default: ; */
+/*  --hui-pzdgsy-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-pzdgsy-padding-top-default: ; */
+/*  --hui-pzdgsy-padding-right-default: ; */
+/*  --hui-pzdgsy-padding-bottom-default: ; */
+/*  --hui-pzdgsy-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-pzdgsy-overflow-x-default: ; */
+/*  --hui-pzdgsy-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-pzdgsy-flex-basis-default: ; */
+/*  --hui-pzdgsy-flex-direction-default: ; */
+/*  --hui-pzdgsy-flex-grow-default: ; */
+/*  --hui-pzdgsy-flex-shrink-default: ; */
+/*  --hui-pzdgsy-flex-wrap-default: ; */
+/*  --hui-pzdgsy-gap-default: ; */
+/*  --hui-pzdgsy-align-content-default: ; */
+/*  --hui-pzdgsy-justify-content-default: ; */
+/*  --hui-pzdgsy-align-items-default: ; */
+  /* TEXT */
+/*  --hui-pzdgsy-direction-default: ; */
+/*  --hui-pzdgsy-font-family-default: ; */
+/*  --hui-pzdgsy-font-size-default: ; */
+/*  --hui-pzdgsy-font-stretch-default: ; */
+/*  --hui-pzdgsy-font-style-default: ; */
+/*  --hui-pzdgsy-font-weight-default: ; */
+/*  --hui-pzdgsy-letter-spacing-default: ; */
+/*  --hui-pzdgsy-line-height-default: ; */
+/*  --hui-pzdgsy-text-align-default: ; */
+/*  --hui-pzdgsy-text-align-last-default: ; */
+/*  --hui-pzdgsy-text-decoration-color-default: ; */
+/*  --hui-pzdgsy-text-decoration-line-default: ; */
+/*  --hui-pzdgsy-text-decoration-style-default: ; */
+/*  --hui-pzdgsy-text-decoration-thickness-default: ; */
+/*  --hui-pzdgsy-text-indent-default: ; */
+/*  --hui-pzdgsy-text-overflow-default: ; */
+/*  --hui-pzdgsy-text-shadow-default: ; */
+/*  --hui-pzdgsy-text-size-adjust-default: ; */
+/*  --hui-pzdgsy-text-transform-default: ; */
+/*  --hui-pzdgsy-text-wrap-default: ; */
+/*  --hui-pzdgsy-vertical-align-default: ; */
+/*  --hui-pzdgsy-white-space-collapse-default: ; */
+/*  --hui-pzdgsy-word-break-default: ; */
+/*  --hui-pzdgsy-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-pzdgsy-visibility-default: ; */
+/*  --hui-pzdgsy-color-default: ; */
+/*  --hui-pzdgsy-background-attachment-default: ; */
+/*  --hui-pzdgsy-background-clip-default: ; */
+/*  --hui-pzdgsy-background-color-default: ; */
+/*  --hui-pzdgsy-background-image-default: ; */
+/*  --hui-pzdgsy-background-origin-default: ; */
+/*  --hui-pzdgsy-background-position-x-default: ; */
+/*  --hui-pzdgsy-background-position-y-default: ; */
+/*  --hui-pzdgsy-background-repeat-default: ; */
+/*  --hui-pzdgsy-background-size-default: ; */
+/*  --hui-pzdgsy-border-bottom-color-default: ; */
+/*  --hui-pzdgsy-border-bottom-style-default: ; */
+/*  --hui-pzdgsy-border-bottom-width-default: ; */
+/*  --hui-pzdgsy-border-bottom-left-radius-default: ; */
+/*  --hui-pzdgsy-border-bottom-right-radius-default: ; */
+/*  --hui-pzdgsy-border-image-outset-default: ; */
+/*  --hui-pzdgsy-border-image-repeat-default: ; */
+/*  --hui-pzdgsy-border-image-slice-default: ; */
+/*  --hui-pzdgsy-border-image-source-default: ; */
+/*  --hui-pzdgsy-border-image-width-default: ; */
+/*  --hui-pzdgsy-border-left-color-default: ; */
+/*  --hui-pzdgsy-border-left-style-default: ; */
+/*  --hui-pzdgsy-border-left-width-default: ; */
+/*  --hui-pzdgsy-border-right-color-default: ; */
+/*  --hui-pzdgsy-border-right-style-default: ; */
+/*  --hui-pzdgsy-border-right-width-default: ; */
+/*  --hui-pzdgsy-border-top-color-default: ; */
+/*  --hui-pzdgsy-border-top-style-default: ; */
+/*  --hui-pzdgsy-border-top-width-default: ; */
+/*  --hui-pzdgsy-border-top-left-radius-default: ; */
+/*  --hui-pzdgsy-border-top-right-radius-default: ; */
+/*  --hui-pzdgsy-box-shadow-default: ; */
+/*  --hui-pzdgsy-cursor-default: ; */
+/*  --hui-pzdgsy-outline-color-default: ; */
+/*  --hui-pzdgsy-outline-offset-default: ; */
+/*  --hui-pzdgsy-outline-style-default: ; */
+/*  --hui-pzdgsy-outline-width-default: ; */
+/*  --hui-pzdgsy-scrollbar-color-default: ; */
+/*  --hui-pzdgsy-scrollbar-gutter-default: ; */
+/*  --hui-pzdgsy-scrollbar-width-default: ; */
+}

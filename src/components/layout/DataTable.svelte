@@ -4,8 +4,6 @@
   import Container from "../Container.svelte"
   import { isObject, checkEmpty } from "../../helpers.js"
 
-  import { onMount, tick } from "svelte"
-
   export let active = null
   export let readonly = null
   export let disabled = null
