@@ -167,12 +167,11 @@
   />
 
   {#if !checkEmpty(options) && dropdownOpened}
-    <!-- <pre>{JSON.stringify(options)}</pre> -->
     <Dropdown
       {options}
       {selected}
+      {filter}
       on:select={select}
-      filter={filter}
       root={filterInput?.parentElement}
       active={dropdownOpened}
     />

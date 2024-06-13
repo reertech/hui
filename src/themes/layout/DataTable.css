@@ -57,7 +57,7 @@
   --hui-gqdxgs-background-color: var(--hui-unua-color-plus1);
 }
 [data-hui=DataTable] > tbody {
-  --hui-fgrqpr-min-height: calc(var(--hui-default-size) * 10);
+  --hui-fgrqpr-min-height: calc(var(--hui-default-size) * 15);
   --hui-fgrqpr-overflow-y: auto;
   --hui-fgrqpr-scrollbar-gutter: stable;
   --hui-fgrqpr-border-bottom-width: var(--hui-unua-border-width);

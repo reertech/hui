@@ -82,7 +82,7 @@
 
   const calcOpenDir = () => {
     const offset = calcCutParentOffset(rootEl)
-    if (!offset) return dir = null; height = null
+    if (!offset) return dir = height = null
 
     if (offset.bottom >= offset.top) {
       height = offset.bottom - 10
@@ -105,9 +105,9 @@
     {valid}
     {invalid}
     {classes}
-  {bg}
-  {margin}
-  {padding}
+    {bg}
+    {margin}
+    {padding}
     {idx}
     {position}
     {scrollX}
