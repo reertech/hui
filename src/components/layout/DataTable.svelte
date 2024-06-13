@@ -166,17 +166,23 @@
    > tbody,
    > thead,
    > * > tr = common, grid, display;
-   > tbody = min-height, overflow-y, scrollbar-gutter;
    > tbody > tr > td = common, flex, display;
    > thead > tr > th = common, flex, display;
    > tbody > tr:nth-child(odd),
    > tbody > tr:nth-child(odd) > td = background-color;
+   > tbody =
+     min-height,
+     overflow-y,
+     scrollbar-gutter,
+     border-bottom-width,
+     border-bottom-style,
+     border-bottom-color;
    > tbody > tr > td + td =
-    border-left-width,
-    border-left-style,
-    border-left-color;
+     border-left-width,
+     border-left-style,
+     border-left-color;
    > tbody > tr + tr,  > thead + tbody =
-    border-top-width,
-    border-top-style,
-    border-top-color;
+     border-top-width,
+     border-top-style,
+     border-top-color;
 -->

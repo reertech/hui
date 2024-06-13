@@ -258,11 +258,6 @@
   /* DISPLAY */
   display: var(--hui-wsglhu-display, block);
 }
-[data-hui=DataTable] > tbody {
-  min-height: var(--hui-fgrqpr-min-height, initial);
-  overflow-y: var(--hui-fgrqpr-overflow-y, initial);
-  scrollbar-gutter: var(--hui-fgrqpr-scrollbar-gutter, initial);
-}
 [data-hui=DataTable] > tbody > tr > td {
   /* LAYOUT-POSITION */
   position: var(--hui-avzraa-position, static);
@@ -494,6 +489,14 @@
 [data-hui=DataTable] > tbody > tr:nth-child(odd),
 [data-hui=DataTable] > tbody > tr:nth-child(odd) > td {
   background-color: var(--hui-gqdxgs-background-color, initial);
+}
+[data-hui=DataTable] > tbody {
+  min-height: var(--hui-fgrqpr-min-height, initial);
+  overflow-y: var(--hui-fgrqpr-overflow-y, initial);
+  scrollbar-gutter: var(--hui-fgrqpr-scrollbar-gutter, initial);
+  border-bottom-width: var(--hui-fgrqpr-border-bottom-width, initial);
+  border-bottom-style: var(--hui-fgrqpr-border-bottom-style, initial);
+  border-bottom-color: var(--hui-fgrqpr-border-bottom-color, initial);
 }
 [data-hui=DataTable] > tbody > tr > td + td {
   border-left-width: var(--hui-ozatyc-border-left-width, initial);
