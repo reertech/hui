@@ -34,6 +34,7 @@ export default (value) => {
     clear: () => update(s => (s.clear(), s)),
     delete: (val) => update(s => (s.delete(val), s)),
     has: (val) => get(s).has(val),
+    size: () => get(s).size(),
     keys: () => get(s).keys(),
     values: () => get(s).values(),
     entries: () => get(s).entries(),

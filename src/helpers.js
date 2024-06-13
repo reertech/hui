@@ -19,12 +19,20 @@ export const checkEmpty = (value) => {
 
 export const checkNotEmpty = (value) => !checkEmpty(value)
 
-export const isEqual = (a, b) => a === b || [a, b].every(checkEmpty)
+export const isEqualArrays = (a, b) => {
+  if (![a, b].every(isArray)) return false
+  if (a.length !== b.length) return false
+
+  return a.every((v, i) => v === b.at(i))
+}
+
+export const isEqual = (a, b) => a === b || 
+  [a, b].every(checkEmpty) || isEqualArrays(a, b)
 
 export const buildFuzzyRegex = (string, params = "i") => {
   if (!isString(string) || checkEmpty(string)) return null
 
-  return new RegExp("\\b" + string.replace(/\s+/, "\\b"), params)
+  return new RegExp(string.replace(/\s+/, " "), params)
 }
 
 export const arrayToMap = (array, value) => {
@@ -103,13 +111,27 @@ export const formatNumber = (value, def = null) => {
 }
 
 export const formatBoolean = (value, def = null) => {
-  return isBoolean(value) ? def : value.toString()
+  return isBoolean(value) ? def : value
+}
+
+export const formatString = (value, def = null) => {
+  switch (typeof value) {
+    case "number": return value.toString()
+    case "boolean": return value.toString()
+    case "string": return checkEmpty(value) ? def : value
+    default: return def
+  }
 }
 
 export const formatValue = (value, type, def = null) => {
-  switch (true) {
-    case type === "number": return formatNumber(value, def)
-    case isBoolean(value): return formatBoolean(value, def)
+  if (isArray(value)) {
+    return value.map(v => formatValue(v, type, def)).filter(checkNotEmpty)
+  }
+
+  switch (type) {
+    case "number": return formatNumber(value, def)
+    case "boolean": return formatBoolean(value, def)
+    case "string": return formatString(value, def)
     default: return value
   }
 }

@@ -49,5 +49,6 @@ export { default as IconChevronRight } from "./icons/ChevronRight.svelte"
 
 export { default as persist } from "./stores/persist.js"
 export { default as setStore } from "./stores/set.js"
+export { default as mapStore } from "./stores/map.js"
 export { default as hui } from "./containers/action.js"
 export * from "./helpers.js"
