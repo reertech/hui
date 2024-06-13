@@ -98,6 +98,10 @@
     if (!isMulti) filterInput.focus()
   }
 
+  const enter = (e) => {
+    if (e.code === "Enter") dispatch("enter")
+  }
+
   /* $: { select(filter) } ??? */
 </script>
 
@@ -159,6 +163,7 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
+    on:keyup={enter}
   />
 
   {#if !checkEmpty(options) && dropdownOpened}

@@ -70,5 +70,5 @@
   | > button:hover
   | > button:active
   | > button:focus = common;
-  > button > svg = common, stroke, stroke-width;
+  > button > svg = common, display, stroke, stroke-width;
 -->

@@ -56,14 +56,18 @@
 [data-hui=Button] > button:focus {
   /* APPERANCE */
   --hui-zsnfqz-outline-color: var(--hui-default-border-color);
-  --hui-zsnfqz-outline-style: solid;
+  --hui-zsnfqz-outline-style: none;
   --hui-zsnfqz-outline-width: var(--hui-default-border-width);
 }
 [data-hui=Button] > button > svg {
   /* LAYOUT-SIZING */
   --hui-fbaxjl-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height));
+  /* TEXT */
+  --hui-fbaxjl-vertical-align: middle;
   /* APPERANCE */
   --hui-fbaxjl-cursor: pointer;
+  /* DISPLAY */
+  --hui-fbaxjl-display: inline-block;
   --hui-fbaxjl-stroke: var(--hui-default-color-text);
   --hui-fbaxjl-stroke-width: var(--hui-default-border-width);
 }
@@ -264,7 +268,7 @@
 }
 [data-hui=Button][data-hui-theme~=small] > button > svg {
   /* LAYOUT-SIZING */
-  --hui-fbaxjl-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height));
+  --hui-fbaxjl-height: var(--hui-default-size);
 }
 [data-hui=Button][data-hui-theme~=small][data-hui-active] > button {
 }
@@ -995,6 +999,8 @@
 /*  --hui-fbaxjl-scrollbar-color-default: ; */
 /*  --hui-fbaxjl-scrollbar-gutter-default: ; */
 /*  --hui-fbaxjl-scrollbar-width-default: ; */
+  /* DISPLAY */
+/*  --hui-fbaxjl-display-default: ; */
 /*  --hui-fbaxjl-stroke-default: ; */
 /*  --hui-fbaxjl-stroke-width-default: ; */
 }

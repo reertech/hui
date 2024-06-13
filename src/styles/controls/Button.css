@@ -222,6 +222,8 @@
   scrollbar-color: var(--hui-fbaxjl-scrollbar-color, #bbb #eee);
   scrollbar-gutter: var(--hui-fbaxjl-scrollbar-gutter, auto);
   scrollbar-width: var(--hui-fbaxjl-scrollbar-width, thin);
+  /* DISPLAY */
+  display: var(--hui-fbaxjl-display, block);
   stroke: var(--hui-fbaxjl-stroke, initial);
   stroke-width: var(--hui-fbaxjl-stroke-width, initial);
 }

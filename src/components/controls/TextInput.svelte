@@ -56,13 +56,16 @@
     value = e.target.value
     if (checkEmpty(value)) value = nullValue
 
-    dispatch(e.type, value)
+    dispatch("change", value)
   }
 
   const select = (e) => change({
-    target: { value: e.detail },
-    type: "change"
+    target: { value: e.detail }
   })
+
+  const enter = (e) => {
+    if (e.code === "Enter") dispatch("enter")
+  }
 </script>
 
 <Container
@@ -95,6 +98,7 @@
   <input
     {name}
     on:click
+    on:input
     on:input={change}
     on:change={change}
     {value}
@@ -109,6 +113,7 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
+    on:keyup={enter}
   />
   {#if suffix}
     <Strong>

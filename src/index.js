@@ -39,6 +39,13 @@ export { default as Swapper } from "./components/controls/Swapper.svelte"
 
 export { default as IconSquare } from "./icons/Square.svelte"
 export { default as IconCheckSquare } from "./icons/CheckSquare.svelte"
+export { default as IconCheck } from "./icons/Check.svelte"
+export { default as IconX } from "./icons/X.svelte"
+export { default as IconRotateLeft } from "./icons/RotateLeft.svelte"
+export { default as IconSettings } from "./icons/Settings.svelte"
+export { default as IconArrowOutCircle } from "./icons/ArrowOutCircle.svelte"
+export { default as IconChevronLeft } from "./icons/ChevronLeft.svelte"
+export { default as IconChevronRight } from "./icons/ChevronRight.svelte"
 
 export { default as persist } from "./stores/persist.js"
 export { default as setStore } from "./stores/set.js"

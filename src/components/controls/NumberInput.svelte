@@ -42,7 +42,11 @@
     value = e.target.valueAsNumber
     if (isNaN(value)) value = nullValue
 
-    dispatch(e.type, value)
+    dispatch("change", value)
+  }
+
+  const enter = (e) => {
+    if (e.code === "Enter") dispatch("enter")
   }
 </script>
 
@@ -81,6 +85,7 @@
     on:click
     on:focus
     on:blur
+    on:input
     on:input={change}
     on:change={change}
     {value}
@@ -91,6 +96,7 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
+    on:keyup={enter}
   />
   {#if suffix}
     <Strong>
