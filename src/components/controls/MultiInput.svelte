@@ -2,11 +2,11 @@
   import "../../themes/controls/MultiInput.css"
   import "../../styles/controls/MultiInput.css"
   import Container from "../Container.svelte"
-  import Strong from "../typography/Strong.svelte"
+  import Badge from "./Badge.svelte"
   import Dropdown from "./Dropdown.svelte"
 
-  import { checkEmpty } from "../../helpers.js"
-  import { createEventDispatcher } from "svelte"
+  import { checkEmpty, checkNotEmpty, isString } from "../../helpers.js"
+  import { tick, createEventDispatcher } from "svelte"
   const dispatch = createEventDispatcher()
 
   export let active = null
@@ -39,11 +39,24 @@
   export let options = null
   export let nullValue = null
   export let maxValues = 2
+  export let separator = null
 
-  let value = null
   let dropdownOpened = false
   let closeTimer = null
   let input = null
+  let addNew = true
+
+  $: valuesArray = [separator, values].every(isString)
+    ? values.split(separator).map(s => s.trim()).filter(checkNotEmpty)
+    : Array.isArray(values) ? values : []
+
+  $: selectedArray = addNew ? valuesArray : valuesArray.slice(0, -1)
+  $: lastIdx = valuesArray.length && valuesArray.length - 1
+  $: value = addNew ? nullValue : valuesArray.at(lastIdx) || nullValue
+  $: valuesMap = new Map(valuesArray.map((v, i) => [i, v]))
+  $: maxValuesInt = +maxValues || 2
+  $: isFull = valuesMap.size >= maxValuesInt
+  $: isEmptyValue = checkEmpty(value) || value === nullValue
 
   const open = () => {
     clearTimeout(closeTimer)
@@ -55,24 +68,66 @@
     setTimeout(() => dropdownOpened = false, 200)
 
   const change = (e) => {
-    value = e.target.value
-    if (checkEmpty(value)) value = nullValue
+    const val = e.target.value
 
-    dispatch("change", value)
+    valuesMap.set(lastIdx + (addNew ? 1 : 0), val)
+
+    commit()
+
+    if (checkEmpty(val)) add()
   }
 
-  const select = (e) => change({
-    target: { value: e.detail }
-  })
+  const commit = () => {
+    const start = valuesMap.size <= maxValuesInt ? 0
+      : valuesMap.size - maxValuesInt
+
+    const vals = [...valuesMap.values()].filter(checkNotEmpty).slice(start)
+
+    values = isString(separator) ? vals.join(separator) : vals
+    addNew = false
+
+    dispatch("change", values)
+  }
+
+  const focus = async () => {
+    await tick()
+    input.focus()
+  }
+
+  const remove = (idx) => {
+    valuesMap.delete(idx)
+
+    commit()
+    add()
+  }
+
+  const add = () => {
+    addNew = true
+    focus()
+  }
+
+  const removeNew = () => {
+    if (!isEmptyValue || !addNew) return
+    addNew = false
+    commit()
+    return false
+  }
+
+  const select = (e) => {
+    change({ target: { value: e.detail }})
+    add()
+  }
 
   const enter = (e) => {
-    if (e.code === "Enter") dispatch("enter")
+    if (e.code === "Enter") {
+      add()
+      dispatch("enter")
+    } else if (e.key === "Backspace") {
+      removeNew()
+    } else if (e.key === separator) {
+      add()
+    }
   }
-
-  $: valuesArray = Array.isArray(values) ? values : []
-  $: valuesSet = new Set(selectedArray)
-  $: maxValuesInt = +maxValues || 2
-  $: isFull = valuesSet.size >= maxValuesInt
 </script>
 
 <Container
@@ -97,11 +152,15 @@
   {grid}
   {flex}
 >
-  {#if prefix}
-    <Strong>
-      {prefix}
-    </Strong>
-  {/if}
+  {#each selectedArray as value, idx}
+    <Badge
+      tag="button"
+      theme="small"
+      on:click={() => remove(idx)}
+    >
+      {value}
+    </Badge>
+  {/each}
   <input
     {name}
     on:click
@@ -120,23 +179,23 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
-    on:keyup={enter}
+    on:keydown={enter}
+    hidden={isFull && isEmptyValue}
   />
-  {#if suffix}
-    <Strong>
-      {suffix}
-    </Strong>
-  {/if}
   {#if !checkEmpty(options) && dropdownOpened}
-    <!-- <pre>{JSON.stringify(options)}</pre> -->
     <Dropdown
       {options}
-      selected={value}
+      selected={valuesArray}
       on:select={select}
       filter={value}
       root={input?.parentElement}
       active={dropdownOpened}
     />
+  {/if}
+  {#if !isEmptyValue}
+    <button on:click={add}>
+      add
+    </button>
   {/if}
 </Container>
 

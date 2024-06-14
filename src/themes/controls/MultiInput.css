@@ -1,8 +1,71 @@
 [data-hui=MultiInput] {
+  /* LAYOUT-POSITION */
+  --hui-lilprs-position: relative;
+  /* LAYOUT-SIZING */
+  --hui-lilprs-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-unua-border-width)) * 2);
+  --hui-lilprs-width: 100%;
+  --hui-lilprs-max-width: 50vw;
+  --hui-lilprs-min-width: 200px;
+  /* LAYOUT-PADDING */
+  --hui-lilprs-padding-top: var(--hui-default-spacer-5);
+  --hui-lilprs-padding-right: var(--hui-default-spacer-6);
+  --hui-lilprs-padding-bottom: var(--hui-default-spacer-5);
+  --hui-lilprs-padding-left: var(--hui-default-spacer-6);
+  /* LAYOUT-OVERFLOW */
+  --hui-lilprs-overflow-x: visible;
+  --hui-lilprs-overflow-y: visible;
+  /* LAYOUT-FLEX */
+  --hui-lilprs-flex-direction: row;
+  --hui-lilprs-flex-wrap: wrap;
+  --hui-lilprs-gap: var(--hui-default-spacer-5);
+  --hui-lilprs-align-content: center;
+  --hui-lilprs-justify-content: stretch;
+  --hui-lilprs-align-items: center;
+  /* APPERANCE */
+  --hui-lilprs-background-color: var(--hui-default-background-color);
+  --hui-lilprs-background-image: none;
+  --hui-lilprs-border-bottom-color: var(--hui-default-border-color);
+  --hui-lilprs-border-bottom-style: var(--hui-default-border-style);
+  --hui-lilprs-border-bottom-width: var(--hui-default-border-width);
+  --hui-lilprs-border-bottom-left-radius: var(--hui-default-border-radius-1);
+  --hui-lilprs-border-bottom-right-radius: var(--hui-default-border-radius-1);
+  --hui-lilprs-border-left-color: var(--hui-default-border-color);
+  --hui-lilprs-border-left-style: var(--hui-default-border-style);
+  --hui-lilprs-border-left-width: var(--hui-default-border-width);
+  --hui-lilprs-border-right-color: var(--hui-default-border-color);
+  --hui-lilprs-border-right-style: var(--hui-default-border-style);
+  --hui-lilprs-border-right-width: var(--hui-default-border-width);
+  --hui-lilprs-border-top-color: var(--hui-default-border-color);
+  --hui-lilprs-border-top-style: var(--hui-default-border-style);
+  --hui-lilprs-border-top-width: var(--hui-default-border-width);
+  --hui-lilprs-border-top-left-radius: var(--hui-default-border-radius-1);
+  --hui-lilprs-border-top-right-radius: var(--hui-default-border-radius-1);
+  --hui-lilprs-box-shadow: var(--hui-tria-box-shadow);
+  /* DISPLAY */
+  --hui-lilprs-display: flex;
+  --hui-lilprs-gap: var(--hui-default-spacer-5);
 }
 [data-hui=MultiInput] > input {
+  /* LAYOUT-SIZING */
+  --hui-aqailr-max-width: 100%;
+  /* LAYOUT-PADDING */
+  --hui-aqailr-padding-top: calc(var(--hui-default-spacer-3) + var(--hui-default-border-width) / 2);
+  --hui-aqailr-padding-right: var(--hui-default-spacer-1);
+  --hui-aqailr-padding-bottom: calc(var(--hui-default-spacer-3) + var(--hui-default-border-width) / 2);
+  --hui-aqailr-padding-left: var(--hui-default-spacer-1);
+  /* LAYOUT-FLEX */
+  --hui-aqailr-flex-grow: 2;
+  /* TEXT */
+  --hui-aqailr-font-size: var(--hui-default-font-size);
+  --hui-aqailr-font-weight: var(--hui-default-font-weight);
+  --hui-aqailr-line-height: var(--hui-default-line-height);
+  --hui-aqailr-text-align: center;
+  /* APPERANCE */
+  --hui-aqailr-color: var(--hui-default-color-text);
 }
 [data-hui=MultiInput] > input::placeholder {
+  --hui-fyvwyk-font-size: var(--hui-default-size-0);
+  --hui-fyvwyk-text-align: center;
 }
 [data-hui=MultiInput][data-hui-active] {
 }

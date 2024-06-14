@@ -66,6 +66,7 @@ export const fetchCutParent = (el) => {
 
   const overflowY = getComputedStyle(el).overflowY
 
+  // console.log(overflowY, el)
   if (overflowY !== "visible") return el
 
   return fetchCutParent(el.parentElement)
