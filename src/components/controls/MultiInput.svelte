@@ -34,8 +34,6 @@
   export let placeholder = null
   export let values = null
   export let maxLength = null
-  export let prefix = null
-  export let suffix = null
   export let options = null
   export let nullValue = null
   export let maxValues = 2
@@ -44,15 +42,16 @@
   let dropdownOpened = false
   let closeTimer = null
   let input = null
-  let addNew = true
+  let addMode = true
+  let removeMode = false
 
   $: valuesArray = [separator, values].every(isString)
     ? values.split(separator).map(s => s.trim()).filter(checkNotEmpty)
     : Array.isArray(values) ? values : []
 
-  $: selectedArray = addNew ? valuesArray : valuesArray.slice(0, -1)
+  $: selectedArray = addMode ? valuesArray : valuesArray.slice(0, -1)
   $: lastIdx = valuesArray.length && valuesArray.length - 1
-  $: value = addNew ? nullValue : valuesArray.at(lastIdx) || nullValue
+  $: value = addMode ? nullValue : valuesArray.at(lastIdx) || nullValue
   $: valuesMap = new Map(valuesArray.map((v, i) => [i, v]))
   $: maxValuesInt = +maxValues || 2
   $: isFull = valuesMap.size >= maxValuesInt
@@ -69,12 +68,15 @@
 
   const change = (e) => {
     const val = e.target.value
+    const addable = val.endsWith(separator)
+    const isEmpty = checkEmpty(val)
 
-    valuesMap.set(lastIdx + (addNew ? 1 : 0), val)
+    if (isEmpty) removeMode = false
+
+    if (!addable) valuesMap.set(lastIdx + (addMode ? 1 : 0), val)
 
     commit()
-
-    if (checkEmpty(val)) add()
+    switchAdd(addable || isEmpty)
   }
 
   const commit = () => {
@@ -84,13 +86,13 @@
     const vals = [...valuesMap.values()].filter(checkNotEmpty).slice(start)
 
     values = isString(separator) ? vals.join(separator) : vals
-    addNew = false
 
     dispatch("change", values)
   }
 
   const focus = async () => {
     await tick()
+    open()
     input.focus()
   }
 
@@ -98,37 +100,39 @@
     valuesMap.delete(idx)
 
     commit()
-    add()
+    switchAdd()
   }
 
-  const add = () => {
-    addNew = true
+  const switchAdd = (val = true) => {
+    addMode = val
     focus()
   }
 
   const removeNew = () => {
-    if (!isEmptyValue || !addNew) return
-    addNew = false
-    commit()
-    return false
+    if (!isEmptyValue || !addMode) return
+    if (removeMode) switchAdd(false)
+    else removeMode = true
   }
 
   const select = (e) => {
     change({ target: { value: e.detail }})
-    add()
+    switchAdd()
   }
 
   const enter = (e) => {
     if (e.code === "Enter") {
-      add()
+      switchAdd()
       dispatch("enter")
     } else if (e.key === "Backspace") {
       removeNew()
-    } else if (e.key === separator) {
-      add()
     }
   }
 </script>
+
+addMode: {JSON.stringify(addMode)}
+value: {JSON.stringify(value)}
+values: {JSON.stringify(values)}
+valuesArray: {JSON.stringify(valuesArray)}
 
 <Container
   hui="MultiInput"
@@ -179,7 +183,7 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
-    on:keydown={enter}
+    on:keyup={enter}
     hidden={isFull && isEmptyValue}
   />
   {#if !checkEmpty(options) && dropdownOpened}
@@ -193,7 +197,7 @@
     />
   {/if}
   {#if !isEmptyValue}
-    <button on:click={add}>
+    <button on:click={switchAdd}>
       add
     </button>
   {/if}
