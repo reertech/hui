@@ -6,7 +6,7 @@
   import Dropdown from "./Dropdown.svelte"
 
   import { checkEmpty, checkNotEmpty, isString } from "../../helpers.js"
-  import { tick, createEventDispatcher } from "svelte"
+  import { createEventDispatcher } from "svelte"
   const dispatch = createEventDispatcher()
 
   export let active = null
@@ -90,8 +90,7 @@
     dispatch("change", values)
   }
 
-  const focus = async () => {
-    await tick()
+  const focus = () => {
     open()
     input.focus()
   }
@@ -128,11 +127,6 @@
     }
   }
 </script>
-
-addMode: {JSON.stringify(addMode)}
-value: {JSON.stringify(value)}
-values: {JSON.stringify(values)}
-valuesArray: {JSON.stringify(valuesArray)}
 
 <Container
   hui="MultiInput"

@@ -36,6 +36,7 @@
   export let colsFilter = {}
   export let showInactiveCols = false
   export let showFilteredCols = false
+  export let rowsIdxKey = null
 
   const buildWidth = (value) => {
     switch (typeof value) {
@@ -123,7 +124,9 @@
       {#if $$slots.trBefore}
         <slot name="trBefore" {rowIdx} {row} />
       {/if}
-      <tr>
+      <tr
+        data-hui-idx={rowsIdxKey ? row[rowsIdxKey] : null}
+      >
         {#if $$slots.tr}
           <slot name="tr" {rowIdx} {row} />
         {:else if $$slots.td}
