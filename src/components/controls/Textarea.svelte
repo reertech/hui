@@ -83,6 +83,7 @@
   {grid}
   {flex}
   {value}
+  {name}
 >
   <textarea
     {name}

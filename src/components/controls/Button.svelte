@@ -24,6 +24,7 @@
   let classes = null
   export { classes as class }
 
+  export let name = null
   export let text = "Click me!"
 </script>
 
@@ -47,8 +48,10 @@
   {scrollY}
   {grid}
   {flex}
+  {name}
 >
   <button
+    {name}
     on:click
     active={active || null}
     readonly={readonly || null}

@@ -149,6 +149,7 @@
   {scrollY}
   {grid}
   {flex}
+  {name}
 >
   {#each selectedArray as value, idx}
     <Badge

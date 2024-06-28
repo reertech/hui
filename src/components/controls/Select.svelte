@@ -30,7 +30,7 @@
   let classes = null
   export { classes as class }
 
-  export let name
+  export let name = null
   export let selected = []
   export let options = {}
   export let label = null
@@ -126,6 +126,7 @@
   {scrollY}
   {grid}
   {flex}
+  {name}
 >
   {#if label || $$slots.label}
     <legend>

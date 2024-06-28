@@ -32,10 +32,10 @@ const replace = (value, m) => {
 }
 
 const drop = (keys, m) => {
-  if (isArray(keys)) return m
+  if (!isArray(keys)) return m
 
   return m.update(m => {
-    keys.forEach(m.delete)
+    keys.forEach(m.delete.bind(m))
     return m
   })
 }

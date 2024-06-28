@@ -71,6 +71,7 @@
   {scrollY}
   {grid}
   {flex}
+  {name}
 >
   {#if prefix}
     <Strong>

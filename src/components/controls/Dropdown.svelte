@@ -120,10 +120,9 @@
     {#each filteredOptions as [value, label]}
       <option
         {value}
-        on:click={() => select(label)}
-      >
         {label}
-      </option>
+        on:click={() => select(label)}
+      />
     {/each}
   </Container>
 {/if}

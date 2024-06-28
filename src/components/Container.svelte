@@ -23,6 +23,7 @@
   export let scrollY = null
   export let scrollX = null
   export let value = null
+  export let name = null
 
   export let node = null
 
@@ -80,6 +81,7 @@
     data-hui-target={isTargeted ? target : null}
     data-hui-idx={idx ?? null}
     data-hui-value={value ?? null}
+    data-hui-name={name ?? null}
 
     data-hui-scroll-x={scrollX || null}
     data-hui-scroll-y={scrollY || null}
@@ -168,6 +170,7 @@
     data-hui-target={isTargeted ? target : null}
     data-hui-idx={idx ?? null}
     data-hui-value={value ?? null}
+    data-hui-name={name ?? null}
 
     data-hui-z={formatNumber(l.z)}
     data-hui-scroll-x={scrollX || null}
