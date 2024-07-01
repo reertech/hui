@@ -1,0 +1,65 @@
+<script>
+  // import "../styles/Overlay.css"
+  import Container from "./Container.svelte"
+
+  import { onMount } from "svelte"
+
+  export let tag = "div"
+  export let idx = null
+  export let flex = null
+  export let grid = null
+  export let fullscreen = false
+  export let top = fullscreen ? 0 : "auto"
+  export let right = fullscreen ? 0 : "auto"
+  export let bottom = fullscreen ? 0 : "auto"
+  export let left = fullscreen ? 0 : "auto"
+  export let inset = null
+  export let height = null
+  export let width = null
+  export let z = null
+  export let bg = null
+
+  let currentOverflow;
+
+  const fixBodyStyles = (isDestroy) => {
+    if (fullscreen && !isDestroy) {
+      currentOverflow = document.body.style.overflow
+      document.body.style.overflow = "hidden"
+    }
+
+    if (currentOverflow != null && !fullscreen || isDestroy) {
+      document.body.style.overflow = currentOverflow
+      currentOverflow = null
+    }
+  }
+
+  $: position = {
+    position: fullscreen ? "fixed" : "absolute",
+    top,
+    right,
+    bottom,
+    left,
+    inset,
+    z
+  }
+
+  $: size = { height, width }
+
+  onMount(() => {
+    fixBodyStyles()
+    return () => fixBodyStyles("destroy")
+  })
+</script>
+
+<Container
+  hui="Overlay"
+  {idx}
+  {tag}
+  {flex}
+  {grid}
+  {position}
+  {size}
+  {bg}
+>
+  <slot />
+</Container>

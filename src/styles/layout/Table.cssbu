@@ -1,0 +1,18 @@
+[data-hui=Table] > table {
+  display: grid;
+  grid-template-columns: repeat(1000, max-content);
+}
+[data-hui=Table] > table > thead,
+[data-hui=Table] > table > tbody,
+[data-hui=Table] > table > thead > tr,
+[data-hui=Table] > table > tbody > tr {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+}
+[data-hui=Table] > table > thead > tr > th,
+[data-hui=Table] > table > tbody > tr > td {
+  display: block;
+  overflow: auto;
+  border: 1px solid #777;
+}

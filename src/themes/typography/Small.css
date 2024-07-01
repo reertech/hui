@@ -1,0 +1,125 @@
+[data-hui=Small] {
+  /* TEXT */
+  --hui-wpcfwr-font-size: var(--hui-default-size-0);
+}
+[data-hui=Small][data-hui-active] {
+}
+[data-hui=Small][data-hui-disabled] {
+}
+[data-hui=Small][data-hui-readonly] {
+}
+[data-hui=Small][data-hui-valid] {
+}
+[data-hui=Small][data-hui-invalid] {
+}
+[data-hui=Small] {
+  /* LAYOUT-POSITION */
+/*  --hui-wpcfwr-position-default: ; */
+/*  --hui-wpcfwr-top-default: ; */
+/*  --hui-wpcfwr-right-default: ; */
+/*  --hui-wpcfwr-bottom-default: ; */
+/*  --hui-wpcfwr-left-default: ; */
+/*  --hui-wpcfwr-z-index-default: ; */
+/*  --hui-wpcfwr-float-default: ; */
+/*  --hui-wpcfwr-clear-default: ; */
+/*  --hui-wpcfwr-align-self-default: ; */
+/*  --hui-wpcfwr-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-wpcfwr-box-sizing-default: ; */
+/*  --hui-wpcfwr-height-default: ; */
+/*  --hui-wpcfwr-max-height-default: ; */
+/*  --hui-wpcfwr-min-height-default: ; */
+/*  --hui-wpcfwr-width-default: ; */
+/*  --hui-wpcfwr-max-width-default: ; */
+/*  --hui-wpcfwr-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-wpcfwr-margin-top-default: ; */
+/*  --hui-wpcfwr-margin-right-default: ; */
+/*  --hui-wpcfwr-margin-bottom-default: ; */
+/*  --hui-wpcfwr-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-wpcfwr-padding-top-default: ; */
+/*  --hui-wpcfwr-padding-right-default: ; */
+/*  --hui-wpcfwr-padding-bottom-default: ; */
+/*  --hui-wpcfwr-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-wpcfwr-overflow-x-default: ; */
+/*  --hui-wpcfwr-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-wpcfwr-flex-basis-default: ; */
+/*  --hui-wpcfwr-flex-direction-default: ; */
+/*  --hui-wpcfwr-flex-grow-default: ; */
+/*  --hui-wpcfwr-flex-shrink-default: ; */
+/*  --hui-wpcfwr-flex-wrap-default: ; */
+/*  --hui-wpcfwr-gap-default: ; */
+/*  --hui-wpcfwr-align-content-default: ; */
+/*  --hui-wpcfwr-justify-content-default: ; */
+/*  --hui-wpcfwr-align-items-default: ; */
+  /* TEXT */
+/*  --hui-wpcfwr-direction-default: ; */
+/*  --hui-wpcfwr-font-family-default: ; */
+/*  --hui-wpcfwr-font-size-default: ; */
+/*  --hui-wpcfwr-font-stretch-default: ; */
+/*  --hui-wpcfwr-font-style-default: ; */
+/*  --hui-wpcfwr-font-weight-default: ; */
+/*  --hui-wpcfwr-letter-spacing-default: ; */
+/*  --hui-wpcfwr-line-height-default: ; */
+/*  --hui-wpcfwr-text-align-default: ; */
+/*  --hui-wpcfwr-text-align-last-default: ; */
+/*  --hui-wpcfwr-text-decoration-color-default: ; */
+/*  --hui-wpcfwr-text-decoration-line-default: ; */
+/*  --hui-wpcfwr-text-decoration-style-default: ; */
+/*  --hui-wpcfwr-text-decoration-thickness-default: ; */
+/*  --hui-wpcfwr-text-indent-default: ; */
+/*  --hui-wpcfwr-text-overflow-default: ; */
+/*  --hui-wpcfwr-text-shadow-default: ; */
+/*  --hui-wpcfwr-text-size-adjust-default: ; */
+/*  --hui-wpcfwr-text-transform-default: ; */
+/*  --hui-wpcfwr-text-wrap-default: ; */
+/*  --hui-wpcfwr-vertical-align-default: ; */
+/*  --hui-wpcfwr-white-space-collapse-default: ; */
+/*  --hui-wpcfwr-word-break-default: ; */
+/*  --hui-wpcfwr-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-wpcfwr-visibility-default: ; */
+/*  --hui-wpcfwr-color-default: ; */
+/*  --hui-wpcfwr-background-attachment-default: ; */
+/*  --hui-wpcfwr-background-clip-default: ; */
+/*  --hui-wpcfwr-background-color-default: ; */
+/*  --hui-wpcfwr-background-image-default: ; */
+/*  --hui-wpcfwr-background-origin-default: ; */
+/*  --hui-wpcfwr-background-position-x-default: ; */
+/*  --hui-wpcfwr-background-position-y-default: ; */
+/*  --hui-wpcfwr-background-repeat-default: ; */
+/*  --hui-wpcfwr-background-size-default: ; */
+/*  --hui-wpcfwr-border-bottom-color-default: ; */
+/*  --hui-wpcfwr-border-bottom-style-default: ; */
+/*  --hui-wpcfwr-border-bottom-width-default: ; */
+/*  --hui-wpcfwr-border-bottom-left-radius-default: ; */
+/*  --hui-wpcfwr-border-bottom-right-radius-default: ; */
+/*  --hui-wpcfwr-border-image-outset-default: ; */
+/*  --hui-wpcfwr-border-image-repeat-default: ; */
+/*  --hui-wpcfwr-border-image-slice-default: ; */
+/*  --hui-wpcfwr-border-image-source-default: ; */
+/*  --hui-wpcfwr-border-image-width-default: ; */
+/*  --hui-wpcfwr-border-left-color-default: ; */
+/*  --hui-wpcfwr-border-left-style-default: ; */
+/*  --hui-wpcfwr-border-left-width-default: ; */
+/*  --hui-wpcfwr-border-right-color-default: ; */
+/*  --hui-wpcfwr-border-right-style-default: ; */
+/*  --hui-wpcfwr-border-right-width-default: ; */
+/*  --hui-wpcfwr-border-top-color-default: ; */
+/*  --hui-wpcfwr-border-top-style-default: ; */
+/*  --hui-wpcfwr-border-top-width-default: ; */
+/*  --hui-wpcfwr-border-top-left-radius-default: ; */
+/*  --hui-wpcfwr-border-top-right-radius-default: ; */
+/*  --hui-wpcfwr-box-shadow-default: ; */
+/*  --hui-wpcfwr-cursor-default: ; */
+/*  --hui-wpcfwr-outline-color-default: ; */
+/*  --hui-wpcfwr-outline-offset-default: ; */
+/*  --hui-wpcfwr-outline-style-default: ; */
+/*  --hui-wpcfwr-outline-width-default: ; */
+/*  --hui-wpcfwr-scrollbar-color-default: ; */
+/*  --hui-wpcfwr-scrollbar-gutter-default: ; */
+/*  --hui-wpcfwr-scrollbar-width-default: ; */
+}

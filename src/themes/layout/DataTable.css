@@ -1,0 +1,688 @@
+[data-hui=DataTable] {
+  /* APPERANCE */
+  --hui-xvhgjw-background-color: var(--hui-default-background-color);
+}
+[data-hui=DataTable] > tbody,
+[data-hui=DataTable] > thead,
+[data-hui=DataTable] > * > tr {
+  /* LAYOUT-SIZING */
+  --hui-wsglhu-min-width: 100%;
+  /* GRID */
+  --hui-wsglhu-grid-column-end: -1;
+  --hui-wsglhu-grid-column-start: 1;
+  --hui-wsglhu-grid-template-columns: subgrid;
+  /* DISPLAY */
+  --hui-wsglhu-display: grid;
+}
+[data-hui=DataTable] > tbody > tr > td {
+  /* LAYOUT-PADDING */
+  --hui-avzraa-padding-top: var(--hui-default-spacer-5);
+  --hui-avzraa-padding-right: var(--hui-default-spacer-5);
+  --hui-avzraa-padding-bottom: var(--hui-default-spacer-5);
+  --hui-avzraa-padding-left: var(--hui-default-spacer-5);
+  /* LAYOUT-FLEX */
+  --hui-avzraa-align-content: center;
+  --hui-avzraa-justify-content: center;
+  --hui-avzraa-align-items: center;
+  /* TEXT */
+  --hui-avzraa-font-size: var(--hui-default-size-0);
+  --hui-avzraa-font-weight: var(--hui-default-font-weight);
+  --hui-avzraa-line-height: var(--hui-default-line-height);
+  /* APPERANCE */
+  --hui-avzraa-color: var(--hui-default-color-text);
+  --hui-avzraa-background-color: var(--hui-default-background-color);
+  --hui-avzraa-background-image: none;
+  /* DISPLAY */
+  --hui-avzraa-display: flex;
+}
+[data-hui=DataTable] > thead > tr > th {
+  /* LAYOUT-PADDING */
+  --hui-yfagqg-padding-top: var(--hui-default-spacer-5);
+  --hui-yfagqg-padding-right: var(--hui-default-spacer-7);
+  --hui-yfagqg-padding-bottom: var(--hui-default-spacer-5);
+  --hui-yfagqg-padding-left: var(--hui-default-spacer-7);
+  /* LAYOUT-FLEX */
+  --hui-yfagqg-align-content: center;
+  --hui-yfagqg-justify-content: center;
+  --hui-yfagqg-align-items: center;
+  /* TEXT */
+  --hui-yfagqg-font-size: var(--hui-default-size);
+  --hui-yfagqg-font-weight: var(--hui-default-font-weight);
+  --hui-yfagqg-line-height: var(--hui-default-line-height);
+  /* DISPLAY */
+  --hui-yfagqg-display: flex;
+}
+[data-hui=DataTable] > tbody > tr:nth-child(odd),
+[data-hui=DataTable] > tbody > tr:nth-child(odd) > td {
+  --hui-gqdxgs-background-color: var(--hui-unua-color-plus1);
+}
+[data-hui=DataTable] > tbody {
+  --hui-fgrqpr-min-height: calc(var(--hui-default-size) * 15);
+  --hui-fgrqpr-overflow-y: auto;
+  --hui-fgrqpr-scrollbar-gutter: stable;
+  --hui-fgrqpr-border-bottom-width: var(--hui-unua-border-width);
+  --hui-fgrqpr-border-bottom-style: var(--hui-default-border-style);
+  --hui-fgrqpr-border-bottom-color: var(--hui-default-border-color);
+}
+[data-hui=DataTable] > tbody > tr > td + td {
+  --hui-ozatyc-border-left-width: var(--hui-unua-border-width);
+  --hui-ozatyc-border-left-style: none;
+  --hui-ozatyc-border-left-color: var(--hui-default-border-color);
+}
+[data-hui=DataTable] > tbody > tr + tr,
+[data-hui=DataTable] > thead + tbody {
+  --hui-golnwm-border-top-width: var(--hui-unua-border-width);
+  --hui-golnwm-border-top-style: var(--hui-default-border-style);
+  --hui-golnwm-border-top-color: var(--hui-default-border-color);
+}
+[data-hui=DataTable][data-hui-active] {
+}
+[data-hui=DataTable][data-hui-active] > tbody,
+[data-hui=DataTable][data-hui-active] > thead,
+[data-hui=DataTable][data-hui-active] > * > tr {
+}
+[data-hui=DataTable][data-hui-active] > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-active] > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-active] > tbody > tr:nth-child(odd),
+[data-hui=DataTable][data-hui-active] > tbody > tr:nth-child(odd) > td {
+}
+[data-hui=DataTable][data-hui-active] > tbody {
+}
+[data-hui=DataTable][data-hui-active] > tbody > tr > td + td {
+}
+[data-hui=DataTable][data-hui-active] > tbody > tr + tr,
+[data-hui=DataTable][data-hui-active] > thead + tbody {
+}
+[data-hui=DataTable][data-hui-disabled] {
+}
+[data-hui=DataTable][data-hui-disabled] > tbody,
+[data-hui=DataTable][data-hui-disabled] > thead,
+[data-hui=DataTable][data-hui-disabled] > * > tr {
+}
+[data-hui=DataTable][data-hui-disabled] > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-disabled] > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-disabled] > tbody > tr:nth-child(odd),
+[data-hui=DataTable][data-hui-disabled] > tbody > tr:nth-child(odd) > td {
+}
+[data-hui=DataTable][data-hui-disabled] > tbody {
+}
+[data-hui=DataTable][data-hui-disabled] > tbody > tr > td + td {
+}
+[data-hui=DataTable][data-hui-disabled] > tbody > tr + tr,
+[data-hui=DataTable][data-hui-disabled] > thead + tbody {
+}
+[data-hui=DataTable][data-hui-readonly] {
+}
+[data-hui=DataTable][data-hui-readonly] > tbody,
+[data-hui=DataTable][data-hui-readonly] > thead,
+[data-hui=DataTable][data-hui-readonly] > * > tr {
+}
+[data-hui=DataTable][data-hui-readonly] > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-readonly] > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-readonly] > tbody > tr:nth-child(odd),
+[data-hui=DataTable][data-hui-readonly] > tbody > tr:nth-child(odd) > td {
+}
+[data-hui=DataTable][data-hui-readonly] > tbody {
+}
+[data-hui=DataTable][data-hui-readonly] > tbody > tr > td + td {
+}
+[data-hui=DataTable][data-hui-readonly] > tbody > tr + tr,
+[data-hui=DataTable][data-hui-readonly] > thead + tbody {
+}
+[data-hui=DataTable][data-hui-valid] {
+}
+[data-hui=DataTable][data-hui-valid] > tbody,
+[data-hui=DataTable][data-hui-valid] > thead,
+[data-hui=DataTable][data-hui-valid] > * > tr {
+}
+[data-hui=DataTable][data-hui-valid] > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-valid] > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-valid] > tbody > tr:nth-child(odd),
+[data-hui=DataTable][data-hui-valid] > tbody > tr:nth-child(odd) > td {
+}
+[data-hui=DataTable][data-hui-valid] > tbody {
+}
+[data-hui=DataTable][data-hui-valid] > tbody > tr > td + td {
+}
+[data-hui=DataTable][data-hui-valid] > tbody > tr + tr,
+[data-hui=DataTable][data-hui-valid] > thead + tbody {
+}
+[data-hui=DataTable][data-hui-invalid] {
+}
+[data-hui=DataTable][data-hui-invalid] > tbody,
+[data-hui=DataTable][data-hui-invalid] > thead,
+[data-hui=DataTable][data-hui-invalid] > * > tr {
+}
+[data-hui=DataTable][data-hui-invalid] > tbody > tr > td {
+}
+[data-hui=DataTable][data-hui-invalid] > thead > tr > th {
+}
+[data-hui=DataTable][data-hui-invalid] > tbody > tr:nth-child(odd),
+[data-hui=DataTable][data-hui-invalid] > tbody > tr:nth-child(odd) > td {
+}
+[data-hui=DataTable][data-hui-invalid] > tbody {
+}
+[data-hui=DataTable][data-hui-invalid] > tbody > tr > td + td {
+}
+[data-hui=DataTable][data-hui-invalid] > tbody > tr + tr,
+[data-hui=DataTable][data-hui-invalid] > thead + tbody {
+}
+[data-hui=DataTable] {
+  /* LAYOUT-POSITION */
+/*  --hui-xvhgjw-position-default: ; */
+/*  --hui-xvhgjw-top-default: ; */
+/*  --hui-xvhgjw-right-default: ; */
+/*  --hui-xvhgjw-bottom-default: ; */
+/*  --hui-xvhgjw-left-default: ; */
+/*  --hui-xvhgjw-z-index-default: ; */
+/*  --hui-xvhgjw-float-default: ; */
+/*  --hui-xvhgjw-clear-default: ; */
+/*  --hui-xvhgjw-align-self-default: ; */
+/*  --hui-xvhgjw-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-xvhgjw-box-sizing-default: ; */
+/*  --hui-xvhgjw-height-default: ; */
+/*  --hui-xvhgjw-max-height-default: ; */
+/*  --hui-xvhgjw-min-height-default: ; */
+/*  --hui-xvhgjw-width-default: ; */
+/*  --hui-xvhgjw-max-width-default: ; */
+/*  --hui-xvhgjw-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-xvhgjw-margin-top-default: ; */
+/*  --hui-xvhgjw-margin-right-default: ; */
+/*  --hui-xvhgjw-margin-bottom-default: ; */
+/*  --hui-xvhgjw-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-xvhgjw-padding-top-default: ; */
+/*  --hui-xvhgjw-padding-right-default: ; */
+/*  --hui-xvhgjw-padding-bottom-default: ; */
+/*  --hui-xvhgjw-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-xvhgjw-overflow-x-default: ; */
+/*  --hui-xvhgjw-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-xvhgjw-flex-basis-default: ; */
+/*  --hui-xvhgjw-flex-direction-default: ; */
+/*  --hui-xvhgjw-flex-grow-default: ; */
+/*  --hui-xvhgjw-flex-shrink-default: ; */
+/*  --hui-xvhgjw-flex-wrap-default: ; */
+/*  --hui-xvhgjw-gap-default: ; */
+/*  --hui-xvhgjw-align-content-default: ; */
+/*  --hui-xvhgjw-justify-content-default: ; */
+/*  --hui-xvhgjw-align-items-default: ; */
+  /* TEXT */
+/*  --hui-xvhgjw-direction-default: ; */
+/*  --hui-xvhgjw-font-family-default: ; */
+/*  --hui-xvhgjw-font-size-default: ; */
+/*  --hui-xvhgjw-font-stretch-default: ; */
+/*  --hui-xvhgjw-font-style-default: ; */
+/*  --hui-xvhgjw-font-weight-default: ; */
+/*  --hui-xvhgjw-letter-spacing-default: ; */
+/*  --hui-xvhgjw-line-height-default: ; */
+/*  --hui-xvhgjw-text-align-default: ; */
+/*  --hui-xvhgjw-text-align-last-default: ; */
+/*  --hui-xvhgjw-text-decoration-color-default: ; */
+/*  --hui-xvhgjw-text-decoration-line-default: ; */
+/*  --hui-xvhgjw-text-decoration-style-default: ; */
+/*  --hui-xvhgjw-text-decoration-thickness-default: ; */
+/*  --hui-xvhgjw-text-indent-default: ; */
+/*  --hui-xvhgjw-text-overflow-default: ; */
+/*  --hui-xvhgjw-text-shadow-default: ; */
+/*  --hui-xvhgjw-text-size-adjust-default: ; */
+/*  --hui-xvhgjw-text-transform-default: ; */
+/*  --hui-xvhgjw-text-wrap-default: ; */
+/*  --hui-xvhgjw-vertical-align-default: ; */
+/*  --hui-xvhgjw-white-space-collapse-default: ; */
+/*  --hui-xvhgjw-word-break-default: ; */
+/*  --hui-xvhgjw-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-xvhgjw-visibility-default: ; */
+/*  --hui-xvhgjw-color-default: ; */
+/*  --hui-xvhgjw-background-attachment-default: ; */
+/*  --hui-xvhgjw-background-clip-default: ; */
+/*  --hui-xvhgjw-background-color-default: ; */
+/*  --hui-xvhgjw-background-image-default: ; */
+/*  --hui-xvhgjw-background-origin-default: ; */
+/*  --hui-xvhgjw-background-position-x-default: ; */
+/*  --hui-xvhgjw-background-position-y-default: ; */
+/*  --hui-xvhgjw-background-repeat-default: ; */
+/*  --hui-xvhgjw-background-size-default: ; */
+/*  --hui-xvhgjw-border-bottom-color-default: ; */
+/*  --hui-xvhgjw-border-bottom-style-default: ; */
+/*  --hui-xvhgjw-border-bottom-width-default: ; */
+/*  --hui-xvhgjw-border-bottom-left-radius-default: ; */
+/*  --hui-xvhgjw-border-bottom-right-radius-default: ; */
+/*  --hui-xvhgjw-border-image-outset-default: ; */
+/*  --hui-xvhgjw-border-image-repeat-default: ; */
+/*  --hui-xvhgjw-border-image-slice-default: ; */
+/*  --hui-xvhgjw-border-image-source-default: ; */
+/*  --hui-xvhgjw-border-image-width-default: ; */
+/*  --hui-xvhgjw-border-left-color-default: ; */
+/*  --hui-xvhgjw-border-left-style-default: ; */
+/*  --hui-xvhgjw-border-left-width-default: ; */
+/*  --hui-xvhgjw-border-right-color-default: ; */
+/*  --hui-xvhgjw-border-right-style-default: ; */
+/*  --hui-xvhgjw-border-right-width-default: ; */
+/*  --hui-xvhgjw-border-top-color-default: ; */
+/*  --hui-xvhgjw-border-top-style-default: ; */
+/*  --hui-xvhgjw-border-top-width-default: ; */
+/*  --hui-xvhgjw-border-top-left-radius-default: ; */
+/*  --hui-xvhgjw-border-top-right-radius-default: ; */
+/*  --hui-xvhgjw-box-shadow-default: ; */
+/*  --hui-xvhgjw-cursor-default: ; */
+/*  --hui-xvhgjw-outline-color-default: ; */
+/*  --hui-xvhgjw-outline-offset-default: ; */
+/*  --hui-xvhgjw-outline-style-default: ; */
+/*  --hui-xvhgjw-outline-width-default: ; */
+/*  --hui-xvhgjw-scrollbar-color-default: ; */
+/*  --hui-xvhgjw-scrollbar-gutter-default: ; */
+/*  --hui-xvhgjw-scrollbar-width-default: ; */
+  /* GRID */
+/*  --hui-xvhgjw-grid-auto-columns-default: ; */
+/*  --hui-xvhgjw-grid-auto-flow-default: ; */
+/*  --hui-xvhgjw-grid-auto-rows-default: ; */
+/*  --hui-xvhgjw-grid-column-end-default: ; */
+/*  --hui-xvhgjw-grid-column-start-default: ; */
+/*  --hui-xvhgjw-grid-row-end-default: ; */
+/*  --hui-xvhgjw-grid-row-start-default: ; */
+/*  --hui-xvhgjw-grid-template-areas-default: ; */
+/*  --hui-xvhgjw-grid-template-columns-default: ; */
+/*  --hui-xvhgjw-grid-template-rows-default: ; */
+/*  --hui-xvhgjw-align-content-default: ; */
+/*  --hui-xvhgjw-justify-content-default: ; */
+/*  --hui-xvhgjw-align-items-default: ; */
+/*  --hui-xvhgjw-justify-items-default: ; */
+/*  --hui-xvhgjw-column-gap-default: ; */
+/*  --hui-xvhgjw-row-gap-default: ; */
+}
+[data-hui=DataTable] > tbody,
+[data-hui=DataTable] > thead,
+[data-hui=DataTable] > * > tr {
+  /* LAYOUT-POSITION */
+/*  --hui-wsglhu-position-default: ; */
+/*  --hui-wsglhu-top-default: ; */
+/*  --hui-wsglhu-right-default: ; */
+/*  --hui-wsglhu-bottom-default: ; */
+/*  --hui-wsglhu-left-default: ; */
+/*  --hui-wsglhu-z-index-default: ; */
+/*  --hui-wsglhu-float-default: ; */
+/*  --hui-wsglhu-clear-default: ; */
+/*  --hui-wsglhu-align-self-default: ; */
+/*  --hui-wsglhu-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-wsglhu-box-sizing-default: ; */
+/*  --hui-wsglhu-height-default: ; */
+/*  --hui-wsglhu-max-height-default: ; */
+/*  --hui-wsglhu-min-height-default: ; */
+/*  --hui-wsglhu-width-default: ; */
+/*  --hui-wsglhu-max-width-default: ; */
+/*  --hui-wsglhu-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-wsglhu-margin-top-default: ; */
+/*  --hui-wsglhu-margin-right-default: ; */
+/*  --hui-wsglhu-margin-bottom-default: ; */
+/*  --hui-wsglhu-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-wsglhu-padding-top-default: ; */
+/*  --hui-wsglhu-padding-right-default: ; */
+/*  --hui-wsglhu-padding-bottom-default: ; */
+/*  --hui-wsglhu-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-wsglhu-overflow-x-default: ; */
+/*  --hui-wsglhu-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-wsglhu-flex-basis-default: ; */
+/*  --hui-wsglhu-flex-direction-default: ; */
+/*  --hui-wsglhu-flex-grow-default: ; */
+/*  --hui-wsglhu-flex-shrink-default: ; */
+/*  --hui-wsglhu-flex-wrap-default: ; */
+/*  --hui-wsglhu-gap-default: ; */
+/*  --hui-wsglhu-align-content-default: ; */
+/*  --hui-wsglhu-justify-content-default: ; */
+/*  --hui-wsglhu-align-items-default: ; */
+  /* TEXT */
+/*  --hui-wsglhu-direction-default: ; */
+/*  --hui-wsglhu-font-family-default: ; */
+/*  --hui-wsglhu-font-size-default: ; */
+/*  --hui-wsglhu-font-stretch-default: ; */
+/*  --hui-wsglhu-font-style-default: ; */
+/*  --hui-wsglhu-font-weight-default: ; */
+/*  --hui-wsglhu-letter-spacing-default: ; */
+/*  --hui-wsglhu-line-height-default: ; */
+/*  --hui-wsglhu-text-align-default: ; */
+/*  --hui-wsglhu-text-align-last-default: ; */
+/*  --hui-wsglhu-text-decoration-color-default: ; */
+/*  --hui-wsglhu-text-decoration-line-default: ; */
+/*  --hui-wsglhu-text-decoration-style-default: ; */
+/*  --hui-wsglhu-text-decoration-thickness-default: ; */
+/*  --hui-wsglhu-text-indent-default: ; */
+/*  --hui-wsglhu-text-overflow-default: ; */
+/*  --hui-wsglhu-text-shadow-default: ; */
+/*  --hui-wsglhu-text-size-adjust-default: ; */
+/*  --hui-wsglhu-text-transform-default: ; */
+/*  --hui-wsglhu-text-wrap-default: ; */
+/*  --hui-wsglhu-vertical-align-default: ; */
+/*  --hui-wsglhu-white-space-collapse-default: ; */
+/*  --hui-wsglhu-word-break-default: ; */
+/*  --hui-wsglhu-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-wsglhu-visibility-default: ; */
+/*  --hui-wsglhu-color-default: ; */
+/*  --hui-wsglhu-background-attachment-default: ; */
+/*  --hui-wsglhu-background-clip-default: ; */
+/*  --hui-wsglhu-background-color-default: ; */
+/*  --hui-wsglhu-background-image-default: ; */
+/*  --hui-wsglhu-background-origin-default: ; */
+/*  --hui-wsglhu-background-position-x-default: ; */
+/*  --hui-wsglhu-background-position-y-default: ; */
+/*  --hui-wsglhu-background-repeat-default: ; */
+/*  --hui-wsglhu-background-size-default: ; */
+/*  --hui-wsglhu-border-bottom-color-default: ; */
+/*  --hui-wsglhu-border-bottom-style-default: ; */
+/*  --hui-wsglhu-border-bottom-width-default: ; */
+/*  --hui-wsglhu-border-bottom-left-radius-default: ; */
+/*  --hui-wsglhu-border-bottom-right-radius-default: ; */
+/*  --hui-wsglhu-border-image-outset-default: ; */
+/*  --hui-wsglhu-border-image-repeat-default: ; */
+/*  --hui-wsglhu-border-image-slice-default: ; */
+/*  --hui-wsglhu-border-image-source-default: ; */
+/*  --hui-wsglhu-border-image-width-default: ; */
+/*  --hui-wsglhu-border-left-color-default: ; */
+/*  --hui-wsglhu-border-left-style-default: ; */
+/*  --hui-wsglhu-border-left-width-default: ; */
+/*  --hui-wsglhu-border-right-color-default: ; */
+/*  --hui-wsglhu-border-right-style-default: ; */
+/*  --hui-wsglhu-border-right-width-default: ; */
+/*  --hui-wsglhu-border-top-color-default: ; */
+/*  --hui-wsglhu-border-top-style-default: ; */
+/*  --hui-wsglhu-border-top-width-default: ; */
+/*  --hui-wsglhu-border-top-left-radius-default: ; */
+/*  --hui-wsglhu-border-top-right-radius-default: ; */
+/*  --hui-wsglhu-box-shadow-default: ; */
+/*  --hui-wsglhu-cursor-default: ; */
+/*  --hui-wsglhu-outline-color-default: ; */
+/*  --hui-wsglhu-outline-offset-default: ; */
+/*  --hui-wsglhu-outline-style-default: ; */
+/*  --hui-wsglhu-outline-width-default: ; */
+/*  --hui-wsglhu-scrollbar-color-default: ; */
+/*  --hui-wsglhu-scrollbar-gutter-default: ; */
+/*  --hui-wsglhu-scrollbar-width-default: ; */
+  /* GRID */
+/*  --hui-wsglhu-grid-auto-columns-default: ; */
+/*  --hui-wsglhu-grid-auto-flow-default: ; */
+/*  --hui-wsglhu-grid-auto-rows-default: ; */
+/*  --hui-wsglhu-grid-column-end-default: ; */
+/*  --hui-wsglhu-grid-column-start-default: ; */
+/*  --hui-wsglhu-grid-row-end-default: ; */
+/*  --hui-wsglhu-grid-row-start-default: ; */
+/*  --hui-wsglhu-grid-template-areas-default: ; */
+/*  --hui-wsglhu-grid-template-columns-default: ; */
+/*  --hui-wsglhu-grid-template-rows-default: ; */
+/*  --hui-wsglhu-align-content-default: ; */
+/*  --hui-wsglhu-justify-content-default: ; */
+/*  --hui-wsglhu-align-items-default: ; */
+/*  --hui-wsglhu-justify-items-default: ; */
+/*  --hui-wsglhu-column-gap-default: ; */
+/*  --hui-wsglhu-row-gap-default: ; */
+  /* DISPLAY */
+/*  --hui-wsglhu-display-default: ; */
+}
+[data-hui=DataTable] > tbody > tr > td {
+  /* LAYOUT-POSITION */
+/*  --hui-avzraa-position-default: ; */
+/*  --hui-avzraa-top-default: ; */
+/*  --hui-avzraa-right-default: ; */
+/*  --hui-avzraa-bottom-default: ; */
+/*  --hui-avzraa-left-default: ; */
+/*  --hui-avzraa-z-index-default: ; */
+/*  --hui-avzraa-float-default: ; */
+/*  --hui-avzraa-clear-default: ; */
+/*  --hui-avzraa-align-self-default: ; */
+/*  --hui-avzraa-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-avzraa-box-sizing-default: ; */
+/*  --hui-avzraa-height-default: ; */
+/*  --hui-avzraa-max-height-default: ; */
+/*  --hui-avzraa-min-height-default: ; */
+/*  --hui-avzraa-width-default: ; */
+/*  --hui-avzraa-max-width-default: ; */
+/*  --hui-avzraa-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-avzraa-margin-top-default: ; */
+/*  --hui-avzraa-margin-right-default: ; */
+/*  --hui-avzraa-margin-bottom-default: ; */
+/*  --hui-avzraa-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-avzraa-padding-top-default: ; */
+/*  --hui-avzraa-padding-right-default: ; */
+/*  --hui-avzraa-padding-bottom-default: ; */
+/*  --hui-avzraa-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-avzraa-overflow-x-default: ; */
+/*  --hui-avzraa-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-avzraa-flex-basis-default: ; */
+/*  --hui-avzraa-flex-direction-default: ; */
+/*  --hui-avzraa-flex-grow-default: ; */
+/*  --hui-avzraa-flex-shrink-default: ; */
+/*  --hui-avzraa-flex-wrap-default: ; */
+/*  --hui-avzraa-gap-default: ; */
+/*  --hui-avzraa-align-content-default: ; */
+/*  --hui-avzraa-justify-content-default: ; */
+/*  --hui-avzraa-align-items-default: ; */
+  /* TEXT */
+/*  --hui-avzraa-direction-default: ; */
+/*  --hui-avzraa-font-family-default: ; */
+/*  --hui-avzraa-font-size-default: ; */
+/*  --hui-avzraa-font-stretch-default: ; */
+/*  --hui-avzraa-font-style-default: ; */
+/*  --hui-avzraa-font-weight-default: ; */
+/*  --hui-avzraa-letter-spacing-default: ; */
+/*  --hui-avzraa-line-height-default: ; */
+/*  --hui-avzraa-text-align-default: ; */
+/*  --hui-avzraa-text-align-last-default: ; */
+/*  --hui-avzraa-text-decoration-color-default: ; */
+/*  --hui-avzraa-text-decoration-line-default: ; */
+/*  --hui-avzraa-text-decoration-style-default: ; */
+/*  --hui-avzraa-text-decoration-thickness-default: ; */
+/*  --hui-avzraa-text-indent-default: ; */
+/*  --hui-avzraa-text-overflow-default: ; */
+/*  --hui-avzraa-text-shadow-default: ; */
+/*  --hui-avzraa-text-size-adjust-default: ; */
+/*  --hui-avzraa-text-transform-default: ; */
+/*  --hui-avzraa-text-wrap-default: ; */
+/*  --hui-avzraa-vertical-align-default: ; */
+/*  --hui-avzraa-white-space-collapse-default: ; */
+/*  --hui-avzraa-word-break-default: ; */
+/*  --hui-avzraa-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-avzraa-visibility-default: ; */
+/*  --hui-avzraa-color-default: ; */
+/*  --hui-avzraa-background-attachment-default: ; */
+/*  --hui-avzraa-background-clip-default: ; */
+/*  --hui-avzraa-background-color-default: ; */
+/*  --hui-avzraa-background-image-default: ; */
+/*  --hui-avzraa-background-origin-default: ; */
+/*  --hui-avzraa-background-position-x-default: ; */
+/*  --hui-avzraa-background-position-y-default: ; */
+/*  --hui-avzraa-background-repeat-default: ; */
+/*  --hui-avzraa-background-size-default: ; */
+/*  --hui-avzraa-border-bottom-color-default: ; */
+/*  --hui-avzraa-border-bottom-style-default: ; */
+/*  --hui-avzraa-border-bottom-width-default: ; */
+/*  --hui-avzraa-border-bottom-left-radius-default: ; */
+/*  --hui-avzraa-border-bottom-right-radius-default: ; */
+/*  --hui-avzraa-border-image-outset-default: ; */
+/*  --hui-avzraa-border-image-repeat-default: ; */
+/*  --hui-avzraa-border-image-slice-default: ; */
+/*  --hui-avzraa-border-image-source-default: ; */
+/*  --hui-avzraa-border-image-width-default: ; */
+/*  --hui-avzraa-border-left-color-default: ; */
+/*  --hui-avzraa-border-left-style-default: ; */
+/*  --hui-avzraa-border-left-width-default: ; */
+/*  --hui-avzraa-border-right-color-default: ; */
+/*  --hui-avzraa-border-right-style-default: ; */
+/*  --hui-avzraa-border-right-width-default: ; */
+/*  --hui-avzraa-border-top-color-default: ; */
+/*  --hui-avzraa-border-top-style-default: ; */
+/*  --hui-avzraa-border-top-width-default: ; */
+/*  --hui-avzraa-border-top-left-radius-default: ; */
+/*  --hui-avzraa-border-top-right-radius-default: ; */
+/*  --hui-avzraa-box-shadow-default: ; */
+/*  --hui-avzraa-cursor-default: ; */
+/*  --hui-avzraa-outline-color-default: ; */
+/*  --hui-avzraa-outline-offset-default: ; */
+/*  --hui-avzraa-outline-style-default: ; */
+/*  --hui-avzraa-outline-width-default: ; */
+/*  --hui-avzraa-scrollbar-color-default: ; */
+/*  --hui-avzraa-scrollbar-gutter-default: ; */
+/*  --hui-avzraa-scrollbar-width-default: ; */
+/*  --hui-avzraa-flex-default: ; */
+  /* DISPLAY */
+/*  --hui-avzraa-display-default: ; */
+}
+[data-hui=DataTable] > thead > tr > th {
+  /* LAYOUT-POSITION */
+/*  --hui-yfagqg-position-default: ; */
+/*  --hui-yfagqg-top-default: ; */
+/*  --hui-yfagqg-right-default: ; */
+/*  --hui-yfagqg-bottom-default: ; */
+/*  --hui-yfagqg-left-default: ; */
+/*  --hui-yfagqg-z-index-default: ; */
+/*  --hui-yfagqg-float-default: ; */
+/*  --hui-yfagqg-clear-default: ; */
+/*  --hui-yfagqg-align-self-default: ; */
+/*  --hui-yfagqg-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-yfagqg-box-sizing-default: ; */
+/*  --hui-yfagqg-height-default: ; */
+/*  --hui-yfagqg-max-height-default: ; */
+/*  --hui-yfagqg-min-height-default: ; */
+/*  --hui-yfagqg-width-default: ; */
+/*  --hui-yfagqg-max-width-default: ; */
+/*  --hui-yfagqg-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-yfagqg-margin-top-default: ; */
+/*  --hui-yfagqg-margin-right-default: ; */
+/*  --hui-yfagqg-margin-bottom-default: ; */
+/*  --hui-yfagqg-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-yfagqg-padding-top-default: ; */
+/*  --hui-yfagqg-padding-right-default: ; */
+/*  --hui-yfagqg-padding-bottom-default: ; */
+/*  --hui-yfagqg-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-yfagqg-overflow-x-default: ; */
+/*  --hui-yfagqg-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-yfagqg-flex-basis-default: ; */
+/*  --hui-yfagqg-flex-direction-default: ; */
+/*  --hui-yfagqg-flex-grow-default: ; */
+/*  --hui-yfagqg-flex-shrink-default: ; */
+/*  --hui-yfagqg-flex-wrap-default: ; */
+/*  --hui-yfagqg-gap-default: ; */
+/*  --hui-yfagqg-align-content-default: ; */
+/*  --hui-yfagqg-justify-content-default: ; */
+/*  --hui-yfagqg-align-items-default: ; */
+  /* TEXT */
+/*  --hui-yfagqg-direction-default: ; */
+/*  --hui-yfagqg-font-family-default: ; */
+/*  --hui-yfagqg-font-size-default: ; */
+/*  --hui-yfagqg-font-stretch-default: ; */
+/*  --hui-yfagqg-font-style-default: ; */
+/*  --hui-yfagqg-font-weight-default: ; */
+/*  --hui-yfagqg-letter-spacing-default: ; */
+/*  --hui-yfagqg-line-height-default: ; */
+/*  --hui-yfagqg-text-align-default: ; */
+/*  --hui-yfagqg-text-align-last-default: ; */
+/*  --hui-yfagqg-text-decoration-color-default: ; */
+/*  --hui-yfagqg-text-decoration-line-default: ; */
+/*  --hui-yfagqg-text-decoration-style-default: ; */
+/*  --hui-yfagqg-text-decoration-thickness-default: ; */
+/*  --hui-yfagqg-text-indent-default: ; */
+/*  --hui-yfagqg-text-overflow-default: ; */
+/*  --hui-yfagqg-text-shadow-default: ; */
+/*  --hui-yfagqg-text-size-adjust-default: ; */
+/*  --hui-yfagqg-text-transform-default: ; */
+/*  --hui-yfagqg-text-wrap-default: ; */
+/*  --hui-yfagqg-vertical-align-default: ; */
+/*  --hui-yfagqg-white-space-collapse-default: ; */
+/*  --hui-yfagqg-word-break-default: ; */
+/*  --hui-yfagqg-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-yfagqg-visibility-default: ; */
+/*  --hui-yfagqg-color-default: ; */
+/*  --hui-yfagqg-background-attachment-default: ; */
+/*  --hui-yfagqg-background-clip-default: ; */
+/*  --hui-yfagqg-background-color-default: ; */
+/*  --hui-yfagqg-background-image-default: ; */
+/*  --hui-yfagqg-background-origin-default: ; */
+/*  --hui-yfagqg-background-position-x-default: ; */
+/*  --hui-yfagqg-background-position-y-default: ; */
+/*  --hui-yfagqg-background-repeat-default: ; */
+/*  --hui-yfagqg-background-size-default: ; */
+/*  --hui-yfagqg-border-bottom-color-default: ; */
+/*  --hui-yfagqg-border-bottom-style-default: ; */
+/*  --hui-yfagqg-border-bottom-width-default: ; */
+/*  --hui-yfagqg-border-bottom-left-radius-default: ; */
+/*  --hui-yfagqg-border-bottom-right-radius-default: ; */
+/*  --hui-yfagqg-border-image-outset-default: ; */
+/*  --hui-yfagqg-border-image-repeat-default: ; */
+/*  --hui-yfagqg-border-image-slice-default: ; */
+/*  --hui-yfagqg-border-image-source-default: ; */
+/*  --hui-yfagqg-border-image-width-default: ; */
+/*  --hui-yfagqg-border-left-color-default: ; */
+/*  --hui-yfagqg-border-left-style-default: ; */
+/*  --hui-yfagqg-border-left-width-default: ; */
+/*  --hui-yfagqg-border-right-color-default: ; */
+/*  --hui-yfagqg-border-right-style-default: ; */
+/*  --hui-yfagqg-border-right-width-default: ; */
+/*  --hui-yfagqg-border-top-color-default: ; */
+/*  --hui-yfagqg-border-top-style-default: ; */
+/*  --hui-yfagqg-border-top-width-default: ; */
+/*  --hui-yfagqg-border-top-left-radius-default: ; */
+/*  --hui-yfagqg-border-top-right-radius-default: ; */
+/*  --hui-yfagqg-box-shadow-default: ; */
+/*  --hui-yfagqg-cursor-default: ; */
+/*  --hui-yfagqg-outline-color-default: ; */
+/*  --hui-yfagqg-outline-offset-default: ; */
+/*  --hui-yfagqg-outline-style-default: ; */
+/*  --hui-yfagqg-outline-width-default: ; */
+/*  --hui-yfagqg-scrollbar-color-default: ; */
+/*  --hui-yfagqg-scrollbar-gutter-default: ; */
+/*  --hui-yfagqg-scrollbar-width-default: ; */
+/*  --hui-yfagqg-flex-default: ; */
+  /* DISPLAY */
+/*  --hui-yfagqg-display-default: ; */
+}
+[data-hui=DataTable] > tbody > tr:nth-child(odd),
+[data-hui=DataTable] > tbody > tr:nth-child(odd) > td {
+/*  --hui-gqdxgs-background-color-default: ; */
+}
+[data-hui=DataTable] > tbody {
+/*  --hui-fgrqpr-min-height-default: ; */
+/*  --hui-fgrqpr-overflow-y-default: ; */
+/*  --hui-fgrqpr-scrollbar-gutter-default: ; */
+/*  --hui-fgrqpr-border-bottom-width-default: ; */
+/*  --hui-fgrqpr-border-bottom-style-default: ; */
+/*  --hui-fgrqpr-border-bottom-color-default: ; */
+}
+[data-hui=DataTable] > tbody > tr > td + td {
+/*  --hui-ozatyc-border-left-width-default: ; */
+/*  --hui-ozatyc-border-left-style-default: ; */
+/*  --hui-ozatyc-border-left-color-default: ; */
+}
+[data-hui=DataTable] > tbody > tr + tr,
+[data-hui=DataTable] > thead + tbody {
+/*  --hui-golnwm-border-top-width-default: ; */
+/*  --hui-golnwm-border-top-style-default: ; */
+/*  --hui-golnwm-border-top-color-default: ; */
+}

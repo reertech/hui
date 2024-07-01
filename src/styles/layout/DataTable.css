@@ -1,0 +1,511 @@
+[data-hui=DataTable] {
+  /* LAYOUT-POSITION */
+  position: var(--hui-xvhgjw-position, static);
+  top: var(--hui-xvhgjw-top, auto);
+  right: var(--hui-xvhgjw-right, auto);
+  bottom: var(--hui-xvhgjw-bottom, auto);
+  left: var(--hui-xvhgjw-left, auto);
+  z-index: var(--hui-xvhgjw-z-index, auto);
+  float: var(--hui-xvhgjw-float, none);
+  clear: var(--hui-xvhgjw-clear, none);
+  align-self: var(--hui-xvhgjw-align-self, auto);
+  order: var(--hui-xvhgjw-order, 0);
+  /* LAYOUT-SIZING */
+  box-sizing: var(--hui-xvhgjw-box-sizing, border-box);
+  height: var(--hui-xvhgjw-height, auto);
+  max-height: var(--hui-xvhgjw-max-height, none);
+  min-height: var(--hui-xvhgjw-min-height, auto);
+  width: var(--hui-xvhgjw-width, auto);
+  max-width: var(--hui-xvhgjw-max-width, none);
+  min-width: var(--hui-xvhgjw-min-width, auto);
+  /* LAYOUT-MARGIN */
+  margin-top: var(--hui-xvhgjw-margin-top, 0px);
+  margin-right: var(--hui-xvhgjw-margin-right, 0px);
+  margin-bottom: var(--hui-xvhgjw-margin-bottom, 0px);
+  margin-left: var(--hui-xvhgjw-margin-left, 0px);
+  /* LAYOUT-PADDING */
+  padding-top: var(--hui-xvhgjw-padding-top, 0px);
+  padding-right: var(--hui-xvhgjw-padding-right, 0px);
+  padding-bottom: var(--hui-xvhgjw-padding-bottom, 0px);
+  padding-left: var(--hui-xvhgjw-padding-left, 0px);
+  /* LAYOUT-OVERFLOW */
+  overflow-x: var(--hui-xvhgjw-overflow-x, visible);
+  overflow-y: var(--hui-xvhgjw-overflow-y, visible);
+  /* LAYOUT-FLEX */
+  flex-basis: var(--hui-xvhgjw-flex-basis, auto);
+  flex-direction: var(--hui-xvhgjw-flex-direction, row);
+  flex-grow: var(--hui-xvhgjw-flex-grow, 0);
+  flex-shrink: var(--hui-xvhgjw-flex-shrink, 1);
+  flex-wrap: var(--hui-xvhgjw-flex-wrap, nowrap);
+  gap: var(--hui-xvhgjw-gap, 0px);
+  align-content: var(--hui-xvhgjw-align-content, stretch);
+  justify-content: var(--hui-xvhgjw-justify-content, flex-start);
+  align-items: var(--hui-xvhgjw-align-items, stretch);
+  /* TEXT */
+  direction: var(--hui-xvhgjw-direction, ltr);
+  font-family: var(--hui-xvhgjw-font-family, system-ui);
+  font-size: var(--hui-xvhgjw-font-size, 16px);
+  font-stretch: var(--hui-xvhgjw-font-stretch, 100%);
+  font-style: var(--hui-xvhgjw-font-style, normal);
+  font-weight: var(--hui-xvhgjw-font-weight, 400);
+  letter-spacing: var(--hui-xvhgjw-letter-spacing, normal);
+  line-height: var(--hui-xvhgjw-line-height, normal);
+  text-align: var(--hui-xvhgjw-text-align, start);
+  text-align-last: var(--hui-xvhgjw-text-align-last, auto);
+  text-decoration-color: var(--hui-xvhgjw-text-decoration-color, #000);
+  text-decoration-line: var(--hui-xvhgjw-text-decoration-line, none);
+  text-decoration-style: var(--hui-xvhgjw-text-decoration-style, solid);
+  text-decoration-thickness: var(--hui-xvhgjw-text-decoration-thickness, auto);
+  text-indent: var(--hui-xvhgjw-text-indent, 0px);
+  text-overflow: var(--hui-xvhgjw-text-overflow, clip);
+  text-shadow: var(--hui-xvhgjw-text-shadow, none);
+  text-size-adjust: var(--hui-xvhgjw-text-size-adjust, auto);
+  text-transform: var(--hui-xvhgjw-text-transform, none);
+  text-wrap: var(--hui-xvhgjw-text-wrap, wrap);
+  vertical-align: var(--hui-xvhgjw-vertical-align, baseline);
+  white-space-collapse: var(--hui-xvhgjw-white-space-collapse, collapse);
+  word-break: var(--hui-xvhgjw-word-break, normal);
+  word-spacing: var(--hui-xvhgjw-word-spacing, 0px);
+  /* APPERANCE */
+  visibility: var(--hui-xvhgjw-visibility, visible);
+  color: var(--hui-xvhgjw-color, rgb(0, 0, 0));
+  background-attachment: var(--hui-xvhgjw-background-attachment, scroll);
+  background-clip: var(--hui-xvhgjw-background-clip, border-box);
+  background-color: var(--hui-xvhgjw-background-color, rgba(0, 0, 0, 0));
+  background-image: var(--hui-xvhgjw-background-image, none);
+  background-origin: var(--hui-xvhgjw-background-origin, padding-box);
+  background-position-x: var(--hui-xvhgjw-background-position-x, 0%);
+  background-position-y: var(--hui-xvhgjw-background-position-y, 0%);
+  background-repeat: var(--hui-xvhgjw-background-repeat, repeat);
+  background-size: var(--hui-xvhgjw-background-size, auto);
+  border-bottom-color: var(--hui-xvhgjw-border-bottom-color, rgb(0, 0, 0));
+  border-bottom-style: var(--hui-xvhgjw-border-bottom-style, none);
+  border-bottom-width: var(--hui-xvhgjw-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-xvhgjw-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-xvhgjw-border-bottom-right-radius, 0px);
+  border-image-outset: var(--hui-xvhgjw-border-image-outset, 0);
+  border-image-repeat: var(--hui-xvhgjw-border-image-repeat, stretch);
+  border-image-slice: var(--hui-xvhgjw-border-image-slice, 100%);
+  border-image-source: var(--hui-xvhgjw-border-image-source, none);
+  border-image-width: var(--hui-xvhgjw-border-image-width, 1);
+  border-left-color: var(--hui-xvhgjw-border-left-color, rgb(0, 0, 0));
+  border-left-style: var(--hui-xvhgjw-border-left-style, none);
+  border-left-width: var(--hui-xvhgjw-border-left-width, 0px);
+  border-right-color: var(--hui-xvhgjw-border-right-color, rgb(0, 0, 0));
+  border-right-style: var(--hui-xvhgjw-border-right-style, none);
+  border-right-width: var(--hui-xvhgjw-border-right-width, 0px);
+  border-top-color: var(--hui-xvhgjw-border-top-color, rgb(0, 0, 0));
+  border-top-style: var(--hui-xvhgjw-border-top-style, none);
+  border-top-width: var(--hui-xvhgjw-border-top-width, 0px);
+  border-top-left-radius: var(--hui-xvhgjw-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-xvhgjw-border-top-right-radius, 0px);
+  box-shadow: var(--hui-xvhgjw-box-shadow, none);
+  cursor: var(--hui-xvhgjw-cursor, auto);
+  outline-color: var(--hui-xvhgjw-outline-color, rgb(0, 0, 0));
+  outline-offset: var(--hui-xvhgjw-outline-offset, 0px);
+  outline-style: var(--hui-xvhgjw-outline-style, none);
+  outline-width: var(--hui-xvhgjw-outline-width, 0px);
+  scrollbar-color: var(--hui-xvhgjw-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-xvhgjw-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-xvhgjw-scrollbar-width, thin);
+  /* GRID */
+  grid-auto-columns: var(--hui-xvhgjw-grid-auto-columns, auto);
+  grid-auto-flow: var(--hui-xvhgjw-grid-auto-flow, row);
+  grid-auto-rows: var(--hui-xvhgjw-grid-auto-rows, auto);
+  grid-column-end: var(--hui-xvhgjw-grid-column-end, auto);
+  grid-column-start: var(--hui-xvhgjw-grid-column-start, auto);
+  grid-row-end: var(--hui-xvhgjw-grid-row-end, auto);
+  grid-row-start: var(--hui-xvhgjw-grid-row-start, auto);
+  grid-template-areas: var(--hui-xvhgjw-grid-template-areas, none);
+  grid-template-columns: var(--hui-xvhgjw-grid-template-columns, none);
+  grid-template-rows: var(--hui-xvhgjw-grid-template-rows, none);
+  align-content: var(--hui-xvhgjw-align-content, normal);
+  justify-content: var(--hui-xvhgjw-justify-content, normal);
+  align-items: var(--hui-xvhgjw-align-items, normal);
+  justify-items: var(--hui-xvhgjw-justify-items, legacy);
+  column-gap: var(--hui-xvhgjw-column-gap, 0px);
+  row-gap: var(--hui-xvhgjw-row-gap, 0px);
+}
+[data-hui=DataTable] > tbody,
+[data-hui=DataTable] > thead,
+[data-hui=DataTable] > * > tr {
+  /* LAYOUT-POSITION */
+  position: var(--hui-wsglhu-position, static);
+  top: var(--hui-wsglhu-top, auto);
+  right: var(--hui-wsglhu-right, auto);
+  bottom: var(--hui-wsglhu-bottom, auto);
+  left: var(--hui-wsglhu-left, auto);
+  z-index: var(--hui-wsglhu-z-index, auto);
+  float: var(--hui-wsglhu-float, none);
+  clear: var(--hui-wsglhu-clear, none);
+  align-self: var(--hui-wsglhu-align-self, auto);
+  order: var(--hui-wsglhu-order, 0);
+  /* LAYOUT-SIZING */
+  box-sizing: var(--hui-wsglhu-box-sizing, border-box);
+  height: var(--hui-wsglhu-height, auto);
+  max-height: var(--hui-wsglhu-max-height, none);
+  min-height: var(--hui-wsglhu-min-height, auto);
+  width: var(--hui-wsglhu-width, auto);
+  max-width: var(--hui-wsglhu-max-width, none);
+  min-width: var(--hui-wsglhu-min-width, auto);
+  /* LAYOUT-MARGIN */
+  margin-top: var(--hui-wsglhu-margin-top, 0px);
+  margin-right: var(--hui-wsglhu-margin-right, 0px);
+  margin-bottom: var(--hui-wsglhu-margin-bottom, 0px);
+  margin-left: var(--hui-wsglhu-margin-left, 0px);
+  /* LAYOUT-PADDING */
+  padding-top: var(--hui-wsglhu-padding-top, 0px);
+  padding-right: var(--hui-wsglhu-padding-right, 0px);
+  padding-bottom: var(--hui-wsglhu-padding-bottom, 0px);
+  padding-left: var(--hui-wsglhu-padding-left, 0px);
+  /* LAYOUT-OVERFLOW */
+  overflow-x: var(--hui-wsglhu-overflow-x, visible);
+  overflow-y: var(--hui-wsglhu-overflow-y, visible);
+  /* LAYOUT-FLEX */
+  flex-basis: var(--hui-wsglhu-flex-basis, auto);
+  flex-direction: var(--hui-wsglhu-flex-direction, row);
+  flex-grow: var(--hui-wsglhu-flex-grow, 0);
+  flex-shrink: var(--hui-wsglhu-flex-shrink, 1);
+  flex-wrap: var(--hui-wsglhu-flex-wrap, nowrap);
+  gap: var(--hui-wsglhu-gap, 0px);
+  align-content: var(--hui-wsglhu-align-content, stretch);
+  justify-content: var(--hui-wsglhu-justify-content, flex-start);
+  align-items: var(--hui-wsglhu-align-items, stretch);
+  /* TEXT */
+  direction: var(--hui-wsglhu-direction, ltr);
+  font-family: var(--hui-wsglhu-font-family, system-ui);
+  font-size: var(--hui-wsglhu-font-size, 16px);
+  font-stretch: var(--hui-wsglhu-font-stretch, 100%);
+  font-style: var(--hui-wsglhu-font-style, normal);
+  font-weight: var(--hui-wsglhu-font-weight, 400);
+  letter-spacing: var(--hui-wsglhu-letter-spacing, normal);
+  line-height: var(--hui-wsglhu-line-height, normal);
+  text-align: var(--hui-wsglhu-text-align, start);
+  text-align-last: var(--hui-wsglhu-text-align-last, auto);
+  text-decoration-color: var(--hui-wsglhu-text-decoration-color, #000);
+  text-decoration-line: var(--hui-wsglhu-text-decoration-line, none);
+  text-decoration-style: var(--hui-wsglhu-text-decoration-style, solid);
+  text-decoration-thickness: var(--hui-wsglhu-text-decoration-thickness, auto);
+  text-indent: var(--hui-wsglhu-text-indent, 0px);
+  text-overflow: var(--hui-wsglhu-text-overflow, clip);
+  text-shadow: var(--hui-wsglhu-text-shadow, none);
+  text-size-adjust: var(--hui-wsglhu-text-size-adjust, auto);
+  text-transform: var(--hui-wsglhu-text-transform, none);
+  text-wrap: var(--hui-wsglhu-text-wrap, wrap);
+  vertical-align: var(--hui-wsglhu-vertical-align, baseline);
+  white-space-collapse: var(--hui-wsglhu-white-space-collapse, collapse);
+  word-break: var(--hui-wsglhu-word-break, normal);
+  word-spacing: var(--hui-wsglhu-word-spacing, 0px);
+  /* APPERANCE */
+  visibility: var(--hui-wsglhu-visibility, visible);
+  color: var(--hui-wsglhu-color, rgb(0, 0, 0));
+  background-attachment: var(--hui-wsglhu-background-attachment, scroll);
+  background-clip: var(--hui-wsglhu-background-clip, border-box);
+  background-color: var(--hui-wsglhu-background-color, rgba(0, 0, 0, 0));
+  background-image: var(--hui-wsglhu-background-image, none);
+  background-origin: var(--hui-wsglhu-background-origin, padding-box);
+  background-position-x: var(--hui-wsglhu-background-position-x, 0%);
+  background-position-y: var(--hui-wsglhu-background-position-y, 0%);
+  background-repeat: var(--hui-wsglhu-background-repeat, repeat);
+  background-size: var(--hui-wsglhu-background-size, auto);
+  border-bottom-color: var(--hui-wsglhu-border-bottom-color, rgb(0, 0, 0));
+  border-bottom-style: var(--hui-wsglhu-border-bottom-style, none);
+  border-bottom-width: var(--hui-wsglhu-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-wsglhu-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-wsglhu-border-bottom-right-radius, 0px);
+  border-image-outset: var(--hui-wsglhu-border-image-outset, 0);
+  border-image-repeat: var(--hui-wsglhu-border-image-repeat, stretch);
+  border-image-slice: var(--hui-wsglhu-border-image-slice, 100%);
+  border-image-source: var(--hui-wsglhu-border-image-source, none);
+  border-image-width: var(--hui-wsglhu-border-image-width, 1);
+  border-left-color: var(--hui-wsglhu-border-left-color, rgb(0, 0, 0));
+  border-left-style: var(--hui-wsglhu-border-left-style, none);
+  border-left-width: var(--hui-wsglhu-border-left-width, 0px);
+  border-right-color: var(--hui-wsglhu-border-right-color, rgb(0, 0, 0));
+  border-right-style: var(--hui-wsglhu-border-right-style, none);
+  border-right-width: var(--hui-wsglhu-border-right-width, 0px);
+  border-top-color: var(--hui-wsglhu-border-top-color, rgb(0, 0, 0));
+  border-top-style: var(--hui-wsglhu-border-top-style, none);
+  border-top-width: var(--hui-wsglhu-border-top-width, 0px);
+  border-top-left-radius: var(--hui-wsglhu-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-wsglhu-border-top-right-radius, 0px);
+  box-shadow: var(--hui-wsglhu-box-shadow, none);
+  cursor: var(--hui-wsglhu-cursor, auto);
+  outline-color: var(--hui-wsglhu-outline-color, rgb(0, 0, 0));
+  outline-offset: var(--hui-wsglhu-outline-offset, 0px);
+  outline-style: var(--hui-wsglhu-outline-style, none);
+  outline-width: var(--hui-wsglhu-outline-width, 0px);
+  scrollbar-color: var(--hui-wsglhu-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-wsglhu-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-wsglhu-scrollbar-width, thin);
+  /* GRID */
+  grid-auto-columns: var(--hui-wsglhu-grid-auto-columns, auto);
+  grid-auto-flow: var(--hui-wsglhu-grid-auto-flow, row);
+  grid-auto-rows: var(--hui-wsglhu-grid-auto-rows, auto);
+  grid-column-end: var(--hui-wsglhu-grid-column-end, auto);
+  grid-column-start: var(--hui-wsglhu-grid-column-start, auto);
+  grid-row-end: var(--hui-wsglhu-grid-row-end, auto);
+  grid-row-start: var(--hui-wsglhu-grid-row-start, auto);
+  grid-template-areas: var(--hui-wsglhu-grid-template-areas, none);
+  grid-template-columns: var(--hui-wsglhu-grid-template-columns, none);
+  grid-template-rows: var(--hui-wsglhu-grid-template-rows, none);
+  align-content: var(--hui-wsglhu-align-content, normal);
+  justify-content: var(--hui-wsglhu-justify-content, normal);
+  align-items: var(--hui-wsglhu-align-items, normal);
+  justify-items: var(--hui-wsglhu-justify-items, legacy);
+  column-gap: var(--hui-wsglhu-column-gap, 0px);
+  row-gap: var(--hui-wsglhu-row-gap, 0px);
+  /* DISPLAY */
+  display: var(--hui-wsglhu-display, block);
+}
+[data-hui=DataTable] > tbody > tr > td {
+  /* LAYOUT-POSITION */
+  position: var(--hui-avzraa-position, static);
+  top: var(--hui-avzraa-top, auto);
+  right: var(--hui-avzraa-right, auto);
+  bottom: var(--hui-avzraa-bottom, auto);
+  left: var(--hui-avzraa-left, auto);
+  z-index: var(--hui-avzraa-z-index, auto);
+  float: var(--hui-avzraa-float, none);
+  clear: var(--hui-avzraa-clear, none);
+  align-self: var(--hui-avzraa-align-self, auto);
+  order: var(--hui-avzraa-order, 0);
+  /* LAYOUT-SIZING */
+  box-sizing: var(--hui-avzraa-box-sizing, border-box);
+  height: var(--hui-avzraa-height, auto);
+  max-height: var(--hui-avzraa-max-height, none);
+  min-height: var(--hui-avzraa-min-height, auto);
+  width: var(--hui-avzraa-width, auto);
+  max-width: var(--hui-avzraa-max-width, none);
+  min-width: var(--hui-avzraa-min-width, auto);
+  /* LAYOUT-MARGIN */
+  margin-top: var(--hui-avzraa-margin-top, 0px);
+  margin-right: var(--hui-avzraa-margin-right, 0px);
+  margin-bottom: var(--hui-avzraa-margin-bottom, 0px);
+  margin-left: var(--hui-avzraa-margin-left, 0px);
+  /* LAYOUT-PADDING */
+  padding-top: var(--hui-avzraa-padding-top, 0px);
+  padding-right: var(--hui-avzraa-padding-right, 0px);
+  padding-bottom: var(--hui-avzraa-padding-bottom, 0px);
+  padding-left: var(--hui-avzraa-padding-left, 0px);
+  /* LAYOUT-OVERFLOW */
+  overflow-x: var(--hui-avzraa-overflow-x, visible);
+  overflow-y: var(--hui-avzraa-overflow-y, visible);
+  /* LAYOUT-FLEX */
+  flex-basis: var(--hui-avzraa-flex-basis, auto);
+  flex-direction: var(--hui-avzraa-flex-direction, row);
+  flex-grow: var(--hui-avzraa-flex-grow, 0);
+  flex-shrink: var(--hui-avzraa-flex-shrink, 1);
+  flex-wrap: var(--hui-avzraa-flex-wrap, nowrap);
+  gap: var(--hui-avzraa-gap, 0px);
+  align-content: var(--hui-avzraa-align-content, stretch);
+  justify-content: var(--hui-avzraa-justify-content, flex-start);
+  align-items: var(--hui-avzraa-align-items, stretch);
+  /* TEXT */
+  direction: var(--hui-avzraa-direction, ltr);
+  font-family: var(--hui-avzraa-font-family, system-ui);
+  font-size: var(--hui-avzraa-font-size, 16px);
+  font-stretch: var(--hui-avzraa-font-stretch, 100%);
+  font-style: var(--hui-avzraa-font-style, normal);
+  font-weight: var(--hui-avzraa-font-weight, 400);
+  letter-spacing: var(--hui-avzraa-letter-spacing, normal);
+  line-height: var(--hui-avzraa-line-height, normal);
+  text-align: var(--hui-avzraa-text-align, start);
+  text-align-last: var(--hui-avzraa-text-align-last, auto);
+  text-decoration-color: var(--hui-avzraa-text-decoration-color, #000);
+  text-decoration-line: var(--hui-avzraa-text-decoration-line, none);
+  text-decoration-style: var(--hui-avzraa-text-decoration-style, solid);
+  text-decoration-thickness: var(--hui-avzraa-text-decoration-thickness, auto);
+  text-indent: var(--hui-avzraa-text-indent, 0px);
+  text-overflow: var(--hui-avzraa-text-overflow, clip);
+  text-shadow: var(--hui-avzraa-text-shadow, none);
+  text-size-adjust: var(--hui-avzraa-text-size-adjust, auto);
+  text-transform: var(--hui-avzraa-text-transform, none);
+  text-wrap: var(--hui-avzraa-text-wrap, wrap);
+  vertical-align: var(--hui-avzraa-vertical-align, baseline);
+  white-space-collapse: var(--hui-avzraa-white-space-collapse, collapse);
+  word-break: var(--hui-avzraa-word-break, normal);
+  word-spacing: var(--hui-avzraa-word-spacing, 0px);
+  /* APPERANCE */
+  visibility: var(--hui-avzraa-visibility, visible);
+  color: var(--hui-avzraa-color, rgb(0, 0, 0));
+  background-attachment: var(--hui-avzraa-background-attachment, scroll);
+  background-clip: var(--hui-avzraa-background-clip, border-box);
+  background-color: var(--hui-avzraa-background-color, rgba(0, 0, 0, 0));
+  background-image: var(--hui-avzraa-background-image, none);
+  background-origin: var(--hui-avzraa-background-origin, padding-box);
+  background-position-x: var(--hui-avzraa-background-position-x, 0%);
+  background-position-y: var(--hui-avzraa-background-position-y, 0%);
+  background-repeat: var(--hui-avzraa-background-repeat, repeat);
+  background-size: var(--hui-avzraa-background-size, auto);
+  border-bottom-color: var(--hui-avzraa-border-bottom-color, rgb(0, 0, 0));
+  border-bottom-style: var(--hui-avzraa-border-bottom-style, none);
+  border-bottom-width: var(--hui-avzraa-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-avzraa-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-avzraa-border-bottom-right-radius, 0px);
+  border-image-outset: var(--hui-avzraa-border-image-outset, 0);
+  border-image-repeat: var(--hui-avzraa-border-image-repeat, stretch);
+  border-image-slice: var(--hui-avzraa-border-image-slice, 100%);
+  border-image-source: var(--hui-avzraa-border-image-source, none);
+  border-image-width: var(--hui-avzraa-border-image-width, 1);
+  border-left-color: var(--hui-avzraa-border-left-color, rgb(0, 0, 0));
+  border-left-style: var(--hui-avzraa-border-left-style, none);
+  border-left-width: var(--hui-avzraa-border-left-width, 0px);
+  border-right-color: var(--hui-avzraa-border-right-color, rgb(0, 0, 0));
+  border-right-style: var(--hui-avzraa-border-right-style, none);
+  border-right-width: var(--hui-avzraa-border-right-width, 0px);
+  border-top-color: var(--hui-avzraa-border-top-color, rgb(0, 0, 0));
+  border-top-style: var(--hui-avzraa-border-top-style, none);
+  border-top-width: var(--hui-avzraa-border-top-width, 0px);
+  border-top-left-radius: var(--hui-avzraa-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-avzraa-border-top-right-radius, 0px);
+  box-shadow: var(--hui-avzraa-box-shadow, none);
+  cursor: var(--hui-avzraa-cursor, auto);
+  outline-color: var(--hui-avzraa-outline-color, rgb(0, 0, 0));
+  outline-offset: var(--hui-avzraa-outline-offset, 0px);
+  outline-style: var(--hui-avzraa-outline-style, none);
+  outline-width: var(--hui-avzraa-outline-width, 0px);
+  scrollbar-color: var(--hui-avzraa-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-avzraa-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-avzraa-scrollbar-width, thin);
+  flex: var(--hui-avzraa-flex, initial);
+  /* DISPLAY */
+  display: var(--hui-avzraa-display, block);
+}
+[data-hui=DataTable] > thead > tr > th {
+  /* LAYOUT-POSITION */
+  position: var(--hui-yfagqg-position, static);
+  top: var(--hui-yfagqg-top, auto);
+  right: var(--hui-yfagqg-right, auto);
+  bottom: var(--hui-yfagqg-bottom, auto);
+  left: var(--hui-yfagqg-left, auto);
+  z-index: var(--hui-yfagqg-z-index, auto);
+  float: var(--hui-yfagqg-float, none);
+  clear: var(--hui-yfagqg-clear, none);
+  align-self: var(--hui-yfagqg-align-self, auto);
+  order: var(--hui-yfagqg-order, 0);
+  /* LAYOUT-SIZING */
+  box-sizing: var(--hui-yfagqg-box-sizing, border-box);
+  height: var(--hui-yfagqg-height, auto);
+  max-height: var(--hui-yfagqg-max-height, none);
+  min-height: var(--hui-yfagqg-min-height, auto);
+  width: var(--hui-yfagqg-width, auto);
+  max-width: var(--hui-yfagqg-max-width, none);
+  min-width: var(--hui-yfagqg-min-width, auto);
+  /* LAYOUT-MARGIN */
+  margin-top: var(--hui-yfagqg-margin-top, 0px);
+  margin-right: var(--hui-yfagqg-margin-right, 0px);
+  margin-bottom: var(--hui-yfagqg-margin-bottom, 0px);
+  margin-left: var(--hui-yfagqg-margin-left, 0px);
+  /* LAYOUT-PADDING */
+  padding-top: var(--hui-yfagqg-padding-top, 0px);
+  padding-right: var(--hui-yfagqg-padding-right, 0px);
+  padding-bottom: var(--hui-yfagqg-padding-bottom, 0px);
+  padding-left: var(--hui-yfagqg-padding-left, 0px);
+  /* LAYOUT-OVERFLOW */
+  overflow-x: var(--hui-yfagqg-overflow-x, visible);
+  overflow-y: var(--hui-yfagqg-overflow-y, visible);
+  /* LAYOUT-FLEX */
+  flex-basis: var(--hui-yfagqg-flex-basis, auto);
+  flex-direction: var(--hui-yfagqg-flex-direction, row);
+  flex-grow: var(--hui-yfagqg-flex-grow, 0);
+  flex-shrink: var(--hui-yfagqg-flex-shrink, 1);
+  flex-wrap: var(--hui-yfagqg-flex-wrap, nowrap);
+  gap: var(--hui-yfagqg-gap, 0px);
+  align-content: var(--hui-yfagqg-align-content, stretch);
+  justify-content: var(--hui-yfagqg-justify-content, flex-start);
+  align-items: var(--hui-yfagqg-align-items, stretch);
+  /* TEXT */
+  direction: var(--hui-yfagqg-direction, ltr);
+  font-family: var(--hui-yfagqg-font-family, system-ui);
+  font-size: var(--hui-yfagqg-font-size, 16px);
+  font-stretch: var(--hui-yfagqg-font-stretch, 100%);
+  font-style: var(--hui-yfagqg-font-style, normal);
+  font-weight: var(--hui-yfagqg-font-weight, 400);
+  letter-spacing: var(--hui-yfagqg-letter-spacing, normal);
+  line-height: var(--hui-yfagqg-line-height, normal);
+  text-align: var(--hui-yfagqg-text-align, start);
+  text-align-last: var(--hui-yfagqg-text-align-last, auto);
+  text-decoration-color: var(--hui-yfagqg-text-decoration-color, #000);
+  text-decoration-line: var(--hui-yfagqg-text-decoration-line, none);
+  text-decoration-style: var(--hui-yfagqg-text-decoration-style, solid);
+  text-decoration-thickness: var(--hui-yfagqg-text-decoration-thickness, auto);
+  text-indent: var(--hui-yfagqg-text-indent, 0px);
+  text-overflow: var(--hui-yfagqg-text-overflow, clip);
+  text-shadow: var(--hui-yfagqg-text-shadow, none);
+  text-size-adjust: var(--hui-yfagqg-text-size-adjust, auto);
+  text-transform: var(--hui-yfagqg-text-transform, none);
+  text-wrap: var(--hui-yfagqg-text-wrap, wrap);
+  vertical-align: var(--hui-yfagqg-vertical-align, baseline);
+  white-space-collapse: var(--hui-yfagqg-white-space-collapse, collapse);
+  word-break: var(--hui-yfagqg-word-break, normal);
+  word-spacing: var(--hui-yfagqg-word-spacing, 0px);
+  /* APPERANCE */
+  visibility: var(--hui-yfagqg-visibility, visible);
+  color: var(--hui-yfagqg-color, rgb(0, 0, 0));
+  background-attachment: var(--hui-yfagqg-background-attachment, scroll);
+  background-clip: var(--hui-yfagqg-background-clip, border-box);
+  background-color: var(--hui-yfagqg-background-color, rgba(0, 0, 0, 0));
+  background-image: var(--hui-yfagqg-background-image, none);
+  background-origin: var(--hui-yfagqg-background-origin, padding-box);
+  background-position-x: var(--hui-yfagqg-background-position-x, 0%);
+  background-position-y: var(--hui-yfagqg-background-position-y, 0%);
+  background-repeat: var(--hui-yfagqg-background-repeat, repeat);
+  background-size: var(--hui-yfagqg-background-size, auto);
+  border-bottom-color: var(--hui-yfagqg-border-bottom-color, rgb(0, 0, 0));
+  border-bottom-style: var(--hui-yfagqg-border-bottom-style, none);
+  border-bottom-width: var(--hui-yfagqg-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-yfagqg-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-yfagqg-border-bottom-right-radius, 0px);
+  border-image-outset: var(--hui-yfagqg-border-image-outset, 0);
+  border-image-repeat: var(--hui-yfagqg-border-image-repeat, stretch);
+  border-image-slice: var(--hui-yfagqg-border-image-slice, 100%);
+  border-image-source: var(--hui-yfagqg-border-image-source, none);
+  border-image-width: var(--hui-yfagqg-border-image-width, 1);
+  border-left-color: var(--hui-yfagqg-border-left-color, rgb(0, 0, 0));
+  border-left-style: var(--hui-yfagqg-border-left-style, none);
+  border-left-width: var(--hui-yfagqg-border-left-width, 0px);
+  border-right-color: var(--hui-yfagqg-border-right-color, rgb(0, 0, 0));
+  border-right-style: var(--hui-yfagqg-border-right-style, none);
+  border-right-width: var(--hui-yfagqg-border-right-width, 0px);
+  border-top-color: var(--hui-yfagqg-border-top-color, rgb(0, 0, 0));
+  border-top-style: var(--hui-yfagqg-border-top-style, none);
+  border-top-width: var(--hui-yfagqg-border-top-width, 0px);
+  border-top-left-radius: var(--hui-yfagqg-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-yfagqg-border-top-right-radius, 0px);
+  box-shadow: var(--hui-yfagqg-box-shadow, none);
+  cursor: var(--hui-yfagqg-cursor, auto);
+  outline-color: var(--hui-yfagqg-outline-color, rgb(0, 0, 0));
+  outline-offset: var(--hui-yfagqg-outline-offset, 0px);
+  outline-style: var(--hui-yfagqg-outline-style, none);
+  outline-width: var(--hui-yfagqg-outline-width, 0px);
+  scrollbar-color: var(--hui-yfagqg-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-yfagqg-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-yfagqg-scrollbar-width, thin);
+  flex: var(--hui-yfagqg-flex, initial);
+  /* DISPLAY */
+  display: var(--hui-yfagqg-display, block);
+}
+[data-hui=DataTable] > tbody > tr:nth-child(odd),
+[data-hui=DataTable] > tbody > tr:nth-child(odd) > td {
+  background-color: var(--hui-gqdxgs-background-color, initial);
+}
+[data-hui=DataTable] > tbody {
+  min-height: var(--hui-fgrqpr-min-height, initial);
+  overflow-y: var(--hui-fgrqpr-overflow-y, initial);
+  scrollbar-gutter: var(--hui-fgrqpr-scrollbar-gutter, initial);
+  border-bottom-width: var(--hui-fgrqpr-border-bottom-width, initial);
+  border-bottom-style: var(--hui-fgrqpr-border-bottom-style, initial);
+  border-bottom-color: var(--hui-fgrqpr-border-bottom-color, initial);
+}
+[data-hui=DataTable] > tbody > tr > td + td {
+  border-left-width: var(--hui-ozatyc-border-left-width, initial);
+  border-left-style: var(--hui-ozatyc-border-left-style, initial);
+  border-left-color: var(--hui-ozatyc-border-left-color, initial);
+}
+[data-hui=DataTable] > tbody > tr + tr,
+[data-hui=DataTable] > thead + tbody {
+  border-top-width: var(--hui-golnwm-border-top-width, initial);
+  border-top-style: var(--hui-golnwm-border-top-style, initial);
+  border-top-color: var(--hui-golnwm-border-top-color, initial);
+}

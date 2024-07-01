@@ -1,0 +1,40 @@
+{
+  "name": "svelte-hui",
+  "version": "0.0.1",
+  "description": "Human User Interface Svelte Components",
+  "svelte": "src/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint --ext .js,.html,.svelte .",
+    "fix": "eslint --fix --ext .js,.html,.svelte .",
+    "format": "prettier --write --plugin-search-dir=. src/**/*.svelte; prettier --write src/**/*.js; prettier --write src/**/*.*css"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-svelte3": "^3.4.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-svelte": "^2.7.0",
+    "rollup": "^2.75.7",
+    "rollup-plugin-svelte": "^6.0.0",
+    "svelte": "^3.48.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reertech/hui.git"
+  },
+  "keywords": [
+    "svelte",
+    "ui kit"
+  ],
+  "author": "Reer Technologies",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reertech/hui/issues"
+  },
+  "homepage": "https://github.com/reertech/hui#readme"
+}
