@@ -1,5 +1,4 @@
 defmodule Builder do
-  # @themes [nil, "unua", "dua", "tria", "kvara", "kvina"]
   @states [nil, "active", "disabled", "readonly", "valid", "invalid"]
 
   @prefix_length 6

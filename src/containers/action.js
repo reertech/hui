@@ -1,4 +1,4 @@
-import { isEqual, formatPx } from "../helpers.js"
+import { isEqual, isObject, formatPx } from "../helpers.js"
 
 const isValid = (value, allowed) => {
   switch (true) {
@@ -12,34 +12,40 @@ const isValid = (value, allowed) => {
   }
 }
 
-const applyStyle = (oldVal, newVal, node, style, formatter) => {
-  if (isEqual(oldVal, newVal)) return
+const applyStyle = (node, style, value, formatter) => {
+  console.log("applyStyle", "!", style, formatter(value))
 
-  console.log("applyStyle", "!", style)
-
-  node.style[style] = formatter(newVal) 
+  node.style[style] = formatter(value)
 }
 
-const applySize = (node, oldState, changes) => {
+const sizeStyles = {
+  width: "width",
+  minWidth: "min-width",
+  maxWidth: "max-width",
+  height: "height",
+  minHeight: "min-height",
+  maxHeight: "max-height"
+}
+
+const applySize = (node, changes) => {
   if (!changes.hasOwnProperty("size")) return
-  console.log("apply", "!", "Size")
+
+  console.log("apply", "!", "size")
 
   const size = changes["size"] 
   const s = isValid(size) ? size : {}
-  const oldS = oldState["size"] || {}
 
-  const props = [
-    ["width", "width"], 
-    ["minWidth", "min-width"],
-    ["maxWidth", "max-width"],
-    ["height", "height"], 
-    ["minHeight", "min-height"],
-    ["maxHeight", "max-height"]
-  ]
+  console.log("s", s)
 
-  props.forEach(([key, style]) => {
-    applyStyle(oldS[key], s[key], node, style, formatPx)
-  })
+  for (const key in s) {
+    const style = sizeStyles[key]
+
+    if (style) applyStyle(node, style, s[key], formatPx)
+  }
+}
+
+const applyBg = (node, changes) => {
+  if (!changes.hasOwnProperty("bg")) return
 }
 
 const applyState = (node, oldState, newState) => {
@@ -64,26 +70,53 @@ const applyState = (node, oldState, newState) => {
     "flex",
     "scrollY",
     "scrollX",
-    "value"
-  ].reduce((acc, key) => {
-    const newValue = newState[key]
-    if (isEqual(oldState[key], newValue)) return acc
-    acc[key] = newValue
-    return acc
-  }, {})
+    "value",
+    "name"
+  ].reduce((acc, key) => 
+    extractChanges(oldState, newState, key, acc), {})
 
-  applySize(node, oldState, changes)
+  console.log("changes", changes)
+
+  applySize(node, changes)
 
   return changes
 }
 
-export default (node, state) => {
+const extractChanges = (oldState, newState, key, acc) => {
+  const newValue = newState[key]
+  const oldValue = oldState[key]
+
+  if (isObject(newValue) && isObject(oldValue)) {
+    const compared = {}
+    const keys = Object.keys(newValue).concat(Object.keys(oldValue))
+
+    const changes = keys.reduce((acc, key) => {
+      if (compared[key]) return acc
+      else compared[key] = true
+
+      return extractChanges(oldValue, newValue, key, acc)
+    }, {})
+
+    if (Object.keys(changes)) acc[key] = changes
+  } else if (!isEqual(newValue, oldValue)) {
+    acc[key] = newValue
+  }
+
+  console.log("changes", acc)
+
+  return acc
+}
+
+export default function hui(node, state) {
   const currentState = applyState(node, {}, state) 
 
   return {
-    update: (newState) => {
+    update(newState) {
       const changes = applyState(node, currentState, newState)
       Object.assign(currentState, changes) 
+    },
+    destroy() {
+      console.log("bye!", this)
     }
   }
 }
