@@ -35,6 +35,12 @@ export const buildFuzzyRegex = (string, params = "i") => {
   return new RegExp(string.replace(/\s+/, " "), params)
 }
 
+export const uniqueArray = (array) => {
+  if (!isArray) return array
+
+  return new Set(array).values().toArray()
+}
+
 export const arrayToMap = (array, value) => {
   if (!isArray(array)) return array
 
