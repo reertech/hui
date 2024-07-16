@@ -41,6 +41,9 @@ export const uniqueArray = (array) => {
   return new Set(array).values().toArray()
 }
 
+export const diffArrays = (arrA, arrB) =>
+  new Set(arrA).difference(new Set(arrB)).values().toArray()
+
 export const arrayToMap = (array, value) => {
   if (!isArray(array)) return array
 
@@ -72,7 +75,6 @@ export const fetchCutParent = (el) => {
 
   const overflowY = getComputedStyle(el).overflowY
 
-  // console.log(overflowY, el)
   if (overflowY !== "visible") return el
 
   return fetchCutParent(el.parentElement)

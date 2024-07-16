@@ -52,7 +52,7 @@
 </Container>
 
 <!-- theme.ini
-  themes: small, large;
+  themes: small, large, center;
   & = common, display;
 -->
 

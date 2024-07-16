@@ -118,8 +118,6 @@
     height: 100% !important;
     text-align: center !important;
   }
-  button:active {
-  }
 </style>
 
 <!-- theme.ini

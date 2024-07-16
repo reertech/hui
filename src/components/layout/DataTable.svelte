@@ -38,6 +38,15 @@
   export let showFilteredCols = false
   export let rowsIdxKey = null
 
+  const check = (entries, entry) =>
+    !isObject(entries) ? null : entries[entry]
+
+  $: columns = cols.filter(c => {
+    if (!showInactiveCols && !check(colsActive, c)) return false
+    if (!showFilteredCols && check(colsFilter, c)) return false
+    return true
+  })
+
   const buildWidth = (value) => {
     switch (typeof value) {
       case "number": return `minmax(${value}px, max-content)`
@@ -46,18 +55,14 @@
     }
   }
 
-  const check = (entries, entry) =>
-    !isObject(entries) ? null : entries[entry]
-
   const colWidthBuilder = (acc, c) => {
-    if (!check(colsActive, c) || check(colsFilter, c)) return acc
     acc.push(buildWidth(check(colsWidth, c)))
     return acc
   }
 
   $: colsTemplate = !isObject(colsWidth)
-    ? `repeat(${cols.length}, max-content)`
-    : cols.reduce(colWidthBuilder, []).join(" ")
+    ? `repeat(${columns.length}, max-content)`
+    : columns.reduce(colWidthBuilder, []).join(" ")
 
   $: templateColumns = [
     $$slots.tdFirst && "max-content",
@@ -102,12 +107,10 @@
           <slot name="thFirst" />
         </th>
       {/if}
-      {#each cols as col, colIdx}
-        {#if (showInactiveCols || check(colsActive, col)) && !check(colsFilter, col)}
-          <th data-hui-idx={colIdx}>
-            <slot name="th" {col} {colIdx} />
-          </th>
-        {/if}
+      {#each columns as col, colIdx}
+        <th data-hui-idx={colIdx}>
+          <slot name="th" {col} {colIdx} />
+        </th>
       {/each}
       {#if $$slots.thLast || $$slots.tdLast}
         <th>
@@ -138,14 +141,10 @@
               <slot name="tdFirst" {rowIdx} {row} />
             </td>
           {/if}
-          {#each cols as col, colIdx}
-            {@const inactive = !showInactiveCols && !check(colsActive, col)}
-            {@const filtered = !showFilteredCols && check(colsFilter, col)}
-            {#if !inactive && !filtered}
-              <td data-hui-idx={colIdx}>
-                <slot name="td" {rowIdx} {row} {col} {colIdx} />
-              </td>
-            {/if}
+          {#each columns as col, colIdx}
+            <td data-hui-idx={colIdx}>
+              <slot name="td" {rowIdx} {row} {col} {colIdx} />
+            </td>
           {/each}
           {#if $$slots.tdLast || $$slots.thLast}
             <td>

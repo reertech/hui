@@ -52,6 +52,20 @@
 }
 [data-hui=Title][data-hui-theme~=large][data-hui-invalid] {
 }
+[data-hui=Title][data-hui-theme~=center] {
+  /* TEXT */
+  --hui-lqttac-text-align: center;
+}
+[data-hui=Title][data-hui-theme~=center][data-hui-active] {
+}
+[data-hui=Title][data-hui-theme~=center][data-hui-disabled] {
+}
+[data-hui=Title][data-hui-theme~=center][data-hui-readonly] {
+}
+[data-hui=Title][data-hui-theme~=center][data-hui-valid] {
+}
+[data-hui=Title][data-hui-theme~=center][data-hui-invalid] {
+}
 [data-hui=Title] {
   /* LAYOUT-POSITION */
 /*  --hui-lqttac-position-default: ; */
