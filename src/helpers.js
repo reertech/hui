@@ -44,6 +44,9 @@ export const uniqueArray = (array) => {
 export const diffArrays = (arrA, arrB) =>
   new Set(arrA).difference(new Set(arrB)).values().toArray()
 
+export const symDiffArrays = (arrA, arrB) =>
+  new Set(arrA).symmetricDifference(new Set(arrB)).values().toArray()
+
 export const arrayToMap = (array, value) => {
   if (!isArray(array)) return array
 

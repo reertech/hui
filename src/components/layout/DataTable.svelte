@@ -69,6 +69,8 @@
     colsTemplate,
     $$slots.tdLast && "max-content"
   ].filter(s => s).join(" ")
+
+  $: columnCount = columns.length + ($$slots.tdFirst || 0) + ($$slots.tdFirst || 0)
 </script>
 
 <Container
@@ -158,6 +160,14 @@
       </tr>
       {#if $$slots.trAfter}
         <slot name="trAfter" {rowIdx} {row} />
+      {/if}
+    {:else}
+      {#if $$slots.rowsEmptyTd}
+        <tr>
+          <td colspan={columnCount}>
+            <slot name="rowsEmptyTd" />
+          </td>
+        </tr>
       {/if}
     {/each}
   </tbody>
