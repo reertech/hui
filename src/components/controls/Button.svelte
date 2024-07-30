@@ -68,6 +68,7 @@
 </Container>
 
 <!-- theme.ini
+  states: active, disabled, readonly;
   themes: flat, small, round, icon;
   > button
   | > button:hover

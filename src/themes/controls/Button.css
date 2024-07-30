@@ -141,26 +141,6 @@
 }
 [data-hui=Button][data-hui-readonly] > button > svg {
 }
-[data-hui=Button][data-hui-valid] > button {
-}
-[data-hui=Button][data-hui-valid] > button:hover {
-}
-[data-hui=Button][data-hui-valid] > button:active {
-}
-[data-hui=Button][data-hui-valid] > button:focus {
-}
-[data-hui=Button][data-hui-valid] > button > svg {
-}
-[data-hui=Button][data-hui-invalid] > button {
-}
-[data-hui=Button][data-hui-invalid] > button:hover {
-}
-[data-hui=Button][data-hui-invalid] > button:active {
-}
-[data-hui=Button][data-hui-invalid] > button:focus {
-}
-[data-hui=Button][data-hui-invalid] > button > svg {
-}
 [data-hui=Button][data-hui-theme~=flat] > button {
   /* LAYOUT-PADDING */
   --hui-zsnfqz-padding-top: var(--hui-default-spacer-6);
@@ -225,26 +205,6 @@
 }
 [data-hui=Button][data-hui-theme~=flat][data-hui-readonly] > button > svg {
 }
-[data-hui=Button][data-hui-theme~=flat][data-hui-valid] > button {
-}
-[data-hui=Button][data-hui-theme~=flat][data-hui-valid] > button:hover {
-}
-[data-hui=Button][data-hui-theme~=flat][data-hui-valid] > button:active {
-}
-[data-hui=Button][data-hui-theme~=flat][data-hui-valid] > button:focus {
-}
-[data-hui=Button][data-hui-theme~=flat][data-hui-valid] > button > svg {
-}
-[data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button {
-}
-[data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button:hover {
-}
-[data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button:active {
-}
-[data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button:focus {
-}
-[data-hui=Button][data-hui-theme~=flat][data-hui-invalid] > button > svg {
-}
 [data-hui=Button][data-hui-theme~=small] > button {
   /* LAYOUT-SIZING */
   --hui-zsnfqz-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height) + (var(--hui-default-spacer-4) + var(--hui-default-border-width)) * 2);
@@ -300,26 +260,6 @@
 }
 [data-hui=Button][data-hui-theme~=small][data-hui-readonly] > button > svg {
 }
-[data-hui=Button][data-hui-theme~=small][data-hui-valid] > button {
-}
-[data-hui=Button][data-hui-theme~=small][data-hui-valid] > button:hover {
-}
-[data-hui=Button][data-hui-theme~=small][data-hui-valid] > button:active {
-}
-[data-hui=Button][data-hui-theme~=small][data-hui-valid] > button:focus {
-}
-[data-hui=Button][data-hui-theme~=small][data-hui-valid] > button > svg {
-}
-[data-hui=Button][data-hui-theme~=small][data-hui-invalid] > button {
-}
-[data-hui=Button][data-hui-theme~=small][data-hui-invalid] > button:hover {
-}
-[data-hui=Button][data-hui-theme~=small][data-hui-invalid] > button:active {
-}
-[data-hui=Button][data-hui-theme~=small][data-hui-invalid] > button:focus {
-}
-[data-hui=Button][data-hui-theme~=small][data-hui-invalid] > button > svg {
-}
 [data-hui=Button][data-hui-theme~=round] > button {
   /* APPERANCE */
   --hui-zsnfqz-border-bottom-left-radius: var(--hui-default-border-radius-3);
@@ -365,26 +305,6 @@
 }
 [data-hui=Button][data-hui-theme~=round][data-hui-readonly] > button > svg {
 }
-[data-hui=Button][data-hui-theme~=round][data-hui-valid] > button {
-}
-[data-hui=Button][data-hui-theme~=round][data-hui-valid] > button:hover {
-}
-[data-hui=Button][data-hui-theme~=round][data-hui-valid] > button:active {
-}
-[data-hui=Button][data-hui-theme~=round][data-hui-valid] > button:focus {
-}
-[data-hui=Button][data-hui-theme~=round][data-hui-valid] > button > svg {
-}
-[data-hui=Button][data-hui-theme~=round][data-hui-invalid] > button {
-}
-[data-hui=Button][data-hui-theme~=round][data-hui-invalid] > button:hover {
-}
-[data-hui=Button][data-hui-theme~=round][data-hui-invalid] > button:active {
-}
-[data-hui=Button][data-hui-theme~=round][data-hui-invalid] > button:focus {
-}
-[data-hui=Button][data-hui-theme~=round][data-hui-invalid] > button > svg {
-}
 [data-hui=Button][data-hui-theme~=icon] > button {
 }
 [data-hui=Button][data-hui-theme~=icon] > button:hover {
@@ -424,26 +344,6 @@
 [data-hui=Button][data-hui-theme~=icon][data-hui-readonly] > button:focus {
 }
 [data-hui=Button][data-hui-theme~=icon][data-hui-readonly] > button > svg {
-}
-[data-hui=Button][data-hui-theme~=icon][data-hui-valid] > button {
-}
-[data-hui=Button][data-hui-theme~=icon][data-hui-valid] > button:hover {
-}
-[data-hui=Button][data-hui-theme~=icon][data-hui-valid] > button:active {
-}
-[data-hui=Button][data-hui-theme~=icon][data-hui-valid] > button:focus {
-}
-[data-hui=Button][data-hui-theme~=icon][data-hui-valid] > button > svg {
-}
-[data-hui=Button][data-hui-theme~=icon][data-hui-invalid] > button {
-}
-[data-hui=Button][data-hui-theme~=icon][data-hui-invalid] > button:hover {
-}
-[data-hui=Button][data-hui-theme~=icon][data-hui-invalid] > button:active {
-}
-[data-hui=Button][data-hui-theme~=icon][data-hui-invalid] > button:focus {
-}
-[data-hui=Button][data-hui-theme~=icon][data-hui-invalid] > button > svg {
 }
 [data-hui=Button] > button {
   /* LAYOUT-POSITION */

@@ -1,5 +1,5 @@
 defmodule Builder do
-  @states [nil, "active", "disabled", "readonly", "valid", "invalid"]
+  # @states [nil, "active", "disabled", "readonly", "valid", "invalid"]
 
   @prefix_length 6
 
@@ -128,7 +128,7 @@ defmodule Builder do
 
     section_lines =
       Enum.flat_map(params.themes, fn theme ->
-        Enum.flat_map(@states, fn state ->
+        Enum.flat_map(params.states, fn state ->
           Enum.flat_map(sections, fn {selector, _, prefix, sections} ->
             current = current_theme[theme || "default"][state || "default"][selector]
             defaults = get_default.(defaults, selector)
@@ -182,7 +182,7 @@ defmodule Builder do
     parse_state_name = fn selector, section ->
       with false <- selector == "default",
            [state] <- ~r"(?<=\[data\-hui\-)\w+(?=\])" |> Regex.run(section),
-           true <- state in @states do
+           true <- state in params.states do
         state
       else
         _ -> "default"
@@ -289,8 +289,17 @@ defmodule Builder do
         _ -> [nil]
       end
 
+    states =
+      with [states] <- ~r"(?<=states\:)[\w\s,]+(?=\;)" |> Regex.run(ini) do
+        states = String.split(states, ~r"(\s*,\s*|\s+)", trim: true)
+        [nil | states]
+      else
+        _ -> [nil]
+      end
+
     %{
       name: name,
+      states: states,
       themes: themes,
       path: file_path
     }
