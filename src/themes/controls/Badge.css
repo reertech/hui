@@ -32,43 +32,13 @@
   /* DISPLAY */
   --hui-jjitob-display: block;
 }
-[data-hui=Badge][data-hui-active] {
-}
-[data-hui=Badge][data-hui-disabled] {
-}
-[data-hui=Badge][data-hui-readonly] {
-}
-[data-hui=Badge][data-hui-valid] {
-}
-[data-hui=Badge][data-hui-invalid] {
-}
 [data-hui=Badge][data-hui-theme~=small] {
   /* TEXT */
   --hui-jjitob-font-size: var(--hui-default-font-size-0);
 }
-[data-hui=Badge][data-hui-theme~=small][data-hui-active] {
-}
-[data-hui=Badge][data-hui-theme~=small][data-hui-disabled] {
-}
-[data-hui=Badge][data-hui-theme~=small][data-hui-readonly] {
-}
-[data-hui=Badge][data-hui-theme~=small][data-hui-valid] {
-}
-[data-hui=Badge][data-hui-theme~=small][data-hui-invalid] {
-}
 [data-hui=Badge][data-hui-theme~=button] {
   /* APPERANCE */
   --hui-jjitob-box-shadow: var(--hui-unua-box-shadow);
-}
-[data-hui=Badge][data-hui-theme~=button][data-hui-active] {
-}
-[data-hui=Badge][data-hui-theme~=button][data-hui-disabled] {
-}
-[data-hui=Badge][data-hui-theme~=button][data-hui-readonly] {
-}
-[data-hui=Badge][data-hui-theme~=button][data-hui-valid] {
-}
-[data-hui=Badge][data-hui-theme~=button][data-hui-invalid] {
 }
 [data-hui=Badge] {
   /* LAYOUT-POSITION */

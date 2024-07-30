@@ -202,12 +202,13 @@ defmodule Builder do
         |> String.split(",", trim: true)
         |> Enum.map(fn part ->
           String.trim(part)
+          |> IO.inspect()
           |> String.replace(~r"^\[data\-hui\=\w+\]", "")
           |> String.trim_leading("[data-hui-theme~=#{theme}]")
           |> String.trim_leading("[data-hui-#{state}]")
           |> String.split(~r"\s*\{", trim: true)
           |> List.first()
-          |> IO.inspect()
+          |> Kernel.||("")
           |> case do
             " " <> _ = selector_part -> selector_part
             selector_part -> if default_section?, do: selector_part, else: "&" <> selector_part
