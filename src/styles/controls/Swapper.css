@@ -111,3 +111,126 @@
   /* DISPLAY */
   display: var(--hui-tysnrg-display, block);
 }
+[data-hui=Swapper] > button > [data-hui=SwapperDropZone] {
+  /* LAYOUT-POSITION */
+  position: var(--hui-tyysau-position, static);
+  top: var(--hui-tyysau-top, auto);
+  right: var(--hui-tyysau-right, auto);
+  bottom: var(--hui-tyysau-bottom, auto);
+  left: var(--hui-tyysau-left, auto);
+  z-index: var(--hui-tyysau-z-index, auto);
+  float: var(--hui-tyysau-float, none);
+  clear: var(--hui-tyysau-clear, none);
+  align-self: var(--hui-tyysau-align-self, auto);
+  order: var(--hui-tyysau-order, 0);
+  /* LAYOUT-SIZING */
+  box-sizing: var(--hui-tyysau-box-sizing, border-box);
+  height: var(--hui-tyysau-height, auto);
+  max-height: var(--hui-tyysau-max-height, none);
+  min-height: var(--hui-tyysau-min-height, auto);
+  width: var(--hui-tyysau-width, auto);
+  max-width: var(--hui-tyysau-max-width, none);
+  min-width: var(--hui-tyysau-min-width, auto);
+  /* LAYOUT-MARGIN */
+  margin-top: var(--hui-tyysau-margin-top, 0px);
+  margin-right: var(--hui-tyysau-margin-right, 0px);
+  margin-bottom: var(--hui-tyysau-margin-bottom, 0px);
+  margin-left: var(--hui-tyysau-margin-left, 0px);
+  /* LAYOUT-PADDING */
+  padding-top: var(--hui-tyysau-padding-top, 0px);
+  padding-right: var(--hui-tyysau-padding-right, 0px);
+  padding-bottom: var(--hui-tyysau-padding-bottom, 0px);
+  padding-left: var(--hui-tyysau-padding-left, 0px);
+  /* LAYOUT-OVERFLOW */
+  overflow-x: var(--hui-tyysau-overflow-x, visible);
+  overflow-y: var(--hui-tyysau-overflow-y, visible);
+  /* LAYOUT-FLEX */
+  flex-basis: var(--hui-tyysau-flex-basis, auto);
+  flex-direction: var(--hui-tyysau-flex-direction, row);
+  flex-grow: var(--hui-tyysau-flex-grow, 0);
+  flex-shrink: var(--hui-tyysau-flex-shrink, 1);
+  flex-wrap: var(--hui-tyysau-flex-wrap, nowrap);
+  gap: var(--hui-tyysau-gap, 0px);
+  align-content: var(--hui-tyysau-align-content, stretch);
+  justify-content: var(--hui-tyysau-justify-content, flex-start);
+  align-items: var(--hui-tyysau-align-items, stretch);
+  /* TEXT */
+  direction: var(--hui-tyysau-direction, ltr);
+  font-family: var(--hui-tyysau-font-family, system-ui);
+  font-size: var(--hui-tyysau-font-size, 16px);
+  font-stretch: var(--hui-tyysau-font-stretch, 100%);
+  font-style: var(--hui-tyysau-font-style, normal);
+  font-weight: var(--hui-tyysau-font-weight, 400);
+  letter-spacing: var(--hui-tyysau-letter-spacing, normal);
+  line-height: var(--hui-tyysau-line-height, normal);
+  text-align: var(--hui-tyysau-text-align, start);
+  text-align-last: var(--hui-tyysau-text-align-last, auto);
+  text-decoration-color: var(--hui-tyysau-text-decoration-color, #000);
+  text-decoration-line: var(--hui-tyysau-text-decoration-line, none);
+  text-decoration-style: var(--hui-tyysau-text-decoration-style, solid);
+  text-decoration-thickness: var(--hui-tyysau-text-decoration-thickness, auto);
+  text-indent: var(--hui-tyysau-text-indent, 0px);
+  text-overflow: var(--hui-tyysau-text-overflow, clip);
+  text-shadow: var(--hui-tyysau-text-shadow, none);
+  text-size-adjust: var(--hui-tyysau-text-size-adjust, auto);
+  text-transform: var(--hui-tyysau-text-transform, none);
+  text-wrap: var(--hui-tyysau-text-wrap, wrap);
+  vertical-align: var(--hui-tyysau-vertical-align, baseline);
+  white-space-collapse: var(--hui-tyysau-white-space-collapse, collapse);
+  word-break: var(--hui-tyysau-word-break, normal);
+  word-spacing: var(--hui-tyysau-word-spacing, 0px);
+  /* APPERANCE */
+  visibility: var(--hui-tyysau-visibility, visible);
+  color: var(--hui-tyysau-color, rgb(0, 0, 0));
+  background-attachment: var(--hui-tyysau-background-attachment, scroll);
+  background-clip: var(--hui-tyysau-background-clip, border-box);
+  background-color: var(--hui-tyysau-background-color, rgba(0, 0, 0, 0));
+  background-image: var(--hui-tyysau-background-image, none);
+  background-origin: var(--hui-tyysau-background-origin, padding-box);
+  background-position-x: var(--hui-tyysau-background-position-x, 0%);
+  background-position-y: var(--hui-tyysau-background-position-y, 0%);
+  background-repeat: var(--hui-tyysau-background-repeat, repeat);
+  background-size: var(--hui-tyysau-background-size, auto);
+  border-bottom-color: var(--hui-tyysau-border-bottom-color, rgb(0, 0, 0));
+  border-bottom-style: var(--hui-tyysau-border-bottom-style, none);
+  border-bottom-width: var(--hui-tyysau-border-bottom-width, 0px);
+  border-bottom-left-radius: var(--hui-tyysau-border-bottom-left-radius, 0px);
+  border-bottom-right-radius: var(--hui-tyysau-border-bottom-right-radius, 0px);
+  border-image-outset: var(--hui-tyysau-border-image-outset, 0);
+  border-image-repeat: var(--hui-tyysau-border-image-repeat, stretch);
+  border-image-slice: var(--hui-tyysau-border-image-slice, 100%);
+  border-image-source: var(--hui-tyysau-border-image-source, none);
+  border-image-width: var(--hui-tyysau-border-image-width, 1);
+  border-left-color: var(--hui-tyysau-border-left-color, rgb(0, 0, 0));
+  border-left-style: var(--hui-tyysau-border-left-style, none);
+  border-left-width: var(--hui-tyysau-border-left-width, 0px);
+  border-right-color: var(--hui-tyysau-border-right-color, rgb(0, 0, 0));
+  border-right-style: var(--hui-tyysau-border-right-style, none);
+  border-right-width: var(--hui-tyysau-border-right-width, 0px);
+  border-top-color: var(--hui-tyysau-border-top-color, rgb(0, 0, 0));
+  border-top-style: var(--hui-tyysau-border-top-style, none);
+  border-top-width: var(--hui-tyysau-border-top-width, 0px);
+  border-top-left-radius: var(--hui-tyysau-border-top-left-radius, 0px);
+  border-top-right-radius: var(--hui-tyysau-border-top-right-radius, 0px);
+  box-shadow: var(--hui-tyysau-box-shadow, none);
+  cursor: var(--hui-tyysau-cursor, auto);
+  outline-color: var(--hui-tyysau-outline-color, rgb(0, 0, 0));
+  outline-offset: var(--hui-tyysau-outline-offset, 0px);
+  outline-style: var(--hui-tyysau-outline-style, none);
+  outline-width: var(--hui-tyysau-outline-width, 0px);
+  scrollbar-color: var(--hui-tyysau-scrollbar-color, #bbb #eee);
+  scrollbar-gutter: var(--hui-tyysau-scrollbar-gutter, auto);
+  scrollbar-width: var(--hui-tyysau-scrollbar-width, thin);
+}
+[data-hui=Swapper] > button > [data-hui=SwapperDropZone]:first-child {
+  left: var(--hui-holwtq-left, initial);
+  right: var(--hui-holwtq-right, initial);
+  top: var(--hui-holwtq-top, initial);
+  bottom: var(--hui-holwtq-bottom, initial);
+}
+[data-hui=Swapper] > button > [data-hui=SwapperDropZone]:last-child {
+  left: var(--hui-fgbxgo-left, initial);
+  right: var(--hui-fgbxgo-right, initial);
+  top: var(--hui-fgbxgo-top, initial);
+  bottom: var(--hui-fgbxgo-bottom, initial);
+}

@@ -201,10 +201,13 @@ defmodule Builder do
         selector
         |> String.split(",", trim: true)
         |> Enum.map(fn part ->
-          ~r"\s*(((\[data\-hui\=)\w+(\]))|(\{\s*))"
-          |> Regex.replace(String.trim(part), "")
+          String.trim(part)
+          |> String.replace(~r"^\[data\-hui\=\w+\]", "")
           |> String.trim_leading("[data-hui-theme~=#{theme}]")
           |> String.trim_leading("[data-hui-#{state}]")
+          |> String.split(~r"\s*\{", trim: true)
+          |> List.first()
+          |> IO.inspect()
           |> case do
             " " <> _ = selector_part -> selector_part
             selector_part -> if default_section?, do: selector_part, else: "&" <> selector_part
@@ -212,7 +215,6 @@ defmodule Builder do
         end)
         |> Enum.join(",")
         |> clear_selector()
-        # |> IO.inspect()
         |> case do
           "" -> if default_section?, do: "default", else: "&"
           selector -> selector
@@ -233,7 +235,6 @@ defmodule Builder do
              state <- parse_state_name.(selector, section) do
           String.split(section, ~r"\s*(\{|;)\s*", trim: true)
           |> Enum.reduce(acc, fn line, acc ->
-            # IO.inspect(line)
             with false <- line =~ "[data-hui",
                  [key, val] <-
                    String.split(line, ~r"\s*:\s*", trim: true)

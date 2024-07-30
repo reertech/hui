@@ -44,24 +44,3 @@
 >
   &nbsp;
 </div>
-
-<style>
-  div {
-    position: absolute !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    text-align: center !important;
-    line-height: 100% !important;
-    width: 25% !important;
-    height: 100% !important;
-    background: #0000004f !important;
-  }
-  div:first-child {
-    left: 0 !important;
-    right: auto !important;
-  }
-  div:last-child {
-    right: 0 !important;
-    left: auto !important;
-  }
-</style>

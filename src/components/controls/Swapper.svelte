@@ -109,7 +109,10 @@
 </Container>
 
 <!-- theme.ini
+  themes: vertical;
   > button = common, display;
   > button > [data-hui=SwapperDropZone] = common;
+  > button > [data-hui=SwapperDropZone]:first-child = left, right, top, bottom;
+  > button > [data-hui=SwapperDropZone]:last-child = left, right, top, bottom;
 -->
 

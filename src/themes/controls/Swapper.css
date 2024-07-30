@@ -19,15 +19,113 @@
   /* DISPLAY */
   --hui-tysnrg-display: block;
 }
+[data-hui=Swapper] > button > [data-hui=SwapperDropZone] {
+  /* LAYOUT-POSITION */
+  --hui-tyysau-position: absolute;
+  --hui-tyysau-top: 0;
+  --hui-tyysau-bottom: 0;
+  /* LAYOUT-SIZING */
+  --hui-tyysau-height: 100%;
+  --hui-tyysau-width: 25%;
+  /* TEXT */
+  --hui-tyysau-line-height: 100%;
+  --hui-tyysau-text-align: center;
+}
+[data-hui=Swapper] > button > [data-hui=SwapperDropZone]:first-child {
+  --hui-holwtq-left: 0;
+  --hui-holwtq-right: auto;
+}
+[data-hui=Swapper] > button > [data-hui=SwapperDropZone]:last-child {
+  --hui-fgbxgo-left: auto;
+  --hui-fgbxgo-right: 0;
+}
 [data-hui=Swapper][data-hui-active] > button {
+}
+[data-hui=Swapper][data-hui-active] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-active] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-active] > button > [data-hui=SwapperDropZone]:last-child {
 }
 [data-hui=Swapper][data-hui-disabled] > button {
 }
+[data-hui=Swapper][data-hui-disabled] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-disabled] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-disabled] > button > [data-hui=SwapperDropZone]:last-child {
+}
 [data-hui=Swapper][data-hui-readonly] > button {
+}
+[data-hui=Swapper][data-hui-readonly] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-readonly] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-readonly] > button > [data-hui=SwapperDropZone]:last-child {
 }
 [data-hui=Swapper][data-hui-valid] > button {
 }
+[data-hui=Swapper][data-hui-valid] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-valid] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-valid] > button > [data-hui=SwapperDropZone]:last-child {
+}
 [data-hui=Swapper][data-hui-invalid] > button {
+}
+[data-hui=Swapper][data-hui-invalid] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-invalid] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-invalid] > button > [data-hui=SwapperDropZone]:last-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical] > button {
+}
+[data-hui=Swapper][data-hui-theme~=vertical] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-theme~=vertical] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical] > button > [data-hui=SwapperDropZone]:last-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-active] > button {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-active] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-active] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-active] > button > [data-hui=SwapperDropZone]:last-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-disabled] > button {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-disabled] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-disabled] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-disabled] > button > [data-hui=SwapperDropZone]:last-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-readonly] > button {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-readonly] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-readonly] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-readonly] > button > [data-hui=SwapperDropZone]:last-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-valid] > button {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-valid] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-valid] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-valid] > button > [data-hui=SwapperDropZone]:last-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-invalid] > button {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-invalid] > button > [data-hui=SwapperDropZone] {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-invalid] > button > [data-hui=SwapperDropZone]:first-child {
+}
+[data-hui=Swapper][data-hui-theme~=vertical][data-hui-invalid] > button > [data-hui=SwapperDropZone]:last-child {
 }
 [data-hui=Swapper] > button {
   /* LAYOUT-POSITION */
@@ -141,4 +239,127 @@
 /*  --hui-tysnrg-scrollbar-width-default: ; */
   /* DISPLAY */
 /*  --hui-tysnrg-display-default: ; */
+}
+[data-hui=Swapper] > button > [data-hui=SwapperDropZone] {
+  /* LAYOUT-POSITION */
+/*  --hui-tyysau-position-default: ; */
+/*  --hui-tyysau-top-default: ; */
+/*  --hui-tyysau-right-default: ; */
+/*  --hui-tyysau-bottom-default: ; */
+/*  --hui-tyysau-left-default: ; */
+/*  --hui-tyysau-z-index-default: ; */
+/*  --hui-tyysau-float-default: ; */
+/*  --hui-tyysau-clear-default: ; */
+/*  --hui-tyysau-align-self-default: ; */
+/*  --hui-tyysau-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-tyysau-box-sizing-default: ; */
+/*  --hui-tyysau-height-default: ; */
+/*  --hui-tyysau-max-height-default: ; */
+/*  --hui-tyysau-min-height-default: ; */
+/*  --hui-tyysau-width-default: ; */
+/*  --hui-tyysau-max-width-default: ; */
+/*  --hui-tyysau-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-tyysau-margin-top-default: ; */
+/*  --hui-tyysau-margin-right-default: ; */
+/*  --hui-tyysau-margin-bottom-default: ; */
+/*  --hui-tyysau-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-tyysau-padding-top-default: ; */
+/*  --hui-tyysau-padding-right-default: ; */
+/*  --hui-tyysau-padding-bottom-default: ; */
+/*  --hui-tyysau-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-tyysau-overflow-x-default: ; */
+/*  --hui-tyysau-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-tyysau-flex-basis-default: ; */
+/*  --hui-tyysau-flex-direction-default: ; */
+/*  --hui-tyysau-flex-grow-default: ; */
+/*  --hui-tyysau-flex-shrink-default: ; */
+/*  --hui-tyysau-flex-wrap-default: ; */
+/*  --hui-tyysau-gap-default: ; */
+/*  --hui-tyysau-align-content-default: ; */
+/*  --hui-tyysau-justify-content-default: ; */
+/*  --hui-tyysau-align-items-default: ; */
+  /* TEXT */
+/*  --hui-tyysau-direction-default: ; */
+/*  --hui-tyysau-font-family-default: ; */
+/*  --hui-tyysau-font-size-default: ; */
+/*  --hui-tyysau-font-stretch-default: ; */
+/*  --hui-tyysau-font-style-default: ; */
+/*  --hui-tyysau-font-weight-default: ; */
+/*  --hui-tyysau-letter-spacing-default: ; */
+/*  --hui-tyysau-line-height-default: ; */
+/*  --hui-tyysau-text-align-default: ; */
+/*  --hui-tyysau-text-align-last-default: ; */
+/*  --hui-tyysau-text-decoration-color-default: ; */
+/*  --hui-tyysau-text-decoration-line-default: ; */
+/*  --hui-tyysau-text-decoration-style-default: ; */
+/*  --hui-tyysau-text-decoration-thickness-default: ; */
+/*  --hui-tyysau-text-indent-default: ; */
+/*  --hui-tyysau-text-overflow-default: ; */
+/*  --hui-tyysau-text-shadow-default: ; */
+/*  --hui-tyysau-text-size-adjust-default: ; */
+/*  --hui-tyysau-text-transform-default: ; */
+/*  --hui-tyysau-text-wrap-default: ; */
+/*  --hui-tyysau-vertical-align-default: ; */
+/*  --hui-tyysau-white-space-collapse-default: ; */
+/*  --hui-tyysau-word-break-default: ; */
+/*  --hui-tyysau-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-tyysau-visibility-default: ; */
+/*  --hui-tyysau-color-default: ; */
+/*  --hui-tyysau-background-attachment-default: ; */
+/*  --hui-tyysau-background-clip-default: ; */
+/*  --hui-tyysau-background-color-default: ; */
+/*  --hui-tyysau-background-image-default: ; */
+/*  --hui-tyysau-background-origin-default: ; */
+/*  --hui-tyysau-background-position-x-default: ; */
+/*  --hui-tyysau-background-position-y-default: ; */
+/*  --hui-tyysau-background-repeat-default: ; */
+/*  --hui-tyysau-background-size-default: ; */
+/*  --hui-tyysau-border-bottom-color-default: ; */
+/*  --hui-tyysau-border-bottom-style-default: ; */
+/*  --hui-tyysau-border-bottom-width-default: ; */
+/*  --hui-tyysau-border-bottom-left-radius-default: ; */
+/*  --hui-tyysau-border-bottom-right-radius-default: ; */
+/*  --hui-tyysau-border-image-outset-default: ; */
+/*  --hui-tyysau-border-image-repeat-default: ; */
+/*  --hui-tyysau-border-image-slice-default: ; */
+/*  --hui-tyysau-border-image-source-default: ; */
+/*  --hui-tyysau-border-image-width-default: ; */
+/*  --hui-tyysau-border-left-color-default: ; */
+/*  --hui-tyysau-border-left-style-default: ; */
+/*  --hui-tyysau-border-left-width-default: ; */
+/*  --hui-tyysau-border-right-color-default: ; */
+/*  --hui-tyysau-border-right-style-default: ; */
+/*  --hui-tyysau-border-right-width-default: ; */
+/*  --hui-tyysau-border-top-color-default: ; */
+/*  --hui-tyysau-border-top-style-default: ; */
+/*  --hui-tyysau-border-top-width-default: ; */
+/*  --hui-tyysau-border-top-left-radius-default: ; */
+/*  --hui-tyysau-border-top-right-radius-default: ; */
+/*  --hui-tyysau-box-shadow-default: ; */
+/*  --hui-tyysau-cursor-default: ; */
+/*  --hui-tyysau-outline-color-default: ; */
+/*  --hui-tyysau-outline-offset-default: ; */
+/*  --hui-tyysau-outline-style-default: ; */
+/*  --hui-tyysau-outline-width-default: ; */
+/*  --hui-tyysau-scrollbar-color-default: ; */
+/*  --hui-tyysau-scrollbar-gutter-default: ; */
+/*  --hui-tyysau-scrollbar-width-default: ; */
+}
+[data-hui=Swapper] > button > [data-hui=SwapperDropZone]:first-child {
+/*  --hui-holwtq-left-default: ; */
+/*  --hui-holwtq-right-default: ; */
+/*  --hui-holwtq-top-default: ; */
+/*  --hui-holwtq-bottom-default: ; */
+}
+[data-hui=Swapper] > button > [data-hui=SwapperDropZone]:last-child {
+/*  --hui-fgbxgo-left-default: ; */
+/*  --hui-fgbxgo-right-default: ; */
+/*  --hui-fgbxgo-top-default: ; */
+/*  --hui-fgbxgo-bottom-default: ; */
 }
