@@ -1,5 +1,6 @@
 <script>
   import "../../styles/controls/Swapper.css"
+  import "../../themes/controls/Swapper.css"
   import Container from "../Container.svelte"
   import DropZone from "./Swapper/DropZone.svelte"
 

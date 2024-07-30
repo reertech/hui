@@ -33,7 +33,7 @@
 
 <div
   data-hui="SwapperDropZone"
-  {hidden}
+  hidden={hidden}
   style:opacity={isOver ? null : "0.3"}
   on:drop|preventDefault|stopPropagation={drop}
   on:dragleave
