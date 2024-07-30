@@ -108,21 +108,8 @@
   {/if}
 </Container>
 
-<style>
-  button {
-    position: relative !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    height: 100% !important;
-    text-align: center !important;
-  }
-</style>
-
 <!-- theme.ini
-  > button:active = common;
-  > button = common;
-  > div = common;
+  > button = common, display;
+  > button > [data-hui=SwapperDropZone] = common;
 -->
 

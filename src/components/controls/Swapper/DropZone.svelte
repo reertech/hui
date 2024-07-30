@@ -32,8 +32,9 @@
 </script>
 
 <div
+  data-hui="SwapperDropZone"
   {hidden}
-  style:opacity={isOver ? null : 0.3}
+  style:opacity={isOver ? null : "0.3"}
   on:drop|preventDefault|stopPropagation={drop}
   on:dragleave
   on:dragenter
