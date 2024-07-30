@@ -1,15 +1,5 @@
 [data-hui=Header] > header {
 }
-[data-hui=Header][data-hui-active] > header {
-}
-[data-hui=Header][data-hui-disabled] > header {
-}
-[data-hui=Header][data-hui-readonly] > header {
-}
-[data-hui=Header][data-hui-valid] > header {
-}
-[data-hui=Header][data-hui-invalid] > header {
-}
 [data-hui=Header] > header {
   /* LAYOUT-POSITION */
 /*  --hui-ivbczm-position-default: ; */

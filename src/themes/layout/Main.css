@@ -1,15 +1,5 @@
 [data-hui=Main] > main {
 }
-[data-hui=Main][data-hui-active] > main {
-}
-[data-hui=Main][data-hui-disabled] > main {
-}
-[data-hui=Main][data-hui-readonly] > main {
-}
-[data-hui=Main][data-hui-valid] > main {
-}
-[data-hui=Main][data-hui-invalid] > main {
-}
 [data-hui=Main] > main {
   /* LAYOUT-POSITION */
 /*  --hui-ecmfij-position-default: ; */

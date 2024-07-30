@@ -2,16 +2,6 @@
   /* TEXT */
   --hui-wpcfwr-font-size: var(--hui-default-size-0);
 }
-[data-hui=Small][data-hui-active] {
-}
-[data-hui=Small][data-hui-disabled] {
-}
-[data-hui=Small][data-hui-readonly] {
-}
-[data-hui=Small][data-hui-valid] {
-}
-[data-hui=Small][data-hui-invalid] {
-}
 [data-hui=Small] {
   /* LAYOUT-POSITION */
 /*  --hui-wpcfwr-position-default: ; */

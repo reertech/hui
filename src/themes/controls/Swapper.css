@@ -39,46 +39,6 @@
   --hui-fgbxgo-left: auto;
   --hui-fgbxgo-right: 0;
 }
-[data-hui=Swapper][data-hui-active] > button {
-}
-[data-hui=Swapper][data-hui-active] > button > [data-hui=SwapperDropZone] {
-}
-[data-hui=Swapper][data-hui-active] > button > [data-hui=SwapperDropZone]:first-child {
-}
-[data-hui=Swapper][data-hui-active] > button > [data-hui=SwapperDropZone]:last-child {
-}
-[data-hui=Swapper][data-hui-disabled] > button {
-}
-[data-hui=Swapper][data-hui-disabled] > button > [data-hui=SwapperDropZone] {
-}
-[data-hui=Swapper][data-hui-disabled] > button > [data-hui=SwapperDropZone]:first-child {
-}
-[data-hui=Swapper][data-hui-disabled] > button > [data-hui=SwapperDropZone]:last-child {
-}
-[data-hui=Swapper][data-hui-readonly] > button {
-}
-[data-hui=Swapper][data-hui-readonly] > button > [data-hui=SwapperDropZone] {
-}
-[data-hui=Swapper][data-hui-readonly] > button > [data-hui=SwapperDropZone]:first-child {
-}
-[data-hui=Swapper][data-hui-readonly] > button > [data-hui=SwapperDropZone]:last-child {
-}
-[data-hui=Swapper][data-hui-valid] > button {
-}
-[data-hui=Swapper][data-hui-valid] > button > [data-hui=SwapperDropZone] {
-}
-[data-hui=Swapper][data-hui-valid] > button > [data-hui=SwapperDropZone]:first-child {
-}
-[data-hui=Swapper][data-hui-valid] > button > [data-hui=SwapperDropZone]:last-child {
-}
-[data-hui=Swapper][data-hui-invalid] > button {
-}
-[data-hui=Swapper][data-hui-invalid] > button > [data-hui=SwapperDropZone] {
-}
-[data-hui=Swapper][data-hui-invalid] > button > [data-hui=SwapperDropZone]:first-child {
-}
-[data-hui=Swapper][data-hui-invalid] > button > [data-hui=SwapperDropZone]:last-child {
-}
 [data-hui=Swapper][data-hui-theme~=vertical] > button {
 }
 [data-hui=Swapper][data-hui-theme~=vertical] > button > [data-hui=SwapperDropZone] {
@@ -86,46 +46,6 @@
 [data-hui=Swapper][data-hui-theme~=vertical] > button > [data-hui=SwapperDropZone]:first-child {
 }
 [data-hui=Swapper][data-hui-theme~=vertical] > button > [data-hui=SwapperDropZone]:last-child {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-active] > button {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-active] > button > [data-hui=SwapperDropZone] {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-active] > button > [data-hui=SwapperDropZone]:first-child {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-active] > button > [data-hui=SwapperDropZone]:last-child {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-disabled] > button {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-disabled] > button > [data-hui=SwapperDropZone] {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-disabled] > button > [data-hui=SwapperDropZone]:first-child {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-disabled] > button > [data-hui=SwapperDropZone]:last-child {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-readonly] > button {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-readonly] > button > [data-hui=SwapperDropZone] {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-readonly] > button > [data-hui=SwapperDropZone]:first-child {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-readonly] > button > [data-hui=SwapperDropZone]:last-child {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-valid] > button {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-valid] > button > [data-hui=SwapperDropZone] {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-valid] > button > [data-hui=SwapperDropZone]:first-child {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-valid] > button > [data-hui=SwapperDropZone]:last-child {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-invalid] > button {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-invalid] > button > [data-hui=SwapperDropZone] {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-invalid] > button > [data-hui=SwapperDropZone]:first-child {
-}
-[data-hui=Swapper][data-hui-theme~=vertical][data-hui-invalid] > button > [data-hui=SwapperDropZone]:last-child {
 }
 [data-hui=Swapper] > button {
   /* LAYOUT-POSITION */

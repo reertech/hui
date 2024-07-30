@@ -7,16 +7,6 @@
   /* APPERANCE */
   --hui-jvjqas-color: var(--hui-default-color-text);
 }
-[data-hui=Strong][data-hui-active] {
-}
-[data-hui=Strong][data-hui-disabled] {
-}
-[data-hui=Strong][data-hui-readonly] {
-}
-[data-hui=Strong][data-hui-valid] {
-}
-[data-hui=Strong][data-hui-invalid] {
-}
 [data-hui=Strong] {
   /* LAYOUT-POSITION */
 /*  --hui-jvjqas-position-default: ; */

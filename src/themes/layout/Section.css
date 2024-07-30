@@ -1,15 +1,5 @@
 [data-hui=Section] > section {
 }
-[data-hui=Section][data-hui-active] > section {
-}
-[data-hui=Section][data-hui-disabled] > section {
-}
-[data-hui=Section][data-hui-readonly] > section {
-}
-[data-hui=Section][data-hui-valid] > section {
-}
-[data-hui=Section][data-hui-invalid] > section {
-}
 [data-hui=Section] > section {
   /* LAYOUT-POSITION */
 /*  --hui-lqzmev-position-default: ; */

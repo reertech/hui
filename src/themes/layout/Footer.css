@@ -1,15 +1,5 @@
 [data-hui=Footer] > footer {
 }
-[data-hui=Footer][data-hui-active] > footer {
-}
-[data-hui=Footer][data-hui-disabled] > footer {
-}
-[data-hui=Footer][data-hui-readonly] > footer {
-}
-[data-hui=Footer][data-hui-valid] > footer {
-}
-[data-hui=Footer][data-hui-invalid] > footer {
-}
 [data-hui=Footer] > footer {
   /* LAYOUT-POSITION */
 /*  --hui-krvbvh-position-default: ; */

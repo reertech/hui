@@ -4,97 +4,17 @@
 }
 [data-hui=Checkbox] > input {
 }
-[data-hui=Checkbox][data-hui-active] {
-}
-[data-hui=Checkbox][data-hui-active] > input {
-}
-[data-hui=Checkbox][data-hui-disabled] {
-}
-[data-hui=Checkbox][data-hui-disabled] > input {
-}
-[data-hui=Checkbox][data-hui-readonly] {
-}
-[data-hui=Checkbox][data-hui-readonly] > input {
-}
-[data-hui=Checkbox][data-hui-valid] {
-}
-[data-hui=Checkbox][data-hui-valid] > input {
-}
-[data-hui=Checkbox][data-hui-invalid] {
-}
-[data-hui=Checkbox][data-hui-invalid] > input {
-}
 [data-hui=Checkbox][data-hui-theme~=flat] {
 }
 [data-hui=Checkbox][data-hui-theme~=flat] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=flat][data-hui-active] {
-}
-[data-hui=Checkbox][data-hui-theme~=flat][data-hui-active] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=flat][data-hui-disabled] {
-}
-[data-hui=Checkbox][data-hui-theme~=flat][data-hui-disabled] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=flat][data-hui-readonly] {
-}
-[data-hui=Checkbox][data-hui-theme~=flat][data-hui-readonly] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=flat][data-hui-valid] {
-}
-[data-hui=Checkbox][data-hui-theme~=flat][data-hui-valid] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=flat][data-hui-invalid] {
-}
-[data-hui=Checkbox][data-hui-theme~=flat][data-hui-invalid] > input {
 }
 [data-hui=Checkbox][data-hui-theme~=small] {
 }
 [data-hui=Checkbox][data-hui-theme~=small] > input {
 }
-[data-hui=Checkbox][data-hui-theme~=small][data-hui-active] {
-}
-[data-hui=Checkbox][data-hui-theme~=small][data-hui-active] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=small][data-hui-disabled] {
-}
-[data-hui=Checkbox][data-hui-theme~=small][data-hui-disabled] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=small][data-hui-readonly] {
-}
-[data-hui=Checkbox][data-hui-theme~=small][data-hui-readonly] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=small][data-hui-valid] {
-}
-[data-hui=Checkbox][data-hui-theme~=small][data-hui-valid] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=small][data-hui-invalid] {
-}
-[data-hui=Checkbox][data-hui-theme~=small][data-hui-invalid] > input {
-}
 [data-hui=Checkbox][data-hui-theme~=round] {
 }
 [data-hui=Checkbox][data-hui-theme~=round] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=round][data-hui-active] {
-}
-[data-hui=Checkbox][data-hui-theme~=round][data-hui-active] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=round][data-hui-disabled] {
-}
-[data-hui=Checkbox][data-hui-theme~=round][data-hui-disabled] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=round][data-hui-readonly] {
-}
-[data-hui=Checkbox][data-hui-theme~=round][data-hui-readonly] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=round][data-hui-valid] {
-}
-[data-hui=Checkbox][data-hui-theme~=round][data-hui-valid] > input {
-}
-[data-hui=Checkbox][data-hui-theme~=round][data-hui-invalid] {
-}
-[data-hui=Checkbox][data-hui-theme~=round][data-hui-invalid] > input {
 }
 [data-hui=Checkbox] {
   /* LAYOUT-POSITION */

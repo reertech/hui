@@ -1,15 +1,5 @@
 [data-hui=Nav] > nav {
 }
-[data-hui=Nav][data-hui-active] > nav {
-}
-[data-hui=Nav][data-hui-disabled] > nav {
-}
-[data-hui=Nav][data-hui-readonly] > nav {
-}
-[data-hui=Nav][data-hui-valid] > nav {
-}
-[data-hui=Nav][data-hui-invalid] > nav {
-}
 [data-hui=Nav] > nav {
   /* LAYOUT-POSITION */
 /*  --hui-rzdnvl-position-default: ; */

@@ -1,15 +1,5 @@
 [data-hui=Bar] > figure {
 }
-[data-hui=Bar][data-hui-active] > figure {
-}
-[data-hui=Bar][data-hui-disabled] > figure {
-}
-[data-hui=Bar][data-hui-readonly] > figure {
-}
-[data-hui=Bar][data-hui-valid] > figure {
-}
-[data-hui=Bar][data-hui-invalid] > figure {
-}
 [data-hui=Bar] > figure {
   /* LAYOUT-POSITION */
 /*  --hui-zoadiu-position-default: ; */

@@ -68,46 +68,6 @@
   --hui-yjkcgu-flex-grow: 1;
   --hui-yjkcgu-cursor: pointer;
 }
-[data-hui=Select][data-hui-active] {
-}
-[data-hui=Select][data-hui-active] > input {
-}
-[data-hui=Select][data-hui-active] > input::placeholder {
-}
-[data-hui=Select][data-hui-active] > button {
-}
-[data-hui=Select][data-hui-disabled] {
-}
-[data-hui=Select][data-hui-disabled] > input {
-}
-[data-hui=Select][data-hui-disabled] > input::placeholder {
-}
-[data-hui=Select][data-hui-disabled] > button {
-}
-[data-hui=Select][data-hui-readonly] {
-}
-[data-hui=Select][data-hui-readonly] > input {
-}
-[data-hui=Select][data-hui-readonly] > input::placeholder {
-}
-[data-hui=Select][data-hui-readonly] > button {
-}
-[data-hui=Select][data-hui-valid] {
-}
-[data-hui=Select][data-hui-valid] > input {
-}
-[data-hui=Select][data-hui-valid] > input::placeholder {
-}
-[data-hui=Select][data-hui-valid] > button {
-}
-[data-hui=Select][data-hui-invalid] {
-}
-[data-hui=Select][data-hui-invalid] > input {
-}
-[data-hui=Select][data-hui-invalid] > input::placeholder {
-}
-[data-hui=Select][data-hui-invalid] > button {
-}
 [data-hui=Select][data-hui-theme~=flat] {
 }
 [data-hui=Select][data-hui-theme~=flat] > input {
@@ -115,46 +75,6 @@
 [data-hui=Select][data-hui-theme~=flat] > input::placeholder {
 }
 [data-hui=Select][data-hui-theme~=flat] > button {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-active] {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-active] > input {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-active] > input::placeholder {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-active] > button {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-disabled] {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-disabled] > input {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-disabled] > input::placeholder {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-disabled] > button {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-readonly] {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > input {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > input::placeholder {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-readonly] > button {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-valid] {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-valid] > input {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-valid] > input::placeholder {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-valid] > button {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-invalid] {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > input {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > input::placeholder {
-}
-[data-hui=Select][data-hui-theme~=flat][data-hui-invalid] > button {
 }
 [data-hui=Select] {
   /* LAYOUT-POSITION */

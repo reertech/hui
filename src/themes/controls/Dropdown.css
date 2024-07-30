@@ -56,46 +56,6 @@
   --hui-kczvqs-border-top-style: var(--hui-default-border-style);
   --hui-kczvqs-border-top-width: var(--hui-default-border-width);
 }
-[data-hui=Dropdown][data-hui-active] {
-}
-[data-hui=Dropdown][data-hui-active] > option {
-}
-[data-hui=Dropdown][data-hui-active] > option:hover {
-}
-[data-hui=Dropdown][data-hui-active] > option + option {
-}
-[data-hui=Dropdown][data-hui-disabled] {
-}
-[data-hui=Dropdown][data-hui-disabled] > option {
-}
-[data-hui=Dropdown][data-hui-disabled] > option:hover {
-}
-[data-hui=Dropdown][data-hui-disabled] > option + option {
-}
-[data-hui=Dropdown][data-hui-readonly] {
-}
-[data-hui=Dropdown][data-hui-readonly] > option {
-}
-[data-hui=Dropdown][data-hui-readonly] > option:hover {
-}
-[data-hui=Dropdown][data-hui-readonly] > option + option {
-}
-[data-hui=Dropdown][data-hui-valid] {
-}
-[data-hui=Dropdown][data-hui-valid] > option {
-}
-[data-hui=Dropdown][data-hui-valid] > option:hover {
-}
-[data-hui=Dropdown][data-hui-valid] > option + option {
-}
-[data-hui=Dropdown][data-hui-invalid] {
-}
-[data-hui=Dropdown][data-hui-invalid] > option {
-}
-[data-hui=Dropdown][data-hui-invalid] > option:hover {
-}
-[data-hui=Dropdown][data-hui-invalid] > option + option {
-}
 [data-hui=Dropdown][data-hui-theme~=flat] {
 }
 [data-hui=Dropdown][data-hui-theme~=flat] > option {
@@ -103,46 +63,6 @@
 [data-hui=Dropdown][data-hui-theme~=flat] > option:hover {
 }
 [data-hui=Dropdown][data-hui-theme~=flat] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-active] {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-active] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-active] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-active] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-disabled] {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-disabled] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-disabled] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-disabled] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-readonly] {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-readonly] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-readonly] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-readonly] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-valid] {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-valid] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-valid] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-valid] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-invalid] {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-invalid] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-invalid] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=flat][data-hui-invalid] > option + option {
 }
 [data-hui=Dropdown][data-hui-theme~=toTop] {
   /* LAYOUT-POSITION */
@@ -155,46 +75,6 @@
 }
 [data-hui=Dropdown][data-hui-theme~=toTop] > option + option {
 }
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-active] {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-active] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-active] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-active] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-disabled] {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-disabled] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-disabled] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-disabled] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-readonly] {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-readonly] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-readonly] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-readonly] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-valid] {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-valid] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-valid] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-valid] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-invalid] {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-invalid] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-invalid] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=toTop][data-hui-invalid] > option + option {
-}
 [data-hui=Dropdown][data-hui-theme~=toBottom] {
   /* LAYOUT-POSITION */
   --hui-ovbbqb-top: calc(100% + var(--hui-default-border-width) * 3);
@@ -205,46 +85,6 @@
 [data-hui=Dropdown][data-hui-theme~=toBottom] > option:hover {
 }
 [data-hui=Dropdown][data-hui-theme~=toBottom] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-active] {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-active] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-active] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-active] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-disabled] {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-disabled] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-disabled] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-disabled] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-readonly] {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-readonly] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-readonly] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-readonly] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-valid] {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-valid] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-valid] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-valid] > option + option {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-invalid] {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-invalid] > option {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-invalid] > option:hover {
-}
-[data-hui=Dropdown][data-hui-theme~=toBottom][data-hui-invalid] > option + option {
 }
 [data-hui=Dropdown] {
   /* LAYOUT-POSITION */

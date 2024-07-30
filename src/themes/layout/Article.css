@@ -1,15 +1,5 @@
 [data-hui=Article] > article {
 }
-[data-hui=Article][data-hui-active] > article {
-}
-[data-hui=Article][data-hui-disabled] > article {
-}
-[data-hui=Article][data-hui-readonly] > article {
-}
-[data-hui=Article][data-hui-valid] > article {
-}
-[data-hui=Article][data-hui-invalid] > article {
-}
 [data-hui=Article] > article {
   /* LAYOUT-POSITION */
 /*  --hui-qrnkej-position-default: ; */

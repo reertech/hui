@@ -67,71 +67,11 @@
   --hui-fyvwyk-font-size: var(--hui-default-size-0);
   --hui-fyvwyk-text-align: center;
 }
-[data-hui=MultiInput][data-hui-active] {
-}
-[data-hui=MultiInput][data-hui-active] > input {
-}
-[data-hui=MultiInput][data-hui-active] > input::placeholder {
-}
-[data-hui=MultiInput][data-hui-disabled] {
-}
-[data-hui=MultiInput][data-hui-disabled] > input {
-}
-[data-hui=MultiInput][data-hui-disabled] > input::placeholder {
-}
-[data-hui=MultiInput][data-hui-readonly] {
-}
-[data-hui=MultiInput][data-hui-readonly] > input {
-}
-[data-hui=MultiInput][data-hui-readonly] > input::placeholder {
-}
-[data-hui=MultiInput][data-hui-valid] {
-}
-[data-hui=MultiInput][data-hui-valid] > input {
-}
-[data-hui=MultiInput][data-hui-valid] > input::placeholder {
-}
-[data-hui=MultiInput][data-hui-invalid] {
-}
-[data-hui=MultiInput][data-hui-invalid] > input {
-}
-[data-hui=MultiInput][data-hui-invalid] > input::placeholder {
-}
 [data-hui=MultiInput][data-hui-theme~=flat] {
 }
 [data-hui=MultiInput][data-hui-theme~=flat] > input {
 }
 [data-hui=MultiInput][data-hui-theme~=flat] > input::placeholder {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-active] {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-active] > input {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-active] > input::placeholder {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-disabled] {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-disabled] > input {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-disabled] > input::placeholder {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-readonly] {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-readonly] > input {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-readonly] > input::placeholder {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-valid] {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-valid] > input {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-valid] > input::placeholder {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-invalid] {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-invalid] > input {
-}
-[data-hui=MultiInput][data-hui-theme~=flat][data-hui-invalid] > input::placeholder {
 }
 [data-hui=MultiInput] {
   /* LAYOUT-POSITION */

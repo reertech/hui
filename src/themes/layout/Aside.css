@@ -1,15 +1,5 @@
 [data-hui=Aside] > aside {
 }
-[data-hui=Aside][data-hui-active] > aside {
-}
-[data-hui=Aside][data-hui-disabled] > aside {
-}
-[data-hui=Aside][data-hui-readonly] > aside {
-}
-[data-hui=Aside][data-hui-valid] > aside {
-}
-[data-hui=Aside][data-hui-invalid] > aside {
-}
 [data-hui=Aside] > aside {
   /* LAYOUT-POSITION */
 /*  --hui-ghfodh-position-default: ; */

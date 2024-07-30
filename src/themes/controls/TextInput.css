@@ -67,71 +67,11 @@
   --hui-widtjz-font-size: var(--hui-default-size-0);
   --hui-widtjz-text-align: center;
 }
-[data-hui=TextInput][data-hui-active] {
-}
-[data-hui=TextInput][data-hui-active] > input {
-}
-[data-hui=TextInput][data-hui-active] > input::placeholder {
-}
-[data-hui=TextInput][data-hui-disabled] {
-}
-[data-hui=TextInput][data-hui-disabled] > input {
-}
-[data-hui=TextInput][data-hui-disabled] > input::placeholder {
-}
-[data-hui=TextInput][data-hui-readonly] {
-}
-[data-hui=TextInput][data-hui-readonly] > input {
-}
-[data-hui=TextInput][data-hui-readonly] > input::placeholder {
-}
-[data-hui=TextInput][data-hui-valid] {
-}
-[data-hui=TextInput][data-hui-valid] > input {
-}
-[data-hui=TextInput][data-hui-valid] > input::placeholder {
-}
-[data-hui=TextInput][data-hui-invalid] {
-}
-[data-hui=TextInput][data-hui-invalid] > input {
-}
-[data-hui=TextInput][data-hui-invalid] > input::placeholder {
-}
 [data-hui=TextInput][data-hui-theme~=flat] {
 }
 [data-hui=TextInput][data-hui-theme~=flat] > input {
 }
 [data-hui=TextInput][data-hui-theme~=flat] > input::placeholder {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-active] {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-active] > input {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-active] > input::placeholder {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-disabled] {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-disabled] > input {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-disabled] > input::placeholder {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-readonly] {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-readonly] > input {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-readonly] > input::placeholder {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-valid] {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-valid] > input {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-valid] > input::placeholder {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-invalid] {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-invalid] > input {
-}
-[data-hui=TextInput][data-hui-theme~=flat][data-hui-invalid] > input::placeholder {
 }
 [data-hui=TextInput] {
   /* LAYOUT-POSITION */
