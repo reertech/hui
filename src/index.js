@@ -49,6 +49,7 @@ export { default as IconChevronLeft } from "./icons/ChevronLeft.svelte"
 export { default as IconChevronRight } from "./icons/ChevronRight.svelte"
 export { default as IconAlertTriangle } from "./icons/AlertTriangle.svelte"
 export { default as IconAlertCircle } from "./icons/AlertCircle.svelte"
+export { default as IconMove } from "./icons/Move.svelte"
 
 export { default as persist } from "./stores/persist.js"
 export { default as setStore } from "./stores/set.js"

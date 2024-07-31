@@ -49,11 +49,19 @@ data[data-hui] {
   flex-wrap: wrap-reverse;
 }
 [data-hui-flex-justify-content=flex-start][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-justify-content=flex-start][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-justify-content=flex-start][data-hui-target=self]:not(#huiHack),
+[data-hui-flex-justify-content=start][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-justify-content=start][data-hui-target=self]:not(#huiHack),
+[data-hui-flex-justify-content=left][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-justify-content=left][data-hui-target=self]:not(#huiHack) {
   justify-content: flex-start;
 }
 [data-hui-flex-justify-content=flex-end][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-justify-content=flex-end][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-justify-content=flex-end][data-hui-target=self]:not(#huiHack),
+[data-hui-flex-justify-content=end][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-justify-content=end][data-hui-target=self]:not(#huiHack),
+[data-hui-flex-justify-content=right][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-justify-content=right][data-hui-target=self]:not(#huiHack) {
   justify-content: flex-end;
 }
 [data-hui-flex-justify-content=center][data-hui-target=child] > *:not(#huiHack),
@@ -73,11 +81,19 @@ data[data-hui] {
   justify-content: space-evenly;
 }
 [data-hui-flex-align-items=flex-start][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-align-items=flex-start][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-align-items=flex-start][data-hui-target=self]:not(#huiHack),
+[data-hui-flex-align-items=start][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-items=start][data-hui-target=self]:not(#huiHack),
+[data-hui-flex-align-items=left][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-items=left][data-hui-target=self]:not(#huiHack) {
   align-items: flex-start;
 }
 [data-hui-flex-align-items=flex-end][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-align-items=flex-end][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-align-items=flex-end][data-hui-target=self]:not(#huiHack),
+[data-hui-flex-align-items=end][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-items=end][data-hui-target=self]:not(#huiHack),
+[data-hui-flex-align-items=right][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-items=right][data-hui-target=self]:not(#huiHack) {
   align-items: flex-end;
 }
 [data-hui-flex-align-items=center][data-hui-target=child] > *:not(#huiHack),
@@ -92,32 +108,32 @@ data[data-hui] {
 [data-hui-flex-align-items=stretch][data-hui-target=self]:not(#huiHack) {
   align-items: stretch;
 }
-[data-hui-flex-align-context=flex-start][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-align-context=flex-start][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-align-content=flex-start][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-content=flex-start][data-hui-target=self]:not(#huiHack) {
   align-content: flex-start;
 }
-[data-hui-flex-align-context=flex-end][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-align-context=flex-end][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-align-content=flex-end][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-content=flex-end][data-hui-target=self]:not(#huiHack) {
   align-content: flex-end;
 }
-[data-hui-flex-align-context=center][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-align-context=center][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-align-content=center][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-content=center][data-hui-target=self]:not(#huiHack) {
   align-content: center;
 }
-[data-hui-flex-align-context=space-between][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-align-context=space-between][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-align-content=space-between][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-content=space-between][data-hui-target=self]:not(#huiHack) {
   align-content: space-between;
 }
-[data-hui-flex-align-context=space-around][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-align-context=space-around][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-align-content=space-around][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-content=space-around][data-hui-target=self]:not(#huiHack) {
   align-content: space-around;
 }
-[data-hui-flex-align-context=space-evenly][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-align-context=space-evenly][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-align-content=space-evenly][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-content=space-evenly][data-hui-target=self]:not(#huiHack) {
   align-content: space-evenly;
 }
-[data-hui-flex-align-context=stretch][data-hui-target=child] > *:not(#huiHack),
-[data-hui-flex-align-context=stretch][data-hui-target=self]:not(#huiHack) {
+[data-hui-flex-align-content=stretch][data-hui-target=child] > *:not(#huiHack),
+[data-hui-flex-align-content=stretch][data-hui-target=self]:not(#huiHack) {
   align-content: stretch;
 }
 [data-hui-flex][data-hui-target=child][style~='row-gap:'] > *:not(#huiHack) {
