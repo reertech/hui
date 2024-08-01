@@ -4,6 +4,9 @@
   import Container from "../Container.svelte"
   import Overlay from "../Overlay.svelte"
   import Strong from "../typography/Strong.svelte"
+  import Button from "../controls/Button.svelte"
+  import IconMaximize from "../../icons/Maximize.svelte"
+  import IconMinimize from "../../icons/Minimize.svelte"
 
   import { formatNumber, checkEmpty } from "../../helpers.js"
   import { createEventDispatcher } from "svelte"
@@ -40,6 +43,7 @@
   export let expandedCols = 100
   export let expanded = false
   export let nullValue = null
+  export let buttonTheme = "flat small"
 
   $: rowsNum = formatNumber(expanded ? expandedRows : rows, 1)
   $: colsNum = formatNumber(expanded ? expandedCols : cols, 50)
@@ -105,12 +109,16 @@
     readonly={readonly || null}
     on:keyup={enter}
   />
-  <Strong
-    tag="button"
+  <Button
+    theme={buttonTheme}
     on:click={() => expanded = !expanded}
   >
-    {expanded ? "><" : "<>"}
-  </Strong>
+    {#if expanded}
+      <IconMinimize />
+    {:else}
+      <IconMaximize />
+    {/if}
+  </Button>
 </Container>
 
 <!-- theme.ini

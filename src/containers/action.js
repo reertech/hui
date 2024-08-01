@@ -1,21 +1,99 @@
-import { isEqual, isObject, formatPx } from "../helpers.js"
+import {
+  isEqual,
+  isObject,
+  isString,
+  isFunction,
+  formatPx,
+  formatString
+} from "../helpers.js"
 
-const isValid = (value, allowed) => {
-  switch (true) {
-    case value == null: return false
-    case typeof value === "object": return true
-    case allowed == null: return false
-    case !["string", "boolean"].includes(typeof value): return false
-    case allowed === "string" && isString(value): return true
-    case allowed.includes(value): return true
-    default: return false
+// const isValid = (value, allowed) => {
+//   switch (true) {
+//     case value == null: return false
+//     case typeof value === "object": return true
+//     case allowed == null: return false
+//     case !["string", "boolean"].includes(typeof value): return false
+//     case allowed === "string" && isString(value): return true
+//     case allowed.includes(value): return true
+//     default: return false
+//   }
+// }
+const applyStyles = (node, changes, styles, formatter) => {
+  const values = {}
+  let withStyles = false
+
+  for (const key in changes) {
+    const style = styles[key]
+
+    if (style) {
+      const value = isFunction(formatter)
+        ? formatter(changes[key]) : changes[key]
+
+      if (value != null) values[style] = value
+      else node.style[style] = null
+    }
+  }
+
+  for (const style in values) {
+    withStyles = true
+    node.style[style] = values[style]
+  }
+
+  return withStyles
+}
+
+const applyStyle = (node, value, style, formatter) => {
+  value = isFunction(formatter) ? formatter(value) : value
+
+  node.style[style] = value
+}
+
+const applyDataAttrs = (node, changes, attrs, formatter) => {
+  // console.log("applyDataAttrs", changes, attrs)
+  let withData = false
+
+  for (const key in changes) {
+    const attr = attrs[key]
+
+    if (attr) {
+      const value = isFunction(formatter)
+        ? formatter(changes[key]) : changes[key]
+
+      // console.log("applyDataAttrs >", key, attr, JSON.stringify(value))
+
+      if (value != null) {
+        withData = true
+        node.dataset[attr] = value
+      } else {
+        delete node.dataset[attr]
+      }
+    }
+  }
+
+  return withData
+}
+
+const applyDataAttr = (node, value, attr, formatter) => {
+  value = isFunction(formatter) ? formatter(value) : value
+
+  if (value != null) node.dataset[attr] = value
+  else delete node.dataset[attr]
+}
+
+const replaceDefault = (def, replacement) => {
+  return (value) => {
+    if (value == null) return replacement
+    if (value === def) return replacement
+    return value
   }
 }
 
-const applyStyle = (node, style, value, formatter) => {
-  console.log("applyStyle", "!", style, formatter(value))
-
-  node.style[style] = formatter(value)
+const mergeChanges = (changes, keys) => {
+  return keys.reduce((acc, key) => {
+    const change = changes[key]
+    if (!isObject(change)) return acc
+    return Object.assign(acc, change)
+  }, {})
 }
 
 const sizeStyles = {
@@ -28,58 +106,318 @@ const sizeStyles = {
 }
 
 const applySize = (node, changes) => {
-  if (!changes.hasOwnProperty("size")) return
+  const size = changes["size"]
 
-  console.log("apply", "!", "size")
+  if (!isObject(size)) return
 
-  const size = changes["size"] 
-  const s = isValid(size) ? size : {}
+  applyStyles(node, size, sizeStyles, formatPx)
+}
 
-  console.log("s", s)
-
-  for (const key in s) {
-    const style = sizeStyles[key]
-
-    if (style) applyStyle(node, style, s[key], formatPx)
-  }
+const bgStyles = {
+  bgFull: "background",
+  color: "background-color",
+  image: "background-image",
+  position: "background-position"
 }
 
 const applyBg = (node, changes) => {
-  if (!changes.hasOwnProperty("bg")) return
+  const keys = ["bg", "background"]
+  if (!keys.some(k => changes.hasOwnProperty(k))) return
+
+  const bg = mergeChanges(changes, keys)
+
+  applyStyles(node, bg, bgStyles, formatString)
 }
 
-const applyState = (node, oldState, newState) => {
-  const changes = [
-    "hui",
-    "tag",
-    "active",
-    "readonly",
-    "disabled",
-    "hidden",
-    "valid",
-    "invalid",
-    "theme",
-    "idx",
-    "size",
-    "position",
-    "margin",
-    "padding",
-    "bg",
-    "classes",
-    "grid",
-    "flex",
-    "scrollY",
-    "scrollX",
-    "value",
-    "name"
-  ].reduce((acc, key) => 
+const positionAllowed = {
+  static: true,
+  fixed: true,
+  relative: true,
+  sticky: true,
+  absolulute: true
+}
+
+const positionFormatter = (v) => positionAllowed[v] ? v : null
+
+const applyPosition = (node, changes) => {
+  if (!changes.hasOwnProperty("position")) return
+
+  applyDataAttr(node, changes["position"], "huiPosition", positionFormatter)
+}
+
+const applyTheme = (node, changes) => {
+  if (!changes.hasOwnProperty("theme")) return
+
+  applyDataAttr(node, changes["theme"], "huiTheme", formatString)
+}
+
+const applyClasses = (node, changes, initialClasses) => {
+  if (!changes.hasOwnProperty("class")) return
+
+  const classes = changes["class"]
+
+  node.classList.value = ""
+  node.classList.add(initialClasses)
+
+  if (!isString(classes)) return
+
+  classes.split(" ").forEach(newClass => {
+    if (!newClass) return
+    node.classList.add(newClass)
+  })
+}
+
+const applyIdx = (node, changes) => {
+  if (!changes.hasOwnProperty("idx")) return
+
+  applyDataAttr(node, changes["idx"], "huiIdx", formatString)
+}
+
+const elStates = [
+  ["active", "active"],
+  ["readonly", "readonly"],
+  ["disabled", "disabled"],
+  ["hidden", "hidden"],
+  ["valid", "valid"],
+  ["invalid", "invalid"]
+]
+
+const applyElState = (node, changes) => {
+  elStates.forEach(([state, attr]) => {
+    if (!changes.hasOwnProperty(state)) return
+
+    applyDataAttr(node, changes[state], attr, v => v && "")
+  })
+}
+
+const huiAttrs = {
+  value: "hui",
+  target: "huiTarget"
+}
+
+const applyHui = (node, changes) => {
+  if (!changes.hasOwnProperty("hui")) return
+
+  const value = formatString(changes["hui"])
+
+  if (value != null) {
+    applyDataAttrs(node, { value, target: "self" }, huiAttrs)
+  } else {
+    applyDataAttrs(node, { value, target: null }, huiAttrs)
+  }
+}
+
+const marginStyles = {
+  marginFull: "margin",
+  top: "margin-top",
+  right: "margin-right",
+  bottom: "margin-bottom",
+  left: "margin-left"
+}
+
+const applyMargin = (node, changes) => {
+  const margin = changes["margin"]
+
+  if (!isObject(margin)) return
+
+  applyStyles(node, margin, marginStyles, formatPx)
+}
+
+const paddingStyles = {
+  paddingFull: "padding",
+  top: "padding-top",
+  right: "padding-right",
+  bottom: "padding-bottom",
+  left: "padding-left"
+}
+
+const applyPadding = (node, changes) => {
+  const padding = changes["padding"]
+
+  if (!isObject(padding)) return
+
+  applyStyles(node, padding, paddingStyles, formatPx)
+}
+
+const gridStyles = {
+  templateRows: "grid-template-rows",
+  templateColumns: "grid-template-columns",
+  columnStart: "grid-column-start",
+  columnEnd: "grid-column-end",
+  rowStart: "grid-row-start",
+  rowEnd: "grid-row-end",
+  templateAreas: "grid-template-areas",
+  autoRows: "grid-auto-rows",
+  autoColumns: "grid-auto-columns"
+}
+
+const gridAttrs = {
+  justifyItems: "huiGridJustifyItems",
+  alignItems: "huiGridAlignItems",
+  justifyContent: "huiGridJustifyContent",
+  alignContent: "huiGridAlignContent",
+  autoFlow: "huiGridAutoFlow"
+}
+
+const gridDisplayAllowed = {
+  grid: true,
+  "inline-grid": true
+}
+
+const applyGrid = (node, changes) => {
+  const grid = changes["grid"]
+
+  // console.log("grid", grid)
+
+  if (!isObject(grid)) return
+
+  const withStyles = applyStyles(node, grid, gridStyles, formatString)
+  const withData = applyDataAttrs(node, grid, gridAttrs, formatString)
+
+  const display = grid.display
+  const displayAttr = { display: "huiGrid" }
+
+  if (gridDisplayAllowed[display] || withData || withStyles) {
+    applyDataAttrs(node, { display }, displayAttr, replaceDefault("grid", ""))
+  } else {
+    applyDataAttrs(node, { display: null }, displayAttr)
+    applyStyles(node, grid, gridStyles, _ => null)
+    applyDataAttrs(node, grid, gridAttrs, _ => null)
+  }
+}
+
+const flexAttrs = {
+  direction: "huiFlexDirection",
+  wrap: "huiFlexWrap",
+  justifyContent: "huiFlexJustifyContent",
+  alignItems: "huiFlexAlignItems",
+  alignContent: "huiFlexAlignContent"
+}
+
+const flexDisplayAllowed = {
+  flex: true,
+  "inline-flex": true
+}
+
+const applyFlex = (node, changes) => {
+  const flex = changes["flex"]
+
+  // console.log("flex", flex)
+
+  if (!isObject(flex)) return
+
+  const withData = applyDataAttrs(node, flex, flexAttrs, formatString)
+
+  const display = flex.display
+  const displayAttr = { display: "huiFlex" }
+
+  if (flexDisplayAllowed[display] || withData) {
+    applyDataAttrs(node, { display }, displayAttr, replaceDefault("flex", ""))
+  } else {
+    applyDataAttrs(node, { display: null }, displayAttr)
+    applyDataAttrs(node, flex, flexAttrs, _ => null)
+  }
+}
+
+const stateApplicators = [
+  applyHui,
+  applyTheme,
+  applyClasses,
+  applySize,
+  applyBg,
+  applyMargin,
+  applyPadding,
+  applyGrid,
+  applyFlex,
+  applyPosition,
+  applyElState,
+  applyIdx
+]
+
+const stateKeys = [
+  "size",
+  "margin",
+  "padding",
+  "bg",
+  "background",
+  "grid",
+  "flex",
+  "position",
+  "hui",
+  "theme",
+  "class",
+  "idx",
+  "active",
+  "readonly",
+  "disabled",
+  "hidden",
+  "valid",
+  "invalid",
+  // "scrollY",
+  // "scrollX",
+  // "value",
+  // "name"
+]
+
+const applyState = (node, oldState, newState, classes) => {
+  const changes = stateKeys.reduce((acc, key) =>
     extractChanges(oldState, newState, key, acc), {})
 
-  console.log("changes", changes)
-
-  applySize(node, changes)
+  stateApplicators.forEach(fun => fun(node, changes, classes))
 
   return changes
+}
+
+const objectOrBoolKeys = {
+  grid: { display: "grid" },
+  flex: { display: "flex" }
+}
+
+const objectOrStringKeys = {
+  bg: "bgFull",
+  background: "bgFull",
+  margin: "marginFull",
+  padding: "paddingFull"
+}
+
+const objectValueKeys = {
+  ...{ size: true },
+  ...objectOrStringKeys,
+  ...objectOrBoolKeys
+}
+
+const extractNestedChanges = (newValue, oldValue) => {
+  // console.log("extractNestedChanges", newValue, oldValue)
+  if (!isObject(newValue) && !isObject(oldValue)) return null
+
+  newValue = newValue ?? {}
+  oldValue = oldValue ?? {}
+
+  const compared = {}
+  const keys = Object.keys(newValue).concat(Object.keys(oldValue))
+
+  // console.log("keys", keys)
+
+  return keys.reduce((acc, key) => {
+    if (compared[key]) return acc
+    else compared[key] = true
+
+    if (!isEqual(newValue[key], oldValue[key])) acc[key] = newValue[key]
+
+    return acc
+  }, {})
+}
+
+const stringToObjectValue = (value, key) => {
+  if (isString(value)) return { [objectOrStringKeys[key]]: value }
+  if (isObject(value)) return { ...value }
+  return
+}
+
+const boolToObjectValue = (value, key) => {
+  if (isObject(value)) return { ...value }
+  if (value === true || value === "true") return { ...objectOrBoolKeys[key] }
+  return
 }
 
 const extractChanges = (oldState, newState, key, acc) => {
@@ -87,36 +425,46 @@ const extractChanges = (oldState, newState, key, acc) => {
   const oldValue = oldState[key]
 
   if (isObject(newValue) && isObject(oldValue)) {
-    const compared = {}
-    const keys = Object.keys(newValue).concat(Object.keys(oldValue))
+    if (!objectValueKeys[key]) return acc
 
-    const changes = keys.reduce((acc, key) => {
-      if (compared[key]) return acc
-      else compared[key] = true
+    const changes = extractNestedChanges(newValue, oldValue)
 
-      return extractChanges(oldValue, newValue, key, acc)
-    }, {})
+    if (changes && Object.keys(changes).length) acc[key] = changes
+  } else if (objectOrBoolKeys[key]) {
+    const newValueObj = boolToObjectValue(newValue, key)
+    const oldValueObj = boolToObjectValue(oldValue, key)
 
-    if (Object.keys(changes)) acc[key] = changes
+    const changes = extractNestedChanges(newValueObj, oldValueObj)
+
+    // console.log("objectOrBool", key, changes, newValueObj, oldValueObj)
+
+    if (changes && Object.keys(changes).length) acc[key] = changes
+  } else if (objectOrStringKeys[key]) {
+    const newValueObj = stringToObjectValue(newValue, key)
+    const oldValueObj = stringToObjectValue(oldValue, key)
+
+    const changes = extractNestedChanges(newValueObj, oldValueObj)
+
+    if (changes && Object.keys(changes).length) acc[key] = changes
   } else if (!isEqual(newValue, oldValue)) {
-    acc[key] = newValue
+    acc[key] = isObject(newValue) ? { ...newValue } : newValue
   }
-
-  console.log("changes", acc)
 
   return acc
 }
 
 export default function hui(node, state) {
-  const currentState = applyState(node, {}, state) 
+  const classes = node.classList.values().toArray()
+  let currentState = applyState(node, {}, state)
 
   return {
     update(newState) {
-      const changes = applyState(node, currentState, newState)
-      Object.assign(currentState, changes) 
+      const changes = applyState(node, currentState, newState, classes)
+      currentState = { ...currentState, ...changes }
     },
     destroy() {
-      console.log("bye!", this)
+      // delete currentState
+      // console.log("bye!", this)
     }
   }
 }
