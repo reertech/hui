@@ -82,8 +82,8 @@
   --hui-rvvxnn-cursor: pointer;
   /* LAYOUT-POSITION */
   --hui-rvvxnn-position: absolute;
-  --hui-rvvxnn-top: calc(var(--hui-default-spacer-6) + var(--hui-default-border-width));
-  --hui-rvvxnn-right: var(--hui-default-spacer-7);
+  --hui-rvvxnn-top: calc(var(--hui-default-spacer-4) + var(--hui-default-border-width) * 2);
+  --hui-rvvxnn-right: var(--hui-default-spacer-6);
   --hui-rvvxnn-font-size: var(--hui-default-size-0);
 }
 [data-hui=Textarea][data-hui-theme~=flat] {
