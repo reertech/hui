@@ -4,20 +4,10 @@ import {
   isString,
   isFunction,
   formatPx,
-  formatString
+  formatString,
+  formatNumber
 } from "../helpers.js"
 
-// const isValid = (value, allowed) => {
-//   switch (true) {
-//     case value == null: return false
-//     case typeof value === "object": return true
-//     case allowed == null: return false
-//     case !["string", "boolean"].includes(typeof value): return false
-//     case allowed === "string" && isString(value): return true
-//     case allowed.includes(value): return true
-//     default: return false
-//   }
-// }
 const applyStyles = (node, changes, styles, formatter) => {
   const values = {}
   let withStyles = false
@@ -113,6 +103,46 @@ const applySize = (node, changes) => {
   applyStyles(node, size, sizeStyles, formatPx)
 }
 
+const overflowStyles = {
+  x: "overflow-x",
+  y: "overflow-y"
+}
+
+const overflowAllowed = {
+  scroll: "scroll",
+  hidden: "hidden",
+  clip: "clip",
+  visible: "visible",
+  auto: "auto"
+}
+
+const applyOverflow = (node, changes) => {
+  const overflow = changes["overflow"]
+
+  if (!isObject(overflow)) return
+
+  applyStyles(node, overflow, overflowStyles, v => overflowAllowed[v])
+}
+
+const scrollAttrs = {
+  X: "huiScrollX",
+  Y: "huiScrollY"
+}
+
+const applyScroll = (node, changes) => {
+  (["X", "Y"]).forEach(dir => {
+    const key = `scroll${dir}`
+
+    if (!changes.hasOwnProperty(key)) return
+
+    applyDataAttr(node, changes[key], scrollAttrs[dir], value => {
+      if (value === false || value === "false") return "visibe"
+      if (value === true || value === "true") return "scroll"
+      return overflowAllowed[value]
+    })
+  })
+}
+
 const bgStyles = {
   bgFull: "background",
   color: "background-color",
@@ -130,19 +160,29 @@ const applyBg = (node, changes) => {
 }
 
 const positionAllowed = {
-  static: true,
-  fixed: true,
-  relative: true,
-  sticky: true,
-  absolulute: true
+  static: "static",
+  fixed: "fixed",
+  relative: "relative",
+  sticky: "sticky",
+  absolute: "absolute"
 }
-
-const positionFormatter = (v) => positionAllowed[v] ? v : null
 
 const applyPosition = (node, changes) => {
   if (!changes.hasOwnProperty("position")) return
 
-  applyDataAttr(node, changes["position"], "huiPosition", positionFormatter)
+  applyDataAttr(node, changes["position"], "huiPosition", v => positionAllowed[v])
+}
+
+const applyZ = (node, changes) => {
+  if (!changes.hasOwnProperty("z")) return
+
+  applyDataAttr(node, changes["z"], "huiZ", formatNumber)
+}
+
+const applyZIndex = (node, changes) => {
+  if (!changes.hasOwnProperty("zIndex")) return
+
+  applyStyle(node, changes["zIndex"], "z-index", formatNumber)
 }
 
 const applyTheme = (node, changes) => {
@@ -186,7 +226,7 @@ const applyElState = (node, changes) => {
   elStates.forEach(([state, attr]) => {
     if (!changes.hasOwnProperty(state)) return
 
-    applyDataAttr(node, changes[state], attr, v => v && "")
+    applyDataAttr(node, changes[state], attr, v => (v || null) && "")
   })
 }
 
@@ -205,6 +245,36 @@ const applyHui = (node, changes) => {
   } else {
     applyDataAttrs(node, { value, target: null }, huiAttrs)
   }
+}
+
+const insetStyles = {
+  insetFull: "inset",
+  top: "top",
+  right: "right",
+  bottom: "bottom",
+  left: "left"
+}
+
+const applyInset = (node, changes) => {
+  const inset = changes["inset"]
+
+  if (!isObject(inset)) return
+
+  applyStyles(node, inset, insetStyles, formatPx)
+}
+
+const gapStyles = {
+  gapFull: "gap",
+  row: "rowGap",
+  col: "colGap"
+}
+
+const applyGap = (node, changes) => {
+  const gap = changes["gap"]
+
+  if (!isObject(gap)) return
+
+  applyStyles(node, gap, gapStyles, formatPx)
 }
 
 const marginStyles = {
@@ -323,6 +393,8 @@ const stateApplicators = [
   applyHui,
   applyTheme,
   applyClasses,
+  applyElState,
+  applyIdx
   applySize,
   applyBg,
   applyMargin,
@@ -330,8 +402,12 @@ const stateApplicators = [
   applyGrid,
   applyFlex,
   applyPosition,
-  applyElState,
-  applyIdx
+  applyInset,
+  applyGap,
+  applyOverflow,
+  applyScroll,
+  applyZ,
+  applyZIndex
 ]
 
 const stateKeys = [
@@ -353,10 +429,13 @@ const stateKeys = [
   "hidden",
   "valid",
   "invalid",
-  // "scrollY",
-  // "scrollX",
-  // "value",
-  // "name"
+  "inset",
+  "gap",
+  "overflow"
+  "scrollY",
+  "scrollX",
+  "z",
+  "zIndex"
 ]
 
 const applyState = (node, oldState, newState, classes) => {
@@ -377,7 +456,10 @@ const objectOrStringKeys = {
   bg: "bgFull",
   background: "bgFull",
   margin: "marginFull",
-  padding: "paddingFull"
+  padding: "paddingFull",
+  inset: "insetFull",
+  gap: "gapFull",
+  overflow: "overflowFull"
 }
 
 const objectValueKeys = {
