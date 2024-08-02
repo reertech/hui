@@ -43,8 +43,13 @@
   const check = (entries, entry) =>
     !isObject(entries) ? null : entries[entry]
 
-  $: columns = showInactiveCols ? cols
+  $: activeCols = showInactiveCols ? cols
     : cols.filter(c => check(colsActive, c))
+
+  $: filteredCols = showFilteredCols ? activeCols
+    : activeCols.filter(c => !check(colsFilter, c))
+
+  $: columns = filteredCols
 
   const buildWidth = (value) => {
     switch (typeof value) {
@@ -143,10 +148,8 @@
             </td>
           {/if}
           {#each columns as col, colIdx}
-            {@const isFiltered = !showFilteredCols && !check(colsFilter, col)}
             {@const isMarked = colIdx === markedCellColIds && rowIdx === markedCellRowIds}
             <td
-              hidden={isFiltered}
               data-hui-idx={colIdx}
               class:marked={isMarked}
             >
