@@ -6,7 +6,7 @@ import {
   formatPx,
   formatString,
   formatNumber
-} from "../helpers.js"
+} from "./helpers.js"
 
 const applyStyles = (node, changes, styles, formatter) => {
   const values = {}
@@ -136,8 +136,8 @@ const applyScroll = (node, changes) => {
     if (!changes.hasOwnProperty(key)) return
 
     applyDataAttr(node, changes[key], scrollAttrs[dir], value => {
-      if (value === false || value === "false") return "visibe"
-      if (value === true || value === "true") return "scroll"
+      if (value === false || value === "false") return "visible"
+      if (value === true || value === "true" || value === "scroll") return ""
       return overflowAllowed[value]
     })
   })
@@ -214,12 +214,12 @@ const applyIdx = (node, changes) => {
 }
 
 const elStates = [
-  ["active", "active"],
-  ["readonly", "readonly"],
-  ["disabled", "disabled"],
-  ["hidden", "hidden"],
-  ["valid", "valid"],
-  ["invalid", "invalid"]
+  ["active", "huiActive"],
+  ["readonly", "huiReadonly"],
+  ["disabled", "huiDisabled"],
+  ["hidden", "huiHidden"],
+  ["valid", "huiValid"],
+  ["invalid", "huiInvalid"]
 ]
 
 const applyElState = (node, changes) => {
@@ -231,7 +231,7 @@ const applyElState = (node, changes) => {
 }
 
 const huiAttrs = {
-  value: "tag",
+  value: "hui",
   target: "huiTarget"
 }
 
@@ -394,7 +394,7 @@ const stateApplicators = [
   applyTheme,
   applyClasses,
   applyElState,
-  applyIdx
+  applyIdx,
   applySize,
   applyBg,
   applyMargin,
@@ -431,7 +431,7 @@ const stateKeys = [
   "position",
   "inset",
   "gap",
-  "overflow"
+  "overflow",
   "scrollY",
   "scrollX",
   "z",

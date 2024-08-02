@@ -78,13 +78,13 @@
   --hui-otvrfb-font-size: var(--hui-default-size-0);
   --hui-otvrfb-text-align: center;
 }
-[data-hui=Textarea] > button {
-  --hui-jjoush-cursor: pointer;
+[data-hui=Textarea] > button[data-hui=Button] {
+  --hui-rvvxnn-cursor: pointer;
   /* LAYOUT-POSITION */
-  --hui-jjoush-position: absolute;
-  --hui-jjoush-top: calc(var(--hui-default-spacer-6) + var(--hui-default-border-width));
-  --hui-jjoush-right: var(--hui-default-spacer-7);
-  --hui-jjoush-font-size: var(--hui-default-size-0);
+  --hui-rvvxnn-position: absolute;
+  --hui-rvvxnn-top: calc(var(--hui-default-spacer-6) + var(--hui-default-border-width));
+  --hui-rvvxnn-right: var(--hui-default-spacer-7);
+  --hui-rvvxnn-font-size: var(--hui-default-size-0);
 }
 [data-hui=Textarea][data-hui-theme~=flat] {
 }
@@ -97,7 +97,7 @@
 }
 [data-hui=Textarea][data-hui-theme~=flat] > textarea::placeholder {
 }
-[data-hui=Textarea][data-hui-theme~=flat] > button {
+[data-hui=Textarea][data-hui-theme~=flat] > button[data-hui=Button] {
 }
 [data-hui=Textarea][data-hui-theme~=oneLine] {
 }
@@ -114,7 +114,7 @@
 }
 [data-hui=Textarea][data-hui-theme~=oneLine] > textarea::placeholder {
 }
-[data-hui=Textarea][data-hui-theme~=oneLine] > button {
+[data-hui=Textarea][data-hui-theme~=oneLine] > button[data-hui=Button] {
 }
 [data-hui=Textarea] {
   /* LAYOUT-POSITION */
@@ -379,18 +379,18 @@
 /*  --hui-otvrfb-font-size-default: ; */
 /*  --hui-otvrfb-text-align-default: ; */
 }
-[data-hui=Textarea] > button {
-/*  --hui-jjoush-cursor-default: ; */
+[data-hui=Textarea] > button[data-hui=Button] {
+/*  --hui-rvvxnn-cursor-default: ; */
   /* LAYOUT-POSITION */
-/*  --hui-jjoush-position-default: ; */
-/*  --hui-jjoush-top-default: ; */
-/*  --hui-jjoush-right-default: ; */
-/*  --hui-jjoush-bottom-default: ; */
-/*  --hui-jjoush-left-default: ; */
-/*  --hui-jjoush-z-index-default: ; */
-/*  --hui-jjoush-float-default: ; */
-/*  --hui-jjoush-clear-default: ; */
-/*  --hui-jjoush-align-self-default: ; */
-/*  --hui-jjoush-order-default: ; */
-/*  --hui-jjoush-font-size-default: ; */
+/*  --hui-rvvxnn-position-default: ; */
+/*  --hui-rvvxnn-top-default: ; */
+/*  --hui-rvvxnn-right-default: ; */
+/*  --hui-rvvxnn-bottom-default: ; */
+/*  --hui-rvvxnn-left-default: ; */
+/*  --hui-rvvxnn-z-index-default: ; */
+/*  --hui-rvvxnn-float-default: ; */
+/*  --hui-rvvxnn-clear-default: ; */
+/*  --hui-rvvxnn-align-self-default: ; */
+/*  --hui-rvvxnn-order-default: ; */
+/*  --hui-rvvxnn-font-size-default: ; */
 }

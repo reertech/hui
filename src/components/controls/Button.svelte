@@ -14,11 +14,11 @@
   }}
   {name}
   on:click
-  active={$$restProps.active || null}
-  readonly={$$restProps.readonly || null}
-  disabled={$$restProps.disabled || null}
-  valid={$$restProps.valid || null}
-  invalid={$$restProps.invalid || null}
+  active={($$restProps.active && "") || null}
+  readonly={($$restProps.readonly && "") || null}
+  disabled={($$restProps.disabled && "") || null}
+  valid={($$restProps.valid && "") || null}
+  invalid={($$restProps.invalid && "") || null}
 >
   {#if $$slots.default}
     <slot />

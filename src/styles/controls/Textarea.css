@@ -261,18 +261,18 @@
   font-size: var(--hui-otvrfb-font-size, initial);
   text-align: var(--hui-otvrfb-text-align, initial);
 }
-[data-hui=Textarea] > button {
-  cursor: var(--hui-jjoush-cursor, initial);
+[data-hui=Textarea] > button[data-hui=Button] {
+  cursor: var(--hui-rvvxnn-cursor, initial);
   /* LAYOUT-POSITION */
-  position: var(--hui-jjoush-position, static);
-  top: var(--hui-jjoush-top, auto);
-  right: var(--hui-jjoush-right, auto);
-  bottom: var(--hui-jjoush-bottom, auto);
-  left: var(--hui-jjoush-left, auto);
-  z-index: var(--hui-jjoush-z-index, auto);
-  float: var(--hui-jjoush-float, none);
-  clear: var(--hui-jjoush-clear, none);
-  align-self: var(--hui-jjoush-align-self, auto);
-  order: var(--hui-jjoush-order, 0);
-  font-size: var(--hui-jjoush-font-size, initial);
+  position: var(--hui-rvvxnn-position, static);
+  top: var(--hui-rvvxnn-top, auto);
+  right: var(--hui-rvvxnn-right, auto);
+  bottom: var(--hui-rvvxnn-bottom, auto);
+  left: var(--hui-rvvxnn-left, auto);
+  z-index: var(--hui-rvvxnn-z-index, auto);
+  float: var(--hui-rvvxnn-float, none);
+  clear: var(--hui-rvvxnn-clear, none);
+  align-self: var(--hui-rvvxnn-align-self, auto);
+  order: var(--hui-rvvxnn-order, 0);
+  font-size: var(--hui-rvvxnn-font-size, initial);
 }

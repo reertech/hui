@@ -128,5 +128,5 @@
   > textarea = resize, overflow, max-height;
   &::after = content, visibility, display, max-height;
   > textarea::placeholder = font-size, text-align;
-  > button = cursor, layout-position, font-size;
+  > button[data-hui=Button] = cursor, layout-position, font-size;
 -->
