@@ -231,14 +231,14 @@ const applyElState = (node, changes) => {
 }
 
 const huiAttrs = {
-  value: "hui",
+  value: "tag",
   target: "huiTarget"
 }
 
-const applyHui = (node, changes) => {
-  if (!changes.hasOwnProperty("hui")) return
+const applyTag = (node, changes) => {
+  if (!changes.hasOwnProperty("tag")) return
 
-  const value = formatString(changes["hui"])
+  const value = formatString(changes["tag"])
 
   if (value != null) {
     applyDataAttrs(node, { value, target: "self" }, huiAttrs)
@@ -390,7 +390,7 @@ const applyFlex = (node, changes) => {
 }
 
 const stateApplicators = [
-  applyHui,
+  applyTag,
   applyTheme,
   applyClasses,
   applyElState,
@@ -411,15 +411,7 @@ const stateApplicators = [
 ]
 
 const stateKeys = [
-  "size",
-  "margin",
-  "padding",
-  "bg",
-  "background",
-  "grid",
-  "flex",
-  "position",
-  "hui",
+  "tag",
   "theme",
   "class",
   "idx",
@@ -429,6 +421,14 @@ const stateKeys = [
   "hidden",
   "valid",
   "invalid",
+  "size",
+  "margin",
+  "padding",
+  "bg",
+  "background",
+  "grid",
+  "flex",
+  "position",
   "inset",
   "gap",
   "overflow"
