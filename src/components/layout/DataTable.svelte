@@ -37,8 +37,8 @@
   export let showInactiveCols = false
   export let showFilteredCols = false
   export let rowsIdxKey = null
-  export let markedCellRowIds = null
-  export let markedCellColIds = null
+  export let markedCellRowIdx = null
+  export let markedCellColIdx = null
 
   const check = (entries, entry) =>
     !isObject(entries) ? null : entries[entry]
@@ -148,7 +148,7 @@
             </td>
           {/if}
           {#each columns as col, colIdx}
-            {@const isMarked = colIdx === markedCellColIds && rowIdx === markedCellRowIds}
+            {@const isMarked = colIdx === markedCellColIdx && rowIdx === markedCellRowIdx}
             <td
               data-hui-idx={colIdx}
               class:marked={isMarked}
@@ -205,4 +205,9 @@
      border-top-width,
      border-top-style,
      border-top-color;
+   > tbody > tr > td.marked =
+     outline-color,
+     outline-style,
+     outline-offset,
+     outline-width;
 -->

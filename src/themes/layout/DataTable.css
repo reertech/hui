@@ -79,6 +79,12 @@
   --hui-golnwm-border-top-style: var(--hui-default-border-style);
   --hui-golnwm-border-top-color: var(--hui-default-border-color);
 }
+[data-hui=DataTable] > tbody > tr > td.marked {
+  --hui-iijvqq-outline-color: var(--hui-unua-border-color);
+  --hui-iijvqq-outline-style: var(--hui-default-border-style);
+  --hui-iijvqq-outline-offset: -5px;
+  --hui-iijvqq-outline-width: var(--hui-unua-border-width);
+}
 [data-hui=DataTable] {
   /* LAYOUT-POSITION */
 /*  --hui-xvhgjw-position-default: ; */
@@ -162,8 +168,6 @@
 /*  --hui-xvhgjw-border-bottom-color-default: ; */
 /*  --hui-xvhgjw-border-bottom-style-default: ; */
 /*  --hui-xvhgjw-border-bottom-width-default: ; */
-/*  --hui-xvhgjw-border-bottom-left-radius-default: ; */
-/*  --hui-xvhgjw-border-bottom-right-radius-default: ; */
 /*  --hui-xvhgjw-border-image-outset-default: ; */
 /*  --hui-xvhgjw-border-image-repeat-default: ; */
 /*  --hui-xvhgjw-border-image-slice-default: ; */
@@ -178,8 +182,6 @@
 /*  --hui-xvhgjw-border-top-color-default: ; */
 /*  --hui-xvhgjw-border-top-style-default: ; */
 /*  --hui-xvhgjw-border-top-width-default: ; */
-/*  --hui-xvhgjw-border-top-left-radius-default: ; */
-/*  --hui-xvhgjw-border-top-right-radius-default: ; */
 /*  --hui-xvhgjw-box-shadow-default: ; */
 /*  --hui-xvhgjw-cursor-default: ; */
 /*  --hui-xvhgjw-outline-color-default: ; */
@@ -589,4 +591,10 @@
 /*  --hui-golnwm-border-top-width-default: ; */
 /*  --hui-golnwm-border-top-style-default: ; */
 /*  --hui-golnwm-border-top-color-default: ; */
+}
+[data-hui=DataTable] > tbody > tr > td.marked {
+/*  --hui-iijvqq-outline-color-default: ; */
+/*  --hui-iijvqq-outline-style-default: ; */
+/*  --hui-iijvqq-outline-offset-default: ; */
+/*  --hui-iijvqq-outline-width-default: ; */
 }

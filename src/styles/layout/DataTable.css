@@ -509,3 +509,9 @@
   border-top-style: var(--hui-golnwm-border-top-style, initial);
   border-top-color: var(--hui-golnwm-border-top-color, initial);
 }
+[data-hui=DataTable] > tbody > tr > td.marked {
+  outline-color: var(--hui-iijvqq-outline-color, initial);
+  outline-style: var(--hui-iijvqq-outline-style, initial);
+  outline-offset: var(--hui-iijvqq-outline-offset, initial);
+  outline-width: var(--hui-iijvqq-outline-width, initial);
+}
