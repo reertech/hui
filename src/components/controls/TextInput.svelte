@@ -115,6 +115,7 @@
     disabled={disabled || null}
     readonly={readonly || null}
     on:keyup={enter}
+    on:keydown
   />
   {#if suffix}
     <Strong>

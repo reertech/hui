@@ -439,8 +439,9 @@ const stateKeys = [
 ]
 
 const applyState = (node, oldState, newState, classes) => {
-  const changes = stateKeys.reduce((acc, key) =>
-    extractChanges(oldState, newState, key, acc), {})
+  const changes = oldState == null ? newState 
+    : stateKeys.reduce((acc, key) =>
+      extractChanges(oldState, newState, key, acc), {})
 
   stateApplicators.forEach(fun => fun(node, changes, classes))
 
@@ -537,10 +538,11 @@ const extractChanges = (oldState, newState, key, acc) => {
 
 export default function hui(node, state) {
   const classes = node.classList.values().toArray()
-  let currentState = applyState(node, {}, state)
+  let currentState = applyState(node, null, state)
 
   return {
     update(newState) {
+      console.log("update", Object.keys(newState))
       const changes = applyState(node, currentState, newState, classes)
       currentState = { ...currentState, ...changes }
     },

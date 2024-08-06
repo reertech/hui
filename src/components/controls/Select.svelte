@@ -165,6 +165,7 @@
     disabled={disabled || null}
     readonly={readonly || null}
     on:keyup={enter}
+    on:keydown
   />
 
   {#if !checkEmpty(options) && dropdownOpened}
