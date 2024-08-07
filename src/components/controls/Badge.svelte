@@ -55,4 +55,5 @@
 <!-- theme.ini
   themes: small, button;
   & = common, display;
+  > svg = common, display, stroke, stroke-width;
 -->

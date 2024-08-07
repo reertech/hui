@@ -32,13 +32,31 @@
   /* DISPLAY */
   --hui-jjitob-display: block;
 }
+[data-hui=Badge] > svg {
+  /* LAYOUT-SIZING */
+  --hui-arwvwn-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height));
+  /* TEXT */
+  --hui-arwvwn-vertical-align: middle;
+  /* APPERANCE */
+  --hui-arwvwn-cursor: pointer;
+  /* DISPLAY */
+  --hui-arwvwn-display: inline-block;
+  --hui-arwvwn-stroke: var(--hui-default-color-text);
+  --hui-arwvwn-stroke-width: var(--hui-default-border-width);
+}
 [data-hui=Badge][data-hui-theme~=small] {
   /* TEXT */
   --hui-jjitob-font-size: var(--hui-default-font-size-0);
 }
+[data-hui=Badge][data-hui-theme~=small] > svg {
+  /* LAYOUT-SIZING */
+  --hui-arwvwn-height: var(--hui-default-size);
+}
 [data-hui=Badge][data-hui-theme~=button] {
   /* APPERANCE */
   --hui-jjitob-box-shadow: var(--hui-unua-box-shadow);
+}
+[data-hui=Badge][data-hui-theme~=button] > svg {
 }
 [data-hui=Badge] {
   /* LAYOUT-POSITION */
@@ -152,4 +170,119 @@
 /*  --hui-jjitob-scrollbar-width-default: ; */
   /* DISPLAY */
 /*  --hui-jjitob-display-default: ; */
+}
+[data-hui=Badge] > svg {
+  /* LAYOUT-POSITION */
+/*  --hui-arwvwn-position-default: ; */
+/*  --hui-arwvwn-top-default: ; */
+/*  --hui-arwvwn-right-default: ; */
+/*  --hui-arwvwn-bottom-default: ; */
+/*  --hui-arwvwn-left-default: ; */
+/*  --hui-arwvwn-z-index-default: ; */
+/*  --hui-arwvwn-float-default: ; */
+/*  --hui-arwvwn-clear-default: ; */
+/*  --hui-arwvwn-align-self-default: ; */
+/*  --hui-arwvwn-order-default: ; */
+  /* LAYOUT-SIZING */
+/*  --hui-arwvwn-box-sizing-default: ; */
+/*  --hui-arwvwn-height-default: ; */
+/*  --hui-arwvwn-max-height-default: ; */
+/*  --hui-arwvwn-min-height-default: ; */
+/*  --hui-arwvwn-width-default: ; */
+/*  --hui-arwvwn-max-width-default: ; */
+/*  --hui-arwvwn-min-width-default: ; */
+  /* LAYOUT-MARGIN */
+/*  --hui-arwvwn-margin-top-default: ; */
+/*  --hui-arwvwn-margin-right-default: ; */
+/*  --hui-arwvwn-margin-bottom-default: ; */
+/*  --hui-arwvwn-margin-left-default: ; */
+  /* LAYOUT-PADDING */
+/*  --hui-arwvwn-padding-top-default: ; */
+/*  --hui-arwvwn-padding-right-default: ; */
+/*  --hui-arwvwn-padding-bottom-default: ; */
+/*  --hui-arwvwn-padding-left-default: ; */
+  /* LAYOUT-OVERFLOW */
+/*  --hui-arwvwn-overflow-x-default: ; */
+/*  --hui-arwvwn-overflow-y-default: ; */
+  /* LAYOUT-FLEX */
+/*  --hui-arwvwn-flex-basis-default: ; */
+/*  --hui-arwvwn-flex-direction-default: ; */
+/*  --hui-arwvwn-flex-grow-default: ; */
+/*  --hui-arwvwn-flex-shrink-default: ; */
+/*  --hui-arwvwn-flex-wrap-default: ; */
+/*  --hui-arwvwn-gap-default: ; */
+/*  --hui-arwvwn-align-content-default: ; */
+/*  --hui-arwvwn-justify-content-default: ; */
+/*  --hui-arwvwn-align-items-default: ; */
+  /* TEXT */
+/*  --hui-arwvwn-direction-default: ; */
+/*  --hui-arwvwn-font-family-default: ; */
+/*  --hui-arwvwn-font-size-default: ; */
+/*  --hui-arwvwn-font-stretch-default: ; */
+/*  --hui-arwvwn-font-style-default: ; */
+/*  --hui-arwvwn-font-weight-default: ; */
+/*  --hui-arwvwn-letter-spacing-default: ; */
+/*  --hui-arwvwn-line-height-default: ; */
+/*  --hui-arwvwn-text-align-default: ; */
+/*  --hui-arwvwn-text-align-last-default: ; */
+/*  --hui-arwvwn-text-decoration-color-default: ; */
+/*  --hui-arwvwn-text-decoration-line-default: ; */
+/*  --hui-arwvwn-text-decoration-style-default: ; */
+/*  --hui-arwvwn-text-decoration-thickness-default: ; */
+/*  --hui-arwvwn-text-indent-default: ; */
+/*  --hui-arwvwn-text-overflow-default: ; */
+/*  --hui-arwvwn-text-shadow-default: ; */
+/*  --hui-arwvwn-text-size-adjust-default: ; */
+/*  --hui-arwvwn-text-transform-default: ; */
+/*  --hui-arwvwn-text-wrap-default: ; */
+/*  --hui-arwvwn-vertical-align-default: ; */
+/*  --hui-arwvwn-white-space-collapse-default: ; */
+/*  --hui-arwvwn-word-break-default: ; */
+/*  --hui-arwvwn-word-spacing-default: ; */
+  /* APPERANCE */
+/*  --hui-arwvwn-visibility-default: ; */
+/*  --hui-arwvwn-color-default: ; */
+/*  --hui-arwvwn-background-attachment-default: ; */
+/*  --hui-arwvwn-background-clip-default: ; */
+/*  --hui-arwvwn-background-color-default: ; */
+/*  --hui-arwvwn-background-image-default: ; */
+/*  --hui-arwvwn-background-origin-default: ; */
+/*  --hui-arwvwn-background-position-x-default: ; */
+/*  --hui-arwvwn-background-position-y-default: ; */
+/*  --hui-arwvwn-background-repeat-default: ; */
+/*  --hui-arwvwn-background-size-default: ; */
+/*  --hui-arwvwn-border-bottom-color-default: ; */
+/*  --hui-arwvwn-border-bottom-style-default: ; */
+/*  --hui-arwvwn-border-bottom-width-default: ; */
+/*  --hui-arwvwn-border-bottom-left-radius-default: ; */
+/*  --hui-arwvwn-border-bottom-right-radius-default: ; */
+/*  --hui-arwvwn-border-image-outset-default: ; */
+/*  --hui-arwvwn-border-image-repeat-default: ; */
+/*  --hui-arwvwn-border-image-slice-default: ; */
+/*  --hui-arwvwn-border-image-source-default: ; */
+/*  --hui-arwvwn-border-image-width-default: ; */
+/*  --hui-arwvwn-border-left-color-default: ; */
+/*  --hui-arwvwn-border-left-style-default: ; */
+/*  --hui-arwvwn-border-left-width-default: ; */
+/*  --hui-arwvwn-border-right-color-default: ; */
+/*  --hui-arwvwn-border-right-style-default: ; */
+/*  --hui-arwvwn-border-right-width-default: ; */
+/*  --hui-arwvwn-border-top-color-default: ; */
+/*  --hui-arwvwn-border-top-style-default: ; */
+/*  --hui-arwvwn-border-top-width-default: ; */
+/*  --hui-arwvwn-border-top-left-radius-default: ; */
+/*  --hui-arwvwn-border-top-right-radius-default: ; */
+/*  --hui-arwvwn-box-shadow-default: ; */
+/*  --hui-arwvwn-cursor-default: ; */
+/*  --hui-arwvwn-outline-color-default: ; */
+/*  --hui-arwvwn-outline-offset-default: ; */
+/*  --hui-arwvwn-outline-style-default: ; */
+/*  --hui-arwvwn-outline-width-default: ; */
+/*  --hui-arwvwn-scrollbar-color-default: ; */
+/*  --hui-arwvwn-scrollbar-gutter-default: ; */
+/*  --hui-arwvwn-scrollbar-width-default: ; */
+  /* DISPLAY */
+/*  --hui-arwvwn-display-default: ; */
+/*  --hui-arwvwn-stroke-default: ; */
+/*  --hui-arwvwn-stroke-width-default: ; */
 }

@@ -4,6 +4,7 @@
   import Container from "../Container.svelte"
   import Badge from "./Badge.svelte"
   import Dropdown from "./Dropdown.svelte"
+  import IconX from "../../icons/X.svelte"
 
   import { checkEmpty } from "../../helpers.js"
   import { tick, createEventDispatcher } from "svelte"
@@ -34,7 +35,6 @@
   export let name = null
   export let selected = []
   export let options = {}
-  export let label = null
   export let maxValues = 1
   export let placeholder = +maxValues === 1 ? "Select" : "Add"
   export let nullValue = null
@@ -124,6 +124,7 @@
   {flex}
   {name}
 >
+  <!--
   {#if label || $$slots.label}
     <legend>
       <label>
@@ -138,6 +139,7 @@
       </label>
     </legend>
   {/if}
+  -->
 
   {#each selectedArray as value}
     <Badge
@@ -146,6 +148,7 @@
       on:click={() => remove(value)}
     >
       {optionsMap.get(value)}
+      <IconX />
     </Badge>
   {/each}
   <input
