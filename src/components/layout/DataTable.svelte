@@ -46,10 +46,8 @@
   $: activeCols = showInactiveCols ? cols
     : cols.filter(c => check(colsActive, c))
 
-  $: filteredCols = showFilteredCols ? activeCols
+  $: columns = showFilteredCols ? activeCols
     : activeCols.filter(c => !check(colsFilter, c))
-
-  $: columns = filteredCols
 
   const buildWidth = (value) => {
     switch (typeof value) {

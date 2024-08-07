@@ -2,8 +2,6 @@
   /* LAYOUT-POSITION */
   --hui-yqncrg-position: relative;
   /* LAYOUT-SIZING */
-  --hui-yqncrg-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
-  --hui-yqncrg-max-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
   --hui-yqncrg-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
   --hui-yqncrg-width: 100%;
   --hui-yqncrg-max-width: 50vw;
@@ -81,7 +79,6 @@
   --hui-otvrfb-text-align: center;
 }
 [data-hui=Textarea] > button[data-hui=Button] {
-  --hui-rvvxnn-cursor: pointer;
   /* LAYOUT-POSITION */
   --hui-rvvxnn-position: absolute;
   --hui-rvvxnn-top: calc(var(--hui-default-spacer-4) + var(--hui-default-border-width) * 2);

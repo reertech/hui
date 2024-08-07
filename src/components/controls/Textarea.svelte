@@ -8,8 +8,8 @@
   import IconMaximize from "../../icons/Maximize.svelte"
   import IconMinimize from "../../icons/Minimize.svelte"
 
-  import { formatNumber, checkEmpty } from "../../helpers.js"
-  import { createEventDispatcher } from "svelte"
+  import { formatNumber, checkEmpty, composeKeys } from "../../helpers.js"
+  import { createEventDispatcher, tick } from "svelte"
   const dispatch = createEventDispatcher()
 
   export let active = null
@@ -33,6 +33,7 @@
   let classes = null
   export { classes as class }
 
+  export let inputNode = null
   export let name = null
   export let placeholder = null
   export let value = null
@@ -44,6 +45,7 @@
   export let expanded = false
   export let nullValue = null
   export let buttonTheme = "flat small"
+  export let newLineCtrlEnter = false
 
   $: rowsNum = formatNumber(expanded ? expandedRows : rows, 1)
   $: colsNum = formatNumber(expanded ? expandedCols : cols, 50)
@@ -60,8 +62,21 @@
     dispatch("change", value)
   }
 
-  const enter = (e) => {
-    if (e.code === "Enter") dispatch("enter")
+  const keyDown = async (e) => {
+    if (!expanded || !newLineCtrlEnter) return
+    if (e.code !== "Enter") return
+    if (composeKeys(e) !== "ctrl") return
+
+    e.preventDefault()
+    e.stopPropagation()
+
+    const i = e.target.selectionEnd
+    const current = e.target.value ?? ""
+    const value = current.substring(0, i) + "\n" + current.substring(i)
+
+    change({ target: { value }})
+    await tick()
+    e.target.setSelectionRange(i + 1, i + 1)
   }
 </script>
 
@@ -107,8 +122,13 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
-    on:keyup={enter}
+    on:keydown={keyDown}
+    on:keyup
     on:keydown
+    on:blur
+    on:focus
+    data-hui-input
+    bind:this={inputNode}
   />
   <Button
     theme={buttonTheme}
@@ -129,5 +149,5 @@
   > textarea = resize, overflow, max-height;
   &::after = content, visibility, display, max-height;
   > textarea::placeholder = font-size, text-align;
-  > button[data-hui=Button] = cursor, layout-position, font-size;
+  > button[data-hui=Button] = layout-position, font-size;
 -->

@@ -52,6 +52,8 @@ export { default as IconAlertCircle } from "./icons/AlertCircle.svelte"
 export { default as IconMove } from "./icons/Move.svelte"
 export { default as IconMaximize } from "./icons/Maximize.svelte"
 export { default as IconMinimize } from "./icons/Minimize.svelte"
+export { default as IconPlus } from "./icons/Plus.svelte"
+export { default as IconPlusCircle } from "./icons/PlusCircle.svelte"
 
 export { default as persist } from "./stores/persist.js"
 export { default as setStore } from "./stores/set.js"

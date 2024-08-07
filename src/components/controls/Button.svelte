@@ -5,6 +5,7 @@
 
   export let name = null
   export let text = "Click me!"
+  export let node = null
 </script>
 
 <button
@@ -14,6 +15,7 @@
   }}
   {name}
   on:click
+  bind:this={node}
   active={($$restProps.active && "") || null}
   readonly={($$restProps.readonly && "") || null}
   disabled={($$restProps.disabled && "") || null}

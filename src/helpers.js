@@ -187,6 +187,17 @@ export const getIn = (object, key, def) => {
   return value ?? def
 }
 
+export const composeKeys = (e) => {
+  if (!isObject(e) || e.constructor !== KeyboardEvent) return ""
+
+  return [
+    e.ctrlKey && "ctrl",
+    e.altKey && "alt",
+    e.metaKey && "meta",
+    e.shiftKey && "shift"
+  ].filter(v => v).join("+")
+}
+
 export const delIn = (object, key) => {
   if (!isObject(object) || key == null) return object
 

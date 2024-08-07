@@ -3,7 +3,9 @@
   import "../../styles/controls/MultiInput.css"
   import Container from "../Container.svelte"
   import Badge from "./Badge.svelte"
+  import Button from "./Button.svelte"
   import Dropdown from "./Dropdown.svelte"
+  import IconPlusCircle from "../../icons/PlusCircle.svelte"
 
   import { checkEmpty, checkNotEmpty, isString } from "../../helpers.js"
   import { createEventDispatcher } from "svelte"
@@ -30,6 +32,7 @@
   let classes = null
   export { classes as class }
 
+  export let inputNode = null
   export let name = null
   export let placeholder = null
   export let values = null
@@ -38,10 +41,10 @@
   export let nullValue = null
   export let maxValues = 2
   export let separator = null
+  export let buttonTheme = "flat small"
 
   let dropdownOpened = false
   let closeTimer = null
-  let input = null
   let addMode = true
   let removeMode = false
 
@@ -92,7 +95,7 @@
 
   const focus = () => {
     open()
-    input.focus()
+    inputNode?.focus()
   }
 
   const remove = (idx) => {
@@ -118,10 +121,9 @@
     switchAdd()
   }
 
-  const enter = (e) => {
-    if (e.code === "Enter") {
+  const keyUp = (e) => {
+    if (e.code === "Enter" && e.ctrlKey) {
       switchAdd()
-      dispatch("enter")
     } else if (e.key === "Backspace") {
       removeNew()
     }
@@ -167,20 +169,24 @@
     on:input={change}
     on:change={change}
     {value}
-    bind:this={input}
     on:focus={open}
     on:blur={close}
     {placeholder}
     {maxLength}
     type="text"
+    hidden={isFull && isEmptyValue}
     valid={valid || null}
     invalid={invalid || null}
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
-    on:keyup={enter}
+    on:keyup={keyUp}
+    on:keyup
     on:keydown
-    hidden={isFull && isEmptyValue}
+    on:blur
+    on:focus
+    data-hui-input
+    bind:this={inputNode}
   />
   {#if !checkEmpty(options) && dropdownOpened}
     <Dropdown
@@ -188,14 +194,17 @@
       selected={valuesArray}
       on:select={select}
       filter={value}
-      root={input?.parentElement}
+      root={inputNode?.parentElement}
       active={dropdownOpened}
     />
   {/if}
   {#if !isEmptyValue}
-    <button on:click={switchAdd}>
-      add
-    </button>
+    <Button
+      theme={buttonTheme}
+      on:click={switchAdd}
+    >
+      <IconPlusCircle />
+    </Button>
   {/if}
 </Container>
 
@@ -204,5 +213,6 @@
   & = common, display, flex, gap;
   > input = common;
   > input::placeholder = font-size, text-align;
+  > button[data-hui=Button] = layout-position, font-size;
 -->
 

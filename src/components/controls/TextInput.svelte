@@ -30,6 +30,7 @@
   let classes = null
   export { classes as class }
 
+  export let inputNode = null
   export let name = null
   export let placeholder = null
   export let value = null
@@ -41,7 +42,6 @@
 
   let dropdownOpened = false
   let closeTimer = null
-  let input = null
 
   const open = () => {
     clearTimeout(closeTimer)
@@ -62,10 +62,6 @@
   const select = (e) => change({
     target: { value: e.detail }
   })
-
-  const enter = (e) => {
-    if (e.code === "Enter") dispatch("enter")
-  }
 </script>
 
 <Container
@@ -103,7 +99,6 @@
     on:input={change}
     on:change={change}
     {value}
-    bind:this={input}
     on:focus={open}
     on:blur={close}
     {placeholder}
@@ -114,8 +109,12 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
-    on:keyup={enter}
+    on:keyup
     on:keydown
+    on:blur
+    on:focus
+    data-hui-input
+    bind:this={inputNode}
   />
   {#if suffix}
     <Strong>
@@ -129,7 +128,7 @@
       selected={value}
       on:select={select}
       filter={value}
-      root={input?.parentElement}
+      root={inputNode?.parentElement}
       active={dropdownOpened}
     />
   {/if}

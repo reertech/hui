@@ -2,8 +2,6 @@
   /* LAYOUT-POSITION */
   --hui-lilprs-position: relative;
   /* LAYOUT-SIZING */
-  --hui-lilprs-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
-  --hui-lilprs-max-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
   --hui-lilprs-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
   --hui-lilprs-width: 100%;
   --hui-lilprs-max-width: 50vw;
@@ -46,6 +44,13 @@
   /* DISPLAY */
   --hui-lilprs-display: flex;
   --hui-lilprs-gap: var(--hui-default-spacer-5);
+}
+[data-hui=MultiInput] > button[data-hui=Button] {
+  /* LAYOUT-POSITION */
+  --hui-rvvxnn-position: absolute;
+  --hui-rvvxnn-top: calc(var(--hui-default-spacer-4) + var(--hui-default-border-width) * 2);
+  --hui-rvvxnn-right: var(--hui-default-spacer-6);
+  --hui-rvvxnn-font-size: var(--hui-default-size-0);
 }
 [data-hui=MultiInput] > input {
   /* LAYOUT-SIZING */

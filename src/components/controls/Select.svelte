@@ -30,6 +30,7 @@
   let classes = null
   export { classes as class }
 
+  export let inputNode = null
   export let name = null
   export let selected = []
   export let options = {}
@@ -39,7 +40,6 @@
   export let nullValue = null
 
   let filter = null
-  let filterInput = null
   let closeTimer = null
   let dropdownOpened = false
 
@@ -95,11 +95,7 @@
 
     await commit()
 
-    if (!isMulti) filterInput.focus()
-  }
-
-  const enter = (e) => {
-    if (e.code === "Enter") dispatch("enter")
+    if (!isMulti) inputNode.focus()
   }
 
   /* $: { select(filter) } ??? */
@@ -153,7 +149,6 @@
     </Badge>
   {/each}
   <input
-    bind:this={filterInput}
     bind:value={filter}
     on:focus={open}
     on:blur={close}
@@ -164,8 +159,12 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
-    on:keyup={enter}
+    on:keyup
     on:keydown
+    on:blur
+    on:focus
+    data-hui-input
+    bind:this={inputNode}
   />
 
   {#if !checkEmpty(options) && dropdownOpened}
@@ -174,7 +173,7 @@
       {selected}
       {filter}
       on:select={select}
-      root={filterInput?.parentElement}
+      root={inputNode?.parentElement}
       active={dropdownOpened}
     />
   {/if}

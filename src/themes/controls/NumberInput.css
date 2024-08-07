@@ -1,7 +1,5 @@
 [data-hui=NumberInput] {
   /* LAYOUT-SIZING */
-  --hui-affhez-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
-  --hui-affhez-max-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
   --hui-affhez-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
   --hui-affhez-width: 100%;
   --hui-affhez-max-width: 50vw;

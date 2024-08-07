@@ -542,7 +542,7 @@ export default function hui(node, state) {
 
   return {
     update(newState) {
-      console.log("update", Object.keys(newState))
+      // console.log("update", Object.keys(newState))
       const changes = applyState(node, currentState, newState, classes)
       currentState = { ...currentState, ...changes }
     },

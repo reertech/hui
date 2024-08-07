@@ -28,6 +28,7 @@
   let classes = null
   export { classes as class }
 
+  export let inputNode = null
   export let name = null
   export let placeholder = null
   export let value = null
@@ -43,10 +44,6 @@
     if (isNaN(value)) value = nullValue
 
     dispatch("change", value)
-  }
-
-  const enter = (e) => {
-    if (e.code === "Enter") dispatch("enter")
   }
 </script>
 
@@ -84,8 +81,6 @@
     {max}
     {step}
     on:click
-    on:focus
-    on:blur
     on:input
     on:input={change}
     on:change={change}
@@ -97,8 +92,12 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
-    on:keyup={enter}
+    on:keyup
     on:keydown
+    on:blur
+    on:focus
+    data-hui-input
+    bind:this={inputNode}
   />
   {#if suffix}
     <Strong>
