@@ -228,3 +228,17 @@
   font-size: var(--hui-fyvwyk-font-size, initial);
   text-align: var(--hui-fyvwyk-text-align, initial);
 }
+[data-hui=MultiInput] > button[data-hui=Button] {
+  /* LAYOUT-POSITION */
+  position: var(--hui-wqctph-position, static);
+  top: var(--hui-wqctph-top, auto);
+  right: var(--hui-wqctph-right, auto);
+  bottom: var(--hui-wqctph-bottom, auto);
+  left: var(--hui-wqctph-left, auto);
+  z-index: var(--hui-wqctph-z-index, auto);
+  float: var(--hui-wqctph-float, none);
+  clear: var(--hui-wqctph-clear, none);
+  align-self: var(--hui-wqctph-align-self, auto);
+  order: var(--hui-wqctph-order, 0);
+  font-size: var(--hui-wqctph-font-size, initial);
+}

@@ -262,7 +262,6 @@
   text-align: var(--hui-otvrfb-text-align, initial);
 }
 [data-hui=Textarea] > button[data-hui=Button] {
-  cursor: var(--hui-rvvxnn-cursor, initial);
   /* LAYOUT-POSITION */
   position: var(--hui-rvvxnn-position, static);
   top: var(--hui-rvvxnn-top, auto);
