@@ -226,7 +226,7 @@
 [data-hui=MultiSelect] > input::placeholder {
   font-size: var(--hui-vobkea-font-size, initial);
 }
-[data-hui=MultiSelect] > button {
-  flex-grow: var(--hui-epqqys-flex-grow, initial);
-  cursor: var(--hui-epqqys-cursor, initial);
+[data-hui=MultiSelect] > button[data-hui=Badge] {
+  flex-grow: var(--hui-dotzua-flex-grow, initial);
+  cursor: var(--hui-dotzua-cursor, initial);
 }

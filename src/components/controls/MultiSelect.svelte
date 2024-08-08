@@ -162,5 +162,5 @@
   & = common, display, flex;
   > input = common;
   > input::placeholder = font-size;
-  > button = flex-grow, cursor;
+  > button[data-hui=Badge] = flex-grow, cursor;
 -->

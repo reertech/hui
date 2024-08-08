@@ -64,10 +64,6 @@
 [data-hui=Select] > input::placeholder {
   --hui-cdxgkc-font-size: var(--hui-default-size-0);
 }
-[data-hui=Select] > button[data-hui=Badge] {
-  --hui-csxoww-flex-grow: 1;
-  --hui-csxoww-cursor: pointer;
-}
 [data-hui=Select] > button[data-hui=Button] {
   /* LAYOUT-POSITION */
   --hui-umkylx-position: absolute;
@@ -80,8 +76,6 @@
 [data-hui=Select][data-hui-theme~=flat] > input {
 }
 [data-hui=Select][data-hui-theme~=flat] > input::placeholder {
-}
-[data-hui=Select][data-hui-theme~=flat] > button[data-hui=Badge] {
 }
 [data-hui=Select][data-hui-theme~=flat] > button[data-hui=Button] {
 }
@@ -312,10 +306,6 @@
 }
 [data-hui=Select] > input::placeholder {
 /*  --hui-cdxgkc-font-size-default: ; */
-}
-[data-hui=Select] > button[data-hui=Badge] {
-/*  --hui-csxoww-flex-grow-default: ; */
-/*  --hui-csxoww-cursor-default: ; */
 }
 [data-hui=Select] > button[data-hui=Button] {
   /* LAYOUT-POSITION */
