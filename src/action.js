@@ -537,7 +537,7 @@ const extractChanges = (oldState, newState, key, acc) => {
 }
 
 export default function hui(node, state) {
-  const classes = node.classList.values().toArray()
+  const classes = [...node.classList.values()]
   let currentState = applyState(node, null, state)
 
   return {

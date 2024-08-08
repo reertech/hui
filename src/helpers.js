@@ -38,14 +38,14 @@ export const buildFuzzyRegex = (string, params = "i") => {
 export const uniqueArray = (array) => {
   if (!isArray) return array
 
-  return new Set(array).values().toArray()
+  return [...new Set(array).values()]
 }
 
 export const diffArrays = (arrA, arrB) =>
-  new Set(arrA).difference(new Set(arrB)).values().toArray()
+  [...new Set(arrA).difference(new Set(arrB)).values()]
 
 export const symDiffArrays = (arrA, arrB) =>
-  new Set(arrA).symmetricDifference(new Set(arrB)).values().toArray()
+  [...new Set(arrA).symmetricDifference(new Set(arrB)).values()]
 
 export const arrayToMap = (array, value) => {
   if (!isArray(array)) return array
