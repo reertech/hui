@@ -1,13 +1,13 @@
 [data-hui=Badge] {
   /* LAYOUT-PADDING */
-  --hui-jjitob-padding-top: var(--hui-default-spacer-4);
+  --hui-jjitob-padding-top: var(--hui-default-spacer-3);
   --hui-jjitob-padding-right: var(--hui-default-spacer-6);
-  --hui-jjitob-padding-bottom: var(--hui-default-spacer-4);
+  --hui-jjitob-padding-bottom: var(--hui-default-spacer-3);
   --hui-jjitob-padding-left: var(--hui-default-spacer-6);
   /* TEXT */
   --hui-jjitob-font-size: var(--hui-default-font-size);
   --hui-jjitob-font-weight: var(--hui-default-font-weight);
-  --hui-jjitob-line-height: var(--hui-default-line-height-minus1);
+  --hui-jjitob-line-height: var(--hui-default-line-height);
   --hui-jjitob-text-align: center;
   /* APPERANCE */
   --hui-jjitob-color: var(--hui-default-color-text);
@@ -46,11 +46,13 @@
 }
 [data-hui=Badge][data-hui-theme~=small] {
   /* TEXT */
-  --hui-jjitob-font-size: var(--hui-default-font-size-0);
+  --hui-jjitob-font-size: var(--hui-default-size-0);
+  --hui-jjitob-padding-top: var(--hui-default-spacer-2);
+  --hui-jjitob-padding-bottom: var(--hui-default-spacer-2);
 }
 [data-hui=Badge][data-hui-theme~=small] > svg {
   /* LAYOUT-SIZING */
-  --hui-arwvwn-height: var(--hui-default-size);
+  --hui-arwvwn-height: var(--hui-default-size-1);
 }
 [data-hui=Badge][data-hui-theme~=button] {
   /* APPERANCE */

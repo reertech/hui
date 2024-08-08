@@ -37,6 +37,7 @@
   export let options = {}
   export let maxValues = 10
   export let placeholder = "Add"
+  export let badgeTheme = "small"
 
   let filter = null
   let closeTimer = null
@@ -119,7 +120,7 @@
   {#each selectedArray as value}
     <Badge
       tag="button"
-      theme="small"
+      theme={badgeTheme}
       on:click={() => remove(value)}
     >
       {optionsObj[value]}

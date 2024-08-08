@@ -2,15 +2,15 @@
   /* LAYOUT-POSITION */
   --hui-lilprs-position: relative;
   /* LAYOUT-SIZING */
-  --hui-lilprs-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
+  --hui-lilprs-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3) + var(--hui-default-border-width)) * 2);
   --hui-lilprs-width: 100%;
   --hui-lilprs-max-width: 50vw;
   --hui-lilprs-min-width: 200px;
   /* LAYOUT-PADDING */
   --hui-lilprs-padding-top: var(--hui-default-spacer-5);
-  --hui-lilprs-padding-right: var(--hui-default-spacer-6);
+  --hui-lilprs-padding-right: var(--hui-default-spacer-7);
   --hui-lilprs-padding-bottom: var(--hui-default-spacer-5);
-  --hui-lilprs-padding-left: var(--hui-default-spacer-6);
+  --hui-lilprs-padding-left: var(--hui-default-spacer-7);
   /* LAYOUT-OVERFLOW */
   --hui-lilprs-overflow-x: visible;
   --hui-lilprs-overflow-y: visible;
@@ -49,10 +49,10 @@
   /* LAYOUT-SIZING */
   --hui-aqailr-max-width: 100%;
   /* LAYOUT-PADDING */
-  --hui-aqailr-padding-top: calc(var(--hui-default-spacer-3) + var(--hui-default-border-width) / 2);
-  --hui-aqailr-padding-right: var(--hui-default-spacer-1);
-  --hui-aqailr-padding-bottom: calc(var(--hui-default-spacer-3) + var(--hui-default-border-width) / 2);
-  --hui-aqailr-padding-left: var(--hui-default-spacer-1);
+  --hui-aqailr-padding-top: var(--hui-default-spacer-3);
+  --hui-aqailr-padding-right: 0;
+  --hui-aqailr-padding-bottom: var(--hui-default-spacer-3);
+  --hui-aqailr-padding-left: 0;
   /* LAYOUT-FLEX */
   --hui-aqailr-flex-grow: 2;
   /* TEXT */

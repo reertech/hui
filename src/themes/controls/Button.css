@@ -1,19 +1,19 @@
 [data-hui=Button] {
   /* LAYOUT-SIZING */
-  --hui-pomgca-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
-  --hui-pomgca-max-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
-  --hui-pomgca-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
-  --hui-pomgca-min-width: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-6) + var(--hui-default-border-width)) * 2);
+  --hui-pomgca-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3) + var(--hui-default-border-width)) * 2);
+  --hui-pomgca-max-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3) + var(--hui-default-border-width)) * 2);
+  --hui-pomgca-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3) + var(--hui-default-border-width)) * 2);
+  --hui-pomgca-min-width: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3) + var(--hui-default-border-width)) * 2);
   /* LAYOUT-PADDING */
-  --hui-pomgca-padding-top: var(--hui-default-spacer-5);
-  --hui-pomgca-padding-right: var(--hui-default-spacer-6);
-  --hui-pomgca-padding-bottom: var(--hui-default-spacer-5);
-  --hui-pomgca-padding-left: var(--hui-default-spacer-6);
+  --hui-pomgca-padding-top: calc(var(--hui-default-spacer-5) + var(--hui-default-spacer-3));
+  --hui-pomgca-padding-right: var(--hui-default-spacer-7);
+  --hui-pomgca-padding-bottom: calc(var(--hui-default-spacer-5) + var(--hui-default-spacer-3));
+  --hui-pomgca-padding-left: var(--hui-default-spacer-7);
   /* LAYOUT-OVERFLOW */
   --hui-pomgca-overflow-x: hidden;
   --hui-pomgca-overflow-y: hidden;
   /* TEXT */
-  --hui-pomgca-font-size: var(--hui-default-font-size);
+  --hui-pomgca-font-size: var(--hui-default-size-1);
   --hui-pomgca-font-weight: var(--hui-default-font-weight);
   --hui-pomgca-line-height: var(--hui-default-line-height);
   --hui-pomgca-text-align: center;
@@ -142,11 +142,13 @@
 [data-hui=Button][data-hui-readonly] > svg {
 }
 [data-hui=Button][data-hui-theme~=flat] {
+  /* LAYOUT-SIZING */
+  --hui-pomgca-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3) + var(--hui-default-border-width)) * 2);
   /* LAYOUT-PADDING */
-  --hui-pomgca-padding-top: var(--hui-default-spacer-6);
-  --hui-pomgca-padding-right: var(--hui-default-spacer-6);
-  --hui-pomgca-padding-bottom: var(--hui-default-spacer-6);
-  --hui-pomgca-padding-left: var(--hui-default-spacer-6);
+  --hui-pomgca-padding-top: calc(var(--hui-default-spacer-5) + var(--hui-default-spacer-3));
+  --hui-pomgca-padding-right: var(--hui-default-spacer-7);
+  --hui-pomgca-padding-bottom: calc(var(--hui-default-spacer-5) + var(--hui-default-spacer-3));
+  --hui-pomgca-padding-left: var(--hui-default-spacer-7);
   /* APPERANCE */
   --hui-pomgca-background-color: none;
   --hui-pomgca-background-image: none;

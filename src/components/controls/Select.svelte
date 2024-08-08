@@ -39,7 +39,6 @@
   export let placeholder = "Select"
   export let nullValue = null
   export let buttonTheme = "small flat"
-  export let badgeTheme = "small"
 
   let filter = null
   let closeTimer = null
