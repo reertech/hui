@@ -36,6 +36,7 @@ export { default as MultiInput } from "./components/controls/MultiInput.svelte"
 export { default as Textarea } from "./components/controls/Textarea.svelte"
 export { default as NumberInput } from "./components/controls/NumberInput.svelte"
 export { default as Select } from "./components/controls/Select.svelte"
+export { default as MultiSelect } from "./components/controls/MultiSelect.svelte"
 export { default as Swapper } from "./components/controls/Swapper.svelte"
 
 export { default as IconSquare } from "./icons/Square.svelte"

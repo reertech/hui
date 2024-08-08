@@ -94,7 +94,7 @@
 </script>
 
 <Container
-  hui="Select"
+  hui="MultiSelect"
   tag="fieldset"
   {active}
   {readonly}
