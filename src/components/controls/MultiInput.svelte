@@ -5,7 +5,7 @@
   import Badge from "./Badge.svelte"
   import Button from "./Button.svelte"
   import Dropdown from "./Dropdown.svelte"
-  import IconPlusCircle from "../../icons/PlusCircle.svelte"
+  import IconPlus from "../../icons/Plus.svelte"
 
   import { checkEmpty, checkNotEmpty, isString } from "../../helpers.js"
   import { createEventDispatcher } from "svelte"
@@ -203,7 +203,7 @@
       theme={buttonTheme}
       on:click={switchAdd}
     >
-      <IconPlusCircle />
+      <IconPlus />
     </Button>
   {/if}
 </Container>
