@@ -226,7 +226,21 @@
 [data-hui=Select] > input::placeholder {
   font-size: var(--hui-cdxgkc-font-size, initial);
 }
-[data-hui=Select] > button {
-  flex-grow: var(--hui-yjkcgu-flex-grow, initial);
-  cursor: var(--hui-yjkcgu-cursor, initial);
+[data-hui=Select] > button[data-hui=Badge] {
+  flex-grow: var(--hui-csxoww-flex-grow, initial);
+  cursor: var(--hui-csxoww-cursor, initial);
+}
+[data-hui=Select] > button[data-hui=Button] {
+  /* LAYOUT-POSITION */
+  position: var(--hui-umkylx-position, static);
+  top: var(--hui-umkylx-top, auto);
+  right: var(--hui-umkylx-right, auto);
+  bottom: var(--hui-umkylx-bottom, auto);
+  left: var(--hui-umkylx-left, auto);
+  z-index: var(--hui-umkylx-z-index, auto);
+  float: var(--hui-umkylx-float, none);
+  clear: var(--hui-umkylx-clear, none);
+  align-self: var(--hui-umkylx-align-self, auto);
+  order: var(--hui-umkylx-order, 0);
+  font-size: var(--hui-umkylx-font-size, initial);
 }
