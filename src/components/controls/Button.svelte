@@ -1,7 +1,7 @@
 <script>
   import "../../themes/controls/Button.css"
   import "../../styles/controls/Button.css"
-  import hui from "../../action.js"
+  import hui from "../../hui.js"
 
   export let name = null
   export let text = "Click me!"

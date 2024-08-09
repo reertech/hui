@@ -20,6 +20,7 @@
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
     "rollup": "^2.75.7",
+    "rollup-plugin-import-css": "^3.5.0",
     "rollup-plugin-svelte": "^6.0.0",
     "svelte": "^3.48.0"
   },
