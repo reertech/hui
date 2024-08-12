@@ -48,8 +48,9 @@
   /* DISPLAY */
   --hui-kpisih-display: block;
 }
-[data-hui=Dropdown] > option:hover {
-  --hui-xzdyty-background-image: var(--hui-default-gradient-1);
+[data-hui=Dropdown] > option:hover,
+[data-hui=Dropdown] > option[data-hui-focused] {
+  --hui-hutckq-background-image: var(--hui-default-gradient-1);
 }
 [data-hui=Dropdown] > option + option {
   --hui-kczvqs-border-top-color: var(--hui-default-border-color);
@@ -60,7 +61,8 @@
 }
 [data-hui=Dropdown][data-hui-theme~=flat] > option {
 }
-[data-hui=Dropdown][data-hui-theme~=flat] > option:hover {
+[data-hui=Dropdown][data-hui-theme~=flat] > option:hover,
+[data-hui=Dropdown][data-hui-theme~=flat] > option[data-hui-focused] {
 }
 [data-hui=Dropdown][data-hui-theme~=flat] > option + option {
 }
@@ -71,7 +73,8 @@
 }
 [data-hui=Dropdown][data-hui-theme~=toTop] > option {
 }
-[data-hui=Dropdown][data-hui-theme~=toTop] > option:hover {
+[data-hui=Dropdown][data-hui-theme~=toTop] > option:hover,
+[data-hui=Dropdown][data-hui-theme~=toTop] > option[data-hui-focused] {
 }
 [data-hui=Dropdown][data-hui-theme~=toTop] > option + option {
 }
@@ -82,7 +85,8 @@
 }
 [data-hui=Dropdown][data-hui-theme~=toBottom] > option {
 }
-[data-hui=Dropdown][data-hui-theme~=toBottom] > option:hover {
+[data-hui=Dropdown][data-hui-theme~=toBottom] > option:hover,
+[data-hui=Dropdown][data-hui-theme~=toBottom] > option[data-hui-focused] {
 }
 [data-hui=Dropdown][data-hui-theme~=toBottom] > option + option {
 }
@@ -312,8 +316,9 @@
   /* DISPLAY */
 /*  --hui-kpisih-display-default: ; */
 }
-[data-hui=Dropdown] > option:hover {
-/*  --hui-xzdyty-background-image-default: ; */
+[data-hui=Dropdown] > option:hover,
+[data-hui=Dropdown] > option[data-hui-focused] {
+/*  --hui-hutckq-background-image-default: ; */
 }
 [data-hui=Dropdown] > option + option {
 /*  --hui-kczvqs-border-top-color-default: ; */

@@ -42,6 +42,7 @@
 
   let filter = null
   let closeTimer = null
+  let isFocused = false
   let dropdownOpened = false
 
   $: optionEntries = Array.isArray(options)
@@ -52,22 +53,26 @@
 
   $: isSelected = optionsObj.hasOwnProperty(value)
 
-  $: isClearable = !required && isSelected && dropdownOpened && !filter
+  $: isClearable = !required && isSelected && isFocused && !filter
 
   $: filterPlaceholder = optionsObj[value] ?? placeholder
 
-  $: filterValue = dropdownOpened ? filter
+  $: filterValue = isFocused ? filter
     : isSelected ? optionsObj[value] : null
+
+  $: isValueVisible = filter == null && isSelected
 
   const open = async () => {
     clearTimeout(closeTimer)
 
+    isFocused = true
     dropdownOpened = true
     await tick()
     inputNode.focus()
   }
 
   const close = () => {
+    isFocused = false
     closeTimer = setTimeout(() => dropdownOpened = false, 200)
   }
 
@@ -84,6 +89,7 @@
 
     await commit()
     filter = null
+    inputNode.blur()
   }
 
   const clear = async () => {
@@ -117,6 +123,10 @@
   {flex}
   {name}
 >
+  <!--
+  <span>{filter}</span>
+  <span>{filterValue}</span>
+  -->
   <input
     on:keydown={focusByArrows}
     value={filterValue}
@@ -129,6 +139,7 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
+    data-hui-selected={isValueVisible ? "" : null}
     on:input={(e) => filter = e.target.value}
     on:keyup
     on:keydown
@@ -163,6 +174,7 @@
   themes: flat;
   & = common, display, flex;
   > input = common;
+  > input[data-hui-selected] = color;
   > input::placeholder = font-size;
   > button[data-hui=Button] = layout-position, font-size;
 -->

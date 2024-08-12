@@ -45,10 +45,11 @@
   --hui-arwvwn-stroke-width: var(--hui-default-border-width);
 }
 [data-hui=Badge][data-hui-theme~=small] {
-  /* TEXT */
-  --hui-jjitob-font-size: var(--hui-default-size-0);
+  /* LAYOUT-PADDING */
   --hui-jjitob-padding-top: var(--hui-default-spacer-2);
   --hui-jjitob-padding-bottom: var(--hui-default-spacer-2);
+  /* TEXT */
+  --hui-jjitob-font-size: var(--hui-default-size-0);
 }
 [data-hui=Badge][data-hui-theme~=small] > svg {
   /* LAYOUT-SIZING */

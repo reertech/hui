@@ -224,8 +224,9 @@
   /* DISPLAY */
   display: var(--hui-kpisih-display, block);
 }
-[data-hui=Dropdown] > option:hover {
-  background-image: var(--hui-xzdyty-background-image, initial);
+[data-hui=Dropdown] > option:hover,
+[data-hui=Dropdown] > option[data-hui-focused] {
+  background-image: var(--hui-hutckq-background-image, initial);
 }
 [data-hui=Dropdown] > option + option {
   border-top-color: var(--hui-kczvqs-border-top-color, initial);

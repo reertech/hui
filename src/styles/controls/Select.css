@@ -223,6 +223,9 @@
   scrollbar-gutter: var(--hui-lbxlgv-scrollbar-gutter, auto);
   scrollbar-width: var(--hui-lbxlgv-scrollbar-width, thin);
 }
+[data-hui=Select] > input[data-hui-selected] {
+  color: var(--hui-hisqal-color, initial);
+}
 [data-hui=Select] > input::placeholder {
   font-size: var(--hui-cdxgkc-font-size, initial);
 }

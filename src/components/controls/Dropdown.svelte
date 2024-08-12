@@ -127,7 +127,7 @@
 
 <script context="module">
   export const focusByArrows = (e) => {
-    if (!["ArrowUp", "ArrowDown"].includes(e.code)) return
+    if (!["ArrowUp", "ArrowDown", "BackSpace"].includes(e.code)) return
     e.target.click()
   }
 </script>
