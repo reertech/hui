@@ -4,6 +4,7 @@
   import hui from "../../hui.js"
 
   export let name = null
+  export let title = null
   export let text = "Click me!"
   export let node = null
 </script>
@@ -16,11 +17,13 @@
   {name}
   on:click
   bind:this={node}
-  active={($$restProps.active && "") || null}
-  readonly={($$restProps.readonly && "") || null}
-  disabled={($$restProps.disabled && "") || null}
-  valid={($$restProps.valid && "") || null}
-  invalid={($$restProps.invalid && "") || null}
+  title={title || null}
+  hidden={$$restProps.hidden || null && ""}
+  active={$$restProps.active || null && ""}
+  readonly={$$restProps.readonly || null && ""}
+  disabled={$$restProps.disabled || null && ""}
+  valid={$$restProps.valid || null && ""}
+  invalid={$$restProps.invalid || null && ""}
 >
   {#if $$slots.default}
     <slot />

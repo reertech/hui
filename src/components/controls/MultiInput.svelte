@@ -121,7 +121,7 @@
     switchAdd()
   }
 
-  const keyUp = (e) => {
+  const keyDown = (e) => {
     if (e.code === "Enter" && e.ctrlKey) {
       switchAdd()
     } else if (e.key === "Backspace") {
@@ -180,9 +180,9 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
-    on:keyup={keyUp}
     on:keyup
     on:keydown
+    on:keydown={keyDown}
     on:blur
     on:focus
     data-hui-input

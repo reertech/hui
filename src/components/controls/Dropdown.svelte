@@ -6,7 +6,10 @@
   import {
     calcCutParentOffset,
     buildFuzzyRegex,
-    formatNumber
+    formatNumber,
+    composeKeys,
+    isNumber,
+    isArray
   } from "../../helpers.js"
 
   import { tick, createEventDispatcher, onMount } from "svelte"
@@ -37,8 +40,10 @@
   export let options = {}
   export let maxMaxHeight = 250
   export let filter = null
+  export let input = null
   export let root = null
 
+  let focus = null
   let dir = null
   let height = null
 
@@ -66,18 +71,16 @@
     ? options.map(o => [o, o])
     : Object.entries(options)
 
-  $: optionsMap = new Map(optionEntries)
-  $: valuesByLabel = new Map(optionEntries.map(([v, l]) => [l, v]))
+  $: filteredOptions = optionEntries.filter(([v, l]) =>
+    !selectedSet.has(v) && (!filterRe || filterRe.test(l)))
 
-  $: filteredOptions = optionEntries.filter(([v, l]) => {
-    return !selectedSet.has(v) && (!filterRe || filterRe.test(l))
-  })
+  $: filteredOptionsCount = filteredOptions.length
 
-  const select = (label) => {
-    const value = valuesByLabel.get(label)
-    if (!value) return
+  const select = (idx) => {
+    const value = filteredOptions.at(idx)
+    if (!isArray(value)) return
 
-    dispatch("select", value)
+    dispatch("select", value.at(0))
   }
 
   const calcOpenDir = () => {
@@ -92,9 +95,44 @@
       dir = "top"
     }
   }
+
+  const keyDown = (e) => {
+    if (composeKeys(e) !== "") return
+
+    if (["ArrowUp", "ArrowDown"].includes(e.code)) {
+      const newFocus = isNumber(focus)
+        ? e.code === "ArrowUp" ? focus - 1 : focus + 1
+        : e.code === "ArrowDown" ? 0 : filteredOptionsCount - 1
+
+      if (newFocus < 0 || newFocus > filteredOptionsCount - 1) return
+
+      focus = newFocus
+    } else if (e.code === "Enter") {
+      if (isNumber(focus)) select(focus)
+    }
+  }
+
+  const resetFocus = () => focus = null
+
+  $: resetFocus(filteredOptionsCount)
+
+  onMount(() => {
+    if (!input) return
+
+    input.addEventListener("keydown", keyDown)
+
+    return () => input.removeEventListener("keydown", keyDown)
+  })
 </script>
 
-{#if active && filteredOptions.length}
+<script context="module">
+  export const focusByArrows = (e) => {
+    if (!["ArrowUp", "ArrowDown"].includes(e.code)) return
+    e.target.click()
+  }
+</script>
+
+{#if active && filteredOptionsCount}
   <Container
     hui="Dropdown"
     tag="datalist"
@@ -117,11 +155,12 @@
     size={sizeParams}
     theme={themeString}
   >
-    {#each filteredOptions as [value, label]}
+    {#each filteredOptions as [value, label], idx}
       <option
         {value}
         {label}
-        on:click={() => select(label)}
+        data-hui-focused={focus === idx ? "" : null}
+        on:click={() => select(idx)}
       />
     {/each}
   </Container>
@@ -131,7 +170,8 @@
   themes: flat, toTop, toBottom;
   & = common, display;
   > option = common, display;
-  > option:hover = background-image;
+  > option:hover,
+  > option[data-hui-focused] = background-image;
   > option + option =
     border-top-color, border-top-style, border-top-width;
 -->

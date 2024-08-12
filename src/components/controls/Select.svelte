@@ -3,10 +3,10 @@
   import "../../styles/controls/Select.css"
   import Container from "../Container.svelte"
   import Button from "./Button.svelte"
-  import Dropdown from "./Dropdown.svelte"
+  import Dropdown, { focusByArrows } from "./Dropdown.svelte"
   import IconX from "../../icons/X.svelte"
-
   import { checkEmpty } from "../../helpers.js"
+
   import { tick, createEventDispatcher } from "svelte"
   const dispatch = createEventDispatcher()
 
@@ -118,8 +118,10 @@
   {name}
 >
   <input
+    on:keydown={focusByArrows}
     value={filterValue}
     placeholder={filterPlaceholder}
+    on:click={open}
     on:focus={open}
     on:blur={close}
     valid={valid || null}
@@ -150,6 +152,7 @@
       {filter}
       selected={[]}
       on:select={select}
+      input={inputNode}
       root={inputNode?.parentElement}
       active={dropdownOpened}
     />
