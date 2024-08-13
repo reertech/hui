@@ -96,7 +96,7 @@
     }
   }
 
-  const keyDown = (e) => {
+  function keyDown(e) {
     if (composeKeys(e) !== "") return
 
     if (["ArrowUp", "ArrowDown"].includes(e.code)) {
@@ -107,8 +107,9 @@
       if (newFocus < 0 || newFocus > filteredOptionsCount - 1) return
 
       focus = newFocus
-    } else if (e.code === "Enter") {
-      if (isNumber(focus)) select(focus)
+    } else if (isNumber(focus) && e.code === "Enter") {
+      e.stopPropagation()
+      select(focus)
     }
   }
 
@@ -126,8 +127,8 @@
 </script>
 
 <script context="module">
-  export const focusByArrows = (e) => {
-    if (!["ArrowUp", "ArrowDown", "BackSpace"].includes(e.code)) return
+  export const focusByArrows = (e, anyKey) => {
+    if (!anyKey && !["ArrowUp", "ArrowDown"].includes(e.code)) return
     e.target.click()
   }
 </script>

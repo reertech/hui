@@ -242,3 +242,7 @@
   order: var(--hui-wqctph-order, 0);
   font-size: var(--hui-wqctph-font-size, initial);
 }
+[data-hui=MultiInput] > button[data-hui=Badge] {
+  flex-grow: var(--hui-lehaze-flex-grow, initial);
+  cursor: var(--hui-lehaze-cursor, initial);
+}

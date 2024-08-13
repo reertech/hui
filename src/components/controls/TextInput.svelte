@@ -3,7 +3,7 @@
   import "../../styles/controls/TextInput.css"
   import Container from "../Container.svelte"
   import Strong from "../typography/Strong.svelte"
-  import Dropdown from "./Dropdown.svelte"
+  import Dropdown, { focusByArrows } from "./Dropdown.svelte"
 
   import { checkEmpty } from "../../helpers.js"
   import { createEventDispatcher } from "svelte"
@@ -32,7 +32,7 @@
 
   export let inputNode = null
   export let name = null
-  export let placeholder = null
+  export let placeholder = "Enter"
   export let value = null
   export let maxLength = null
   export let prefix = null
@@ -99,6 +99,7 @@
     on:input={change}
     on:change={change}
     {value}
+    on:click={open}
     on:focus={open}
     on:blur={close}
     {placeholder}
@@ -109,6 +110,7 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
+    on:keydown={focusByArrows}
     on:keyup
     on:keydown
     on:blur
@@ -129,6 +131,7 @@
       on:select={select}
       filter={value}
       root={inputNode?.parentElement}
+      input={inputNode}
       active={dropdownOpened}
     />
   {/if}

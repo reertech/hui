@@ -3,7 +3,7 @@
   import "../../styles/controls/MultiSelect.css"
   import Container from "../Container.svelte"
   import Badge from "./Badge.svelte"
-  import Dropdown from "./Dropdown.svelte"
+  import Dropdown, { focusByArrows } from "./Dropdown.svelte"
   import IconX from "../../icons/X.svelte"
 
   import { checkEmpty } from "../../helpers.js"
@@ -124,11 +124,11 @@
       on:click={() => remove(value)}
     >
       {optionsObj[value]}
-      <IconX />
     </Badge>
   {/each}
   <input
     bind:value={filter}
+    on:click={open}
     on:focus={open}
     on:blur={close}
     {placeholder}
@@ -138,6 +138,7 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
+    on:keydown={(e) => focusByArrows(e, "anyKey")}
     on:keyup
     on:keydown
     on:blur
@@ -153,6 +154,7 @@
       {filter}
       on:select={select}
       root={inputNode?.parentElement}
+      input={inputNode}
       active={dropdownOpened}
     />
   {/if}

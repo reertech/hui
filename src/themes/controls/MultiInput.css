@@ -74,6 +74,10 @@
   --hui-wqctph-right: var(--hui-default-spacer-6);
   --hui-wqctph-font-size: var(--hui-default-size-0);
 }
+[data-hui=MultiInput] > button[data-hui=Badge] {
+  --hui-lehaze-flex-grow: 1;
+  --hui-lehaze-cursor: pointer;
+}
 [data-hui=MultiInput][data-hui-theme~=flat] {
 }
 [data-hui=MultiInput][data-hui-theme~=flat] > input {
@@ -81,6 +85,8 @@
 [data-hui=MultiInput][data-hui-theme~=flat] > input::placeholder {
 }
 [data-hui=MultiInput][data-hui-theme~=flat] > button[data-hui=Button] {
+}
+[data-hui=MultiInput][data-hui-theme~=flat] > button[data-hui=Badge] {
 }
 [data-hui=MultiInput] {
   /* LAYOUT-POSITION */
@@ -325,4 +331,8 @@
 /*  --hui-wqctph-align-self-default: ; */
 /*  --hui-wqctph-order-default: ; */
 /*  --hui-wqctph-font-size-default: ; */
+}
+[data-hui=MultiInput] > button[data-hui=Badge] {
+/*  --hui-lehaze-flex-grow-default: ; */
+/*  --hui-lehaze-cursor-default: ; */
 }

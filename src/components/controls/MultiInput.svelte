@@ -4,7 +4,7 @@
   import Container from "../Container.svelte"
   import Badge from "./Badge.svelte"
   import Button from "./Button.svelte"
-  import Dropdown from "./Dropdown.svelte"
+  import Dropdown, { focusByArrows } from "./Dropdown.svelte"
   import IconPlus from "../../icons/Plus.svelte"
 
   import { checkEmpty, checkNotEmpty, isString } from "../../helpers.js"
@@ -34,12 +34,12 @@
 
   export let inputNode = null
   export let name = null
-  export let placeholder = null
+  export let placeholder = "Enter"
   export let values = null
   export let maxLength = null
   export let options = null
   export let nullValue = null
-  export let maxValues = 2
+  export let maxValues = 10
   export let separator = null
   export let buttonTheme = "flat small"
 
@@ -169,6 +169,7 @@
     on:input={change}
     on:change={change}
     {value}
+    on:click={open}
     on:focus={open}
     on:blur={close}
     {placeholder}
@@ -180,6 +181,7 @@
     active={active || null}
     disabled={disabled || null}
     readonly={readonly || null}
+    on:keydown={focusByArrows}
     on:keyup
     on:keydown
     on:keydown={keyDown}
@@ -195,6 +197,7 @@
       on:select={select}
       filter={value}
       root={inputNode?.parentElement}
+      input={inputNode}
       active={dropdownOpened}
     />
   {/if}
@@ -214,5 +217,6 @@
   > input = common;
   > input::placeholder = font-size, text-align;
   > button[data-hui=Button] = layout-position, font-size;
+  > button[data-hui=Badge] = flex-grow, cursor;
 -->
 
