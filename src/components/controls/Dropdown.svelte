@@ -47,6 +47,8 @@
   let dir = null
   let height = null
 
+  let datalist;
+
   $: rootEl = root || document.body
   $: calcOpenDir(active)
 
@@ -96,6 +98,13 @@
     }
   }
 
+  const showFocusedOption = async () => {
+    if (focus == null || datalist == null) return
+    await tick()
+    const option = datalist.querySelector("[data-hui-focused]")
+    option?.scrollIntoView({ block: "center" })
+  }
+
   function keyDown(e) {
     if (composeKeys(e) !== "") return
 
@@ -107,6 +116,7 @@
       if (newFocus < 0 || newFocus > filteredOptionsCount - 1) return
 
       focus = newFocus
+      showFocusedOption()
     } else if (isNumber(focus) && e.code === "Enter") {
       e.stopPropagation()
       select(focus)
@@ -153,6 +163,7 @@
     {scrollY}
     {grid}
     {flex}
+    bind:node={datalist}
     size={sizeParams}
     theme={themeString}
   >
