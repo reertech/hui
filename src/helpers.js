@@ -59,6 +59,21 @@ export const arrayToMap = (array, value) => {
   return result
 }
 
+export const scrollIntoViewIfNeeded = (el, toCenter) => {
+  if (!isObject(el)) return
+
+  if (isFunction(el.scrollIntoViewIfNeeded)) {
+    el.scrollIntoViewIfNeeded(isBoolean(toCenter) ? params : false)
+  } else if (isFunction(el.scrollIntoView)) {
+    const params = isObject(toCenter) ? toCenter
+      : isBoolean(toCenter) && toCenter ? { block: "center", inline: "center" }
+      : isBoolean(toCenter) && !toCenter ? { block: "nearest", inline: "nearest"}
+      : { block: "nearest", inline: "nearest" }
+
+    el.scrollIntoView(params)
+  }
+}
+
 export const calcParentOffset = (el, parent) => {
   if (!parent || !el) return null
 

@@ -8,7 +8,7 @@
   import IconPlus from "../../icons/Plus.svelte"
 
   import { checkEmpty, checkNotEmpty, isString } from "../../helpers.js"
-  import { createEventDispatcher } from "svelte"
+  import { createEventDispatcher, tick } from "svelte"
   const dispatch = createEventDispatcher()
 
   export let active = null
@@ -60,10 +60,12 @@
   $: isFull = valuesMap.size >= maxValuesInt
   $: isEmptyValue = checkEmpty(value) || value === nullValue
 
-  const open = () => {
+  const open = async () => {
     clearTimeout(closeTimer)
 
     dropdownOpened = true
+    await tick()
+    inputNode?.focus()
   }
 
   const close = () => closeTimer =
@@ -82,7 +84,7 @@
     switchAdd(addable || isEmpty)
   }
 
-  const commit = () => {
+  const commit = async () => {
     const start = valuesMap.size <= maxValuesInt ? 0
       : valuesMap.size - maxValuesInt
 
@@ -90,12 +92,9 @@
 
     values = isString(separator) ? vals.join(separator) : vals
 
-    dispatch("change", values)
-  }
+    await tick()
 
-  const focus = () => {
-    open()
-    inputNode?.focus()
+    dispatch("change", values)
   }
 
   const remove = (idx) => {
@@ -107,7 +106,7 @@
 
   const switchAdd = (val = true) => {
     addMode = val
-    focus()
+    open()
   }
 
   const removeNew = () => {
@@ -121,8 +120,8 @@
     switchAdd()
   }
 
-  const keyDown = (e) => {
-    if (e.code === "Enter" && e.ctrlKey) {
+  function keyDown(e) {
+    if (e.ctrlKey && e.code === "Enter") {
       switchAdd()
     } else if (e.key === "Backspace") {
       removeNew()
@@ -168,10 +167,10 @@
     on:input
     on:input={change}
     on:change={change}
-    {value}
     on:click={open}
     on:focus={open}
     on:blur={close}
+    {value}
     {placeholder}
     {maxLength}
     type="text"
@@ -182,9 +181,9 @@
     disabled={disabled || null}
     readonly={readonly || null}
     on:keydown={focusByArrows}
-    on:keyup
-    on:keydown
     on:keydown={keyDown}
+    on:keydown
+    on:keyup
     on:blur
     on:focus
     data-hui-input

@@ -68,7 +68,7 @@
     isFocused = true
     dropdownOpened = true
     await tick()
-    inputNode.focus()
+    inputNode?.focus()
   }
 
   const close = () => {

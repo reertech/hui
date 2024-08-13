@@ -5,6 +5,7 @@
 
   import {
     calcCutParentOffset,
+    scrollIntoViewIfNeeded,
     buildFuzzyRegex,
     formatNumber,
     composeKeys,
@@ -102,7 +103,7 @@
     if (focus == null || datalist == null) return
     await tick()
     const option = datalist.querySelector("[data-hui-focused]")
-    option?.scrollIntoView({ block: "center" })
+    scrollIntoViewIfNeeded(option)
   }
 
   function keyDown(e) {
