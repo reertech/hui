@@ -34,7 +34,7 @@
 
 <!-- theme.ini
   states: active, disabled, readonly;
-  themes: flat, small, round, icon;
+  themes: flat, medium, small, round;
   &
   | &:hover
   | &:active

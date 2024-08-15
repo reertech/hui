@@ -73,6 +73,27 @@
 }
 [data-hui=TextInput][data-hui-theme~=flat] > input::placeholder {
 }
+[data-hui=TextInput][data-hui-theme~=medium] {
+  /* LAYOUT-SIZING */
+  --hui-edmssq-min-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height) + (var(--hui-default-spacer-4) + var(--hui-default-spacer-4) + var(--hui-default-border-width)) * 2);
+  /* LAYOUT-PADDING */
+  --hui-edmssq-padding-top: var(--hui-default-spacer-4);
+  --hui-edmssq-padding-right: var(--hui-default-spacer-5);
+  --hui-edmssq-padding-bottom: var(--hui-default-spacer-4);
+  --hui-edmssq-padding-left: var(--hui-default-spacer-5);
+}
+[data-hui=TextInput][data-hui-theme~=medium] > input {
+  /* LAYOUT-PADDING */
+  --hui-msgihx-padding-top: var(--hui-default-spacer-4);
+  --hui-msgihx-padding-bottom: var(--hui-default-spacer-3);
+  --hui-msgihx-padding-left: var(--hui-default-spacer-4);
+  --hui-msgihx-padding-right: var(--hui-default-spacer-3);
+  /* TEXT */
+  --hui-msgihx-font-size: var(--hui-default-size-0);
+  --hui-msgihx-line-height: var(--hui-default-line-height);
+}
+[data-hui=TextInput][data-hui-theme~=medium] > input::placeholder {
+}
 [data-hui=TextInput] {
   /* LAYOUT-POSITION */
 /*  --hui-edmssq-position-default: ; */
