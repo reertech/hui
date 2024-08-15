@@ -269,9 +269,9 @@
   --hui-pomgca-min-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height) + (var(--hui-default-spacer-4) + var(--hui-default-border-width)) * 2);
   --hui-pomgca-min-width: calc(var(--hui-default-size-0) * var(--hui-default-line-height) + (var(--hui-default-spacer-4) + var(--hui-default-border-width)) * 2);
   /* LAYOUT-PADDING */
-  --hui-pomgca-padding-top: calc(var(--hui-default-spacer-4) + var(--hui-default-spacer-3));
+  --hui-pomgca-padding-top: calc(var(--hui-default-spacer-4));
   --hui-pomgca-padding-right: var(--hui-default-spacer-5);
-  --hui-pomgca-padding-bottom: calc(var(--hui-default-spacer-4) + var(--hui-default-spacer-3));
+  --hui-pomgca-padding-bottom: calc(var(--hui-default-spacer-4));
   --hui-pomgca-padding-left: var(--hui-default-spacer-5);
   /* TEXT */
   --hui-pomgca-font-size: var(--hui-default-size-0);
@@ -285,7 +285,7 @@
 }
 [data-hui=Button][data-hui-theme~=small] > svg {
   /* LAYOUT-SIZING */
-  --hui-fqjtnv-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height));
+  --hui-fqjtnv-height: var(--hui-default-size-0);
 }
 [data-hui=Button][data-hui-theme~=small][data-hui-active] {
 }
