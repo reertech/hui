@@ -5,7 +5,7 @@
   --hui-dityoy-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3) + var(--hui-default-border-width)) * 2);
   --hui-dityoy-width: 100%;
   --hui-dityoy-max-width: 50vw;
-  --hui-dityoy-min-width: 200px;
+  --hui-dityoy-min-width: 150px;
   /* LAYOUT-PADDING */
   --hui-dityoy-padding-top: var(--hui-default-spacer-5);
   --hui-dityoy-padding-right: var(--hui-default-spacer-7);
@@ -45,6 +45,8 @@
   --hui-dityoy-display: flex;
 }
 [data-hui=Select] > input {
+  /* LAYOUT-SIZING */
+  --hui-lbxlgv-max-width: 100%;
   /* LAYOUT-PADDING */
   --hui-lbxlgv-padding-top: var(--hui-default-spacer-3);
   --hui-lbxlgv-padding-right: 0;

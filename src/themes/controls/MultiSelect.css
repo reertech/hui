@@ -45,6 +45,8 @@
   --hui-dsdbsk-display: flex;
 }
 [data-hui=MultiSelect] > input {
+  /* LAYOUT-SIZING */
+  --hui-jxwoey-max-width: 100%;
   /* LAYOUT-PADDING */
   --hui-jxwoey-padding-top: var(--hui-default-spacer-3);
   --hui-jxwoey-padding-right: 0;

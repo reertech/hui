@@ -16,7 +16,7 @@
 }
 [data-hui=DataTable] > tbody > tr > td {
   /* LAYOUT-SIZING */
-  --hui-avzraa-min-width: 200px;
+  --hui-avzraa-min-width: 250px;
   /* LAYOUT-PADDING */
   --hui-avzraa-padding-top: var(--hui-default-spacer-5);
   --hui-avzraa-padding-right: var(--hui-default-spacer-5);
@@ -39,7 +39,7 @@
 }
 [data-hui=DataTable] > thead > tr > th {
   /* LAYOUT-SIZING */
-  --hui-yfagqg-min-width: 200px;
+  --hui-yfagqg-min-width: 250px;
   /* LAYOUT-PADDING */
   --hui-yfagqg-padding-top: var(--hui-default-spacer-5);
   --hui-yfagqg-padding-right: var(--hui-default-spacer-7);

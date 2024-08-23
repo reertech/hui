@@ -43,6 +43,8 @@
   --hui-affhez-display: flex;
 }
 [data-hui=NumberInput] > input {
+  /* LAYOUT-SIZING */
+  --hui-hqtsye-max-width: 100%;
   /* LAYOUT-PADDING */
   --hui-hqtsye-padding-top: var(--hui-default-spacer-3);
   --hui-hqtsye-padding-right: 0;

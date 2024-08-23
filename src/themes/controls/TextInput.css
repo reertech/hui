@@ -85,9 +85,9 @@
 [data-hui=TextInput][data-hui-theme~=medium] > input {
   /* LAYOUT-PADDING */
   --hui-msgihx-padding-top: var(--hui-default-spacer-4);
+  --hui-msgihx-padding-right: var(--hui-default-spacer-3);
   --hui-msgihx-padding-bottom: var(--hui-default-spacer-3);
   --hui-msgihx-padding-left: var(--hui-default-spacer-4);
-  --hui-msgihx-padding-right: var(--hui-default-spacer-3);
   /* TEXT */
   --hui-msgihx-font-size: var(--hui-default-size-0);
   --hui-msgihx-line-height: var(--hui-default-line-height);

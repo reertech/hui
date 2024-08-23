@@ -47,6 +47,8 @@
 }
 [data-hui=Textarea] > textarea,
 [data-hui=Textarea]::after {
+  /* LAYOUT-SIZING */
+  --hui-zagnla-max-width: 100%;
   /* LAYOUT-PADDING */
   --hui-zagnla-padding-top: 0;
   --hui-zagnla-padding-right: var(--hui-default-spacer-7);
