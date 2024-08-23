@@ -62,6 +62,8 @@
 [data-hui=Button] > svg {
   /* LAYOUT-SIZING */
   --hui-fqjtnv-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height));
+  --hui-fqjtnv-max-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height));
+  --hui-fqjtnv-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height));
   /* TEXT */
   --hui-fqjtnv-vertical-align: middle;
   /* APPERANCE */
@@ -231,6 +233,8 @@
 [data-hui=Button][data-hui-theme~=medium] > svg {
   /* LAYOUT-SIZING */
   --hui-fqjtnv-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height));
+  --hui-fqjtnv-max-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height));
+  --hui-fqjtnv-min-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height));
 }
 [data-hui=Button][data-hui-theme~=medium][data-hui-active] {
 }
@@ -286,6 +290,8 @@
 [data-hui=Button][data-hui-theme~=small] > svg {
   /* LAYOUT-SIZING */
   --hui-fqjtnv-height: var(--hui-default-size-0);
+  --hui-fqjtnv-max-height: var(--hui-default-size-0);
+  --hui-fqjtnv-min-height: var(--hui-default-size-0);
 }
 [data-hui=Button][data-hui-theme~=small][data-hui-active] {
 }
