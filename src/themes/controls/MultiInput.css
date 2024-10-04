@@ -2,7 +2,7 @@
   /* LAYOUT-POSITION */
   --hui-lilprs-position: relative;
   /* LAYOUT-SIZING */
-  --hui-lilprs-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3) + var(--hui-default-border-width)) * 2);
+  --hui-lilprs-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-lilprs-width: 100%;
   --hui-lilprs-max-width: 50vw;
   --hui-lilprs-min-width: 200px;
