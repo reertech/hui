@@ -119,11 +119,11 @@
 
     data-hui-position={l.position || null}
     data-hui-z={formatNumber(l.z)}
-    style:inset={formatPx(l.inset)}
     style:top={formatPx(l.top)}
     style:right={formatPx(l.right)}
     style:bottom={formatPx(l.bottom)}
     style:left={formatPx(l.left)}
+    style:inset={formatPx(l.inset)}
 
     style:width={formatPx(s.width)}
     style:min-width={formatPx(s.minWidth)}
@@ -132,17 +132,17 @@
     style:min-height={formatPx(s.minHeight)}
     style:max-height={formatPx(s.maxHeight)}
 
-    style:margin={formatPx(m.margin)}
     style:margin-top={formatPx(m.top)}
     style:margin-right={formatPx(m.right)}
     style:margin-bottom={formatPx(m.bottom)}
     style:margin-left={formatPx(m.left)}
+    style:margin={formatPx(m.margin)}
 
-    style:padding={formatPx(p.padding)}
     style:padding-top={formatPx(p.top)}
     style:padding-right={formatPx(p.right)}
     style:padding-bottom={formatPx(p.bottom)}
     style:padding-left={formatPx(p.left)}
+    style:padding={formatPx(p.padding)}
 
     on:click
     on:mouseup
@@ -208,11 +208,11 @@
     style:column-gap={f.columnGap || g.columnGap || null}
 
     data-hui-position={l.position || null}
-    style:inset={formatPx(l.inset)}
     style:top={formatPx(l.top)}
     style:right={formatPx(l.right)}
     style:bottom={formatPx(l.bottom)}
     style:left={formatPx(l.left)}
+    style:inset={formatPx(l.inset)}
 
     style:width={formatPx(s.width)}
     style:min-width={formatPx(s.minWidth)}
@@ -221,17 +221,17 @@
     style:min-height={formatPx(s.minHeight)}
     style:max-height={formatPx(s.maxHeight)}
 
-    style:margin={formatPx(m.margin)}
     style:margin-top={formatPx(m.top)}
     style:margin-right={formatPx(m.right)}
     style:margin-bottom={formatPx(m.bottom)}
     style:margin-left={formatPx(m.left)}
+    style:margin={formatPx(m.margin)}
 
-    style:padding={formatPx(p.padding)}
     style:padding-top={formatPx(p.top)}
     style:padding-right={formatPx(p.right)}
     style:padding-bottom={formatPx(p.bottom)}
     style:padding-left={formatPx(p.left)}
+    style:padding={formatPx(p.padding)}
 
     on:click
     on:mouseup

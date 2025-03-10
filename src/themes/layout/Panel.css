@@ -29,6 +29,11 @@
 }
 [data-hui=Panel][data-hui-theme~=high] {
 }
+[data-hui=Panel][data-hui-theme~=bg] {
+  /* APPERANCE */
+  --hui-ltqpkc-background-color: var(--hui-default-background-color);
+  --hui-ltqpkc-background-image: var(--hui-default-gradient-1);
+}
 [data-hui=Panel] {
   /* LAYOUT-POSITION */
 /*  --hui-ltqpkc-position-default: ; */
