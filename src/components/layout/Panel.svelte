@@ -52,6 +52,6 @@
 </Container>
 
 <!-- theme.ini
-  themes: low, medium, high, bg;
-  & = common, display;
+  themes: low, medium, high, bg, fade;
+  & = common, display, opacity;
 -->

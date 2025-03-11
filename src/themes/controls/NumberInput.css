@@ -59,6 +59,7 @@
   --hui-hqtsye-text-align: center;
   /* APPERANCE */
   --hui-hqtsye-color: var(--hui-default-color-text);
+  --hui-hqtsye-cursor: pointer;
 }
 [data-hui=NumberInput] > input::placeholder {
   --hui-ltpgzd-font-size: var(--hui-default-size-0);

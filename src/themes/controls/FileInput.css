@@ -1,11 +1,9 @@
 [data-hui=FileInput] {
-  /* LAYOUT-POSITION */
-  --hui-fmglhp-position: relative;
   /* LAYOUT-SIZING */
   --hui-fmglhp-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-fmglhp-width: 100%;
   --hui-fmglhp-max-width: 50vw;
-  --hui-fmglhp-min-width: 200px;
+  --hui-fmglhp-min-width: 100px;
   /* LAYOUT-PADDING */
   --hui-fmglhp-padding-top: var(--hui-default-spacer-5);
   --hui-fmglhp-padding-right: var(--hui-default-spacer-7);
@@ -16,7 +14,7 @@
   --hui-fmglhp-overflow-y: visible;
   /* LAYOUT-FLEX */
   --hui-fmglhp-flex-direction: row;
-  --hui-fmglhp-flex-wrap: wrap;
+  --hui-fmglhp-flex-wrap: nowrap;
   --hui-fmglhp-gap: var(--hui-default-spacer-5);
   --hui-fmglhp-align-content: center;
   --hui-fmglhp-justify-content: stretch;
@@ -41,6 +39,8 @@
   --hui-fmglhp-border-top-left-radius: var(--hui-default-border-radius-1);
   --hui-fmglhp-border-top-right-radius: var(--hui-default-border-radius-1);
   --hui-fmglhp-box-shadow: var(--hui-tria-box-shadow);
+  /* DISPLAY */
+  --hui-fmglhp-display: flex;
 }
 [data-hui=FileInput] > input {
   /* LAYOUT-SIZING */
@@ -59,10 +59,10 @@
   --hui-llmfik-text-align: center;
   /* APPERANCE */
   --hui-llmfik-color: var(--hui-default-color-text);
+  --hui-llmfik-cursor: pointer;
 }
 [data-hui=FileInput] > input::placeholder {
   --hui-qctgua-font-size: var(--hui-default-size-0);
-  --hui-qctgua-text-align: center;
 }
 [data-hui=FileInput] > input::file-selector-button {
   /* DISPLAY */
@@ -75,6 +75,14 @@
 [data-hui=FileInput][data-hui-theme~=flat] > input::placeholder {
 }
 [data-hui=FileInput][data-hui-theme~=flat] > input::file-selector-button {
+}
+[data-hui=FileInput][data-hui-theme~=hover] {
+}
+[data-hui=FileInput][data-hui-theme~=hover] > input {
+}
+[data-hui=FileInput][data-hui-theme~=hover] > input::placeholder {
+}
+[data-hui=FileInput][data-hui-theme~=hover] > input::file-selector-button {
 }
 [data-hui=FileInput] {
   /* LAYOUT-POSITION */
@@ -186,6 +194,9 @@
 /*  --hui-fmglhp-scrollbar-color-default: ; */
 /*  --hui-fmglhp-scrollbar-gutter-default: ; */
 /*  --hui-fmglhp-scrollbar-width-default: ; */
+  /* DISPLAY */
+/*  --hui-fmglhp-display-default: ; */
+/*  --hui-fmglhp-flex-default: ; */
 }
 [data-hui=FileInput] > input {
   /* LAYOUT-POSITION */

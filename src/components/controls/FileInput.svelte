@@ -1,7 +1,9 @@
 <script>
   import "../../themes/controls/FileInput.css"
   import "../../styles/controls/FileInput.css"
+  import Strong from "../typography/Strong.svelte"
   import Container from "../Container.svelte"
+  import IconPlus from "../../icons/Plus.svelte"
 
   import { formatNumber, checkEmpty, composeKeys } from "../../helpers.js"
   import { createEventDispatcher, tick } from "svelte"
@@ -36,6 +38,12 @@
   export let multiple = false
   export let accept = null
 
+  let isHover = false
+
+  $: themes = theme?.length
+    ? isHover ? `hover ${theme}` : theme
+    : isHover ? "hover" : null
+
   const change = (e) => {
     files = e.target.files
 
@@ -43,18 +51,49 @@
 
     dispatch("change", files)
   }
+
+  const checkEvent = (e) =>
+    e.dataTransfer.types.includes("Files")
+
+  const dragenter = (e) => {
+    isHover = checkEvent(e)
+  }
+
+  const dragleave = () => {
+    isHover = false
+  }
+
+  const drop = async (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    isHover = false
+
+    if (!checkEvent(e)) return
+
+    e.target.files = e.dataTransfer.files
+
+    await tick()
+
+    change(e)
+  }
+
+  const dragover = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    e.dataTransfer.dropEffect = "copy"
+  }
 </script>
 
 <Container
   hui="FileInput"
   tag="fieldset"
+  theme={themes}
   {active}
   {readonly}
   {disabled}
   {hidden}
   {valid}
   {invalid}
-  {theme}
   {classes}
   {bg}
   {margin}
@@ -88,12 +127,22 @@
     on:focus
     data-hui-input
     bind:this={inputNode}
+    on:drop={drop}
+    on:dragover={dragover}
+    on:dragenter={dragenter}
+    on:dragleave={dragleave}
   />
+  {#if isHover}
+    <Strong theme="small">
+      drop
+      <!--<IconPlus />-->
+    </Strong>
+  {/if}
 </Container>
 
 <!-- theme.ini
-  themes: flat;
-  & = common;
+  themes: flat, hover;
+  & = common, display, flex;
   > input = common;
   > input::placeholder = font-size, text-align;
   > input::file-selector-button = display;

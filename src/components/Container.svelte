@@ -39,6 +39,20 @@
     }
   }
 
+  const parseDirs = (string) => {
+    if (!isString(string)) return null
+
+    const s = string.split(/\s+/).filter(s => s)
+
+    switch (s.length) {
+      case 1: return { top: s[0], right: s[0], bottom: s[0], left: s[0] }
+      case 2: return { top: s[0], right: s[1], bottom: s[0], left: s[1] }
+      case 3: return { top: s[0], right: s[1], bottom: s[2], left: s[1] }
+      case 4: return { top: s[0], right: s[1], bottom: s[2], left: s[3] }
+      default: return null
+    }
+  }
+
   $: isSize = isValid(size)
   $: isBg = isValid(bg, "string")
   $: isMargin = isValid(margin, "string")
@@ -52,8 +66,8 @@
   $: f = !isFlex ? {} : { display: "flex", ...(typeof flex !== "object" ? {} : flex) }
 
   $: l = !isPosition ? {} : isString(position) ? { position } : position
-  $: m = !isMargin ? {} : isString(margin) ? { margin } : margin
-  $: p = !isPadding ? {} : isString(padding) ? { padding } : padding
+  $: m = !isMargin ? {} : isString(margin) ? parseDirs(margin) : margin
+  $: p = !isPadding ? {} : isString(padding) ? parseDirs(padding) : padding
   $: b = !isBg ? {} : isString(bg) ? { color: bg } : bg
   $: s = !isSize ? {} : size
 
@@ -136,13 +150,11 @@
     style:margin-right={formatPx(m.right)}
     style:margin-bottom={formatPx(m.bottom)}
     style:margin-left={formatPx(m.left)}
-    style:margin={formatPx(m.margin)}
 
     style:padding-top={formatPx(p.top)}
     style:padding-right={formatPx(p.right)}
     style:padding-bottom={formatPx(p.bottom)}
     style:padding-left={formatPx(p.left)}
-    style:padding={formatPx(p.padding)}
 
     on:click
     on:mouseup
@@ -225,13 +237,11 @@
     style:margin-right={formatPx(m.right)}
     style:margin-bottom={formatPx(m.bottom)}
     style:margin-left={formatPx(m.left)}
-    style:margin={formatPx(m.margin)}
 
     style:padding-top={formatPx(p.top)}
     style:padding-right={formatPx(p.right)}
     style:padding-bottom={formatPx(p.bottom)}
     style:padding-left={formatPx(p.left)}
-    style:padding={formatPx(p.padding)}
 
     on:click
     on:mouseup

@@ -61,6 +61,12 @@
 }
 [data-hui=Badge][data-hui-theme~=button] > svg {
 }
+[data-hui=Badge][data-hui-theme~=inline] {
+  /* DISPLAY */
+  --hui-jjitob-display: inline-block;
+}
+[data-hui=Badge][data-hui-theme~=inline] > svg {
+}
 [data-hui=Badge] {
   /* LAYOUT-POSITION */
 /*  --hui-jjitob-position-default: ; */

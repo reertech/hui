@@ -34,6 +34,9 @@
   --hui-ltqpkc-background-color: var(--hui-default-background-color);
   --hui-ltqpkc-background-image: var(--hui-default-gradient-1);
 }
+[data-hui=Panel][data-hui-theme~=fade] {
+  --hui-ltqpkc-opacity: 0.7;
+}
 [data-hui=Panel] {
   /* LAYOUT-POSITION */
 /*  --hui-ltqpkc-position-default: ; */
@@ -146,4 +149,5 @@
 /*  --hui-ltqpkc-scrollbar-width-default: ; */
   /* DISPLAY */
 /*  --hui-ltqpkc-display-default: ; */
+/*  --hui-ltqpkc-opacity-default: ; */
 }

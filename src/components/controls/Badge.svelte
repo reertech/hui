@@ -55,7 +55,7 @@
 </Container>
 
 <!-- theme.ini
-  themes: small, button;
+  themes: small, button, inline;
   & = common, display;
   > svg = common, display, stroke, stroke-width;
 -->

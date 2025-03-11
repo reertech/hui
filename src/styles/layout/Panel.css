@@ -110,4 +110,5 @@
   scrollbar-width: var(--hui-ltqpkc-scrollbar-width, thin);
   /* DISPLAY */
   display: var(--hui-ltqpkc-display, block);
+  opacity: var(--hui-ltqpkc-opacity, initial);
 }

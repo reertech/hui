@@ -108,6 +108,9 @@
   scrollbar-color: var(--hui-fmglhp-scrollbar-color, #bbb #eee);
   scrollbar-gutter: var(--hui-fmglhp-scrollbar-gutter, auto);
   scrollbar-width: var(--hui-fmglhp-scrollbar-width, thin);
+  /* DISPLAY */
+  display: var(--hui-fmglhp-display, block);
+  flex: var(--hui-fmglhp-flex, initial);
 }
 [data-hui=FileInput] > input {
   /* LAYOUT-POSITION */
