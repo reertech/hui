@@ -23,6 +23,10 @@
   --hui-ltqpkc-border-top-right-radius: var(--hui-default-border-radius-2);
   --hui-ltqpkc-box-shadow: var(--hui-dua-box-shadow);
 }
+[data-hui=Panel][data-hui-theme~=flat] {
+  /* APPERANCE */
+  --hui-ltqpkc-box-shadow: var(--hui-default-box-shadow);
+}
 [data-hui=Panel][data-hui-theme~=low] {
 }
 [data-hui=Panel][data-hui-theme~=medium] {

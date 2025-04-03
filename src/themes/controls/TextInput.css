@@ -94,6 +94,16 @@
 }
 [data-hui=TextInput][data-hui-theme~=medium] > input::placeholder {
 }
+[data-hui=TextInput][data-hui-theme~=grow] {
+  /* LAYOUT-SIZING */
+  --hui-edmssq-max-width: none;
+  /* LAYOUT-FLEX */
+  --hui-edmssq-flex-grow: 1;
+}
+[data-hui=TextInput][data-hui-theme~=grow] > input {
+}
+[data-hui=TextInput][data-hui-theme~=grow] > input::placeholder {
+}
 [data-hui=TextInput] {
   /* LAYOUT-POSITION */
 /*  --hui-edmssq-position-default: ; */

@@ -67,6 +67,24 @@
 }
 [data-hui=Badge][data-hui-theme~=inline] > svg {
 }
+[data-hui=Badge][data-hui-theme~=fade] {
+  /* APPERANCE */
+  --hui-jjitob-color: var(--hui-unua-color-text);
+}
+[data-hui=Badge][data-hui-theme~=fade] > svg {
+}
+[data-hui=Badge][data-hui-theme~=success] {
+  background-color: #deffe4;
+  background-image: none;
+}
+[data-hui=Badge][data-hui-theme~=success] > svg {
+}
+[data-hui=Badge][data-hui-theme~=danger] {
+  background-color: #ffe3e3;
+  background-image: none;
+}
+[data-hui=Badge][data-hui-theme~=danger] > svg {
+}
 [data-hui=Badge] {
   /* LAYOUT-POSITION */
 /*  --hui-jjitob-position-default: ; */

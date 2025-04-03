@@ -3,7 +3,7 @@
   import "../../styles/layout/Title.css"
   import Container from "../Container.svelte"
 
-  export let tag = "strong"
+  export let tag = "div"
   export let active = null
   export let readonly = null
   export let disabled = null

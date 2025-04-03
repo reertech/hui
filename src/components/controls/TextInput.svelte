@@ -138,7 +138,7 @@
 </Container>
 
 <!-- theme.ini
-  themes: flat, medium;
+  themes: flat, medium, grow;
   & = common, display, flex, gap;
   > input = common;
   > input::placeholder = font-size, text-align;

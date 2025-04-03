@@ -24,6 +24,7 @@
   export let scrollX = null
   export let value = null
   export let name = null
+  export let self = null
 
   export let node = null
 
@@ -53,6 +54,7 @@
     }
   }
 
+  $: isSelf = isValid(self)
   $: isSize = isValid(size)
   $: isBg = isValid(bg, "string")
   $: isMargin = isValid(margin, "string")
@@ -65,15 +67,18 @@
   $: g = !isGrid ? {} : { display: "grid", ...(typeof grid !== "object" ? {} : grid) }
   $: f = !isFlex ? {} : { display: "flex", ...(typeof flex !== "object" ? {} : flex) }
 
-  $: l = !isPosition ? {} : isString(position) ? { position } : position
+  $: l = !isPosition ? {} : (isString(position) ? { position }
+    : position.inset ? { ...position, ...parseDirs(position.inset) } : position)
+
   $: m = !isMargin ? {} : isString(margin) ? parseDirs(margin) : margin
   $: p = !isPadding ? {} : isString(padding) ? parseDirs(padding) : padding
-  $: b = !isBg ? {} : isString(bg) ? { color: bg } : bg
+  $: b = !isBg ? {} : isString(bg) ? { color: bg, image: "none" } : bg
   $: s = !isSize ? {} : size
+  $: e = !isSelf ? {} : self
 
   $: target = tag === null ? "child" : "self"
   $: isTargeted = isGrid || isFlex || isScroll || isPosition || isSize ||
-    isMargin || isPadding || isBg
+    isMargin || isPadding || isBg || isSelf
 </script>
 
 {#if tag === "data"}
@@ -127,9 +132,11 @@
     data-hui-flex-align-items={f.alignItems || null}
     data-hui-flex-align-content={f.alignContent || null}
 
-    style:gap={f.gap || g.gap || null}
-    style:row-gap={f.rowGap || g.rowGap || null}
-    style:column-gap={f.columnGap || g.columnGap || null}
+    data-hui-self-justify={e.justify || null}
+    data-hui-self-align={e.align || null}
+
+    style:row-gap={f.rowGap || g.rowGap || f.gap || g.gap || null}
+    style:column-gap={f.columnGap || g.columnGap || f.gap || g.gap || null}
 
     data-hui-position={l.position || null}
     data-hui-z={formatNumber(l.z)}
@@ -137,7 +144,6 @@
     style:right={formatPx(l.right)}
     style:bottom={formatPx(l.bottom)}
     style:left={formatPx(l.left)}
-    style:inset={formatPx(l.inset)}
 
     style:width={formatPx(s.width)}
     style:min-width={formatPx(s.minWidth)}
@@ -215,16 +221,17 @@
     data-hui-flex-align-items={f.alignItems || null}
     data-hui-flex-align-content={f.alignContent || null}
 
-    style:gap={f.gap || g.gap || null}
-    style:row-gap={f.rowGap || g.rowGap || null}
-    style:column-gap={f.columnGap || g.columnGap || null}
+    data-hui-self-justify={e.justify || null}
+    data-hui-self-align={e.align || null}
+
+    style:row-gap={f.rowGap || g.rowGap || f.gap || g.gap || null}
+    style:column-gap={f.columnGap || g.columnGap || f.gap || g.gap || null}
 
     data-hui-position={l.position || null}
     style:top={formatPx(l.top)}
     style:right={formatPx(l.right)}
     style:bottom={formatPx(l.bottom)}
     style:left={formatPx(l.left)}
-    style:inset={formatPx(l.inset)}
 
     style:width={formatPx(s.width)}
     style:min-width={formatPx(s.minWidth)}

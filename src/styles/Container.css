@@ -311,6 +311,65 @@ data[data-hui] {
   grid-template-areas: inherit;
 }
 
+/* SELF */
+[data-hui-self-align=auto][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-align=auto][data-hui-target=self]:not(#huiHack) {
+  align-self: auto;
+}
+[data-hui-self-align=normal][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-align=normal][data-hui-target=self]:not(#huiHack) {
+  align-self: normal;
+}
+[data-hui-self-align=center][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-align=center][data-hui-target=self]:not(#huiHack) {
+  align-self: center;
+}
+[data-hui-self-align=stretch][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-align=stretch][data-hui-target=self]:not(#huiHack) {
+  align-self: stretch;
+}
+[data-hui-self-align=left][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-align=left][data-hui-target=self]:not(#huiHack) {
+  align-self: left;
+}
+[data-hui-self-align=right][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-align=right][data-hui-target=self]:not(#huiHack) {
+  align-self: right;
+}
+[data-hui-self-align=baseline][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-align=baseline][data-hui-target=self]:not(#huiHack) {
+  align-self: baseline;
+}
+
+[data-hui-self-justify=auto][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-justify=auto][data-hui-target=self]:not(#huiHack) {
+  justify-self: auto;
+}
+[data-hui-self-justify=normal][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-justify=normal][data-hui-target=self]:not(#huiHack) {
+  justify-self: normal;
+}
+[data-hui-self-justify=center][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-justify=center][data-hui-target=self]:not(#huiHack) {
+  justify-self: center;
+}
+[data-hui-self-justify=stretch][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-justify=stretch][data-hui-target=self]:not(#huiHack) {
+  justify-self: stretch;
+}
+[data-hui-self-justify=left][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-justify=left][data-hui-target=self]:not(#huiHack) {
+  justify-self: left;
+}
+[data-hui-self-justify=right][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-justify=right][data-hui-target=self]:not(#huiHack) {
+  justify-self: right;
+}
+[data-hui-self-justify=baseline][data-hui-target=child] > *:not(#huiHack),
+[data-hui-self-justify=baseline][data-hui-target=self]:not(#huiHack) {
+  justify-self: baseline;
+}
+
 /* SCROLL */
 [data-hui-scroll-x=true][data-hui-target=child] > *:not(#huiHack),
 [data-hui-scroll-x=true][data-hui-target=self]:not(#huiHack),

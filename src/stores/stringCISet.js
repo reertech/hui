@@ -2,46 +2,47 @@ import { writable, get } from "svelte/store"
 
 const addAll = (values, update) => update(s => {
   if (!Array.isArray(values)) return s
-  values.forEach(s.add.bind(s))
+  values.forEach(value => s.set(value.toLowerCase(), value).bind(s))
   return s
 })
 
 const replace = (values, update) => update(s => {
   if (!Array.isArray(values)) return s
   s.clear()
-  values.forEach(s.add.bind(s))
+  values.forEach(value => s.set(value.toLowerCase(), value).bind(s))
   return s
 })
 
 const deleteAll = (values, update) => update(s => {
   if (!Array.isArray(values)) return s
-  values.forEach(s.delete.bind(s))
+  values.forEach(value => s.delete(value.toLowerCase()).bind(s))
   return s
 })
 
 const toggle = (value, update) => update(s => {
-  if (s.has(value)) s.delete(value)
-  else s.add(value)
+  if (s.has(value.toLowerCase())) s.delete(value.toLowerCase())
+  else s.set(value.toLowerCase(), value)
   return s
 })
 
 const filter = (callback, update) => update(s => {
-  return new Set(s.filter(callback))
+  return new Map(s.entries().filter(([key, value]) => callback(key, value)))
 })
 
 const reject = (callback, update) => update(s => {
-  return new Set(s.filter(entry => !callback(entry)))
+  return new Map(s.entries().filter(([key, value]) => !callback(key, value)))
 })
 
 export default (value) => {
-  const s = writable(new Set(value))
+  const entries = (value || []).map(v => [v.toLowerCase(), v])
+  const s = writable(new Map(entries))
   const { subscribe, update } = s
 
   return {
-    add: (val) => update(s => s.add(val)),
+    add: (val) => update(s => s.set(val.toLowerCase(), val)),
     clear: () => update(s => (s.clear(), s)),
-    delete: (val) => update(s => (s.delete(val), s)),
-    has: (val) => get(s).has(val),
+    delete: (val) => update(s => (s.delete(val.toLowerCase()), s)),
+    has: (val) => get(s).has(val.toLowerCase()),
     size: () => get(s).size(),
     keys: () => get(s).keys(),
     values: () => get(s).values(),

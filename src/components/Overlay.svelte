@@ -18,6 +18,7 @@
   export let width = null
   export let z = null
   export let bg = null
+  export let padding = null
 
   let currentOverflow;
 
@@ -60,6 +61,7 @@
   {position}
   {size}
   {bg}
+  {padding}
 >
   <slot />
 </Container>

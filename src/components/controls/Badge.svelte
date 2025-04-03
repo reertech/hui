@@ -22,6 +22,7 @@
   export let grid = null
   export let flex = null
   export let name = null
+  export let self = null
 
   let classes = null
   export { classes as class }
@@ -49,13 +50,14 @@
   {grid}
   {flex}
   {name}
+  {self}
   on:click
 >
   <slot />
 </Container>
 
 <!-- theme.ini
-  themes: small, button, inline;
+  themes: small, button, inline, fade, success, danger;
   & = common, display;
   > svg = common, display, stroke, stroke-width;
 -->
