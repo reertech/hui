@@ -25,6 +25,7 @@
   export let value = null
   export let name = null
   export let self = null
+  export let area = null
 
   export let node = null
 
@@ -134,7 +135,10 @@
 
     data-hui-self-justify={e.justify || null}
     data-hui-self-align={e.align || null}
+    style:flex-grow={e.grow || null}
+    style:flex-shrink={e.shrink || null}
 
+    style:grid-area={area || null}
     style:row-gap={f.rowGap || g.rowGap || f.gap || g.gap || null}
     style:column-gap={f.columnGap || g.columnGap || f.gap || g.gap || null}
 
@@ -223,7 +227,11 @@
 
     data-hui-self-justify={e.justify || null}
     data-hui-self-align={e.align || null}
+    style:flex-basis={e.basis || null}
+    style:flex-grow={e.grow || null}
+    style:flex-shrink={e.shrink || null}
 
+    style:grid-area={area || null}
     style:row-gap={f.rowGap || g.rowGap || f.gap || g.gap || null}
     style:column-gap={f.columnGap || g.columnGap || f.gap || g.gap || null}
 

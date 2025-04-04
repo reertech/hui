@@ -23,6 +23,7 @@
   export let flex = null
   export let name = null
   export let self = null
+  export let area = null
 
   let classes = null
   export { classes as class }
@@ -51,6 +52,7 @@
   {flex}
   {name}
   {self}
+  {area}
   on:click
 >
   <slot />

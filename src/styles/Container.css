@@ -368,6 +368,17 @@ data[data-hui] {
 [data-hui-self-justify=baseline][data-hui-target=child] > *:not(#huiHack),
 [data-hui-self-justify=baseline][data-hui-target=self]:not(#huiHack) {
   justify-self: baseline;
+
+}
+
+[data-hui-target=child][style~='flex-basis:'] > *:not(#huiHack) {
+  flex-basis: inherit;
+}
+[data-hui-target=child][style~='flex-grow:'] > *:not(#huiHack) {
+  flex-grow: inherit;
+}
+[data-hui-target=child][style~='flex-shrink:'] > *:not(#huiHack) {
+  flex-shrink: inherit;
 }
 
 /* SCROLL */
