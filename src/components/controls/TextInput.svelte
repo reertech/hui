@@ -62,6 +62,10 @@
   const select = (e) => change({
     target: { value: e.detail }
   })
+
+  const fireEnter = (e) => {
+    if (e.key === "Enter") dispatch("enter")
+  }
 </script>
 
 <Container
@@ -111,6 +115,7 @@
     disabled={disabled || null}
     readonly={readonly || null}
     on:keydown={focusByArrows}
+    on:keydown={fireEnter}
     on:keyup
     on:keydown
     on:blur

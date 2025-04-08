@@ -8,55 +8,70 @@ const prepareValue = (value) => {
   throw "Broken Map value"
 }
 
-const merge = (value, m) => {
+const merge = (value, store) => {
   const entries = prepareValue(value)
 
   if (entries) {
-    m.update(m => {
-      entries.forEach(([k, v]) => m.set(k, v))
-      return m
+    store.update(map => {
+      entries.forEach(([k, v]) => map.set(k, v))
+      return map
     })
   }
 
-  return m
+  return store
 }
 
-const replace = (value, m) => {
+const replace = (value, store) => {
   const entries = prepareValue(value)
 
-  return m.update(m => {
-    m.clear()
-    if (entries) entries.forEach(([k, v]) => m.set(k, v))
-    return m
+  store.update(map => {
+    map.clear()
+    if (entries) entries.forEach(([k, v]) => map.set(k, v))
+    return map
   })
+
+  return store
 }
 
-const drop = (keys, m) => {
-  if (!isArray(keys)) return m
+const drop = (keys, store) => {
+  if (!isArray(keys)) return store
 
-  return m.update(m => {
-    keys.forEach(m.delete.bind(m))
-    return m
+  store.update(map => {
+    keys.forEach(map.delete.bind(map))
+    return map
   })
+
+  return store
+}
+
+const update = (key, callback, store) => {
+  store.update(map => {
+    const newValue = callback(map.get(key))
+    map.set(key, newValue)
+    return map
+  })
+
+  return store
 }
 
 export default (value) => {
-  const m = writable(new Map(prepareValue(value)))
+  const store = writable(new Map(prepareValue(value)))
 
   return {
-    clear: () => m.update(m => (m.clear(), m)),
-    delete: (key) => m.update(m => (m.delete(key), m)),
-    entries: () => get(m).entries(),
-    get: (key) => get(m).get(key),
-    has: (key) => get(m).has(key),
-    keys: () => get(m).keys(),
-    set: (key, val) => m.update(m => m.set(key, val)),
-    values: () => get(m).values(),
-    clone: () => new Map(get(m)),
-    merge: (value) => merge(value, m),
-    replace: (value) => replace(value, m),
-    drop: (keys) => drop(keys, m),
-    toObject: () => Object.fromEntries(get(m)),
-    subscribe: m.subscribe
+    clear: () => store.update(map => (map.clear(), map)),
+    delete: (key) => store.update(map => (map.delete(key), map)),
+    entries: () => get(store).entries(),
+    get: (key) => get(store).get(key),
+    has: (key) => get(store).has(key),
+    keys: () => get(store).keys(),
+    set: (key, val) => store.update(map => map.set(key, val)),
+    update: (key, cb) => update(key, cb, store),
+    values: () => get(store).values(),
+    clone: () => new Map(get(store)),
+    merge: (value) => merge(value, store),
+    replace: (value) => replace(value, store),
+    drop: (keys) => drop(keys, store),
+    toObject: () => Object.fromEntries(get(store)),
+    subscribe: store.subscribe
   }
 }

@@ -60,6 +60,8 @@ export { default as IconMinus } from "./icons/Minus.svelte"
 export { default as IconMinusCircle } from "./icons/MinusCircle.svelte"
 export { default as IconPlus } from "./icons/Plus.svelte"
 export { default as IconPlusCircle } from "./icons/PlusCircle.svelte"
+export { default as IconEditSquare } from "./icons/EditSquare.svelte"
+export { default as IconEdit } from "./icons/Edit.svelte"
 
 export { default as persist } from "./stores/persist.js"
 export { default as stringCISetStore } from "./stores/stringCISet.js"
