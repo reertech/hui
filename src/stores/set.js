@@ -39,7 +39,7 @@ export default (value) => {
 
   return {
     add: (val) => update(set => set.add(val)),
-    clear: () => update(Set => (set.clear(), set)),
+    clear: () => update(set => (set.clear(), set)),
     delete: (val) => update(set => (set.delete(val), set)),
     has: (val) => get(store).has(val),
     size: () => get(store).size(),
