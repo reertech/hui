@@ -1,52 +1,52 @@
 import { writable, get } from "svelte/store"
 
-const addAll = (values, update) => update(s => {
-  if (!Array.isArray(values)) return s
-  values.forEach(s.add.bind(s))
-  return s
+const addAll = (values, update) => update(set => {
+  if (!Array.isArray(values)) return set
+  values.forEach(set.add.bind(set))
+  return set
 })
 
-const replace = (values, update) => update(s => {
-  if (!Array.isArray(values)) return s
-  s.clear()
-  values.forEach(s.add.bind(s))
-  return s
+const replace = (values, update) => update(set => {
+  if (!Array.isArray(values)) return set
+  set.clear()
+  values.forEach(set.add.bind(set))
+  return set
 })
 
-const deleteAll = (values, update) => update(s => {
-  if (!Array.isArray(values)) return s
-  values.forEach(s.delete.bind(s))
-  return s
+const deleteAll = (values, update) => update(set => {
+  if (!Array.isArray(values)) return set
+  values.forEach(set.delete.bind(set))
+  return set
 })
 
-const toggle = (value, update) => update(s => {
-  if (s.has(value)) s.delete(value)
-  else s.add(value)
-  return s
+const toggle = (value, update) => update(set => {
+  if (set.has(value)) set.delete(value)
+  else set.add(value)
+  return set
 })
 
-const filter = (callback, update) => update(s => {
-  return new Set(s.filter(callback))
+const filter = (callback, update) => update(set => {
+  return new Set(set.values().filter(callback))
 })
 
-const reject = (callback, update) => update(s => {
-  return new Set(s.filter(entry => !callback(entry)))
+const reject = (callback, update) => update(set => {
+  return new Set(set.values().filter(entry => !callback(entry)))
 })
 
 export default (value) => {
-  const s = writable(new Set(value))
-  const { subscribe, update } = s
+  const store = writable(new Set(value))
+  const { subscribe, update } = store
 
   return {
-    add: (val) => update(s => s.add(val)),
-    clear: () => update(s => (s.clear(), s)),
-    delete: (val) => update(s => (s.delete(val), s)),
-    has: (val) => get(s).has(val),
-    size: () => get(s).size(),
-    keys: () => get(s).keys(),
-    values: () => get(s).values(),
-    entries: () => get(s).entries(),
-    toArray: () => [...get(s).values()],
+    add: (val) => update(set => set.add(val)),
+    clear: () => update(Set => (set.clear(), set)),
+    delete: (val) => update(set => (set.delete(val), set)),
+    has: (val) => get(store).has(val),
+    size: () => get(store).size(),
+    keys: () => get(store).keys(),
+    values: () => get(store).values(),
+    entries: () => get(store).entries(),
+    toArray: () => [...get(store).values()],
     addAll: (values) => addAll(values, update),
     deleteAll: (values) => deleteAll(values, update),
     replace: (values) => replace(values, update),
