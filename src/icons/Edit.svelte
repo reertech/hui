@@ -8,6 +8,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  data-hui-icon="Edit"
 >
   <polygon points="16 3 21 8 8 21 3 21 3 16 16 3" />
 </svg>

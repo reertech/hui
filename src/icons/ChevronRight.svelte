@@ -8,6 +8,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  data-hui-icon="ChevronRight"
 >
   <path d="M9 18l6-6-6-6"/>
 </svg>

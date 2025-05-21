@@ -8,6 +8,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  data-hui-icon="Square"
 >
   <rect
     x="3"

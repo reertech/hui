@@ -8,6 +8,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  data-hui-icon="Minimize"
 >
   <path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" />
 </svg>

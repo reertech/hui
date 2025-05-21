@@ -8,6 +8,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  data-hui-icon="XCircle"
 >
   <circle cx="12" cy="12" r="10" />
   <line x1="15" y1="9" x2="9" y2="15" />

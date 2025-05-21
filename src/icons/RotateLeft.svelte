@@ -8,6 +8,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  data-hui-icon="RotateLeft"
 >
   <path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38" />
 </svg>

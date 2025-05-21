@@ -195,11 +195,13 @@ export const getIn = (object, key, def) => {
   if (!isObject(object) || key == null) return def
 
   const keys = isArray(key) ? key : [key]
+  const undef = Symbol()
 
-  const value = keys.reduce((child, key) => 
-    isObject(child) ? child[key] : null, object) 
+  const value = keys.reduce((child, key) => {
+    return isObject(child) && child.hasOwnProperty(key) ? child[key] : undef 
+  }, object) 
 
-  return value ?? def
+  return value === undef ? def : value
 }
 
 export const composeKeys = (e) => {
