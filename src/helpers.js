@@ -198,7 +198,7 @@ export const getIn = (object, key, def) => {
   const undef = Symbol()
 
   const value = keys.reduce((child, key) => {
-    return isObject(child) && child.hasOwnProperty(key) ? child[key] : undef 
+    return isObject(child) && (key in child) ? child[key] : undef 
   }, object) 
 
   return value === undef ? def : value
