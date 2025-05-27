@@ -38,6 +38,7 @@
   export let prefix = null
   export let suffix = null
   export let nullValue = null
+  export let autofocus = false
 
   const change = (e) => {
     value = e.target.valueAsNumber
@@ -96,6 +97,7 @@
     on:keydown
     on:blur
     on:focus
+    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />

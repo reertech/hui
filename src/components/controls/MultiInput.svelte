@@ -42,6 +42,7 @@
   export let maxValues = 10
   export let separator = null
   export let buttonTheme = "flat small"
+  export let autofocus = false
 
   let dropdownOpened = false
   let closeTimer = null
@@ -186,6 +187,7 @@
     on:keyup
     on:blur
     on:focus
+    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />

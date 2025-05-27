@@ -46,6 +46,7 @@
   export let nullValue = null
   export let buttonTheme = "flat small"
   export let newLineCtrlEnter = false
+  export let autofocus = false
 
   $: rowsNum = formatNumber(expanded ? expandedRows : rows, 1)
   $: colsNum = formatNumber(expanded ? expandedCols : cols, 50)
@@ -127,6 +128,7 @@
     on:keydown
     on:blur
     on:focus
+    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />

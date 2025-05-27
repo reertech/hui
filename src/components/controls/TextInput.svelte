@@ -39,6 +39,7 @@
   export let suffix = null
   export let options = null
   export let nullValue = null
+  export let autofocus = false
 
   let dropdownOpened = false
   let closeTimer = null
@@ -120,6 +121,7 @@
     on:keydown
     on:blur
     on:focus
+    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />
@@ -129,7 +131,6 @@
     </Strong>
   {/if}
   {#if !checkEmpty(options) && dropdownOpened}
-    <!-- <pre>{JSON.stringify(options)}</pre> -->
     <Dropdown
       {options}
       selected={value}
