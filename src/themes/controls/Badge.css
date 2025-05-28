@@ -74,14 +74,16 @@
 [data-hui=Badge][data-hui-theme~=fade] > svg {
 }
 [data-hui=Badge][data-hui-theme~=success] {
-  background-color: #deffe4;
-  background-image: none;
+  /* APPERANCE */
+  --hui-jjitob-background-color: #deffe4;
+  --hui-jjitob-background-image: none;
 }
 [data-hui=Badge][data-hui-theme~=success] > svg {
 }
 [data-hui=Badge][data-hui-theme~=danger] {
-  background-color: #ffe3e3;
-  background-image: none;
+  /* APPERANCE */
+  --hui-jjitob-background-color: #ffe3e3;
+  --hui-jjitob-background-image: none;
 }
 [data-hui=Badge][data-hui-theme~=danger] > svg {
 }

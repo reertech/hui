@@ -38,6 +38,7 @@
   export let maxValues = 10
   export let placeholder = "Add"
   export let badgeTheme = "small"
+  export let autofocus = false
 
   let filter = null
   let closeTimer = null
@@ -143,6 +144,7 @@
     on:keydown
     on:blur
     on:focus
+    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />

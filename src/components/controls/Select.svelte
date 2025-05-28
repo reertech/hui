@@ -39,6 +39,7 @@
   export let placeholder = "Select"
   export let nullValue = null
   export let buttonTheme = "small flat"
+  export let autofocus = false
 
   let filter = null
   let closeTimer = null
@@ -123,10 +124,6 @@
   {flex}
   {name}
 >
-  <!--
-  <span>{filter}</span>
-  <span>{filterValue}</span>
-  -->
   <input
     on:keydown={focusByArrows}
     value={filterValue}
@@ -145,6 +142,7 @@
     on:keydown
     on:blur
     on:focus
+    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />

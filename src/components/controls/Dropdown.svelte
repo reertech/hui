@@ -118,8 +118,8 @@
 
       focus = newFocus
       showFocusedOption()
-    } else if (isNumber(focus) && e.code === "Enter") {
-      e.stopPropagation()
+    } else if (isNumber(focus) && ["Enter", "Tab"].includes(e.code)) {
+      // e.stopPropagation()
       select(focus)
     }
   }
