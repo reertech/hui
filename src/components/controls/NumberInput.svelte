@@ -4,7 +4,7 @@
   import Container from "../Container.svelte"
   import Strong from "../typography/Strong.svelte"
 
-  import { createEventDispatcher } from "svelte"
+  import { createEventDispatcher, tick, onMount } from "svelte"
   const dispatch = createEventDispatcher()
 
   export let active = null
@@ -46,6 +46,10 @@
 
     dispatch("change", value)
   }
+
+  onMount(() => {
+    if (autofocus) tick().then(() => inputNode?.focus())
+  })
 </script>
 
 <Container
@@ -97,7 +101,6 @@
     on:keydown
     on:blur
     on:focus
-    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />

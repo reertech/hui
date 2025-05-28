@@ -8,7 +8,7 @@
   import IconPlus from "../../icons/Plus.svelte"
 
   import { checkEmpty, checkNotEmpty, isString } from "../../helpers.js"
-  import { createEventDispatcher, tick } from "svelte"
+  import { createEventDispatcher, tick, onMount } from "svelte"
   const dispatch = createEventDispatcher()
 
   export let active = null
@@ -65,8 +65,7 @@
     clearTimeout(closeTimer)
 
     dropdownOpened = true
-    await tick()
-    inputNode?.focus()
+    tick().then(() => inputNode?.focus())
   }
 
   const close = () => closeTimer =
@@ -128,6 +127,10 @@
       removeNew()
     }
   }
+
+  onMount(() => {
+    if (autofocus) tick().then(() => inputNode?.focus())
+  })
 </script>
 
 <Container
@@ -187,7 +190,6 @@
     on:keyup
     on:blur
     on:focus
-    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />

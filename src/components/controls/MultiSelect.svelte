@@ -7,7 +7,7 @@
   import IconX from "../../icons/X.svelte"
 
   import { checkEmpty } from "../../helpers.js"
-  import { tick, createEventDispatcher } from "svelte"
+  import { tick, createEventDispatcher, onMount } from "svelte"
   const dispatch = createEventDispatcher()
 
   export let active = null
@@ -93,6 +93,10 @@
 
     commit()
   }
+
+  onMount(() => {
+    if (autofocus) tick().then(() => inputNode?.focus())
+  })
 </script>
 
 <Container
@@ -144,7 +148,6 @@
     on:keydown
     on:blur
     on:focus
-    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />

@@ -6,7 +6,7 @@
   import Dropdown, { focusByArrows } from "./Dropdown.svelte"
 
   import { checkEmpty } from "../../helpers.js"
-  import { createEventDispatcher } from "svelte"
+  import { createEventDispatcher, tick, onMount } from "svelte"
   const dispatch = createEventDispatcher()
 
   export let active = null
@@ -67,6 +67,10 @@
   const fireEnter = (e) => {
     if (e.key === "Enter") dispatch("enter")
   }
+
+  onMount(() => {
+    if (autofocus) tick().then(() => inputNode?.focus())
+  })
 </script>
 
 <Container
@@ -121,7 +125,6 @@
     on:keydown
     on:blur
     on:focus
-    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />

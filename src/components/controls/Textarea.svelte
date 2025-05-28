@@ -9,7 +9,7 @@
   import IconMinimize from "../../icons/Minimize.svelte"
 
   import { formatNumber, checkEmpty, composeKeys } from "../../helpers.js"
-  import { createEventDispatcher, tick } from "svelte"
+  import { createEventDispatcher, tick, onMount } from "svelte"
   const dispatch = createEventDispatcher()
 
   export let active = null
@@ -79,6 +79,10 @@
     await tick()
     e.target.setSelectionRange(i + 1, i + 1)
   }
+
+  onMount(() => {
+    if (autofocus) tick().then(() => inputNode?.focus())
+  })
 </script>
 
 <Container
@@ -128,7 +132,6 @@
     on:keydown
     on:blur
     on:focus
-    autofocus={autofocus || null}
     data-hui-input
     bind:this={inputNode}
   />
