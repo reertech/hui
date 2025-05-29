@@ -118,6 +118,8 @@
   const select = (e) => {
     change({ target: { value: e.detail }})
     switchAdd()
+
+    tick().then(() => inputNode?.focus())
   }
 
   function keyDown(e) {

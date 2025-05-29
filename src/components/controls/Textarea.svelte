@@ -45,8 +45,8 @@
   export let expanded = false
   export let nullValue = null
   export let buttonTheme = "flat small"
-  export let newLineCtrlEnter = false
   export let autofocus = false
+  export let newLineCtrlEnter = false
 
   $: rowsNum = formatNumber(expanded ? expandedRows : rows, 1)
   $: colsNum = formatNumber(expanded ? expandedCols : cols, 50)
@@ -64,20 +64,32 @@
   }
 
   const keyDown = async (e) => {
-    if (!expanded || !newLineCtrlEnter) return
     if (e.code !== "Enter") return
-    if (composeKeys(e) !== "ctrl") return
 
-    e.preventDefault()
-    e.stopPropagation()
+    const compose = composeKeys(e)
 
-    const i = e.target.selectionEnd
-    const current = e.target.value ?? ""
-    const value = current.substring(0, i) + "\n" + current.substring(i)
+    if (!newLineCtrlEnter) {
+      if (expanded && !compose) e.stopPropagation()
 
-    change({ target: { value }})
-    await tick()
-    e.target.setSelectionRange(i + 1, i + 1)
+      if (compose === "ctrl") {
+        e.stopPropagation()
+        e.preventDefault()
+        expanded = !expanded
+      }
+    } else {
+      if (!expanded || compose !== "ctrl") return
+
+      e.preventDefault()
+      e.stopPropagation()
+
+      const i = e.target.selectionEnd
+      const current = e.target.value ?? ""
+      const value = current.substring(0, i) + "\n" + current.substring(i)
+
+      change({ target: { value }})
+      await tick()
+      e.target.setSelectionRange(i + 1, i + 1)
+    }
   }
 
   onMount(() => {

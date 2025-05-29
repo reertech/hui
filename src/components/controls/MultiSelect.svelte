@@ -86,6 +86,7 @@
 
     await commit()
     filter = null
+    inputNode?.focus()
   }
 
   const remove = (value) => {

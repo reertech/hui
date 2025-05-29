@@ -90,7 +90,7 @@
 
     await commit()
     filter = null
-    inputNode.blur()
+    inputNode?.focus()
   }
 
   const clear = async () => {

@@ -60,9 +60,11 @@
     dispatch("change", value)
   }
 
-  const select = (e) => change({
-    target: { value: e.detail }
-  })
+  const select = (e) => {
+    change({ target: { value: e.detail } })
+
+    tick().then(() => inputNode?.focus())
+  }
 
   const fireEnter = (e) => {
     if (e.key === "Enter") dispatch("enter")

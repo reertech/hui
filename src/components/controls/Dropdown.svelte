@@ -107,9 +107,9 @@
   }
 
   function keyDown(e) {
-    if (composeKeys(e) !== "") return
+    const compose = composeKeys(e)
 
-    if (["ArrowUp", "ArrowDown"].includes(e.code)) {
+    if (!compose && ["ArrowUp", "ArrowDown"].includes(e.code)) {
       const newFocus = isNumber(focus)
         ? e.code === "ArrowUp" ? focus - 1 : focus + 1
         : e.code === "ArrowDown" ? 0 : filteredOptionsCount - 1
@@ -118,8 +118,11 @@
 
       focus = newFocus
       showFocusedOption()
-    } else if (isNumber(focus) && ["Enter", "Tab"].includes(e.code)) {
+    } else if (!compose && isNumber(focus) && ["Enter", "Tab"].includes(e.code)) {
       // e.stopPropagation()
+      select(focus)
+    } else if (compose === "ctrl" && isNumber(focus) && e.code === "Enter") {
+      e.stopPropagation()
       select(focus)
     }
   }
