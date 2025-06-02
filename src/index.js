@@ -65,6 +65,8 @@ export { default as IconEdit } from "./icons/Edit.svelte"
 export { default as IconTrash } from "./icons/Trash.svelte"
 export { default as IconXCircle } from "./icons/XCircle.svelte"
 export { default as IconDelete } from "./icons/Delete.svelte"
+export { default as IconAlignJustify } from "./icons/AlignJustify.svelte"
+export { default as IconChevronsDown } from "./icons/ChevronsDown.svelte"
 
 export { default as persist } from "./stores/persist.js"
 export { default as stringCISetStore } from "./stores/stringCISet.js"

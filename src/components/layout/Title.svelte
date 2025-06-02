@@ -47,6 +47,7 @@
   {scrollY}
   {grid}
   {flex}
+  on:click
 >
   <slot />
 </Container>
