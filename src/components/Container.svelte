@@ -20,6 +20,7 @@
   export let classes = null
   export let grid = null
   export let flex = null
+  export let order = null
   export let scrollY = null
   export let scrollX = null
   export let value = null
@@ -137,7 +138,7 @@
     data-hui-self-align={e.align || null}
     style:flex-grow={e.grow || null}
     style:flex-shrink={e.shrink || null}
-
+    style:order={order || order === 0 ? order : null}
     style:grid-area={area || null}
     style:row-gap={f.rowGap || g.rowGap || f.gap || g.gap || null}
     style:column-gap={f.columnGap || g.columnGap || f.gap || g.gap || null}
@@ -230,7 +231,7 @@
     style:flex-basis={e.basis || null}
     style:flex-grow={e.grow || null}
     style:flex-shrink={e.shrink || null}
-
+    style:order={order || order === 0 ? order : null}
     style:grid-area={area || null}
     style:row-gap={f.rowGap || g.rowGap || f.gap || g.gap || null}
     style:column-gap={f.columnGap || g.columnGap || f.gap || g.gap || null}

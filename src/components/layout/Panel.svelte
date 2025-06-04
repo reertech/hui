@@ -21,6 +21,7 @@
   export let scrollY = null
   export let grid = null
   export let flex = null
+  export let order = null
 
   let classes = null
   export { classes as class }
@@ -47,6 +48,7 @@
   {scrollY}
   {flex}
   {grid}
+  {order}
 >
   <slot />
 </Container>
