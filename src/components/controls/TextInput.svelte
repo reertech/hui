@@ -3,7 +3,7 @@
   import "../../styles/controls/TextInput.css"
   import Container from "../Container.svelte"
   import Strong from "../typography/Strong.svelte"
-  import Dropdown, { focusByArrows } from "./Dropdown.svelte"
+  import Dropdown, { focusByArrows, generateAnchor } from "./Dropdown.svelte"
 
   import { checkEmpty } from "../../helpers.js"
   import { createEventDispatcher, tick, onMount } from "svelte"
@@ -43,6 +43,8 @@
 
   let dropdownOpened = false
   let closeTimer = null
+
+  const dropdownAnchor = generateAnchor()
 
   const open = () => {
     clearTimeout(closeTimer)
@@ -97,6 +99,7 @@
   {grid}
   {flex}
   {name}
+  anchor={dropdownAnchor}
 >
   {#if prefix}
     <Strong>
@@ -144,6 +147,7 @@
       root={inputNode?.parentElement}
       input={inputNode}
       active={dropdownOpened}
+      anchor={dropdownAnchor}
     />
   {/if}
 </Container>

@@ -110,6 +110,7 @@
   scrollbar-width: var(--hui-ovbbqb-scrollbar-width, thin);
   /* DISPLAY */
   display: var(--hui-ovbbqb-display, block);
+  position-anchor: var(--hui-ovbbqb-position-anchor, initial);
 }
 [data-hui=Dropdown] > option {
   /* LAYOUT-POSITION */

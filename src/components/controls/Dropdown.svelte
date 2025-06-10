@@ -4,8 +4,8 @@
   import Container from "../Container.svelte"
 
   import {
-    calcCutParentOffset,
     scrollIntoViewIfNeeded,
+    fetchCutParent,
     buildFuzzyRegex,
     formatNumber,
     composeKeys,
@@ -13,7 +13,7 @@
     isArray
   } from "../../helpers.js"
 
-  import { tick, createEventDispatcher, onMount } from "svelte"
+  import { tick, createEventDispatcher, onMount, onDestroy } from "svelte"
   const dispatch = createEventDispatcher()
 
   export let active = null
@@ -39,26 +39,27 @@
 
   export let selected = []
   export let options = {}
-  export let maxMaxHeight = 250
+  export let maxMaxHeight = 190
   export let filter = null
   export let input = null
   export let root = null
+  export let anchor = "--hui-dropdown"
 
   let focus = null
   let dir = null
   let height = null
 
-  let datalist;
+  let datalist, cutParent;
 
-  $: rootEl = root || document.body
-  $: calcOpenDir(active)
+  $: open(active, datalist, root)
 
   $: maxHeight = Math.min(
-    formatNumber(maxMaxHeight, 250),
-    formatNumber(height, 250)
+    formatNumber(maxMaxHeight, 190),
+    formatNumber(height, 190)
   )
 
   $: sizeParams = { maxHeight, ...size }
+  $: positionParams = { anchor, ...position }
   $: dirTheme = dir === "top" ? "toTop" : "toBottom"
   $: themes = new Set(theme?.split(/\s+/)).add(dirTheme)
   $: themeString = [...themes].join(" ") || null
@@ -86,17 +87,48 @@
     dispatch("select", value.at(0))
   }
 
-  const calcOpenDir = () => {
-    const offset = calcCutParentOffset(rootEl)
-    if (!offset) return dir = height = null
+  const onScroll = () => open(active, datalist, root)
 
-    if (offset.bottom >= offset.top) {
-      height = offset.bottom - 10
+  const open = (active, datalist, root) => {
+    if (!datalist || !root) return
+    if (!active) return datalist.hidePopover()
+
+    const rect = root.getBoundingClientRect()
+    const distanceTop = rect.top
+    const distanceBottom = window.innerHeight - rect.bottom
+
+    const supportsAnchor = CSS.supports(
+      "position-anchor: --fake-anchor"
+    )
+
+    if (distanceBottom >= distanceTop) {
+      height = distanceBottom - 10
       dir = "bottom"
     } else {
-      height = offset.top - 10
+      height = distanceTop - 10
       dir = "top"
     }
+
+    if (!supportsAnchor) {
+      if (!cutParent) {
+        cutParent = fetchCutParent(root)
+
+        cutParent?.addEventListener("scroll", onScroll, { passive: true })
+      }
+
+      datalist.style.width = `${rect.width}px`
+      datalist.style.left = `${rect.left}px`
+
+      if (distanceBottom >= distanceTop) {
+        datalist.style.bottom = "auto"
+        datalist.style.top = `${distanceTop + rect.height + 2}px`
+      } else {
+        datalist.style.top = "auto"
+        datalist.style.bottom = `${distanceBottom + rect.height + 2}px`
+      }
+    }
+
+    datalist.showPopover({ source: root })
   }
 
   const showFocusedOption = async () => {
@@ -138,6 +170,10 @@
 
     return () => input.removeEventListener("keydown", keyDown)
   })
+
+  onDestroy(() => {
+    cutParent?.removeEventListener('scroll', onScroll)
+  })
 </script>
 
 <script context="module">
@@ -145,9 +181,19 @@
     if (!anyKey && !["ArrowUp", "ArrowDown"].includes(e.code)) return
     e.target.click()
   }
+
+  let dropdownCount = 0
+
+  export const generateAnchor = () => {
+    dropdownCount += 1
+
+    return `--hui-dropdown-${dropdownCount}`
+  }
 </script>
 
 {#if active && filteredOptionsCount}
+  <!--
+  -->
   <Container
     hui="Dropdown"
     tag="datalist"
@@ -162,13 +208,15 @@
     {margin}
     {padding}
     {idx}
-    {position}
     {scrollX}
     {scrollY}
     {grid}
     {flex}
-    bind:node={datalist}
+    anchor
+    popover="manual"
+    position={positionParams}
     size={sizeParams}
+    bind:node={datalist}
     theme={themeString}
   >
     {#each filteredOptions as [value, label], idx}
@@ -184,7 +232,7 @@
 
 <!-- theme.ini
   themes: flat, toTop, toBottom;
-  & = common, display;
+  & = common, display, position-anchor;
   > option = common, display;
   > option:hover,
   > option[data-hui-focused] = background-image;

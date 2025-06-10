@@ -3,7 +3,7 @@
   import "../../styles/controls/Select.css"
   import Container from "../Container.svelte"
   import Button from "./Button.svelte"
-  import Dropdown, { focusByArrows } from "./Dropdown.svelte"
+  import Dropdown, { focusByArrows, generateAnchor } from "./Dropdown.svelte"
   import IconX from "../../icons/X.svelte"
   import { checkEmpty } from "../../helpers.js"
 
@@ -45,6 +45,8 @@
   let closeTimer = null
   let isFocused = false
   let dropdownOpened = false
+
+  const dropdownAnchor = generateAnchor()
 
   $: optionEntries = Array.isArray(options)
     ? options.map(o => [o, o])
@@ -90,7 +92,7 @@
 
     await commit()
     filter = null
-    inputNode?.focus()
+    // inputNode?.focus()
   }
 
   const clear = async () => {
@@ -127,14 +129,15 @@
   {grid}
   {flex}
   {name}
+  anchor={dropdownAnchor}
 >
   <input
+    on:blur={close}
     on:keydown={focusByArrows}
     value={filterValue}
     placeholder={filterPlaceholder}
     on:click={open}
     on:focus={open}
-    on:blur={close}
     valid={valid || null}
     invalid={invalid || null}
     active={active || null}
@@ -152,7 +155,7 @@
   {#if isClearable}
     <Button
       theme={buttonTheme}
-      on:click={clear}
+      on:mousedown={clear}
     >
       <IconX />
     </Button>
@@ -162,11 +165,12 @@
     <Dropdown
       {options}
       {filter}
-      selected={[]}
+      selected={value}
       on:select={select}
       input={inputNode}
       root={inputNode?.parentElement}
       active={dropdownOpened}
+      anchor={dropdownAnchor}
     />
   {/if}
 </Container>

@@ -16,6 +16,8 @@
   }}
   {name}
   on:click
+  on:mousedown
+  on:mouseup
   bind:this={node}
   title={title || null}
   hidden={$$restProps.hidden || null && ""}

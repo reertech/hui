@@ -3,7 +3,7 @@
   import "../../styles/controls/MultiSelect.css"
   import Container from "../Container.svelte"
   import Badge from "./Badge.svelte"
-  import Dropdown, { focusByArrows } from "./Dropdown.svelte"
+  import Dropdown, { focusByArrows, generateAnchor } from "./Dropdown.svelte"
   import IconX from "../../icons/X.svelte"
 
   import { checkEmpty } from "../../helpers.js"
@@ -43,6 +43,8 @@
   let filter = null
   let closeTimer = null
   let dropdownOpened = false
+
+  const dropdownAnchor = generateAnchor()
 
   $: selectedArray = Array.isArray(selected) ? selected
     : selected == null ? [] : [selected]
@@ -122,6 +124,7 @@
   {grid}
   {flex}
   {name}
+  anchor={dropdownAnchor}
 >
   {#each selectedArray as value}
     <Badge
@@ -162,6 +165,7 @@
       root={inputNode?.parentElement}
       input={inputNode}
       active={dropdownOpened}
+      anchor={dropdownAnchor}
     />
   {/if}
 </Container>

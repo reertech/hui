@@ -4,7 +4,7 @@
   import Container from "../Container.svelte"
   import Badge from "./Badge.svelte"
   import Button from "./Button.svelte"
-  import Dropdown, { focusByArrows } from "./Dropdown.svelte"
+  import Dropdown, { focusByArrows, generateAnchor } from "./Dropdown.svelte"
   import IconPlus from "../../icons/Plus.svelte"
 
   import { checkEmpty, checkNotEmpty, isString } from "../../helpers.js"
@@ -48,6 +48,8 @@
   let closeTimer = null
   let addMode = true
   let removeMode = false
+
+  const dropdownAnchor = generateAnchor()
 
   $: valuesArray = [separator, values].every(isString)
     ? values.split(separator).map(s => s.trim()).filter(checkNotEmpty)
@@ -119,7 +121,7 @@
     change({ target: { value: e.detail }})
     switchAdd()
 
-    tick().then(() => inputNode?.focus())
+    // tick().then(() => inputNode?.focus())
   }
 
   function keyDown(e) {
@@ -157,6 +159,7 @@
   {grid}
   {flex}
   {name}
+  anchor={dropdownAnchor}
 >
   {#each selectedArray as value, idx}
     <Badge
@@ -204,6 +207,7 @@
       root={inputNode?.parentElement}
       input={inputNode}
       active={dropdownOpened}
+      anchor={dropdownAnchor}
     />
   {/if}
   {#if !isEmptyValue}

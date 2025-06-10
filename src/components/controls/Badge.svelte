@@ -54,6 +54,8 @@
   {self}
   {area}
   on:click
+  on:mouseup
+  on:mousedown
 >
   <slot />
 </Container>

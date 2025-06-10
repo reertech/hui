@@ -27,6 +27,8 @@
   export let name = null
   export let self = null
   export let area = null
+  export let popover = null
+  export let anchor = null
 
   export let node = null
 
@@ -145,6 +147,7 @@
 
     data-hui-position={l.position || null}
     data-hui-z={formatNumber(l.z)}
+    style:position-anchor={l.anchor || null}
     style:top={formatPx(l.top)}
     style:right={formatPx(l.right)}
     style:bottom={formatPx(l.bottom)}
@@ -166,6 +169,9 @@
     style:padding-right={formatPx(p.right)}
     style:padding-bottom={formatPx(p.bottom)}
     style:padding-left={formatPx(p.left)}
+
+    popover={popover || null}
+    style:anchor-name={anchor || null}
 
     on:click
     on:mouseup
@@ -195,7 +201,6 @@
     data-hui-value={value ?? null}
     data-hui-name={name ?? null}
 
-    data-hui-z={formatNumber(l.z)}
     data-hui-scroll-x={scrollX || null}
     data-hui-scroll-y={scrollY || null}
 
@@ -237,6 +242,8 @@
     style:column-gap={f.columnGap || g.columnGap || f.gap || g.gap || null}
 
     data-hui-position={l.position || null}
+    data-hui-z={formatNumber(l.z)}
+    style:position-anchor={l.anchor || null}
     style:top={formatPx(l.top)}
     style:right={formatPx(l.right)}
     style:bottom={formatPx(l.bottom)}
@@ -258,6 +265,9 @@
     style:padding-right={formatPx(p.right)}
     style:padding-bottom={formatPx(p.bottom)}
     style:padding-left={formatPx(p.left)}
+
+    popover={popover || null}
+    style:anchor-name={anchor || null}
 
     on:click
     on:mouseup
