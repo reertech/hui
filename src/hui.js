@@ -519,8 +519,6 @@ const extractChanges = (oldState, newState, key, acc) => {
 
     const changes = extractNestedChanges(newValueObj, oldValueObj)
 
-    // console.log("objectOrBool", key, changes, newValueObj, oldValueObj)
-
     if (changes && Object.keys(changes).length) acc[key] = changes
   } else if (objectOrStringKeys[key]) {
     const newValueObj = stringToObjectValue(newValue, key)

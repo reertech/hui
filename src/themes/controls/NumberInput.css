@@ -2,13 +2,13 @@
   /* LAYOUT-SIZING */
   --hui-affhez-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-affhez-width: 100%;
-  --hui-affhez-max-width: 50vw;
-  --hui-affhez-min-width: 100px;
+  --hui-affhez-max-width: 150px;
+  --hui-affhez-min-width: 80px;
   /* LAYOUT-PADDING */
   --hui-affhez-padding-top: var(--hui-default-spacer-5);
-  --hui-affhez-padding-right: var(--hui-default-spacer-7);
+  --hui-affhez-padding-right: var(--hui-default-spacer-6);
   --hui-affhez-padding-bottom: var(--hui-default-spacer-5);
-  --hui-affhez-padding-left: var(--hui-default-spacer-7);
+  --hui-affhez-padding-left: var(--hui-default-spacer-6);
   /* LAYOUT-OVERFLOW */
   --hui-affhez-overflow-x: visible;
   --hui-affhez-overflow-y: visible;

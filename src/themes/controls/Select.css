@@ -4,13 +4,13 @@
   /* LAYOUT-SIZING */
   --hui-dityoy-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-dityoy-width: 100%;
-  --hui-dityoy-max-width: 50vw;
+  --hui-dityoy-max-width: 300px;
   --hui-dityoy-min-width: 150px;
   /* LAYOUT-PADDING */
   --hui-dityoy-padding-top: var(--hui-default-spacer-5);
-  --hui-dityoy-padding-right: var(--hui-default-spacer-7);
+  --hui-dityoy-padding-right: var(--hui-default-spacer-6);
   --hui-dityoy-padding-bottom: var(--hui-default-spacer-5);
-  --hui-dityoy-padding-left: var(--hui-default-spacer-7);
+  --hui-dityoy-padding-left: var(--hui-default-spacer-6);
   /* LAYOUT-OVERFLOW */
   --hui-dityoy-overflow-x: visible;
   --hui-dityoy-overflow-y: visible;
