@@ -5,7 +5,7 @@
   --hui-lilprs-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-lilprs-width: 100%;
   --hui-lilprs-min-width: 180px;
-  --hui-lilprs-max-width: clamp(50vw, 450px, 100vw);
+  --hui-lilprs-max-width: min(500px, 100vw);
   /* LAYOUT-PADDING */
   --hui-lilprs-padding-top: var(--hui-default-spacer-5);
   --hui-lilprs-padding-right: var(--hui-default-spacer-6);

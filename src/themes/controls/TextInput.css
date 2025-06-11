@@ -5,7 +5,6 @@
   --hui-edmssq-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-edmssq-width: 100%;
   --hui-edmssq-min-width: 170px;
-  --hui-edmssq-max-width: clamp(50vw, 450px, 100vw);
   /* LAYOUT-PADDING */
   --hui-edmssq-padding-top: var(--hui-default-spacer-5);
   --hui-edmssq-padding-right: var(--hui-default-spacer-6);
