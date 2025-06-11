@@ -4,13 +4,13 @@
   /* LAYOUT-SIZING */
   --hui-dsdbsk-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-dsdbsk-width: 100%;
-  --hui-dsdbsk-max-width: 50vw;
   --hui-dsdbsk-min-width: 200px;
+  --hui-dsdbsk-max-width: clamp(50vw, 450px, 100vw);
   /* LAYOUT-PADDING */
   --hui-dsdbsk-padding-top: var(--hui-default-spacer-5);
-  --hui-dsdbsk-padding-right: var(--hui-default-spacer-7);
+  --hui-dsdbsk-padding-right: var(--hui-default-spacer-6);
   --hui-dsdbsk-padding-bottom: var(--hui-default-spacer-5);
-  --hui-dsdbsk-padding-left: var(--hui-default-spacer-7);
+  --hui-dsdbsk-padding-left: var(--hui-default-spacer-6);
   /* LAYOUT-OVERFLOW */
   --hui-dsdbsk-overflow-x: visible;
   --hui-dsdbsk-overflow-y: visible;

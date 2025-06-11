@@ -228,6 +228,7 @@
 }
 [data-hui=Select] > input::placeholder {
   font-size: var(--hui-cdxgkc-font-size, initial);
+  text-align: var(--hui-cdxgkc-text-align, initial);
 }
 [data-hui=Select] > button[data-hui=Button] {
   /* LAYOUT-POSITION */

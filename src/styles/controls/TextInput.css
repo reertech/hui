@@ -111,7 +111,6 @@
   /* DISPLAY */
   display: var(--hui-edmssq-display, block);
   flex: var(--hui-edmssq-flex, initial);
-  gap: var(--hui-edmssq-gap, initial);
 }
 [data-hui=TextInput] > input {
   /* LAYOUT-POSITION */

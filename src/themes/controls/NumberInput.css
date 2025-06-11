@@ -2,8 +2,8 @@
   /* LAYOUT-SIZING */
   --hui-affhez-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-affhez-width: 100%;
-  --hui-affhez-max-width: 150px;
   --hui-affhez-min-width: 80px;
+  --hui-affhez-max-width: 180px;
   /* LAYOUT-PADDING */
   --hui-affhez-padding-top: var(--hui-default-spacer-5);
   --hui-affhez-padding-right: var(--hui-default-spacer-6);

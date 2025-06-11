@@ -182,18 +182,14 @@
     e.target.click()
   }
 
-  let dropdownCount = 0
-
   export const generateAnchor = () => {
-    dropdownCount += 1
+    const key = crypto.randomUUID().slice(0, 8)
 
-    return `--hui-dropdown-${dropdownCount}`
+    return `--hui-dropdown-${key}`
   }
 </script>
 
 {#if active && filteredOptionsCount}
-  <!--
-  -->
   <Container
     hui="Dropdown"
     tag="datalist"

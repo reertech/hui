@@ -180,6 +180,6 @@
   & = common, display, flex;
   > input = common;
   > input[data-hui-selected] = color;
-  > input::placeholder = font-size;
+  > input::placeholder = font-size, text-align;
   > button[data-hui=Button] = layout-position, font-size;
 -->

@@ -35,6 +35,7 @@
   export let placeholder = "Enter"
   export let value = null
   export let maxLength = null
+  export let minSize = null
   export let prefix = null
   export let suffix = null
   export let options = null
@@ -43,6 +44,8 @@
 
   let dropdownOpened = false
   let closeTimer = null
+
+  $: inputSize = minSize || Math.floor(maxLength / 2)
 
   const dropdownAnchor = generateAnchor()
 
@@ -118,6 +121,7 @@
     on:blur={close}
     {placeholder}
     {maxLength}
+    size={inputSize}
     type="text"
     valid={valid || null}
     invalid={invalid || null}
@@ -154,7 +158,7 @@
 
 <!-- theme.ini
   themes: flat, medium, grow;
-  & = common, display, flex, gap;
+  & = common, display, flex;
   > input = common;
   > input::placeholder = font-size, text-align;
 -->

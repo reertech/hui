@@ -1,6 +1,27 @@
 [data-hui=Small] {
   /* TEXT */
-  --hui-wpcfwr-font-size: var(--hui-default-size-0);
+  --hui-wpcfwr-font-size: 84%;
+  --hui-wpcfwr-font-weight: var(--hui-default-font-weight);
+  /* APPERANCE */
+  --hui-wpcfwr-color: var(--hui-default-color-text);
+  /* DISPLAY */
+  --hui-wpcfwr-display: inline;
+}
+[data-hui=Small][data-hui-theme~=block] {
+  /* DISPLAY */
+  --hui-wpcfwr-display: block;
+}
+[data-hui=Small][data-hui-theme~=center] {
+  /* TEXT */
+  --hui-wpcfwr-text-align: center;
+}
+[data-hui=Small][data-hui-theme~=right] {
+  /* TEXT */
+  --hui-wpcfwr-text-align: right;
+}
+[data-hui=Small][data-hui-theme~=left] {
+  /* TEXT */
+  --hui-wpcfwr-text-align: left;
 }
 [data-hui=Small] {
   /* LAYOUT-POSITION */
@@ -112,4 +133,6 @@
 /*  --hui-wpcfwr-scrollbar-color-default: ; */
 /*  --hui-wpcfwr-scrollbar-gutter-default: ; */
 /*  --hui-wpcfwr-scrollbar-width-default: ; */
+  /* DISPLAY */
+/*  --hui-wpcfwr-display-default: ; */
 }

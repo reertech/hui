@@ -18,7 +18,7 @@
   /* LAYOUT-POSITION */
   --hui-avzraa-position: relative;
   /* LAYOUT-SIZING */
-  --hui-avzraa-min-width: 150px;
+  --hui-avzraa-min-width: 100px;
   /* LAYOUT-PADDING */
   --hui-avzraa-padding-top: var(--hui-default-spacer-4);
   --hui-avzraa-padding-right: var(--hui-default-spacer-4);
@@ -40,8 +40,10 @@
   --hui-avzraa-display: flex;
 }
 [data-hui=DataTable] > thead > tr > th {
+  /* LAYOUT-POSITION */
+  --hui-yfagqg-position: relative;
   /* LAYOUT-SIZING */
-  --hui-yfagqg-min-width: 150px;
+  --hui-yfagqg-min-width: 100px;
   /* LAYOUT-PADDING */
   --hui-yfagqg-padding-top: var(--hui-default-spacer-4);
   --hui-yfagqg-padding-right: var(--hui-default-spacer-6);

@@ -52,6 +52,7 @@
 </Container>
 
 <!-- theme.ini
-  & = common;
+  themes: block, center, right, left;
+  & = common, display;
 -->
 
