@@ -3,6 +3,7 @@
   import "../../styles/controls/Select.css"
   import Container from "../Container.svelte"
   import Button from "./Button.svelte"
+  import Strong from "../typography/Strong.svelte"
   import Dropdown, { focusByArrows, generateAnchor } from "./Dropdown.svelte"
   import IconX from "../../icons/X.svelte"
   import { checkEmpty } from "../../helpers.js"
@@ -37,7 +38,9 @@
   export let options = {}
   export let required = false
   export let placeholder = "Select"
+  export let prefix = null
   export let nullValue = null
+  export let clearable = false
   export let buttonTheme = "small flat"
   export let autofocus = false
 
@@ -56,7 +59,8 @@
 
   $: isSelected = optionsObj.hasOwnProperty(value)
 
-  $: isClearable = !required && isSelected && isFocused && !filter
+  $: isClearable = clearable !== "auto" ? !!clearable
+    : !required && isSelected && isFocused && !filter
 
   $: filterPlaceholder = optionsObj[value] ?? placeholder
 
@@ -131,6 +135,11 @@
   {name}
   anchor={dropdownAnchor}
 >
+  {#if prefix}
+    <Strong>
+      {prefix}
+    </Strong>
+  {/if}
   <input
     on:blur={close}
     on:keydown={focusByArrows}
@@ -176,7 +185,7 @@
 </Container>
 
 <!-- theme.ini
-  themes: flat;
+  themes: flat, medium;
   & = common, display, flex;
   > input = common;
   > input[data-hui-selected] = color;

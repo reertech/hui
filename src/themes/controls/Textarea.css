@@ -4,8 +4,8 @@
   /* LAYOUT-SIZING */
   --hui-yqncrg-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-yqncrg-width: 100%;
-  --hui-yqncrg-min-width: 200px;
   --hui-yqncrg-max-width: 100vw;
+  --hui-yqncrg-min-width: 200px;
   /* LAYOUT-PADDING */
   --hui-yqncrg-padding-top: calc(var(--hui-default-spacer-5) + var(--hui-default-spacer-3));
   --hui-yqncrg-padding-right: 0;

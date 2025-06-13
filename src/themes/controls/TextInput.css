@@ -4,8 +4,8 @@
   /* LAYOUT-SIZING */
   --hui-edmssq-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-edmssq-width: 100%;
-  --hui-edmssq-min-width: 170px;
   --hui-edmssq-max-width: min(500px, 100vw);
+  --hui-edmssq-min-width: 170px;
   /* LAYOUT-PADDING */
   --hui-edmssq-padding-top: var(--hui-default-spacer-5);
   --hui-edmssq-padding-right: var(--hui-default-spacer-6);
@@ -16,8 +16,8 @@
   --hui-edmssq-overflow-y: visible;
   /* LAYOUT-FLEX */
   --hui-edmssq-flex-direction: row;
-  --hui-edmssq-flex-wrap: wrap;
-  --hui-edmssq-gap: var(--hui-default-spacer-5);
+  --hui-edmssq-flex-wrap: nowrap;
+  --hui-edmssq-gap: var(--hui-default-spacer-3);
   --hui-edmssq-align-content: center;
   --hui-edmssq-justify-content: stretch;
   --hui-edmssq-align-items: center;

@@ -4,8 +4,8 @@
   /* LAYOUT-SIZING */
   --hui-dityoy-min-height: calc(var(--hui-default-font-size) * var(--hui-default-line-height) + (var(--hui-default-spacer-5) + var(--hui-default-spacer-3)) * 2);
   --hui-dityoy-width: 100%;
-  --hui-dityoy-min-width: 130px;
   --hui-dityoy-max-width: min(500px, 100vw);
+  --hui-dityoy-min-width: 130px;
   /* LAYOUT-PADDING */
   --hui-dityoy-padding-top: var(--hui-default-spacer-5);
   --hui-dityoy-padding-right: var(--hui-default-spacer-6);
@@ -16,8 +16,8 @@
   --hui-dityoy-overflow-y: visible;
   /* LAYOUT-FLEX */
   --hui-dityoy-flex-direction: row;
-  --hui-dityoy-flex-wrap: wrap;
-  --hui-dityoy-gap: var(--hui-default-spacer-5);
+  --hui-dityoy-flex-wrap: nowrap;
+  --hui-dityoy-gap: var(--hui-default-spacer-3);
   --hui-dityoy-align-content: center;
   --hui-dityoy-justify-content: stretch;
   --hui-dityoy-align-items: center;
@@ -86,6 +86,31 @@
 [data-hui=Select][data-hui-theme~=flat] > input::placeholder {
 }
 [data-hui=Select][data-hui-theme~=flat] > button[data-hui=Button] {
+}
+[data-hui=Select][data-hui-theme~=medium] {
+  /* LAYOUT-SIZING */
+  --hui-dityoy-min-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height) + (var(--hui-default-spacer-4) + var(--hui-default-spacer-4)) * 2);
+  /* LAYOUT-PADDING */
+  --hui-dityoy-padding-top: var(--hui-default-spacer-4);
+  --hui-dityoy-padding-right: var(--hui-default-spacer-5);
+  --hui-dityoy-padding-bottom: var(--hui-default-spacer-4);
+  --hui-dityoy-padding-left: var(--hui-default-spacer-5);
+}
+[data-hui=Select][data-hui-theme~=medium] > input {
+  /* LAYOUT-PADDING */
+  --hui-lbxlgv-padding-top: var(--hui-default-spacer-4);
+  --hui-lbxlgv-padding-right: var(--hui-default-spacer-3);
+  --hui-lbxlgv-padding-bottom: var(--hui-default-spacer-3);
+  --hui-lbxlgv-padding-left: var(--hui-default-spacer-4);
+  /* TEXT */
+  --hui-lbxlgv-font-size: var(--hui-default-size-0);
+  --hui-lbxlgv-line-height: var(--hui-default-line-height);
+}
+[data-hui=Select][data-hui-theme~=medium] > input[data-hui-selected] {
+}
+[data-hui=Select][data-hui-theme~=medium] > input::placeholder {
+}
+[data-hui=Select][data-hui-theme~=medium] > button[data-hui=Button] {
 }
 [data-hui=Select] {
   /* LAYOUT-POSITION */
