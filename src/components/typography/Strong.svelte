@@ -21,6 +21,8 @@
   export let scrollY = null
   export let grid = null
   export let flex = null
+  export let name = null
+  export let self = null
 
   let classes = null
   export { classes as class }
@@ -47,7 +49,11 @@
   {scrollY}
   {grid}
   {flex}
+  {name}
+  {self}
   on:click
+  on:mouseup
+  on:mousedown
 >
   <slot />
 </Container>
