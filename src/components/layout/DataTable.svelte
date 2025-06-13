@@ -53,7 +53,7 @@
     switch (typeof value) {
       case "number": return `minmax(${value}px, max-content)`
       case "string": return value
-      default: return "max-content"
+      default: return "minmax(max-content, 1fr)"
     }
   }
 
@@ -63,7 +63,7 @@
   }
 
   $: colsTemplate = !isObject(colsWidth)
-    ? `repeat(${columns.length}, max-content)`
+    ? `repeat(${columns.length}, minmax(max-content, 1fr))`
     : columns.reduce(colWidthBuilder, []).join(" ")
 
   $: templateColumns = [
