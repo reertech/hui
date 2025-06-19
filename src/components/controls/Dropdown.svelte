@@ -150,10 +150,10 @@
 
       focus = newFocus
       showFocusedOption()
-    } else if (!compose && isNumber(focus) && ["Enter", "Tab"].includes(e.code)) {
+    } else if (!compose && isNumber(focus) && ["NumpadEnter", "Enter", "Tab"].includes(e.code)) {
       // e.stopPropagation()
       select(focus)
-    } else if (compose === "ctrl" && isNumber(focus) && e.code === "Enter") {
+    } else if (compose === "ctrl" && isNumber(focus) && ["NumpadEnter", "Enter"].includes(e.code)) {
       e.stopPropagation()
       select(focus)
     }

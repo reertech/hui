@@ -72,7 +72,7 @@
   }
 
   const fireEnter = (e) => {
-    if (e.key === "Enter") dispatch("enter")
+    if (["Enter", "NumpadEnter"].includes(e.key)) dispatch("enter")
   }
 
   onMount(() => {

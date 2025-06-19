@@ -125,7 +125,7 @@
   }
 
   function keyDown(e) {
-    if (e.ctrlKey && e.code === "Enter") {
+    if (e.ctrlKey && ["Enter", "NumpadEnter"].includes(e.code)) {
       switchAdd()
     } else if (e.key === "Backspace") {
       removeNew()

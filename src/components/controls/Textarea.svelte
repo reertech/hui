@@ -64,7 +64,7 @@
   }
 
   const keyDown = async (e) => {
-    if (e.code !== "Enter") return
+    if (!["Enter", "NumpadEnter"].includes(e.code)) return
 
     const compose = composeKeys(e)
 
