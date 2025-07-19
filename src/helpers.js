@@ -32,7 +32,11 @@ export const isEqual = (a, b) => a === b ||
 export const buildFuzzyRegex = (string, params = "i") => {
   if (!isString(string) || checkEmpty(string)) return null
 
-  return new RegExp(string.replace(/\s+/, " "), params)
+  const pattern = string.replace(/[\W_]+/g, " ").trim()
+
+  if (checkEmpty(pattern)) return null
+
+  return new RegExp(pattern.replace(/\s+/g, ".+\\b"), params)
 }
 
 export const uniqueArray = (array) => {
