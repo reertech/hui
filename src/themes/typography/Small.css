@@ -23,6 +23,10 @@
   /* TEXT */
   --hui-wpcfwr-text-align: left;
 }
+[data-hui=Small][data-hui-theme~=marginal] {
+  /* APPERANCE */
+  --hui-wpcfwr-color: var(--hui-unua-color-text);
+}
 [data-hui=Small] {
   /* LAYOUT-POSITION */
 /*  --hui-wpcfwr-position-default: ; */

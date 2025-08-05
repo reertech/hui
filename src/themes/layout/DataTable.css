@@ -6,8 +6,8 @@
 [data-hui=DataTable] > thead,
 [data-hui=DataTable] > * > tr {
   /* LAYOUT-SIZING */
-  --hui-wsglhu-min-width: 100%;
   --hui-wsglhu-max-width: 100%;
+  --hui-wsglhu-min-width: 100%;
   /* GRID */
   --hui-wsglhu-grid-column-end: -1;
   --hui-wsglhu-grid-column-start: 1;
