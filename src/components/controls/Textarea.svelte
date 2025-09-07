@@ -41,9 +41,10 @@
   export let rows = 1
   export let cols = 50
   export let expandedRows = 2
-  export let expandedCols = 100
+  export let expandedCols = 50
   export let expanded = false
   export let nullValue = null
+  export let withButton = false
   export let buttonTheme = "flat small"
   export let autofocus = false
   export let newLineCtrlEnter = false
@@ -133,7 +134,7 @@
     {placeholder}
     maxLength={formatNumber(maxLength)}
     rows={rowsNum}
-    cols={formatNumber(cols, 50)}
+    cols={colsNum}
     valid={valid || null}
     invalid={invalid || null}
     active={active || null}
@@ -147,16 +148,18 @@
     data-hui-input
     bind:this={inputNode}
   />
-  <Button
-    theme={buttonTheme}
-    on:click={() => expanded = !expanded}
-  >
-    {#if expanded}
-      <IconMinimize />
-    {:else}
-      <IconMaximize />
-    {/if}
-  </Button>
+  {#if withButton}
+    <Button
+      theme={buttonTheme}
+      on:click={() => expanded = !expanded}
+    >
+      {#if expanded}
+        <IconMinimize />
+      {:else}
+        <IconMaximize />
+      {/if}
+    </Button>
+  {/if}
 </Container>
 
 <!-- theme.ini
