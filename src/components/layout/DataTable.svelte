@@ -127,7 +127,7 @@
     </tr>
   </thead>
   <tbody bind:this={tbodyNode}>
-    {#each rows as row, rowIdx}
+    {#each rows as row, rowIdx (row[rowsIdxKey])}
       {#if $$slots.trBefore}
         <slot name="trBefore" {rowIdx} {row} />
       {/if}
