@@ -44,7 +44,7 @@
     value = e.target.valueAsNumber
     if (isNaN(value)) value = nullValue
 
-    dispatch("change", value)
+    dispatch(e.type, value)
   }
 
   onMount(() => {
@@ -75,7 +75,9 @@
   {flex}
   {name}
 >
-  {#if prefix}
+  {#if $$slots.prefix}
+    <slot name="prefix" />
+  {:else if prefix != null}
     <Strong>
       {prefix}
     </Strong>
@@ -86,17 +88,16 @@
     {max}
     {step}
     on:click
-    on:input
     on:input={change}
     on:change={change}
     {value}
     {placeholder}
     type="number"
-    valid={valid || null}
-    invalid={invalid || null}
-    active={active || null}
-    disabled={disabled || null}
-    readonly={readonly || null}
+    valid={!!valid || null}
+    invalid={!!invalid || null}
+    active={!!active || null}
+    disabled={!!disabled || null}
+    readonly={!!readonly || null}
     on:keyup
     on:keydown
     on:blur
@@ -104,7 +105,9 @@
     data-hui-input
     bind:this={inputNode}
   />
-  {#if suffix}
+  {#if $$slots.suffix}
+    <slot name="suffix" />
+  {:else if suffix != null}
     <Strong>
       {suffix}
     </Strong>
@@ -112,8 +115,11 @@
 </Container>
 
 <!-- theme.ini
-  themes: flat;
+  states: disabled, readonly;
+  themes: flat, medium, grow;
   & = common, display, flex;
-  > input = common;
-  > input::placeholder = font-size;
+  > input = common, appearance;
+  > input::placeholder = font-size, color;
+  > input::-webkit-outer-spin-button,
+  > input::-webkit-inner-spin-button = -webkit-appearance;
 -->

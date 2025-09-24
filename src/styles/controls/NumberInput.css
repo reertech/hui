@@ -222,7 +222,13 @@
   scrollbar-color: var(--hui-hqtsye-scrollbar-color, #bbb #eee);
   scrollbar-gutter: var(--hui-hqtsye-scrollbar-gutter, auto);
   scrollbar-width: var(--hui-hqtsye-scrollbar-width, thin);
+  appearance: var(--hui-hqtsye-appearance, initial);
 }
 [data-hui=NumberInput] > input::placeholder {
   font-size: var(--hui-ltpgzd-font-size, initial);
+  color: var(--hui-ltpgzd-color, initial);
+}
+[data-hui=NumberInput] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput] > input::-webkit-inner-spin-button {
+  -webkit-appearance: var(--hui-qgfixe--webkit-appearance, initial);
 }

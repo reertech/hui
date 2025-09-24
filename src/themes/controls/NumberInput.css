@@ -17,9 +17,10 @@
   --hui-affhez-flex-wrap: nowrap;
   --hui-affhez-gap: var(--hui-default-spacer-5);
   --hui-affhez-align-content: center;
-  --hui-affhez-justify-content: stretch;
+  --hui-affhez-justify-content: center;
   --hui-affhez-align-items: center;
   /* APPERANCE */
+  --hui-affhez-color: var(--hui-default-color-text);
   --hui-affhez-background-color: var(--hui-default-background-color);
   --hui-affhez-background-image: none;
   --hui-affhez-border-bottom-color: var(--hui-default-border-color);
@@ -45,6 +46,7 @@
 [data-hui=NumberInput] > input {
   /* LAYOUT-SIZING */
   --hui-hqtsye-max-width: 100%;
+  --hui-hqtsye-min-width: 60px;
   /* LAYOUT-PADDING */
   --hui-hqtsye-padding-top: var(--hui-default-spacer-3);
   --hui-hqtsye-padding-right: 0;
@@ -60,15 +62,149 @@
   /* APPERANCE */
   --hui-hqtsye-color: var(--hui-default-color-text);
   --hui-hqtsye-cursor: pointer;
+  --hui-hqtsye-appearance: none;
 }
 [data-hui=NumberInput] > input::placeholder {
   --hui-ltpgzd-font-size: var(--hui-default-size-0);
+  --hui-ltpgzd-color: var(--hui-default-color-text);
+}
+[data-hui=NumberInput] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput] > input::-webkit-inner-spin-button {
+  --hui-qgfixe--webkit-appearance: none;
+}
+[data-hui=NumberInput][data-hui-disabled] {
+  /* APPERANCE */
+  --hui-affhez-color: var(--hui-unua-color-text);
+  --hui-affhez-background-image: var(--hui-default-gradient-3);
+  --hui-affhez-cursor: default;
+}
+[data-hui=NumberInput][data-hui-disabled] > input {
+  /* APPERANCE */
+  --hui-hqtsye-color: var(--hui-unua-color-text);
+  --hui-hqtsye-cursor: default;
+}
+[data-hui=NumberInput][data-hui-disabled] > input::placeholder {
+  --hui-ltpgzd-color: var(--hui-unua-color-text);
+}
+[data-hui=NumberInput][data-hui-disabled] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-disabled] > input::-webkit-inner-spin-button {
+}
+[data-hui=NumberInput][data-hui-readonly] {
+  /* APPERANCE */
+  --hui-affhez-color: var(--hui-unua-color-text);
+  --hui-affhez-background-image: var(--hui-default-gradient-3);
+  --hui-affhez-cursor: default;
+}
+[data-hui=NumberInput][data-hui-readonly] > input {
+  /* APPERANCE */
+  --hui-hqtsye-color: var(--hui-unua-color-text);
+  --hui-hqtsye-cursor: default;
+}
+[data-hui=NumberInput][data-hui-readonly] > input::placeholder {
+  --hui-ltpgzd-color: var(--hui-unua-color-text);
+}
+[data-hui=NumberInput][data-hui-readonly] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-readonly] > input::-webkit-inner-spin-button {
 }
 [data-hui=NumberInput][data-hui-theme~=flat] {
 }
 [data-hui=NumberInput][data-hui-theme~=flat] > input {
 }
 [data-hui=NumberInput][data-hui-theme~=flat] > input::placeholder {
+}
+[data-hui=NumberInput][data-hui-theme~=flat] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=flat] > input::-webkit-inner-spin-button {
+}
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-disabled] {
+}
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-disabled] > input {
+}
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-disabled] > input::placeholder {
+}
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-disabled] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-disabled] > input::-webkit-inner-spin-button {
+}
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-readonly] {
+}
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-readonly] > input {
+}
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-readonly] > input::placeholder {
+}
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-readonly] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-readonly] > input::-webkit-inner-spin-button {
+}
+[data-hui=NumberInput][data-hui-theme~=medium] {
+  /* LAYOUT-SIZING */
+  --hui-affhez-min-height: calc(var(--hui-default-size-0) * var(--hui-default-line-height) + (var(--hui-default-spacer-4) + var(--hui-default-spacer-4)) * 2);
+  /* LAYOUT-PADDING */
+  --hui-affhez-padding-top: var(--hui-default-spacer-4);
+  --hui-affhez-padding-right: var(--hui-default-spacer-5);
+  --hui-affhez-padding-bottom: var(--hui-default-spacer-4);
+  --hui-affhez-padding-left: var(--hui-default-spacer-5);
+}
+[data-hui=NumberInput][data-hui-theme~=medium] > input {
+  /* LAYOUT-PADDING */
+  --hui-hqtsye-padding-top: var(--hui-default-spacer-4);
+  --hui-hqtsye-padding-right: var(--hui-default-spacer-3);
+  --hui-hqtsye-padding-bottom: var(--hui-default-spacer-3);
+  --hui-hqtsye-padding-left: var(--hui-default-spacer-4);
+  /* TEXT */
+  --hui-hqtsye-font-size: var(--hui-default-size-0);
+  --hui-hqtsye-line-height: var(--hui-default-line-height);
+}
+[data-hui=NumberInput][data-hui-theme~=medium] > input::placeholder {
+}
+[data-hui=NumberInput][data-hui-theme~=medium] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=medium] > input::-webkit-inner-spin-button {
+}
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-disabled] {
+}
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-disabled] > input {
+}
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-disabled] > input::placeholder {
+}
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-disabled] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-disabled] > input::-webkit-inner-spin-button {
+}
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-readonly] {
+}
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-readonly] > input {
+}
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-readonly] > input::placeholder {
+}
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-readonly] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-readonly] > input::-webkit-inner-spin-button {
+}
+[data-hui=NumberInput][data-hui-theme~=grow] {
+  /* LAYOUT-SIZING */
+  --hui-affhez-max-width: none;
+  /* LAYOUT-FLEX */
+  --hui-affhez-flex-grow: 1;
+}
+[data-hui=NumberInput][data-hui-theme~=grow] > input {
+}
+[data-hui=NumberInput][data-hui-theme~=grow] > input::placeholder {
+}
+[data-hui=NumberInput][data-hui-theme~=grow] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=grow] > input::-webkit-inner-spin-button {
+}
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-disabled] {
+}
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-disabled] > input {
+}
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-disabled] > input::placeholder {
+}
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-disabled] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-disabled] > input::-webkit-inner-spin-button {
+}
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-readonly] {
+}
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-readonly] > input {
+}
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-readonly] > input::placeholder {
+}
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-readonly] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-readonly] > input::-webkit-inner-spin-button {
 }
 [data-hui=NumberInput] {
   /* LAYOUT-POSITION */
@@ -294,7 +430,13 @@
 /*  --hui-hqtsye-scrollbar-color-default: ; */
 /*  --hui-hqtsye-scrollbar-gutter-default: ; */
 /*  --hui-hqtsye-scrollbar-width-default: ; */
+/*  --hui-hqtsye-appearance-default: ; */
 }
 [data-hui=NumberInput] > input::placeholder {
 /*  --hui-ltpgzd-font-size-default: ; */
+/*  --hui-ltpgzd-color-default: ; */
+}
+[data-hui=NumberInput] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput] > input::-webkit-inner-spin-button {
+/*  --hui-qgfixe--webkit-appearance-default: ; */
 }

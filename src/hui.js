@@ -214,12 +214,13 @@ const applyIdx = (node, changes) => {
 }
 
 const elStates = [
-  ["active", "huiActive"],
-  ["readonly", "huiReadonly"],
-  ["disabled", "huiDisabled"],
-  ["hidden", "huiHidden"],
-  ["valid", "huiValid"],
-  ["invalid", "huiInvalid"]
+  ["active", "huiStateActive"],
+  ["readonly", "huiStateReadonly"],
+  ["disabled", "huiStateDisabled"],
+  ["hidden", "huiStateHidden"],
+  ["invisible", "huiStateInvisible"],
+  ["valid", "huiStateValid"],
+  ["invalid", "huiStateInvalid"]
 ]
 
 const applyElState = (node, changes) => {
@@ -419,6 +420,7 @@ const stateKeys = [
   "readonly",
   "disabled",
   "hidden",
+  "invisible",
   "valid",
   "invalid",
   "size",

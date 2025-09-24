@@ -2,7 +2,13 @@ data[data-hui] {
   display: contents;
 }
 
-[data-hui][hidden]:not(#huiHack) {
+[data-hui][data-hui-state-invisible]:not(#huiHack),
+[data-hui][data-hui-state-invisible] > *:not(#huiHack) {
+  visibility: hidden;
+}
+
+[data-hui][hidden]:not(#huiHack),
+[data-hui][data-hui-state-hidden]:not(#huiHack) {
   display: none;
 }
 

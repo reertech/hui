@@ -460,6 +460,93 @@
 }
 [data-hui=Button][data-hui-theme~=bg][data-hui-readonly] > svg {
 }
+[data-hui=Button][data-hui-theme~=slim] {
+  /* LAYOUT-SIZING */
+  --hui-pomgca-min-width: none;
+  /* LAYOUT-PADDING */
+  --hui-pomgca-padding-right: 0;
+  --hui-pomgca-padding-left: 0;
+}
+[data-hui=Button][data-hui-theme~=slim]:hover {
+}
+[data-hui=Button][data-hui-theme~=slim]:active {
+}
+[data-hui=Button][data-hui-theme~=slim]:focus {
+}
+[data-hui=Button][data-hui-theme~=slim] > svg {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-active] {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-active]:hover {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-active]:active {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-active]:focus {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-active] > svg {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-disabled] {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-disabled]:hover {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-disabled]:active {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-disabled]:focus {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-disabled] > svg {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-readonly] {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-readonly]:hover {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-readonly]:active {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-readonly]:focus {
+}
+[data-hui=Button][data-hui-theme~=slim][data-hui-readonly] > svg {
+}
+[data-hui=Button][data-hui-theme~=grow] {
+  /* LAYOUT-FLEX */
+  --hui-pomgca-flex-grow: 2;
+}
+[data-hui=Button][data-hui-theme~=grow]:hover {
+}
+[data-hui=Button][data-hui-theme~=grow]:active {
+}
+[data-hui=Button][data-hui-theme~=grow]:focus {
+}
+[data-hui=Button][data-hui-theme~=grow] > svg {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-active] {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-active]:hover {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-active]:active {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-active]:focus {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-active] > svg {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-disabled] {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-disabled]:hover {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-disabled]:active {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-disabled]:focus {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-disabled] > svg {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-readonly] {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-readonly]:hover {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-readonly]:active {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-readonly]:focus {
+}
+[data-hui=Button][data-hui-theme~=grow][data-hui-readonly] > svg {
+}
 [data-hui=Button] {
   /* LAYOUT-POSITION */
 /*  --hui-pomgca-position-default: ; */
