@@ -92,11 +92,11 @@
     bind:this={node}
 
     data-hui-theme={theme || null}
-    data-hui-active={(active || null) && ""}
-    data-hui-disabled={(disabled || null) && ""}
-    data-hui-readonly={(readonly || null) && ""}
-    data-hui-valid={(valid || null) && ""}
-    data-hui-invalid={(invalid || null) && ""}
+    data-hui-state-active={(active || null) && ""}
+    data-hui-state-disabled={(disabled || null) && ""}
+    data-hui-state-readonly={(readonly || null) && ""}
+    data-hui-state-valid={(valid || null) && ""}
+    data-hui-state-invalid={(invalid || null) && ""}
 
     class={classes || null}
     hidden={hidden || null}
@@ -187,11 +187,11 @@
     bind:this={node}
 
     data-hui-theme={theme || null}
-    data-hui-active={(active || null) && ""}
-    data-hui-disabled={(disabled || null) && ""}
-    data-hui-readonly={(readonly || null) && ""}
-    data-hui-valid={(valid || null) && ""}
-    data-hui-invalid={(invalid || null) && ""}
+    data-hui-state-active={(active || null) && ""}
+    data-hui-state-disabled={(disabled || null) && ""}
+    data-hui-state-readonly={(readonly || null) && ""}
+    data-hui-state-valid={(valid || null) && ""}
+    data-hui-state-invalid={(invalid || null) && ""}
 
     class={classes || null}
     hidden={hidden || null}

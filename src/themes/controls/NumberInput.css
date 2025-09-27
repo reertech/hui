@@ -72,39 +72,39 @@
 [data-hui=NumberInput] > input::-webkit-inner-spin-button {
   --hui-qgfixe--webkit-appearance: none;
 }
-[data-hui=NumberInput][data-hui-disabled] {
+[data-hui=NumberInput][data-hui-state-disabled] {
   /* APPERANCE */
   --hui-affhez-color: var(--hui-unua-color-text);
   --hui-affhez-background-image: var(--hui-default-gradient-3);
   --hui-affhez-cursor: default;
 }
-[data-hui=NumberInput][data-hui-disabled] > input {
+[data-hui=NumberInput][data-hui-state-disabled] > input {
   /* APPERANCE */
   --hui-hqtsye-color: var(--hui-unua-color-text);
   --hui-hqtsye-cursor: default;
 }
-[data-hui=NumberInput][data-hui-disabled] > input::placeholder {
+[data-hui=NumberInput][data-hui-state-disabled] > input::placeholder {
   --hui-ltpgzd-color: var(--hui-unua-color-text);
 }
-[data-hui=NumberInput][data-hui-disabled] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-disabled] > input::-webkit-inner-spin-button {
+[data-hui=NumberInput][data-hui-state-disabled] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-state-disabled] > input::-webkit-inner-spin-button {
 }
-[data-hui=NumberInput][data-hui-readonly] {
+[data-hui=NumberInput][data-hui-state-readonly] {
   /* APPERANCE */
   --hui-affhez-color: var(--hui-unua-color-text);
   --hui-affhez-background-image: var(--hui-default-gradient-3);
   --hui-affhez-cursor: default;
 }
-[data-hui=NumberInput][data-hui-readonly] > input {
+[data-hui=NumberInput][data-hui-state-readonly] > input {
   /* APPERANCE */
   --hui-hqtsye-color: var(--hui-unua-color-text);
   --hui-hqtsye-cursor: default;
 }
-[data-hui=NumberInput][data-hui-readonly] > input::placeholder {
+[data-hui=NumberInput][data-hui-state-readonly] > input::placeholder {
   --hui-ltpgzd-color: var(--hui-unua-color-text);
 }
-[data-hui=NumberInput][data-hui-readonly] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-readonly] > input::-webkit-inner-spin-button {
+[data-hui=NumberInput][data-hui-state-readonly] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-state-readonly] > input::-webkit-inner-spin-button {
 }
 [data-hui=NumberInput][data-hui-theme~=flat] {
 }
@@ -115,23 +115,23 @@
 [data-hui=NumberInput][data-hui-theme~=flat] > input::-webkit-outer-spin-button,
 [data-hui=NumberInput][data-hui-theme~=flat] > input::-webkit-inner-spin-button {
 }
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-disabled] {
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-disabled] {
 }
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-disabled] > input {
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-disabled] > input {
 }
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-disabled] > input::placeholder {
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-disabled] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-disabled] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-disabled] > input::-webkit-inner-spin-button {
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-disabled] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-disabled] > input::-webkit-inner-spin-button {
 }
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-readonly] {
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-readonly] {
 }
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-readonly] > input {
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-readonly] > input {
 }
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-readonly] > input::placeholder {
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-readonly] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-readonly] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-readonly] > input::-webkit-inner-spin-button {
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-readonly] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-readonly] > input::-webkit-inner-spin-button {
 }
 [data-hui=NumberInput][data-hui-theme~=medium] {
   /* LAYOUT-SIZING */
@@ -157,23 +157,23 @@
 [data-hui=NumberInput][data-hui-theme~=medium] > input::-webkit-outer-spin-button,
 [data-hui=NumberInput][data-hui-theme~=medium] > input::-webkit-inner-spin-button {
 }
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-disabled] {
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-disabled] {
 }
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-disabled] > input {
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-disabled] > input {
 }
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-disabled] > input::placeholder {
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-disabled] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-disabled] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-disabled] > input::-webkit-inner-spin-button {
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-disabled] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-disabled] > input::-webkit-inner-spin-button {
 }
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-readonly] {
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-readonly] {
 }
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-readonly] > input {
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-readonly] > input {
 }
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-readonly] > input::placeholder {
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-readonly] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-readonly] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-readonly] > input::-webkit-inner-spin-button {
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-readonly] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-readonly] > input::-webkit-inner-spin-button {
 }
 [data-hui=NumberInput][data-hui-theme~=grow] {
   /* LAYOUT-SIZING */
@@ -188,23 +188,23 @@
 [data-hui=NumberInput][data-hui-theme~=grow] > input::-webkit-outer-spin-button,
 [data-hui=NumberInput][data-hui-theme~=grow] > input::-webkit-inner-spin-button {
 }
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-disabled] {
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-disabled] {
 }
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-disabled] > input {
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-disabled] > input {
 }
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-disabled] > input::placeholder {
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-disabled] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-disabled] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-disabled] > input::-webkit-inner-spin-button {
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-disabled] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-disabled] > input::-webkit-inner-spin-button {
 }
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-readonly] {
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-readonly] {
 }
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-readonly] > input {
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-readonly] > input {
 }
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-readonly] > input::placeholder {
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-readonly] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-readonly] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-readonly] > input::-webkit-inner-spin-button {
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-readonly] > input::-webkit-outer-spin-button,
+[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-readonly] > input::-webkit-inner-spin-button {
 }
 [data-hui=NumberInput] {
   /* LAYOUT-POSITION */

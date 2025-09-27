@@ -181,7 +181,7 @@ defmodule Builder do
 
     parse_state_name = fn selector, section ->
       with false <- selector == "default",
-           [state] <- ~r"(?<=\[data\-hui\-)\w+(?=\])" |> Regex.run(section),
+           [state] <- ~r"(?<=\[data\-hui\-state\-)\w+(?=\])" |> Regex.run(section),
            true <- state in params.states do
         state
       else
@@ -205,7 +205,7 @@ defmodule Builder do
           |> IO.inspect()
           |> String.replace(~r"^\[data\-hui\=\w+\]", "")
           |> String.trim_leading("[data-hui-theme~=#{theme}]")
-          |> String.trim_leading("[data-hui-#{state}]")
+          |> String.trim_leading("[data-hui-state-#{state}]")
           |> String.split(~r"\s*\{", trim: true)
           |> List.first()
           |> Kernel.||("")
@@ -331,13 +331,13 @@ defmodule Builder do
         |> Kernel.<>(" {")
 
       theme && state ->
-        wrap.("[data-hui-theme~=#{theme}][data-hui-#{state}]")
+        wrap.("[data-hui-theme~=#{theme}][data-hui-state-#{state}]")
 
       theme ->
         wrap.("[data-hui-theme~=#{theme}]")
 
       state ->
-        wrap.("[data-hui-#{state}]")
+        wrap.("[data-hui-state-#{state}]")
 
       true ->
         wrap.("")
