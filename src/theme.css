@@ -65,6 +65,7 @@
 
   --hui-default-color-text: var(--hui-default-color);
   --hui-unua-color-text: var(--hui-default-color-plus2);
+  --hui-dua-color-text: var(--hui-default-color-plus3);
 
   --hui-unua-color-border: var(--hui-unua-color-minus2);
   --hui-dua-color-border: var(--hui-default-color-plus3);

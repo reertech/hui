@@ -66,7 +66,7 @@
 }
 [data-hui=NumberInput] > input::placeholder {
   --hui-ltpgzd-font-size: var(--hui-default-size-0);
-  --hui-ltpgzd-color: var(--hui-default-color-text);
+  --hui-ltpgzd-color: var(--hui-unua-color-text);
 }
 [data-hui=NumberInput] > input::-webkit-outer-spin-button,
 [data-hui=NumberInput] > input::-webkit-inner-spin-button {
@@ -84,7 +84,7 @@
   --hui-hqtsye-cursor: default;
 }
 [data-hui=NumberInput][data-hui-state-disabled] > input::placeholder {
-  --hui-ltpgzd-color: var(--hui-unua-color-text);
+  --hui-ltpgzd-color: var(--hui-dua-color-text);
 }
 [data-hui=NumberInput][data-hui-state-disabled] > input::-webkit-outer-spin-button,
 [data-hui=NumberInput][data-hui-state-disabled] > input::-webkit-inner-spin-button {
@@ -101,7 +101,7 @@
   --hui-hqtsye-cursor: default;
 }
 [data-hui=NumberInput][data-hui-state-readonly] > input::placeholder {
-  --hui-ltpgzd-color: var(--hui-unua-color-text);
+  --hui-ltpgzd-color: var(--hui-dua-color-text);
 }
 [data-hui=NumberInput][data-hui-state-readonly] > input::-webkit-outer-spin-button,
 [data-hui=NumberInput][data-hui-state-readonly] > input::-webkit-inner-spin-button {
