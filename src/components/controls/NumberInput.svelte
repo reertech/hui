@@ -110,7 +110,7 @@
     const val = handleRange(parseNumber(e.target.value))
     const returnValue = stringify ? toString(val) : val
 
-    dispatch(e.type, returnValue)
+    dispatch(e.type, value = returnValue)
   }
 
   onMount(() => {
