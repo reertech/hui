@@ -4,6 +4,8 @@
   import Container from "../Container.svelte"
   import Strong from "../typography/Strong.svelte"
 
+  import { isNumber, isString } from "../../helpers.js"
+
   import { createEventDispatcher, tick, onMount } from "svelte"
   const dispatch = createEventDispatcher()
 
@@ -39,12 +41,76 @@
   export let suffix = null
   export let nullValue = null
   export let autofocus = false
+  export let stringify = false
+
+  const parseNumber = (value) => {
+    if (value == null) return nullValue
+    if (isString(value) && !value.trim()) return nullValue
+
+    const num = +value
+
+    return isNaN(num) ? nullValue : num
+  }
+
+  const toString = (value) =>
+    isNumber(value) ? value.toString() : value
+
+  const assignInputValue = (inputNode, value) => {
+    if (!inputNode) return
+
+    const newValue = parseNumber(value)
+    const oldValue = parseNumber(inputNode.value)
+
+    if (newValue !== oldValue) {
+      inputNode.value = toString(newValue)
+    }
+  }
+
+  $: assignInputValue(inputNode, value)
+
+  const preventWrongInput = (e) => {
+    if (e.inputType === "insertText") {
+      const currentValue = e.target.value || ""
+
+      if (currentValue.length && e.data === "-") {
+        return e.preventDefault()
+      }
+
+      if (e.data === "." && currentValue.includes(".")) {
+        return e.preventDefault()
+      }
+
+      if (!/[\d\-\.]/.test(e.data)) {
+        return e.preventDefault()
+      }
+    }
+
+    if (e.inputType === "insertFromPaste") {
+      if (!/^\s*-?\s*\d+\s*(\.\s*\d+)?\s*$/.test(e.data)) {
+        return e.preventDefault()
+      }
+    }
+  }
+
+  const handleRange = (val) => {
+    if (!isNumber(val)) return val
+
+    const fixInput = (val) => {
+      inputNode.value = val.toString()
+      return val
+    }
+
+    if (isNumber(max) && val > max) return fixInput(max)
+    if (isNumber(min) && val < min) return fixInput(min)
+
+    return val
+  }
 
   const change = (e) => {
-    value = e.target.valueAsNumber
-    if (isNaN(value)) value = nullValue
+    const val = handleRange(parseNumber(e.target.value))
+    const returnValue = stringify ? toString(val) : val
 
-    dispatch(e.type, value)
+    dispatch(e.type, returnValue)
   }
 
   onMount(() => {
@@ -88,11 +154,12 @@
     {max}
     {step}
     on:click
-    on:input={change}
     on:change={change}
-    {value}
+    on:input={change}
+    on:beforeinput={preventWrongInput}
+    type="text"
+    inputmode="decimal"
     {placeholder}
-    type="number"
     valid={!!valid || null}
     invalid={!!invalid || null}
     active={!!active || null}
