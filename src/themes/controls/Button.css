@@ -462,10 +462,10 @@
 }
 [data-hui=Button][data-hui-theme~=slim] {
   /* LAYOUT-SIZING */
-  --hui-pomgca-min-width: none;
+  --hui-pomgca-min-width: 18px;
   /* LAYOUT-PADDING */
-  --hui-pomgca-padding-right: 0;
-  --hui-pomgca-padding-left: 0;
+  --hui-pomgca-padding-right: var(--hui-default-spacer-2);
+  --hui-pomgca-padding-left: var(--hui-default-spacer-2);
 }
 [data-hui=Button][data-hui-theme~=slim]:hover {
 }

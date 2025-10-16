@@ -62,15 +62,10 @@
   /* APPERANCE */
   --hui-hqtsye-color: var(--hui-default-color-text);
   --hui-hqtsye-cursor: pointer;
-  --hui-hqtsye-appearance: none;
 }
 [data-hui=NumberInput] > input::placeholder {
   --hui-ltpgzd-font-size: var(--hui-default-size-0);
   --hui-ltpgzd-color: var(--hui-unua-color-text);
-}
-[data-hui=NumberInput] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput] > input::-webkit-inner-spin-button {
-  --hui-qgfixe--webkit-appearance: none;
 }
 [data-hui=NumberInput][data-hui-state-disabled] {
   /* APPERANCE */
@@ -86,9 +81,6 @@
 [data-hui=NumberInput][data-hui-state-disabled] > input::placeholder {
   --hui-ltpgzd-color: var(--hui-dua-color-text);
 }
-[data-hui=NumberInput][data-hui-state-disabled] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-state-disabled] > input::-webkit-inner-spin-button {
-}
 [data-hui=NumberInput][data-hui-state-readonly] {
   /* APPERANCE */
   --hui-affhez-color: var(--hui-unua-color-text);
@@ -103,17 +95,11 @@
 [data-hui=NumberInput][data-hui-state-readonly] > input::placeholder {
   --hui-ltpgzd-color: var(--hui-dua-color-text);
 }
-[data-hui=NumberInput][data-hui-state-readonly] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-state-readonly] > input::-webkit-inner-spin-button {
-}
 [data-hui=NumberInput][data-hui-theme~=flat] {
 }
 [data-hui=NumberInput][data-hui-theme~=flat] > input {
 }
 [data-hui=NumberInput][data-hui-theme~=flat] > input::placeholder {
-}
-[data-hui=NumberInput][data-hui-theme~=flat] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=flat] > input::-webkit-inner-spin-button {
 }
 [data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-disabled] {
 }
@@ -121,17 +107,11 @@
 }
 [data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-disabled] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-disabled] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-disabled] > input::-webkit-inner-spin-button {
-}
 [data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-readonly] {
 }
 [data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-readonly] > input {
 }
 [data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-readonly] > input::placeholder {
-}
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-readonly] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=flat][data-hui-state-readonly] > input::-webkit-inner-spin-button {
 }
 [data-hui=NumberInput][data-hui-theme~=medium] {
   /* LAYOUT-SIZING */
@@ -154,26 +134,17 @@
 }
 [data-hui=NumberInput][data-hui-theme~=medium] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=medium] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=medium] > input::-webkit-inner-spin-button {
-}
 [data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-disabled] {
 }
 [data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-disabled] > input {
 }
 [data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-disabled] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-disabled] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-disabled] > input::-webkit-inner-spin-button {
-}
 [data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-readonly] {
 }
 [data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-readonly] > input {
 }
 [data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-readonly] > input::placeholder {
-}
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-readonly] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=medium][data-hui-state-readonly] > input::-webkit-inner-spin-button {
 }
 [data-hui=NumberInput][data-hui-theme~=grow] {
   /* LAYOUT-SIZING */
@@ -185,26 +156,17 @@
 }
 [data-hui=NumberInput][data-hui-theme~=grow] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=grow] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=grow] > input::-webkit-inner-spin-button {
-}
 [data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-disabled] {
 }
 [data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-disabled] > input {
 }
 [data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-disabled] > input::placeholder {
 }
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-disabled] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-disabled] > input::-webkit-inner-spin-button {
-}
 [data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-readonly] {
 }
 [data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-readonly] > input {
 }
 [data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-readonly] > input::placeholder {
-}
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-readonly] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput][data-hui-theme~=grow][data-hui-state-readonly] > input::-webkit-inner-spin-button {
 }
 [data-hui=NumberInput] {
   /* LAYOUT-POSITION */
@@ -430,13 +392,8 @@
 /*  --hui-hqtsye-scrollbar-color-default: ; */
 /*  --hui-hqtsye-scrollbar-gutter-default: ; */
 /*  --hui-hqtsye-scrollbar-width-default: ; */
-/*  --hui-hqtsye-appearance-default: ; */
 }
 [data-hui=NumberInput] > input::placeholder {
 /*  --hui-ltpgzd-font-size-default: ; */
 /*  --hui-ltpgzd-color-default: ; */
-}
-[data-hui=NumberInput] > input::-webkit-outer-spin-button,
-[data-hui=NumberInput] > input::-webkit-inner-spin-button {
-/*  --hui-qgfixe--webkit-appearance-default: ; */
 }

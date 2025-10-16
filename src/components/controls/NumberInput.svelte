@@ -185,8 +185,6 @@
   states: disabled, readonly;
   themes: flat, medium, grow;
   & = common, display, flex;
-  > input = common, appearance;
+  > input = common;
   > input::placeholder = font-size, color;
-  > input::-webkit-outer-spin-button,
-  > input::-webkit-inner-spin-button = -webkit-appearance;
 -->
