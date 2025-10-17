@@ -33,6 +33,7 @@
     onFly = true
     e.dataTransfer.effectAllowed = "move"
     e.dataTransfer.setData("huiSwapper", idx)
+    e.dataTransfer.setDragImage(e.target, 0, 0)
   }
 
   const end = () => onFly = false
@@ -92,18 +93,20 @@
         {idx}
         {list}
         on:swap
+        on:drop
         dir="left"
-        hidden={onFly || !isOver}
         on:swap={swap}
+        hidden={onFly || !isOver}
       />
         <slot />
       <DropZone
         {idx}
         {list}
         on:swap
+        on:drop
         dir="right"
-        hidden={onFly || !isOver}
         on:swap={swap}
+        hidden={onFly || !isOver}
       />
     </button>
   {/if}
