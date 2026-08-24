@@ -1,6 +1,6 @@
 [data-hui=Dropdown] {
   /* LAYOUT-POSITION */
-  --hui-ovbbqb-position: absolute;
+  --hui-ovbbqb-position: fixed;
   --hui-ovbbqb-right: calc(anchor(right));
   --hui-ovbbqb-left: calc(anchor(left));
   /* LAYOUT-SIZING */

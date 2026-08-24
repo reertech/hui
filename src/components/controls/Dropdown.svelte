@@ -49,7 +49,7 @@
   let dir = null
   let height = null
 
-  let datalist, cutParent;
+  let datalist, cutParent, bound;
 
   $: open(active, datalist, root)
 
@@ -87,7 +87,10 @@
     dispatch("select", value.at(0))
   }
 
-  const onScroll = () => open(active, datalist, root)
+  const gap = 10
+  const offset = 2
+
+  const reposition = () => open(active, datalist, root)
 
   const open = (active, datalist, root) => {
     if (!datalist || !root) return
@@ -101,34 +104,46 @@
       "position-anchor: --fake-anchor"
     )
 
-    if (distanceBottom >= distanceTop) {
-      height = distanceBottom - 10
+    // Flip up only when the list does not fit below, not merely when there
+    // happens to be more room above: comparing the two distances makes every
+    // field past the middle of the window open over the rows above it.
+    const wanted = formatNumber(maxMaxHeight, 190) + gap
+    const toBottom = distanceBottom >= wanted || distanceBottom >= distanceTop
+
+    if (toBottom) {
+      height = distanceBottom - gap
       dir = "bottom"
     } else {
-      height = distanceTop - 10
+      height = distanceTop - gap
       dir = "top"
     }
 
+    // Anchor positioning keeps the list glued to the root, but the direction
+    // and the max height still have to be recalculated as the page moves.
+    if (!bound) {
+      bound = true
+      cutParent = fetchCutParent(root)
+
+      cutParent?.addEventListener("scroll", reposition, { passive: true })
+      window.addEventListener("resize", reposition, { passive: true })
+    }
+
     if (!supportsAnchor) {
-      if (!cutParent) {
-        cutParent = fetchCutParent(root)
-
-        cutParent?.addEventListener("scroll", onScroll, { passive: true })
-      }
-
       datalist.style.width = `${rect.width}px`
       datalist.style.left = `${rect.left}px`
 
-      if (distanceBottom >= distanceTop) {
+      if (toBottom) {
         datalist.style.bottom = "auto"
-        datalist.style.top = `${distanceTop + rect.height + 2}px`
+        datalist.style.top = `${rect.bottom + offset}px`
       } else {
         datalist.style.top = "auto"
-        datalist.style.bottom = `${distanceBottom + rect.height + 2}px`
+        datalist.style.bottom = `${window.innerHeight - rect.top + offset}px`
       }
     }
 
-    datalist.showPopover({ source: root })
+    if (!datalist.matches(":popover-open")) {
+      datalist.showPopover({ source: root })
+    }
   }
 
   const showFocusedOption = async () => {
@@ -172,7 +187,8 @@
   })
 
   onDestroy(() => {
-    cutParent?.removeEventListener('scroll', onScroll)
+    cutParent?.removeEventListener("scroll", reposition)
+    window.removeEventListener("resize", reposition)
   })
 </script>
 
@@ -208,7 +224,6 @@
     {scrollY}
     {grid}
     {flex}
-    anchor
     popover="manual"
     position={positionParams}
     size={sizeParams}
